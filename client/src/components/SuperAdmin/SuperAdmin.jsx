@@ -38,7 +38,7 @@ const SuperAdmin = () => {
                 <div className="py-4">
                     {
                         sidemenu.map((sidem) => (
-                            <a href={sidem.link} target='sadminDash'>
+                            <a href={sidem.link} target=''>
                                 <div className="flex text-gray-500 rounded duration-500 cursor-pointer hover:bg-blue-200 hover:text-[#3B71CA] py-2 rounded-xl">
                                     <p className='pl-2'>{sidem.icon}</p>
                                     <p className='pt-1 pl-2'>{sidem.name}</p>
@@ -49,7 +49,7 @@ const SuperAdmin = () => {
                 </div>
             </div>
             <div className="border-5">
-                
+                <iframe src="" name='mainArea' frameborder="0"></iframe>
             </div>
         </div>
     </div>
