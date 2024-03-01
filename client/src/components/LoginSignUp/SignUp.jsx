@@ -24,8 +24,8 @@ export const SignUp = () => {
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Select Role : </label><br />
-                            <select name="" id="">
-                                <option>Select Allowance Name</option>
+                            <select name="" id="" className='border w-full py-2 my-2 pl-2'>
+                                <option className='bg-gray-200 '>Select Allowance Name</option>
                                 <option value="SuperAdmin">SuperAdmin</option>
                                 <option value="Admin">Admin</option>
                                 <option value="HOD">Head</option>
@@ -40,9 +40,9 @@ export const SignUp = () => {
                             <button type="submit" className="w-1/2 h-12 border border-blue-500 rounded text-blue-500 duration-500 hover:text-white hover:bg-blue-500">Login</button>
                         </div>
                     </form>
-                    <p>Dont't have an Account ? 
-                        <Link to={'/register'}>
-                            <span className="pl-2 text-blue-500">Create New</span>
+                    <p>Already have an Account ?
+                        <Link to={'/'}>
+                            <span className="pl-2 text-blue-500">SignIn</span>
                         </Link>
                     </p>
                 </div>
