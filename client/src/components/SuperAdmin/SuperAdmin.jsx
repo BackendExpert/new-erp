@@ -33,19 +33,25 @@ const SuperAdmin = () => {
                 
             </div>
         </div>
-        <div className={`shadow-2xl rounded py-1 px-4 bg-white lg:w-1/6 h-screen my-2 mx-3 border-r-4 border-blue-200 lg:visiable  ${Sidebar ? 'left-[490px] opacity-0' : 'left-20 opacity-100'}`}>
-            <div className="py-4">
-                {
-                    sidemenu.map((sidem) => (
-                        <div className="flex text-gray-500 rounded duration-500 cursor-pointer hover:bg-blue-200 hover:text-[#3B71CA] py-2 rounded-xl">
-                            <p className='pl-2'>{sidem.icon}</p>
-                            <p className='pt-1 pl-2'>{sidem.name}</p>
-                        </div>
-                    ))
-                }
+        <div className="flex">
+            <div className={`shadow-2xl rounded py-1 px-4 bg-white lg:w-1/6 h-screen my-2 mx-3 border-r-4 border-blue-200 lg:visiable  ${Sidebar ? 'left-[490px] opacity-0' : 'left-20 opacity-100'}`}>
+                <div className="py-4">
+                    {
+                        sidemenu.map((sidem) => (
+                            <a href={sidem.link} target='sadminDash'>
+                                <div className="flex text-gray-500 rounded duration-500 cursor-pointer hover:bg-blue-200 hover:text-[#3B71CA] py-2 rounded-xl">
+                                    <p className='pl-2'>{sidem.icon}</p>
+                                    <p className='pt-1 pl-2'>{sidem.name}</p>
+                                </div>
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
+            <div className="border-5">
+                
             </div>
         </div>
-
     </div>
   )
 }
