@@ -12,11 +12,11 @@ const Login = () => {
                     <form>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Email : </label>
-                            <input type="text" className="my-2 w-full h-12 border rounded" />
+                            <input type="email" className="my-2 w-full h-12 border rounded pl-2" required placeholder='Email Address'/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Email : </label>
-                            <input type="text" className="my-2 w-full h-12 border rounded" />
+                            <input type="password" className="my-2 w-full h-12 border rounded pl-2" required placeholder='Password'/>
                         </div>
                         <div className="my-4">
                             <button type="submit" className="w-1/2 h-12 border border-blue-500 rounded text-blue-500 duration-500 hover:text-white hover:bg-blue-500">Login</button>
