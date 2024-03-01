@@ -37,7 +37,7 @@ export const SignUp = () => {
                             </select>
                         </div>
                         <div className="my-4">
-                            <button type="submit" className="w-1/2 h-12 border border-blue-500 rounded text-blue-500 duration-500 hover:text-white hover:bg-blue-500">Login</button>
+                            <button type="submit" className="w-1/2 h-12 border border-blue-500 rounded text-blue-500 duration-500 hover:text-white hover:bg-blue-500">Register</button>
                         </div>
                     </form>
                     <p>Already have an Account ?
