@@ -1,16 +1,16 @@
 import Icons from "@reacticons/ionicons"
 
 const sidemenu = [
-    {name: "Employess",  link: "#", icon: <Icons name="people"></Icons>},
-    {name: "Divisions",  link: "#", icon: <Icons name="business"></Icons>},
-    {name: "Projects",  link: "#", icon: <Icons name="newspaper"></Icons>},
-    {name: "Program",  link: "#", icon: <Icons name="book"></Icons>},
-    {name: "Designation",  link: "#", icon: <Icons name="easel"></Icons>},
-    {name: "Vehicle",  link: "#", icon: <Icons name="car"></Icons>},
-    {name: "Equipment",  link: "#", icon: <Icons name="build"></Icons>},
-    {name: "Library",  link: "#", icon: <Icons name="library"></Icons>},
-    {name: "Accounts",  link: "#", icon: <Icons name="people-circle"></Icons>},
-    {name: "Profile",  link: "#", icon: <Icons name="person"></Icons>}
+    {name: "Employess",  link: "#", icon: <Icons name="people" size="large"></Icons>},
+    {name: "Divisions",  link: "#", icon: <Icons name="business" size="large"></Icons>},
+    {name: "Projects",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
+    {name: "Program",  link: "#", icon: <Icons name="book" size="large"></Icons>},
+    {name: "Designation",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
+    {name: "Vehicle",  link: "#", icon: <Icons name="car" size="large"></Icons>},
+    {name: "Equipment",  link: "#", icon: <Icons name="build" size="large"></Icons>},
+    {name: "Library",  link: "#", icon: <Icons name="library" size="large"></Icons>},
+    {name: "Accounts",  link: "#", icon: <Icons name="people-circle" size="large"></Icons>},
+    {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>}
 ]
 
 export default sidemenu
