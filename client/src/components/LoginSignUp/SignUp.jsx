@@ -11,8 +11,8 @@ export const SignUp = () => {
                 <div className="pl-4">
                     <form>
                         <div className="my-4">
-                            <label htmlFor="" className='text-xl'>Email : </label>
-                            <input type="email" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Email Address'/>
+                            <label htmlFor="" className='text-xl'>Name : </label>
+                            <input type="email" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Name'/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Email : </label>
