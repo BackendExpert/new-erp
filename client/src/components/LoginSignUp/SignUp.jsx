@@ -1,10 +1,9 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const SignUp = () => {
   return (
-    <div className='bg-[url(https://wallpapercave.com/wp/qkz7ffi.jpg)] bg-center bg-cover h-full w-full'>
-        <div className="lg:py-20 lg:mx-40 py-16 mx-8">
+    <div className='bg-[url(https://wallpapercave.com/wp/qkz7ffi.jpg)] bg-center bg-cover h-screen w-full'>
+        <div className="lg:py-[150px] lg:mx-40 py-16 mx-8">
             <div className="bg-white lg:py-8 lg:px-24 py-10 px-8 rounded-md">
                 <h1 className="text-3xl font-semibold">Register Here</h1>
                 
