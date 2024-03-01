@@ -1,5 +1,7 @@
+import Icons from "@reacticons/ionicons"
+
 const sidemenu = [
-    {name: "Employess",  link: "#", icon: ""},
+    {name: "Employess",  link: "#", icon: <Icons name="people"></Icons>},
     {name: "Divisions",  link: "#", icon: ""},
     {name: "Projects",  link: "#", icon: ""},
     {name: "Program",  link: "#", icon: ""},
