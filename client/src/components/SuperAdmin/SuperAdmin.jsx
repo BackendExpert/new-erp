@@ -12,11 +12,11 @@ const SuperAdmin = () => {
                 <h1 className="text-xl font-semibold">Super Admin</h1>
             </div>
         </div>
-        <div className="rounded py-1 px-4 bg-white lg:w-1/6 h-screen my-2 mx-3 border-r-4">
+        <div className="rounded py-1 px-4 bg-white lg:w-1/6 h-screen my-2 mx-3 border-r-4 border-blue-200">
             <div className="">
                 {
                     sidemenu.map((sidem) => (
-                        <div className="flex bg-blue-100 mt-2 rounded py-1 text-blue-700">
+                        <div className="flex bg-blue-100 mt-2 rounded py-1 text-blue-700 duration-500 hover:bg-blue-[#2a9df4]">
                             <p className='pl-2'>{sidem.icon}</p>
                             <p className='pt-1 pl-2'>{sidem.name}</p>
                         </div>
