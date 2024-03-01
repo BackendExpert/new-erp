@@ -14,8 +14,8 @@ const SuperAdmin = () => {
                     <div onClick={() => SetSidebar(!Sidebar)} className="text-[#3B71CA] lg:invisible visible ">
                         <Icons name={Sidebar ? 'menu' : 'close'} size='large'></Icons>
                     </div>
-                    <div className="">
-                        <div className="flex">
+                    <div className="py-2">
+                        <div className="flex text-[#3B71CA] font-semibold">
                             {
                                 navlists.map((nav) => (
                                     <div className="lg:px-4">
