@@ -12,7 +12,7 @@ const SuperAdmin = () => {
                 <h1 className="text-xl font-semibold text-[#3B71CA]">Super Admin</h1>
             </div>
         </div>
-        <div className="rounded py-1 px-4 bg-white lg:w-1/6 h-screen my-2 mx-3 border-r-4 border-blue-200">
+        <div className="shadow-2xl rounded py-1 px-4 bg-white lg:w-1/6 h-screen my-2 mx-3 border-r-4 border-blue-200">
             <div className="py-4">
                 {
                     sidemenu.map((sidem) => (
