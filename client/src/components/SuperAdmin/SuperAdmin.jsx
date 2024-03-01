@@ -16,7 +16,7 @@ const SuperAdmin = () => {
             <div className="">
                 {
                     sidemenu.map((sidem) => (
-                        <div className="flex bg-blue-100 mt-2 rounded py-1 text-blue-700 duration-500 hover:bg-blue-[#2a9df4]">
+                        <div className="flex bg-blue-100 mt-2 rounded py-1 text-blue-700 cursor-pointer duration-500 hover:bg-blue-700">
                             <p className='pl-2'>{sidem.icon}</p>
                             <p className='pt-1 pl-2'>{sidem.name}</p>
                         </div>
