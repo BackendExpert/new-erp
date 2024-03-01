@@ -1,7 +1,14 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Login from "./components/LoginSignUp/Login"
+import { SignUp } from "./components/LoginSignUp/SignUp"
+
 export default function App() {
   return (
-    <div className="text-red-500">
-      Welcome
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} ></Route>
+        <Route path="/register" element={<SignUp />} ></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
