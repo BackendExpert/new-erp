@@ -6,15 +6,12 @@ const SuperAdmin = () => {
     const [Sidebar, SetSidebar] = useState()
   return (
     <div className='bg-white'>
-        <div className="rounded py-4 px-4 bg-gray-100 lg:w-1/6 h-full my-2 mx-3 border-r-4">
+        <div className="bg-gray-100 py-4 px-4 rounded my-2 ml-3 h-full ">
             <div className="flex justify-between">
                 <h1 className="text-xl font-semibold">Super Admin</h1>
-                <div className="cursor-pointer">
-                    <Icons name='menu' size='large'></Icons>
-                </div>
             </div>
-            
-            <hr className='my-2 border border-gray-400'/>
+        </div>
+        <div className="rounded py-1 px-4 bg-gray-100 lg:w-1/6 h-full my-2 mx-3 border-r-4">
             <div className="">
                 {
                     sidemenu.map((sidem) => (
@@ -26,6 +23,7 @@ const SuperAdmin = () => {
                 }
             </div>
         </div>
+
     </div>
   )
 }
