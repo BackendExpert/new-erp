@@ -12,7 +12,7 @@ const SuperAdmin = () => {
                 <h1 className="text-xl font-semibold text-[#3B71CA]">Super Admin</h1>
                 <div className="flex">
                     <div onClick={() => SetSidebar(!Sidebar)} className="text-[#3B71CA] lg:invisible visible ">
-                        <Icons name={Sidebar ? 'close' : 'menu'} size='large'></Icons>
+                        <Icons name={Sidebar ? 'menu' : 'close'} size='large'></Icons>
                     </div>
                     <div className="">
                         
@@ -20,7 +20,7 @@ const SuperAdmin = () => {
                 </div>
             </div>
         </div>
-        <div className={`shadow-2xl rounded py-1 px-4 bg-white lg:w-1/6 h-screen my-2 mx-3 border-r-4 border-blue-200 lg:visiable  ${Sidebar ? 'left-20 opacity-100' : 'left-[490px] opacity-0'}`}>
+        <div className={`shadow-2xl rounded py-1 px-4 bg-white lg:w-1/6 h-screen my-2 mx-3 border-r-4 border-blue-200 lg:visiable  ${Sidebar ? 'left-[490px] opacity-0' : 'left-20 opacity-100'}`}>
             <div className="py-4">
                 {
                     sidemenu.map((sidem) => (
