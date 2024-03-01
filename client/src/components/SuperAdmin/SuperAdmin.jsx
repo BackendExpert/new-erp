@@ -5,6 +5,7 @@ import navlists from './NavList'
 
 const SuperAdmin = () => {
     const [Sidebar, SetSidebar] = useState(false)
+    const [ListNav, SetListNav] = useState(false)
   return (
     <div className='bg-gray-100 py-2'>
         <div className="bg-white py-4 px-4 rounded my-2 ml-3 h-full shadow-xl border-b-4 border-blue-200">
@@ -14,8 +15,11 @@ const SuperAdmin = () => {
                     <div onClick={() => SetSidebar(!Sidebar)} className="text-[#3B71CA] lg:invisible visible ">
                         <Icons name={Sidebar ? 'menu' : 'close'} size='large'></Icons>
                     </div>
+                    <div onClick={() => SetSidebar(!ListNav)} className="text-[#3B71CA] lg:invisible visible ">
+                        <Icons name={SetListNav ? 'menu' : 'close'} size='large'></Icons>
+                    </div>
                     <div className="py-2">
-                        <div className="flex text-[#3B71CA] font-semibold">
+                        <div className="lg:flex text-[#3B71CA] font-semibold">
                             {
                                 navlists.map((nav) => (
                                     <div className="lg:px-4">
