@@ -20,7 +20,7 @@ const SuperAdmin = () => {
                 </div>
             </div>
         </div>
-        <div className="shadow-2xl rounded py-1 px-4 bg-white lg:w-1/6 h-screen my-2 mx-3 border-r-4 border-blue-200">
+        <div className={`shadow-2xl rounded py-1 px-4 bg-white lg:w-1/6 h-screen my-2 mx-3 border-r-4 border-blue-200 lg:visiable  ${Sidebar ? 'left-20 opacity-100' : 'left-[490px] opacity-0'}`}>
             <div className="py-4">
                 {
                     sidemenu.map((sidem) => (
