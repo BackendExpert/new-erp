@@ -2,15 +2,15 @@ import Icons from "@reacticons/ionicons"
 
 const sidemenu = [
     {name: "Employess",  link: "#", icon: <Icons name="people"></Icons>},
-    {name: "Divisions",  link: "#", icon: ""},
-    {name: "Projects",  link: "#", icon: ""},
-    {name: "Program",  link: "#", icon: ""},
-    {name: "Designation",  link: "#", icon: ""},
-    {name: "Vehicle",  link: "#", icon: ""},
-    {name: "Equipment",  link: "#", icon: ""},
-    {name: "Library",  link: "#", icon: ""},
-    {name: "Account",  link: "#", icon: ""},
-    {name: "Profile",  link: "#", icon: ""}
+    {name: "Divisions",  link: "#", icon: <Icons name=""></Icons>},
+    {name: "Projects",  link: "#", icon: <Icons name=""></Icons>},
+    {name: "Program",  link: "#", icon: <Icons name=""></Icons>},
+    {name: "Designation",  link: "#", icon: <Icons name=""></Icons>},
+    {name: "Vehicle",  link: "#", icon: <Icons name=""></Icons>},
+    {name: "Equipment",  link: "#", icon: <Icons name=""></Icons>},
+    {name: "Library",  link: "#", icon: <Icons name=""></Icons>},
+    {name: "Account",  link: "#", icon: <Icons name=""></Icons>},
+    {name: "Profile",  link: "#", icon: <Icons name=""></Icons>}
 ]
 
 export default sidemenu
