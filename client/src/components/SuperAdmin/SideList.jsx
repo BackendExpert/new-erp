@@ -1,4 +1,4 @@
-let sidemenu = [
+const sidemenu = [
     {name: "",  link: "#", icon: ""},
     {name: "",  link: "#", icon: ""},
     {name: "",  link: "#", icon: ""},
