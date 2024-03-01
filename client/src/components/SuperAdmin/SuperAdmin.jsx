@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react'
 import sidemenu from './SideList'
 import Icons from "@reacticons/ionicons"
+import navlists from './NavList'
 
 const SuperAdmin = () => {
     const [Sidebar, SetSidebar] = useState(false)
@@ -15,7 +15,15 @@ const SuperAdmin = () => {
                         <Icons name={Sidebar ? 'menu' : 'close'} size='large'></Icons>
                     </div>
                     <div className="">
-                        
+                        <div className="flex">
+                            {
+                                navlists.map((nav) => (
+                                    <div className="lg:px-4">
+                                        <p className="">{nav.nmae}</p>
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
