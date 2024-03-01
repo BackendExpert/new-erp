@@ -24,7 +24,8 @@ export const SignUp = () => {
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Select Role : </label><br />
-                            <select name="" id="" className='border w-full py-2 my-2 pl-2'>
+                            <select name="" id="" className='border 
+                            w-full py-2 my-2 pl-2'>
                                 <option className='bg-gray-200 '>Select Allowance Name</option>
                                 <option value="SuperAdmin">SuperAdmin</option>
                                 <option value="Admin">Admin</option>
