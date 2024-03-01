@@ -11,8 +11,8 @@ const SuperAdmin = () => {
             <div className="flex justify-between">
                 <h1 className="text-xl font-semibold text-[#3B71CA]">Super Admin</h1>
                 <div className="flex">
-                    <div className="text-[#3B71CA] lg:invisible visible ">
-                        <Icons name={Sidebar ? 'menu' : 'close'} size='large'></Icons>
+                    <div onClick={() => SetSidebar(!Sidebar)} className="text-[#3B71CA] lg:invisible visible ">
+                        <Icons name={Sidebar ? 'close' : 'menu'} size='large'></Icons>
                     </div>
                     <div className="">
                         
