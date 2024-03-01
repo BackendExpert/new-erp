@@ -10,7 +10,7 @@ const SuperAdmin = () => {
             <div className="py-4">
                 {
                     sidemenu.map((sidem) => (
-                        <div className="flex">
+                        <div className="flex py-2">
                             <p>{sidem.icon}</p>
                             <p>{sidem.name}</p>
                         </div>
