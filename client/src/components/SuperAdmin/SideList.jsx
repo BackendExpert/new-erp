@@ -23,7 +23,7 @@ const SideList = () => {
                     Dashboard
                 </Link>
             </div>
-            <hr className="mt-2 mr-4"/>
+            <hr className="mt-2 mr-4 border-b-2 border-blue-300"/>
         </div>
 
         <div className="pl-2">
