@@ -8,16 +8,13 @@ import SideList from "./components/SuperAdmin/SideList"
 
 export default function App() {
   return (
-    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} ></Route>
         <Route path="/register" element={<SignUp />} ></Route>
         <Route path="/superAdmin" element={<SuperAdmin />} ></Route>
-        <SideList>
-          <Route path="/dash" element={<Dash />} ></Route>
-          <Route path="/about" element={<About />} ></Route>
-        </SideList>
+        <Route path="/dash" element={<Dash />} ></Route>
+        <Route path="/about" element={<About />} ></Route>
      </Routes>
     </BrowserRouter>
   )

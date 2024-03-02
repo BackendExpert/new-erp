@@ -15,7 +15,7 @@ const SideList = () => {
     ]
     return (
       <div className='bg-gray-200 lg:w-72'>
-        <div className="">dasd</div>
+        <div className="">Dashboard</div>
       </div>
     )
   }
