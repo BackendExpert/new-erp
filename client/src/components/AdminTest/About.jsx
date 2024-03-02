@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="flex">
         <SideList />
-    <div className="">About</div>
+        <div className="">About</div>
     </div>
 
   )

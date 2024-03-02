@@ -3,10 +3,10 @@ import SideList from "./SideList"
 const SuperAdmin = ({children}) => {
     
   return (
-    <div className="">
+    <div className="flex">
         <SideList />
         <div className="">
-            <main>{children}</main>
+            Super Admin Dash
         </div>
     </div>
   )

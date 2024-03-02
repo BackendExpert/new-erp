@@ -16,7 +16,11 @@ const SideList = () => {
     ]
     return (
       <div className='bg-gray-200 lg:w-72 h-full pl-8 py-4'>
-        <div className="py-8 text-2xl">Dashboard</div>
+        <div className="py-8 text-2xl">
+            <Link to={'/superAdmin'}>
+                Dashboard
+            </Link>
+        </div>
 
         <div className="pl-2">
             {
