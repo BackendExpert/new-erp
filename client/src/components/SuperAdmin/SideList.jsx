@@ -14,8 +14,8 @@ const SideList = () => {
         {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>}
     ]
     return (
-      <div className='bg-gray-100 py-2'>
-         SideList
+      <div className='bg-gray-200 lg:w-72'>
+        <div className="">dasd</div>
       </div>
     )
   }

@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div>About</div>
+    <div className="py-40">About</div>
   )
 }
 
