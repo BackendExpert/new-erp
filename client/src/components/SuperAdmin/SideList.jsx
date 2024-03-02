@@ -14,8 +14,19 @@ const SideList = () => {
         {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>}
     ]
     return (
-      <div className='bg-gray-200 lg:w-72'>
-        <div className="">Dashboard</div>
+      <div className='bg-gray-200 lg:w-72 h-full pl-8 py-4'>
+        <div className="py-8 text-2xl">Dashboard</div>
+
+        <div className="pl-2">
+            {
+                sidemenu.map((sidem) => (
+                    <div className="flex py-4">
+                        <p>{sidem.icon}</p>
+                        <p className="pt-2 pl-2">{sidem.name}</p>
+                    </div>
+                ))
+            }
+        </div>
       </div>
     )
   }
