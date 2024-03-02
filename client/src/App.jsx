@@ -15,7 +15,7 @@ export default function App() {
         <Route path="/superAdmin" element={<SuperAdmin />} ></Route>
         <Route path="/dash" element={<Dash />} ></Route>
         <Route path="/about" element={<About />} ></Route>
-     </Routes>
+        </Routes>
     </BrowserRouter>
   )
 }

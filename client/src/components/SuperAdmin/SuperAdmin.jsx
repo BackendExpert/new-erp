@@ -1,12 +1,12 @@
 import SideList from "./SideList"
 
-const SuperAdmin = () => {
+const SuperAdmin = ({children}) => {
     
   return (
     <div className="">
         <SideList />
         <div className="">
-            SuperADmin
+            <main>{children}</main>
         </div>
     </div>
   )

@@ -1,6 +1,12 @@
+import SideList from "../SuperAdmin/SideList"
+
 const About = () => {
   return (
-    <div className="py-40">About</div>
+    <div className="flex">
+        <SideList />
+    <div className="">About</div>
+    </div>
+
   )
 }
 
