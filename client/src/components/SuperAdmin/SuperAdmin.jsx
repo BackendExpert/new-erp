@@ -3,7 +3,12 @@ import SideList from "./SideList"
 const SuperAdmin = () => {
     
   return (
-    <SideList />
+    <div className="">
+        <SideList />
+        <div className="">
+            SuperADmin
+        </div>
+    </div>
   )
 }
 
