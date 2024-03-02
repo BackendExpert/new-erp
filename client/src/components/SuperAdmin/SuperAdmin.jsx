@@ -6,7 +6,7 @@ const SuperAdmin = ({children}) => {
     <div className="bg-gray-200">
         <div className="flex">
             <SideList />
-            <div className="">
+            <div className="bg-white my-4 mx-2 w-full rounded py-4 px-6">
                 Super Admin Dash
             </div>
         </div>
