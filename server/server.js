@@ -18,6 +18,10 @@ const connection = mysql.createConnection({
 // middleware
 app.use(express.json())
 
+// register EndPoint
+app.post('/register', (req, res) => {
+    
+})
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
