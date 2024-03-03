@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 
 export const SignUp = () => {
+    //use navigete
+    const navigete = useNavigate();
 
     //veriables for cathch data
     const [dataForm, SetDataForm] = useState({
@@ -29,6 +31,8 @@ export const SignUp = () => {
                 password,
                 role
             });
+
+            navigete('/');
         }
         catch (err){
             console.log(err);
