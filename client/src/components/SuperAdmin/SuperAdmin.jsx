@@ -1,9 +1,26 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import SideList from "./SideList"
 import Navlist from "../NavBar/navList"
+import { useEffect, useState } from "react";
+
 
 const SuperAdmin = ({children}) => {
-    
+    const navigete = useNavigate();
+    const [userdata, SetUserData] = useState();
+
+    useEffect(() => {
+      const datainToken = localStorage.getItem('Logintoken');
+      if(datainToken) {
+        SetUserData(JSON.parse(datainToken));
+      }
+    }, []);
+
+    if(userdata.result.role !== 'SuperAdmin'){
+      localStorage.clear();
+      navigete('/');
+    }
+
+
   return (
     <div className="bg-gray-200">
         <div className="flex">
