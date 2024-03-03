@@ -12,7 +12,9 @@ const navList = () => {
         {name: "", link: ""}       
     ];
   return (
-    <div>navList</div>
+    <div className="border-l-4 border-gray-200 shadow-xl mt-4 bg-white py-4 px-6 rounded">
+        List Name
+    </div>
   )
 }
 
