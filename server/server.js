@@ -20,7 +20,23 @@ app.use(express.json())
 
 // register EndPoint
 app.post('/register', (req, res) => {
-    
+    const {username, email, password, role} = req.body;
+
+    // hash passwrd
+    bcrypt.hash(password, 10, (err, hashPass) => {
+        if(err) throw err;
+
+        // save the user to database
+
+        // get current time
+        var createTime = new Date();
+        var updateTime = new Date();
+
+        connection.query(
+            'INSERT INTO users(username, email, role, password, create_at, update_at) VALUES (?, ?, ?, ?, ?, ?)',
+            [username, email, role, hashPass, createTime, updateTime],
+        )
+    })
 })
 
 //check the server is working
