@@ -1,6 +1,36 @@
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { useState } from 'react'
 
 export const SignUp = () => {
+    const [dataForm, SetDataForm] = useState({
+        username: '',
+        email: '',
+        password: '',
+        role: ''
+    })
+
+    const {username, email, password, role} = dataForm;
+
+    const onChange = (e) => 
+        SetDataForm({...dataForm, [e.target.name]: e.target.value })
+
+    const headleSignUp = async (e) => {
+        e.preventDefault();
+        try{
+            const res = await axios.post('http://localhost:8081/register', {
+                username,
+                email,
+                password,
+                role
+            });
+            console.log(res.data);
+        }
+        catch (err){
+            console.log(err.response.data);
+        }
+    }
+
   return (
     <div className='bg-[url(https://wallpapercave.com/wp/qkz7ffi.jpg)] bg-center bg-cover h-screen w-full'>
         <div className="lg:py-[150px] lg:mx-40 py-16 mx-8">
@@ -8,7 +38,7 @@ export const SignUp = () => {
                 <h1 className="text-3xl font-semibold">Register Here</h1>
                 
                 <div className="pl-4">
-                    <form>
+                    <form onSubmit={headleSignUp}>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Name : </label>
                             <input type="text" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Name'/>
