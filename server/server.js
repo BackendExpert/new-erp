@@ -35,9 +35,13 @@ app.post('/register', (req, res) => {
         connection.query(
             'INSERT INTO users(username, email, role, password, create_at, update_at) VALUES (?, ?, ?, ?, ?, ?)',
             [username, email, role, hashPass, createTime, updateTime],
-        )
-    })
-})
+            (error, result) => {
+                if(error) throw error;
+                res.status(201).send("User registered Successfully");
+            }
+        );
+    });
+});
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
