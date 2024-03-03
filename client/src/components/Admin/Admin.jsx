@@ -8,7 +8,7 @@ const Admin = () => {
         <div className="flex">
             <SideListAdmin/>
             <div className="w-full mx-2">
-                <Navlist />
+                <NavlistAdmin />
             </div>
         </div>
     </div>
