@@ -13,9 +13,22 @@ const SuperAdmin = ({children}) => {
               <div className="shadow-xl border-l-4 bg-white my-4 rounded py-4 px-6">
                   <h1 className="text-2xl">Welcome to SuperAdmin Dashboard</h1>
                   <hr className="mt-2 border-blue-100 border-2" />
+
+                  <div className="">
+                      <div className="lg:grid grid-cols-3 gap-6">
+                        <div className="bg-green-500">
+                          <p className="">Admins</p>
+                        </div>
+                        <div className="bg-green-500">
+                          <p className="">Admins</p>
+                        </div>
+                        <div className="bg-green-500">
+                          <p className="">Admins</p>
+                        </div>
+                      </div>
+                  </div>
               </div>
             </div>
-
         </div>
     </div>
   )
