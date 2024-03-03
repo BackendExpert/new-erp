@@ -85,29 +85,29 @@ app.post('/login', (req, res) => {
 });
 
 
-//Protect Route
-app.get('/protected' , (req, res) => {
-    const token = req.header('Authorization');
+// //Protect Route
+// app.get('/protected', (req, res) => {
+//     const token = req.header('Authorization');
 
-    if(!token){
-        return res.status(401).send("Access Denied");
-    }
+//     if(!token){
+//         return res.status(401).send("Access Denied");
+//     }
 
-    try{
-        const decoded = jwt.verify(token, 'your-secret-key');
-        req.user = decoded;
+//     try{
+//         const decoded = jwt.verify(Logintoken, 'your-secret-key');
+//         req.user = decoded;
 
-        if(res.user.role === 'SuperAdmin'){
-            res.send("SuperAdmin");
-        }
-        else{
-            res.status(401).send("Forbidden");
-        }
-    }
-    catch(err){
-        res.status(401).send("Invalid Token");
-    }
-});
+//         if(res.user.role === 'SuperAdmin'){
+//             res.send("SuperAdmin");
+//         }
+//         else{
+//             res.status(403).send("Forbidden");
+//         }
+//     }
+//     catch(err){
+//         res.status(401).send("Invalid Token");
+//     }
+// });
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));

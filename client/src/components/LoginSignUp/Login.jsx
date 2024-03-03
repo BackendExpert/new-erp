@@ -35,7 +35,7 @@ const Login = () => {
 
             localStorage.setItem('Logintoken', loingToken);
             console.log('Login Successful');
-            navigete('/protect')
+            navigete('/superAdmin');
 
 
         }
