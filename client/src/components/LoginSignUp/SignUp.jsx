@@ -29,10 +29,9 @@ export const SignUp = () => {
                 password,
                 role
             });
-            console.log(res.data);
         }
         catch (err){
-            console.log(err.response.data);
+            console.log(err);
         }
     }
 
@@ -46,19 +45,19 @@ export const SignUp = () => {
                     <form onSubmit={headleSignUp}>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Name : </label>
-                            <input type="text" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Name' onChange={onChange}/>
+                            <input type="text" className="my-2 w-full h-11 border rounded pl-2" name='username' required placeholder='Enter Name' onChange={onChange}/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Email : </label>
-                            <input type="email" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Email Address' onChange={onChange}/>
+                            <input type="email" className="my-2 w-full h-11 border rounded pl-2" name='email' required placeholder='Enter Email Address' onChange={onChange}/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Password : </label>
-                            <input type="password" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Password' onChange={onChange}/>
+                            <input type="password" className="my-2 w-full h-11 border rounded pl-2" name='password' required placeholder='Enter Password' onChange={onChange}/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Select Role : </label><br />
-                            <select name="" id="" className='border w-full py-2 my-2 pl-2' onChange={onChange}>
+                            <select name="role" id="" className='border w-full py-2 my-2 pl-2' onChange={onChange}>
                                 <option className='bg-gray-200 '>Select Allowance Name</option>
                                 <option value="SuperAdmin">SuperAdmin</option>
                                 <option value="Admin">Admin</option>

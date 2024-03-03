@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql2');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const cors = require('cors')
 
 const app = express();
 const PORT = process.env.PORT || 8081
@@ -17,6 +18,7 @@ const connection = mysql.createConnection({
 
 // middleware
 app.use(express.json())
+app.use(cors())
 
 // register EndPoint
 app.post('/register', (req, res) => {
