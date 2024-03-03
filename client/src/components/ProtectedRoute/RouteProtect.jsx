@@ -1,7 +1,10 @@
 import axios from 'axios';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const RouteProtect = () => {
+
+    const [Msg, SetMeg] = useState('');
+    
     useEffect(() => {
         const ProteactData = async () => {
             try{
