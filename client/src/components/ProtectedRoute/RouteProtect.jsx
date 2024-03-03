@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 const RouteProtect = () => {
 
@@ -12,6 +12,7 @@ const RouteProtect = () => {
                 const res = await axios.get('http://localhost:8081/protected', {
                     headers:{Authorization: tokenLogin}
                 }); 
+                SetMeg(res.data);
             }
             catch (err){
                 console.log(err)

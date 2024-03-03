@@ -97,8 +97,8 @@ app.get('/protected' , (req, res) => {
         const decoded = jwt.verify(token, 'your-secret-key');
         req.user.decoded;
 
-        if(res.user.role === 'superadmin'){
-            res.send("SuperAdmin")
+        if(res.user.role === 'SuperAdmin'){
+            res.send("SuperAdmin");
         }
         else{
             res.status(401).send("Forbidden");
