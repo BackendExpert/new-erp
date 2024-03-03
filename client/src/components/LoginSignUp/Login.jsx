@@ -27,6 +27,10 @@ const Login = () => {
                 email,
                 password
             });
+
+            //Stroge the token in local stroge
+            localStorage.setItem('token', res.data.token)
+            console.log('Login Successful');
         }
         catch (err){
             console.log(err);
