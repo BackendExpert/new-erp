@@ -48,7 +48,40 @@ app.post('/register', (req, res) => {
 
 // Login Endpoint
 app.post('/login', (req, res) => {
-    
+    const {email, password} = req.body;
+
+    //find email for database
+    connection.query(
+        'SELECT * FROM users WHERE email = ?',
+        [email],
+        (error, result) => {
+            if(error) throw error;
+            
+            if(result.length > 0){
+
+                //compare the Password
+                bcrypt.compare(password, result[0].password, (err, passMatch) => {
+                    if(err) throw error;
+
+                    if(passMatch) {
+                        // generate JWT Token
+                        const token = jwt.sign(
+                            {email: result[0].email, role: result[0].role },
+                            'your-secret-key',
+                            {expiresIn: '1h' }
+                        );
+                        res.status(200).json({token});
+                    }
+                    else {
+                        res.status(401).send("Invalid Credentials");
+                    }
+                });
+            }
+            else{
+                res.status(401).send("Invalid Credentials");
+            }
+        }
+    );
 });
 
 //check the server is working
