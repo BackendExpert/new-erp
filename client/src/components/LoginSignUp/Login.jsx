@@ -29,8 +29,9 @@ const Login = () => {
             });
 
             //Stroge the token in local stroge
-            localStorage.setItem('token', res.data.token)
+            localStorage.setItem('token', res.data.token);
             console.log('Login Successful');
+            console.log(res.data.token);
         }
         catch (err){
             console.log(err);

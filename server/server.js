@@ -70,7 +70,7 @@ app.post('/login', (req, res) => {
                             'your-secret-key',
                             {expiresIn: '1h' }
                         );
-                        res.status(200).json({token});
+                        res.json({ token });
                     }
                     else {
                         res.status(401).send("Invalid Credentials");
