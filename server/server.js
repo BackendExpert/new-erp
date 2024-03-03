@@ -88,10 +88,10 @@ app.post('/login', (req, res) => {
 // Count User Roles
 app.get('/countadmins', (req, res) => {
     const sql = "SELECT count(id) as Admin from users";
-    connection.query(sql, (err, result) => {
+    connection.query(sql, (err, results) => {
         if(err)
-            return req.json({Status: "ERROR", Error: "Query Execution"});
-            return req.json(result);
+            return req.json({Status: "Error", Error:"Error in query execution"});
+            return res.json(results)
     })
 })
 
