@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = process.env.PORT || 8081
 
+//make connection between dbsever and node app
+
 
 
 //check the server is working
