@@ -6,20 +6,9 @@ import { useEffect, useState } from "react";
 
 const SuperAdmin = ({children}) => {
     const navigete = useNavigate();
-    const [userdata, SetUserData] = useState();
 
-    useEffect(() => {
-      const datainToken = localStorage.getItem('Logintoken');
-      if(datainToken) {
-        SetUserData(JSON.parse(datainToken));
-      }
-    }, []);
-
-    if(userdata.result.role !== 'SuperAdmin'){
-      localStorage.clear();
-      navigete('/');
-    }
-
+    const userRole = localStorage.getItem('Logintoken');
+    console.log(userRole)
 
   return (
     <div className="bg-gray-200">

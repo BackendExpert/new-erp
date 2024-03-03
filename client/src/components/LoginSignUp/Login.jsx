@@ -35,7 +35,8 @@ const Login = () => {
 
             localStorage.setItem('Logintoken', loingToken);
             console.log('Login Successful');
-            
+
+
            if(res.data.Msg === "success"){
                 if(res.data.CheckRole[0].role === 'SuperAdmin'){
                     navigete('/superAdmin');
