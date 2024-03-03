@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 const SideList = () => {
-    const [openSide, SetSideOpen] = useState(false);
+    const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
         {name: "Employess",  link: "/dash", icon: <Icons name="people" size="large"></Icons>},
@@ -20,10 +20,12 @@ const SideList = () => {
 
 
     return (
-        <div className='border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white lg:w-72 w-screen h-full pl-8 py-4'>
+        <div className={`${openSide ? 'w-72' : 'w-20' } duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4`}>
             <div className="py-2">
-                <div className=""></div>
-                <div className="text-2xl pb-4 text-[#3B71CA] font-bold">SuperAdmin</div>
+                <div className="flex">
+                <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
+                    <div className="text-2xl pb-4 text-[#3B71CA] font-bold">SuperAdmin</div>                    
+                </div>
                 <div className="text-xl text-gray-400 duration-500 hover:text-[#3B71CA]">
                     <Link to={'/superAdmin'}>
                         Dashboard
@@ -44,7 +46,9 @@ const SideList = () => {
                     ))
                 }
             </div>
+           
         </div>
+        
     )
   }
   
