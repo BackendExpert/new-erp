@@ -24,11 +24,11 @@ const SideList = () => {
             <div className="py-2">
                 <div className="flex">
                 <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
-                    <div className="text-2xl pb-4 text-[#3B71CA] font-bold">SuperAdmin</div>                    
+                    <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>SuperAdmin</div>                    
                 </div>
-                <div className="text-xl text-gray-400 duration-500 hover:text-[#3B71CA]">
+                <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
                     <Link to={'/superAdmin'}>
-                        Dashboard
+                        {openSide ? <p>Dashbord</p> : <Icons name="speedometer"></Icons> }
                     </Link>
                 </div>
                 <hr className="mt-2 mr-4 border-b-2 border-blue-300"/>
@@ -40,7 +40,7 @@ const SideList = () => {
                         <Link to={sidem.link}>
                         <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
                             <p>{sidem.icon}</p>
-                            <p className="pt-2 pl-2">{sidem.name}</p>                        
+                            <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
                         </div>
                         </Link>
                     ))
