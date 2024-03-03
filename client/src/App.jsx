@@ -15,6 +15,12 @@ export default function App() {
         <Route path="/register" element={<SignUp />} ></Route>
 
         <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
+        <Route path="/admin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
+        <Route path="/hod" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
+        <Route path="/to" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
+        <Route path="/librarian" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
+        <Route path="/labManager" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
+        <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
 
         <Route path="/dash" element={<Dash />} ></Route>
         <Route path="/about" element={<About />} ></Route>
