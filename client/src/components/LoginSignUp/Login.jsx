@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
 const Login = () => {
-
+    //navigete
+    const navigete = useNavigate();
+    
     //veriables for cathch data
     const [LoginData, SetLoginData] = useState({
         email: '',
@@ -33,6 +35,8 @@ const Login = () => {
 
             localStorage.setItem('Logintoken', loingToken);
             console.log('Login Successful');
+
+
         }
         catch (err){
             console.log(err);
