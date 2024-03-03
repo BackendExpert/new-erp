@@ -21,7 +21,7 @@ const navList = () => {
         <div className="text-xl absolute cursor-pointer lg:hidden right-8" onClick={() => SetNavOpen(!navopen)}>
             <Icons name={navopen ? 'caret-down' : 'caret-up'} ></Icons>
         </div>
-        <div className={`lg:flex lg:items-center absolute lg:static bg-white transition-all duration-500 ease-in lg:mt-0 mt-12 ${navopen ? 'opacity-100 ':'lg:opacity-100 opacity-0'}`}>
+        <div className={`rounded lg:border-0 border-b-4 border-blue-400 lg:flex lg:items-center absolute lg:static bg-white transition-all duration-500 ease-in lg:mt-0 mt-12 ${navopen ? 'opacity-100 ':'lg:opacity-100 opacity-0'}`}>
 
             {
                 navLists.map((nav) => {
@@ -32,7 +32,7 @@ const navList = () => {
                     }
                     else{
                         return (
-                            <div className="text-blue-500 px-4 lg:py-0 py-4">{nav.name}</div>
+                            <div className="text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">{nav.name}</div>
                         )
                     }
                 })
