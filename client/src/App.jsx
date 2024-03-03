@@ -13,12 +13,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} ></Route>
         <Route path="/register" element={<SignUp />} ></Route>
-        <Route 
-          path="/superAdmin" 
-          element={<PrivateRoute>
-            <SuperAdmin />
-          </PrivateRoute>} 
-        />
+
+        <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
 
         <Route path="/dash" element={<Dash />} ></Route>
         <Route path="/about" element={<About />} ></Route>

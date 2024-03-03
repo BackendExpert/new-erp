@@ -35,7 +35,10 @@ const Login = () => {
 
             localStorage.setItem('Logintoken', loingToken);
             console.log('Login Successful');
-            navigete('/superAdmin');
+            
+           if(res.data.Msg === "success"){
+                navigete('/superAdmin');
+           }
 
 
         }
