@@ -1,7 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 
 const Login = () => {
+
+    //veriables for cathch data
+    const [LoginData, SetLoginData] = useState({
+        email: '',
+        password: ''
+    });
+
+    //get data
+    const {email, password} = LoginData;
+
+    //onChange
+
+    const onChange = (e) => 
+        SetLoginData({...LoginData, [e.target.name]: e.target.value });
+
+    //headle Login
+    const headleLogin = async (e) => {
+        e.preventDefault();
+
+        try{
+            const res = await axios.post('http://localhost:8081/login', {
+                email,
+                password
+            });
+        }
+        catch (err){
+            console.log(err);
+        }
+    }
+
   return (
     <div className='bg-[url(https://wallpapercave.com/wp/qkz7ffi.jpg)] bg-center bg-cover h-screen w-full'>
         <div className="lg:py-24 lg:mx-40 py-16 mx-8">
@@ -9,14 +40,14 @@ const Login = () => {
                 <h1 className="text-3xl font-semibold">Login Here</h1>
                 
                 <div className="pl-4">
-                    <form>
+                    <form onSubmit={headleLogin}>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Email : </label>
-                            <input type="email" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Email Address'/>
+                            <input type="email" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Email Address' name='email' onChange={onChange}/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Password : </label>
-                            <input type="password" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Password'/>
+                            <input type="password" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Password' name='password' onChange={onChange}/>
                         </div>
                         <div className="my-4">
                             <button type="submit" className="w-1/2 h-12 border border-blue-500 rounded text-blue-500 duration-500 hover:text-white hover:bg-blue-500">Login</button>
