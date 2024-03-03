@@ -1,4 +1,6 @@
+import { NavLink } from "react-router-dom"
 import SideList from "./SideList"
+import Navlist from "../NavBar/navList"
 
 const SuperAdmin = ({children}) => {
     
@@ -6,9 +8,14 @@ const SuperAdmin = ({children}) => {
     <div className="bg-gray-200">
         <div className="flex">
             <SideList />
-            <div className="shadow-xl border-l-4 bg-white my-4 mx-2 w-full rounded py-4 px-6">
-                Super Admin Dash
+            <div className="w-full mx-2">
+              <Navlist />
+              <div className="shadow-xl border-l-4 bg-white my-4 rounded py-4 px-6">
+                  Super Admin Dash
+              </div>
             </div>
+
+
         </div>
     </div>
   )
