@@ -20,9 +20,6 @@ const SummaryDash = () => {
         {name:"Accc", countData: countAdmin},
         {name:"Users", countData: countAdmin}          
     ];
-  return (
-    <div></div>
-  )
 }
 
 export default SummaryDash
