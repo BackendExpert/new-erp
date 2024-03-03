@@ -11,6 +11,7 @@ const navList = () => {
         {name: "Profile", link: ""},
         {name: "Logout", link: "", desc: "logout"}       
     ];
+    
   return (
     <div className="flex justify-between border-b-4 border-blue-300 shadow-xl mt-4 bg-white py-4 px-6 rounded">
         NIFS
