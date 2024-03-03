@@ -17,40 +17,46 @@ const SideList = () => {
         {name: "Accounts",  link: "#", icon: <Icons name="people-circle" size="large"></Icons>},
         {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>}
     ]
-    return (
-        <div className="">
-            <div className={`${openSide ? 'w-72' : 'w-20'} duration-500 h-screen bg-blue-500 relative`}>
-                <div className="absulute corsor-pointer rounded-xl " onClick={() => SetSideOpen(!openSide)} >
-                    <Icons name={(!openSide ? 'menu' : 'close')}></Icons>
-                </div>
-            </div>
-        </div>
-        
-    //   <div className='border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white lg:w-72 w-screen h-full pl-8 py-4'>
-    //     <div className="py-2">
-    //         <div className=""></div>
-    //         <div className="text-2xl pb-4 text-[#3B71CA] font-bold">SuperAdmin</div>
-    //         <div className="text-xl text-gray-400 duration-500 hover:text-[#3B71CA]">
-    //             <Link to={'/superAdmin'}>
-    //                 Dashboard
-    //             </Link>
-    //         </div>
-    //         <hr className="mt-2 mr-4 border-b-2 border-blue-300"/>
-    //     </div>
 
-    //     <div className="pl-2">
-    //         {
-    //             sidemenu.map((sidem) => (
-    //                 <Link to={sidem.link}>
-    //                 <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
-    //                     <p>{sidem.icon}</p>
-    //                     <p className="pt-2 pl-2">{sidem.name}</p>                        
-    //                 </div>
-    //                 </Link>
-    //             ))
-    //         }
-    //     </div>
-    //   </div>
+    const navlists = [
+        {name: "", link: ""},
+        {name: "", link: ""},
+        {name: "", link: ""},
+        {name: "", link: ""},
+        {name: "", link: ""},
+        {name: "", link: ""},
+        {name: "", link: ""},
+        {name: "", link: ""},
+        {name: "", link: ""}        
+    ];
+    
+    return (
+       
+      <div className='border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white lg:w-72 w-screen h-full pl-8 py-4'>
+        <div className="py-2">
+            <div className=""></div>
+            <div className="text-2xl pb-4 text-[#3B71CA] font-bold">SuperAdmin</div>
+            <div className="text-xl text-gray-400 duration-500 hover:text-[#3B71CA]">
+                <Link to={'/superAdmin'}>
+                    Dashboard
+                </Link>
+            </div>
+            <hr className="mt-2 mr-4 border-b-2 border-blue-300"/>
+        </div>
+
+        <div className="pl-2">
+            {
+                sidemenu.map((sidem) => (
+                    <Link to={sidem.link}>
+                    <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                        <p>{sidem.icon}</p>
+                        <p className="pt-2 pl-2">{sidem.name}</p>                        
+                    </div>
+                    </Link>
+                ))
+            }
+        </div>
+      </div>
     )
   }
   
