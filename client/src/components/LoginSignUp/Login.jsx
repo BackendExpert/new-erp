@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import  secureLocalStorage  from  "react-secure-storage";
 
 const Login = () => {
     //navigete
@@ -36,6 +37,9 @@ const Login = () => {
             localStorage.setItem('Logintoken', loingToken);
             console.log('Login Successful');
 
+            const userRole = res.data.CheckRole[0].role;
+
+            secureLocalStorage.setItem("loginNew", userRole);
 
            if(res.data.Msg === "success"){
                 if(res.data.CheckRole[0].role === 'SuperAdmin'){

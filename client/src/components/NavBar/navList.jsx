@@ -19,7 +19,7 @@ const navList = () => {
     ];
 
     const logout = () => {
-        localStorage.removeItem('Logintoken');
+        localStorage.clear;
         nagigate('/')
     }
 

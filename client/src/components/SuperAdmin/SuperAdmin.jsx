@@ -1,14 +1,22 @@
 import { NavLink, useNavigate } from "react-router-dom"
 import SideList from "./SideList"
 import Navlist from "../NavBar/navList"
-import { useEffect, useState } from "react";
-
+import  secureLocalStorage  from  "react-secure-storage";
+import { useEffect } from "react";
 
 const SuperAdmin = ({children}) => {
     const navigete = useNavigate();
 
-    const userRole = localStorage.getItem('Logintoken');
-    console.log(userRole)
+    useEffect(() => {
+      const RoleUser = secureLocalStorage.getItem("loginNew");
+    
+      if(RoleUser !== "SuperAdmin"){
+        navigete('/');
+        localStorage.clear();
+      }
+    }, []);
+
+
 
   return (
     <div className="bg-gray-200">
