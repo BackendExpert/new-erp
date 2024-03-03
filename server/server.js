@@ -84,5 +84,9 @@ app.post('/login', (req, res) => {
     );
 });
 
+
+//Protect Route
+app.get('/protected')
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));

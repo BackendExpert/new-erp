@@ -6,7 +6,7 @@ const RouteProtect = () => {
         const ProteactData = async () => {
             try{
                 const tokenLogin = localStorage.getItem('Logintoken');
-                const res = await axios.get('http://localhost:8081/protect', {
+                const res = await axios.get('http://localhost:8081/protected', {
                     headers:{Authorization: tokenLogin}
                 }); 
             }
