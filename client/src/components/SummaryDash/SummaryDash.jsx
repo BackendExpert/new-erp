@@ -20,6 +20,20 @@ const SummaryDash = () => {
         {name:"Accc", countData: countAdmin},
         {name:"Users", countData: countAdmin}          
     ];
+  return (
+    <div className="">
+        
+        <div className="lg:grid grid-cols-4 gap-4">
+            {
+                listData.map((list => (
+                    <div className="">
+                        {list.name}
+                    </div>
+                )))
+            }
+        </div>
+    </div>
+  )
 }
 
 export default SummaryDash
