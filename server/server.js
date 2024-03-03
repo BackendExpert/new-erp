@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql2');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const cors = require('cors')
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 8081
@@ -86,15 +86,12 @@ app.post('/login', (req, res) => {
 
 
 // Count User Roles
-app.get('/countadmins', (req, res) => {
-    const sql = "SELECT count(id) as Admin from users";
-    connection.query(sql, (err, results) => {
-        if(err)
-            return req.json({Status: "Error", Error:"Error in query execution"});
-            return res.json(results)
-    })
-})
-
+app.get('/adminsCount', (req, res) => {
+    connection.query('SELECT COUNT(UserID) AS admin FROM users', (err, results) => {
+      if (err) throw err;
+      res.json({ count: results[0].adminCount });
+    });
+});
 
 
 //check the server is working
