@@ -43,8 +43,28 @@ const Login = () => {
                 else if(res.data.CheckRole[0].role === "Admin"){
                     navigete('/superAdmin');
                 }
+                else if(res.data.CheckRole[0].role === "HOD"){
+                    navigete('/superAdmin');
+                }
+                else if(res.data.CheckRole[0].role === "TO"){
+                    navigete('/superAdmin');
+                }
+                else if(res.data.CheckRole[0].role === "Librarian"){
+                    navigete('/superAdmin');
+                }
+                else if(res.data.CheckRole[0].role === "Labmanager"){
+                    navigete('/superAdmin');
+                }
+                else if(res.data.CheckRole[0].role === "Accountant"){
+                    navigete('/superAdmin');
+                }
+                else if(res.data.CheckRole[0].role === "User"){
+                    navigete('/superAdmin');
+                }
+                else{
+                    alert("ERROR");
+                }
            }
-
 
         }
         catch (err){
