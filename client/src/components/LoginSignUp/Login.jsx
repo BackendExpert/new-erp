@@ -37,7 +37,9 @@ const Login = () => {
             console.log('Login Successful');
             
            if(res.data.Msg === "success"){
-                navigete('/superAdmin');
+                if(res.data.CheckRole[0].role === 'HOD'){
+                    navigete('/superAdmin');
+                }
            }
 
 
