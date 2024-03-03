@@ -1,8 +1,11 @@
 import { useState } from "react"
 import Icons from "@reacticons/ionicons"
+import { useNavigate } from "react-router-dom"
 
 const navList = () => {
     const [navopen, SetNavOpen] = useState()
+
+    const nagigate = useNavigate();
 
     const navLists = [
         {name: "Leave Requests", link: ""},
@@ -14,6 +17,11 @@ const navList = () => {
         {name: "Profile", link: ""},
         {name: "Logout", link: "", desc: "logout"}       
     ];
+
+    const logout = () => {
+        localStorage.removeItem('Logintoken');
+        nagigate('/')
+    }
 
   return (
     <div className="flex justify-between border-b-4 border-blue-300 shadow-xl mt-4 bg-white py-4 px-6 rounded">
@@ -27,12 +35,12 @@ const navList = () => {
                 navLists.map((nav) => {
                     if(nav.desc === "logout"){
                         return (
-                            <div className="text-red-500 px-4 lg:py-0 py-4">{nav.name}</div>
+                            <div onClick={logout} className="cursor-pointer text-red-500 px-4 lg:py-0 py-4">{nav.name}</div>
                         )
                     }
                     else{
                         return (
-                            <div className="text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">{nav.name}</div>
+                            <div className="cursor-pointer text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">{nav.name}</div>
                         )
                     }
                 })

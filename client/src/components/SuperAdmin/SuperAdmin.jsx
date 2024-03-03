@@ -16,7 +16,6 @@ const SuperAdmin = ({children}) => {
               </div>
             </div>
 
-
         </div>
     </div>
   )
