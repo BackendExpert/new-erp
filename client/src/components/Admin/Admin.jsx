@@ -1,6 +1,6 @@
 import SideListAdmin from "./AdminSide"
 import { NavLink } from "react-router-dom"
-import Navlist from "../NavBar/navList"
+import NavlistAdmin from "../NavBar/navListAdmin"
 
 const Admin = () => {
   return (
