@@ -85,6 +85,17 @@ app.post('/login', (req, res) => {
 });
 
 
+// Count User Roles
+app.get('/countadmins', (req, res) => {
+    const sql = "SELECT count(id) as Admin from users";
+    connection.query(sql, (err, result) => {
+        if(err)
+            return req.json({Status: "ERROR", Error: "Query Execution"});
+            return req.json(result);
+    })
+})
+
+
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
