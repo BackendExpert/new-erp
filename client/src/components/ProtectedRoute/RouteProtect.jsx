@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const RouteProtect = () => {
 
     const [Msg, SetMeg] = useState('');
-    
+
     useEffect(() => {
         const ProteactData = async () => {
             try{
@@ -19,9 +19,10 @@ const RouteProtect = () => {
         };
         ProteactData();
     }, []);
-//   return (
-//     <div>RouteProtect</div>
-//   )
+
+  return (
+    <div>{Msg}</div>
+  )
 }
 
 export default RouteProtect
