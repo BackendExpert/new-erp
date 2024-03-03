@@ -3,6 +3,8 @@ import axios from 'axios'
 import { useState } from 'react'
 
 export const SignUp = () => {
+
+    //veriables for cathch data
     const [dataForm, SetDataForm] = useState({
         username: '',
         email: '',
@@ -10,11 +12,14 @@ export const SignUp = () => {
         role: ''
     })
 
+    //get data
     const {username, email, password, role} = dataForm;
 
+    // make onChange 
     const onChange = (e) => 
         SetDataForm({...dataForm, [e.target.name]: e.target.value })
 
+    // headle SignUp
     const headleSignUp = async (e) => {
         e.preventDefault();
         try{
