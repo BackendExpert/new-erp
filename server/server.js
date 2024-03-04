@@ -98,7 +98,7 @@ app.get('/AdminCount', (req, res) => {
   
       res.json({ count: results[0].count }); // Send count in JSON format
     });
-  });
+});
 
 
 //check the server is working
