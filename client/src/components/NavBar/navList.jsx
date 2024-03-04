@@ -29,7 +29,7 @@ const navList = () => {
         <div className="text-xl absolute cursor-pointer lg:hidden right-8" onClick={() => SetNavOpen(!navopen)}>
             <Icons name={navopen ? 'caret-down' : 'caret-up'} ></Icons>
         </div>
-        <div className={`rounded lg:border-0 border-b-4 border-blue-400 lg:flex lg:items-center absolute lg:static bg-white transition-all duration-500 ease-in lg:mt-0 mt-12 ${navopen ? 'lg:visible':'lg:visible invisible'}`}>
+        <div className={`rounded lg:border-0 border-b-4 border-blue-400 lg:flex lg:items-center absolute lg:static bg-white transition-all lg:mt-0 mt-12 ${navopen ? 'lg:visible':'lg:visible invisible'}`}>
 
             {
                 navLists.map((nav) => {
