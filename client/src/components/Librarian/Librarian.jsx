@@ -2,7 +2,7 @@ import LibSide from "./LibSide"
 import secureLocalStorage from "react-secure-storage"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-
+import Navlists from "../SuperAdmin/NavList"
 
 const Librarian = () => {
   const navigete = useNavigate();
@@ -29,7 +29,9 @@ const Librarian = () => {
     <div className="bg-gray-200">
       <div className="flex">
         <LibSide />
-
+        <div className="w-full mx-2">
+          <Navlists />
+        </div>
       </div>
     </div>
   )
