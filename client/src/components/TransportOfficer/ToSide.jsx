@@ -1,19 +1,25 @@
 import Icons from "@reacticons/ionicons"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 
 const ToSide = () => {
     const [openSide, SetSideOpen] = useState();
+
+    const navigate = useNavigate();
 
     const sidemenu = [
         {name: "Reservations",  link: "#", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Process Request",  link: "#", icon: <Icons name="refresh-circle" size="large"></Icons>},        
         {name: "Vehicle",  link: "#", icon: <Icons name="car" size="large"></Icons>},
         {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Logout",  desc: "logout", icon: <Icons name="person" size="power"></Icons>}        
+        {name: "Logout",  desc: "logout", icon: <Icons name="power" size="large"></Icons>}        
     ]
 
+    const logout = () => {
+        localStorage.clear();
+        navigate('/');
+    }
   return (
     <div className={`${openSide ? 'w-72' : 'w-[84px]' } duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4`}>
         <div className="py-2">
@@ -31,16 +37,29 @@ const ToSide = () => {
 
         <div className="pl-2">
             {
-                sidemenu.map((sidem) => (
-                    <Link to={sidem.link}>
-                    <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
-                        <p>{sidem.icon}</p>
-                        <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
-                    </div>
-                    </Link>
-                ))
+                sidemenu.map((sidem) => {
+                    if(sidem.desc === "logout"){
+                        return (
+                            <div className="flex py4 text-gray-400 duration-500 hover:text-[#dc3545]" onClick={logout}>
+                                {sidem.icon}
+                                {sidem.name}
+                            </div>
+                        )
+                    }
+                    else{
+                        return (
+                            <Link to={sidem.link}>
+                                <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                    <p>{sidem.icon}</p>
+                                    <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
+                                </div>
+                            </Link>
+                        )
+                    }
+                })
             }
         </div>
+
     
     </div>
   )
