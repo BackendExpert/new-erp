@@ -2,7 +2,7 @@ import LibSide from "./LibSide"
 import secureLocalStorage from "react-secure-storage"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import Navlists from "../SuperAdmin/NavList"
+import Navlist from "../NavBar/navList"
 
 const Librarian = () => {
   const navigete = useNavigate();
@@ -30,7 +30,7 @@ const Librarian = () => {
       <div className="flex">
         <LibSide />
         <div className="w-full mx-2">
-          <Navlists />
+          <Navlist />
         </div>
       </div>
     </div>
