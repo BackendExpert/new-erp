@@ -3,6 +3,7 @@ import secureLocalStorage from "react-secure-storage"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import Navlist from "../NavBar/navList"
+import AccData from "./AccData"
 
 const Accountant = ({children}) => {
   const navigete = useNavigate();
@@ -30,6 +31,7 @@ const Accountant = ({children}) => {
         <AccSide />
         <div className="w-full mx-2">
           <Navlist />
+          <AccData />
         </div>
       </div>
     </div>
