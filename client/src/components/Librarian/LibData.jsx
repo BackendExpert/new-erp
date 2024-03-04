@@ -23,7 +23,7 @@ const LibData = () => {
     }
   }, []);
   return (
-    <div className='bg-white py-4 px-6'>LibData</div>
+    <div className='bg-white py-4 px-6 my-4'>LibData</div>
   )
 }
 
