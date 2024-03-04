@@ -28,7 +28,7 @@ const ToSide = () => {
                 <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>TransOfficer</div>                    
             </div>
             <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
-                <Link to={'/superAdmin'}>
+                <Link to={'/to'}>
                     {openSide ? <p>Dashbord</p> : <Icons name="speedometer"></Icons> }
                 </Link>
             </div>
@@ -40,9 +40,9 @@ const ToSide = () => {
                 sidemenu.map((sidem) => {
                     if(sidem.desc === "logout"){
                         return (
-                            <div className="flex py4 text-gray-400 duration-500 hover:text-[#dc3545]" onClick={logout}>
-                                {sidem.icon}
-                                {sidem.name}
+                            <div className="flex py-4 text-gray-400 duration-500 hover:text-[#dc3545] cursor-pointer" onClick={logout}>
+                                <p>{sidem.icon}</p>
+                                <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>
                             </div>
                         )
                     }
