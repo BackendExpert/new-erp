@@ -16,27 +16,33 @@ const Librarian = ({children}) => {
     using following code prevent unauthorized access
      
   */
-  useEffect(() => {
+  // useEffect(() => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
   
-    if(RoleUser !== "Librarian" || RoleUser !== "SuperAdmin"){
-      navigete('/');
-      localStorage.clear();
-    }
-  }, []);
+  //   if(RoleUser !== "Librarian" || RoleUser !== "SuperAdmin"){
+  //     navigete('/');
+  //     localStorage.clear();
+  //   }
+  // }, []);
 
-
-  return (
-    <div className="bg-gray-200">
-      <div className="flex">
-        <LibSide />
-        <div className="w-full mx-2">
-          <Navlist />
-          <LibData />
+  if(RoleUser === "Librarian" || RoleUser !== "SuperAdmin" ){
+    return (
+      <div className="bg-gray-200">
+        <div className="flex">
+          <LibSide />
+          <div className="w-full mx-2">
+            <Navlist />
+            <LibData />
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
+  else{
+    navigete('/');
+    localStorage.clear();
+  }
+
 }
 
 export default Librarian
