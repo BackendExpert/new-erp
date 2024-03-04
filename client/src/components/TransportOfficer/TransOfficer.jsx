@@ -28,6 +28,9 @@ const TransOfficer = ({children}) => {
     <div className="bg-gray-200">
       <div className="flex">
         <ToSide />
+        <div className="">
+          TO
+        </div>
       </div>
     </div>
   )
