@@ -16,7 +16,7 @@ const HeadSide = () => {
         {name: "Logout", desc: "logout", icon: <Icons name="person" size="large"></Icons>}
     ]
   return (
-    <div className={`${openSide ? 'w-72' : 'w-[85px]' } duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4`}>
+    <div className={`${openSide ? 'w-72' : 'w-[80px]' } duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4`}>
         <div className="py-2">
             <div className="flex">
             <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
