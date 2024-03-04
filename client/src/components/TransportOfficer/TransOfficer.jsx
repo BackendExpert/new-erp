@@ -3,6 +3,7 @@ import  secureLocalStorage  from  "react-secure-storage";
 import { useNavigate } from "react-router-dom"
 import ToSide from "./ToSide";
 import ToNav from "../NavBar/ToNav";
+import ToData from "./ToData";
 
 const TransOfficer = ({children}) => {
   
@@ -31,6 +32,7 @@ const TransOfficer = ({children}) => {
         <ToSide />
         <div className="w-full mx-2">
             <ToNav />
+            <ToData />
         </div>
       </div>
     </div>
