@@ -23,7 +23,7 @@ const AccData = () => {
     }, []);
   
   return (
-    <div>AccData</div>
+    <div className="bg-white py-4 px-6 my-4 rounded border-t-4 border-blue-200">AccData</div>
   )
 }
 
