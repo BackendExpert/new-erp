@@ -25,7 +25,7 @@ const ToData = () => {
 
 
   return (
-    <div className='bg-white py-4 px-6'>
+    <div className='bg-white py-4 px-6 rounded shadow-xl border-t-4 border-blue-200'>
         ToData
     </div>
   )
