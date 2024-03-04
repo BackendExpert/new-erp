@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import LabSide from "./LabSide"
 import Navlist from "../NavBar/navList"
+import LabData from "./LabData"
 
 const LabManager = () => {
   const navigete = useNavigate();
@@ -29,7 +30,7 @@ const LabManager = () => {
         <LabSide />
         <div className="w-full mx-2">
           <Navlist />
-          
+          <LabData />
         </div>
       </div>
     </div>
