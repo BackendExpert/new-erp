@@ -25,7 +25,7 @@ const Librarian = ({children}) => {
   //   }
   // }, []);
 
-  if(RoleUser === "Librarian" || RoleUser !== "SuperAdmin" ){
+  if(RoleUser === "Librarian" || RoleUser === "SuperAdmin" ){
     return (
       <div className="bg-gray-200">
         <div className="flex">
@@ -39,7 +39,6 @@ const Librarian = ({children}) => {
     )
   }
   else{
-    navigete('/');
     localStorage.clear();
   }
 
