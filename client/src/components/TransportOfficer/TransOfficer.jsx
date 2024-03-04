@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import  secureLocalStorage  from  "react-secure-storage";
 import { useNavigate } from "react-router-dom"
+import ToSide from "./ToSide";
 
 const TransOfficer = ({children}) => {
   
@@ -24,7 +25,11 @@ const TransOfficer = ({children}) => {
   }, []);
 
   return (
-    <div>TransOfficer</div>
+    <div className="bg-gray-200">
+      <div className="flex">
+        <ToSide />
+      </div>
+    </div>
   )
 }
 
