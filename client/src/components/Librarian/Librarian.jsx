@@ -19,7 +19,7 @@ const Librarian = ({children}) => {
   useEffect(() => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
   
-    if(RoleUser !== "Librarian"){
+    if(RoleUser !== "Librarian" || RoleUser !== "SuperAdmin"){
       navigete('/');
       localStorage.clear();
     }
