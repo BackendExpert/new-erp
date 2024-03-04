@@ -1,6 +1,13 @@
+import LibSide from "./LibSide"
+
 const Librarian = () => {
   return (
-    <div>Librarian</div>
+    <div className="bg-gray-200">
+      <div className="flex">
+        <LibSide />
+        
+      </div>
+    </div>
   )
 }
 
