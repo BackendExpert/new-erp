@@ -1,6 +1,22 @@
-import React from 'react'
+import Icons from "@reacticons/ionicons"
+import { useState } from "react"
+import { Link } from "react-router-dom"
+
 
 const LabSide = () => {
+    const [openSide, SetSideOpen] = useState();
+
+    const sidemenu = [
+        {name: "Employess",  link: "#", icon: <Icons name="people" size="large"></Icons>},
+        {name: "Divisions",  link: "#", icon: <Icons name="business" size="large"></Icons>},
+        {name: "Projects",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
+        {name: "Program",  link: "#", icon: <Icons name="book" size="large"></Icons>},
+        {name: "Designation",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
+        {name: "Vehicle",  link: "#", icon: <Icons name="car" size="large"></Icons>},
+        {name: "Equipment",  link: "#", icon: <Icons name="build" size="large"></Icons>},
+        {name: "Increment",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
+        {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>}
+    ]
   return (
     <div className={`${openSide ? 'w-[300px]' : 'w-[80px]' } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4 `}>
         <div className="py-2">
