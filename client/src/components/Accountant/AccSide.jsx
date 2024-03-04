@@ -6,8 +6,8 @@ const AccSide = () => {
     const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
-        {name: "Employess",  link: "/dash", icon: <Icons name="people" size="large"></Icons>},
-        {name: "Divisions",  link: "/about", icon: <Icons name="business" size="large"></Icons>},
+        {name: "Employess",  link: "#", icon: <Icons name="people" size="large"></Icons>},
+        {name: "Divisions",  link: "#", icon: <Icons name="business" size="large"></Icons>},
         {name: "Projects",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "Program",  link: "#", icon: <Icons name="book" size="large"></Icons>},
         {name: "Designation",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
@@ -21,10 +21,10 @@ const AccSide = () => {
         <div className="py-2">
             <div className="flex">
             <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
-                <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>Admin</div>                    
+                <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>Accountant</div>                    
             </div>
             <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
-                <Link to={'/Admin'}>
+                <Link to={'/accountant'}>
                     {openSide ? <p>Dashbord</p> : <Icons name="speedometer"></Icons> }
                 </Link>
             </div>
