@@ -19,7 +19,7 @@ const navList = () => {
     ];
 
     const logout = () => {
-        localStorage.clear;
+        localStorage.clear();
         nagigate('/')
     }
 
