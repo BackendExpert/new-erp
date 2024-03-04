@@ -25,8 +25,8 @@ const navList = () => {
 
   return (
     <div className="flex justify-between border-b-4 border-blue-300 shadow-xl mt-4 bg-white py-4 px-6 rounded">
-        NIFS ERP
-        <div className="text-xl absolute cursor-pointer lg:hidden right-8" onClick={() => SetNavOpen(!navopen)}>
+        <div className=""></div>
+        <div className="lg:top-0 top-5 text-xl absolute cursor-pointer lg:hidden right-8" onClick={() => SetNavOpen(!navopen)}>
             <Icons name={navopen ? 'caret-down' : 'caret-up'} ></Icons>
         </div>
         <div className={`rounded lg:border-0 border-b-4 border-blue-400 lg:flex lg:items-center absolute lg:static bg-white transition-all duration-500 ease-in lg:mt-0 mt-12 ${navopen ? 'opacity-100 ':'lg:opacity-100 opacity-0'}`}>

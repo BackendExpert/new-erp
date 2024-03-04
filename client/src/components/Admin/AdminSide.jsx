@@ -19,7 +19,7 @@ const SideListAdmin = () => {
 
 
     return (
-        <div className={`${openSide ? 'w-[288px]' : 'w-[85px]' } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4 `}>
+        <div className={`${openSide ? 'w-[300px]' : 'w-[80px]' } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4 `}>
             <div className="py-2">
                 <div className="flex">
                 <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
@@ -37,7 +37,7 @@ const SideListAdmin = () => {
                 {
                     sidemenu.map((sidem, index) => (
                         <Link to={sidem.link}>
-                            <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                            <div className="flex py-2 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
                                 <p>{sidem.icon}</p>
                                 <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
                             </div>
