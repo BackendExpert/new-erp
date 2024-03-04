@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TransOfficer = () => {
+const TransOfficer = ({children}) => {
   return (
     <div>TransOfficer</div>
   )
