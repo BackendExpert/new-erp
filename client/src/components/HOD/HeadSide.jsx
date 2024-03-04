@@ -7,14 +7,19 @@ const HeadSide = () => {
 
     const sidemenu = [
         {name: "Leave",  link: "#", icon: <Icons name="calendar" size="large"></Icons>},
-        {name: "Reservations",  link: "#", icon: <Icons name="business" size="large"></Icons>},
-        {name: "Work Requests",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
+        {name: "Reservations",  link: "#", icon: <Icons name="document-text" size="large"></Icons>},
+        {name: "Work Requests",  link: "#", icon: <Icons name="receipt" size="large"></Icons>},
         {name: "SRN Requests",  link: "#", icon: <Icons name="book" size="large"></Icons>},
-        {name: "Gatepass Requests",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
-        {name: "Increment Requests",  link: "#", icon: <Icons name="car" size="large"></Icons>},
+        {name: "Gatepass Requests",  link: "#", icon: <Icons name="enter" size="large"></Icons>},
+        {name: "Increment Requests",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
         {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Logout", desc: "logout", icon: <Icons name="person" size="large"></Icons>}
+        {name: "Logout", desc: "logout", icon: <Icons name="power" size="large"></Icons>}
     ]
+
+    const logout = () => {
+        localStorage.clear();
+        nagigate('/')
+    }
   return (
     <div className={`${openSide ? 'w-72' : 'w-[80px]' } duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4`}>
         <div className="py-2">
@@ -32,17 +37,29 @@ const HeadSide = () => {
 
         <div className="pl-2">
             {
-                sidemenu.map((sidem) => (
-                    <Link to={sidem.link}>
-                    <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
-                        <p>{sidem.icon}</p>
-                        <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
-                    </div>
-                    </Link>
-                ))
+                sidemenu.map((sidem) => {
+                    if(sidem.desc === "logout"){
+                        return (
+                            <div onClick={logout} className="flex py-4 text-gray-400 duration-500 hover:text-[#dc3545] cursor-pointer">                        
+                                <p>{sidem.icon}</p>
+                                <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
+                            </div>
+                        )
+                    }
+                    else{
+                        return (
+                            <Link to={sidem.link}>
+                                <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                    <p>{sidem.icon}</p>
+                                    <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
+                                </div>
+                            </Link>
+                        )
+                    }
+                })
             }
         </div>
-    
+
     </div>
   )
 }
