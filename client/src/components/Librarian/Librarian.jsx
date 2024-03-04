@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 import Navlist from "../NavBar/navList"
 import LibData from "./LibData"
 
-const Librarian = () => {
+const Librarian = ({children}) => {
   const navigete = useNavigate();
 
   // this is for prevent unauthorized access for this page
