@@ -19,7 +19,7 @@ const HeadDep = ({children}) => {
   useEffect(() => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
   
-    if(RoleUser !== "Admin"){
+    if(RoleUser !== "HOD"){
       navigete('/');
       localStorage.clear();
     }
