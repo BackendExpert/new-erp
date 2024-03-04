@@ -2,6 +2,7 @@ import AccSide from "./AccSide"
 import secureLocalStorage from "react-secure-storage"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import Navlist from "../NavBar/navList"
 
 const Accountant = ({children}) => {
   const navigete = useNavigate();
@@ -27,6 +28,9 @@ const Accountant = ({children}) => {
     <div className="bg-gray-200">
       <div className="flex">
         <AccSide />
+        <div className="w-full mx-2">
+          <Navlist />
+        </div>
       </div>
     </div>
   )
