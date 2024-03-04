@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 const navList = () => {
     const [navopen, SetNavOpen] = useState()
 
-    const nagigate = useNavigate();
+    const navigate = useNavigate();
 
     const navLists = [
         {name: "Home", link: ""},
@@ -20,7 +20,7 @@ const navList = () => {
 
     const logout = () => {
         localStorage.clear();
-        nagigate('/')
+        navigate('/')
     }
 
   return (

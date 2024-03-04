@@ -1,9 +1,10 @@
 import Icons from "@reacticons/ionicons"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const HeadSide = () => {
     const [openSide, SetSideOpen] = useState();
+    const navigate = useNavigate();
 
     const sidemenu = [
         {name: "Leave",  link: "#", icon: <Icons name="calendar" size="large"></Icons>},
@@ -18,7 +19,7 @@ const HeadSide = () => {
 
     const logout = () => {
         localStorage.clear();
-        nagigate('/')
+        navigate('/')
     }
   return (
     <div className={`${openSide ? 'w-72' : 'w-[80px]' } duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4`}>
