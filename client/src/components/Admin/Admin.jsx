@@ -5,7 +5,7 @@ import SummaryDash from "../SummaryDash/SummaryDash"
 import { useEffect } from "react"
 import  secureLocalStorage  from  "react-secure-storage";
 
-const Admin = () => {
+const Admin = ({children}) => {
   const navigete = useNavigate();
 
   // this is for prevent unauthorized access for this page
