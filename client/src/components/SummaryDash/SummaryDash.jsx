@@ -3,18 +3,24 @@ import React, { useEffect, useState } from "react"
 
 
 const SummaryDash = () => {
-    const [adminCount, setAdminCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-    useEffect(() => {
-      fetch('http://localhost:8081/adminsCount')
-        .then(response => response.json())
-        .then(data => setAdminCount(data.count))
-        .catch(error => console.error('Error fetching admin count:', error));
-    }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:8081/AdminCount');
+        setCount(response.data.count);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
   
   return (
-    <div className="">
-        Admins : {adminCount}
+    <div>
+      {count}
     </div>
   )
 }

@@ -35,12 +35,12 @@ const SideListAdmin = () => {
 
             <div className="pl-2">
                 {
-                    sidemenu.map((sidem) => (
+                    sidemenu.map((sidem, index) => (
                         <Link to={sidem.link}>
-                        <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
-                            <p>{sidem.icon}</p>
-                            <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
-                        </div>
+                            <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                <p>{sidem.icon}</p>
+                                <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
+                            </div>
                         </Link>
                     ))
                 }
