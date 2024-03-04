@@ -3,6 +3,7 @@ import secureLocalStorage from "react-secure-storage"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import Navlist from "../NavBar/navList"
+import LibData from "./LibData"
 
 const Librarian = () => {
   const navigete = useNavigate();
@@ -31,6 +32,7 @@ const Librarian = () => {
         <LibSide />
         <div className="w-full mx-2">
           <Navlist />
+          <LibData />
         </div>
       </div>
     </div>
