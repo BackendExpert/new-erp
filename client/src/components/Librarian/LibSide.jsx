@@ -7,15 +7,16 @@ const LibSide = () => {
     const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
-        {name: "Employess",  link: "/dash", icon: <Icons name="people" size="large"></Icons>},
-        {name: "Divisions",  link: "/about", icon: <Icons name="business" size="large"></Icons>},
-        {name: "Projects",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
-        {name: "Program",  link: "#", icon: <Icons name="book" size="large"></Icons>},
-        {name: "Designation",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
-        {name: "Vehicle",  link: "#", icon: <Icons name="car" size="large"></Icons>},
-        {name: "Equipment",  link: "#", icon: <Icons name="build" size="large"></Icons>},
-        {name: "Increment",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
-        {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>}
+        {name: "Book List",  link: "/dash", icon: <Icons name="people" size="large"></Icons>},
+        {name: "Reserved Book",  link: "/about", icon: <Icons name="business" size="large"></Icons>},
+        {name: "Reference List",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
+        {name: "Borrowals",  link: "#", icon: <Icons name="book" size="large"></Icons>},
+        {name: "Journal List",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
+        {name: "Thesis List",  link: "#", icon: <Icons name="car" size="large"></Icons>},
+        {name: "Magazine Lists",  link: "#", icon: <Icons name="build" size="large"></Icons>},
+        {name: "Article Requests",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
+        {name: "Calculate Fine",  link: "#", icon: <Icons name="person" size="large"></Icons>},
+        {name: "List of Fine",  link: "#", icon: <Icons name="person" size="large"></Icons>}
     ]
   return (
     <div className={`${openSide ? 'w-[300px]' : 'w-[80px]' } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4 `}>
