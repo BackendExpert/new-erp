@@ -1,6 +1,10 @@
+import Navlist from "../NavBar/navList"
+
 const Users = () => {
   return (
-    <div>Users</div>
+    <div className="bg-black">
+      <Navlist />
+    </div>
   )
 }
 
