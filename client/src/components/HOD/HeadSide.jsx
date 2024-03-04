@@ -6,7 +6,7 @@ const HeadSide = () => {
     const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
-        {name: "Leave",  link: "#", icon: <Icons name="people" size="large"></Icons>},
+        {name: "Leave",  link: "#", icon: <Icons name="calendar" size="large"></Icons>},
         {name: "Reservations",  link: "#", icon: <Icons name="business" size="large"></Icons>},
         {name: "Work Requests",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "SRN Requests",  link: "#", icon: <Icons name="book" size="large"></Icons>},
