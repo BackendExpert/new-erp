@@ -6,7 +6,7 @@ const HeadDep = ({children}) => {
     <div className='bg-gray-200'>
         <div className="flex">
             <HeadSide />
-            <div className="bg-white">
+            <div className="shadow-xl rounded border-l-4 border-gray-200 bg-white my-4 py-4 px-6">
               hio alll
             </div>
         </div>
