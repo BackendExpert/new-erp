@@ -44,7 +44,15 @@ const AddBook = () => {
     const headleBookSubmit = (e) => {
       e.preventDefault(); 
       axios.post('http://localhost:8081/addBook', bookData)
-      
+      .then(res => {
+        if(res.data.Status === "Success"){
+          navigate('/librarian');
+        }
+        else{
+          setError(res.data.Error);
+        }
+      })
+      .catch(err => console.log(err))
     }
 
   if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
