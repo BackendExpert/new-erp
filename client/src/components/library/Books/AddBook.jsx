@@ -153,7 +153,7 @@ const AddBook = () => {
                     />
                 </div>
                 <div className="my-5">
-                  <button className="border border-[#14A44D] rounded py-2 px-4 w-1/2 text-[#14A44D] font-semibold duration-500 hover:bg-[#14A44D] hover:text-white hover:shadow-2xl">Add Book</button>
+                  <button type='submit' className="border border-[#14A44D] rounded py-2 px-4 w-1/2 text-[#14A44D] font-semibold duration-500 hover:bg-[#14A44D] hover:text-white hover:shadow-2xl">Add Book</button>
                 </div>
               </div>
             </form>
