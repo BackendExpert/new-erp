@@ -2,8 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Login from "./components/LoginSignUp/Login"
 import { SignUp } from "./components/LoginSignUp/SignUp"
 import SuperAdmin from "./components/SuperAdmin/SuperAdmin"
-import About from "./components/AdminTest/About"
-import Dash from "./components/AdminTest/Dash"
 import SideList from "./components/SuperAdmin/SideList"
 import PrivateRoute from "./components/ProtectedRoute"
 import Admin from "./components/Admin/Admin"
@@ -30,9 +28,6 @@ export default function App() {
         <Route path="/labManager" element={<PrivateRoute><LabManager /></PrivateRoute>} />
         <Route path="/accountant" element={<PrivateRoute><Accountant /></PrivateRoute>} />
         <Route path="/user" element={<PrivateRoute><Users /></PrivateRoute>} />
-
-        <Route path="/dash" element={<Dash />} ></Route>
-        <Route path="/about" element={<About />} ></Route>
         </Routes>
     </BrowserRouter>
   )
