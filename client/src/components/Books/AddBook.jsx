@@ -19,7 +19,7 @@ const AddBook = () => {
 
     return (
       <div className="bg-gray-200 py-4 w-full h-screen">
-        <div className="bg-white my-2 mx-8 py-4 ">
+        <div className="bg-white my-2 mx-8 py-4 shadow-xl rounded border-b-4 border-blue-400">
           Boks
         </div>
       </div>
