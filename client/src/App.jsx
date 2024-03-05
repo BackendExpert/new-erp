@@ -28,7 +28,7 @@ export default function App() {
         <Route path="/labManager" element={<PrivateRoute><LabManager /></PrivateRoute>} />
         <Route path="/accountant" element={<PrivateRoute><Accountant /></PrivateRoute>} />
         <Route path="/user" element={<PrivateRoute><Users /></PrivateRoute>} />
-        </Routes>
+      </Routes>
     </BrowserRouter>
   )
 }
