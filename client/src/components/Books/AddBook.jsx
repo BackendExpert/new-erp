@@ -20,7 +20,9 @@ const AddBook = () => {
     return (
       <div className="bg-gray-200 py-4 w-full h-screen">
         <div className="bg-white my-2 mx-8 py-4 shadow-xl rounded border-b-4 border-blue-400 px-4">
-          Boks
+          <h1 className="text-xl font-bold">Add Book</h1>
+          <hr className='mb-4'/>
+          <button className="border border-blue-500 text-[#3B71CA] bg-white py-2 px-12 rounded duration-500 font-semibold hover:bg-[#3B71CA] hover:text-white hover:shadow-xl" >Back</button>
         </div>
       </div>
     )
