@@ -41,7 +41,7 @@ const Librarian = ({children}) => {
   else{
     useEffect(() => {
       localStorage.clear();
-      navigete('/');
+      navigete('/')
     })
   }
 

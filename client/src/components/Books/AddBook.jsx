@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import secureLocalStorage from 'react-secure-storage'
 
 const AddBook = () => {
   const navigate = useNavigate();
@@ -15,8 +16,13 @@ const AddBook = () => {
   
   */
   if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
+
     return (
-      <div>AddBook</div>
+      <div className="bg-gray-200 py-4 w-full h-screen">
+        <div className="bg-white my-2 mx-8 py-4 ">
+          Boks
+        </div>
+      </div>
     )
   }
   else{

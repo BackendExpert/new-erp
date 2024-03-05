@@ -11,6 +11,7 @@ import Librarian from "./components/Librarian/Librarian"
 import LabManager from "./components/LabManager/LabManager"
 import Accountant from "./components/Accountant/Accountant"
 import Users from "./components/Users/Users"
+import AddBook from "./components/Books/AddBook"
 
 export default function App() {
   return (
@@ -28,6 +29,8 @@ export default function App() {
         <Route path="/labManager" element={<PrivateRoute><LabManager /></PrivateRoute>} />
         <Route path="/accountant" element={<PrivateRoute><Accountant /></PrivateRoute>} />
         <Route path="/user" element={<PrivateRoute><Users /></PrivateRoute>} />
+        <Route path="/bookadd" element={<PrivateRoute><AddBook /></PrivateRoute>} />
+
       </Routes>
     </BrowserRouter>
   )
