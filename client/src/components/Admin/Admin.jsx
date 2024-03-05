@@ -16,15 +16,17 @@ const Admin = ({children}) => {
     using following code prevent unauthorized access
      
   */
-  useEffect(() => {
-    const RoleUser = secureLocalStorage.getItem("loginNew");
+  // useEffect(() => {
+  //   const RoleUser = secureLocalStorage.getItem("loginNew");
   
-    if(RoleUser !== "Admin"){
-      navigete('/');
-      localStorage.clear();
-    }
-  }, []);
+  //   if(RoleUser !== "Admin"){
+  //     navigete('/');
+  //     localStorage.clear();
+  //   }
+  // }, []);
 
+  const RoleUser = secureLocalStorage.getItem("loginNew");
+  if(RoleUser === "")
   return (
     <div className="bg-gray-200">
         <div className="flex">
