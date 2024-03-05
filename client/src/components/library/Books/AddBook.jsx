@@ -46,7 +46,12 @@ const AddBook = () => {
       axios.post('http://localhost:8081/addBook', bookData)
       .then(res => {
         if(res.data.Status === "Success"){
-          navigate('/librarian');
+          if(RoleUser === "Librarian"){
+            navigate('/librarian');
+          }
+          else if(RoleUser === "SuperAdmin"){
+            navigate('/superAdmin');
+          }
         }
         else{
           console.log(res.data.Error);
