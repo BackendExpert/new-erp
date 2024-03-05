@@ -13,7 +13,7 @@ const LabSide = () => {
         {name: "Purchase Orders",  link: "#", icon: <Icons name="pricetag" size="large"></Icons>}
     ]
   return (
-    <div className={`${openSide ? 'w-[300px]' : 'w-[80px]' } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4 `}>
+    <div className={`${openSide ? 'w-[350px]' : 'w-[90px]' } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4 `}>
         <div className="py-2">
             <div className="flex">
             <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
