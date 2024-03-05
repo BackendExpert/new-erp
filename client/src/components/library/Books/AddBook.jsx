@@ -74,13 +74,13 @@ const AddBook = () => {
                 </div>
 
                 <div className="">
-                  <label htmlFor="">Title : </label>
-                  <input type="text"
-                  className="w-full h-12 border border-blue-200 pl-2 rounded"
-                  name='isbn'
-                  required
-                  placeholder='Enter Title'
-                  />
+                  <label htmlFor="">Category : </label><br />
+                  <select 
+                    className='w-full h-12 border border-blue-200'>
+                    <option>Select</option>
+                    <option value="Reference">Reference</option>
+                    <option value="Borrowal">Borrowal</option>
+                  </select>
                 </div>
               </div>
             </form>
