@@ -40,6 +40,10 @@ const AddBook = () => {
       value: ''
     })
 
+    const headleBookSubmit = (e) => {
+      e.preventDefault(); 
+    }
+
   if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
 
     return (
@@ -51,7 +55,7 @@ const AddBook = () => {
         
         
           <div className="mt-4">
-            <form>
+            <form onSubmit={headleBookSubmit}>
               <div className="lg:grid grid-cols-3 gap-4">
                 <div className="">
                   <label htmlFor="">ISBN No : </label>
