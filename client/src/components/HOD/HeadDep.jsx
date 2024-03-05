@@ -16,14 +16,15 @@ const HeadDep = ({children}) => {
     using following code prevent unauthorized access
      
   */
-  useEffect(() => {
-    const RoleUser = secureLocalStorage.getItem("loginNew");
+  // useEffect(() => {
+    
   
-    // if(RoleUser !== "HOD"){
-    //   navigete('/');
-    //   localStorage.clear();
-    // }
-  }, []);
+  //   // if(RoleUser !== "HOD"){
+  //   //   navigete('/');
+  //   //   localStorage.clear();
+  //   // }
+  // }, []);
+  const RoleUser = secureLocalStorage.getItem("loginNew");
 
   if(RoleUser === "HOD"){
     return (
