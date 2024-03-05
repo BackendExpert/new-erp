@@ -11,7 +11,7 @@ import Librarian from "./components/Librarian/Librarian"
 import LabManager from "./components/LabManager/LabManager"
 import Accountant from "./components/Accountant/Accountant"
 import Users from "./components/Users/Users"
-import AddBook from "./components/Books/AddBook"
+import AddBook from "./components/library/Books/AddBook"
 
 export default function App() {
   return (
