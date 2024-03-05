@@ -43,7 +43,7 @@ const AddBook = () => {
   if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
 
     return (
-      <div className="bg-gray-200 py-4 w-full h-screen">
+      <div className="bg-gray-200 py-4 w-full h-full">
         <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
           <h1 className="text-xl font-bold">Add Book</h1>
           <hr className='mb-4'/>
@@ -153,7 +153,7 @@ const AddBook = () => {
                     />
                 </div>
                 <div className="my-5">
-                  <button className="border border-blue-400 rounded py-2 px-4 w-1/2 text-[#3B71CA] font-semibold duration-500 hover:bg-[#3B71CA] hover:text-white hover:shadow-2xl">Add Book</button>
+                  <button className="border border-[#14A44D] rounded py-2 px-4 w-1/2 text-[#14A44D] font-semibold duration-500 hover:bg-[#14A44D] hover:text-white hover:shadow-2xl">Add Book</button>
                 </div>
               </div>
             </form>
