@@ -27,27 +27,29 @@ const Admin = ({children}) => {
 
   const RoleUser = secureLocalStorage.getItem("loginNew");
   if(RoleUser === "Admin" || RoleUser === "SuperAdmin"){
-    <div className="bg-gray-200">
-        <div className="flex">
-            <SideListAdmin/>
-            <div className="w-full mx-2">
-                <NavlistAdmin />
-                <div className="shadow-xl border-l-4 bg-white my-4 rounded py-4 px-6">
-                  <h1 className="text-2xl">Welcome to Admin Dashboard</h1>
-                  <hr className="mt-2 border-blue-100 border-2" />
-                  <SummaryDash/>
+    return(
+      <div className="bg-gray-200">
+      <div className="flex">
+          <SideListAdmin/>
+          <div className="w-full mx-2">
+              <NavlistAdmin />
+              <div className="shadow-xl border-l-4 bg-white my-4 rounded py-4 px-6">
+                <h1 className="text-2xl">Welcome to Admin Dashboard</h1>
+                <hr className="mt-2 border-blue-100 border-2" />
+                <SummaryDash/>
 
-                </div>
-            </div>
-        </div>
-    </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    )
   }
-  return (
+  else{
     useEffect(() => {
       localStorage.clear();
       navigete('/');
-    }, [])
-  )
+    })
+  }
 }
 
 export default Admin
