@@ -39,7 +39,10 @@ const HeadDep = ({children}) => {
     )
   }
   else{
-    localStorage.clear();
+    useEffect(() => {
+      localStorage.clear();
+      navigete('/');
+    })
   }
 }
 
