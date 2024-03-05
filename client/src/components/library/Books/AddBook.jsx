@@ -82,24 +82,63 @@ const AddBook = () => {
                     <option value="Borrowal">Borrowal</option>
                   </select>
                 </div>
-                <div className="">
-                  <label htmlFor="">Publisher : </label>
-                  <input type="text"
-                  className="w-full h-12 border border-blue-200 pl-2 rounded"
-                  name='publisher'
-                  required
-                  placeholder='Enter Publisher'
-                  />
                 </div>
-                <div className="">
-                  <label htmlFor="">Year of Publication : </label>
-                  <input type="number"
-                  className="w-full h-12 border border-blue-200 pl-2 rounded"
-                  name='pyear'
-                  required
-                  placeholder='Enter Year'
-                  />
-                </div>
+                
+
+                <div className="lg:grid grid-cols-2 gap-4 my-4">                
+                  <div className="">
+                    <label htmlFor="">Publisher : </label>
+                    <input type="text"
+                    className="w-full h-12 border border-blue-200 pl-2 rounded"
+                    name='publisher'
+                    required
+                    placeholder='Enter Publisher'
+                    />
+                  </div>
+                  <div className="">
+                    <label htmlFor="">Year of Publication : </label>
+                    <input type="number"
+                    className="w-full h-12 border border-blue-200 pl-2 rounded"
+                    name='pyear'
+                    required
+                    placeholder='Enter Year'
+                    />
+                  </div>
+                  <div className="">
+                    <label htmlFor="">Author 1</label>
+                    <input 
+                      type="text"
+                      name="author1"
+                      className="h-12 w-full border border-blue-200 pl-2 rounded"
+                      placeholder='Enter Author 1'
+                      />
+                  </div>
+                  <div className="">
+                    <label htmlFor="">Author 1</label>
+                    <input 
+                      type="text"
+                      name="author1"
+                      className="h-12 w-full border border-blue-200 pl-2 rounded"
+                      placeholder='Enter Author 1'
+                      />
+                  </div>
+                  <div className="">
+                    <label htmlFor="">Author 1</label>
+                    <input 
+                      type="text"
+                      name="author1"
+                      className="h-12 w-full border border-blue-200 pl-2 rounded"
+                      placeholder='Enter Author 1'
+                      />
+                  </div>
+                  <div className="">
+                    <label htmlFor="">Author 1</label>
+                    <input 
+                      type="text"
+                      name="author1"
+                      className="h-12 w-full border border-blue-200 pl-2 rounded"
+                      placeholder='Enter Author 1'
+                      /></div>                  
               </div>
             </form>
           </div>
