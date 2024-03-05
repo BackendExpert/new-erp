@@ -26,8 +26,7 @@ const Admin = ({children}) => {
   // }, []);
 
   const RoleUser = secureLocalStorage.getItem("loginNew");
-  if(RoleUser === "")
-  return (
+  if(RoleUser === "Admin" || RoleUser === "SuperAdmin"){
     <div className="bg-gray-200">
         <div className="flex">
             <SideListAdmin/>
@@ -42,6 +41,12 @@ const Admin = ({children}) => {
             </div>
         </div>
     </div>
+  }
+  return (
+    useEffect(() => {
+      localStorage.clear();
+      navigete('/');
+    }, [])
   )
 }
 
