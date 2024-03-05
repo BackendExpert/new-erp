@@ -135,7 +135,34 @@ app.get('/BookCount', (req, res) => {
 // add book
 
 app.post('/addBook', (req, res) => {
+    const sql = "INSERT INTO books(BookID, isbn, title, category, status, publisher, pyear, author1, author2, author3, author4, value, create_at, update_at) VALUES (?)";
+    const status = "Available";
+    const createTime = new Date();
+    const updateTime = new Date();
     
+    const values = [
+        req.body.isbn,
+        req.body.title,
+        req.body.category,
+        status,
+        req.body.publisher,
+        req.body.pyear,
+        req.body.author1,
+        req.body.author2,
+        req.body.author3,
+        req.body.author4,
+        req.body.value,
+        createTime,
+        updateTime        
+    ]
+    connection.query(sql, [values], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR in Data Processing"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    });
 })
 
 
