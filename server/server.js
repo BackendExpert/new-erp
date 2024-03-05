@@ -118,8 +118,8 @@ app.get('/AdminCount', (req, res) => {
 });
 
 // Count Books 
-app.get('/AdminCount', (req, res) => {
-    const sql = "SELECT COUNT(UserId) AS count FROM users WHERE role = 'Admin'";
+app.get('/BookCount', (req, res) => {
+    const sql = "SELECT COUNT(BookID) AS book FROM books";
   
     connection.query(sql, (error, results) => {
       if (error) {
@@ -128,7 +128,7 @@ app.get('/AdminCount', (req, res) => {
         return;
       }
   
-      res.json({ count: results[0].count }); // Send count in JSON format
+      res.json({ book: results[0].book }); // Send count in JSON format
     });
 });
 
