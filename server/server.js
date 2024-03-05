@@ -102,7 +102,7 @@ app.post('/login', (req, res) => {
 });
 
 
-// Count User Roles
+// Count Admins Roles
 app.get('/AdminCount', (req, res) => {
     const sql = "SELECT COUNT(UserId) AS count FROM users WHERE role = 'Admin'";
   
@@ -116,6 +116,23 @@ app.get('/AdminCount', (req, res) => {
       res.json({ count: results[0].count }); // Send count in JSON format
     });
 });
+
+// Count Books 
+app.get('/AdminCount', (req, res) => {
+    const sql = "SELECT COUNT(UserId) AS count FROM users WHERE role = 'Admin'";
+  
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ count: results[0].count }); // Send count in JSON format
+    });
+});
+
+
 
 
 //check the server is working
