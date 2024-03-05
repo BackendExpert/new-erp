@@ -16,26 +16,38 @@ const Accountant = ({children}) => {
     using following code prevent unauthorized access
      
   */
-  useEffect(() => {
-    const RoleUser = secureLocalStorage.getItem("loginNew");
+  // useEffect(() => {
+  //   const RoleUser = secureLocalStorage.getItem("loginNew");
   
-    if(RoleUser !== "Accountant"){
-      navigete('/');
-      localStorage.clear();
-    }
-  }, []);
+  //   if(RoleUser !== "Accountant"){
+  //     navigete('/');
+  //     localStorage.clear();
+  //   }
+  // }, []);
 
-  return (
-    <div className="bg-gray-200">
-      <div className="flex">
-        <AccSide />
-        <div className="w-full mx-2">
-          <Navlist />
-          <AccData />
+  const RoleUser = secureLocalStorage.getItem("loginNew");
+
+  if(RoleUser === "Accountant"){
+    return (
+      <div className="bg-gray-200">
+        <div className="flex">
+          <AccSide />
+          <div className="w-full mx-2">
+            <Navlist />
+            <AccData />
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
+  else{
+    useEffect(() => {
+      localStorage.clear();
+      navigete('/');
+    })
+  }
+
+
 }
 
 export default Accountant
