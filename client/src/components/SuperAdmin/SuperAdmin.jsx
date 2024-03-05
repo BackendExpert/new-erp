@@ -3,6 +3,7 @@ import SideList from "./SideList"
 import Navlist from "../NavBar/navList"
 import  secureLocalStorage  from  "react-secure-storage";
 import { useEffect } from "react";
+import SummaryDash from "../SummaryDash/SummaryDash";
 
 const SuperAdmin = ({children}) => {
     const navigete = useNavigate();
@@ -35,7 +36,7 @@ const SuperAdmin = ({children}) => {
                 <div className="shadow-xl border-l-4 bg-white my-4 rounded py-4 px-6">
                     <h1 className="text-2xl">Welcome to SuperAdmin Dashboard</h1>
                     <hr className="mt-2 border-blue-100 border-2" />
-  
+                    <SummaryDash />
                 </div>
               </div>
           </div>
