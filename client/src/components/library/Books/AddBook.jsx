@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 
@@ -27,6 +27,19 @@ const AddBook = () => {
       }
     }
 
+    const [bookData, SetBookData] = useState({
+      isbn: '',
+      title: '',
+      category: '',
+      publisher: '',
+      pyear: '',
+      author1: '',      
+      author2: '',
+      author3: '',
+      author4: '',
+      value: ''
+    })
+    
   if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
 
     return (
