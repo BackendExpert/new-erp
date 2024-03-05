@@ -49,7 +49,7 @@ const AddBook = () => {
           navigate('/librarian');
         }
         else{
-          setError(res.data.Error);
+          console.log(res.data.Error);
         }
       })
       .catch(err => console.log(err))

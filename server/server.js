@@ -135,7 +135,7 @@ app.get('/BookCount', (req, res) => {
 // add book
 
 app.post('/addBook', (req, res) => {
-    const sql = "INSERT INTO books(BookID, isbn, title, category, status, publisher, pyear, author1, author2, author3, author4, value, create_at, update_at) VALUES (?)";
+    const sql = "INSERT INTO books(isbn, title, category, status, publisher, pyear, author1, author2, author3, author4, value, create_at, update_at) VALUES (?)";
     const status = "Available";
     const createTime = new Date();
     const updateTime = new Date();
