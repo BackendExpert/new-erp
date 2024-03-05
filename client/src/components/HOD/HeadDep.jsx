@@ -19,23 +19,27 @@ const HeadDep = ({children}) => {
   useEffect(() => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
   
-    if(RoleUser !== "HOD"){
-      navigete('/');
-      localStorage.clear();
-    }
+    // if(RoleUser !== "HOD"){
+    //   navigete('/');
+    //   localStorage.clear();
+    // }
   }, []);
 
-
-  return (
-    <div className='bg-gray-200'>
-        <div className="flex">
-            <HeadSide />
-            <div className="shadow-xl rounded border-l-4 border-gray-200 bg-white my-4 py-4 px-6">
-              <h1 className="text-2xl font-semibold">Head of Department Dashboard</h1>
-            </div>
-        </div>
-    </div>
-  )
+  if(RoleUser === "HOD"){
+    return (
+      <div className='bg-gray-200'>
+          <div className="flex">
+              <HeadSide />
+              <div className="shadow-xl rounded border-l-4 border-gray-200 bg-white my-4 py-4 px-6">
+                <h1 className="text-2xl font-semibold">Head of Department Dashboard</h1>
+              </div>
+          </div>
+      </div>
+    )
+  }
+  else{
+    localStorage.clear();
+  }
 }
 
 export default HeadDep
