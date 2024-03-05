@@ -27,8 +27,8 @@ const SummaryDash = () => {
   
   return (
     <div>
-      {count}
-      {books}
+      Admins : {count} <br />
+      Books : {books} <br />
     </div>
   )
 }
