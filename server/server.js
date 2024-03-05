@@ -132,7 +132,11 @@ app.get('/BookCount', (req, res) => {
     });
 });
 
+// add book
 
+app.post('/addBook', (req, res) => {
+    
+})
 
 
 //check the server is working
