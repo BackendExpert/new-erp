@@ -55,7 +55,26 @@ const AddBook = () => {
               <div className="lg:grid grid-cols-3 gap-4">
                 <div className="">
                   <label htmlFor="">ISBN No : </label>
-                  <input type="text" className="w-full h-12 border" name='isbn' required placeholder='Enter ISBN No'/>
+                  <input type="text"
+                  className="w-full h-12 border border-blue-200 pl-2 rounded"
+                  name='isbn'
+                  required
+                  placeholder='Enter ISBN No'
+                  />
+                </div>
+                <div className="">
+                  <label htmlFor="">Title : </label>
+                  <input type="text"
+                  className="w-full h-12 border border-blue-200 pl-2 rounded"
+                  name='isbn'
+                  required
+                  placeholder='Enter Title'
+                  />
+                </div>
+                <div className="">
+                  <label htmlFor="">ISBN No : </label>
+                  <input type="text" className="w-full h-12 border border-blue-200 pl-2 rounded" name='isbn' required placeholder='Enter ISBN No'
+                  />
                 </div>
               </div>
             </form>
