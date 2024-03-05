@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
@@ -42,6 +43,8 @@ const AddBook = () => {
 
     const headleBookSubmit = (e) => {
       e.preventDefault(); 
+      axios.post('http://localhost:8081/addBook', bookData)
+      
     }
 
   if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
@@ -64,7 +67,7 @@ const AddBook = () => {
                   name='isbn'
                   required
                   placeholder='Enter ISBN No'
-                  />
+                  onChange={e => SetBookData({...bookData, isbn:e.target.value})}/>
                 </div>
 
                 <div className="">
@@ -74,13 +77,14 @@ const AddBook = () => {
                   name='title'
                   required
                   placeholder='Enter Title'
-                  />
+                  onChange={e => SetBookData({...bookData, title:e.target.value})}/>
                 </div>
 
                 <div className="">
                   <label htmlFor="">Category : </label><br />
                   <select 
-                    className='w-full h-12 border border-blue-200 rounded'>
+                    className='w-full h-12 border border-blue-200 rounded'
+                    onChange={e => SetBookData({...bookData, category:e.target.value})}>
                     <option>Select</option>
                     <option value="Reference">Reference</option>
                     <option value="Borrowal">Borrowal</option>
@@ -97,7 +101,7 @@ const AddBook = () => {
                     name='publisher'
                     required
                     placeholder='Enter Publisher'
-                    />
+                    onChange={e => SetBookData({...bookData, publisher:e.target.value})}/>
                   </div>
                   <div className="">
                     <label htmlFor="">Year of Publication : </label>
@@ -106,7 +110,7 @@ const AddBook = () => {
                     name='pyear'
                     required
                     placeholder='Enter Year'
-                    />
+                    onChange={e => SetBookData({...bookData, pyear:e.target.value})}/>
                   </div>
                   <div className="">
                     <label htmlFor="">Author 1</label>
@@ -115,7 +119,7 @@ const AddBook = () => {
                       name="author1"
                       className="h-12 w-full border border-blue-200 pl-2 rounded"
                       placeholder='Enter Author 1'
-                      />
+                      onChange={e => SetBookData({...bookData, author1:e.target.value})}/>
                   </div>
                   <div className="">
                     <label htmlFor="">Author 2</label>
@@ -124,7 +128,7 @@ const AddBook = () => {
                       name="author2"
                       className="h-12 w-full border border-blue-200 pl-2 rounded"
                       placeholder='Enter Author 2'
-                      />
+                      onChange={e => SetBookData({...bookData, author2:e.target.value})}/>
                   </div>
                   <div className="">
                     <label htmlFor="">Author 3</label>
@@ -133,7 +137,7 @@ const AddBook = () => {
                       name="author3"
                       className="h-12 w-full border border-blue-200 pl-2 rounded"
                       placeholder='Enter Author 3'
-                      />
+                      onChange={e => SetBookData({...bookData, author3:e.target.value})}/>
                   </div>
                   <div className="">
                     <label htmlFor="">Author 4</label>
@@ -142,7 +146,7 @@ const AddBook = () => {
                       name="author4"
                       className="h-12 w-full border border-blue-200 pl-2 rounded"
                       placeholder='Enter Author 4'
-                      />
+                      onChange={e => SetBookData({...bookData, author4:e.target.value})}/>
                   </div>                  
               </div>
               <div className="lg:grid grid-cols-1">
@@ -154,7 +158,7 @@ const AddBook = () => {
                     className='w-full h-12 border border-blue-200 pl-2 rounded' 
                     required
                     placeholder='Enter Value'
-                    />
+                    onChange={e => SetBookData({...bookData, value:e.target.value})}/>
                 </div>
                 <div className="my-5">
                   <button type='submit' className="border border-[#14A44D] rounded py-2 px-4 w-1/2 text-[#14A44D] font-semibold duration-500 hover:bg-[#14A44D] hover:text-white hover:shadow-2xl">Add Book</button>
