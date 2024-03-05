@@ -91,6 +91,15 @@ const AddBook = () => {
                   placeholder='Enter Publisher'
                   />
                 </div>
+                <div className="">
+                  <label htmlFor="">Year of Publication : </label>
+                  <input type="number"
+                  className="w-full h-12 border border-blue-200 pl-2 rounded"
+                  name='pyear'
+                  required
+                  placeholder='Enter Year'
+                  />
+                </div>
               </div>
             </form>
           </div>
