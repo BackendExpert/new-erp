@@ -31,7 +31,7 @@ CREATE TABLE `loan` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for loan `loan`
+-- Dumping data for table `loan`
 --
 
 LOCK TABLES `loan` WRITE;
