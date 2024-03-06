@@ -36,6 +36,8 @@ CREATE TABLE `workrequest` (
   `ReqNo` varchar(30) DEFAULT NULL,
   `Status` varchar(15) DEFAULT NULL,
   `Completed` varchar(20) DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`WID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

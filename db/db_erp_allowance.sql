@@ -28,6 +28,8 @@ CREATE TABLE `allowance` (
   `EPFEligible` varchar(5) DEFAULT NULL,
   `ETFEligible` varchar(5) DEFAULT NULL,
   `amount` decimal(10,2) DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`Code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

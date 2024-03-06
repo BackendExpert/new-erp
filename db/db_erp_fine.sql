@@ -30,6 +30,8 @@ CREATE TABLE `fine` (
   `bid` int DEFAULT NULL,
   `value` decimal(6,2) DEFAULT NULL,
   `amount` decimal(6,2) DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`FID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

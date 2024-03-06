@@ -43,6 +43,8 @@ CREATE TABLE `increment` (
   `rdate` date DEFAULT NULL,
   `adate` date DEFAULT NULL,
   `officer` varchar(15) DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`IID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

@@ -31,6 +31,8 @@ CREATE TABLE `vehicles` (
   `myear` varchar(15) DEFAULT NULL,
   `value` decimal(10,2) DEFAULT NULL,
   `milage` int DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`VID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

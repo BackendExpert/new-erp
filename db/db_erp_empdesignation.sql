@@ -26,6 +26,8 @@ CREATE TABLE `empdesignation` (
   `eid` int NOT NULL,
   `dcode` int NOT NULL,
   `pdate` date DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`eid`,`dcode`),
   KEY `dcode` (`dcode`),
   CONSTRAINT `empdesignation_ibfk_1` FOREIGN KEY (`eid`) REFERENCES `employee` (`eid`),

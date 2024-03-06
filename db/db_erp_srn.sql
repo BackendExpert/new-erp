@@ -39,6 +39,8 @@ CREATE TABLE `srn` (
   `Status` varchar(20) DEFAULT NULL,
   `SID` int NOT NULL AUTO_INCREMENT,
   `Cdate` date DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`SID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

@@ -29,6 +29,8 @@ CREATE TABLE `equipment` (
   `location` varchar(20) DEFAULT NULL,
   `id` int NOT NULL AUTO_INCREMENT,
   `invno` varchar(50) DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `invno` (`invno`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

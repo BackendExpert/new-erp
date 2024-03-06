@@ -43,6 +43,8 @@ CREATE TABLE `gatepass` (
   `newplace` varchar(200) DEFAULT NULL,
   `newofficer` varchar(60) DEFAULT NULL,
   `security` varchar(60) DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`GID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

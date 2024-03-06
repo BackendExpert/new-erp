@@ -42,6 +42,8 @@ CREATE TABLE `employee` (
   `gender` varchar(25) DEFAULT NULL,
   `relig` varchar(25) DEFAULT NULL,
   `dno` int DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`eid`),
   KEY `dno` (`dno`),
   CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`dno`) REFERENCES `division` (`did`)

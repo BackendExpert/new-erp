@@ -27,6 +27,8 @@ CREATE TABLE `division` (
   `title` varchar(30) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `did` int NOT NULL AUTO_INCREMENT,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`did`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

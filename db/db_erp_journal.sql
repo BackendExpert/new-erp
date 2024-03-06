@@ -30,6 +30,8 @@ CREATE TABLE `journal` (
   `pyear` int DEFAULT NULL,
   `impact` decimal(5,2) DEFAULT NULL,
   `IStatus` varchar(40) DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`JID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

@@ -30,6 +30,8 @@ CREATE TABLE `borrowal` (
   `bname` varchar(60) DEFAULT NULL,
   `btitle` varchar(100) DEFAULT NULL,
   `erdate` date DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `borrower` (`borrower`),
   KEY `bookid` (`bookid`),

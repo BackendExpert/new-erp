@@ -30,6 +30,8 @@ CREATE TABLE `project` (
   `ra1` varchar(60) DEFAULT NULL,
   `ra2` varchar(60) DEFAULT NULL,
   `prog` int DEFAULT NULL,
+  `create_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL,
   PRIMARY KEY (`pid`),
   KEY `prog` (`prog`),
   CONSTRAINT `project_ibfk_1` FOREIGN KEY (`prog`) REFERENCES `program` (`pid`)
