@@ -21,6 +21,8 @@ const Books = () => {
   //get the current login user 
   const RoleUser = secureLocalStorage.getItem("loginNew");
 
+
+
   // check login user is Librarian or SuperAdmin
   if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
     return (
@@ -58,21 +60,19 @@ const Books = () => {
                     <tbody>
                       {
                         Databook.map((datab, index) => {
+                            // check book is available
+                              function isAvailableBook(){
+                                if(datab.title === "TestBook"){
+                                  <span className="">Available</span>
+                                }
+                              }
                           return(
                             <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className='px-6 py-4 font-bold'>{datab.BookID}</td>
                                 <td className='px-6 py-4'>{datab.isbn}</td>
                                 <td className='px-6 py-4'>{datab.title}</td>
                                 <td className='px-6 py-4'>{datab.category}</td>
-                                <td className='px-6 py-4'>
-                                  {
-                                      (() => {
-                                        if(datab.status === "Available"){
-
-                                        }
-                                      })
-                                  }
-                                </td>
+                                <td className='px-6 py-4'>{datab.status}</td>
                                 <td className='px-6 py-4'>{datab.publisher}</td>
                                 <td className='px-6 py-4'>{datab.pyear}</td>
                                 <td className='px-6 py-4'>{datab.author1}, {datab.author2}, {datab.author3}, {datab.author4}</td>
