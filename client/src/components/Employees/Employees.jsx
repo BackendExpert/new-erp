@@ -1,11 +1,6 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-import SideList from "../SuperAdmin/SideList"
-import SideListAdmin from "../Admin/AdminSide"
-import AccSide from "../Accountant/AccSide"
-import NavList from "../NavBar/navList"
-import AdminNav from "../NavBar/navListAdmin"
+import { Link, useNavigate } from "react-router-dom"
 
 const Employees = () => {
     const navigate = useNavigate();
@@ -16,17 +11,27 @@ const Employees = () => {
     //this page can access by following users
     // SuperAdmin, Admin, Accountant
 
+    const headleBack = () => {
+        if(RoleUser === "SuperAdmin"){
+            navigate('/superAdmin');
+        }
+        else if(RoleUser === "Admin"){
+            navigate('/admin');
+        }
+        else if(RoleUser === "Accountant"){
+            navigate('/accountant');
+        }
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
         return (
-            <div className="bg-gray-200">
-                <div className="flex">
-                    {
-                        (() => {
-                            if(RoleUser === "SuperAdmin"){
-                                <SideList />
-                            }
-                        })
-                    }
+            <div className="bg-gray-200 py-4">
+                <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
+                    <h1 className="text-xl font-semibold">All Employee</h1>
+                    <hr className="mb-4" />
+                    <Link >
+                        <button className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
+                    </Link>
                 </div>
             </div>
         )
