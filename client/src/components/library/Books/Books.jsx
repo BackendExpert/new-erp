@@ -40,7 +40,7 @@ const Books = () => {
               </Link>
 
               <div class="relative overflow-x-auto my-8">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <table class="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
                         <tr className='text-blue-500'>
                             <th scope='col' className='px-6 py-3'>ID</th>
@@ -60,11 +60,19 @@ const Books = () => {
                         Databook.map((datab, index) => {
                           return(
                             <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <td className='px-6 py-4'>{datab.BID}</td>
+                                <td className='px-6 py-4 font-bold'>{datab.BookID}</td>
                                 <td className='px-6 py-4'>{datab.isbn}</td>
                                 <td className='px-6 py-4'>{datab.title}</td>
                                 <td className='px-6 py-4'>{datab.category}</td>
-                                <td className='px-6 py-4'>{datab.status}</td>
+                                <td className='px-6 py-4'>
+                                  {
+                                      (() => {
+                                        if(datab.status === "Available"){
+
+                                        }
+                                      })
+                                  }
+                                </td>
                                 <td className='px-6 py-4'>{datab.publisher}</td>
                                 <td className='px-6 py-4'>{datab.pyear}</td>
                                 <td className='px-6 py-4'>{datab.author1}, {datab.author2}, {datab.author3}, {datab.author4}</td>
