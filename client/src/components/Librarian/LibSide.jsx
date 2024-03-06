@@ -19,7 +19,7 @@ const LibSide = () => {
         {name: "List of Fine",  link: "#", icon: <Icons name="cash" size="large"></Icons>}
     ]
   return (
-    <div className={`${openSide ? 'w-[350px]' : 'w-[90px]' } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4 `}>
+    <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4 overflow-hidden ${openSide ? 'lg:w-[20%]' : 'lg:w-[8%]' }`}>
         <div className="py-2">
             <div className="flex">
             <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>

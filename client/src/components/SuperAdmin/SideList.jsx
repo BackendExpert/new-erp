@@ -6,8 +6,8 @@ const SideList = () => {
     const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
-        {name: "Employess",  link: "/dash", icon: <Icons name="people" size="large"></Icons>},
-        {name: "Divisions",  link: "/about", icon: <Icons name="business" size="large"></Icons>},
+        {name: "Employess",  link: "#", icon: <Icons name="people" size="large"></Icons>},
+        {name: "Divisions",  link: "#", icon: <Icons name="business" size="large"></Icons>},
         {name: "Projects",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "Program",  link: "#", icon: <Icons name="book" size="large"></Icons>},
         {name: "Designation",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
@@ -20,7 +20,7 @@ const SideList = () => {
 
 
     return (
-        <div className={`${openSide ? 'w-[350px]' : 'w-[90px]' } duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4`}>
+        <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white w-screen h-full pl-4 py-4 ${openSide ? 'w-64' : 'w-20' }`}>
             <div className="py-2">
                 <div className="flex">
                 <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
