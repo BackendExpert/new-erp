@@ -29,7 +29,7 @@ const AddBook = () => {
     // }
 
     const headleBack = () =>{
-      navigate('/librarian');
+      navigate('/booklist');
     }
 
     const [bookData, SetBookData] = useState({
