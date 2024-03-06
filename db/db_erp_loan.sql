@@ -28,7 +28,7 @@ CREATE TABLE `loan` (
   `Amount` decimal(10,0) NOT NULL,
   `Interest_rate` int NOT NULL,
   `create_at` timestamp NOT NULL,
-  `update_at` timestamp NOT NULL,
+  `update_at` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
