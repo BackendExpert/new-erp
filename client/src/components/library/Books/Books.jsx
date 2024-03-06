@@ -67,7 +67,13 @@ const Books = () => {
                                 <td className='px-6 py-4'>{datab.isbn}</td>
                                 <td className='px-6 py-4'>{datab.title}</td>
                                 <td className='px-6 py-4'>{datab.category}</td>
-                                <td className='px-6 py-4'>{datab.status}</td>
+                                <td className='px-6 py-4'>
+                                {datab.status === "Available" ? (
+                                  <span className='bg-green-500 py-1 px-2 rounded text-white font-semibold'>Available</span>
+                                ) : (
+                                  <span className='bg-red-500 py-1 px-2 rounded text-white font-semibold'>No</span>
+                                )}
+                                </td>
                                 <td className='px-6 py-4'>{datab.publisher}</td>
                                 <td className='px-6 py-4'>{datab.pyear}</td>
                                 <td className='px-6 py-4'>{datab.author1}, {datab.author2}, {datab.author3}, {datab.author4}</td>
