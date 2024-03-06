@@ -76,6 +76,9 @@ const AddEmployee = () => {
                                     />
                                 </div>
                             </div>
+                            <div className="my-4 lg:grid grid-cols-3 gap-2">
+
+                            </div>
                         </form>
                     </div>
 
