@@ -28,13 +28,7 @@ const Books = () => {
         <div className="flex">
           <LibSide />
           <div className="w-full mx-2">
-          {
-            (() => {
-              if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
-                <NavList />
-              }
-            })
-          }
+          <NavList />
           </div>
         </div>
       </div>
@@ -44,7 +38,7 @@ const Books = () => {
     useEffect(() => {
       localStorage.clear();
       navigate('/');
-    })
+    }, [])
   }
 }
 
