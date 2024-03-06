@@ -7,7 +7,7 @@ const LibSide = () => {
     const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
-        {name: "Book List",  link: "#", icon: <Icons name="book" size="large"></Icons>},
+        {name: "Book List",  link: "/booklist", icon: <Icons name="book" size="large"></Icons>},
         {name: "Reserved Book",  link: "#", icon: <Icons name="bookmark" size="large"></Icons>},
         {name: "Reference List",  link: "#", icon: <Icons name="id-card" size="large"></Icons>},
         {name: "Borrowals",  link: "#", icon: <Icons name="bag" size="large"></Icons>},
