@@ -1,10 +1,13 @@
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
+import  secureLocalStorage  from  "react-secure-storage";
 
 // Replace "isLoggedIn" with your actual authentication logic
 const isLoggedIn = () => {
   // Simulate checking for a token or logged-in state
   return localStorage.getItem('Logintoken') !== null;
+  return secureLocalStorage.getItem('loginNew') !== null;
+
 };
 
 const PrivateRoute = ({ children }) => {

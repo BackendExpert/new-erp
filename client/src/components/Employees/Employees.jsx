@@ -7,7 +7,7 @@ import AccSide from "../Accountant/AccSide"
 import NavList from "../NavBar/navList"
 import AdminNav from "../NavBar/navListAdmin"
 
-const Employees = ({children}) => {
+const Employees = () => {
     const navigate = useNavigate();
 
     //get the current login user
