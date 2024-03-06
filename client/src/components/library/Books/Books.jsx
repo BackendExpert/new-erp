@@ -24,7 +24,12 @@ const Books = () => {
   if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
     return (
       <div className='bg-gray-200'>
-        
+        <div className="flex">
+          <LibSide />
+          <div className="w-full mx-2">
+            <Navlist />
+          </div>
+        </div>
       </div>
     )
   }
