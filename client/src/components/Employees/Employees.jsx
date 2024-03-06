@@ -32,7 +32,7 @@ const Employees = () => {
                     <hr className="mb-4" />
                     <div className="flex">
                         <button onClick={headleBack} className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
-                        <Link>
+                        <Link to={'/AddEmployee'}>
                             <button className="border border-green-500 py-3 px-16 rounded text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl mx-2">Add New Employee</button>
                         </Link>
                     </div>

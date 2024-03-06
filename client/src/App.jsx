@@ -15,6 +15,7 @@ import AddBook from "./components/library/Books/AddBook"
 import Books from "./components/library/Books/Books"
 import BookBorrow from "./components/library/Books/BookBorrow"
 import Employees from "./components/Employees/Employees"
+import AddEmployee from "./components/Employees/AddEmployee"
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/booklist" element={<PrivateRoute><Books /></PrivateRoute>} />
         <Route path="/BorrowBook/:id" element={<PrivateRoute><BookBorrow /></PrivateRoute>} />
         <Route path="/Employee" element={<PrivateRoute><Employees /></PrivateRoute>} />
+        <Route path="/AddEmployee" element={<PrivateRoute><AddEmployee /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
