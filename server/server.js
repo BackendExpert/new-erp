@@ -117,6 +117,9 @@ app.get('/AdminCount', (req, res) => {
     });
 });
 
+
+//---------------------------- LIBRARY Start ---------------------------------------------------------
+
 // Count Books 
 app.get('/BookCount', (req, res) => {
     const sql = "SELECT COUNT(BookID) AS book FROM books";
@@ -165,6 +168,8 @@ app.post('/addBook', (req, res) => {
     });
 })
 
+
+//---------------------------- LIBRARY END ---------------------------------------------------------
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
