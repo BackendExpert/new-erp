@@ -30,7 +30,13 @@ const AddEmployee = () => {
 
                     <div className="my-4">
                         <form>
-                            
+                            <div className="lg:grid grid-cols-3 gap-2">
+                                <div className="">
+                                    <label htmlFor="">Employee No</label>
+                                    <input type="text" name="eid" className="border border-blue-400 rounded w-full h-12" required placeholder="Enter Employee ID" 
+                                    />
+                                </div>
+                            </div>
                         </form>
                     </div>
 
