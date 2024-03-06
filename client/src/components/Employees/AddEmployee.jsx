@@ -76,7 +76,7 @@ const AddEmployee = () => {
                                     />
                                 </div>
                             </div>
-                            <div className="my-4 lg:grid grid-cols-3 gap-2">
+                            <div className="my-4 lg:grid grid-cols-4 gap-2">
                                 <div className="">
                                     <label htmlFor="">Designation</label>
                                     <input type="text" name="designation" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Designation" 
@@ -102,6 +102,14 @@ const AddEmployee = () => {
                                         <option value="Assignment">Assignment</option>
                                         <option value="Visiting">Visiting</option>
                                         <option value="Temporary">Temporary</option>
+                                    </select>
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Marital Status</label>
+                                    <select name="" id="" className="w-full h-12 border border-blue-400 rounded pl-2">
+                                        <option>Select Option</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Single">Single</option>
                                     </select>
                                 </div>
                             </div>
