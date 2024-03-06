@@ -84,11 +84,9 @@ const Books = () => {
                                     <span className='text-[#3B71CA] border border-[#3B71CA] duration-500 hover:bg-[#3B71CA] py-1 px-2 rounded hover:text-white font-semibold'>Borrow</span>
                                   </Link>
                                 ) : (
-                                  <span className='text-red-500 border border-red-500 duration-500 hover:bg-red-500 py-1 px-2 rounded hover:text-white font-semibold'>Reserve</span>
+                                  <span  className='cursor-pointer text-yellow-500 border border-yellow-500 duration-500 hover:bg-yellow-500 py-1 px-2 rounded hover:text-white font-semibold'>Return</span>
                                 )}
-
-                                  <Link to={'/BorrowBook/' + datab.BookID}>
-                                  </Link>
+                                <span className='ml-2 cursor-pointer text-red-500 border border-red-500 duration-500 hover:bg-red-500 py-1 px-2 rounded hover:text-white font-semibold'>Delete</span>
                                 </td>
                                 
                             </tr>
