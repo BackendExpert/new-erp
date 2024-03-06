@@ -1,6 +1,7 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import axios from "axios";
 
 const AddEmployee = () => {
     const navigate = useNavigate();
@@ -41,6 +42,10 @@ const AddEmployee = () => {
 
     const headleEmpSubmit = (e) => {
         e.preventDefault(); 
+        axios.post("http://localhost:8081/EmpAdd", empData)
+        .then(res => {
+            
+        })
     }
 
 
