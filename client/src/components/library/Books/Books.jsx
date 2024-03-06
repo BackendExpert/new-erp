@@ -23,7 +23,9 @@ const Books = () => {
   // check login user is Librarian or SuperAdmin
   if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
     return (
-      <div>Books</div>
+      <div className='bg-gray-200'>
+        
+      </div>
     )
   }
   else{
