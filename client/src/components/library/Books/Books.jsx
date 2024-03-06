@@ -79,8 +79,15 @@ const Books = () => {
                                 <td className='px-6 py-4'>{datab.author1}, {datab.author2}, {datab.author3}, {datab.author4}</td>
                                 <td className='px-6 py-4'>{datab.value}</td>
                                 <td className='px-6 py-4'>
+                                {datab.status === "Available" ? (
                                   <Link to={'/BorrowBook/' + datab.BookID}>
-                                    Hi
+                                    <span className='border border-[]'></span>
+                                  </Link>
+                                ) : (
+                                  <span className='bg-red-500 py-1 px-2 rounded text-white font-semibold'>No</span>
+                                )}
+
+                                  <Link to={'/BorrowBook/' + datab.BookID}>
                                   </Link>
                                 </td>
                                 
