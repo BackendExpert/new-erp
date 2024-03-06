@@ -30,10 +30,49 @@ const AddEmployee = () => {
 
                     <div className="my-4">
                         <form>
-                            <div className="lg:grid grid-cols-3 gap-2">
+                            <div className="my-4 lg:grid grid-cols-3 gap-2">
                                 <div className="">
                                     <label htmlFor="">Employee No</label>
-                                    <input type="text" name="eid" className="border border-blue-400 rounded w-full h-12" required placeholder="Enter Employee ID" 
+                                    <input type="text" name="eid" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Employee ID" 
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Initials</label>
+                                    <input type="text" name="initial" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Initials" 
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Surname</label>
+                                    <input type="text" name="surname" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Surname" 
+                                    />
+                                </div>
+                            </div>
+                            <div className="my-4 lg:grid grid-cols-1">
+                                <div className="">
+                                    <label htmlFor="">Address</label>
+                                    <input type="text" name="address" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Address" 
+                                    />
+                                </div>
+                            </div>
+                            <div className="my-4 lg:grid grid-cols-4 gap 2">
+                                <div className="">
+                                    <label htmlFor="">Phone No</label>
+                                    <input type="text" name="phone" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Phone Number" 
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Email</label>
+                                    <input type="email" name="email" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Email" 
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Password</label>
+                                    <input type="password" name="password" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Password" 
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Salary</label>
+                                    <input type="text" name="salary" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Salary" 
                                     />
                                 </div>
                             </div>
