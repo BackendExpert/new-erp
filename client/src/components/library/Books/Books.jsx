@@ -29,7 +29,9 @@ const Books = () => {
           <div className="w-full mx-2">
             <NavList />
             <div className="shadow-xl bg-white py-4 px-6 my-4 rounded border-t-4">
-              All Books
+              <h1 className="text-xl font-semibold">All Book List</h1>
+              <hr className="mb-4" />
+              
             </div>
           </div>
         </div>
