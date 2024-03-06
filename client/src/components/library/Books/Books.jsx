@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 import LibSide from '../../Librarian/LibSide'
 import NavList from '../../NavBar/navList'
+import Icons from "@reacticons/ionicons"
 
 const Books = () => {
   const navigate = useNavigate();
@@ -32,7 +33,10 @@ const Books = () => {
               <h1 className="text-xl font-semibold">All Book List</h1>
               <hr className="mb-4" />
               <Link to={'/bookadd'}>
-                
+                <div className="flex py-2 px-8 rounded border w-auto">
+                  <p className=""><Icons name='add'></Icons></p>
+                  <p className="">Add New Book</p>
+                </div>
               </Link>
             </div>
           </div>
