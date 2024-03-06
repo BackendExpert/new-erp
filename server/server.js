@@ -172,7 +172,7 @@ app.post('/addBook', (req, res) => {
 
 app.get('/ReadBooks', (req, res) => {
     const sql = "SELECT * FROM books";
-    connection.query(qsl, (err, res) => {
+    connection.query(sql, (err, result) => {
         if(err){
             return res.json({Error : "Error in Query Processing"});
         }

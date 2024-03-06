@@ -14,7 +14,7 @@ const Books = () => {
   useEffect(() => {
     //fetch data using axios
     axios.get("http://localhost:8081/ReadBooks")
-    .then(res => SetDataBook(res.Databook))
+    .then(res => SetDataBook(res.data))
     .catch(err => console.log(err))
   }, [])
 
@@ -56,20 +56,29 @@ const Books = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td class="px-6 py-4">
-                                Silver
-                            </td>
-                            <td class="px-6 py-4">
-                                Laptop
-                            </td>
-                            <td class="px-6 py-4">
-                                $2999
-                            </td>
-                        </tr>
+                      {
+                        Databook.map((datab, index) => {
+                          return(
+                            <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <td className='px-6 py-4'>{datab.BID}</td>
+                                <td className='px-6 py-4'>{datab.isbn}</td>
+                                <td className='px-6 py-4'>{datab.title}</td>
+                                <td className='px-6 py-4'>{datab.category}</td>
+                                <td className='px-6 py-4'>{datab.status}</td>
+                                <td className='px-6 py-4'>{datab.publisher}</td>
+                                <td className='px-6 py-4'>{datab.pyear}</td>
+                                <td className='px-6 py-4'>{datab.author1}, {datab.author2}, {datab.author3}, {datab.author4}</td>
+                                <td className='px-6 py-4'>{datab.value}</td>
+                                <td className='px-6 py-4'>
+
+                                </td>
+                                
+                            </tr>
+                          ) 
+
+                        })
+                      }
+
                     </tbody>
                 </table>
               </div>
