@@ -149,6 +149,9 @@ const AddEmployee = () => {
                                     />
                                 </div>
                             </div>
+                            <div className="">
+                                <button type="submit" className="py-2 px-16 border border-green-500 text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl"></button>
+                            </div>
                         </form>
                     </div>
 
