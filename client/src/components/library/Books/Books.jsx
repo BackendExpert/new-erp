@@ -71,7 +71,7 @@ const Books = () => {
                                 {datab.status === "Available" ? (
                                   <span className='bg-green-500 py-1 px-2 rounded text-white font-semibold'>Available</span>
                                 ) : (
-                                  <span className='bg-red-500 py-1 px-2 rounded text-white font-semibold'>No</span>
+                                  <span className='bg-red-500 py-1 px-2 rounded text-white font-semibold'>Book Not Available</span>
                                 )}
                                 </td>
                                 <td className='px-6 py-4'>{datab.publisher}</td>
