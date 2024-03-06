@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 import LibSide from '../../Librarian/LibSide'
 import NavList from '../../NavBar/navList'
@@ -31,7 +31,9 @@ const Books = () => {
             <div className="shadow-xl bg-white py-4 px-6 my-4 rounded border-t-4">
               <h1 className="text-xl font-semibold">All Book List</h1>
               <hr className="mb-4" />
-              
+              <Link to={'/bookadd'}>
+                
+              </Link>
             </div>
           </div>
         </div>
