@@ -50,7 +50,7 @@ const AddBook = () => {
       axios.post('http://localhost:8081/addBook', bookData)
       .then(res => {
         if(res.data.Status === "Success"){
-          navigate('/librarian');
+          navigate('/booklist');
         }
         else{
           console.log(res.data.Error);
