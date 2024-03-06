@@ -33,9 +33,9 @@ export default function App() {
         <Route path="/user" element={<PrivateRoute><Users /></PrivateRoute>} />
         <Route path="/bookadd" element={<PrivateRoute><AddBook /></PrivateRoute>} />
         <Route path="/booklist" element={<PrivateRoute><Books /></PrivateRoute>} />
-        <Route path="/BorrowBook" element={<PrivateRoute><BookBorrow /></PrivateRoute>} />
+        <Route path="/BorrowBook/:id" element={<PrivateRoute><BookBorrow /></PrivateRoute>} />
 
-        
+
       </Routes>
     </BrowserRouter>
   )
