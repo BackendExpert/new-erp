@@ -54,7 +54,7 @@ const AddEmployee = () => {
                                     />
                                 </div>
                             </div>
-                            <div className="my-4 lg:grid grid-cols-4 gap 2">
+                            <div className="my-4 lg:grid grid-cols-4 gap-2">
                                 <div className="">
                                     <label htmlFor="">Phone No</label>
                                     <input type="text" name="phone" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Phone Number" 
