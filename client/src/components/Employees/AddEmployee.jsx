@@ -145,7 +145,7 @@ const AddEmployee = () => {
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Select Image</label>
-                                    <input type="file" name="image" className="pl-2  rounded w-full bg-blue-500" required placeholder="Upload File" 
+                                    <input type="file" name="image" className="pl-2 rounded w-full" required placeholder="Upload File" 
                                     />
                                 </div>
                             </div>
