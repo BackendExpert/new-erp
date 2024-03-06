@@ -81,10 +81,10 @@ const Books = () => {
                                 <td className='px-6 py-4'>
                                 {datab.status === "Available" ? (
                                   <Link to={'/BorrowBook/' + datab.BookID}>
-                                    <span className='text-[#3B71CA] border border-[#3B71CA] duration-500 hover:bg-[#3B71CA] py-1 px-2 rounded hover:text-white font-semibold'>Available</span>
+                                    <span className='text-[#3B71CA] border border-[#3B71CA] duration-500 hover:bg-[#3B71CA] py-1 px-2 rounded hover:text-white font-semibold'>Borrow</span>
                                   </Link>
                                 ) : (
-                                  <span className='bg-red-500 py-1 px-2 rounded text-white font-semibold'>No</span>
+                                  <span className='text-red-500 border border-red-500 duration-500 hover:bg-red-500 py-1 px-2 rounded hover:text-white font-semibold'>Reserve</span>
                                 )}
 
                                   <Link to={'/BorrowBook/' + datab.BookID}>
