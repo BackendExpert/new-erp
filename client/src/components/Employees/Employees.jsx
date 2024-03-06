@@ -18,8 +18,16 @@ const Employees = ({children}) => {
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
         return (
-            <div className="">
-                Hi all
+            <div className="bg-gray-200">
+                <div className="flex">
+                    {
+                        (() => {
+                            if(RoleUser === "SuperAdmin"){
+                                <SideList />
+                            }
+                        })
+                    }
+                </div>
             </div>
         )
     }

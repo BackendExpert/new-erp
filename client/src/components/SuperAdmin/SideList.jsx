@@ -2,7 +2,7 @@ import Icons from "@reacticons/ionicons"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-const SideList = () => {
+const SideList = ({children}) => {
     const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
