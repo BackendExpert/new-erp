@@ -19,13 +19,17 @@ const AddBook = () => {
 
     // headleBack according to current login user role
 
-    const headleBack = () => {
-      if(RoleUser === "Librarian"){
-        navigate('/librarian');
-      }
-      else if(RoleUser === "SuperAdmin"){
-        navigate('/superAdmin');
-      }
+    // const headleBack = () => {
+    //   if(RoleUser === "Librarian"){
+    //     navigate('/librarian');
+    //   }
+    //   else if(RoleUser === "SuperAdmin"){
+    //     navigate('/superAdmin');
+    //   }
+    // }
+
+    const headleBack = () =>{
+      navigate('/librarian');
     }
 
     const [bookData, SetBookData] = useState({
