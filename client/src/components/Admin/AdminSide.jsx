@@ -6,8 +6,8 @@ const SideListAdmin = () => {
     const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
-        {name: "Employess",  link: "/dash", icon: <Icons name="people" size="large"></Icons>},
-        {name: "Divisions",  link: "/about", icon: <Icons name="business" size="large"></Icons>},
+        {name: "Employess",  link: "/Employee", icon: <Icons name="people" size="large"></Icons>},
+        {name: "Divisions",  link: "#", icon: <Icons name="business" size="large"></Icons>},
         {name: "Projects",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "Program",  link: "#", icon: <Icons name="book" size="large"></Icons>},
         {name: "Designation",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
