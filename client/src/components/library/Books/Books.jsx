@@ -9,6 +9,7 @@ import Icons from "@reacticons/ionicons"
 const Books = () => {
   const navigate = useNavigate();
 
+
   //fetch data from backend
   const [Databook, SetDataBook] = useState([])
   useEffect(() => {
@@ -60,12 +61,6 @@ const Books = () => {
                     <tbody>
                       {
                         Databook.map((datab, index) => {
-                            // check book is available
-                              function isAvailableBook(){
-                                if(datab.title === "TestBook"){
-                                  <span className="">Available</span>
-                                }
-                              }
                           return(
                             <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className='px-6 py-4 font-bold'>{datab.BookID}</td>
