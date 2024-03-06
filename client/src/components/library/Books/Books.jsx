@@ -79,7 +79,7 @@ const Books = () => {
                                 <td className='px-6 py-4'>{datab.author1}, {datab.author2}, {datab.author3}, {datab.author4}</td>
                                 <td className='px-6 py-4'>{datab.value}</td>
                                 <td className='px-6 py-4'>
-                                  <Link to={'/BorrowBook' + datab.BookID}>
+                                  <Link to={'/BorrowBook/' + datab.BookID}>
                                     Hi
                                   </Link>
                                 </td>
