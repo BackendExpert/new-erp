@@ -168,6 +168,20 @@ app.post('/addBook', (req, res) => {
     });
 })
 
+// Read all books
+
+app.get('/ReadBooks', (req, res) => {
+    const sql = "SELECT * FROM books";
+    connection.query(qsl, (err, res) => {
+        if(err){
+            return res.json({Error : "Error in Query Processing"});
+        }
+        else{
+            return res.json(result);
+        }
+    });
+})
+
 
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
