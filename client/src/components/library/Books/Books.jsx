@@ -3,7 +3,8 @@ import React from 'react'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
-
+import LibSide from '../../Librarian/LibSide'
+import NavList from '../../NavBar/navList'
 
 const Books = () => {
   const navigate = useNavigate();
@@ -27,7 +28,13 @@ const Books = () => {
         <div className="flex">
           <LibSide />
           <div className="w-full mx-2">
-            <Navlist />
+          {
+            (() => {
+              if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
+                <NavList />
+              }
+            })
+          }
           </div>
         </div>
       </div>
