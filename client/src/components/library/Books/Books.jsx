@@ -28,7 +28,10 @@ const Books = () => {
         <div className="flex">
           <LibSide />
           <div className="w-full mx-2">
-          <NavList />
+            <NavList />
+            <div className="shadow-xl bg-white py-4 px-6 my-4 rounded border-t-4">
+              All Books
+            </div>
           </div>
         </div>
       </div>
