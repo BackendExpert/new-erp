@@ -113,6 +113,42 @@ const AddEmployee = () => {
                                     </select>
                                 </div>
                             </div>
+                            <div className="my-4 lg:grid grid-cols-3 gap-2">
+                                <div className="">
+                                    <label htmlFor="">Date of Birth</label>
+                                    <input type="date" name="dob" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Date of Birth" 
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Religous</label>
+                                    <input type="text" name="religous" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Religous" 
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">NIC No</label>
+                                    <input type="text" name="nic" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter NIC Number" 
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Emergency Phone No</label>
+                                    <input type="text" name="emgcontact" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Emergency Phone No" 
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Your Gender</label>
+                                    <select name="" id="" className="w-full h-12 border border-blue-400 rounded pl-2">
+                                        <option>Select Option</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Select Image</label>
+                                    <input type="file" name="image" className="pl-2  rounded w-full bg-blue-500" required placeholder="Upload File" 
+                                    />
+                                </div>
+                            </div>
                         </form>
                     </div>
 
