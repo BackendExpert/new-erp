@@ -1,9 +1,13 @@
-import LibSide from "./LibSide"
 import secureLocalStorage from "react-secure-storage"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import SideList from "../SuperAdmin/SideList"
+import SideListAdmin from "../Admin/AdminSide"
+import AccSide from "../Accountant/AccSide"
+import NavList from "../NavBar/navList"
+import AdminNav from "../NavBar/navListAdmin"
 
-const Employees = () => {
+const Employees = ({children}) => {
     const navigate = useNavigate();
 
     //get the current login user
@@ -14,10 +18,8 @@ const Employees = () => {
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
         return (
-            <div className='bg-gray-200'>
-                <div className="flex">
-                    
-                </div>
+            <div className="">
+                Hi all
             </div>
         )
     }
