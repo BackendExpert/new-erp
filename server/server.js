@@ -265,6 +265,9 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
     });
 });
 
+app.get('/ReadEmployee', (req, res) => {
+    const sql = "SELECT * from employee";
+})
 
 // ------------------------------------ Employee End ---------------------------------------------------
 //check the server is working

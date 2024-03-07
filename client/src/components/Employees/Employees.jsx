@@ -1,6 +1,7 @@
 import secureLocalStorage from "react-secure-storage"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import axios from "axios";
 
 const Employees = () => {
     const navigate = useNavigate();
@@ -25,7 +26,12 @@ const Employees = () => {
     }
 
     //fetch data from backend
-    
+    const [empdataview, SetEmpView] = useState([])
+    useEffect (() => {
+        axios.get('http://localhost:8081/ReadEmployee')
+        .then(res => SetEmpView(res.data))
+        .catch(err => console.log(err))
+    }, []);
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
         return (
