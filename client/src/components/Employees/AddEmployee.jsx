@@ -64,7 +64,13 @@ const AddEmployee = () => {
 
         axios.post('http://localhost:8081/AddEmployee', formdata)
         .then(res => {
-            
+            if(res.data.Status === "Success"){
+                alert("Employee Added Successfully");
+                navigate('/Employee');
+            }
+            else{
+                alert(res.data.Error);
+            }
         })
     }
 
