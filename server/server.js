@@ -1,9 +1,13 @@
-const express = require('express');
-const mysql = require('mysql2');
-const bcrypt = require('bcryptjs');
-const multer = require('multer');
-const jwt = require('jsonwebtoken');
-const cors = require('cors');
+import express from "express";
+import cors from 'cors';
+import mysql from "mysql2";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import nodemailer from 'nodemailer';
+import cookieParser from "cookie-parser";
+import multer from "multer";
+import path from "path";
+import { resourceLimits } from "worker_threads";
 
 const app = express();
 const PORT = process.env.PORT || 8081
@@ -14,7 +18,7 @@ const stroge = multer.diskStorage({
         cb(null, 'public/images')
     },
     filename:(req, file, cb) =>{
-        cb(null, file.fieldname + '_' + Date.now() + Path.extname(file.originalname));
+        cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
     }
 })
 
