@@ -46,6 +46,28 @@ const Employees = () => {
                         </Link>
                     </div>
 
+                    <div class="relative overflow-x-auto my-8">
+                <table class="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
+                        <tr className='text-blue-500'>
+                            <th scope='col' className='px-6 py-3'>ID</th>
+                            <th scope='col' className='px-6 py-3'>ISBN</th>
+                            <th scope='col' className='px-6 py-3'>Title</th>
+                            <th scope='col' className='px-6 py-3'>Category</th>
+                            <th scope='col' className='px-6 py-3'>Status</th>
+                            <th scope='col' className='px-6 py-3'>Publisher</th>
+                            <th scope='col' className='px-6 py-3'>Year</th>
+                            <th scope='col' className='px-6 py-3'>Authors</th>
+                            <th scope='col' className='px-6 py-3'>Value</th>
+                            <th scope='col' className='px-6 py-3'>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+              </div>
+
 
 
                 </div>
