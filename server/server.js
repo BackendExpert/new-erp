@@ -268,7 +268,7 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
 app.get('/ReadEmployee', (req, res) => {
     const sql = "SELECT * from employee";
 
-    connection.query(sql, (res, result) => {
+    connection.query(sql, (err, result) => {
         if(err){
             return res.json({Message: "Error On Server"});
         }
