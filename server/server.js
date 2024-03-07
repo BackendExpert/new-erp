@@ -188,7 +188,7 @@ app.get('/ReadBooks', (req, res) => {
 
 //------------------------------------ Employee ----------------------------------------------------
 
-app.post('/EmpAdd', upload.single('image'), async(req, res) => {
+app.post('/AddEmployee', upload.single('image'), async (req, res) => {
     const passHash = await bcrypt.hash(req.body.password, 10);
     const sql = "INSERT INTO employee VALUES (?)";
     const createTime = new Date();
