@@ -41,8 +41,28 @@ const AddEmployee = () => {
     })
 
     const headleEmpSubmit = (e) => {
-        e.preventDefault(); 
-        axios.post("http://localhost:8081/EmpAdd", empData)
+        e.preventDefault();
+        const formdata = new FormData();
+        formdata.append('eid', data.eid);
+        formdata.append('initial', data.initial);
+        formdata.append('surname', data.surname);
+        formdata.append('address', data.address);
+        formdata.append('phone', data.phone);
+        formdata.append('email', data.email);
+        formdata.append('password', data.password);
+        formdata.append('salary', data.salary);
+        formdata.append('category', data.category);
+        formdata.append('nic', data.nic);
+        formdata.append('dob', data.dob);
+        formdata.append('emgcontact', data.emgcontact);
+        formdata.append('type', data.type);
+        formdata.append('designation', data.designation);
+        formdata.append('civilstatus', data.civilstatus);
+        formdata.append('gender', data.gender);
+        formdata.append('relig', data.relig);
+        formdata.append('image', data.image); 
+
+        axios.post('http://localhost:8081/AddEmployee', formdata)
         .then(res => {
             
         })
@@ -181,7 +201,7 @@ const AddEmployee = () => {
                                 <div className="">
                                     <label htmlFor="">Select Image</label>
                                     <input type="file" name="image" className="pl-2  rounded w-full bg-blue-500" required placeholder="Upload File" 
-                                    />
+                                    onChange={e => SetEmpData({...empData, image:e.target.files[0]})} />
                                 </div>
                             </div>
                         </form>
