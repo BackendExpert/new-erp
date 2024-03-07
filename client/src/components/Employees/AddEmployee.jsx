@@ -43,28 +43,28 @@ const AddEmployee = () => {
     const headleEmpSubmit = (e) => {
         e.preventDefault();
         const formdata = new FormData();
-        formdata.append('eid', data.eid);
-        formdata.append('initial', data.initial);
-        formdata.append('surname', data.surname);
-        formdata.append('address', data.address);
-        formdata.append('phone', data.phone);
-        formdata.append('email', data.email);
-        formdata.append('password', data.password);
-        formdata.append('salary', data.salary);
-        formdata.append('category', data.category);
-        formdata.append('nic', data.nic);
-        formdata.append('dob', data.dob);
-        formdata.append('emgcontact', data.emgcontact);
-        formdata.append('type', data.type);
-        formdata.append('designation', data.designation);
-        formdata.append('civilstatus', data.civilstatus);
-        formdata.append('gender', data.gender);
-        formdata.append('relig', data.relig);
-        formdata.append('image', data.image); 
+        formdata.append('eid', empData.eid);
+        formdata.append('initial', empData.initial);
+        formdata.append('surname', empData.surname);
+        formdata.append('address', empData.address);
+        formdata.append('phone', empData.phone);
+        formdata.append('email', empData.email);
+        formdata.append('password', empData.password);
+        formdata.append('salary', empData.salary);
+        formdata.append('category', empData.category);
+        formdata.append('nic', empData.nic);
+        formdata.append('dob', empData.dob);
+        formdata.append('emgcontact', empData.emgcontact);
+        formdata.append('type', empData.type);
+        formdata.append('designation', empData.designation);
+        formdata.append('civilstatus', empData.civilstatus);
+        formdata.append('gender', empData.gender);
+        formdata.append('relig', empData.relig);
+        formdata.append('image', empData.image); 
 
         axios.post('http://localhost:8081/AddEmployee', formdata)
         .then(res => {
-
+            
         })
     }
 
@@ -205,7 +205,7 @@ const AddEmployee = () => {
                                 </div>
                             </div>
                             <div className="">
-                                <button type="submit" className="px-16 py-2 border border-green-500 text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">
+                                <button type="submit" className="rounded px-16 py-2 border border-green-500 text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">
                                     Add Employee
                                 </button>
                             </div>
