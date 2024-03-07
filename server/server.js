@@ -10,19 +10,19 @@ const app = express();
 const PORT = process.env.PORT || 8081
 
 //file  upload
-const stroge = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'public/images')
-    },
-    filename:(req, file, cb) =>{
-        cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
+      cb(null, 'public/images')
+    }, 
+    filename:(req, file, cb) => {
+      cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
     }
-})
-
-const upload = multer({
-    storage:stroge
-})
-
+  })
+  
+  const upload = multer({
+    storage:storage
+  })
+  
 
 
 //make connection between dbsever and node app
@@ -228,7 +228,7 @@ app.get('/ReadBooks', (req, res) => {
 app.post('/createEmp', upload.single('image'), async (req, res) => 
 {
    const hash = await bcrypt.hash(req.body.password, 10);
-   const sql = "INSERT INTO employee VALUES (?)";
+   const sql = "INSERT INTO employee (eid, initial,surname,address,phone,email,password,salary,image,category,designation,nic,dob,emgcontact,type,civilstatus,gender,relig,create_at,update_at)VALUES (?)";
    const createTime = new Date();
    const updateTime = new Date();
    

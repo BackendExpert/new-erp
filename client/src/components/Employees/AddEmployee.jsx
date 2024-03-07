@@ -69,7 +69,7 @@ const AddEmployee = () => {
                 navigate('/Employee');
             }
             else{
-                alert(res.data.Error);
+                console.log(res.data.Error);
             }
         })
     }
