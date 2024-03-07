@@ -65,7 +65,14 @@ const Employees = () => {
                         </tr>
                     </thead>
                     <tbody>
-
+                        {
+                            empdataview.map((empData, index) => {
+                                return 
+                                    <tr key={index}>
+                                        <td className='px-6 py-4 font-bold'>{empData.eid}</td>
+                                    </tr>
+                            })
+                        }
                     </tbody>
                 </table>
               </div>
