@@ -189,9 +189,82 @@ app.get('/ReadBooks', (req, res) => {
 
 //------------------------------------ Employee ----------------------------------------------------
 
-app.post('/AddEmployee', upload.single('image'), async (req, res) => {
-    
-})
+// app.post('/AddEmployee', upload.single('image'), async (req, res) => {
+//     const passNew = await bcrypt.hash(req.body.password, 10);
+//     const sql = "INSERT INTO employee VALUES (?)";
+
+//     const dataValue = [
+//         req.body.eid,
+//         req.body.initial,
+//         req.body.surname,
+//         req.body.address,
+//         req.body.phone,
+//         req.body.email,
+//         passNew,
+//         req.body.salary,
+//         req.file.filename,
+//         req.body.category,
+//         req.body.destination,
+//         req.body.nic,
+//         req.body.dob,
+//         req.body.emgcontact,
+//         req.body.civilstatus,
+//         req.body.gender,
+//         req.body.relig,
+//         '0',
+//         '0'
+//     ]
+
+//     connection.query(sql, [dataValue], (err, result) => {
+//         if(err){
+//             return res.json({Error: "ERROR in Data Processing"})
+//         }
+//         else{
+//             return res.json({Status: "Success"})
+//         }
+//     });
+// })
+
+app.post('/createEmp', upload.single('image'), async (req, res) => 
+{
+   const hash = await bcrypt.hash(req.body.password, 10);
+   const sql = "INSERT INTO employee VALUES (?)";
+   const createTime = new Date();
+   const updateTime = new Date();
+   
+   const values = [
+    req.body.eid,
+    req.body.initial,
+    req.body.surname,
+    req.body.address,
+    req.body.phone,
+    req.body.email,
+    hash, 
+    req.body.salary, 
+    req.file.filename,
+    req.body.category, 
+    req.body.designation,
+    req.body.nic,
+    req.body.dob,
+    req.body.emgcontact,
+    req.body.type,
+    req.body.civilstatus,
+    req.body.gender,
+    req.body.relig,
+    createTime,
+    updateTime
+   ]
+
+   connection.query(sql, [values], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR in Data Processing"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    });
+});
+
 
 // ------------------------------------ Employee End ---------------------------------------------------
 //check the server is working
