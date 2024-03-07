@@ -24,6 +24,9 @@ const Employees = () => {
         }
     }
 
+    //fetch data from backend
+    
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
         return (
             <div className="bg-gray-200 py-4">
@@ -36,6 +39,8 @@ const Employees = () => {
                             <button className="lg:my-0 my-2 border border-green-500 py-3 px-16 rounded text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl lg:mx-2">Add New Employee</button>
                         </Link>
                     </div>
+
+
 
                 </div>
             </div>
