@@ -50,16 +50,18 @@ const Employees = () => {
                 <table class="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
                         <tr className='text-blue-500'>
-                            <th scope='col' className='px-6 py-3'>ID</th>
-                            <th scope='col' className='px-6 py-3'>ISBN</th>
-                            <th scope='col' className='px-6 py-3'>Title</th>
-                            <th scope='col' className='px-6 py-3'>Category</th>
-                            <th scope='col' className='px-6 py-3'>Status</th>
-                            <th scope='col' className='px-6 py-3'>Publisher</th>
-                            <th scope='col' className='px-6 py-3'>Year</th>
-                            <th scope='col' className='px-6 py-3'>Authors</th>
-                            <th scope='col' className='px-6 py-3'>Value</th>
-                            <th scope='col' className='px-6 py-3'>Action</th>
+                            <th scope='col' className='px-6 py-3'>Emp ID</th>
+                            <th scope='col' className='px-6 py-3'>Photo</th>
+                            <th scope='col' className='px-6 py-3'>Initials</th>
+                            <th scope='col' className='px-6 py-3'>Surname</th>
+                            <th scope='col' className='px-6 py-3'>Designation</th>
+                            <th scope='col' className='px-6 py-3'>Phone</th>
+                            <th scope='col' className='px-6 py-3'>Emerg Contact</th>
+                            <th scope='col' className='px-6 py-3'>Email</th>
+                            <th scope='col' className='px-6 py-3'>Type</th>
+                            <th scope='col' className='px-6 py-3'>Gender</th>
+                            <th scope="col" className="px-6 py-3">Civil Status</th>
+                            <th scope="col" className="px-6 py-3">Action</th>
                         </tr>
                     </thead>
                     <tbody>
