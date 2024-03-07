@@ -190,42 +190,7 @@ app.get('/ReadBooks', (req, res) => {
 //------------------------------------ Employee ----------------------------------------------------
 
 app.post('/AddEmployee', upload.single('image'), async (req, res) => {
-    const passHash = await bcrypt.hash(req.body.password, 10);
-    const sql = "INSERT INTO employee VALUES (?)";
-    const createTime = new Date();
-    const updateTime = new Date();
-
-    const empValues = [
-        req.body.eid,
-        req.body.initial,
-        req.body.surname,
-        req.body.address,
-        req.body.phone,
-        req.body.email,
-        passHash,
-        req.body.salary, 
-        req.file.filename,
-        req.body.category, 
-        req.body.designation,
-        req.body.nic,
-        req.body.dob,
-        req.body.emgcontact,
-        req.body.type,
-        req.body.civilstatus,
-        req.body.gender,
-        req.body.relig,
-        createTime,
-        updateTime
-    ]
-
-    connection.query(sql, [empValues], (err, result) => {
-        if(err){
-            return res.json({Error: "Error in Query Processing"})
-        }
-        else{
-            return res.json({Status: "Success"})
-        }
-    });
+    
 })
 
 // ------------------------------------ Employee End ---------------------------------------------------
