@@ -213,7 +213,9 @@ app.post('/AddEmployee', upload.single('image'), async (req, res) => {
         req.body.type,
         req.body.civilstatus,
         req.body.gender,
-        req.body.relig
+        req.body.relig,
+        createTime,
+        updateTime
     ]
 
     connection.query(sql, [empValues], (err, result) => {
