@@ -141,7 +141,7 @@ const AddEmployee = () => {
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Job Category</label>
-                                    <select name="" id="" className="w-full h-12 border border-blue-400 rounded pl-2"
+                                    <select className="w-full h-12 border border-blue-400 rounded pl-2"
                                     onChange={e => SetEmpData({...empData, category:e.target.value})}>
                                         <option>Select Option</option>
                                         <option value="Director">Director</option>
@@ -153,7 +153,7 @@ const AddEmployee = () => {
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Employement Type</label>
-                                    <select name="" id="" className="w-full h-12 border border-blue-400 rounded pl-2"
+                                    <select className="w-full h-12 border border-blue-400 rounded pl-2"
                                     onChange={e => SetEmpData({...empData, type:e.target.value})}>
                                         <option>Select Option</option>
                                         <option value="Permanent">Permanent</option>
@@ -165,7 +165,7 @@ const AddEmployee = () => {
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Marital Status</label>
-                                    <select name="" id="" className="w-full h-12 border border-blue-400 rounded pl-2"
+                                    <select className="w-full h-12 border border-blue-400 rounded pl-2"
                                     onChange={e => SetEmpData({...empData, civilstatus:e.target.value})}>
                                         <option>Select Option</option>
                                         <option value="Married">Married</option>
