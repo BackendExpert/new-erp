@@ -232,7 +232,7 @@ app.get('/ReadBooks', (req, res) => {
 
 app.post('/createEmp', upload.single('image'), async (req, res) => 
 {
-   //const hash = await bcrypt.hash(req.body.password, 10);
+   const hash = await bcrypt.hash(req.body.password, 10);
    const sql = "INSERT INTO employee (eid, initial, surname, address, phone, email, password, salary, image, category, designation, nic, dob, emgcontact, type, civilstatus, gender, relig, create_at, update_at) VALUES (?)";
 //    const sql = "INSERT INTO employee VALUES (?)"
    const create_at = new Date();
@@ -245,7 +245,7 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
     req.body.address,
     req.body.phone,
     req.body.email,
-    req.body.password, 
+    hash,
     req.body.salary, 
     req.file.filename,
     req.body.category, 
@@ -266,21 +266,7 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
             return res.json({Error: "ERROR in Data Processing"});
         }
         else{
-            const checkSql = "SELECT * FROM employee";
-            connection.query(checkSql, (req, result) => {
-                if(result.length > 0){
-                    if(req.body.eid === result[0].eid){
-                        return res.json({Error: "Employee ID is Already Exists..!"});
-                    }
-                    else if(req.body.email === result[0].email){
-                        return res.json({Error: "Employee Email is Already Exists..!"});
-                    }
-                    else{
-                        return res.json({Status: "Success"});
-                    }
-                }
-            })
-            // return res.json({Status: "Success"})
+            return res.json({Status: "Success"})
         }
     });
 });
