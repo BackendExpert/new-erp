@@ -267,7 +267,17 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
         else{
             const checkSql = "SELECT * FROM employee";
             connection.query(checkSql, (req, result) => {
-                if(req.body.eid === result)
+                if(result.length > 0){
+                    if(req.body.eid === result[0].eid){
+                        return res.json({Error: "Employee ID is Already Exists..!"})
+                    }
+                    else if(req.body.email === result[0].email){
+                        return res.json({Error: "Employee Email is Already Exists..!"})
+                    }
+                    else{
+                        return res.json({Status: "Success"})
+                    }
+                }
             })
             // return res.json({Status: "Success"})
         }
