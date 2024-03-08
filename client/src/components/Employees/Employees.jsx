@@ -73,15 +73,15 @@ const Employees = () => {
                                         <td className='px-6 py-4 '>
                                             <img src={'http://localhost:8081/images/' + empData.image}className="h-12 w-12 rounded"/>
                                         </td>
-                                        <td className="px-6 py-4">{empData}</td>
-                                        <td className="px-6 py-4">{empData}</td>
-                                        <td className="px-6 py-4">{empData}</td>
-                                        <td className="px-6 py-4">{empData}</td>
-                                        <td className="px-6 py-4">{empData}</td>
-                                        <td className="px-6 py-4">{empData}</td>
-                                        <td className="px-6 py-4">{empData}</td>
-                                        <td className="px-6 py-4">{empData}</td>
-                                        <td className="px-6 py-4">{empData}</td>
+                                        <td className="px-6 py-4">{empData.initial}</td>
+                                        <td className="px-6 py-4">{empData.surname}</td>
+                                        <td className="px-6 py-4">{empData.designation}</td>
+                                        <td className="px-6 py-4">{empData.phone}</td>
+                                        <td className="px-6 py-4">{empData.emgcontact}</td>
+                                        <td className="px-6 py-4">{empData.email}</td>
+                                        <td className="px-6 py-4">{empData.type}</td>
+                                        <td className="px-6 py-4">{empData.gender}</td>
+                                        <td className="px-6 py-4">{empData.civilstatus}</td>
                                     </tr>
                                 )
                             })
