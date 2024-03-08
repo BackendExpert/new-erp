@@ -128,17 +128,19 @@ const AddEmployee = () => {
                                     <label htmlFor="">Email</label>
                                     <input type="email" name="email" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Email" 
                                     onChange={e => SetEmpData({...empData, email:e.target.value})}/>
-                                    <p className="text-red-500">(String type, max length 200)</p>
+                                    <p className="text-red-500">(String type, max length 100)</p>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Password</label>
                                     <input type="password" name="password" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Password" 
                                     onChange={e => SetEmpData({...empData, password:e.target.value})}/>
+                                    <p className="text-red-500">(String type, max length 120)</p>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Salary</label>
                                     <input type="text" name="salary" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Salary" 
                                     onChange={e => SetEmpData({...empData, salary:e.target.value})}/>
+                                    <p className="text-red-500">(desimal type, max length 8, eg: 150000.00)</p>
                                 </div>
                             </div>
                             <div className="my-4 lg:grid grid-cols-4 gap-2">
@@ -146,6 +148,7 @@ const AddEmployee = () => {
                                     <label htmlFor="">Designation</label>
                                     <input type="text" name="designation" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Designation" 
                                     onChange={e => SetEmpData({...empData, designation:e.target.value})}/>
+                                    <p className="text-red-500">(String type, max length 20)</p>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Job Category</label>
@@ -191,11 +194,13 @@ const AddEmployee = () => {
                                     <label htmlFor="">Religous</label>
                                     <input type="text" name="religous" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Religous" 
                                     onChange={e => SetEmpData({...empData, relig:e.target.value})}/>
+                                    <p className="text-red-500">(String type, max length 25)</p>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">NIC No</label>
                                     <input type="text" name="nic" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter NIC Number" 
                                     onChange={e => SetEmpData({...empData, nic:e.target.value})}/>
+                                    <p className="text-red-500">(String type, max length 12 eg:XXXXXXXXXXXX, XXXXXXXXXV)</p>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Emergency Phone No</label>
