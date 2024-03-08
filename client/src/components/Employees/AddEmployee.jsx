@@ -128,6 +128,7 @@ const AddEmployee = () => {
                                     <label htmlFor="">Email</label>
                                     <input type="email" name="email" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Email" 
                                     onChange={e => SetEmpData({...empData, email:e.target.value})}/>
+                                    <p className="text-red-500">(String type, max length 200)</p>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Password</label>
