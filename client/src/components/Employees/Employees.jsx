@@ -82,6 +82,9 @@ const Employees = () => {
                                         <td className="px-6 py-4">{empData.type}</td>
                                         <td className="px-6 py-4">{empData.gender}</td>
                                         <td className="px-6 py-4">{empData.civilstatus}</td>
+                                        <td>
+                                            
+                                        </td>
                                     </tr>
                                 )
                             })
