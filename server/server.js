@@ -232,43 +232,55 @@ app.get('/ReadBooks', (req, res) => {
 
 app.post('/createEmp', upload.single('image'), async (req, res) => 
 {
-   const hash = await bcrypt.hash(req.body.password, 10);
-   const sql = "INSERT INTO employee (eid, initial, surname, address, phone, email, password, salary, image, category, designation, nic, dob, emgcontact, type, civilstatus, gender, relig, create_at, update_at) VALUES (?)";
-//    const sql = "INSERT INTO employee VALUES (?)"
-   const create_at = new Date();
-   const update_at = new Date();
-   
-   const values = [
-    req.body.eid,
-    req.body.initial,
-    req.body.surname,
-    req.body.address,
-    req.body.phone,
-    req.body.email,
-    hash,
-    req.body.salary, 
-    req.file.filename,
-    req.body.category, 
-    req.body.designation,
-    req.body.nic,
-    req.body.dob,
-    req.body.emgcontact,
-    req.body.type,
-    req.body.civilstatus,
-    req.body.gender,
-    req.body.relig,
-    create_at,
-    update_at
-   ]
+   const checksql = "SELECT * FROM employee WHERE eid = ?";
+   connection.query(checksql, req.body.eid, (err, result) => {
+        if(err) throw err;
 
-   connection.query(sql, [values], (err, result) => {
-        if(err){
-            return res.json({Error: "ERROR in Data Processing"});
+        if(result.length > 0) {
+            return res.json({Error: "User Already Exists...!"});
         }
         else{
-            return res.json({Status: "Success"})
+            const hash = bcrypt.hash(req.body.password, 10);
+            const sql = "INSERT INTO employee (eid, initial, surname, address, phone, email, password, salary, image, category, designation, nic, dob, emgcontact, type, civilstatus, gender, relig, create_at, update_at) VALUES (?)";
+         //    const sql = "INSERT INTO employee VALUES (?)"
+            const create_at = new Date();
+            const update_at = new Date();
+            
+            const values = [
+             req.body.eid,
+             req.body.initial,
+             req.body.surname,
+             req.body.address,
+             req.body.phone,
+             req.body.email,
+             hash,
+             req.body.salary, 
+             req.file.filename,
+             req.body.category, 
+             req.body.designation,
+             req.body.nic,
+             req.body.dob,
+             req.body.emgcontact,
+             req.body.type,
+             req.body.civilstatus,
+             req.body.gender,
+             req.body.relig,
+             create_at,
+             update_at
+            ]
+         
+            connection.query(sql, [values], (err, result) => {
+                 if(err){
+                     return res.json({Error: "ERROR in Data Processing"});
+                 }
+                 else{
+                     return res.json({Status: "Success"})
+                 }
+             });
         }
-    });
+   })
+
+
 });
 
 app.get('/ReadEmployee', (req, res) => {
