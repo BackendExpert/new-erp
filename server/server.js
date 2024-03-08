@@ -233,8 +233,8 @@ app.get('/ReadBooks', (req, res) => {
 app.post('/createEmp', upload.single('image'), async (req, res) => 
 {
    const hash = await bcrypt.hash(req.body.password, 10);
-//    const sql = "INSERT INTO employee (eid, initial,surname,address,phone,email,password,salary,image,category,designation,nic,dob,emgcontact,type,civilstatus, gender, relig, create_at, update_at) VALUES (?)";
-   const sql = "INSERT INTO employee VALUES (?)";  
+   const sql = "INSERT INTO employee (eid, initial, surname, address, phone, email, password, salary, image, category, designation, nic, dob, emgcontact, type, civilstatus, gender, relig, create_at, update_at) VALUES (?)";
+//    const sql = "INSERT INTO employee VALUES (?)"
    const createTime = new Date();
    const updateTime = new Date();
    
@@ -257,19 +257,32 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
     req.body.civilstatus,
     req.body.gender,
     req.body.relig,
-    0,
     createTime,
-    updateTime,
+    updateTime
    ]
 
-   connection.query(sql, [values], (err, results) => 
-   {
-     if(err) 
-       return res.json({Error:"Error in query processing"})
-     else{
-       return res.json({Status: "Success"})
-     }
-   });
+   connection.query(sql, [values], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR in Data Processing"});
+        }
+        else{
+            const checkSql = "SELECT * FROM employee";
+            connection.query(checkSql, (req, result) => {
+                if(result.length > 0){
+                    if(req.body.eid === result[0].eid){
+                        return res.json({Error: "Employee ID is Already Exists..!"});
+                    }
+                    else if(req.body.email === result[0].email){
+                        return res.json({Error: "Employee Email is Already Exists..!"});
+                    }
+                    else{
+                        return res.json({Status: "Success"});
+                    }
+                }
+            })
+            // return res.json({Status: "Success"})
+        }
+    });
 });
 
 app.get('/ReadEmployee', (req, res) => {
