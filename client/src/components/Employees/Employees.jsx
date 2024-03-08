@@ -46,9 +46,9 @@ const Employees = () => {
                         </Link>
                     </div>
 
-                    <div class="relative overflow-x-auto my-8">
-                <table class="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
+                    <div className="relative overflow-x-auto my-8">
+                <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
                         <tr className='text-blue-500'>
                             <th scope='col' className='px-6 py-3'>Emp ID</th>
                             <th scope='col' className='px-6 py-3'>Photo</th>
@@ -71,7 +71,7 @@ const Employees = () => {
                                     <tr key={index}>
                                         <td className='px-6 py-4 font-bold'>{empData.eid}</td>
                                         <td className='px-6 py-4 '>
-                                            <img src={'http://localhost:8081/images/' + empData.image}className="h-12 w-12 rounded"/>
+                                            <img src={'http://localhost:8081/images/' + empData.image} className="h-12 w-12 rounded"/>
                                         </td>
                                         <td className="px-6 py-4">{empData.initial}</td>
                                         <td className="px-6 py-4">{empData.surname}</td>
