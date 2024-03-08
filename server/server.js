@@ -265,7 +265,11 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
             return res.json({Error: "ERROR in Data Processing"})
         }
         else{
-            return res.json({Status: "Success"})
+            const checkSql = "SELECT * FROM employee";
+            connection.query(checkSql, (req, res) => {
+                
+            })
+            // return res.json({Status: "Success"})
         }
     });
 });
