@@ -266,8 +266,8 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
         }
         else{
             const checkSql = "SELECT * FROM employee";
-            connection.query(checkSql, (req, res) => {
-                
+            connection.query(checkSql, (req, result) => {
+                if(req.body.eid === result)
             })
             // return res.json({Status: "Success"})
         }
