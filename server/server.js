@@ -4,13 +4,12 @@ const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
-<<<<<<< Updated upstream
+
 const path = require('path')
-=======
+
 const path = require('path');
 const resourceLimits = require('worker_threads');
 
->>>>>>> Stashed changes
 
 const app = express();
 const PORT = process.env.PORT || 8081
@@ -23,21 +22,12 @@ const storage = multer.diskStorage({
     filename:(req, file, cb) => {
       cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
     }
-<<<<<<< Updated upstream
-  })
-  
-  const upload = multer({
-    storage:storage
-  })
-  
-=======
 })
   
 const upload = multer({
     storage:storage
 })
 
->>>>>>> Stashed changes
 
 //make connection between dbsever and node app
 
