@@ -83,8 +83,9 @@ const Employees = () => {
                                         <td className="px-6 py-4">{empData.gender}</td>
                                         <td className="px-6 py-4">{empData.civilstatus}</td>
                                         <td>
+                                        <Link to={'/UpdateEmp/' + empData.eid}>
                                             <button className="rounded mx-2 py-2 px-6 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Update</button>
-
+                                        </Link>
                                         { RoleUser === "SuperAdmin" || RoleUser === "Admin" ? (
                                             <button className="rounded mx-2 py-2 px-6 border border-red-500 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
                                         ) : (
