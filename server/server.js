@@ -233,7 +233,8 @@ app.get('/ReadBooks', (req, res) => {
 app.post('/createEmp', upload.single('image'), async (req, res) => 
 {
    const hash = await bcrypt.hash(req.body.password, 10);
-   const sql = "INSERT INTO employee (eid, initial,surname,address,phone,email,password,salary,image,category,designation,nic,dob,emgcontact,type,civilstatus,gender,relig,create_at,update_at) VALUES (?)";
+//    const sql = "INSERT INTO employee (eid, initial,surname,address,phone,email,password,salary,image,category,designation,nic,dob,emgcontact,type,civilstatus, gender, relig, create_at, update_at) VALUES (?)";
+   const sql = "INSERT INTO employee VALUES (?)";
    const createTime = new Date();
    const updateTime = new Date();
    
@@ -256,6 +257,7 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
     req.body.civilstatus,
     req.body.gender,
     req.body.relig,
+    0,
     createTime,
     updateTime
    ]
