@@ -70,9 +70,18 @@ const Employees = () => {
                                 return (
                                     <tr key={index}>
                                         <td className='px-6 py-4 font-bold'>{empData.eid}</td>
-                                        <td className='px-6 py-4 font-bold'>
-                                            <img src={'http://localhost:8081/images/' + empData.image}className=""/>
+                                        <td className='px-6 py-4 '>
+                                            <img src={'http://localhost:8081/images/' + empData.image}className="h-12 w-12 rounded"/>
                                         </td>
+                                        <td className="px-6 py-4">{empData}</td>
+                                        <td className="px-6 py-4">{empData}</td>
+                                        <td className="px-6 py-4">{empData}</td>
+                                        <td className="px-6 py-4">{empData}</td>
+                                        <td className="px-6 py-4">{empData}</td>
+                                        <td className="px-6 py-4">{empData}</td>
+                                        <td className="px-6 py-4">{empData}</td>
+                                        <td className="px-6 py-4">{empData}</td>
+                                        <td className="px-6 py-4">{empData}</td>
                                     </tr>
                                 )
                             })
