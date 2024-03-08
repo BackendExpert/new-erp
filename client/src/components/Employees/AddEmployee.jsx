@@ -206,6 +206,7 @@ const AddEmployee = () => {
                                     <label htmlFor="">Emergency Phone No</label>
                                     <input type="text" name="emgcontact" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Emergency Phone No" 
                                     onChange={e => SetEmpData({...empData, emgcontact:e.target.value})}/>
+                                    <p className="text-red-500">(String type, max length 245)</p>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Your Gender</label>
