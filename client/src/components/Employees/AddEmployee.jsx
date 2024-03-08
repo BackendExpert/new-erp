@@ -65,7 +65,11 @@ const AddEmployee = () => {
         axios.post('http://localhost:8081/createEmp', formdata)
         .then(res => {
             if(res.data.Status === "Success"){
+<<<<<<< Updated upstream
                 alert("Employee Added Successfully");
+=======
+                alert("Successfully Added")
+>>>>>>> Stashed changes
                 navigate('/Employee');
             }
             else{
