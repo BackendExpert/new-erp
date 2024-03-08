@@ -70,6 +70,9 @@ const Employees = () => {
                                 return (
                                     <tr key={index}>
                                         <td className='px-6 py-4 font-bold'>{empData.eid}</td>
+                                        <td className='px-6 py-4 font-bold'>
+                                            <img src={empData.image} className=""/>
+                                        </td>
                                     </tr>
                                 )
                             })
