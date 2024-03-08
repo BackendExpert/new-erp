@@ -83,7 +83,13 @@ const Employees = () => {
                                         <td className="px-6 py-4">{empData.gender}</td>
                                         <td className="px-6 py-4">{empData.civilstatus}</td>
                                         <td>
-                                            
+                                            <button className="py-2 px-6 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Update</button>
+
+                                        { RoleUser === "SuperAdmin" || RoleUser === "Admin" ? (
+                                            <button className="py-2 px-6 border border-red-500 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
+                                        ) : (
+                                            <span className=""></span>
+                                        )}
                                         </td>
                                     </tr>
                                 )
