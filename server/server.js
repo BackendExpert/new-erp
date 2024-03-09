@@ -298,7 +298,16 @@ app.get('/ReadEmployee', (req, res) => {
 
 // fetch employee data to update
 app.get('/EmpReadToUpdate/:id', (req, res) => {
-    
+    const empId = req.params.id;
+    console.log(id);
+    connection.query("SELECT * FROM employee WHERE eid=?", [empId], (err, result) => {
+        if(err){
+            return res.json({Error: "Error IN Server"});
+        }
+        else{
+            return res.json({Status: "Success", Result: result});
+        }
+    });
 })
 
 // ------------------------------------ Employee End ---------------------------------------------------
