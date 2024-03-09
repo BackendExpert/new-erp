@@ -50,18 +50,34 @@ const UpdateEmployee = () => {
             </div>
             <div className="my-4">
               <form>
+
                 <div className="lg:grid grid-cols-2 gap-2">
+
                   <div className="my-2">
                     <label htmlFor="">New Address : </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
                     value={empValues.address}/>
                   </div>
+
                   <div className="my-2">
                     <label htmlFor="">New Phone No: </label>
-                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded" required
-                    />
+                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
+                    value={empValues.phone}/>
                   </div>
+
                 </div>
+
+                <div className="lg:grid grid-cols-3 gap-2">
+
+                  <div className="my-2">
+                    <label htmlFor="">New Salary: </label>
+                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
+                    value={empValues.salary}/>
+                  </div>
+
+                </div>
+
+
               </form>
             </div>
           </div>
