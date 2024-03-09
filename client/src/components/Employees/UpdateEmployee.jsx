@@ -7,6 +7,7 @@ const UpdateEmployee = () => {
     const navigate = useNavigate();
     const RoleUser = secureLocalStorage.getItem("loginNew");
     const {id} = useParams();
+
     const [empValues, SetValues] = useState({
       address: '',
       phone: '',
@@ -35,7 +36,7 @@ const UpdateEmployee = () => {
         })
       })
       .catch(err=> console.log(err))
-    })
+    }, [])
 
     const headleUpdateEmp = (e) => {
         e.preventDefault();
@@ -65,12 +66,11 @@ const UpdateEmployee = () => {
 
                 <div className="lg:grid grid-cols-2 gap-2">
 
-                  <div className="my-2">
-                    <label htmlFor="">New Address : </label>
-                    <input id="" type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" placeholder="Enter Address"
+                  <div className='mb-2'>
+                    <label htmlFor='address'>New Address:</label>
+                    <input type="text"  className='mt-2 h-12 w-full border border-blue-400 rounded pl-2' placeholder= "Enter Address" 
                     value={empValues.address} onChange={e => SetValues({...empValues, address:e.target.value})}/>
                   </div>
-
                   <div className="my-2">
                     <label htmlFor="">New Phone No: </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
