@@ -313,13 +313,14 @@ app.get('/EmpReadToUpdate/:id', (req, res) => {
 app.put('/UpdateEmp/:id', (req, res) => {
     const id = req.params.id;
 
-    connection.query('UPDATE employee SET address = ?, phone =?, email= ?, salary=?, category =?, designation=?, type=?, civilstatus=?, emgcontact=? WHERE eid = ?',
-    [req.body.address, req.body.phone, req.body.email,req.body.salary,req.body.category, req.body.designation, req.body.type, req.body.civilstatus, req.body.emgcontact, id], (err, results) => {
+    const update_at = new Date();
+    connection.query('UPDATE employee SET address = ?, phone =?, email= ?, salary=?, category =?, designation=?, type=?, civilstatus=?, emgcontact=?, update_at=? WHERE eid = ?',
+    [req.body.address, req.body.phone, req.body.email,req.body.salary,req.body.category, req.body.designation, req.body.type, req.body.civilstatus, req.body.emgcontact,update_at,  id], (err, results) => {
         if(err){
-
+            return res.json({Error : "Error in server"})
         }
         else{
-            return res.json({Status: })
+            return res.json({Status: "Success"})
         }
     });
 
