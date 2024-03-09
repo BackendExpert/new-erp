@@ -36,9 +36,13 @@ const UpdateEmployee = () => {
       })
       .catch(err=> console.log(err))
     })
+    const headleOnChange = (e) => {
+      const {name, value} = e.target;
+      SetValues({...empValues, [name]: value});
+    }
 
     const headleUpdateEmp = (e) => {
-      
+        e.preventDefault();
     } 
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
