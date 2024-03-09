@@ -15,6 +15,7 @@ const UpdateEmployee = () => {
       type: '',
       designation: '',
       emgcontact: '',
+      civilstatus: '',
       email: ''
     })
 
@@ -22,10 +23,18 @@ const UpdateEmployee = () => {
     useEffect(() => {
       axios.get('http://localhost:8081/EmpReadToUpdate/' + id)
       .then(res => {
-        SetValues({
-          
+        SetValues({...empValues, address:res.data.Result[0].address,
+        email:res.data.Result[0].email, 
+        phone:res.data.Result[0].phone,
+        salary:res.data.Result[0].salary,
+        category:res.data.Result[0].category,
+        designation:res.data.Result[0].designation,
+        civilstatus:res.data.Result[0].civilstatus,
+        emgcontact:res.data.Result[0].emgcontact,
+        type:res.data.Result[0].type
         })
       })
+      .catch(err=> console.log(err))
     })
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
