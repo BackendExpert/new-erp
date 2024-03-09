@@ -36,13 +36,17 @@ const UpdateEmployee = () => {
       })
       .catch(err=> console.log(err))
     })
-    const headleOnChange = (e) => {
-      const {name, value} = e.target;
-      SetValues({...empValues, [name]: value});
-    }
 
     const headleUpdateEmp = (e) => {
         e.preventDefault();
+        axios.put('http://localhost:8081/UpdateEmp/' + id, empValues)
+        .then(res => {
+          if(res.data.Status === "Success"){
+            alert("Employee Updated Successful")
+            navigate('/Employee');
+          }
+        })
+        .catch(err => console.log(err))
     } 
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
