@@ -1,11 +1,32 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const UpdateEmployee = () => {
     const navigate = useNavigate();
     const RoleUser = secureLocalStorage.getItem("loginNew");
+    const {id} = useParams();
+    const [empValues, SetValues] = useState({
+      address: '',
+      phone: '',
+      salary: '',
+      category: '',
+      type: '',
+      designation: '',
+      emgcontact: '',
+      email: ''
+    })
+
+    //fetch data to update
+    useEffect(() => {
+      axios.get('http://localhost:8081/EmpReadToUpdate/' + id)
+      .then(res => {
+        SetValues({
+          
+        })
+      })
+    })
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
       return (
