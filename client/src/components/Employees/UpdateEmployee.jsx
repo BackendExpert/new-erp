@@ -66,7 +66,7 @@ const UpdateEmployee = () => {
 
                 <div className="lg:grid grid-cols-2 gap-2">
 
-                  <div className='mb-2'>
+                  <div className='my-2'>
                     <label htmlFor='address'>New Address:</label>
                     <input type="text"  className='mt-2 h-12 w-full border border-blue-400 rounded pl-2' placeholder= "Enter Address" 
                     value={empValues.address} onChange={e => SetValues({...empValues, address:e.target.value})}/>
@@ -74,7 +74,7 @@ const UpdateEmployee = () => {
                   <div className="my-2">
                     <label htmlFor="">New Phone No: </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
-                    value={empValues.phone}/>
+                    value={empValues.phone} onChange={e => SetValues({...empValues, phone:e.target.value})}/>
                   </div>
 
                 </div>
@@ -84,19 +84,19 @@ const UpdateEmployee = () => {
                   <div className="my-2">
                     <label htmlFor="">New Salary: </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
-                    value={empValues.salary}/>
+                    value={empValues.salary} onChange={e => SetValues({...empValues, salary:e.target.value})}/>
                   </div>
 
                   <div className="my-2">
                     <label htmlFor="">New Designation: </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
-                    value={empValues.designation}/>
+                    value={empValues.designation} onChange={e => SetValues({...empValues, designation:e.target.value})}/>
                   </div>
 
                   <div className="my-2">
                     <label htmlFor="">New Category: </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
-                    value={empValues.category}/>
+                    value={empValues.category} onChange={e => SetValues({...empValues, category:e.target.value})}/>
                   </div>
 
                 </div>
@@ -106,25 +106,25 @@ const UpdateEmployee = () => {
                   <div className="my-2">
                     <label htmlFor="">New Email: </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
-                    value={empValues.email}/>
+                    value={empValues.email} onChange={e => SetValues({...empValues, email:e.target.value})}/>
                   </div>
 
                   <div className="my-2">
                     <label htmlFor="">New Type : </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
-                    value={empValues.type}/>
+                    value={empValues.type} onChange={e => SetValues({...empValues, type:e.target.value})}/>
                   </div>
 
                   <div className="my-2">
                     <label htmlFor="">New Emergency Contact : </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
-                    value={empValues.emgcontact}/>
+                    value={empValues.emgcontact} onChange={e => SetValues({...empValues, emgcontact:e.target.value})}/>
                   </div>
 
                   <div className="my-2">
                     <label htmlFor="">New Civil Status : </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required placeholder="Civil Status"
-                    value={empValues.civilstatus}/>
+                    value={empValues.civilstatus} onChange={e => SetValues({...empValues, civilstatus:e.target.value})}/>
                   </div>
 
                 </div>
