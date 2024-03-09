@@ -37,6 +37,10 @@ const UpdateEmployee = () => {
       .catch(err=> console.log(err))
     })
 
+    const headleUpdateEmp = (e) => {
+      
+    } 
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
       return (
         <div className="bg-gray-200 py-4">
@@ -49,14 +53,14 @@ const UpdateEmployee = () => {
               </Link>
             </div>
             <div className="my-4">
-              <form>
+              <form onSubmit={headleUpdateEmp}>
 
                 <div className="lg:grid grid-cols-2 gap-2">
 
                   <div className="my-2">
                     <label htmlFor="">New Address : </label>
-                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
-                    value={empValues.address}/>
+                    <input id="" type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" placeholder="Enter Address"
+                    value={empValues.address} onChange={e => SetValues({...empValues, address:e.target.value})}/>
                   </div>
 
                   <div className="my-2">
@@ -111,7 +115,7 @@ const UpdateEmployee = () => {
 
                   <div className="my-2">
                     <label htmlFor="">New Civil Status : </label>
-                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
+                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required placeholder="Civil Status"
                     value={empValues.civilstatus}/>
                   </div>
 
