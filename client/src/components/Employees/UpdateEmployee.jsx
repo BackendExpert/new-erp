@@ -92,9 +92,21 @@ const UpdateEmployee = () => {
                 <div className="lg:grid grid-cols-3 gap-2">
 
                   <div className="my-2">
-                    <label htmlFor="">New Category: </label>
+                    <label htmlFor="">New Email: </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
-                    value={empValues.category}/>
+                    value={empValues.email}/>
+                  </div>
+
+                  <div className="my-2">
+                    <label htmlFor="">New Type : </label>
+                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
+                    value={empValues.type}/>
+                  </div>
+
+                  <div className="my-2">
+                    <label htmlFor="">New Emergency Contact : </label>
+                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
+                    value={empValues.emgcontact}/>
                   </div>
 
                 </div>
