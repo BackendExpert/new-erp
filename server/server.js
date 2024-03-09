@@ -326,6 +326,20 @@ app.put('/UpdateEmp/:id', (req, res) => {
 
 })
 
+// Delete Employee
+
+app.delete('/DeleteEmp/:id', (req, res) => {
+    const id = req.params.id;
+    conn.query("DELETE from employee WHERE eid = ?",
+    [id], (err, results) => {
+        if(err) 
+            console.log({Message: "Error inside Server"})
+        else{
+            return res.json(results)
+        }
+    });
+})
+
 // ------------------------------------ Employee End ---------------------------------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
