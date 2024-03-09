@@ -75,8 +75,29 @@ const UpdateEmployee = () => {
                     value={empValues.salary}/>
                   </div>
 
+                  <div className="my-2">
+                    <label htmlFor="">New Designation: </label>
+                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
+                    value={empValues.designation}/>
+                  </div>
+
+                  <div className="my-2">
+                    <label htmlFor="">New Category: </label>
+                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
+                    value={empValues.category}/>
+                  </div>
+
                 </div>
 
+                <div className="lg:grid grid-cols-3 gap-2">
+
+                  <div className="my-2">
+                    <label htmlFor="">New Category: </label>
+                    <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded pl-2" required
+                    value={empValues.category}/>
+                  </div>
+
+                </div>
 
               </form>
             </div>
