@@ -299,7 +299,7 @@ app.get('/ReadEmployee', (req, res) => {
 // fetch employee data to update
 app.get('/EmpReadToUpdate/:id', (req, res) => {
     const empId = req.params.id;
-    console.log(id);
+    console.log(empId);
     connection.query("SELECT * FROM employee WHERE eid=?", [empId], (err, result) => {
         if(err){
             return res.json({Error: "Error IN Server"});
