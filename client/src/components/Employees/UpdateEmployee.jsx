@@ -48,6 +48,16 @@ const UpdateEmployee = () => {
                 <button className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
               </Link>
             </div>
+            <div className="my-4">
+              <form>
+                <div className="lg:grid grid-cols-2 gap-2">
+                  <div className="">
+                    <label htmlFor="">New Address : </label>
+                    <input type="text" className="h-10 h-full" />
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       )
