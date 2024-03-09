@@ -296,6 +296,11 @@ app.get('/ReadEmployee', (req, res) => {
     });
 })
 
+// fetch employee data to update
+app.get('/EmpReadToUpdate/:id', (req, res) => {
+    
+})
+
 // ------------------------------------ Employee End ---------------------------------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
