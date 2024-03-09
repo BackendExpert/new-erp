@@ -54,7 +54,7 @@ const UpdateEmployee = () => {
                   <div className="">
                     <label htmlFor="">New Address : </label>
                     <input type="text" className="mt-2 h-12 w-full border border-blue-400 rounded" required
-                    />
+                    value={empValues.address}/>
                   </div>
                   <div className="">
                     <label htmlFor="">New Phone No: </label>
