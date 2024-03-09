@@ -33,6 +33,16 @@ const Employees = () => {
         .catch(err => console.log(err))
     }, []);
 
+    //delete Data
+    const headleDelete = (id) =>{
+        axios.delete('http://localhost:8081/DeleteEmp/' + id)
+        .then(res => {
+            alert("Employee Deleted Successful");
+            window.location.reload();
+        })
+        .catch(err => console.log(err))
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
         return (
             <div className="bg-gray-200 py-4">
