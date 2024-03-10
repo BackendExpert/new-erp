@@ -330,7 +330,7 @@ app.put('/UpdateEmp/:id', (req, res) => {
 
 app.delete('/DeleteEmp/:id', (req, res) => {
     const id = req.params.id;
-    conn.query("DELETE from employee WHERE eid = ?",
+    connection.query("DELETE from employee WHERE eid = ?",
     [id], (err, results) => {
         if(err) 
             console.log({Message: "Error inside Server"})
