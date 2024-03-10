@@ -10,7 +10,7 @@ const SideList = () => {
         {name: "Divisions",  link: "#", icon: <Icons name="business" size="large"></Icons>},
         {name: "Projects",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "Program",  link: "#", icon: <Icons name="book" size="large"></Icons>},
-        {name: "Designation",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
+        {name: "Designation",  link: "/Designations", icon: <Icons name="easel" size="large"></Icons>},
         {name: "Vehicle",  link: "#", icon: <Icons name="car" size="large"></Icons>},
         {name: "Equipment",  link: "#", icon: <Icons name="build" size="large"></Icons>},
         {name: "Library",  link: "/librarian", icon: <Icons name="library" size="large"></Icons>},
