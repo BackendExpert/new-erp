@@ -44,7 +44,7 @@ const AddDesignation = () => {
                             </div>
 
                             <div className="">
-                                <button type="submit" className="border border-green-500 py-2 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Add Designation</button>
+                                <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Add Designation</button>
                             </div>
                         </form>
                     </div>
