@@ -22,7 +22,26 @@ const AddDesignation = () => {
 
                     <div className="">
                         <form>
-                            
+                            <div className="lg:grid grid-cols-2 gap-4">
+                                <div className="my-2">
+                                    <label htmlFor="">Designation</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Designation</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="lg:grid grid-cols-1">
+                                <div className="my-2">
+                                    <label htmlFor="">Designation</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
+                                    />
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
