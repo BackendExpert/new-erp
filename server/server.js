@@ -340,6 +340,22 @@ app.delete('/DeleteEmp/:id', (req, res) => {
     });
 })
 
+// Count Books 
+app.get('/EmpCount', (req, res) => {
+    const sql = "SELECT COUNT(eid) AS emp FROM employee";
+  
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ emp: results[0].emp }); // Send count in JSON format
+    });
+});
+
+
 // ------------------------------------ Employee End ---------------------------------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
