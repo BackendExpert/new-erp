@@ -29,7 +29,7 @@ const AddDesignation = () => {
                                     />
                                 </div>
                                 <div className="my-2">
-                                    <label htmlFor="">Designation</label>
+                                    <label htmlFor="">Basic Salary</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
                                     />
                                 </div>
@@ -37,7 +37,7 @@ const AddDesignation = () => {
 
                             <div className="lg:grid grid-cols-1">
                                 <div className="my-2">
-                                    <label htmlFor="">Designation</label>
+                                    <label htmlFor="">Increment</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
                                     />
                                 </div>
