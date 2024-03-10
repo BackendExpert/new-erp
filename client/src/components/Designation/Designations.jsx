@@ -10,10 +10,19 @@ const Designations = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
     //this route can access only by SuperAdmin and Admin
-    
-  return (
-    <div>Designations</div>
-  )
+
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
+        return (
+            <div>Designations</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            localStorage.clear();
+            navigate('/');
+        }, []);
+    }
+
 }
 
 export default Designations
