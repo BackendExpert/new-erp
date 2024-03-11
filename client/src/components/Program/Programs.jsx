@@ -13,7 +13,7 @@ const Programs = () => {
     //this page can access by following users
     // SuperAdmin, Admin
 
-    if(RoleUser === "" || RoleUser === ""){
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
         return (
             <div>Programs</div>
         )
