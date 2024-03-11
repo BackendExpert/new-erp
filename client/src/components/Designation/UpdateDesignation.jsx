@@ -45,19 +45,19 @@ const UpdateDesignation = () => {
                     <div className="">
                       <label htmlFor="">Designation</label>
                       <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
-                      />
+                      value={designationValue.Dname}/>
                     </div>
                     <div className="">
                       <label htmlFor="">Basic Salary</label>
                       <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Basic Salary"
-                      />
+                      value={designationValue.Basic_Salary}/>
                     </div>
                   </div>
                   <div className="lg:grid grid-cols-1">
                     <div className="">
                       <label htmlFor="">Increment</label>
                       <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Increment"
-                      />
+                      value={designationValue.increment}/>
                     </div>
                   </div>
                   <div className="">
