@@ -42,7 +42,7 @@ const AddDesignation = () => {
                     </Link>
 
                     <div className="">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="my-2">
                                     <label htmlFor="">Designation</label>
