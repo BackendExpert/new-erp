@@ -17,7 +17,7 @@ const SummaryDash = () => {
       }
       try {
         const BookCount = await axios.get('http://localhost:8081/BookCount');
-        setBooks(BookCount.data.books);
+        setBooks(BookCount.data.bk);
       } catch (error) {
         console.error('Error fetching data:', error);
       }

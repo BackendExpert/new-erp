@@ -127,9 +127,23 @@ app.get('/AdminCount', (req, res) => {
 //---------------------------- LIBRARY Start ---------------------------------------------------------
 
 // Count Books 
-app.get('/BookCount', (req, res) => {
-    const sql = "SELECT COUNT(BookID) AS book FROM books";
+// app.get('/BookCount', (req, res) => {
+//     const sql = "SELECT COUNT(BookID) AS book FROM books";
   
+//     connection.query(sql, (error, results) => {
+//       if (error) {
+//         console.error('Error fetching data:', error);
+//         res.status(500).send({ message: 'Error fetching data' });
+//         return;
+//       }
+  
+//       res.json({ book: results[0].book }); // Send count in JSON format
+//     });
+// });
+app.get('/BookCount', (req, res) => {
+    const sql = "SELECT COUNT(BookID) AS bk FROM books";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
     connection.query(sql, (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
@@ -137,7 +151,7 @@ app.get('/BookCount', (req, res) => {
         return;
       }
   
-      res.json({ book: results[0].book }); // Send count in JSON format
+      res.json({ bk: results[0].bk }); // Send count in JSON format
     });
 });
 
@@ -340,7 +354,7 @@ app.delete('/DeleteEmp/:id', (req, res) => {
     });
 })
 
-// Count Books 
+// Count emp 
 app.get('/EmpCount', (req, res) => {
     const sql = "SELECT COUNT(eid) AS emp FROM employee";
   
@@ -450,6 +464,20 @@ app.delete('/DesiganationDelete/:id', (req, res) =>{
     });
 
 })
+
+app.get('/DesignationCount', (req, res) => {
+    const sql = "SELECT COUNT(eid) AS emp FROM employee";
+  
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ emp: results[0].emp }); // Send count in JSON format
+    });
+});
 
 // ---------------------------------------- Designations END -------------------------------------------------
 
