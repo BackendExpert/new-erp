@@ -396,6 +396,19 @@ app.post('/AddDesignation', (req, res) => {
     })
 })
 
+
+app.get('/DesognationView', (req, res) =>{
+    const sql = "SELECT * from designation";
+
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Message: "Error On Server"});
+        }
+        else{
+            return res.json(result);
+        }
+    });
+})
 // ---------------------------------------- Designations END -------------------------------------------------
 
 
