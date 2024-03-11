@@ -32,13 +32,13 @@ const AddVehicle = () => {
                                     />
                                 </div>
                                 <div className="my-2">
-                                    <label htmlFor="">Registration No: </label>
-                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Registration No "
+                                    <label htmlFor="">Model: </label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Model No "
                                     />
                                 </div>
                                 <div className="my-2">
-                                    <label htmlFor="">Registration No: </label>
-                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Registration No "
+                                    <label htmlFor="">Brand: </label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Brand No "
                                     />
                                 </div>
                             </div>
