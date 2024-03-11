@@ -505,6 +505,10 @@ app.get('/AllVehicles', (req, res) => {
     })
 })
 
+app.get('/VehicleData/:id', (req, res) => {
+    
+})
+
 //------------------------------------------ Vehicle End --------------------------------------------------------
 
 //check the server is working
