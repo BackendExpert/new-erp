@@ -32,7 +32,12 @@ const Vehicles = () => {
 
     //delete data
     const headleDelete = (id) => {
-        
+        axios.delete('http://localhost:8081/DeleteVehicle/' + id )
+        .then(res => {
+            alert("Vehicle Deleted Successful");
+            window.location.reload();
+        })
+        .catch(err => console.log(err));
     }
 
     //this route can access only by admin and Transport Officer
