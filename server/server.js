@@ -461,7 +461,7 @@ app.post('/AddVehicle', (req,res) => {
         if(err) throw err;
 
         if(result.length > 0) {
-            return res.json({Error: "Employee Already Exists...!"});
+            return res.json({Error: "Vehicle Already Exists at Given Registation Number...!"});
         }
         else{
             const sql = "INSERT INTO vehicles(regno, model, brand, fueltype, myear, value, milage, create_at, update_at) VALUES (?)";
