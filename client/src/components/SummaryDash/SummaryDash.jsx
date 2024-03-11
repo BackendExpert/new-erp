@@ -37,7 +37,7 @@ const SummaryDash = () => {
       }
       try {
         const vehicleCount = await axios.get('http://localhost:8081/VehicleCount');
-        setVehicle(vehicleCount.data.desig);
+        setVehicle(vehicleCount.data.vehi);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
