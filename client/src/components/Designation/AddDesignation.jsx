@@ -10,9 +10,9 @@ const AddDesignation = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
     const [data, SetData] = useState({
-        designation: '',
-        bsalary: '',
-        increment: ''
+        Dname:'',
+        Basic_Salary:'',
+        increment:''
     });
 
 

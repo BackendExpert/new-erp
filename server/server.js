@@ -363,7 +363,8 @@ app.get('/EmpCount', (req, res) => {
 app.post('/AddDesignation', (req, res) => {
     const create_at = new Date();
     const update_at = new Date();
-
+    console.log(req.body);
+     
     const checksql = "SELECT * FROM designation WHERE DName = ?" 
     connection.query(checksql, [req.body.designation], (err, result) => {
         if(err) throw err;
@@ -375,21 +376,22 @@ app.post('/AddDesignation', (req, res) => {
 
             const sql = "INSERT INTO designation (Dname, Basic_Salary, increment, create_at, update_at) VALUES (?)";
             const values = [
-                req.body.designation,
-                req.body.bsalary,
+                req.body.Dname,
+                req.body.Basic_Salary,
                 req.body.increment,
                 create_at,
                 update_at
             ]
 
-            connection.query(sql, [values], (err, result) => {
-                if(err){
-                    return res.json({Error: "ERROR in Data Processing"});
-                }
-                else{
-                    return res.json({Status: "Success"})
-                }
-            });
+            console.log(req.body)
+            connection.query(sql, [values], (err, results) =>  
+             {
+               if(err) 
+                 console.log(err)
+               else {
+                 return res.json({Status: "Success"})
+            }
+         });
         }
     })
 })
