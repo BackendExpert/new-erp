@@ -18,7 +18,7 @@ const UpdateDesignation = () => {
     useEffect(() => {
       axios.get('http://localhost:8081/DesignationData/' + id)
       .then(res => {
-        SetDesignation({...designationValue, Dname:res.data.Result[0].Dname,
+        SetDesignation({...designationValue, Dname:res.data.Result[0].DName,
           Basic_Salary:res.data.Result[0].Basic_Salary,
           increment:res.data.Result[0].increment  
         })
