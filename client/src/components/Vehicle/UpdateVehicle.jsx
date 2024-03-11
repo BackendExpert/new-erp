@@ -4,9 +4,23 @@ import { Link, useNavigate } from "react-router-dom"
 import axios from "axios";
 
 const UpdateVehicle = () => {
-  return (
-    <div>UpdateVehicle</div>
-  )
+    const navigate = useNavigate();
+
+    //check current login user
+    const RoleUser = secureLocalStorage.getItem("loginNew");
+
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "TO"){
+        return (
+            <div>UpdateVehicle</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            localStorage.clear();
+            navigate('/');
+        }, [])
+    }
+
 }
 
 export default UpdateVehicle
