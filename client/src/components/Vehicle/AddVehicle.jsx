@@ -9,6 +9,21 @@ const AddVehicle = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const [vehicleData, SetvehicleData]=useState({
+        regno:'',
+        model:'',
+        brand:'',
+        fueltype:'',
+        milage:'',
+        myear:'',
+        value:''
+    })
+
+    const headleSubmit = (e) => {
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/AddVehicle', vehicleData)
+    }
+
     //This route can access only by superAdmin and Transport Officer
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "TO"){
@@ -24,7 +39,7 @@ const AddVehicle = () => {
                     </div>
 
                     <div className="my-2">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-3 gap-2">
                                 <div className="my-2">
                                     <label htmlFor="">Registration No: </label>
