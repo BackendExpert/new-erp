@@ -51,11 +51,11 @@ const SummaryDash = () => {
   }, []);
 
   const DataList = [
-    {name:"Admins" , value: {count}, icons: "icons"},
-    {name:"Books" , value: {books}, icons: "icons"},
-    {name:"Employee" , value: {employee}, icons: "icons"},
-    {name:"Designations" , value: {designation}, icons: "icons"},
-    {name:"Viehicles" , value: {viehicle}, icons: "icons"}
+    {name:"Admins" , value: count, icons: "icons"},
+    {name:"Books" , value: books, icons: "icons"},
+    {name:"Employee" , value: employee, icons: "icons"},
+    {name:"Designations" , value: designation, icons: "icons"},
+    {name:"Viehicles" , value: viehicle, icons: "icons"}
   ]
   
   return (
