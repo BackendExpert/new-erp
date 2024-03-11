@@ -22,6 +22,10 @@ const AddProgram = () => {
                             <button className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                        </Link>
                     </div>
+
+                    <div className="my-2">
+                        
+                    </div>
                 </div>
             </div>
         )
