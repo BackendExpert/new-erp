@@ -9,6 +9,16 @@ const Vehicles = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    //headle go back according to login user
+    const headleBack = () =>{
+        if(RoleUser === "SuperAdmin"){
+            navigate('/superAdmin');
+        }
+        else if(RoleUser === "TO"){
+            navigate('/to');
+        }
+    }
+
     //this route can access only by admin and Transport Officer
 
     if(RoleUser === "SuperAdmin" || RoleUser === "TO"){
