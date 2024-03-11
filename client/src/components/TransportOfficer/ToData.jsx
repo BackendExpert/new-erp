@@ -14,14 +14,14 @@ const ToData = () => {
     using following code prevent unauthorized access
      
   */
-  useEffect(() => {
-    const RoleUser = secureLocalStorage.getItem("loginNew");
+  // useEffect(() => {
+  //   const RoleUser = secureLocalStorage.getItem("loginNew");
   
-    if(RoleUser !== "TO"){
-      navigete('/');
-      localStorage.clear();
-    }
-  }, []);
+  //   if(RoleUser !== "TO"){
+  //     navigete('/');
+  //     localStorage.clear();
+  //   }
+  // }, []);
 
 
   return (
