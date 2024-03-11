@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 import CountUp from 'react-countup'
+import Icons from '@reacticons/ionicons'
 
 
 const SummaryDash = () => {
@@ -53,26 +54,36 @@ const SummaryDash = () => {
   }, []);
 
   const DataList = [
-    {name:"Admins" , value: <CountUp end={count}/>, icons: "icons", style:"text-red-500"},
-    {name:"Books" , value: <CountUp end={books}/>, icons: "icons"},
-    {name:"Employee" , value: <CountUp end={employee}/>, icons: "icons"},
-    {name:"Designations" , value: <CountUp end={designation}/>, icons: "icons"},
-    {name:"Viehicles" , value: <CountUp end={viehicle}/>, icons: "icons"}
+    {name:"Admins" , value: <CountUp end={count}/>, icons: <Icons name="person" size="large"/>, style:"bg-green-600"},
+    {name:"Books" , value: <CountUp end={books}/>, icons: <Icons name="book" size="large"/>, style:"bg-blue-600"},
+    {name:"Employee" , value: <CountUp end={employee}/>, icons: <Icons name="people" size="large"/>, style:"bg-yellow-600"},
+    {name:"Designations" , value: <CountUp end={designation}/>, icons: <Icons name="easel" size="large"/>, style:"bg-blue-400"},
+    {name:"Viehicles" , value: <CountUp end={viehicle}/>, icons: <Icons name="car" size="large"/>, style:"bg-red-700" }
   ]
   
   return (
     <div>
+       <div className="lg:grid grid-cols-3 gap-2 my-4">
       {
         DataList.map((data) => {
           return (
-            <div className="">
-              <p className={data.style}>Name : {data.name}</p>
-              <p>Name : {data.value}</p>
-              <p>Name : {data.icons}</p>
-            </div>
+           
+              <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
+                <div className="flex justify-between">
+                  <div className="flex">
+                    <p>{data.icons}</p>
+                    <p className="text-2xl pl-4">{data.name}</p>
+                  </div>
+                  <div className="">
+                    <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
+                  </div>
+                </div>
+              </div>
+            
           )
         })
       }
+      </div>
     </div>
   )
 }
