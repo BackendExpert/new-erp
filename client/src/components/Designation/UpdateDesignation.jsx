@@ -59,7 +59,7 @@ const UpdateDesignation = () => {
                     <div className="">
                       <label htmlFor="">Designation</label>
                       <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
-                      value={designationValue.Dname} onChange={e => SetDesignation({...designationValue, Dname:e.target.value})}/>
+                      value={designationValue.Dname} disabled/>
                     </div>
                     <div className="">
                       <label htmlFor="">Basic Salary</label>
