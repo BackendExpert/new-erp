@@ -9,7 +9,9 @@ const AddVehicle = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    if(RoleUser === "" || RoleUser === ""){
+    //This route can access only by superAdmin and Transport Officer
+
+    if(RoleUser === "SuperAdmin" || RoleUser === "TO"){
         return (
             <div>AddVehicle</div>
         )
