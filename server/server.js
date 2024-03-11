@@ -455,6 +455,12 @@ app.delete('/DesiganationDelete/:id', (req, res) =>{
 //------------------------------------------ Vehicle Start --------------------------------------------------------
 
 app.post('/AddVehicle', (req,res) => {
+    const checksql = "SELECT * FROM vehicles WHERE regno = ?";
+
+    connection.query(checksql, [req.body.regno], (err, result) => {
+        
+    })
+
     const sql = "INSERT INTO vehicles(regno, model, brand, fueltype, myear, value, milage, create_at, update_at) VALUES (?)";
     const create_at = new Date();
     const update_at = new Date();
