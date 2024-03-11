@@ -12,10 +12,10 @@ const Programs = () => {
     //headle back according to login user
     const headleBack = () =>{
         if(RoleUser === "SuperAdmin"){
-            navigate('/')
+            navigate('/superAdmin');
         }
         else if(RoleUser === "Admin"){
-            navigate('/')
+            navigate('/admin');
         }
     }
 
