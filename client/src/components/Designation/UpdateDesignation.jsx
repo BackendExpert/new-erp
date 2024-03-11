@@ -13,6 +13,18 @@ const UpdateDesignation = () => {
       increment:''
     })
 
+    //fecth data to Update
+    useEffect(() => {
+      axios.get('http://localhost:8081/DesignationData/' + id)
+      .then(res => {
+        SetDesignation({...designationValue, Dname:res.data.Result[0].Dname,
+          Basic_Salary:res.data.Result[0].Basic_Salary,
+          increment:res.data.Result[0].increment  
+        })
+      })
+      .catch(err => console.log(err))
+    }, [])
+
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
