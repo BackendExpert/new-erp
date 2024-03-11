@@ -20,6 +20,8 @@ import UpdateEmployee from "./components/Employees/UpdateEmployee"
 import AddDesignation from "./components/Designation/AddDesignation"
 import Designations from "./components/Designation/Designations"
 import UpdateDesignation from "./components/Designation/UpdateDesignation"
+import AddVehicle from "./components/Vehicle/AddVehicle"
+import Vehicles from "./components/Vehicle/Vehicles"
 
 export default function App() {
   return (
@@ -46,6 +48,9 @@ export default function App() {
         <Route path="/AddDesignation" element={<PrivateRoute><AddDesignation /></PrivateRoute>} />
         <Route path="/Designations" element={<PrivateRoute><Designations /></PrivateRoute>} />
         <Route path="/UpdateDesignation/:id" element={<PrivateRoute><UpdateDesignation /></PrivateRoute>} />
+        <Route path="/AddVehicle" element={<PrivateRoute><AddVehicle /></PrivateRoute>} />
+        <Route path="/Vehicles" element={<PrivateRoute><Vehicles /></PrivateRoute>} />
+        
         
       </Routes>
     </BrowserRouter>
