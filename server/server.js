@@ -410,7 +410,8 @@ app.get('/DesognationView', (req, res) =>{
     });
 })
 
-app.get('/DesignationData' , (req, res) =>{
+app.get('/DesignationData/:id' , (req, res) =>{
+    const DesignationId = req.params.id;
     
 })
 // ---------------------------------------- Designations END -------------------------------------------------
