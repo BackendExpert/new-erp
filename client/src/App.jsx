@@ -31,7 +31,7 @@ export default function App() {
         <Route path="/" element={<Login />} ></Route>
         <Route path="/register" element={<SignUp />} ></Route>
 
-        {/* PrivateRoute for protect the following roiutes from unauthrized access */}
+        {/* PrivateRoute for protect the following routes from unauthrized access */}
         <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
         <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
         <Route path="/hod" element={<PrivateRoute><HeadDep /></PrivateRoute>} />
