@@ -464,9 +464,9 @@ app.post('/AddVehicle', (req,res) => {
         req.body.model,
         req.body.brand,
         req.body.fueltype,
-        req.body.milage,
         req.body.myear,
         req.body.value,
+        req.body.milage,       
         create_at,
         update_at
     ]
