@@ -412,7 +412,10 @@ app.get('/DesognationView', (req, res) =>{
 
 app.get('/DesignationData/:id' , (req, res) =>{
     const DesignationId = req.params.id;
-    
+
+    connection.query("SELECT * FROM designation WHERE Code = ?", [DesignationId], (err, result) => {
+        
+    })
 })
 // ---------------------------------------- Designations END -------------------------------------------------
 
