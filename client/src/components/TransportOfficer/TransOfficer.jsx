@@ -17,26 +17,38 @@ const TransOfficer = ({children}) => {
     using following code prevent unauthorized access
      
   */
-  useEffect(() => {
-    const RoleUser = secureLocalStorage.getItem("loginNew");
+  // useEffect(() => {
+  //   const RoleUser = secureLocalStorage.getItem("loginNew");
   
-    if(RoleUser !== "TO"){
-      navigete('/');
-      localStorage.clear();
-    }
-  }, []);
+  //   if(RoleUser !== "TO"){
+  //     navigete('/');
+  //     localStorage.clear();
+  //   }
+  // }, []);
 
-  return (
-    <div className="bg-gray-200">
-      <div className="flex">
-        <ToSide />
-        <div className="w-full mx-2">
-            <ToNav />
-            <ToData />
+  const RoleUser = secureLocalStorage.getItem("loginNew");
+
+  if(RoleUser === "" || RoleUser === ""){
+    return (
+      <div className="bg-gray-200">
+        <div className="flex">
+          <ToSide />
+          <div className="w-full mx-2">
+              <ToNav />
+              <ToData />
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
+  else{
+    useEffect(() => {
+      localStorage.clear()
+      navigete('/');
+    }, [])
+  }
+
+
 }
 
 export default TransOfficer
