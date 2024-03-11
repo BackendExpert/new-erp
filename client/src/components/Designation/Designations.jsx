@@ -27,6 +27,15 @@ const Designations = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleDelete = (id) => {
+        axios.delete('http://localhost:8081/DesiganationDelete/' + id)
+        .then(res => {
+            alert("Designations Deleted Successful");
+            window.location.reload();
+        })
+        .catch(err => console.log(err))
+    }
+
     //this route can access only by SuperAdmin and Admin
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
