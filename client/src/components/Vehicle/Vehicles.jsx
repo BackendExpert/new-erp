@@ -63,7 +63,13 @@ const Vehicles = () => {
                             </thead>
                             <tbody>
                                 {
-
+                                    vehicleData.map((vehicle, index) => {
+                                        return (
+                                            <tr key={index}>
+                                                <td className='px-6 py-4 font-bold'>{vehicle.VID}</td>
+                                            </tr>
+                                        )
+                                    })
                                 }
 
                             </tbody>
