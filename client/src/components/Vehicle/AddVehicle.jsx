@@ -11,7 +11,7 @@ const AddVehicle = () => {
 
     //This route can access only by superAdmin and Transport Officer
 
-    if(RoleUser === "SuperAdmin" || RoleUser === "TO"){
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "TO"){
         return (
             <div>AddVehicle</div>
         )
