@@ -588,6 +588,22 @@ app.delete('/DeleteVehicle/:id', (req, res) => {
         }
     })
 })
+
+app.get('/VehicleCount', (req, res) => {
+    const sql = "SELECT COUNT(VID) AS vehi FROM vehicles";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ vehi: results[0].vehi }); // Send count in JSON format
+    });
+})
+
 //------------------------------------------ Vehicle End --------------------------------------------------------
 
 //check the server is working
