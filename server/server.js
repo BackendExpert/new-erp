@@ -613,7 +613,14 @@ app.post('/AddProgram', (req,res) => {
     const checksql = "SELECT * FROM program WHERE title = ?";
 
     connection.query(checksql, [req.body.title], (err, result) => {
-        
+        if(err) throw err;
+
+        if(result.length > 0) {
+            return res.json({Error: "Program is Already Exists at Given Project Name"});
+        }
+        else{
+            
+        }
     })
 })
 
