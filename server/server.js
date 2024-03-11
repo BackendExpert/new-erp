@@ -415,10 +415,10 @@ app.get('/DesignationData/:id' , (req, res) =>{
 
     connection.query("SELECT * FROM designation WHERE Code = ?", [DesignationId], (err, result) => {
         if(err){
-
+            return res.json({Error: "Error IN Server"});
         }
         else{
-            
+            return res.json({Status: "Success", Result: result});
         }
     })
 })
