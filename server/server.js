@@ -455,7 +455,30 @@ app.delete('/DesiganationDelete/:id', (req, res) =>{
 //------------------------------------------ Vehicle Start --------------------------------------------------------
 
 app.post('/AddVehicle', (req,res) => {
-    
+    const sql = "INSERT INTO vehicles(regno, model, brand, fueltype, myear, value, milage, create_at, update_at) VALUES (?)";
+    const create_at = new Date();
+    const update_at = new Date();
+
+    const values = [
+        req.body.regno,
+        req.body.model,
+        req.body.brand,
+        req.body.fueltype,
+        req.body.milage,
+        req.body.myear,
+        req.body.value,
+        create_at,
+        update_at
+    ]
+
+    connection.query(sql, [values], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR in Data Processing"});
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
 })
 
 //------------------------------------------ Vehicle End --------------------------------------------------------
