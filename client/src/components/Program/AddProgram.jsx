@@ -55,9 +55,7 @@ const AddProgram = () => {
                                 </div>
                             </div>
                             <div className="">
-                                <button type="submit" className="rounded px-16 py-2 border border-green-500 text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">
-                                    Add Program
-                                </button>
+                                <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Add Program</button>
                             </div>
                         </form>
                     </div>
