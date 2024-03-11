@@ -510,10 +510,10 @@ app.get('/VehicleData/:id', (req, res) => {
 
     connection.query("SELECT * FROM vehicles WHERE VID = ? ", [VehicleId], (err, result) => {
         if(err){
-
+            return res.json({Error: "Error IN Server"});
         }
         else{
-            
+            return res.json({Status: "Success", Result: result});
         }
     })
 })
