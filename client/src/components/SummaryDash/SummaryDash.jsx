@@ -7,6 +7,7 @@ const SummaryDash = () => {
   const [books, setBooks] = useState(0);
   const [employee, setEmp] = useState(0);
   const [designation, setDesignation] = useState(0);
+  const [viehicle, setVehicle] = useState(0);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -34,8 +35,15 @@ const SummaryDash = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
+      try {
+        const vehicleCount = await axios.get('http://localhost:8081/VehicleCount');
+        setVehicle(vehicleCount.data.desig);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     };
 
+    
     fetchData();
   }, []);
   
@@ -45,6 +53,7 @@ const SummaryDash = () => {
       Books : {books} <br />
       Employee : {employee} <br />
       Designation : {designation} <br />
+      Vehicle : {viehicle} <br />
     </div>
   )
 }
