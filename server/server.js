@@ -620,7 +620,19 @@ app.post('/AddProgram', (req,res) => {
         }
         else{
             const sql = "INSERT INTO program(title, location, hod, scientis1, scientis2, create_at, update_at) VALUES (?)";
+            
+            const create_at = new Date();
+            const update_at = new Date();
 
+            const values = [
+                req.body.title,
+                req.body.location,
+                req.body.hod,
+                req.body.scientis1,
+                req.body.scientis2,
+                create_at,
+                update_at                
+            ]
             
         }
     })
