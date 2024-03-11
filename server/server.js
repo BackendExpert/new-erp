@@ -425,9 +425,10 @@ app.get('/DesignationData/:id' , (req, res) =>{
 
 app.put('/UpdateDesignation/:id', (req, res) => {
     const id = req.params.id;
+    const update_at = new Date();
     //   console.log(id)
-    connection.query('UPDATE designation SET Basic_Salary = ?, increment =? WHERE Code = ?',
-    [req.body.Basic_Salary, req.body.increment, id], (err, results) => {
+    connection.query('UPDATE designation SET Basic_Salary = ?, increment =?, update_at=? WHERE Code = ?',
+    [req.body.Basic_Salary, req.body.increment,update_at, id], (err, results) => {
       if(err) 
         console.log({Message: "Error inside Server"})
       else{
@@ -518,6 +519,19 @@ app.get('/VehicleData/:id', (req, res) => {
     })
 })
 
+
+app.put('/UpdateVehicle/:id', (req, res) => {
+    const id = req.params.id;
+    const update_at = new Date();
+    conn.query('UPDATE vehicle SET value = ?, milage=?, update_at =? WHERE VID = ?',
+    [req.body.value, req.body.milage, update_at, id], (err, results) => {
+        if(err) 
+            console.log({Message: "Error inside Server"})
+        else{
+            return res.json({Status:'Success'})
+        }
+    });
+})
 //------------------------------------------ Vehicle End --------------------------------------------------------
 
 //check the server is working
