@@ -26,6 +26,9 @@ const UpdateDesignation = () => {
       .catch(err => console.log(err))
     }, [])
 
+    //update Data
+    
+
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
@@ -51,14 +54,14 @@ const UpdateDesignation = () => {
                     <div className="">
                       <label htmlFor="">Basic Salary</label>
                       <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Basic Salary"
-                      value={designationValue.Basic_Salary}/>
+                      value={designationValue.Basic_Salary} onChange={e => SetDesignation({...designationValue, Basic_Salary:e.target.value})}/>
                     </div>
                   </div>
                   <div className="lg:grid grid-cols-1">
                     <div className="">
                       <label htmlFor="">Increment</label>
                       <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Increment"
-                      value={designationValue.increment}/>
+                      value={designationValue.increment} onChange={e => SetDesignation({...designationValue, increment:e.target.value})}/>
                     </div>
                   </div>
                   <div className="">
