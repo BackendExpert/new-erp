@@ -19,6 +19,14 @@ const Designations = () => {
         }
     }
 
+    const [designationData, SetData] = useState([]);
+    //fetch data from backend
+    useEffect(() => {
+        axios.get('http://localhost:8081/DesognationView')
+        .then(res => SetData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     //this route can access only by SuperAdmin and Admin
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
