@@ -11,7 +11,7 @@ const SideListAdmin = () => {
         {name: "Projects",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "Program",  link: "#", icon: <Icons name="book" size="large"></Icons>},
         {name: "Designation",  link: "/Designations", icon: <Icons name="easel" size="large"></Icons>},
-        {name: "Vehicle",  link: "#", icon: <Icons name="car" size="large"></Icons>},
+        {name: "Vehicle",  link: "/Vehicles", icon: <Icons name="car" size="large"></Icons>},
         {name: "Equipment",  link: "#", icon: <Icons name="build" size="large"></Icons>},
         {name: "Increment",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
         {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>}
