@@ -27,7 +27,7 @@ const UpdateVehicle = () => {
         e.preventDefault();
         axios.put('http://localhost:8081/UpdateVehicle/' + id, vehicleValue)
         .then(res => {
-            if(err){
+            if(res.data.Status === "Success"){
                 alert("Vehicle Updated Successful");
                 navigate('/Vehicles');
             }

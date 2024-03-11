@@ -523,7 +523,8 @@ app.get('/VehicleData/:id', (req, res) => {
 app.put('/UpdateVehicle/:id', (req, res) => {
     const id = req.params.id;
     const update_at = new Date();
-    conn.query('UPDATE vehicle SET value = ?, milage=?, update_at =? WHERE VID = ?',
+
+    connection.query('UPDATE vehicles SET value = ?, milage=?, update_at =? WHERE VID = ?',
     [req.body.value, req.body.milage, update_at, id], (err, results) => {
         if(err) 
             console.log({Message: "Error inside Server"})
