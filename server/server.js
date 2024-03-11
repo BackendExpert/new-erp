@@ -535,7 +535,15 @@ app.put('/UpdateVehicle/:id', (req, res) => {
 })
 
 app.delete('/DeleteVehicle/:id', (req, res) => {
-    
+    const VehicleId = req.params.id;
+
+    connection.query("DELETE FROM vehicles WHERE VID = ?", [VehicleId], (err, result) => {
+        if(err) 
+            console.log({Message: "Error inside Server"})
+        else{
+            return res.json(result)
+        }
+    })
 })
 //------------------------------------------ Vehicle End --------------------------------------------------------
 
