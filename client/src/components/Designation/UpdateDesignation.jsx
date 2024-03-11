@@ -27,7 +27,17 @@ const UpdateDesignation = () => {
     }, [])
 
     //update Data
-    
+    const headleUpdate = (e) => {
+      e.preventDefault();
+      axios.put('http://localhost:8081/UpdateDesignation/' + id, designationValue)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Designation Updated Successful")
+          navigate('/Designations')
+        }
+      })
+      .catch(err => console.log(err))
+    }
 
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
@@ -44,7 +54,7 @@ const UpdateDesignation = () => {
             </Link>
 
             <div className="my-2">
-              <form>
+              <form onSubmit={headleUpdate}>
                   <div className="lg:grid grid-cols-2 gap-2">
                     <div className="">
                       <label htmlFor="">Designation</label>
