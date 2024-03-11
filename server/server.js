@@ -492,6 +492,10 @@ app.post('/AddVehicle', (req,res) => {
     })
 })
 
+app.get('/AllVehicles', (req, res) => {
+    
+})
+
 //------------------------------------------ Vehicle End --------------------------------------------------------
 
 //check the server is working
