@@ -39,7 +39,8 @@ const Designations = () => {
                         <tr className='text-blue-500'>
                             <th scope='col' className='px-6 py-3'>ID</th>
                             <th scope='col' className='px-6 py-3'>Designation</th>
-                            <th scope='col' className='px-6 py-3'>Title</th>
+                            <th scope='col' className='px-6 py-3'>Basic Salary</th>                            
+                            <th scope='col' className='px-6 py-3'>Increment</th>
                             <th scope='col' className='px-6 py-3'>Action</th>
                         </tr>
                     </thead>
