@@ -458,31 +458,36 @@ app.post('/AddVehicle', (req,res) => {
     const checksql = "SELECT * FROM vehicles WHERE regno = ?";
 
     connection.query(checksql, [req.body.regno], (err, result) => {
-        
-    })
+        if(err) throw err;
 
-    const sql = "INSERT INTO vehicles(regno, model, brand, fueltype, myear, value, milage, create_at, update_at) VALUES (?)";
-    const create_at = new Date();
-    const update_at = new Date();
-
-    const values = [
-        req.body.regno,
-        req.body.model,
-        req.body.brand,
-        req.body.fueltype,
-        req.body.myear,
-        req.body.value,
-        req.body.milage,       
-        create_at,
-        update_at
-    ]
-
-    connection.query(sql, [values], (err, result) => {
-        if(err){
-            return res.json({Error: "ERROR in Data Processing"});
+        if(result.length > 0) {
+            return res.json({Error: "Employee Already Exists...!"});
         }
         else{
-            return res.json({Status: "Success"})
+            const sql = "INSERT INTO vehicles(regno, model, brand, fueltype, myear, value, milage, create_at, update_at) VALUES (?)";
+            const create_at = new Date();
+            const update_at = new Date();
+        
+            const values = [
+                req.body.regno,
+                req.body.model,
+                req.body.brand,
+                req.body.fueltype,
+                req.body.myear,
+                req.body.value,
+                req.body.milage,       
+                create_at,
+                update_at
+            ]
+        
+            connection.query(sql, [values], (err, result) => {
+                if(err){
+                    return res.json({Error: "ERROR in Data Processing"});
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
         }
     })
 })
