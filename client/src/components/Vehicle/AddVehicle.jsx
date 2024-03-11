@@ -28,7 +28,18 @@ const AddVehicle = () => {
                             <div className="lg:grid grid-cols-3 gap-2">
                                 <div className="my-2">
                                     <label htmlFor="">Registration No: </label>
-                                    <input type="text" className="border border-blue-500 rounded pl-2 my-2" />
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Registration No "
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Registration No: </label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Registration No "
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Registration No: </label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Registration No "
+                                    />
                                 </div>
                             </div>
                         </form>
