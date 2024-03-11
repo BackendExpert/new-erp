@@ -1,8 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react"
-
+import { useNavigate } from 'react-router-dom'
+import secureLocalStorage from 'react-secure-storage'
 
 const SummaryDash = () => {
+  const navigate = useNavigate();
+
   const [count, setCount] = useState(0);
   const [books, setBooks] = useState(0);
   const [employee, setEmp] = useState(0);
@@ -46,14 +49,28 @@ const SummaryDash = () => {
     
     fetchData();
   }, []);
+
+  const DataList = [
+    {name:"Admins" , value: {count}, icons: "icons"},
+    {name:"Books" , value: {books}, icons: "icons"},
+    {name:"Employee" , value: {employee}, icons: "icons"},
+    {name:"Designations" , value: {designation}, icons: "icons"},
+    {name:"Viehicles" , value: {viehicle}, icons: "icons"}
+  ]
   
   return (
     <div>
-      Admins : {count} <br />
-      Books : {books} <br />
-      Employee : {employee} <br />
-      Designation : {designation} <br />
-      Vehicle : {viehicle} <br />
+      {
+        DataList.map((data) => {
+          return (
+            <div className="">
+              <p>Name : {data.name}</p>
+              <p>Name : {data.value}</p>
+              <p>Name : {data.icons}</p>
+            </div>
+          )
+        })
+      }
     </div>
   )
 }
