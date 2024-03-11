@@ -41,6 +41,9 @@ const UpdateDesignation = () => {
                       />
                     </div>
                   </div>
+                  <div className="">
+                      <button type="submit" className="rounded py-4 px-16 border border-green-500 text-green-500 font-semibold my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Update Designation</button>
+                  </div>
               </form>
             </div>
           </div>
