@@ -454,7 +454,7 @@ app.delete('/DesiganationDelete/:id', (req, res) =>{
 
 //------------------------------------------ Vehicle Start --------------------------------------------------------
 
-app.post('/', (req,res) => {
+app.post('/AddVehicle', (req,res) => {
     
 })
 
