@@ -28,7 +28,7 @@ const TransOfficer = ({children}) => {
 
   const RoleUser = secureLocalStorage.getItem("loginNew");
 
-  if(RoleUser === "" || RoleUser === ""){
+  if(RoleUser === "SuperAdmin" || RoleUser === "TO"){
     return (
       <div className="bg-gray-200">
         <div className="flex">
