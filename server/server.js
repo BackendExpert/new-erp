@@ -506,7 +506,16 @@ app.get('/AllVehicles', (req, res) => {
 })
 
 app.get('/VehicleData/:id', (req, res) => {
-    
+    const VehicleId = req.params.id;
+
+    connection.query("SELECT * FROM vehicles WHERE VID = ? ", [VehicleId], (err, result) => {
+        if(err){
+
+        }
+        else{
+            
+        }
+    })
 })
 
 //------------------------------------------ Vehicle End --------------------------------------------------------
