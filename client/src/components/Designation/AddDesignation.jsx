@@ -18,7 +18,7 @@ const AddDesignation = () => {
 
     const headleSubmit = (e) =>{
         e.preventDefault(); 
-        axios.post('http://localhost:8081/AddDesi', data)
+        axios.post('http://localhost:8081/AddDesignation', data)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Designation Added Successfull");
