@@ -428,7 +428,7 @@ app.put('/UpdateDesignation/:id', (req, res) =>
 {
     const id = req.params.id;
 //   console.log(id)
-    conn.query('UPDATE designation SET Basic_Salary = ?, increment =? WHERE Code = ?',
+    connection.query('UPDATE designation SET Basic_Salary = ?, increment =? WHERE Code = ?',
     [req.body.Basic_Salary, req.body.increment, id], (err, results) => {
       if(err) 
         console.log({Message: "Error inside Server"})
