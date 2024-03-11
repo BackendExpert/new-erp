@@ -53,7 +53,7 @@ const SummaryDash = () => {
   }, []);
 
   const DataList = [
-    {name:"Admins" , value: <CountUp end={count}/>, icons: "icons"},
+    {name:"Admins" , value: <CountUp end={count}/>, icons: "icons", style:"text-red-500"},
     {name:"Books" , value: <CountUp end={books}/>, icons: "icons"},
     {name:"Employee" , value: <CountUp end={employee}/>, icons: "icons"},
     {name:"Designations" , value: <CountUp end={designation}/>, icons: "icons"},
@@ -66,7 +66,7 @@ const SummaryDash = () => {
         DataList.map((data) => {
           return (
             <div className="">
-              <p>Name : {data.name}</p>
+              <p className={data.style}>Name : {data.name}</p>
               <p>Name : {data.value}</p>
               <p>Name : {data.icons}</p>
             </div>
