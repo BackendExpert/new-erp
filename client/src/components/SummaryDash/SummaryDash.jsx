@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
+import CountUp from 'react-countup'
+
 
 const SummaryDash = () => {
   const navigate = useNavigate();
@@ -51,7 +53,7 @@ const SummaryDash = () => {
   }, []);
 
   const DataList = [
-    {name:"Admins" , value: count, icons: "icons"},
+    {name:"Admins" , value: <CountUp end={count}/>, icons: "icons"},
     {name:"Books" , value: books, icons: "icons"},
     {name:"Employee" , value: employee, icons: "icons"},
     {name:"Designations" , value: designation, icons: "icons"},
