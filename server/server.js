@@ -424,10 +424,9 @@ app.get('/DesignationData/:id' , (req, res) =>{
 })
 // ---------------------------------------- Designations END -------------------------------------------------
 
-app.put('/UpdateDesignation/:id', (req, res) => 
-{
+app.put('/UpdateDesignation/:id', (req, res) => {
     const id = req.params.id;
-//   console.log(id)
+    //   console.log(id)
     connection.query('UPDATE designation SET Basic_Salary = ?, increment =? WHERE Code = ?',
     [req.body.Basic_Salary, req.body.increment, id], (err, results) => {
       if(err) 
@@ -435,7 +434,7 @@ app.put('/UpdateDesignation/:id', (req, res) =>
       else{
         return res.json({Status:'Success'})
       }
-});
+    });
 })
 
 //check the server is working
