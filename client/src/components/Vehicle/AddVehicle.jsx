@@ -5,10 +5,22 @@ import axios from "axios";
 
 const AddVehicle = () => {
     const navigate = useNavigate();
-    
-  return (
-    <div>AddVehicle</div>
-  )
+
+    //check current login user
+    const RoleUser = secureLocalStorage.getItem("loginNew");
+
+    if(RoleUser === "" || RoleUser === ""){
+        return (
+            <div>AddVehicle</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            localStorage.clear();
+            navigate('/')
+        }, [])
+    }
+
 }
 
 export default AddVehicle
