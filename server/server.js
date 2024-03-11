@@ -533,6 +533,10 @@ app.put('/UpdateVehicle/:id', (req, res) => {
         }
     });
 })
+
+app.delete('/DeleteVehicle/:id', (req, res) => {
+    
+})
 //------------------------------------------ Vehicle End --------------------------------------------------------
 
 //check the server is working
