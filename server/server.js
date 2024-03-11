@@ -422,7 +422,6 @@ app.get('/DesignationData/:id' , (req, res) =>{
         }
     })
 })
-// ---------------------------------------- Designations END -------------------------------------------------
 
 app.put('/UpdateDesignation/:id', (req, res) => {
     const id = req.params.id;
@@ -436,6 +435,9 @@ app.put('/UpdateDesignation/:id', (req, res) => {
       }
     });
 })
+
+// ---------------------------------------- Designations END -------------------------------------------------
+
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
