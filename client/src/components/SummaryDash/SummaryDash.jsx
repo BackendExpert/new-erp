@@ -6,7 +6,7 @@ const SummaryDash = () => {
   const [count, setCount] = useState(0);
   const [books, setBooks] = useState(0);
   const [employee, setEmp] = useState(0);
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,6 +23,12 @@ const SummaryDash = () => {
       }
       try {
         const empCount = await axios.get('http://localhost:8081/EmpCount');
+        setEmp(empCount.data.emp);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+      try {
+        const empCount = await axios.get('http://localhost:8081/DesignationCount');
         setEmp(empCount.data.emp);
       } catch (error) {
         console.error('Error fetching data:', error);

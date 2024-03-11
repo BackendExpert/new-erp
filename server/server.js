@@ -479,6 +479,21 @@ app.get('/DesignationCount', (req, res) => {
     });
 });
 
+app.get('/DesignationCount', (req, res) => {
+    const sql = "SELECT COUNT(Code) AS desig FROM designation";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ desig: results[0].desig }); // Send count in JSON format
+    });
+})
+
 // ---------------------------------------- Designations END -------------------------------------------------
 
 //------------------------------------------ Vehicle Start --------------------------------------------------------
