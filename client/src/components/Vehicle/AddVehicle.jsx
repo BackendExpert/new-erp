@@ -25,8 +25,11 @@ const AddVehicle = () => {
 
                     <div className="my-2">
                         <form>
-                            <div className="lg:grid grid-cols-2 gap-2">
-                                
+                            <div className="lg:grid grid-cols-3 gap-2">
+                                <div className="my-2">
+                                    <label htmlFor="">Registration No: </label>
+                                    <input type="text" className="border border-blue-500 rounded pl-2 my-2" />
+                                </div>
                             </div>
                         </form>
                     </div>
