@@ -22,6 +22,7 @@ import Designations from "./components/Designation/Designations"
 import UpdateDesignation from "./components/Designation/UpdateDesignation"
 import AddVehicle from "./components/Vehicle/AddVehicle"
 import Vehicles from "./components/Vehicle/Vehicles"
+import UpdateVehicle from "./components/Vehicle/UpdateVehicle"
 
 export default function App() {
   return (
@@ -50,7 +51,7 @@ export default function App() {
         <Route path="/UpdateDesignation/:id" element={<PrivateRoute><UpdateDesignation /></PrivateRoute>} />
         <Route path="/AddVehicle" element={<PrivateRoute><AddVehicle /></PrivateRoute>} />
         <Route path="/Vehicles" element={<PrivateRoute><Vehicles /></PrivateRoute>} />
-        
+        <Route path="/UpdateVehicle/:id" element={<PrivateRoute><UpdateVehicle /></PrivateRoute>} />
         
       </Routes>
     </BrowserRouter>
