@@ -22,6 +22,15 @@ const AddVehicle = () => {
     const headleSubmit = (e) => {
         e.preventDefault(); 
         axios.post('http://localhost:8081/AddVehicle', vehicleData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Vehicle Added Successful")
+                navigate('/Vehicles');
+            }
+            else{
+                alert(res.data.Error);
+            }            
+        })
     }
 
     //This route can access only by superAdmin and Transport Officer
@@ -44,39 +53,39 @@ const AddVehicle = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Registration No: </label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Registration No "
-                                    />
+                                    onChange={e => SetvehicleData({...vehicleData, regno:e.target.value })}/>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Model: </label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Model No "
-                                    />
+                                    onChange={e => SetvehicleData({...vehicleData, model:e.target.value })}/>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Brand: </label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Brand No "
-                                    />
+                                    onChange={e => SetvehicleData({...vehicleData, brand:e.target.value })}/>
                                 </div>
                             </div>
                             <div className="lg:grid grid-cols-4 gap-2">
                                 <div className="my-2">
                                     <label htmlFor="">Fuel Type: </label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Fuel Type "
-                                    />
+                                    onChange={e => SetvehicleData({...vehicleData, fueltype:e.target.value })}/>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Milage: </label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Milage "
-                                    />
+                                    onChange={e => SetvehicleData({...vehicleData, milage:e.target.value })}/>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Manufaturing Year: </label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Manufaturing Year "
-                                    />
+                                    onChange={e => SetvehicleData({...vehicleData, myear:e.target.value })}/>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Purchase Value: </label>
                                     <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purchase "
-                                    />
+                                    onChange={e => SetvehicleData({...vehicleData, value:e.target.value })}/>
                                 </div>
                             </div>
                             
