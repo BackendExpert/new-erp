@@ -30,7 +30,10 @@ const Vehicles = () => {
         .catch(err => console.log(err))
     }, [])
 
-    
+    //delete data
+    const headleDelete = (id) => {
+        
+    }
 
     //this route can access only by admin and Transport Officer
 
@@ -79,7 +82,7 @@ const Vehicles = () => {
                                                         <Link to={'/UpdateVehicle/' + vehicle.VID}>
                                                             <button className="rounded border border-blue-500 text-blue-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Update</button>
                                                         </Link>
-                                                        <button /*onClick={() => headleDelete(designation.Code)}*/ className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
+                                                        <button onClick={() => headleDelete(designation.Code)} className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
                                                    </div>
                                                 </td>
                                             </tr>
