@@ -44,8 +44,23 @@ const AddVehicle = () => {
                             </div>
                             <div className="lg:grid grid-cols-4 gap-2">
                                 <div className="my-2">
-                                    <label htmlFor="">Brand: </label>
-                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Brand No "
+                                    <label htmlFor="">Fuel Type: </label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Fuel Type "
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Milage: </label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Milage "
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Manufaturing Year: </label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Manufaturing Year "
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Purchase Value: </label>
+                                    <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purchase "
                                     />
                                 </div>
                             </div>
