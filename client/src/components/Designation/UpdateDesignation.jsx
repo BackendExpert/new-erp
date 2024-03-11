@@ -5,6 +5,7 @@ import axios from "axios";
 
 const UpdateDesignation = () => {
     const navigate = useNavigate();
+    const {id} = useParams();
 
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
