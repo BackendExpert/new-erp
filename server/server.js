@@ -409,6 +409,10 @@ app.get('/DesognationView', (req, res) =>{
         }
     });
 })
+
+app.get('/DesignationData' , (req, res) =>{
+    
+})
 // ---------------------------------------- Designations END -------------------------------------------------
 
 
