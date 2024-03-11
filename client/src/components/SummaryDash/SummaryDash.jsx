@@ -54,10 +54,10 @@ const SummaryDash = () => {
 
   const DataList = [
     {name:"Admins" , value: <CountUp end={count}/>, icons: "icons"},
-    {name:"Books" , value: books, icons: "icons"},
-    {name:"Employee" , value: employee, icons: "icons"},
-    {name:"Designations" , value: designation, icons: "icons"},
-    {name:"Viehicles" , value: viehicle, icons: "icons"}
+    {name:"Books" , value: <CountUp end={books}/>, icons: "icons"},
+    {name:"Employee" , value: <CountUp end={employee}/>, icons: "icons"},
+    {name:"Designations" , value: <CountUp end={designation}/>, icons: "icons"},
+    {name:"Viehicles" , value: <CountUp end={viehicle}/>, icons: "icons"}
   ]
   
   return (
