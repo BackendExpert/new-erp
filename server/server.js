@@ -361,19 +361,20 @@ app.get('/EmpCount', (req, res) => {
 // ---------------------------------------- Designations Start -------------------------------------------------
 
 app.post('/AddDesignation', (req, res) => {
+    const create_at = new Date();
+    const update_at = new Date();
+
     const checksql = "SELECT * FROM designation WHERE DName = ?" 
     connection.query(checksql, [req.body.designation], (err, result) => {
         if(err) throw err;
 
         if(result.length > 0) {
-            return res.json({Error: "Employee Already Exists...!"});
+            return res.json({Error: "Designation Name Already Exists...!"});
         }
         else{
-            const create_at = new Date();
-            const update_at = new Date();
 
-            const sql = "INSERT INTO designation VALUES (?)";
-            const value = [
+            const sql = "INSERT INTO designation (Dname, Basic_Salary, increment, create_at, update_at) VALUES (?)";
+            const values = [
                 req.body.designation,
                 req.body.bsalary,
                 req.body.increment,
@@ -381,14 +382,14 @@ app.post('/AddDesignation', (req, res) => {
                 update_at
             ]
 
-            connection.query(sql, [value], (err, result) => {
+            connection.query(sql, [values], (err, result) => {
                 if(err){
                     return res.json({Error: "ERROR in Data Processing"});
                 }
                 else{
                     return res.json({Status: "Success"})
                 }
-            })
+            });
         }
     })
 })
