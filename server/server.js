@@ -606,5 +606,18 @@ app.get('/VehicleCount', (req, res) => {
 
 //------------------------------------------ Vehicle End --------------------------------------------------------
 
+
+//---------------------------------------- Program Start -------------------------------------------
+
+app.post('/AddProgram', (req,res) => {
+    const checksql = "SELECT * FROM program WHERE title = ?";
+
+    connection.query(checksql, [req.body.title], (err, result) => {
+        
+    })
+})
+
+//------------------------------------------ Program End ---------------------------------------
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
