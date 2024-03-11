@@ -8,6 +8,15 @@ const AddDesignation = () => {
 
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
+
+    const [data, SetData] = useState({
+        designation: '',
+    });
+
+
+    const headleSubmit = () =>{
+        
+    }
     
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
         return (
