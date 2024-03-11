@@ -25,7 +25,16 @@ const UpdateVehicle = () => {
     //update data
     const headleUpdate = (e) => {
         e.preventDefault();
+        axios.put('http://localhost:8081/UpdateVehicle/' + id, vehicleValue)
+        .then(res => {
+            if(err){
+                alert("Vehicle Updated Successful");
+                navigate('/Vehicles');
+            }
+        })
+        .catch(err => console.log(err))
     }
+
 
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
