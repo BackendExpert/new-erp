@@ -366,7 +366,7 @@ app.post('/AddDesignation', (req, res) => {
     console.log(req.body);
      
     const checksql = "SELECT * FROM designation WHERE DName = ?" 
-    connection.query(checksql, [req.body.designation], (err, result) => {
+    connection.query(checksql, [req.body.Dname], (err, result) => {
         if(err) throw err;
 
         if(result.length > 0) {
