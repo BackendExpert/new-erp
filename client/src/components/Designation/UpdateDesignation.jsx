@@ -30,7 +30,14 @@ const UpdateDesignation = () => {
                     </div>
                     <div className="">
                       <label htmlFor="">Basic Salary</label>
-                      <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
+                      <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Basic Salary"
+                      />
+                    </div>
+                  </div>
+                  <div className="lg:grid grid-cols-1">
+                    <div className="">
+                      <label htmlFor="">Increment</label>
+                      <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Increment"
                       />
                     </div>
                   </div>
