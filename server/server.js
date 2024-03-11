@@ -436,7 +436,7 @@ app.put('/UpdateDesignation/:id', (req, res) => {
     });
 })
 
-app.delete('DesiganationDelete', (req, res) =>{
+app.delete('/DesiganationDelete/:id', (req, res) =>{
     const designationId = req.params.id;
 
     connection.query("DELETE from designation WHERE Code = ?",
