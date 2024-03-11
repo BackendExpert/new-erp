@@ -1,10 +1,26 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const UpdateVehicle = () => {
     const navigate = useNavigate();
+    const {id} = useParams();
+
+    const [vehicleValue, SetvehicleValue] = useState({
+        milage: '',
+        value: ''
+    })
+
+    //fetch data to update
+    useEffect(() => {
+        axios.get('http://localhost:8081/VehicleData/' + id)
+        .then(res => {
+            SetvehicleValue({...vehicleValue, milage:res.data.Result[0].milage,
+                value:res.data.Result[0].value
+            });
+        })
+    }, [])
 
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
@@ -25,12 +41,12 @@ const UpdateVehicle = () => {
                             <div className="lg:grid grid-cols-2 gap-2">
                                 <div className="my-2">
                                     <label htmlFor="">New Milage: </label>
-                                    <input type="number" required className="rounded w-full h-12 border border-blue-500 text-blue-500 pl-2 my-4" placeholder="Enter New Milage"
+                                    <input type="number" required className="rounded w-full h-12 border border-blue-500 pl-2 my-4" placeholder="Enter New Milage"
                                     />
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">New Value: </label>
-                                    <input type="number" required className="rounded w-full h-12 border border-blue-500 text-blue-500 pl-2 my-4" placeholder="Enter New Value"
+                                    <input type="number" required className="rounded w-full h-12 border border-blue-500 pl-2 my-4" placeholder="Enter New Value"
                                     />
                                 </div>
                             </div>
