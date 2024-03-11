@@ -24,7 +24,38 @@ const AddProgram = () => {
                     </div>
 
                     <div className="my-2">
-                        
+                        <form>
+                            <div className="lg:grid grid-cols-2 gap-2">
+                                <div className="my-2">
+                                    <label htmlFor="">Program Name</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Program Name"
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Program Location</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Program Location"
+                                    />
+                                </div>
+                            </div>
+                            <div className="lg:grid grid-cols-3 gap-2">
+                                <div className="my-2">
+                                    <label htmlFor="">HOD Email</label>
+                                    <input type="email" className="w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter HOD Email"
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Scientist 1</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Scientist 1"
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Scientist 2</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Scientist 2"
+                                    />
+                                </div>
+                            </div>
+                            
+                        </form>
                     </div>
                 </div>
             </div>
