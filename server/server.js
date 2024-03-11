@@ -493,7 +493,16 @@ app.post('/AddVehicle', (req,res) => {
 })
 
 app.get('/AllVehicles', (req, res) => {
-    
+    const sql = "SELECT * FROM vehicles";
+
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error in Server"})
+        }
+        else{
+            return res.json(result);
+        }        
+    })
 })
 
 //------------------------------------------ Vehicle End --------------------------------------------------------
