@@ -436,6 +436,20 @@ app.put('/UpdateDesignation/:id', (req, res) => {
     });
 })
 
+app.delete('DesiganationDelete', (req, res) =>{
+    const designationId = req.params.id;
+
+    connection.query("DELETE from designation WHERE eid = ?",
+    [designationId], (err, results) => {
+        if(err) 
+            console.log({Message: "Error inside Server"})
+        else{
+            return res.json(results)
+        }
+    });
+
+})
+
 // ---------------------------------------- Designations END -------------------------------------------------
 
 
