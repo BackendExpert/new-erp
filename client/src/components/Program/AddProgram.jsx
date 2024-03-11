@@ -17,7 +17,21 @@ const AddProgram = () => {
         scient2: ''
     })
 
-    
+    const headleSubmit = (e) => {
+        e.preventDefault();
+
+        axios.post('http://localhost:8081/AddProgram', programData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Program Added Successful");
+                navigate('/Programs')
+            }
+            else{
+                alert(res.data.Error);
+            }  
+        })
+    }
+
 
     //this route access only by admin and SuperAdmin
     
@@ -34,7 +48,7 @@ const AddProgram = () => {
                     </div>
 
                     <div className="my-2">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-2">
                                 <div className="my-2">
                                     <label htmlFor="">Program Name</label>
