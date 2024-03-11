@@ -424,6 +424,19 @@ app.get('/DesignationData/:id' , (req, res) =>{
 })
 // ---------------------------------------- Designations END -------------------------------------------------
 
+app.put('/UpdateDesignation/:id', (req, res) => 
+{
+    const id = req.params.id;
+//   console.log(id)
+    conn.query('UPDATE designation SET Basic_Salary = ?, increment =? WHERE Code = ?',
+    [req.body.Basic_Salary, req.body.increment, id], (err, results) => {
+      if(err) 
+        console.log({Message: "Error inside Server"})
+      else{
+        return res.json({Status:'Success'})
+      }
+});
+})
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
