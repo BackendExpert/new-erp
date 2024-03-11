@@ -619,6 +619,8 @@ app.post('/AddProgram', (req,res) => {
             return res.json({Error: "Program is Already Exists at Given Project Name"});
         }
         else{
+            const sql = "INSERT INTO program(title, location, hod, scientis1, scientis2, create_at, update_at) VALUES (?)";
+
             
         }
     })
