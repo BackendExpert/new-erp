@@ -497,7 +497,7 @@ app.get('/AllVehicles', (req, res) => {
 
     connection.query(sql, (err, result) => {
         if(err){
-            return res.json({Error: "Error in Server"})
+            return res.json({Error: "Error in Server"});
         }
         else{
             return res.json(result);
