@@ -635,7 +635,12 @@ app.post('/AddProgram', (req,res) => {
             ]
             
             connection.query(sql, [values], (err, result) => {
-                
+                if(err){
+                    return res.json({Error: "ERROR in Server"})
+                }
+                else{
+                    return res.json({Status: "Success"});
+                }
             })
         }
     })
