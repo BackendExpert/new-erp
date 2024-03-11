@@ -22,6 +22,11 @@ const UpdateVehicle = () => {
         })
     }, [])
 
+    //update data
+    const headleUpdate = (e) => {
+        e.preventDefault();
+    }
+
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
@@ -37,7 +42,7 @@ const UpdateVehicle = () => {
                         </Link>
                     </div>
                     <div className="my-2">
-                        <form>
+                        <form onSubmit={headleUpdate}>
                             <div className="lg:grid grid-cols-2 gap-2">
                                 <div className="my-2">
                                     <label htmlFor="">New Milage: </label>
