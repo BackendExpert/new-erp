@@ -361,7 +361,36 @@ app.get('/EmpCount', (req, res) => {
 // ---------------------------------------- Designations Start -------------------------------------------------
 
 app.post('/AddDesignation', (req, res) => {
-    const = 
+    const checksql = "SELECT * FROM designation WHERE DName = ?" 
+    connection.query(checksql, [req.body.designation], (err, result) => {
+        if(err) throw err;
+
+        if(result.length > 0) {
+            return res.json({Error: "Employee Already Exists...!"});
+        }
+        else{
+            const create_at = new Date();
+            const update_at = new Date();
+
+            const sql = "INSERT INTO designation VALUES (?)";
+            const value = [
+                req.body.designation,
+                req.body.bsalary,
+                req.body.increment,
+                create_at,
+                update_at
+            ]
+
+            connection.query(sql, [value], (err, result) => {
+                if(err){
+                    return res.json({Error: "ERROR in Data Processing"});
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
+        }
+    })
 })
 
 // ---------------------------------------- Designations END -------------------------------------------------
