@@ -6,6 +6,7 @@ const SummaryDash = () => {
   const [count, setCount] = useState(0);
   const [books, setBooks] = useState(0);
   const [employee, setEmp] = useState(0);
+  const [designation, setDesignation] = useState(0);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -28,8 +29,8 @@ const SummaryDash = () => {
         console.error('Error fetching data:', error);
       }
       try {
-        const empCount = await axios.get('http://localhost:8081/DesignationCount');
-        setEmp(empCount.data.emp);
+        const desigCout = await axios.get('http://localhost:8081/DesignationCount');
+        setDesignation(desigCout.data.desig);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -43,6 +44,7 @@ const SummaryDash = () => {
       Admins : {count} <br />
       Books : {books} <br />
       Employee : {employee} <br />
+      Designation : {designation} <br />
     </div>
   )
 }
