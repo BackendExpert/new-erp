@@ -67,6 +67,13 @@ const Vehicles = () => {
                                         return (
                                             <tr key={index}>
                                                 <td className='px-6 py-4 font-bold'>{vehicle.VID}</td>
+                                                <td className='px-6 py-4 font-bold'>{vehicle.regno}</td>
+                                                <td className='px-6 py-4 font-bold'>{vehicle.model}</td>
+                                                <td className='px-6 py-4 font-bold'>{vehicle.brand}</td>
+                                                <td className='px-6 py-4 font-bold'>{vehicle.fueltype}</td>
+                                                <td className='px-6 py-4 font-bold'>{vehicle.myear}</td>
+                                                <td className='px-6 py-4 font-bold'>{vehicle.value}</td>
+                                                <td className='px-6 py-4 font-bold'></td>
                                             </tr>
                                         )
                                     })
