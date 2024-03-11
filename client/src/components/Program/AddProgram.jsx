@@ -9,6 +9,16 @@ const AddProgram = () => {
     //get the login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const [programData, SetProgramData] = useState({
+        title: '',
+        location: '',
+        hod: '',
+        scient1: '',
+        scient2: ''
+    })
+
+    
+
     //this route access only by admin and SuperAdmin
     
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
