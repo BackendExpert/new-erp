@@ -28,6 +28,11 @@ const UpdateDesignation = () => {
                       <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
                       />
                     </div>
+                    <div className="">
+                      <label htmlFor="">Basic Salary</label>
+                      <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
+                      />
+                    </div>
                   </div>
               </form>
             </div>

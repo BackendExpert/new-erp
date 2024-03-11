@@ -51,7 +51,7 @@ const AddDesignation = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Basic Salary</label>
-                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Basic Salary"
+                                    <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Basic Salary"
                                     onChange={e => SetData({...data, Basic_Salary:e.target.value})}/>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ const AddDesignation = () => {
                             <div className="lg:grid grid-cols-1">
                                 <div className="my-2">
                                     <label htmlFor="">Increment</label>
-                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Increment"
+                                    <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Increment"
                                     onChange={e => SetData({...data, increment:e.target.value})}/>
                                 </div>
                             </div>
