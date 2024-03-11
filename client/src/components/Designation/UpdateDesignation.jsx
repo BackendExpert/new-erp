@@ -19,6 +19,18 @@ const UpdateDesignation = () => {
             <Link to={'/Designations'}>
                 <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
             </Link>
+
+            <div className="my-2">
+              <form>
+                  <div className="lg:grid grid-cols-2 gap-2">
+                    <div className="">
+                      <label htmlFor="">Designation</label>
+                      <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Designation"
+                      />
+                    </div>
+                  </div>
+              </form>
+            </div>
           </div>
         </div>
       )
