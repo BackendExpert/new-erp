@@ -25,12 +25,12 @@ const UpdateVehicle = () => {
                             <div className="lg:grid grid-cols-2 gap-2">
                                 <div className="my-2">
                                     <label htmlFor="">New Milage: </label>
-                                    <input type="number"  className="rounded w-full h-12 border border-blue-500 text-blue-500 pl-2 my-4" placeholder="Enter New Milage"
+                                    <input type="number" required className="rounded w-full h-12 border border-blue-500 text-blue-500 pl-2 my-4" placeholder="Enter New Milage"
                                     />
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">New Value: </label>
-                                    <input type="number"  className="rounded w-full h-12 border border-blue-500 text-blue-500 pl-2 my-4" placeholder="Enter New Value"
+                                    <input type="number" required className="rounded w-full h-12 border border-blue-500 text-blue-500 pl-2 my-4" placeholder="Enter New Value"
                                     />
                                 </div>
                             </div>
