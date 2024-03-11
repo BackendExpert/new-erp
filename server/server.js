@@ -237,7 +237,7 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
         if(err) throw err;
 
         if(result.length > 0) {
-            return res.json({Error: "User Already Exists...!"});
+            return res.json({Error: "Employee Already Exists...!"});
         }
         else{
             const hash = bcrypt.hash(req.body.password, 10);
@@ -361,7 +361,7 @@ app.get('/EmpCount', (req, res) => {
 // ---------------------------------------- Designations Start -------------------------------------------------
 
 app.post('/AddDesignation', (req, res) => {
-
+    const = 
 })
 
 // ---------------------------------------- Designations END -------------------------------------------------
