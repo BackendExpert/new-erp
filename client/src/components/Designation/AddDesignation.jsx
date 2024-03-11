@@ -11,11 +11,23 @@ const AddDesignation = () => {
 
     const [data, SetData] = useState({
         designation: '',
+        bsalary: '',
+        increment: ''
     });
 
 
-    const headleSubmit = () =>{
-        
+    const headleSubmit = (e) =>{
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/AddDesi', data)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Designation Added Successfull");
+                navigate('/Designations');
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
     
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
