@@ -634,6 +634,9 @@ app.post('/AddProgram', (req,res) => {
                 update_at                
             ]
             
+            connection.query(sql, [values], (err, result) => {
+                
+            })
         }
     })
 })
