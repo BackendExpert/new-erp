@@ -76,11 +76,12 @@ const AddVehicle = () => {
                                     <label htmlFor="">Milage: </label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Milage "
                                     onChange={e => SetvehicleData({...vehicleData, milage:e.target.value })}/>
+                                    <p className="text-red-500">Don't use KM in Value</p>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Manufaturing Year: </label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Manufaturing Year "
-                                    onChange={e => SetvehicleData({...vehicleData, myear:e.target.value })}/>
+                                    onChange={e => SetvehicleData({...vehicleData, myear:e.target.value })}/>                                    
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Purchase Value: </label>
