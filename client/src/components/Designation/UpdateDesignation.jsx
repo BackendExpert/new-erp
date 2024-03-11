@@ -7,6 +7,12 @@ const UpdateDesignation = () => {
     const navigate = useNavigate();
     const {id} = useParams();
 
+    const [designationValue, SetDesignation] = useState({
+      Dname:'',
+      Basic_Salary:'',
+      increment:''
+    })
+
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
