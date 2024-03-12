@@ -17,7 +17,18 @@ const UpdateProgram = () => {
     })
 
     //fetch data to update
-
+    useEffect(() => {
+      axios.get('http://localhost:8081/EmpReadToUpdate/' + id)
+      .then(res => {
+        SetValues({...ProgramValue, title:res.data.Result[0].title,
+          localStorage:res.data.Result[0].location,
+          hod:res.data.Result[0].hod,
+          scients1:res.data.Result[0].scients1,
+          scients2:res.data.Result[0].scients2
+        })
+      })
+      .catch(err=> console.log(err))
+    }, [])
 
     //this route access only by admin and SuperAdmin
     
