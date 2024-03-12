@@ -43,7 +43,7 @@ const Login = () => {
 
            if(res.data.Msg === "success"){
                 if(res.data.CheckRole[0].is_active === 0){
-                    alert('Your account is Suspended. Contact SuperAdmin')
+                    alert('Your Account has been Suspended due to unauthorized access.')
                     navigete('/');
                 }
                 else if(res.data.CheckRole[0].role === 'SuperAdmin'){
