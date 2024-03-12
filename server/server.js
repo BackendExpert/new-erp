@@ -124,14 +124,21 @@ app.post('/UnAccess', (req, res) => {
         }   
         else{
             // res.json({ message: 'Email received successfully' });
-            const sql = "INSERT INTO unauthorized(email, role, access_time) VALUES (?, ?, ?)";
-            var unaccessTime = new Date();
-            connection.query(sql, [userEmail, userRole, unaccessTime], (err, result) => {
-                if(err){
-                    return res.json({Error: "ERRROR in SERVER"})
-                }
-                else{
-                    return res.json({ message: 'UnAccess Reported, The account has been suspended' });
+            const checksql = "SELECT * FROM unauthorized WHERE email = ? ";
+            connection.query(checksql, [userEmail], (err, result) => {
+                if(err) throw err
+
+                if(result.length == 0) {
+                    const sql = "INSERT INTO unauthorized(email, role, access_time) VALUES (?, ?, ?)";
+                    var unaccessTime = new Date();
+                    connection.query(sql, [userEmail, userRole, unaccessTime], (err, result) => {
+                        if(err){
+                            return res.json({Error: "ERRROR in SERVER"})
+                        }
+                        else{
+                            return res.json({ message: 'UnAccess Reported, The account has been suspended' });
+                        }
+                    })
                 }
             })
         }
