@@ -27,7 +27,7 @@ const Accountant = ({children}) => {
 
   const RoleUser = secureLocalStorage.getItem("loginNew");
 
-  if(RoleUser === "Accountant"){
+  if(RoleUser === "Accountant" || RoleUser === "SuperAdmin"){
     return (
       <div className="bg-gray-200">
         <div className="flex">
@@ -42,8 +42,7 @@ const Accountant = ({children}) => {
   }
   else{
     useEffect(() => {
-      localStorage.clear();
-      navigete('/');
+      navigete('/UnAccess');
     })
   }
 
