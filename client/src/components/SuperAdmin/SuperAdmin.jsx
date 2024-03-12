@@ -4,6 +4,7 @@ import Navlist from "../NavBar/navList"
 import  secureLocalStorage  from  "react-secure-storage";
 import { useEffect } from "react";
 import SummaryDash from "../SummaryDash/SummaryDash";
+import UnauthorizedAccess from "../UnauthorizedAccess";
 
 const SuperAdmin = ({children}) => {
     const navigete = useNavigate();
@@ -45,9 +46,8 @@ const SuperAdmin = ({children}) => {
   }
   else{
     useEffect(() => {
-      localStorage.clear();
-      navigete('/');
-    })
+      <UnauthorizedAccess />
+    }, [])
   }
 
 
