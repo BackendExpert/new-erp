@@ -18,7 +18,13 @@ const UnauthorizedAccess = () => {
     //Update is_active column according to email
     axios.post('http://localhost:8081/UnAccess', sendData)
     .then(res => {
-
+        if(res.data.Status === "Success"){
+            alert("Vehicle Added Successful")
+            navigate('/Vehicles');
+        }
+        else{
+            alert(res.data.Error);
+        }  
     })
 
   return (
