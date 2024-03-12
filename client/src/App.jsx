@@ -72,7 +72,7 @@ export default function App() {
         <Route path="/Programs" element={<PrivateRoute><Programs /></PrivateRoute>} />
         <Route path="/UpdateProgram/:id" element={<PrivateRoute><UpdateProgram /></PrivateRoute>} />
 
-        <Route path="/UnAccess" element={<UnauthorizedAccess />} />
+        <Route path="/UnAccess" element={<PrivateRoute><UnauthorizedAccess /></PrivateRoute>} />
         
       </Routes>
     </BrowserRouter>
