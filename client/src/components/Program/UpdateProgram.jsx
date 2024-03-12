@@ -31,8 +31,16 @@ const UpdateProgram = () => {
     }, [])
 
     //updata data
-    const headleSubmit = () => {
-      
+    const headleSubmit = (e) => {
+      e.preventDefault();
+      axios.put('http://localhost:8081/UpdateEmp/' + id, ProgramValue)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Program Updated Successful")
+          navigate('/Programs');
+        }
+      })
+      .catch(err => console.log(err))
     }
 
     //this route access only by admin and SuperAdmin
