@@ -674,6 +674,31 @@ app.get('/ViewProgram/:id', (req, res) => {
     })
 })
 
+app.put('/UpdateProgram/:id', (req, res) => {
+    const programId = req.params.id;
+    const update_at = new Date();
+
+    const checksql = "SELECT * FROM program WHERE title = ?";
+
+    connection.query(checksql, [req.body.title], (err, result) => {
+        if(err) throw err;
+
+        if(result.length > 0) {
+            return res.json({Error: "Program Cannot Update, Given Program Name is Already Exists"});
+        }
+        else{
+            conn.query('UPDATE program SET title = ?, hod=?, scientis1=?, scientist2=?, update_at=? WHERE pid = ?',
+            [ req.body.title, req.body.hod, req.body.scients1, req.body.scients2, update_at, id], (err, results) => {
+                if(err) 
+                    console.log({Message: "Error inside Server"})
+                else{
+                    return res.json({Status:'Success'})
+                }
+            });
+        }
+    })
+})
+
 //------------------------------------------ Program End ---------------------------------------
 
 //check the server is working
