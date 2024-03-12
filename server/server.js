@@ -115,10 +115,16 @@ app.post('/UnAccess', (req, res) => {
     const sql = "UPDATE users SET is_active = ? WHERE email = ?";
     connection.query(sql, [deactive_user, req.body.email], (err, result) => {
         if(err){
-
+            return res.json({Error: "ERROR in Data Processing"})
         }
         else{
-            
+            return res.json({Status: "Success"})
+            const sqlUnaccess = "INSERT INTO unauthorized(email, role, access_time) VALUES (?)";
+
+            const value = [
+                req.body.email,
+
+            ]
         }
 
     })
