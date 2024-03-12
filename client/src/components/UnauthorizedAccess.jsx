@@ -9,6 +9,9 @@ const UnauthorizedAccess = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
     const EmailUser = secureLocalStorage.getItem("logiafter");
+
+    //Update is_active column according to email
+    
   return (
     <div>UnauthorizedAccess</div>
   )
