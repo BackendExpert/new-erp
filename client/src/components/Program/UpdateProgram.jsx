@@ -39,6 +39,9 @@ const UpdateProgram = () => {
           alert("Program Updated Successful")
           navigate('/Programs');
         }
+        else{
+          alert(res.data.Error);
+        }
       })
       .catch(err => console.log(err))
     }
