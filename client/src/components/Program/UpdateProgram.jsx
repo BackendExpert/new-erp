@@ -66,6 +66,11 @@ const UpdateProgram = () => {
                     />
                   </div>
                 </div>
+
+                <div className="">
+                  <button type="submit" className="border border-green-500 rounded py-4 px-16 my-4 text-green-500 font-semibold duration-500 hover:bg-green-400 hover:text-white hover:shadow-xl">Update Program</button>
+                </div>
+
               </form>
             </div>
           </div>
