@@ -112,9 +112,13 @@ app.post('/login', (req, res) => {
 //unAccess
 app.post('/UnAccess', (req, res) => {
     const userEmail = req.body.email;
+    const userRole = req.body.role;
     console.log("Email is :", userEmail);
+    console.log("Role is :", userRole);
+    
 
-    res.json({ message: "Email Recevied"});
+
+
 })
 
 // Count Admins Roles
