@@ -90,9 +90,8 @@ const Designations = () => {
     }
     else{
         useEffect(() => {
-            localStorage.clear();
-            navigate('/');
-        }, []);
+            navigate('/UnAccess');
+          }, [])
     }
 
 }

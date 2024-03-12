@@ -40,9 +40,8 @@ const LabManager = () => {
   }
   else{
     useEffect(() => {
-      localStorage.clear();
-      navigete('/')
-    })
+      navigete('/UnAccess');
+    }, [])
   }
 
 

@@ -238,9 +238,8 @@ const AddEmployee = () => {
     }
     else{
         useEffect(() => {
-            localStorage.clear();
-            navigate('/');
-        }, [])
+            navigate('/UnAccess');
+          }, [])
     }
 
 }

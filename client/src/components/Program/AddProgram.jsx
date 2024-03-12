@@ -89,8 +89,7 @@ const AddProgram = () => {
     }
     else{
         useEffect(() => {
-            localStorage.clear();
-            navigate('/');
+            navigete('/UnAccess');
         }, [])
     }
 

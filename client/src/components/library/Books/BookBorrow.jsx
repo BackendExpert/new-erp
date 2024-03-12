@@ -26,9 +26,8 @@ const BookBorrow = () => {
     }
     else{
         useEffect(() => {
-            localStorage.clear();
-            navigate('/');
-        }, [])
+            navigate('/UnAccess');
+          }, [])
     }
 }
 

@@ -40,9 +40,8 @@ const HeadDep = ({children}) => {
   }
   else{
     useEffect(() => {
-      localStorage.clear();
-      navigete('/');
-    })
+      navigete('/UnAccess');
+    }, [])
   }
 }
 

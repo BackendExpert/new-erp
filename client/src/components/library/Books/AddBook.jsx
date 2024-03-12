@@ -184,9 +184,8 @@ const AddBook = () => {
   }
   else{
     useEffect(() => {
-      localStorage.clear();
-      navigate('/');
-    })
+      navigate('/UnAccess');
+    }, [])
   }
 
 }

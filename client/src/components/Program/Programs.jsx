@@ -88,9 +88,8 @@ const Programs = () => {
     }
     else{
         useEffect(() => {
-            localStorage.clear();
-            navigate('/')
-        }, [])
+            navigete('/UnAccess');
+          }, [])
     }
 
 }
