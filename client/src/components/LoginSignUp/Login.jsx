@@ -38,8 +38,10 @@ const Login = () => {
             console.log('Login Successful');
 
             const userRole = res.data.CheckRole[0].role;
+            const userEmail = res.data.CheckRole[0].email;
 
             secureLocalStorage.setItem("loginNew", userRole);
+            secureLocalStorage.setItem("logiafter", userEmail);
 
            if(res.data.Msg === "success"){
                 if(res.data.CheckRole[0].is_active === 0){
