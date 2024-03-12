@@ -623,13 +623,14 @@ app.post('/AddProgram', (req,res) => {
             
             const create_at = new Date();
             const update_at = new Date();
+            console.log(req.body);
 
             const values = [
                 req.body.title,
                 req.body.location,
                 req.body.hod,
-                req.body.scientis1,
-                req.body.scientis2,
+                req.body.scient1,
+                req.body.scient2,
                 create_at,
                 update_at                
             ]
