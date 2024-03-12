@@ -27,6 +27,9 @@ import AddProgram from "./components/Program/AddProgram"
 import Programs from "./components/Program/Programs"
 import UpdateProgram from "./components/Program/UpdateProgram"
 import UnauthorizedAccess from "./components/UnauthorizedAccess"
+import AddProject from "./components/Projects/AddProject"
+import Projects from "./components/Projects/Projects"
+import UpdateProject from "./components/Projects/UpdateProject"
 
 export default function App() {
   return (
@@ -73,7 +76,11 @@ export default function App() {
         <Route path="/UpdateProgram/:id" element={<PrivateRoute><UpdateProgram /></PrivateRoute>} />
 
         <Route path="/UnAccess" element={<PrivateRoute><UnauthorizedAccess /></PrivateRoute>} />
-        
+
+        <Route path="/AddProject" element={<PrivateRoute><AddProject /></PrivateRoute>} />
+        <Route path="/Projects" element={<PrivateRoute><Projects /></PrivateRoute>} />
+        <Route path="/UpdateProject/:id" element={<PrivateRoute><UpdateProject /></PrivateRoute>} />
+
       </Routes>
     </BrowserRouter>
   )
