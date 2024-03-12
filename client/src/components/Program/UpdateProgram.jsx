@@ -18,7 +18,7 @@ const UpdateProgram = () => {
 
     //fetch data to update
     useEffect(() => {
-      axios.get('http://localhost:8081/EmpReadToUpdate/' + id)
+      axios.get('http://localhost:8081/ViewProgram/' + id)
       .then(res => {
         SetValues({...ProgramValue, title:res.data.Result[0].title,
           localStorage:res.data.Result[0].location,
