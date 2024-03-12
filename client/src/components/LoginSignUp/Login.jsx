@@ -42,7 +42,11 @@ const Login = () => {
             secureLocalStorage.setItem("loginNew", userRole);
 
            if(res.data.Msg === "success"){
-                if(res.data.CheckRole[0].role === 'SuperAdmin'){
+                if(res.data.CheckRole[0].is_active === 0){
+                    alert('Your account is Suspended. Contact SuperAdmin')
+                    navigete('/');
+                }
+                else if(res.data.CheckRole[0].role === 'SuperAdmin'){
                     navigete('/superAdmin');
                 }
                 else if(res.data.CheckRole[0].role === "Admin"){
