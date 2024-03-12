@@ -16,16 +16,18 @@ const UnauthorizedAccess = () => {
     ]
 
     //Update is_active column according to email
-    axios.post('http://localhost:8081/UnAccess/:email' + EmailUser)
-    .then(res => {
-        if(res.data.Status === "Success"){
-            localStorage.clear();
-            navigate('/');
-        }
-        else{
-            console.log(res.data.Error);
-        }  
-    })
+    useEffect( () =>  {
+        axios.post('http://localhost:8081/UnAccess', EmailUser)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                localStorage.clear();
+                navigate('/');
+            }
+            else{
+                console.log(res.data.Error);
+            }  
+        })
+    }, [])
 }
 
 export default UnauthorizedAccess

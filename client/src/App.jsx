@@ -26,6 +26,7 @@ import UpdateVehicle from "./components/Vehicle/UpdateVehicle"
 import AddProgram from "./components/Program/AddProgram"
 import Programs from "./components/Program/Programs"
 import UpdateProgram from "./components/Program/UpdateProgram"
+import UnauthorizedAccess from "./components/UnauthorizedAccess"
 
 export default function App() {
   return (
@@ -70,6 +71,8 @@ export default function App() {
         <Route path="/AddProgram" element={<PrivateRoute><AddProgram /></PrivateRoute>} />
         <Route path="/Programs" element={<PrivateRoute><Programs /></PrivateRoute>} />
         <Route path="/UpdateProgram/:id" element={<PrivateRoute><UpdateProgram /></PrivateRoute>} />
+
+        <Route path="/UnAccess" element={<UnauthorizedAccess />} />
         
       </Routes>
     </BrowserRouter>

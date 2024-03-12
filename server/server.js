@@ -110,33 +110,18 @@ app.post('/login', (req, res) => {
 });
 
 //unAccess
-app.post('/UnAccess/:email', (req, res) => {
-    const userEmail = req.params.email;
+app.post('/UnAccess', (req, res) => {
     const deactive_user = 0;
-    console.log(userEmail);
+    console.log(req.body.EmailUser);
 
 
     // const sql = "UPDATE users SET is_active = ? WHERE email = ?";
-    // connection.query(sql, [deactive_user, req.body.EmailUser], (err, result) => {
+    // connection.query(sql, [deactive_user, req.body.userEmail], (err, result) => {
     //     if(err){
     //         return res.json({Error: "ERROR in Data Processing"})
     //     }
     //     else{
-    //         const sqlUnaccess = "INSERT INTO unauthorized(email, role, access_time) VALUES (?)";
-
-    //         const value = [
-    //             req.body.EmailUser, 
-    //             req.body.RoleUser
-    //         ]
-        
-    //         connection.query(sqlUnaccess, [value], (err, res) => {
-    //             if(err){
-    //                 return res.json({Error: "ERROR in Data Processing 2"})
-    //             }   
-    //             else{
-    //                 return res.json({Status: "Success"})
-    //             }   
-    //         })
+    //         return res.json({Status: "Success"});
     //     }
 
     // })
