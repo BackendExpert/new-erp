@@ -687,8 +687,8 @@ app.put('/UpdateProgram/:id', (req, res) => {
             return res.json({Error: "Program Cannot Update, Given Program Name is Already Exists"});
         }
         else{
-            conn.query('UPDATE program SET title = ?, hod=?, scientis1=?, scientist2=?, update_at=? WHERE pid = ?',
-            [ req.body.title, req.body.hod, req.body.scients1, req.body.scients2, update_at, id], (err, results) => {
+            connection.query('UPDATE program SET title = ?, hod=?, scientis1=?, scientist2=?, update_at=? WHERE pid = ?',
+            [ req.body.title, req.body.hod, req.body.scients1, req.body.scients2, update_at, programId], (err, results) => {
                 if(err) 
                     console.log({Message: "Error inside Server"})
                 else{

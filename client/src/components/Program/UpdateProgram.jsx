@@ -63,7 +63,7 @@ const UpdateProgram = () => {
                   <div className="my-2">
                     <label htmlFor="">New Program Name: </label>
                     <input type="text" className="w-full h-12 border border-blue-500 pl-2 my-2 rounded" required placeholder="Enter New Program Name"
-                    value={ProgramValue.title} onChange={e => SetProgramValue({...ProgramValue, address:e.target.value})}/>
+                    value={ProgramValue.title} onChange={e => SetProgramValue({...ProgramValue, title:e.target.value})}/>
                   </div>
                   <div className="my-2">
                     <label htmlFor="">New Program Location: </label>
