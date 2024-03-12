@@ -646,6 +646,19 @@ app.post('/AddProgram', (req,res) => {
     })
 })
 
+app.get('/AllPrograms', (req, res) => {
+    const sql = "SELECT * FROM program";
+
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR in Server"});
+        }
+        else{
+            return res.json(result);
+        }
+    })
+})
+
 //------------------------------------------ Program End ---------------------------------------
 
 //check the server is working
