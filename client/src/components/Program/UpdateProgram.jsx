@@ -33,7 +33,7 @@ const UpdateProgram = () => {
     //updata data
     const headleSubmit = (e) => {
       e.preventDefault();
-      axios.put('http://localhost:8081/UpdateEmp/' + id, ProgramValue)
+      axios.put('http://localhost:8081/UpdateProgram/' + id, ProgramValue)
       .then(res => {
         if(res.data.Status === "Success"){
           alert("Program Updated Successful")
