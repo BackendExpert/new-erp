@@ -118,13 +118,21 @@ app.post('/UnAccess', (req, res) => {
             return res.json({Error: "ERROR in Data Processing"})
         }
         else{
-            return res.json({Status: "Success"})
             const sqlUnaccess = "INSERT INTO unauthorized(email, role, access_time) VALUES (?)";
 
             const value = [
                 req.body.EmailUser, 
                 req.body.RoleUser
             ]
+        
+            connection.query(sqlUnaccess, [value], (err, res) => {
+                if(err){
+                    return res.json({Error: "ERROR in Data Processing 2"})
+                }   
+                else{
+                    return res.json({Status: "Success"})
+                }   
+            })
         }
 
     })
