@@ -117,9 +117,14 @@ app.post('/UnAccess', (req, res) => {
     // console.log("Role is :", userRole);
 
     const updateUser = "UPDATE users SET is_active = ? WHERE email = ?";
-
-    connection.query(updateUser, [userEmail], (err, result) => {
-        
+    const is_active = 0;
+    connection.query(updateUser, [is_active, userEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "ERRROR in SERVER"})
+        }   
+        else{
+            res.json({ message: 'Email received successfully' });
+        }
     })
     
 
