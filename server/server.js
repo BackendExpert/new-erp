@@ -131,7 +131,7 @@ app.post('/UnAccess', (req, res) => {
                     return res.json({Error: "ERRROR in SERVER"})
                 }
                 else{
-                    res.json({ message: 'UnAccess Reported, The account has been suspended' });
+                    return res.json({ message: 'UnAccess Reported, The account has been suspended' });
                 }
             })
         }
