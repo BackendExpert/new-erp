@@ -6,28 +6,26 @@ import secureLocalStorage from 'react-secure-storage'
 function UnauthorizedAccess (){
     const navigate = useNavigate();
 
-    //check current login user
-    const RoleUser = secureLocalStorage.getItem("loginNew");
-    const email = secureLocalStorage.getItem("logiafter");
+    // //check current login user
+    // const RoleUser = secureLocalStorage.getItem("loginNew");
+    // const email = secureLocalStorage.getItem("logiafter");
 
-    const sendData = [
-        
-    ]
-
-    //Update is_active column according to email
-    useEffect( () =>  {
-        axios.post('http://localhost:8081/UnAccess', email)
-        .then(res => {
-            if(res.data.Status === "Success"){
-                localStorage.clear();
-                navigate('/');
-            }
-            else{
-                console.log(res.data.Error);
-                console.log(EmailUser)
-            }  
-        })
+    useEffect(() => {
+        const logedEmail = secureLocalStorage.getItem("logiafter");
+        sendEmail(logedEmail);
     }, [])
+
+    const sendEmail = async (email) => {
+        try{
+            const responce = await axios.post('http://localhost:8081/UnAccess', {email});
+            console.log(responce.data);
+        }
+        catch (error){
+            console.error("ERROR Sending : ", error);
+        }
+    };
+
+    
 }
 
 export default UnauthorizedAccess

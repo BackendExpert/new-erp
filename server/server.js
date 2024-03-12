@@ -111,21 +111,10 @@ app.post('/login', (req, res) => {
 
 //unAccess
 app.post('/UnAccess', (req, res) => {
-    const deactive_user = 0;
-    console.log(req.body.email);
-    
+    const userEmail = req.body.email;
+    console.log("Email is :", userEmail);
 
-
-    // const sql = "UPDATE users SET is_active = ? WHERE email = ?";
-    // connection.query(sql, [deactive_user, req.body.userEmail], (err, result) => {
-    //     if(err){
-    //         return res.json({Error: "ERROR in Data Processing"})
-    //     }
-    //     else{
-    //         return res.json({Status: "Success"});
-    //     }
-
-    // })
+    res.json({ message: "Email Recevied"});
 })
 
 // Count Admins Roles
