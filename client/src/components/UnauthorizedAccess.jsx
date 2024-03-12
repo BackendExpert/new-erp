@@ -11,8 +11,8 @@ const UnauthorizedAccess = () => {
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
     const sendData = [
-        RoleUser,
-        EmailUser
+        EmailUser,
+        RoleUser        
     ]
 
     //Update is_active column according to email
