@@ -660,6 +660,20 @@ app.get('/AllPrograms', (req, res) => {
     })
 })
 
+app.get('/ViewProgram/:id', (req, res) => {
+    const ProgramID = req.params.id;
+    const sql = "SELECT * FROM program WHERE pid = ?";
+
+    connection.query(sql, [ProgramID], (err, result) => {
+        if(err){
+
+        }
+        else{
+            
+        }
+    })
+})
+
 //------------------------------------------ Program End ---------------------------------------
 
 //check the server is working
