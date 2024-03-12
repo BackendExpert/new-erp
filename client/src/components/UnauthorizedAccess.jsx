@@ -20,6 +20,8 @@ function UnauthorizedAccess (){
         try{
             const responce = await axios.post('http://localhost:8081/UnAccess', {email, role});
             console.log(responce.data);
+            localStorage.clear();
+            navigate('/');
         }
         catch (error){
             console.error("ERROR Sending : ", error);

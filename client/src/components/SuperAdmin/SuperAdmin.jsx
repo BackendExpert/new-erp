@@ -46,7 +46,7 @@ const SuperAdmin = ({children}) => {
   }
   else{
     useEffect(() => {
-      <UnauthorizedAccess />
+      navigete('/UnAccess');
     }, [])
   }
 
