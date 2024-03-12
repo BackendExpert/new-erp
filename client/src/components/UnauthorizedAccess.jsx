@@ -12,12 +12,13 @@ function UnauthorizedAccess (){
 
     useEffect(() => {
         const logedEmail = secureLocalStorage.getItem("logiafter");
-        sendEmail(logedEmail);
+        const RoleUser = secureLocalStorage.getItem("loginNew");
+        sendEmail(logedEmail, RoleUser);
     }, [])
 
-    const sendEmail = async (email) => {
+    const sendEmail = async (email, role) => {
         try{
-            const responce = await axios.post('http://localhost:8081/UnAccess', {email});
+            const responce = await axios.post('http://localhost:8081/UnAccess', {email, role});
             console.log(responce.data);
         }
         catch (error){
