@@ -23,8 +23,8 @@ const UpdateProgram = () => {
         SetProgramValue({...ProgramValue, title:res.data.Result[0].title,
           location:res.data.Result[0].location,
           hod:res.data.Result[0].hod,
-          scients1:res.data.Result[0].scients1,
-          scients2:res.data.Result[0].scients2
+          scients1:res.data.Result[0].scientis1,
+          scients2:res.data.Result[0].scientist2
         })
       })
       .catch(err=> console.log(err))
