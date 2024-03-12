@@ -19,6 +19,13 @@ const Programs = () => {
         }
     }
 
+    //fetch program data from backend
+    const [programData, SetProgramData] = useState([])
+    useEffect (() => {
+        axios.get('http://localhost:8081/AllPrograms')
+        .then(res => SetProgramData(res.data))
+        .catch(err => console.log(err))
+    }, []);
     
     //this page can access by following users
     // SuperAdmin, Admin
