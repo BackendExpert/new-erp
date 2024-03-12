@@ -57,7 +57,13 @@ const Programs = () => {
                                 </tr>
                             </thead>
                             <tbody>
-
+                                {
+                                    programData.map((program, index) => {
+                                        <tr key={index}>
+                                            <td className='px-6 py-4 font-bold'>{program.pid}</td>
+                                        </tr>
+                                    })
+                                }
                             </tbody>
                         </table>
                     </div>

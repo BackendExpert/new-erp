@@ -53,29 +53,29 @@ const AddProgram = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Program Name</label>
                                     <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Program Name"
-                                    />
+                                    onChange={e => SetProgramData({...programData, title:e.target.value})} />
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Program Location</label>
                                     <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Program Location"
-                                    />
+                                    onChange={e => SetProgramData({...programData, location:e.target.value})} />
                                 </div>
                             </div>
                             <div className="lg:grid grid-cols-3 gap-2">
                                 <div className="my-2">
                                     <label htmlFor="">HOD Email</label>
                                     <input type="email" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter HOD Email"
-                                    />
+                                    onChange={e => SetProgramData({...programData, hod:e.target.value})} />
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Scientist 1</label>
                                     <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Scientist 1"
-                                    />
+                                    onChange={e => SetProgramData({...programData, scient1:e.target.value})} />
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Scientist 2</label>
                                     <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Scientist 2"
-                                    />
+                                    onChange={e => SetProgramData({...programData, scient2:e.target.value})} />
                                 </div>
                             </div>
                             <div className="">
