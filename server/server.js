@@ -702,7 +702,7 @@ app.put('/UpdateProgram/:id', (req, res) => {
 //count Program
 
 app.get('/ProgramCount', (req, res) => {
-    const sql = "SELECT COUNT(VID) AS pro FROM program";
+    const sql = "SELECT COUNT(pid) AS pro FROM program";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
     connection.query(sql, (error, results) => {

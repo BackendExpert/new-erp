@@ -50,7 +50,7 @@ const SummaryDash = () => {
       }
       try {
         const programCount = await axios.get('http://localhost:8081/ProgramCount');
-        setVehicle(programCount.data.pro);
+        setProgram(programCount.data.pro);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -65,7 +65,8 @@ const SummaryDash = () => {
     {name:"Books" , value: <CountUp end={books}/>, icons: <Icons name="book" size="large"/>, style:"bg-blue-600"},
     {name:"Employee" , value: <CountUp end={employee}/>, icons: <Icons name="people" size="large"/>, style:"bg-yellow-600"},
     {name:"Designations" , value: <CountUp end={designation}/>, icons: <Icons name="easel" size="large"/>, style:"bg-blue-400"},
-    {name:"Viehicles" , value: <CountUp end={viehicle}/>, icons: <Icons name="car" size="large"/>, style:"bg-red-700" }
+    {name:"Viehicles" , value: <CountUp end={viehicle}/>, icons: <Icons name="car" size="large"/>, style:"bg-red-700" },
+    {name:"Program" , value: <CountUp end={program}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-red-700" }
   ]
   
   return (
