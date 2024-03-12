@@ -21,7 +21,7 @@ const UpdateProgram = () => {
       axios.get('http://localhost:8081/ViewProgram/' + id)
       .then(res => {
         SetProgramValue({...ProgramValue, title:res.data.Result[0].title,
-          localStorage:res.data.Result[0].location,
+          location:res.data.Result[0].location,
           hod:res.data.Result[0].hod,
           scients1:res.data.Result[0].scients1,
           scients2:res.data.Result[0].scients2
@@ -50,31 +50,31 @@ const UpdateProgram = () => {
                   <div className="my-2">
                     <label htmlFor="">New Program Name: </label>
                     <input type="text" className="w-full h-12 border border-blue-500 pl-2 my-2 rounded" required placeholder="Enter New Program Name"
-                    value={ProgramValue.title} onChange={e => SetValues({...empValues, address:e.target.value})}/>
+                    value={ProgramValue.title} onChange={e => SetProgramValue({...ProgramValue, address:e.target.value})}/>
                   </div>
                   <div className="my-2">
                     <label htmlFor="">New Program Location: </label>
                     <input type="text" className="w-full h-12 border border-blue-500 pl-2 my-2 rounded" required placeholder="Enter New Program Location"
-                    value={ProgramValue.location} onChange={e => SetValues({...empValues, location:e.target.value})}/>
+                    value={ProgramValue.location} onChange={e => SetProgramValue({...ProgramValue, location:e.target.value})}/>
                   </div>
                 </div>
                 <div className="lg:grid grid-cols-3 gap-2">
                   <div className="my-2">
                     <label htmlFor="">New HOD: </label>
-                    <input type="text" className="w-full h-12 border border-blue-500 pl-2 my-2 rounded" required placeholder="Enter New HOD"
-                    value={ProgramValue.hod} onChange={e => SetValues({...empValues, hod:e.target.value})}/>
+                    <input type="email" className="w-full h-12 border border-blue-500 pl-2 my-2 rounded" required placeholder="Enter New HOD"
+                    value={ProgramValue.hod} onChange={e => SetProgramValue({...ProgramValue, hod:e.target.value})}/>
                   </div>
 
                   <div className="my-2">
                     <label htmlFor="">New Scientist 1: </label>
                     <input type="text" className="w-full h-12 border border-blue-500 pl-2 my-2 rounded" required placeholder="Enter New Scientist 1"
-                    value={ProgramValue.scients1} onChange={e => SetValues({...empValues, scients1:e.target.value})}/>
+                    value={ProgramValue.scients1} onChange={e => SetProgramValue({...ProgramValue, scients1:e.target.value})}/>
                   </div>
 
                   <div className="my-2">
                     <label htmlFor="">New Scientist 2: </label>
                     <input type="text" className="w-full h-12 border border-blue-500 pl-2 my-2 rounded" required placeholder="Enter New Scientist 2"
-                    value={ProgramValue.scients2} onChange={e => SetValues({...empValues, scients2:e.target.value})}/>
+                    value={ProgramValue.scients2} onChange={e => SetProgramValue({...ProgramValue, scients2:e.target.value})}/>
                   </div>
                 </div>
 
