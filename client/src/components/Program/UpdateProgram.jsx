@@ -9,20 +9,27 @@ const UpdateProgram = () => {
     const {id} = useParams();
 
     const [ProgramValue, SetProgramValue] = useState({
-      address: '',
-      phone: '',
-      salary: '',
-      category: '',
-      type: '',
-      designation: '',
-      emgcontact: '',
-      civilstatus: '',
-      email: ''
+      title: '',
+      location: '',
+      hod: '',
+      scients1: '',
+      scients1: ''
     })
 
-  return (
-    <div>UpdateProgram</div>
-  )
+    //this route access only by admin and SuperAdmin
+    
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
+      return (
+        <div>UpdateProgram</div>
+      )
+    }
+    else{
+      useEffect(() => {
+        localStorage.clear();
+        navigate('/')
+      }, [])
+    }
+
 }
 
 export default UpdateProgram
