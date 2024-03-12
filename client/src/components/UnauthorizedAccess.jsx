@@ -19,17 +19,13 @@ const UnauthorizedAccess = () => {
     axios.post('http://localhost:8081/UnAccess', sendData)
     .then(res => {
         if(res.data.Status === "Success"){
-            alert("Vehicle Added Successful")
-            navigate('/Vehicles');
+            localStorage.clear()
+            navigate('/');
         }
         else{
             alert(res.data.Error);
         }  
     })
-
-  return (
-    <div>UnauthorizedAccess</div>
-  )
 }
 
 export default UnauthorizedAccess
