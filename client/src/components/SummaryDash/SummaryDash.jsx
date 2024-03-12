@@ -14,6 +14,7 @@ const SummaryDash = () => {
   const [employee, setEmp] = useState(0);
   const [designation, setDesignation] = useState(0);
   const [viehicle, setVehicle] = useState(0);
+  const [program, setProgram] = useState(0);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -44,6 +45,12 @@ const SummaryDash = () => {
       try {
         const vehicleCount = await axios.get('http://localhost:8081/VehicleCount');
         setVehicle(vehicleCount.data.vehi);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+      try {
+        const programCount = await axios.get('http://localhost:8081/ProgramCount');
+        setVehicle(programCount.data.pro);
       } catch (error) {
         console.error('Error fetching data:', error);
       }

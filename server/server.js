@@ -699,6 +699,24 @@ app.put('/UpdateProgram/:id', (req, res) => {
     })
 })
 
+//count Program
+
+app.get('/ProgramCount', (req, res) => {
+    const sql = "SELECT COUNT(VID) AS pro FROM program";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ pro : results[0].pro }); // Send count in JSON format
+    });
+})
+
+
 //------------------------------------------ Program End ---------------------------------------
 
 //check the server is working
