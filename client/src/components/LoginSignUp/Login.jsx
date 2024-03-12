@@ -47,7 +47,7 @@ const Login = () => {
                 if(res.data.CheckRole[0].is_active === 0){
                     alert('Your Account has been Suspended. unauthorized activity has been detected.')
                     localStorage.clear();
-                    console.log('Unauthorized Access');
+                    console.log('Unauthorized Access. Logedout...');
                     navigete('/');
                 }
                 else if(res.data.CheckRole[0].role === 'SuperAdmin'){
