@@ -16,9 +16,9 @@ function UnauthorizedAccess (){
         sendEmail(logedEmail, RoleUser);
     }, [])
 
-    const sendEmail = async (email, role) => {
+    const sendEmail = (email, role) => {
         try{
-            const responce = await axios.post('http://localhost:8081/UnAccess', {email, role});
+            const responce =  axios.post('http://localhost:8081/UnAccess', {email, role});
             alert("Unauthorized Access Reported, The account has been suspended.");
             localStorage.clear();
             navigate('/');
