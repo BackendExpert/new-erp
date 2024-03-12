@@ -61,6 +61,11 @@ const Programs = () => {
                                     programData.map((program, index) => {
                                         <tr key={index}>
                                             <td className='px-6 py-4 font-bold'>{program.pid}</td>
+                                            <td className='px-6 py-4 font-bold'>{program.title}</td>
+                                            <td className='px-6 py-4 font-bold'>{program.location}</td>
+                                            <td className='px-6 py-4 font-bold'>{program.hod}</td>
+                                            <td className='px-6 py-4 font-bold'>{program.scientis1}</td>
+                                            <td className='px-6 py-4 font-bold'>{program.scientist2}</td>
                                         </tr>
                                     })
                                 }
