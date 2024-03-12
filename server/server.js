@@ -126,8 +126,6 @@ app.post('/UnAccess', (req, res) => {
             // res.json({ message: 'Email received successfully' });
             const checksql = "SELECT * FROM unauthorized WHERE email = ? ";
             connection.query(checksql, [userEmail], (err, result) => {
-                if(err) throw err
-
                 if(result.length == 0) {
                     const sql = "INSERT INTO unauthorized(email, role, access_time) VALUES (?, ?, ?)";
                     var unaccessTime = new Date();
@@ -139,6 +137,9 @@ app.post('/UnAccess', (req, res) => {
                             return res.json({ message: 'UnAccess Reported, The account has been suspended' });
                         }
                     })
+                }
+                else{
+                    return false;
                 }
             })
         }
