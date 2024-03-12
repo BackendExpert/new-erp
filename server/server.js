@@ -109,6 +109,14 @@ app.post('/login', (req, res) => {
     );
 });
 
+//unAccess
+app.post('/UnAccess', (req, res) => {
+    const deactive_user = 0;
+    const sql = "UPDATE users SET is_active = ? WHERE email = ?";
+    connection.query(sql, [deactive_user, req.body.email], (err, result) => {
+        
+    })
+})
 
 // Count Admins Roles
 app.get('/AdminCount', (req, res) => {

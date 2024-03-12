@@ -11,7 +11,11 @@ const UnauthorizedAccess = () => {
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
     //Update is_active column according to email
-    
+    axios.post('http://localhost:8081/UnAccess', EmailUser)
+    .then(res => {
+        
+    })
+
   return (
     <div>UnauthorizedAccess</div>
   )
