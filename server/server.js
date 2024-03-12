@@ -90,11 +90,12 @@ app.post('/login', (req, res) => {
                     if(passMatch) {
                         // generate JWT Token
                         const token = jwt.sign(
-                            {email: result[0].email, role: result[0].role },
+                            {email: result[0].email, role: result[0].role, is_active: result[0].is_active },
                             'your-secret-key',
                             {expiresIn: '1h' }
                         );
                         res.json({ token:token, Msg:"success", CheckRole:result });
+                        console.log(result)
                     }
                     else {
                         res.status(401).send("Invalid Credentials");
