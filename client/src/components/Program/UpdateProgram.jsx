@@ -16,6 +16,9 @@ const UpdateProgram = () => {
       scients2: ''
     })
 
+    //fetch data to update
+    
+
     //this route access only by admin and SuperAdmin
     
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
@@ -25,7 +28,7 @@ const UpdateProgram = () => {
             <h1 className="text-xl font-semibold">Update Employee</h1>
             <hr className="mb-4" />
             <div className="flex">
-              <Link to={'/Employee'}>
+              <Link to={'/Programs'}>
                 <button className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
               </Link>
             </div>
