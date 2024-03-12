@@ -112,7 +112,8 @@ app.post('/login', (req, res) => {
 //unAccess
 app.post('/UnAccess', (req, res) => {
     const deactive_user = 0;
-    console.log(req.body.EmailUser);
+    console.log(req.body.email);
+    
 
 
     // const sql = "UPDATE users SET is_active = ? WHERE email = ?";

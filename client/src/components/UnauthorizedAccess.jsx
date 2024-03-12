@@ -3,21 +3,20 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 
-const UnauthorizedAccess = () => {
+function UnauthorizedAccess (){
     const navigate = useNavigate();
 
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
-    const EmailUser = secureLocalStorage.getItem("logiafter");
+    const email = secureLocalStorage.getItem("logiafter");
 
     const sendData = [
-        EmailUser,
-        RoleUser        
+        
     ]
 
     //Update is_active column according to email
     useEffect( () =>  {
-        axios.post('http://localhost:8081/UnAccess', EmailUser)
+        axios.post('http://localhost:8081/UnAccess', email)
         .then(res => {
             if(res.data.Status === "Success"){
                 localStorage.clear();
@@ -25,6 +24,7 @@ const UnauthorizedAccess = () => {
             }
             else{
                 console.log(res.data.Error);
+                console.log(EmailUser)
             }  
         })
     }, [])
