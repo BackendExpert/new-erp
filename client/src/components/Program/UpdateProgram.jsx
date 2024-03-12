@@ -30,6 +30,11 @@ const UpdateProgram = () => {
       .catch(err=> console.log(err))
     }, [])
 
+    //updata data
+    const headleSubmit = () => {
+      
+    }
+
     //this route access only by admin and SuperAdmin
     
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
@@ -45,7 +50,7 @@ const UpdateProgram = () => {
             </div>
 
             <div className="my-2">
-              <form>
+              <form onSubmit={headleSubmit}>
                 <div className="lg:grid grid-cols-2 gap-2">
                   <div className="my-2">
                     <label htmlFor="">New Program Name: </label>
