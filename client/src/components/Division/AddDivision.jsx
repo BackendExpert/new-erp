@@ -9,6 +9,15 @@ const AddDivision = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const [DivisionData, SetDivisionData] = useState({
+        division:'',
+        location:'',
+        hod:''
+    })
+
+    const headleSubmit = (e) => {
+        e.preventDefault(); 
+    }
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
         return (
@@ -21,7 +30,7 @@ const AddDivision = () => {
                     </Link>
         
                     <div className="my-2">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-2">
                                 <div className="my-2">
                                     <label htmlFor="">Division Name</label>
