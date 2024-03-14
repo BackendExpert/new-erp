@@ -771,6 +771,8 @@ app.post('/AddDivision', (req, res) => {
             const sql = "INSERT INTO division(title, location, email, create_at, update_at) VALUES (?)";
             const create_at = new Date();
             const update_at = new Date();
+            console.log(req.body);
+
             const value = [
                 req.body.division,
                 req.body.location,
@@ -779,7 +781,7 @@ app.post('/AddDivision', (req, res) => {
                 update_at
             ]
             
-            connection.query(sql, [value], (err, res) => {
+            connection.query(sql, [value], (err, result) => {
                 if(err){
                     return res.json({Error: "Error IN Server"});
                 }

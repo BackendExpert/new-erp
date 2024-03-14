@@ -13,7 +13,7 @@ const AddDivision = () => {
         division:'',
         location:'',
         hod:''
-    })
+    });
 
     const headleSubmit = (e) => {
         e.preventDefault(); 
