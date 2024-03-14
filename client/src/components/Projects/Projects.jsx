@@ -15,7 +15,7 @@ const Projects = () => {
       navigate('/superAdmin');
     }
     else if(RoleUser === "Admin"){
-        navigate('/admin');
+      navigate('/admin');
     }
   } 
 
