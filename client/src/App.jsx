@@ -30,6 +30,9 @@ import UnauthorizedAccess from "./components/UnauthorizedAccess"
 import AddProject from "./components/Projects/AddProject"
 import Projects from "./components/Projects/Projects"
 import UpdateProject from "./components/Projects/UpdateProject"
+import AddDivision from "./components/Division/AddDivision"
+import UpdateDivision from "./components/Division/UpdateDivision"
+import Divisions from "./components/Division/Divisions"
 
 export default function App() {
   return (
@@ -80,6 +83,11 @@ export default function App() {
         <Route path="/AddProject" element={<PrivateRoute><AddProject /></PrivateRoute>} />
         <Route path="/Projects" element={<PrivateRoute><Projects /></PrivateRoute>} />
         <Route path="/UpdateProject/:id" element={<PrivateRoute><UpdateProject /></PrivateRoute>} />
+
+        <Route path="/AddDivision" element={<PrivateRoute><AddDivision /></PrivateRoute>} />
+        <Route path="/Divisions" element={<PrivateRoute><Divisions /></PrivateRoute>} />
+        <Route path="/UpdateDivision/:id" element={<PrivateRoute><UpdateDivision /></PrivateRoute>} />
+        
 
       </Routes>
     </BrowserRouter>
