@@ -725,7 +725,20 @@ app.put('/UpdateProgram/:id', (req, res) => {
     });
 })
 
-//count Program
+
+app.delete('/DeleteProgram/:id', (req, res) => {
+    const DeleteId = req.params.id;
+    const sql = "DELETE FROM program WHERE pid = ?";
+
+    connection.query(sql, [DeleteId], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
 
 app.get('/ProgramCount', (req, res) => {
     const sql = "SELECT COUNT(pid) AS pro FROM program";
