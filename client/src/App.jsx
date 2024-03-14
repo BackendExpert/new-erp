@@ -42,48 +42,64 @@ export default function App() {
         <Route path="/register" element={<SignUp />} ></Route>
 
         {/* PrivateRoute for protect the following routes from unauthrized access */}
+        {/* SuperAdmin */}
         <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
-        
+
+        {/* Admin */}
         <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
         
+        {/* Head of the Department */}
         <Route path="/hod" element={<PrivateRoute><HeadDep /></PrivateRoute>} />
         
+        {/* transport Officer */}
         <Route path="/to" element={<PrivateRoute><TransOfficer /></PrivateRoute>} />
         
+        {/* librarian */}
         <Route path="/librarian" element={<PrivateRoute><Librarian /></PrivateRoute>} />
         
+        {/* labManager */}
         <Route path="/labManager" element={<PrivateRoute><LabManager /></PrivateRoute>} />
         
+        {/* accountant */}
         <Route path="/accountant" element={<PrivateRoute><Accountant /></PrivateRoute>} />
         
+        {/* user */}
         <Route path="/user" element={<PrivateRoute><Users /></PrivateRoute>} />
         
+        {/* Book */}
         <Route path="/bookadd" element={<PrivateRoute><AddBook /></PrivateRoute>} />
         <Route path="/booklist" element={<PrivateRoute><Books /></PrivateRoute>} />
         <Route path="/BorrowBook/:id" element={<PrivateRoute><BookBorrow /></PrivateRoute>} />
         
+        {/* Employee */}
         <Route path="/Employee" element={<PrivateRoute><Employees /></PrivateRoute>} />
         <Route path="/AddEmployee" element={<PrivateRoute><AddEmployee /></PrivateRoute>} />
         <Route path="/UpdateEmp/:id" element={<PrivateRoute><UpdateEmployee /></PrivateRoute>} />
         
+        {/* Designations */}
         <Route path="/AddDesignation" element={<PrivateRoute><AddDesignation /></PrivateRoute>} />
         <Route path="/Designations" element={<PrivateRoute><Designations /></PrivateRoute>} />
         <Route path="/UpdateDesignation/:id" element={<PrivateRoute><UpdateDesignation /></PrivateRoute>} />
-        
+       
+       {/* Vehicles */}        
         <Route path="/AddVehicle" element={<PrivateRoute><AddVehicle /></PrivateRoute>} />
         <Route path="/Vehicles" element={<PrivateRoute><Vehicles /></PrivateRoute>} />
         <Route path="/UpdateVehicle/:id" element={<PrivateRoute><UpdateVehicle /></PrivateRoute>} />
         
+        {/* Programs */}
         <Route path="/AddProgram" element={<PrivateRoute><AddProgram /></PrivateRoute>} />
         <Route path="/Programs" element={<PrivateRoute><Programs /></PrivateRoute>} />
         <Route path="/UpdateProgram/:id" element={<PrivateRoute><UpdateProgram /></PrivateRoute>} />
 
+        {/* for prevent UnauthorizedAccess */}
         <Route path="/UnAccess" element={<PrivateRoute><UnauthorizedAccess /></PrivateRoute>} />
 
+        {/* Projects */}
         <Route path="/AddProject" element={<PrivateRoute><AddProject /></PrivateRoute>} />
         <Route path="/Projects" element={<PrivateRoute><Projects /></PrivateRoute>} />
         <Route path="/UpdateProject/:id" element={<PrivateRoute><UpdateProject /></PrivateRoute>} />
 
+        {/* Divisions */}
         <Route path="/AddDivision" element={<PrivateRoute><AddDivision /></PrivateRoute>} />
         <Route path="/Divisions" element={<PrivateRoute><Divisions /></PrivateRoute>} />
         <Route path="/UpdateDivision/:id" element={<PrivateRoute><UpdateDivision /></PrivateRoute>} />
