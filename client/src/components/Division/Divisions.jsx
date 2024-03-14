@@ -55,7 +55,15 @@ const Divisions = () => {
                                 </tr>
                             </thead>
                             <tbody>
-
+                                {
+                                    divisionData.map((division, index) => {
+                                        return(
+                                            <tr key={index}>
+                                                <td className='px-6 py-4 font-bold'>{division.did}</td>
+                                            </tr>
+                                        )
+                                    })
+                                }
                             </tbody>
                         </table>
                     </div>
