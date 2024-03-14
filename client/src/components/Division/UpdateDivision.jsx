@@ -10,6 +10,12 @@ const UpdateDivision = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const [updateDivision, SetupdateDivision] = useState({
+      division: '',
+      location: '',
+      hod: ''
+    });
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
       return (
         <div className="bg-gray-200 py-4">
