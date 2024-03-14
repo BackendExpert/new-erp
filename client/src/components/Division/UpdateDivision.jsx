@@ -16,6 +16,17 @@ const UpdateDivision = () => {
       hod: ''
     });
 
+    //fetch division data to update
+    useEffect(() => {
+      axios.get('http://localhost:8081/ViewDivision/' + id)
+      .then(res => {
+        SetupdateDivision({...updateDivision, division:res.data.Result[0].division,
+          location:res.data.Result[0].location,
+          hod:res.data.Result[0].hod
+        })
+      })
+    }, [])
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
       return (
         <div className="bg-gray-200 py-4">
