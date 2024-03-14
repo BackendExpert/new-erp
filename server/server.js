@@ -767,6 +767,9 @@ app.post('/AddDivision', (req, res) => {
         if(result.length > 0) {
             return res.json({Error: "Division is Already Exists at Given Division Name"});
         }
+        else{
+            const sql = "INSERT INTO division() VALUES (?)"
+        }
     })
 
 })
