@@ -5,7 +5,8 @@ import axios from "axios";
 
 
 const Projects = () => {
-  
+  const navigate = useNavigate();
+
   //get the login user
   const RoleUser = secureLocalStorage.getItem("loginNew");
 
