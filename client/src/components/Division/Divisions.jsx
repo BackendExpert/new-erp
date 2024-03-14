@@ -48,9 +48,9 @@ const Divisions = () => {
                             <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
                                 <tr className='text-blue-500'>
                                     <th scope='col' className='px-6 py-3'>ID</th>
-                                    <th scope='col' className='px-6 py-3'>Designation</th>
-                                    <th scope='col' className='px-6 py-3'>Basic Salary</th>                            
-                                    <th scope='col' className='px-6 py-3'>Increment</th>
+                                    <th scope='col' className='px-6 py-3'>Division Name</th>
+                                    <th scope='col' className='px-6 py-3'>Division Location</th>                            
+                                    <th scope='col' className='px-6 py-3'>HOD Email</th>
                                     <th scope='col' className='px-6 py-3'>Action</th>
                                 </tr>
                             </thead>
