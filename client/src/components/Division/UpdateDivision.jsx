@@ -7,8 +7,7 @@ const UpdateDivision = () => {
     const navigate = useNavigate();
     const {id} = useParams();
 
-    //check current login user
-    const RoleUser = secureLocalStorage.getItem("loginNew");
+
 
     const [updateDivision, SetupdateDivision] = useState({
       division: '',
@@ -20,12 +19,27 @@ const UpdateDivision = () => {
     useEffect(() => {
       axios.get('http://localhost:8081/ViewDivision/' + id)
       .then(res => {
-        SetupdateDivision({...updateDivision, division:res.data.Result[0].division,
+        SetupdateDivision({...updateDivision, division:res.data.Result[0].title,
           location:res.data.Result[0].location,
-          hod:res.data.Result[0].hod
+          hod:res.data.Result[0].email
         })
       })
+      .catch(err => console.log(err))
     }, [])
+
+    //update data
+    useEffect(() => {
+      axios.put('http://localhot:80801/UpdateDivision/' + id, updateDivision)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Division Update Successful")
+          
+        }
+      })
+    }, [])
+
+    //check current login user
+    const RoleUser = secureLocalStorage.getItem("loginNew");
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
       return (
@@ -44,13 +58,13 @@ const UpdateDivision = () => {
                     <div className="my-2">
                         <label htmlFor="">New Division Name</label>
                         <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New Division Name"
-                        />
+                        value={updateDivision.division} onChange={e => SetupdateDivision({...updateDivision, division:e.target.value})}/>
                     </div>
                     
                     <div className="my-2">
                         <label htmlFor="">New Division Location</label>
                         <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New Division Location"
-                        />
+                        value={updateDivision.location} onChange={e => SetupdateDivision({...updateDivision, location:e.target.value})}/>
                     </div>
 
                   </div>
@@ -59,7 +73,7 @@ const UpdateDivision = () => {
                     <div className="my-2">
                         <label htmlFor="">New HOD Name</label>
                         <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New HOD Email"
-                        />
+                        value={updateDivision.hod} onChange={e => SetupdateDivision({...updateDivision, hod:e.target.value})}/>
                     </div>
 
                   </div>
