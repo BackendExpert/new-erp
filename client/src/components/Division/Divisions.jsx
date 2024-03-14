@@ -34,8 +34,10 @@ const Divisions = () => {
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Division Deleted Successful")
+                window.location.reload();
             }
         })
+        .catch(err => console.log(err));
     }
 
 
