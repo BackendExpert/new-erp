@@ -760,7 +760,7 @@ app.get('/ProgramCount', (req, res) => {
 //----------------------------------------- Division Start ----------------------------
 
 app.post('/AddDivision', (req, res) => {
-    const checksql = "SELECT * FROM division WHERE did = ?";
+    const checksql = "SELECT * FROM division WHERE title = ?";
     connection.query(checksql, [req.body.division], (err, result) => {
         if(err) throw err
         
@@ -816,6 +816,26 @@ app.get('/ViewDivision/:id', (req, res) => {
         }
         else{
             return res.json({Status: "Success", Result: result});
+        }
+    })
+})
+
+app.put('/UpdateDivision', (req, res) => {
+    const UpdateId = req.params.id;
+    const checksql = "SELECT * FROM division WHERE title = ?";
+
+    connection.query(checksql, [req.body.division], (err, result) => {
+        if(err) throw err
+
+        if(result.length > 0) {
+            return res.json({Error: "Division Cannot be Update, Givien Division Name is Already Exists"});
+        }
+        else{
+            const sql = "UPDATE division SET title = ?, location = ?, email = ?, update_at = ? WHERE did = ?";
+            const update_at = new Date();
+            connection.query(sql, [req.body.division, req.body.location, req.body.hod, update_at, UpdateId], (err, result) => {
+                
+            })
         }
     })
 })
