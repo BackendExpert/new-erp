@@ -823,7 +823,7 @@ app.get('/ViewDivision/:id', (req, res) => {
 app.put('/UpdateDivision/:id', (req, res) => {
     const UpdateId = req.params.id;
     const checksql = "SELECT * FROM division WHERE title = ?";
-    
+
     console.log(req.body);
 
     connection.query(checksql, [req.body.division], (err, result) => {
@@ -847,6 +847,19 @@ app.put('/UpdateDivision/:id', (req, res) => {
     })
 })
 
+
+app.delete('/DeleteDivision/:id', (req, res) => {
+    const deleteId = req.params.id;
+    const sql = "DELETE FROM division WHERE did = ?";
+
+    connection.query(sql, [deleteId], (err, result) => {
+        if(err) 
+            console.log({Message: "Error inside Server"})
+        else{
+            return res.json(result)
+        }
+    })
+})
 //-------------------------------------- Division End -------------------------------------
 
 //check the server is working
