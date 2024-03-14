@@ -60,6 +60,9 @@ const Divisions = () => {
                                         return(
                                             <tr key={index}>
                                                 <td className='px-6 py-4 font-bold'>{division.did}</td>
+                                                <td className='px-6 py-4 font-bold'>{division.title}</td>
+                                                <td className='px-6 py-4 font-bold'>{division.location}</td>
+                                                <td className='px-6 py-4 font-bold'>{division.email}</td>
                                             </tr>
                                         )
                                     })
