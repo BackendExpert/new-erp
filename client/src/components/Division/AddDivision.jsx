@@ -45,19 +45,19 @@ const AddDivision = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Division Name</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Division Name"
-                                    />
+                                    onChange={e => SetDivisionData({...DivisionData, division:e.target.value})}/>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Location</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Location"
-                                    />
+                                    onChange={e => SetDivisionData({...DivisionData, location:e.target.value})}/>
                                 </div>
                             </div>
                             <div className="lg:grid grid-cols-1">
                                 <div className="my-2">
                                     <label htmlFor="">HOD Email</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter HOD Email"
-                                    />
+                                    onChange={e => SetDivisionData({...DivisionData, hod:e.target.value})}/>
                                 </div>
                             </div>
                             <div className="">
