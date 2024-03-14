@@ -20,7 +20,7 @@ const AddDivision = () => {
         axios.post('http://localhost:8081/AddDivision', DivisionData)
         .then(res => {
             if(res.data.Status === "Success"){
-                alert("Division Add Successsful");
+                alert("Division Added Successsful");
                 navigate('/Divisions');
             }
             else{

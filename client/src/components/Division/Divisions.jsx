@@ -28,6 +28,15 @@ const Divisions = () => {
         .catch(err => console.log(err))
     }, [])
 
+    // delete division
+    const headleDelete = (id) => {
+        axios.delete('http://localhost:8081/DeleteDivision/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Division Deleted Successful")
+            }
+        })
+    }
 
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
@@ -67,7 +76,7 @@ const Divisions = () => {
                                                     <Link to={'/UpdateDivision/' + division.did}>
                                                         <button className="rounded border border-blue-500 text-blue-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Update</button>
                                                     </Link>
-                                                    <button /*onClick={() => headleDelete(designation.Code)}*/ className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
+                                                    <button onClick={() => headleDelete(division.did)} className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
                                                 </td>
                                             </tr>
                                         )
