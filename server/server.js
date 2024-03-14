@@ -820,9 +820,11 @@ app.get('/ViewDivision/:id', (req, res) => {
     })
 })
 
-app.put('/UpdateDivision', (req, res) => {
+app.put('/UpdateDivision/:id', (req, res) => {
     const UpdateId = req.params.id;
     const checksql = "SELECT * FROM division WHERE title = ?";
+    
+    console.log(req.body);
 
     connection.query(checksql, [req.body.division], (err, result) => {
         if(err) throw err

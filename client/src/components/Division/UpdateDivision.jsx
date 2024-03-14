@@ -28,18 +28,20 @@ const UpdateDivision = () => {
     }, [])
 
     //update data
-    useEffect(() => {
-      axios.put('http://localhot:80801/UpdateDivision/' + id, updateDivision)
+    const headleUpdate = (e) => {
+      e.preventDefault();
+      axios.put('http://localhost:8081/UpdateDivision/' + id, updateDivision)
       .then(res => {
         if(res.data.Status === "Success"){
           alert("Division Update Successful")
           navigate('/Divisions');
         }
         else{
-          alert(res.data.Error);
+          alert(res.data.Error)
         }
       })
-    }, [])
+      
+    }
 
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
@@ -55,7 +57,7 @@ const UpdateDivision = () => {
               </Link>
 
               <div className="my-2">
-                <form>
+                <form onSubmit={headleUpdate}>
                   <div className="lg:grid grid-cols-2 gap-2">
 
                     <div className="my-2">
