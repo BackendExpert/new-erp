@@ -806,6 +806,20 @@ app.get('/DivisionView', (req, res) => {
     })
 })
 
+app.get('/ViewDivision/:id', (req, res) => {
+    const divisionId = req.params.id;
+    const sql = "SELECT * FROM division WHERE did = ?";
+
+    connection.query(sql, [divisionId], (err, result) => {
+        if(err){
+            return res.json({Error: "Error In Server"});
+        }
+        else{
+            return res.json({Status: "Success", Result: result});
+        }
+    })
+})
+
 //-------------------------------------- Division End -------------------------------------
 
 //check the server is working
