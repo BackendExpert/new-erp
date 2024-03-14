@@ -39,7 +39,7 @@ const AddProject = () => {
                 </div>
               </div>
 
-              <div className="lg:grid grid-cols-2 gap-2">
+              <div className="lg:grid grid-cols-3 gap-2">
                 <div className="my-2">
                   <label htmlFor="">HOD Email</label>
                   <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Project Name"
