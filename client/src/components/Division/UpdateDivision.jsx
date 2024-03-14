@@ -33,7 +33,7 @@ const UpdateDivision = () => {
       axios.put('http://localhost:8081/UpdateDivision/' + id, updateDivision)
       .then(res => {
         if(res.data.Status === "Success"){
-          alert("Division Update Successful")
+          alert("Division Updated Successful")
           navigate('/Divisions');
         }
         else{
