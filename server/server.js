@@ -654,7 +654,7 @@ app.post('/AddProgram', (req,res) => {
         if(err) throw err;
 
         if(result.length > 0) {
-            return res.json({Error: "Program is Already Exists at Given Project Name"});
+            return res.json({Error: "Program is Already Exists at Given Program Name"});
         }
         else{
             const sql = "INSERT INTO program(title, location, hod, scientis1, scientist2, create_at, update_at) VALUES (?)";
@@ -756,6 +756,22 @@ app.get('/ProgramCount', (req, res) => {
 
 
 //------------------------------------------ Program End ---------------------------------------
+
+//----------------------------------------- Division Start ----------------------------
+
+app.post('/AddDivision', (req, res) => {
+    const checksql = "SELECT * FROM division WHERE did = ?";
+    connection.query(checksql, [req.body.division], (err, result) => {
+        if(err) throw err
+        
+        if(result.length > 0) {
+            return res.json({Error: "Division is Already Exists at Given Division Name"});
+        }
+    })
+
+})
+
+//-------------------------------------- Division End -------------------------------------
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
