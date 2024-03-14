@@ -32,10 +32,8 @@ const Divisions = () => {
     const headleDelete = (id) => {
         axios.delete('http://localhost:8081/DeleteDivision/' + id)
         .then(res => {
-            if(res.data.Status === "Success"){
-                alert("Division Deleted Successful")
-                window.location.reload();
-            }
+            alert("Division Deleted Successful")
+            window.location.reload();
         })
         .catch(err => console.log(err));
     }
