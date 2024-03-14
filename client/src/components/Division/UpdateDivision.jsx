@@ -25,6 +25,27 @@ const UpdateDivision = () => {
               <Link to={'/Divisions'}>
                   <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
               </Link>
+
+              <div className="my-2">
+                <form>
+                  <div className="lg:grid grid-cols-2 gap-2">
+
+                    <div className="my-2">
+                        <label htmlFor="">Division Name</label>
+                        <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New Division Name"
+                        onChange={e => SetDivisionData({...DivisionData, division:e.target.value})}/>
+                    </div>
+                    
+                    <div className="my-2">
+                        <label htmlFor="">Division Location</label>
+                        <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New Division Location"
+                        onChange={e => SetDivisionData({...DivisionData, division:e.target.value})}/>
+                    </div>
+
+                  </div>
+                </form>
+
+              </div>
           </div>
         </div>
 
