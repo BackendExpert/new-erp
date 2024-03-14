@@ -768,7 +768,25 @@ app.post('/AddDivision', (req, res) => {
             return res.json({Error: "Division is Already Exists at Given Division Name"});
         }
         else{
-            const sql = "INSERT INTO division() VALUES (?)"
+            const sql = "INSERT INTO division(title, location, email, create_at, update_at) VALUES (?)";
+            const create_at = new Date();
+            const update_at = new Date();
+            const value = [
+                req.body.division,
+                req.body.location,
+                req.body.hod,
+                create_at,
+                update_at
+            ]
+            
+            connection.query(sql, [value], (err, res) => {
+                if(err){
+                    return res.json({Error: "Error IN Server"});
+                }
+                else{
+                    return res.json({Status: "Success"});
+                }
+            })
         }
     })
 
