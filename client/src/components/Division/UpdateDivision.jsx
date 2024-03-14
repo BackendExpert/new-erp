@@ -31,17 +31,29 @@ const UpdateDivision = () => {
                   <div className="lg:grid grid-cols-2 gap-2">
 
                     <div className="my-2">
-                        <label htmlFor="">Division Name</label>
+                        <label htmlFor="">New Division Name</label>
                         <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New Division Name"
                         />
                     </div>
                     
                     <div className="my-2">
-                        <label htmlFor="">Division Location</label>
+                        <label htmlFor="">New Division Location</label>
                         <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New Division Location"
                         />
                     </div>
 
+                  </div>
+                  <div className="lg:grid grid-cols-1">
+
+                    <div className="my-2">
+                        <label htmlFor="">New HOD Name</label>
+                        <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New HOD Email"
+                        />
+                    </div>
+
+                  </div>
+                  <div className="">
+                      <button type="submit" className="rounded py-4 px-16 border border-green-500 text-green-500 font-semibold my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Update Division</button>
                   </div>
                 </form>
 
