@@ -25,7 +25,42 @@ const AddProject = () => {
 
           <div className="my-2">
             <form>
-              
+
+              <div className="lg:grid grid-cols-2 gap-2">
+                <div className="my-2">
+                  <label htmlFor="">Project Name</label>
+                  <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Project Name"
+                  />
+                </div>
+                <div className="my-2">
+                  <label htmlFor="">Division No</label>
+                  <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Division No"
+                  />
+                </div>
+              </div>
+
+              <div className="lg:grid grid-cols-2 gap-2">
+                <div className="my-2">
+                  <label htmlFor="">HOD Email</label>
+                  <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Project Name"
+                  />
+                </div>
+                <div className="my-2">
+                  <label htmlFor="">First Research Assistant</label>
+                  <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter First RA Email"
+                  />
+                </div>
+                <div className="my-2">
+                  <label htmlFor="">Second Research Assistant</label>
+                  <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Second RA Email"
+                  />
+                </div>
+              </div>
+
+              <div className="">
+                <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Add Project</button>
+              </div>
+
             </form>
           </div>
         </div>
