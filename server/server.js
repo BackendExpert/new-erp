@@ -794,6 +794,19 @@ app.post('/AddDivision', (req, res) => {
 
 })
 
+app.get('/DivisionView', (req, res) => {
+    sql = "SELECT * FROM division";
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error"})
+        }
+        else{
+            return res.json(result);
+        }
+        
+    })
+})
+
 //-------------------------------------- Division End -------------------------------------
 
 //check the server is working
