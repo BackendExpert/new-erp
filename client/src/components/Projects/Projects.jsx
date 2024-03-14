@@ -41,7 +41,7 @@ const Projects = () => {
   }
   else{
     useEffect(() => {
-        navigete('/UnAccess');
+        navigate('/UnAccess');
       }, [])
   }
 }

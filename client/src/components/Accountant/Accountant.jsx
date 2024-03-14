@@ -6,7 +6,7 @@ import Navlist from "../NavBar/navList"
 import AccData from "./AccData"
 
 const Accountant = ({children}) => {
-  const navigete = useNavigate();
+  const navigate = useNavigate();
 
   // this is for prevent unauthorized access for this page
   /*
@@ -20,7 +20,7 @@ const Accountant = ({children}) => {
   //   const RoleUser = secureLocalStorage.getItem("loginNew");
   
   //   if(RoleUser !== "Accountant"){
-  //     navigete('/');
+  //     navigate('/');
   //     localStorage.clear();
   //   }
   // }, []);
@@ -42,7 +42,7 @@ const Accountant = ({children}) => {
   }
   else{
     useEffect(() => {
-      navigete('/UnAccess');
+      navigate('/UnAccess');
     })
   }
 

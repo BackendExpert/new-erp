@@ -6,7 +6,7 @@ import Navlist from "../NavBar/navList"
 import LabData from "./LabData"
 
 const LabManager = () => {
-  const navigete = useNavigate();
+  const navigate = useNavigate();
 
   // this is for prevent unauthorized access for this page
   /*
@@ -20,7 +20,7 @@ const LabManager = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
   
   //   if(RoleUser !== "Labmanager"){
-  //     navigete('/');
+  //     navigate('/');
   //     localStorage.clear();
   //   }
   // }, []);
@@ -40,7 +40,7 @@ const LabManager = () => {
   }
   else{
     useEffect(() => {
-      navigete('/UnAccess');
+      navigate('/UnAccess');
     }, [])
   }
 

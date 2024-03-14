@@ -89,7 +89,7 @@ const AddProgram = () => {
     }
     else{
         useEffect(() => {
-            navigete('/UnAccess');
+            navigate('/UnAccess');
         }, [])
     }
 

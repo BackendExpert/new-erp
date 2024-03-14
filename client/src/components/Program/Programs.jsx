@@ -88,7 +88,7 @@ const Programs = () => {
     }
     else{
         useEffect(() => {
-            navigete('/UnAccess');
+            navigate('/UnAccess');
           }, [])
     }
 

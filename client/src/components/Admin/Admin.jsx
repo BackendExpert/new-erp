@@ -6,7 +6,7 @@ import { useEffect } from "react"
 import  secureLocalStorage  from  "react-secure-storage";
 
 const Admin = ({children}) => {
-  const navigete = useNavigate();
+  const navigate = useNavigate();
 
   // this is for prevent unauthorized access for this page
   /*
@@ -20,7 +20,7 @@ const Admin = ({children}) => {
   //   const RoleUser = secureLocalStorage.getItem("loginNew");
   
   //   if(RoleUser !== "Admin"){
-  //     navigete('/');
+  //     navigate('/');
   //     localStorage.clear();
   //   }
   // }, []);
@@ -46,7 +46,7 @@ const Admin = ({children}) => {
   }
   else{
     useEffect(() => {
-      navigete('/UnAccess');
+      navigate('/UnAccess');
     }, [])
   }
 }

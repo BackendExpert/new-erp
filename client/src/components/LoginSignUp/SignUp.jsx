@@ -3,8 +3,8 @@ import axios from 'axios'
 import { useState } from 'react'
 
 export const SignUp = () => {
-    //use navigete
-    const navigete = useNavigate();
+    //use navigate
+    const navigate = useNavigate();
 
     //veriables for cathch data
     const [dataForm, SetDataForm] = useState({
@@ -32,7 +32,7 @@ export const SignUp = () => {
                 role
             });
 
-            navigete('/');
+            navigate('/');
         }
         catch (err){
             console.log(err);

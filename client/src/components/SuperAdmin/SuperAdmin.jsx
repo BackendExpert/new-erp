@@ -7,7 +7,7 @@ import SummaryDash from "../SummaryDash/SummaryDash";
 import UnauthorizedAccess from "../UnauthorizedAccess";
 
 const SuperAdmin = ({children}) => {
-    const navigete = useNavigate();
+    const navigate = useNavigate();
 
     // this is for prevent unauthorized access for this page
     /*
@@ -21,7 +21,7 @@ const SuperAdmin = ({children}) => {
       const RoleUser = secureLocalStorage.getItem("loginNew");
     
     //   if(RoleUser !== "SuperAdmin"){
-    //     navigete('/');
+    //     navigate('/');
     //     localStorage.clear();
     //   }
     // }, []);
@@ -46,7 +46,7 @@ const SuperAdmin = ({children}) => {
   }
   else{
     useEffect(() => {
-      navigete('/UnAccess');
+      navigate('/UnAccess');
     }, [])
   }
 

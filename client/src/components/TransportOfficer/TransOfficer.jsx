@@ -7,7 +7,7 @@ import ToData from "./ToData";
 
 const TransOfficer = ({children}) => {
   
-  const navigete = useNavigate();
+  const navigate = useNavigate();
 
   // this is for prevent unauthorized access for this page
   /*
@@ -21,7 +21,7 @@ const TransOfficer = ({children}) => {
   //   const RoleUser = secureLocalStorage.getItem("loginNew");
   
   //   if(RoleUser !== "TO"){
-  //     navigete('/');
+  //     navigate('/');
   //     localStorage.clear();
   //   }
   // }, []);
@@ -44,7 +44,7 @@ const TransOfficer = ({children}) => {
   else{
     useEffect(() => {
       localStorage.clear()
-      navigete('/');
+      navigate('/');
     }, [])
   }
 

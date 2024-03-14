@@ -6,7 +6,7 @@ import Navlist from "../NavBar/navList"
 import LibData from "./LibData"
 
 const Librarian = ({children}) => {
-  const navigete = useNavigate();
+  const navigate = useNavigate();
 
   // this is for prevent unauthorized access for this page
   /*
@@ -20,7 +20,7 @@ const Librarian = ({children}) => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
   
   //   if(RoleUser !== "Librarian" || RoleUser !== "SuperAdmin"){
-  //     navigete('/');
+  //     navigate('/');
   //     localStorage.clear();
   //   }
   // }, []);
@@ -40,7 +40,7 @@ const Librarian = ({children}) => {
   }
   else{
     useEffect(() => {
-      navigete('/UnAccess');
+      navigate('/UnAccess');
     }, [])
   }
 

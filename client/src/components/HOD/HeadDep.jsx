@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 const HeadDep = ({children}) => {
 
-  const navigete = useNavigate();
+  const navigate = useNavigate();
 
   // this is for prevent unauthorized access for this page
   /*
@@ -20,7 +20,7 @@ const HeadDep = ({children}) => {
     
   
   //   // if(RoleUser !== "HOD"){
-  //   //   navigete('/');
+  //   //   navigate('/');
   //   //   localStorage.clear();
   //   // }
   // }, []);
@@ -40,7 +40,7 @@ const HeadDep = ({children}) => {
   }
   else{
     useEffect(() => {
-      navigete('/UnAccess');
+      navigate('/UnAccess');
     }, [])
   }
 }

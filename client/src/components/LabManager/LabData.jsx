@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
 const LabData = () => {
-    const navigete = useNavigate();
+    const navigate = useNavigate();
 
     // this is for prevent unauthorized access for this page
     /*
@@ -17,7 +17,7 @@ const LabData = () => {
     //   const RoleUser = secureLocalStorage.getItem("loginNew");
     
     //   if(RoleUser !== "Labmanager"){
-    //     navigete('/');
+    //     navigate('/');
     //     localStorage.clear();
     //   }
     // }, []);

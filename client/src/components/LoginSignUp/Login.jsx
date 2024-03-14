@@ -4,8 +4,8 @@ import axios from 'axios';
 import  secureLocalStorage  from  "react-secure-storage";
 
 const Login = () => {
-    //navigete
-    const navigete = useNavigate();
+    //navigate
+    const navigate = useNavigate();
     
     //veriables for cathch data
     const [LoginData, SetLoginData] = useState({
@@ -48,31 +48,31 @@ const Login = () => {
                     alert('Your Account has been Suspended. unauthorized activity has been detected.')
                     localStorage.clear();
                     console.log('Unauthorized Access. Logedout...');
-                    navigete('/');
+                    navigate('/');
                 }
                 else if(res.data.CheckRole[0].role === 'SuperAdmin'){
-                    navigete('/superAdmin');
+                    navigate('/superAdmin');
                 }
                 else if(res.data.CheckRole[0].role === "Admin"){
-                    navigete('/admin');
+                    navigate('/admin');
                 }
                 else if(res.data.CheckRole[0].role === "HOD"){
-                    navigete('/hod');
+                    navigate('/hod');
                 }
                 else if(res.data.CheckRole[0].role === "TO"){
-                    navigete('/to');
+                    navigate('/to');
                 }
                 else if(res.data.CheckRole[0].role === "Librarian"){
-                    navigete('/librarian');
+                    navigate('/librarian');
                 }
                 else if(res.data.CheckRole[0].role === "Labmanager"){
-                    navigete('/labManager');
+                    navigate('/labManager');
                 }
                 else if(res.data.CheckRole[0].role === "Accountant"){
-                    navigete('/accountant');
+                    navigate('/accountant');
                 }
                 else if(res.data.CheckRole[0].role === "User"){
-                    navigete('/user');
+                    navigate('/user');
                 }
                 else{
                     alert("ERROR");

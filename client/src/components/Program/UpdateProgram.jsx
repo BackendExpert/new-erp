@@ -106,7 +106,7 @@ const UpdateProgram = () => {
     }
     else{
       useEffect(() => {
-        navigete('/UnAccess');
+        navigate('/UnAccess');
       }, [])
     }
 

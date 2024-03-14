@@ -4,7 +4,7 @@ import secureLocalStorage from "react-secure-storage"
 
 const ToData = () => {
       
-  const navigete = useNavigate();
+  const navigate = useNavigate();
 
   // this is for prevent unauthorized access for this page
   /*
@@ -18,7 +18,7 @@ const ToData = () => {
   //   const RoleUser = secureLocalStorage.getItem("loginNew");
   
   //   if(RoleUser !== "TO"){
-  //     navigete('/');
+  //     navigate('/');
   //     localStorage.clear();
   //   }
   // }, []);
