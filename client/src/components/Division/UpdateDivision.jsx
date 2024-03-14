@@ -33,13 +33,13 @@ const UpdateDivision = () => {
                     <div className="my-2">
                         <label htmlFor="">Division Name</label>
                         <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New Division Name"
-                        onChange={e => SetDivisionData({...DivisionData, division:e.target.value})}/>
+                        />
                     </div>
                     
                     <div className="my-2">
                         <label htmlFor="">Division Location</label>
                         <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New Division Location"
-                        onChange={e => SetDivisionData({...DivisionData, division:e.target.value})}/>
+                        />
                     </div>
 
                   </div>
