@@ -31,7 +31,7 @@ const Programs = () => {
     const handleDelete = (id) => {
         axios.delete('http://localhost:8081/DeleteProgram/' + id)
         .then(res => {
-            alert("Division Deleted Successful")
+            alert("Program Deleted Successful")
             window.location.reload();
         })
         .catch(err => console.log(err));
