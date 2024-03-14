@@ -33,7 +33,10 @@ const UpdateDivision = () => {
       .then(res => {
         if(res.data.Status === "Success"){
           alert("Division Update Successful")
-          
+          navigate('/Divisions');
+        }
+        else{
+          alert(res.data.Error);
         }
       })
     }, [])
