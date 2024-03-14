@@ -802,8 +802,7 @@ app.get('/DivisionView', (req, res) => {
         }
         else{
             return res.json(result);
-        }
-        
+        }        
     })
 })
 
