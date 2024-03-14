@@ -7,7 +7,7 @@ const SideListAdmin = () => {
 
     const sidemenu = [
         {name: "Employess",  link: "/Employee", icon: <Icons name="people" size="large"></Icons>},
-        {name: "Divisions",  link: "#", icon: <Icons name="business" size="large"></Icons>},
+        {name: "Divisions",  link: "/Divisions", icon: <Icons name="business" size="large"></Icons>},
         {name: "Projects",  link: "/Projects", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "Program",  link: "/Programs", icon: <Icons name="book" size="large"></Icons>},
         {name: "Designation",  link: "/Designations", icon: <Icons name="easel" size="large"></Icons>},
