@@ -19,7 +19,16 @@ const Divisions = () => {
         }
     }
 
-    
+    //fetch divistion data from backend
+    const [divisionData, SetdivisionData] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/DivisionView')
+        .then(res => SetdivisionData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
+
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
         return (
