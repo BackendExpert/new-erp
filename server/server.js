@@ -834,7 +834,12 @@ app.put('/UpdateDivision', (req, res) => {
             const sql = "UPDATE division SET title = ?, location = ?, email = ?, update_at = ? WHERE did = ?";
             const update_at = new Date();
             connection.query(sql, [req.body.division, req.body.location, req.body.hod, update_at, UpdateId], (err, result) => {
-                
+                if(err){
+                    return res.json({Error: "Error in Server"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
             })
         }
     })
