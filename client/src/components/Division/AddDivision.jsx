@@ -17,6 +17,16 @@ const AddDivision = () => {
 
     const headleSubmit = (e) => {
         e.preventDefault(); 
+        axios.post('http://localhost:8081/AddDivision', DivisionData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Division Add Successsful");
+                navigate('/Divisions');
+            }
+            else{
+                alert(res.data.Error);
+            }
+        })
     }
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
