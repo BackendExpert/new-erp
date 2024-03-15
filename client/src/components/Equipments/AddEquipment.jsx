@@ -26,6 +26,44 @@ const AddEquipment = () => {
                     <Link to={'/Equipments'}>
                         <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </Link>
+
+                    <div className="my-2">
+                        <form>
+
+                            <div className="lg:grid grid-cols-2 gap-2">
+                                <div className="my-2">
+                                    <label htmlFor="">Inventory No:</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Inventory No"
+                                    />
+                                </div>
+
+                                <div className="my-2">
+                                    <label htmlFor="">Equipment Name:</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="lg:grid grid-cols-3 gap-2">
+                                <div className="my-2">
+                                    <label htmlFor="">Purchase Value:</label>
+                                    <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Purchase Date:</label>
+                                    <input type="date" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
+                                    />
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Location:</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
+                                    />
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
         )
