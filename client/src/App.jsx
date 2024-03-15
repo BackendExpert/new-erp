@@ -33,6 +33,7 @@ import UpdateProject from "./components/Projects/UpdateProject"
 import AddDivision from "./components/Division/AddDivision"
 import UpdateDivision from "./components/Division/UpdateDivision"
 import Divisions from "./components/Division/Divisions"
+import AddEquipment from "./components/Equipments/AddEquipment"
 
 export default function App() {
   return (
@@ -104,6 +105,8 @@ export default function App() {
         <Route path="/Divisions" element={<PrivateRoute><Divisions /></PrivateRoute>} />
         <Route path="/UpdateDivision/:id" element={<PrivateRoute><UpdateDivision /></PrivateRoute>} />
         
+        {/* Equipments */}
+        <Route path="/AddEquipment" element={<PrivateRoute><AddEquipment /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
