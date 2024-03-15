@@ -45,6 +45,7 @@ const AddEquipment = () => {
                             </div>
 
                             <div className="lg:grid grid-cols-3 gap-2">
+
                                 <div className="my-2">
                                     <label htmlFor="">Purchase Value:</label>
                                     <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purchase Value"
@@ -60,6 +61,10 @@ const AddEquipment = () => {
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Location"
                                     />
                                 </div>
+
+                            </div>
+                            <div className="">
+                                <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Add Equipment</button>
                             </div>
 
                         </form>
