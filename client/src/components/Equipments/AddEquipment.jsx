@@ -17,6 +17,20 @@ const AddEquipment = () => {
         location:'',
     })
 
+    const headleSubmit = (e) => {
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/AddEquipment', EquipmentData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Equipment Added Successful")
+                navigate('/Equipments');
+            }
+            else{
+                alert(res.data.Error);
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
         return (
             <div className="bg-gray-200 py-4">
@@ -28,7 +42,7 @@ const AddEquipment = () => {
                     </Link>
 
                     <div className="my-2">
-                        <form>
+                        <form onSubmit={headleSubmit}>
 
                             <div className="lg:grid grid-cols-2 gap-2">
                                 <div className="my-2">
