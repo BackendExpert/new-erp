@@ -9,10 +9,17 @@ const AddEquipment = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    
-  return (
-    <div>AddEquipment</div>
-  )
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
+        return (
+            <div>AddEquipment</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
+
 }
 
 export default AddEquipment
