@@ -34,6 +34,8 @@ import AddDivision from "./components/Division/AddDivision"
 import UpdateDivision from "./components/Division/UpdateDivision"
 import Divisions from "./components/Division/Divisions"
 import AddEquipment from "./components/Equipments/AddEquipment"
+import Equipments from "./components/Equipments/Equipments"
+import UpdateEquipment from "./components/Equipments/UpdateEquipment"
 
 export default function App() {
   return (
@@ -107,6 +109,8 @@ export default function App() {
         
         {/* Equipments */}
         <Route path="/AddEquipment" element={<PrivateRoute><AddEquipment /></PrivateRoute>} />
+        <Route path="/Equipments" element={<PrivateRoute><Equipments /></PrivateRoute>} />
+        <Route path="/UpdateEquipment/:id" element={<PrivateRoute><UpdateEquipment /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
