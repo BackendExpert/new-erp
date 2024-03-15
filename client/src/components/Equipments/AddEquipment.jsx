@@ -10,7 +10,11 @@ const AddEquipment = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
     const [EquipmentData, SetEquipmentData] = useState({
-        
+        invno:'',
+        ename:'',
+        evalue:'',
+        pdate:'',
+        location:'',
     })
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
