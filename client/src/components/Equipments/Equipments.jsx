@@ -27,7 +27,7 @@ const Equipments = () => {
                     <hr className="mb-4" />
                         <div className="lg:flex">
                             <button onClick={headleBack} className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
-                            <Link to={'/AddDivision'}>
+                            <Link to={'/AddEquipment'}>
                                 <button className="lg:my-0 my-2 border border-green-500 py-3 px-16 rounded text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl lg:mx-2">Add New Division</button>
                             </Link>
                         </div>
