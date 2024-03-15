@@ -47,17 +47,17 @@ const AddEquipment = () => {
                             <div className="lg:grid grid-cols-3 gap-2">
                                 <div className="my-2">
                                     <label htmlFor="">Purchase Value:</label>
-                                    <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
+                                    <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purchase Value"
                                     />
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Purchase Date:</label>
-                                    <input type="date" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
+                                    <input type="date" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purchase Date"
                                     />
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Location:</label>
-                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Location"
                                     />
                                 </div>
                             </div>
