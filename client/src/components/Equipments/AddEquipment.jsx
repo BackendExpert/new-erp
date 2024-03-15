@@ -9,6 +9,10 @@ const AddEquipment = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const [EquipmentData, SetEquipmentData] = useState({
+        
+    })
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
         return (
             <div>AddEquipment</div>
