@@ -889,6 +889,18 @@ app.post('/AddEquipment', (req, res) => {
 
 })
 
+app.get('/Equipments', (req, res) => {
+    const sql = "SELECT * FROM equipment";
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error On server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //------------------------------------- Equipment End -------------------------------------
 
 //check the server is working
