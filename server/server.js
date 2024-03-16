@@ -862,7 +862,28 @@ app.post('/AddEquipment', (req, res) => {
             return res.json({Error: "Equipment Number Already Exists"})
         }
         else{
-            const sql = "INSERT INTO equipment()"
+            const sql = "INSERT INTO equipment(ename, evalue, pdate, location, invno, create_at, update_at) VALUES(?)";
+            const create_at = new Date();
+            const update_at = new Date();
+
+            const values = [
+                req.body.ename,
+                req.body.evalue,
+                req.body.pdate,
+                req.body.location,
+                req.body.invno,
+                create_at,
+                update_at                
+            ]
+
+            connection.query(sql, [values], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error in Server"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
         }
     })
 
