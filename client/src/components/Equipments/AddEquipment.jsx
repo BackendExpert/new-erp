@@ -48,13 +48,13 @@ const AddEquipment = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Inventory No:</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Inventory No"
-                                    />
+                                    onChange={e => SetEquipmentData({...EquipmentData, invno:e.target.value})}/>
                                 </div>
 
                                 <div className="my-2">
                                     <label htmlFor="">Equipment Name:</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
-                                    />
+                                    onChange={e => SetEquipmentData({...EquipmentData, ename:e.target.value})}/>
                                 </div>
                             </div>
 
@@ -63,17 +63,17 @@ const AddEquipment = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Purchase Value:</label>
                                     <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purchase Value"
-                                    />
+                                    onChange={e => SetEquipmentData({...EquipmentData, evalue:e.target.value})}/>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Purchase Date:</label>
                                     <input type="date" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purchase Date"
-                                    />
+                                    onChange={e => SetEquipmentData({...EquipmentData, pdate:e.target.value})}/>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Location:</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Location"
-                                    />
+                                    onChange={e => SetEquipmentData({...EquipmentData, location:e.target.value})}/>
                                 </div>
 
                             </div>
