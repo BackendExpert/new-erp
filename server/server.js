@@ -843,7 +843,7 @@ app.delete('/DeleteDivision/:id', (req, res) => {
 
     connection.query(sql, [deleteId], (err, result) => {
         if(err) 
-            console.log({Message: "Error inside Server"})
+            console.log({Message: "Error inside Server "})
         else{
             return res.json(result)
         }
@@ -852,6 +852,21 @@ app.delete('/DeleteDivision/:id', (req, res) => {
 //-------------------------------------- Division End -------------------------------------
 
 //------------------------------------- Equipments Start -----------------------------------
+
+app.post('/AddEquipment', (req, res) => {
+    const checksql = "SELECT * FROM equipment WHERE invno = ?";
+    connection.query(checksql, [req.body.invno], (err, result) => {
+        if(err) throw err
+
+        if(result.length > 0) {
+            return res.json({Error: "Equipment Number Already Exists"})
+        }
+        else{
+            const sql = "INSERT INTO equipment()"
+        }
+    })
+
+})
 
 //------------------------------------- Equipment End -------------------------------------
 
