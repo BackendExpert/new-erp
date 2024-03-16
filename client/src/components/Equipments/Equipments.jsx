@@ -54,7 +54,26 @@ const Equipments = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    {
+                                        Equipment.map((equ, index) => {
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{equ.id}</td>
+                                                    <td className='px-6 py-4 font-bold'>{equ.invno}</td>
+                                                    <td className='px-6 py-4 font-bold'>{equ.ename}</td>
+                                                    <td className='px-6 py-4 font-bold'>{equ.evalue}</td>
+                                                    <td className='px-6 py-4 font-bold'>{equ.pdate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{equ.location}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <Link to={'/UpdateEquipment/' + equ.id}>
+                                                            <button className="rounded border border-blue-500 text-blue-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Update</button>
+                                                        </Link>
+                                                        <button /*onClick={() => headleDelete(division.did)}*/ className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        })
+                                    }
                                 </tbody>
                             </table>
                         </div>
