@@ -851,5 +851,9 @@ app.delete('/DeleteDivision/:id', (req, res) => {
 })
 //-------------------------------------- Division End -------------------------------------
 
+//------------------------------------- Equipments Start -----------------------------------
+
+//------------------------------------- Equipment End -------------------------------------
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
