@@ -19,6 +19,14 @@ const Equipments = () => {
         }
     }
 
+    //fetch data from backend
+    const [Equipment, SetEquipment] = useState([]);
+    useEffect(() => {
+        axios.get('http://localhost:8081/Equipments')
+        .then(res => SetEquipment(res.data))
+        .catch(err => console.log(err));
+    }, [])
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
         return (
             <div className="bg-gray-200 py-4">
