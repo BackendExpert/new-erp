@@ -1,11 +1,13 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const UpdateEquipment = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
+
+    const {id} = useParams();
 
     const [UpdateEquipment, SetEquipment] = useState({
       invno:'',
@@ -14,6 +16,20 @@ const UpdateEquipment = () => {
       pdate:'',
       location:'',
     })
+
+    //fetch data
+    useEffect(() => {
+      axios.get('http://localhost:8081/EquiData/' + id)
+        .then(res => 
+            SetEquipment({...UpdateEquipment, invno:res.data.Result[0].invno,
+              ename:res.data.Result[0].ename,
+              evalue:res.data.Result[0].evalue,
+              pdate:res.data.Result[0].pdate,
+              location:res.data.Result[0].location
+            })
+          )
+          .catch(err => console.log(err))
+    }, [])
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
       return (
