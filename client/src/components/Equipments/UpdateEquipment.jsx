@@ -7,6 +7,14 @@ const UpdateEquipment = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const [UpdateEquipment, SetEquipment] = useState({
+      invno:'',
+      ename:'',
+      evalue:'',
+      pdate:'',
+      location:'',
+    })
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
       return (
         <div className="bg-gray-200 py-4">
