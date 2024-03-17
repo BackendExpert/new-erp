@@ -6,9 +6,18 @@ import axios from "axios";
 const UpdateEquipment = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
-  return (
-    <div>UpdateEquipment</div>
-  )
+
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
+      return (
+        <div>UpdateEquipment</div>
+      )
+    }
+    else{
+      useEffect(() => {
+        navigate('/UnAccess');
+      }, [])
+    }
+
 }
 
 export default UpdateEquipment
