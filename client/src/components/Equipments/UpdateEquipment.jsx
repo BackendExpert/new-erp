@@ -53,13 +53,13 @@ const UpdateEquipment = () => {
                   </div>
 
                   <div className="my-2">
-                    <label htmlFor="">Inventory No:</label>
-                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Inventory No"
-                    value={UpdateEquipment.invno} onChange={e => SetEquipment({...UpdateEquipment, invno:e.target.value})}/>
+                    <label htmlFor="">Equipment Name:</label>
+                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
+                    value={UpdateEquipment.ename} onChange={e => SetEquipment({...UpdateEquipment, invno:e.target.ename})}/>
                   </div>
 
                 </div>
-                
+
               </form>
             </div>
           </div>
