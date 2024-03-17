@@ -901,6 +901,20 @@ app.get('/Equipments', (req, res) => {
     })
 })
 
+app.get('/EquiData', (req, res) => {
+    const equiID = req.params.id;
+    const sql = "SELECT * FROM equipment WHERE id = ?";
+
+    connection.query(sql, [equiID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success", Result: result})
+        }
+    })
+})
+
 //------------------------------------- Equipment End -------------------------------------
 
 //check the server is working
