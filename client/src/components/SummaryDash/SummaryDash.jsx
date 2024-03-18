@@ -89,7 +89,7 @@ const SummaryDash = () => {
   
   return (
     <div>
-       <div className="lg:grid grid-cols-3 gap-2 my-4">
+       <div className="lg:grid grid-cols-3 gap-4 my-3">
       {
         DataList.map((data) => {
           return (
