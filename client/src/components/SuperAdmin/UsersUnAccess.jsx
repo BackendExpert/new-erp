@@ -1,12 +1,22 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const UsersUnAccess = () => {
     const navigate = useNavigate();
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const {id} = useParams();
+
+    //fetch data from Unauthorized table in database
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/UnAccessUser/' + id)
+        .then(res => {
+            
+        })
+    }, [])
 
     if(RoleUser === "SuperAdmin"){
         return (
