@@ -148,7 +148,7 @@ app.post('/UnAccess', (req, res) => {
 
 // View unAccess Users
 app.get('/ViewUnAccessUsers', (req, res) => {
-    const sql = "SELECT * FROM users WHERE is_active = 0 ORDER BY UserId DESC LIMIT 10";
+    const sql = "SELECT * FROM unauthorized";
     connection.query(sql, (err, result) => {
         if(err){
             return res.json({Error: "Error on Server"})
@@ -158,6 +158,11 @@ app.get('/ViewUnAccessUsers', (req, res) => {
         }
     })
 })
+
+// app.get('/UnAccessUser/:id', (req, res) => {
+//     const UnAccessID = req.params.id
+//     const sql = "SELECT * FROM unauthorized WHERE "
+// })
 
 // Count Admins Roles
 app.get('/AdminCount', (req, res) => {
