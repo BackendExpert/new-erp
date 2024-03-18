@@ -146,6 +146,11 @@ app.post('/UnAccess', (req, res) => {
     }) 
 })
 
+// View unAccess Users
+app.get('/ViewUnAccessUsers', (req, res) => {
+    const sql = "";
+})
+
 // Count Admins Roles
 app.get('/AdminCount', (req, res) => {
     const sql = "SELECT COUNT(UserId) AS count FROM users WHERE role = 'Admin'";
