@@ -189,6 +189,15 @@ app.get('/AdminCount', (req, res) => {
 });
 
 
+//accout reactivation
+app.put('/ReactiveAccount/:id', (req, res) => {
+    const AccountID = req.params.id;
+    console.log(req.body);
+
+    const sql = "DELETE FROM unauthorized WHERE email = ?";
+    
+})
+
 //---------------------------- LIBRARY Start ---------------------------------------------------------
 
 // Count Books 

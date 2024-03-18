@@ -31,7 +31,7 @@ const UsersUnAccess = () => {
 
     const headleSubmit = (e) => {
         e.preventDefault();
-        axios.put('http://localhost:8081/ReactiveAccount/' + id)
+        axios.put('http://localhost:8081/ReactiveAccount/' + id, unAccessUser)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Account Reactivation is Successful");
