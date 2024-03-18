@@ -40,7 +40,9 @@ const UsersUnAccess = () => {
                     </Link>
                     
                     <div className="my-4">
-                        <p>Name : </p>
+                        <p>Email : </p>
+                        <p>Role : </p>
+                        <p>Current Status : <span>Deactive</span></p>
                     </div>
 
                 </div>
