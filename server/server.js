@@ -962,6 +962,21 @@ app.delete('/DeleteEqui/:id', (req,res) => {
     })
 })
 
+app.get('/DivisionCount', (req, res) => {
+    const sql = "SELECT COUNT(id) AS equi FROM equipment";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ equi : results[0].equi }); // Send count in JSON format
+    });
+})
+
 //------------------------------------- Equipment End -------------------------------------
 
 //check the server is working
