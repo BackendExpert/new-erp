@@ -33,7 +33,11 @@ const UnAccessUsers = () => {
                 <tbody>                    
                     {
                         unUsers.map((user, index) => {
-                            
+                            return (
+                                <tr key={index}>
+                                    
+                                </tr>
+                            )
                         })
                     }
                 </tbody>
