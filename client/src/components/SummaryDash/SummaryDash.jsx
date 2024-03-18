@@ -103,6 +103,7 @@ const SummaryDash = () => {
        <div className="lg:grid grid-cols-3 gap-4 my-3">
       {
         DataList.map((data, index) => {
+            //for SuperAdmin
             if(RoleUser === "SuperAdmin"){
               return (           
                 <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
@@ -118,6 +119,7 @@ const SummaryDash = () => {
                 </div>       
               )
             }
+            //for Admin
             if(RoleUser === "Admin"){
               return (           
                 <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
@@ -133,8 +135,9 @@ const SummaryDash = () => {
                 </div>            
               )
             }
+            //For Librarian
             if(RoleUser === "Librarian"){
-              if(data.id === 2){
+              if(data.id === 2 && data.id === 9){
                 return (           
                   <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
                     <div className="flex justify-between">
