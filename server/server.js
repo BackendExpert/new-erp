@@ -930,7 +930,20 @@ app.put('/UpdateEqui/:id', (req, res) => {
             return res.json({Status: "Success"})
         }
     })
+})
 
+app.delete('/DeleteEqui/:id', (req,res) => {
+    const DeleteId = req.params.id;
+    const sql = "DELETE FROM equipment WHERE id = ?";
+    
+    connection.query(sql, [DeleteId], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 //------------------------------------- Equipment End -------------------------------------

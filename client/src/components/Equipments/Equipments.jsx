@@ -34,8 +34,7 @@ const Equipments = () => {
             alert("Equipment Deleted Successful")
             window.location.reload();
         })
-        .catch(err => console.log(err));
-        
+        .catch(err => console.log(err));        
     }
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
