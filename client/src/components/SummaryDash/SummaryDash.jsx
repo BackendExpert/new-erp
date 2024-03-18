@@ -95,7 +95,19 @@ const SummaryDash = () => {
       {
         DataList.map((data, index) => {
             if(RoleUser === "SuperAdmin"){
-              
+              return (           
+                <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
+                  <div className="flex justify-between">
+                    <div className="flex">
+                      <p>{data.icons}</p>
+                      <p className="text-2xl pl-4">{data.name}</p>
+                    </div>
+                    <div className="">
+                      <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
+                    </div>
+                  </div>
+                </div>            
+              )
             }
 
           return (           
