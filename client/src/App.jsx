@@ -49,7 +49,7 @@ export default function App() {
         {/* SuperAdmin */}
         <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
         {/* Route for View all Unauthorized users on System */}
-        <Route path="/Unauthorizedusers" element={<PrivateRoute><UsersUnAccess /></PrivateRoute>} />
+        <Route path="/Unauthorizedusers/:id" element={<PrivateRoute><UsersUnAccess /></PrivateRoute>} />
 
         {/* Admin */}
         <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
