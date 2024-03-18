@@ -8,11 +8,26 @@ const Journals = () => {
 
     const [journalView, SetjournalView] = useState([])
 
+    //fetch data to view
     useEffect(() => {
         axios.get('http://localhost:8081/ViewJournal')
         .then(res => SetjournalView(res.data))
         .catch(err => console.log(err))
     },[])
+
+    //delete Journals According to id
+    const headleDelete = (id) => {
+        axios.delete('http://localhost:8081/DeleteJournal/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Journal Deleted Successful")
+                window.location.reload();
+            }
+            else{
+                alert(res.data.Error);
+            }
+        })
+    }
 
     //check the current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
@@ -58,7 +73,7 @@ const Journals = () => {
                                             <td className='px-6 py-4 font-bold'>{journal.impact}</td>
                                             <td className='px-6 py-4 font-bold'>{journal.IStatus}</td>
                                             <td className='px-6 py-4 font-bold'>
-                                                
+                                                <button onClick={() => headleDelete(equ.id)} className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
                                             </td>
                                         </tr>
                                     )
