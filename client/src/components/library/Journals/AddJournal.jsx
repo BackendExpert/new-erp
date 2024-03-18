@@ -6,6 +6,29 @@ import secureLocalStorage from 'react-secure-storage'
 const AddJournal = () => {
     const navigate = useNavigate()
 
+    const [journalData, SetjournalData] = useState({
+        title:'',
+        category:'',
+        publisher:'',
+        pyear:'',
+        impact:'',
+        IStatus:''
+    })
+
+    const headleSubmit = (e) =>{
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/AddJournal', journalData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Journal Added Successful")
+                navigate('/Journals')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     //check the current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
@@ -20,7 +43,7 @@ const AddJournal = () => {
                     </Link>
 
                     <div className="my-2">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-2 my-2">
                                 <div className="">
                                     <label htmlFor="">Title</label>
