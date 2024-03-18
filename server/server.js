@@ -335,6 +335,7 @@ app.get('/ViewJournal', (req, res) => {
 
 app.delete('/DeleteJournal/:id', (req, res) =>{
     const DeleteID = req.params.id;
+    console.log(DeleteID)
     const sql = "DELETE FROM journal WHERE JID = ?"
 
     connection.query(sql, [DeleteID], (err, result) => {
