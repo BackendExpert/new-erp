@@ -126,7 +126,8 @@ const SummaryDash = () => {
             }
         })
       }
-        <br />      
+        <br />     
+        </div> 
         <div className="">
             {RoleUser === "SuperAdmin" ? (
               <div>
@@ -137,7 +138,7 @@ const SummaryDash = () => {
             )}
         </div>
 
-      </div>
+      
     </div>
   )
 }
