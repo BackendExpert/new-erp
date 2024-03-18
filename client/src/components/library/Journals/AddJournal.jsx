@@ -30,7 +30,7 @@ const AddJournal = () => {
 
                                 <div className="">
                                     <label htmlFor="">Category</label>
-                                    <select className="w-full h-12 my-2 border border-blue-500 rounded"
+                                    <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2"
                                     >
                                         <option >Select Option</option>
                                         <option value='Non-Refereed Journal'>Non-Refereed Journal</option>
@@ -59,14 +59,17 @@ const AddJournal = () => {
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Index Status</label>
-                                    <select className="w-full h-12 my-2 border border-blue-500 rounded"
+                                    <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2"
                                     >
-                                    <option >Select Option</option>
-                                    <option value='SCI'>SCI</option>
-                                    <option value='SCI Expanded'>SCI Expanded</option>
-                                    <option value='Non-Indexed'>Non-Indexed</option>
+                                        <option >Select Option</option>
+                                        <option value='SCI'>SCI</option>
+                                        <option value='SCI Expanded'>SCI Expanded</option>
+                                        <option value='Non-Indexed'>Non-Indexed</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div className="">
+                                <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Add Journal</button>
                             </div>
 
 
