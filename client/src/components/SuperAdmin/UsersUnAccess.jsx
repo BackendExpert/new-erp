@@ -30,7 +30,17 @@ const UsersUnAccess = () => {
     }, [])
 
     const headleSubmit = (e) => {
-        
+        e.preventDefault();
+        axios.put('http://localhost:8081/ReactiveAccount/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Account Reactivation is Successful");
+                navigate('/SuperAdmin');
+            }
+            else{
+                alert(res.data.Error);
+            }
+        })
     }
 
     if(RoleUser === "SuperAdmin"){
