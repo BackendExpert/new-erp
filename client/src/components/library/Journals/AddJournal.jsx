@@ -9,10 +9,17 @@ const AddJournal = () => {
     //check the current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    if(R)
-  return (
-    <div>AddJournal</div>
-  )
+    if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
+        return (
+            <div>AddJournal</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
+
 }
 
 export default AddJournal
