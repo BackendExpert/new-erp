@@ -921,7 +921,12 @@ app.put('/Equipments/:id', (req, res) => {
     const sql = "UPDATE equipment SET evalue = ?, location = ?, update_at = ? WHERE id = ?";
 
     connection.query(sql, [req.body.evalue, req.body.location, update_at, EquiId], (err, result) => {
-        
+        if(err){
+            return res.json({Error: "Error On Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
     })
 
 })
