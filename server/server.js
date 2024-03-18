@@ -321,6 +321,17 @@ app.post('/AddJournal', (req, res) => {
     })
 })
 
+app.get('/ViewJournal', (req, res) => {
+    const sql = "SELECT * FROM journal";
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error On Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
