@@ -17,6 +17,7 @@ const SummaryDash = () => {
   const [program, setProgram] = useState(0);
   const [division, setDivision] = useState(0);
   const [equipment, setEquipment] = useState(0);
+  const [journal, setJournal] = useState(0);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -70,8 +71,15 @@ const SummaryDash = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
-    };
 
+      try {
+        const JournalCount = await axios.get('http://localhost:8081/CountJournal');
+        setJournal(JournalCount.data.jour);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    
     
     fetchData();
   }, []);
@@ -84,6 +92,7 @@ const SummaryDash = () => {
     {id: 5, name:"Viehicles" , value: <CountUp end={viehicle}/>, icons: <Icons name="car" size="large"/>, style:"bg-red-700" },
     {id: 6, name:"Program" , value: <CountUp end={program}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-green-500" },
     {id: 7, name:"Divisions" , value: <CountUp end={division}/>, icons: <Icons name="business" size="large"/>, style:"bg-yellow-500" },
+    {id: 8, name:"Equipments" , value: <CountUp end={equipment}/>, icons: <Icons name="build" size="large"/>, style:"bg-purple-500" },
     {id: 8, name:"Equipments" , value: <CountUp end={equipment}/>, icons: <Icons name="build" size="large"/>, style:"bg-purple-500" },
   ]
 
