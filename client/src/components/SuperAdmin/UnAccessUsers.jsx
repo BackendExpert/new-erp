@@ -27,7 +27,6 @@ const UnAccessUsers = () => {
                     <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
                         <tr className='text-blue-500'>
                             <th scope='col' className='px-6 py-3'>Email</th>
-                            <th scope='col' className='px-6 py-3'>Username</th>
                             <th scope='col' className='px-6 py-3'>User Role</th>                            
                             <th scope='col' className='px-6 py-3'>Action</th>
                         </tr>
@@ -38,7 +37,6 @@ const UnAccessUsers = () => {
                                 return (
                                     <tr key={index} className="text-center">
                                         <td className='px-6 py-4'>{user.email}</td>
-                                        <td className='px-6 py-4'>{user.username}</td>
                                         <td className='px-6 py-4'>{user.role}</td>
                                         <td className='px-6 py-4'>
                                             <div className="flex pl-8">
