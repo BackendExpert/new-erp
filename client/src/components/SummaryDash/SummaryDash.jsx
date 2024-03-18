@@ -84,7 +84,7 @@ const SummaryDash = () => {
     {name:"Viehicles" , value: <CountUp end={viehicle}/>, icons: <Icons name="car" size="large"/>, style:"bg-red-700" },
     {name:"Program" , value: <CountUp end={program}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-green-500" },
     {name:"Divisions" , value: <CountUp end={division}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-yellow-500" },
-    {name:"Divisions" , value: <CountUp end={division}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-yellow-500" },
+    {name:"Equipments" , value: <CountUp end={equipment}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-purple-500" },
   ]
   
   return (
