@@ -195,7 +195,25 @@ app.put('/ReactiveAccount/:id', (req, res) => {
     console.log(req.body);
 
     const sql = "DELETE FROM unauthorized WHERE email = ?";
-    
+    connection.query(sql, [req.body.email], (err, result) => {
+        if(err){
+            return res.json({Error: "Error in Server"})
+        }
+        else{
+            const updateUser = "UPDATE users SET is_active = ? WHERE email = ?";
+            const is_active = 1;
+
+            connection.query(updateUser, [is_active, req.body.email], (err, result) => {
+                if(err){
+                    return res.json({Error: "ERROR on Server"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
+        }
+    })
+
 })
 
 //---------------------------- LIBRARY Start ---------------------------------------------------------
