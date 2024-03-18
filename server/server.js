@@ -294,6 +294,32 @@ app.get('/ReadBooks', (req, res) => {
     });
 })
 
+// AddJournal
+
+app.post('/AddJournal', (req, res) => {
+    const sql = "INSERT INTO journal(title, category, publisher, pyear, impact, IStatus, create_at, update_at) VALUES (?)";
+    const createTime = new Date();
+    const updateTime = new Date();
+    const value = [
+        req.body.title,
+        req.body.category,
+        req.body.publisher,
+        req.body.pyear,
+        req.body.impact,
+        req.body.IStatus,
+        createTime,
+        updateTime
+    ]
+
+    connection.query(sql, [value], (err, result) => {
+        if(err){
+            return res.json({Error: "Error On Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
 
 //---------------------------- LIBRARY END ---------------------------------------------------------
 

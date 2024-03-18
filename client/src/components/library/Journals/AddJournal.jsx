@@ -48,13 +48,13 @@ const AddJournal = () => {
                                 <div className="">
                                     <label htmlFor="">Title</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Journal Title"
-                                    />
+                                    onChange={e => SetjournalData({...journalData, title:e.target.value})}/>
                                 </div>
 
                                 <div className="">
                                     <label htmlFor="">Category</label>
                                     <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2"
-                                    >
+                                    onChange={e => SetjournalData({...journalData, category:e.target.value})}>
                                         <option >Select Option</option>
                                         <option value='Non-Refereed Journal'>Non-Refereed Journal</option>
                                         <option value='International Journal'>International Journal</option>
@@ -66,24 +66,24 @@ const AddJournal = () => {
                                 <div className="">
                                     <label htmlFor="">Publisher</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Publisher"
-                                    />
+                                    onChange={e => SetjournalData({...journalData, publisher:e.target.value})}/>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Year of Publication</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Year"
-                                    />
+                                    onChange={e => SetjournalData({...journalData, pyear:e.target.value})}/>
                                 </div>
                             </div>
                             <div className="lg:grid grid-cols-2 gap-2 my-2">
                                 <div className="">
                                     <label htmlFor="">Impact Factor</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Value"
-                                    />
+                                    onChange={e => SetjournalData({...journalData, impact:e.target.value})}/>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Index Status</label>
                                     <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2"
-                                    >
+                                    onChange={e => SetjournalData({...journalData, IStatus:e.target.value})}>
                                         <option >Select Option</option>
                                         <option value='SCI'>SCI</option>
                                         <option value='SCI Expanded'>SCI Expanded</option>
