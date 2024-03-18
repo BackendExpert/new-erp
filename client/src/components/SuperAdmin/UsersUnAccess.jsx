@@ -44,7 +44,7 @@ const UsersUnAccess = () => {
                     <div className="my-4">
                         <p>Email : <span className="font-semibold"> {unAccessUser.email}</span></p>
                         <p>Role : <span className="font-semibold"> {unAccessUser.role}</span></p>
-                        <p>Access At: <span className="font-semibold"> Date(unAccessUser.access_at).toLocaleString()</span></p>
+                        <p>Access At: <span className="font-semibold"> {unAccessUser.access_at = date.toLocaleString("en-US", {timeZone: "America/New_York"})}</span></p>
                         
                         <p className="mt-8">Current Status : <span className="bg-red-500 py-1 px-4 rounded text-white">Deactive</span></p>
                     </div>
