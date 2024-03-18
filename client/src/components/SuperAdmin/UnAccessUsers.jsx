@@ -35,7 +35,7 @@ const UnAccessUsers = () => {
                         unUsers.map((user, index) => {
                             return (
                                 <tr key={index}>
-                                    
+                                    <td className='px-6 py-4 font-bold'>{user.email}</td>
                                 </tr>
                             )
                         })
