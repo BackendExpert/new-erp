@@ -9,12 +9,20 @@ const UsersUnAccess = () => {
 
     const {id} = useParams();
 
-    //fetch data from Unauthorized table in database
+    const [unAccessUser, SetUnAccessUser] = useState({
+        email: '',
+        username: '',
+        role: '',
+        access_at: '' 
+    })    
 
+    //fetch data from Unauthorized table in database
     useEffect(() => {
         axios.get('http://localhost:8081/UnAccessUser/' + id)
         .then(res => {
-            
+            SetUnAccessUser({...unAccessUser,
+                
+            })
         })
     }, [])
 
