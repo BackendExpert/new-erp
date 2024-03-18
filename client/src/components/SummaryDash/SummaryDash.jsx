@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 import CountUp from 'react-countup'
 import Icons from '@reacticons/ionicons'
-
+import UnAccessUsers from '../SuperAdmin/UnAccessUsers'
 
 const SummaryDash = () => {
   const navigate = useNavigate();
@@ -106,7 +106,7 @@ const SummaryDash = () => {
                       <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
                     </div>
                   </div>
-                </div>            
+                </div>       
               )
             }
             if(RoleUser === "Admin"){
@@ -124,10 +124,17 @@ const SummaryDash = () => {
                 </div>            
               )
             }
-
-
         })
       }
+        <br />      
+        <div className="">
+            {RoleUser === "SuperAdmin" ? (
+              <div>This is rendered if condition is true.</div>
+            ) : (
+              <div>This is rendered if condition is false.</div>
+            )}
+        </div>
+
       </div>
     </div>
   )

@@ -20,7 +20,7 @@ const UnAccessUsers = () => {
 
     if(RoleUser === "SuperAdmin"){
         return (
-            <div>UnAccessUsers</div>
+            <div>Hi all</div>
         )
     }
     else{
