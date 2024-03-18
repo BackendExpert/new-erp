@@ -24,7 +24,7 @@ const UsersUnAccess = () => {
                 email:res.data.Result[0].email,
                 username:res.data.Result[0].username,
                 role:res.data.Result[0].role,
-                access_at:res.data.Result[0].access_at
+                access_at:res.data.Result[0].access_time
             })
         })
     }, [])
@@ -40,10 +40,18 @@ const UsersUnAccess = () => {
                     </Link>
                     
                     <div className="my-4">
-                        <p>Email : </p>
-                        <p>Role : </p>
-                        <p>Current Status : <span>Deactive</span></p>
+                        <p>Email : <span className="font-semibold"> {unAccessUser.email}</span></p>
+                        <p>Role : <span className="font-semibold"> {unAccessUser.role}</span></p>
+                        <p>Access At: <span className="font-semibold"> {Date(unAccessUser.access_at).toLocaleString()}</span></p>
+                        
+                        <p className="mt-8">Current Status : <span className="bg-red-500 py-1 px-4 rounded text-white">Deactive</span></p>
                     </div>
+
+                    <form>
+                        <div className="">
+                            <button type="submit" className="border border-green-500 py-2 px-6 text-green-500 font-semibold rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Reactivate Account</button>
+                        </div>
+                    </form>
 
                 </div>
             </div>
