@@ -125,19 +125,21 @@ const SummaryDash = () => {
               )
             }
             if(RoleUser === "Librarian"){
-              return (           
-                <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
-                  <div className="flex justify-between">
-                    <div className="flex">
-                      <p>{data.icons}</p>
-                      <p className="text-2xl pl-4">{data.name}</p>
+              if(data.id === 2){
+                return (           
+                  <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
+                    <div className="flex justify-between">
+                      <div className="flex">
+                        <p>{data.icons}</p>
+                        <p className="text-2xl pl-4">{data.name}</p>
+                      </div>
+                      <div className="">
+                        <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
+                      </div>
                     </div>
-                    <div className="">
-                      <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
-                    </div>
-                  </div>
-                </div>            
-              )
+                  </div>            
+                )
+              }
             }
         })
       }
@@ -149,7 +151,7 @@ const SummaryDash = () => {
                 <UnAccessUsers />
               </div>
             ) : (
-              <div>6546</div>
+              <div></div>
             )}
         </div>
 
