@@ -7,7 +7,16 @@ const UnAccessUsers = () => {
     const navigate = useNavigate();
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    //fetch
+    //fetch unauthorized user from backend
+    // check the is_active column is 0 in table
+
+    const [unUsers, SetUnUsers] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/ViewUnAccessUsers')
+        .then(res => SetUnUsers(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
     if(RoleUser === "SuperAdmin"){
         return (
