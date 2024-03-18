@@ -36,6 +36,7 @@ import Divisions from "./components/Division/Divisions"
 import AddEquipment from "./components/Equipments/AddEquipment"
 import Equipments from "./components/Equipments/Equipments"
 import UpdateEquipment from "./components/Equipments/UpdateEquipment"
+import UsersUnAccess from "./components/SuperAdmin/UsersUnAccess"
 
 export default function App() {
   return (
@@ -47,6 +48,8 @@ export default function App() {
         {/* PrivateRoute for protect the following routes from unauthrized access */}
         {/* SuperAdmin */}
         <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
+        {/* Route for View all Unauthorized users on System */}
+        <Route path="/Unauthorizedusers" element={<PrivateRoute><UsersUnAccess /></PrivateRoute>} />
 
         {/* Admin */}
         <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
