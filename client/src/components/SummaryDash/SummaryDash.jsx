@@ -86,14 +86,15 @@ const SummaryDash = () => {
     {name:"Divisions" , value: <CountUp end={division}/>, icons: <Icons name="business" size="large"/>, style:"bg-yellow-500" },
     {name:"Equipments" , value: <CountUp end={equipment}/>, icons: <Icons name="build" size="large"/>, style:"bg-purple-500" },
   ]
-  
+
+    const RoleUser = secureLocalStorage.getItem("loginNew");
+    
   return (
     <div>
        <div className="lg:grid grid-cols-3 gap-4 my-3">
       {
         DataList.map((data, index) => {
-          return (
-           
+          return (           
               <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
                 <div className="flex justify-between">
                   <div className="flex">
