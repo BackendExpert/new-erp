@@ -55,7 +55,7 @@ const UpdateEquipment = () => {
                   <div className="my-2">
                     <label htmlFor="">Equipment Name:</label>
                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
-                    value={UpdateEquipment.ename} onChange={e => SetEquipment({...UpdateEquipment, invno:e.target.ename})}/>
+                    value={UpdateEquipment.ename} onChange={e => SetEquipment({...UpdateEquipment, ename:e.target.ename})}/>
                   </div>
 
                 </div>

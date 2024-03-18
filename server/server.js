@@ -901,7 +901,7 @@ app.get('/Equipments', (req, res) => {
     })
 })
 
-app.get('/EquiData', (req, res) => {
+app.get('/EquiData/:id', (req, res) => {
     const equiID = req.params.id;
     const sql = "SELECT * FROM equipment WHERE id = ?";
 
