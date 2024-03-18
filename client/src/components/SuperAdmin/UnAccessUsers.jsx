@@ -37,10 +37,10 @@ const UnAccessUsers = () => {
                             unUsers.map((user, index) => {
                                 return (
                                     <tr key={index} className="text-center">
-                                        <td className='px-6 py-4 font-bold'>{user.email}</td>
-                                        <td className='px-6 py-4 font-bold'>{user.username}</td>
-                                        <td className='px-6 py-4 font-bold'>{user.role}</td>
-                                        <td className='px-6 py-4 font-bold'>
+                                        <td className='px-6 py-4'>{user.email}</td>
+                                        <td className='px-6 py-4'>{user.username}</td>
+                                        <td className='px-6 py-4'>{user.role}</td>
+                                        <td className='px-6 py-4'>
                                             <div className="flex pl-8">
                                                 <Link>
                                                     <button className="rounded border border-blue-500 text-blue-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View User</button>
