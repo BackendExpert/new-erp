@@ -104,8 +104,7 @@ const SummaryDash = () => {
                     <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
                   </div>
                 </div>
-              </div>
-            
+              </div>            
           )
         })
       }
