@@ -66,7 +66,7 @@ const SummaryDash = () => {
 
       try {
         const EquiCount = await axios.get('http://localhost:8081/EquiCount');
-        setEquipment(CountDivision.data.equi);
+        setEquipment(EquiCount.data.equi);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
