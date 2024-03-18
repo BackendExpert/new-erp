@@ -39,6 +39,8 @@ import UpdateEquipment from "./components/Equipments/UpdateEquipment"
 import UsersUnAccess from "./components/SuperAdmin/UsersUnAccess"
 import Journals from "./components/library/Journals/Journals"
 import AddJournal from "./components/library/Journals/AddJournal"
+import Thesis from "./components/library/Thesis/Thesis"
+import AddThesis from "./components/library/Thesis/AddThesis"
 
 export default function App() {
   return (
@@ -67,6 +69,9 @@ export default function App() {
         {/* Journals */}
         <Route path="/Journals" element={<PrivateRoute><Journals /></PrivateRoute>} />
         <Route path="/AddJournal" element={<PrivateRoute><AddJournal /></PrivateRoute>} />
+        {/* Thesis */}
+        <Route path="/Thesis" element={<PrivateRoute><Thesis /></PrivateRoute>} />
+        <Route path="/AddThesis" element={<PrivateRoute><AddThesis /></PrivateRoute>} />
 
         {/* labManager */}
         <Route path="/labManager" element={<PrivateRoute><LabManager /></PrivateRoute>} />
