@@ -849,6 +849,22 @@ app.delete('/DeleteDivision/:id', (req, res) => {
         }
     })
 })
+
+app.get('/DivisionCount', (req, res) => {
+    const sql = "SELECT COUNT(did) AS divi FROM division";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ divi : results[0].divi }); // Send count in JSON format
+    });
+})
+
 //-------------------------------------- Division End -------------------------------------
 
 //------------------------------------- Equipments Start -----------------------------------

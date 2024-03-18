@@ -15,6 +15,7 @@ const SummaryDash = () => {
   const [designation, setDesignation] = useState(0);
   const [viehicle, setVehicle] = useState(0);
   const [program, setProgram] = useState(0);
+  const [division, setDivision] = useState(0);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -54,6 +55,13 @@ const SummaryDash = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
+
+      try {
+        const CountDivision = await axios.get('http://localhost:8081/DivisionCount');
+        setDivision(CountDivision.data.divi);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     };
 
     
@@ -66,7 +74,9 @@ const SummaryDash = () => {
     {name:"Employee" , value: <CountUp end={employee}/>, icons: <Icons name="people" size="large"/>, style:"bg-yellow-600"},
     {name:"Designations" , value: <CountUp end={designation}/>, icons: <Icons name="easel" size="large"/>, style:"bg-blue-400"},
     {name:"Viehicles" , value: <CountUp end={viehicle}/>, icons: <Icons name="car" size="large"/>, style:"bg-red-700" },
-    {name:"Program" , value: <CountUp end={program}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-green-500" }
+    {name:"Program" , value: <CountUp end={program}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-green-500" },
+    {name:"Divisions" , value: <CountUp end={division}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-yellow-500" },
+    {name:"Divisions" , value: <CountUp end={division}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-yellow-500" },
   ]
   
   return (
