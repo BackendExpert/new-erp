@@ -27,6 +27,17 @@ const Equipments = () => {
         .catch(err => console.log(err));
     }, [])
 
+    //delete Equipments
+    const headleDelete = (id) => {
+        axios.delete('http://localhost:8081/DeleteEqui/' + id)
+        .then(res => {
+            alert("Equipment Deleted Successful")
+            window.location.reload();
+        })
+        .catch(err => console.log(err));
+        
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
         return (
             <div className="bg-gray-200 py-4">
