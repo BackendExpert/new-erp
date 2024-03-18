@@ -332,6 +332,20 @@ app.get('/ViewJournal', (req, res) => {
         }
     })
 })
+
+app.delete('/DeleteJournal/:id', (req, res) =>{
+    const DeleteID = req.params.id;
+    const sql = "DELETE FROM journal WHERE JID = ?"
+
+    connection.query(sql, [DeleteID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
