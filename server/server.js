@@ -915,7 +915,9 @@ app.get('/EquiData/:id', (req, res) => {
     })
 })
 
-app.put('/Equipments/:id', (req, res) => {
+app.put('/UpdateEqui/:id', (req, res) => {
+
+    console.log(req.body)
     const EquiId = req.params.id;
     const update_at = new Date();
     const sql = "UPDATE equipment SET evalue = ?, location = ?, update_at = ? WHERE id = ?";

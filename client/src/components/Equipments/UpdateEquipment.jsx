@@ -5,6 +5,7 @@ import axios from "axios";
 
 const UpdateEquipment = () => {
     //check current login user
+    const navigate = useNavigate();
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
     const {id} = useParams();
@@ -28,6 +29,7 @@ const UpdateEquipment = () => {
 
     //end Update Values
     const headleUpdate = (e) =>{
+      e.preventDefault();
       axios.put('http://localhost:8081/UpdateEqui/' + id, UpdateEquipment)
       .then(res => {
         if(res.data.Status === "Success"){
