@@ -46,7 +46,15 @@ const Journals = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                journalView.map((journal, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td className='px-6 py-4 font-bold'>{journal.JID}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
                         </tbody>
                     </table>
                 </div>
