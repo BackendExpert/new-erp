@@ -26,6 +26,20 @@ const UpdateEquipment = () => {
           .catch(err => console.log(err))
     }, [])
 
+    //end Update Values
+    const headleUpdate = (e) =>{
+      axios.put('http://localhost:8081/UpdateEqui/' + id, UpdateEquipment)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Equipment Updated Successful")
+          navigate('/Equipments')
+        }
+        else{
+          alert(res.data.Error)
+        }
+      })
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
       return (
         <div className="bg-gray-200 py-4">
@@ -37,7 +51,7 @@ const UpdateEquipment = () => {
             </Link>
 
             <div className="my-2">
-              <form>
+              <form onSubmit={headleUpdate}>
 
                 <div className="lg:grid grid-cols-2 gap-2">
 
