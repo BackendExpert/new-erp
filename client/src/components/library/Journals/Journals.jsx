@@ -51,6 +51,15 @@ const Journals = () => {
                                     return (
                                         <tr key={index}>
                                             <td className='px-6 py-4 font-bold'>{journal.JID}</td>
+                                            <td className='px-6 py-4 font-bold'>{journal.title}</td>
+                                            <td className='px-6 py-4 font-bold'>{journal.category}</td>
+                                            <td className='px-6 py-4 font-bold'>{journal.publisher}</td>
+                                            <td className='px-6 py-4 font-bold'>{journal.pyear}</td>
+                                            <td className='px-6 py-4 font-bold'>{journal.impact}</td>
+                                            <td className='px-6 py-4 font-bold'>{journal.IStatus}</td>
+                                            <td className='px-6 py-4 font-bold'>
+                                                
+                                            </td>
                                         </tr>
                                     )
                                 })
