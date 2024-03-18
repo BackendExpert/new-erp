@@ -6,6 +6,8 @@ import { Link } from "react-router-dom"
 const LibSide = () => {
     const [openSide, SetSideOpen] = useState();
 
+    const RoleUser = secureLocalStorage.getItem("loginNew");
+
     const sidemenu = [
         {name: "Book List",  link: "/booklist", icon: <Icons name="book" size="large"></Icons>},
         {name: "Reserved Book",  link: "#", icon: <Icons name="bookmark" size="large"></Icons>},
@@ -26,9 +28,20 @@ const LibSide = () => {
                 <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>Librarian</div>                    
             </div>
             <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
-                <Link to={'/librarian'}>
-                    {openSide ? <p>Dashbord</p> : <Icons name="speedometer"></Icons> }
-                </Link>
+                {RoleUser === "SuperAdmin" ? (
+                    <div>
+                        <Link to={'/SuperAdmin'}>
+                            {openSide ? <p>Dashbord</p> : <Icons name="speedometer"></Icons> }
+                        </Link>
+                    </div>
+                    ) : (
+                    <div>
+                        <Link to={'/librarian'}>
+                            {openSide ? <p>Dashbord</p> : <Icons name="speedometer"></Icons> }
+                        </Link>
+                    </div>
+                    )}
+
             </div>
             <hr className="mt-2 mr-4 border-b-2 border-blue-300"/>
         </div>
