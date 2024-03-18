@@ -13,7 +13,7 @@ const LibSide = () => {
         {name: "Reserved Book",  link: "#", icon: <Icons name="bookmark" size="large"></Icons>},
         {name: "Reference List",  link: "#", icon: <Icons name="id-card" size="large"></Icons>},
         {name: "Borrowals",  link: "#", icon: <Icons name="bag" size="large"></Icons>},
-        {name: "Journal List",  link: "#", icon: <Icons name="journal" size="large"></Icons>},
+        {name: "Journal List",  link: "/Journals", icon: <Icons name="journal" size="large"></Icons>},
         {name: "Thesis List",  link: "#", icon: <Icons name="copy" size="large"></Icons>},
         {name: "Magazine Lists",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "Article Requests",  link: "#", icon: <Icons name="document" size="large"></Icons>},
