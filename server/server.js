@@ -962,7 +962,7 @@ app.delete('/DeleteEqui/:id', (req,res) => {
     })
 })
 
-app.get('/DivisionCount', (req, res) => {
+app.get('/EquiCount', (req, res) => {
     const sql = "SELECT COUNT(id) AS equi FROM equipment";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
