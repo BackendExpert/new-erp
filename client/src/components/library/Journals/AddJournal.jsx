@@ -21,7 +21,55 @@ const AddJournal = () => {
 
                     <div className="my-2">
                         <form>
-                            
+                            <div className="lg:grid grid-cols-2 gap-2 my-2">
+                                <div className="">
+                                    <label htmlFor="">Title</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Journal Title"
+                                    />
+                                </div>
+
+                                <div className="">
+                                    <label htmlFor="">Category</label>
+                                    <select className="w-full h-12 my-2 border border-blue-500 rounded"
+                                    >
+                                        <option >Select Option</option>
+                                        <option value='Non-Refereed Journal'>Non-Refereed Journal</option>
+                                        <option value='International Journal'>International Journal</option>
+                                        <option value='Local Journal'>Local Journal</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="lg:grid grid-cols-2 gap-2 my-2">
+                                <div className="">
+                                    <label htmlFor="">Publisher</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Publisher"
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Year of Publication</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Year"
+                                    />
+                                </div>
+                            </div>
+                            <div className="lg:grid grid-cols-2 gap-2 my-2">
+                                <div className="">
+                                    <label htmlFor="">Impact Factor</label>
+                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Value"
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Index Status</label>
+                                    <select className="w-full h-12 my-2 border border-blue-500 rounded"
+                                    >
+                                    <option >Select Option</option>
+                                    <option value='SCI'>SCI</option>
+                                    <option value='SCI Expanded'>SCI Expanded</option>
+                                    <option value='Non-Indexed'>Non-Indexed</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
                         </form>
                     </div>
                 </div>
