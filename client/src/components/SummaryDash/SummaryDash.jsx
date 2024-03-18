@@ -93,7 +93,7 @@ const SummaryDash = () => {
     {id: 6, name:"Program" , value: <CountUp end={program}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-green-500" },
     {id: 7, name:"Divisions" , value: <CountUp end={division}/>, icons: <Icons name="business" size="large"/>, style:"bg-yellow-500" },
     {id: 8, name:"Equipments" , value: <CountUp end={equipment}/>, icons: <Icons name="build" size="large"/>, style:"bg-purple-500" },
-    {id: 9, name:"Journal" , value: <CountUp end={journal}/>, icons: <Icons name="build" size="large"/>, style:"bg-purple-500" },
+    {id: 9, name:"Journal" , value: <CountUp end={journal}/>, icons: <Icons name="journal" size="large"/>, style:"bg-green-500" },
   ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
