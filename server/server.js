@@ -148,7 +148,15 @@ app.post('/UnAccess', (req, res) => {
 
 // View unAccess Users
 app.get('/ViewUnAccessUsers', (req, res) => {
-    const sql = "SELECT * FROM users ORDER BY UserId DESC LIMIT 10";
+    const sql = "SELECT * FROM users WHERE is_active = 0 ORDER BY UserId DESC LIMIT 10";
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 // Count Admins Roles
