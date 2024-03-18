@@ -16,6 +16,7 @@ const SummaryDash = () => {
   const [viehicle, setVehicle] = useState(0);
   const [program, setProgram] = useState(0);
   const [division, setDivision] = useState(0);
+  const [equipment, setEquipment] = useState(0);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -59,6 +60,13 @@ const SummaryDash = () => {
       try {
         const CountDivision = await axios.get('http://localhost:8081/DivisionCount');
         setDivision(CountDivision.data.divi);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+
+      try {
+        const EquiCount = await axios.get('http://localhost:8081/EquiCount');
+        setEquipment(CountDivision.data.equi);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
