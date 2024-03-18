@@ -1,7 +1,7 @@
 import Icons from "@reacticons/ionicons"
 import { useState } from "react"
 import { Link } from "react-router-dom"
-
+import secureLocalStorage from 'react-secure-storage'
 
 const LibSide = () => {
     const [openSide, SetSideOpen] = useState();
