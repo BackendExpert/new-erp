@@ -37,6 +37,7 @@ import AddEquipment from "./components/Equipments/AddEquipment"
 import Equipments from "./components/Equipments/Equipments"
 import UpdateEquipment from "./components/Equipments/UpdateEquipment"
 import UsersUnAccess from "./components/SuperAdmin/UsersUnAccess"
+import Journals from "./components/library/Journals/Journals"
 
 export default function App() {
   return (
@@ -62,7 +63,10 @@ export default function App() {
         
         {/* librarian */}
         <Route path="/librarian" element={<PrivateRoute><Librarian /></PrivateRoute>} />
-        
+        {/* Journals */}
+        <Route path="/Journals" element={<PrivateRoute><Journals /></PrivateRoute>} />
+
+
         {/* labManager */}
         <Route path="/labManager" element={<PrivateRoute><LabManager /></PrivateRoute>} />
         
@@ -114,6 +118,8 @@ export default function App() {
         <Route path="/AddEquipment" element={<PrivateRoute><AddEquipment /></PrivateRoute>} />
         <Route path="/Equipments" element={<PrivateRoute><Equipments /></PrivateRoute>} />
         <Route path="/UpdateEquipment/:id" element={<PrivateRoute><UpdateEquipment /></PrivateRoute>} />
+
+
 
       </Routes>
     </BrowserRouter>
