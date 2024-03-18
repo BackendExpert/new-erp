@@ -30,14 +30,10 @@ const UnAccessUsers = () => {
                         <th scope='col' className='px-6 py-3'>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody>                    
                     {
-                        unUsers.map((unserUn, index) => {
-                            return(
-                                <tr key={index}>
-                                    <td className='px-6 py-4 font-bold'>{unserUn.email}</td>
-                                </tr>
-                            )
+                        unUsers.map((user, index) => {
+                            
                         })
                     }
                 </tbody>
@@ -54,3 +50,4 @@ const UnAccessUsers = () => {
 }
 
 export default UnAccessUsers
+
