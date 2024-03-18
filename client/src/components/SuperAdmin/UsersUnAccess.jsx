@@ -21,6 +21,8 @@ const UsersUnAccess = () => {
         axios.get('http://localhost:8081/UnAccessUser/' + id)
         .then(res => {
             SetUnAccessUser({...unAccessUser,
+                email:res.data.Result[0].email,
+                username:res.data.Result[0].username,
                 
             })
         })
