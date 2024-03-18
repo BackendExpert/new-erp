@@ -23,7 +23,8 @@ const UsersUnAccess = () => {
             SetUnAccessUser({...unAccessUser,
                 email:res.data.Result[0].email,
                 username:res.data.Result[0].username,
-                
+                role:res.data.Result[0].role,
+                access_at:res.data.Result[0].access_at
             })
         })
     }, [])
