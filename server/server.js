@@ -347,6 +347,23 @@ app.delete('/DeleteJournal/:id', (req, res) =>{
         }
     })
 })
+
+//CountJournal
+
+app.get('/CountJournal', (req, res) => {
+    const sql = "SELECT COUNT(JID) AS jour FROM journal";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ jour: results[0].jour }); // Send count in JSON format
+    });
+});
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
