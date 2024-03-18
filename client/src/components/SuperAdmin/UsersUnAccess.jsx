@@ -29,6 +29,9 @@ const UsersUnAccess = () => {
         })
     }, [])
 
+    const headleSubmit = (e) => {
+        
+    }
 
     if(RoleUser === "SuperAdmin"){
         return (
@@ -48,7 +51,7 @@ const UsersUnAccess = () => {
                         <p className="mt-8">Current Status : <span className="bg-red-500 py-1 px-4 rounded text-white">Deactive</span></p>
                     </div>
 
-                    <form>
+                    <form onSubmit={headleSubmit}>
                         <div className="">
                             <button type="submit" className="border border-green-500 py-2 px-6 text-green-500 font-semibold rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Reactivate Account</button>
                         </div>
