@@ -7,6 +7,8 @@ const UnAccessUsers = () => {
     const navigate = useNavigate();
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    //fetch
+
     if(RoleUser === "SuperAdmin"){
         return (
             <div>UnAccessUsers</div>
