@@ -10,10 +10,7 @@ const UpdateEquipment = () => {
     const {id} = useParams();
 
     const [UpdateEquipment, SetEquipment] = useState({
-      invno:'',
-      ename:'',
       evalue:'',
-      pdate:'',
       location:'',
     })
 
@@ -21,10 +18,8 @@ const UpdateEquipment = () => {
     useEffect(() => {
       axios.get('http://localhost:8081/EquiData/' + id)
         .then(res => 
-            SetEquipment({...UpdateEquipment, invno:res.data.Result[0].invno,
-              ename:res.data.Result[0].ename,
+            SetEquipment({...UpdateEquipment, 
               evalue:res.data.Result[0].evalue,
-              pdate:res.data.Result[0].pdate,
               location:res.data.Result[0].location
             })
           )
@@ -47,18 +42,21 @@ const UpdateEquipment = () => {
                 <div className="lg:grid grid-cols-2 gap-2">
 
                   <div className="my-2">
-                    <label htmlFor="">Inventory No:</label>
-                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Inventory No"
-                    value={UpdateEquipment.invno} onChange={e => SetEquipment({...UpdateEquipment, invno:e.target.value})}/>
+                    <label htmlFor="">New Purchase Value:</label>
+                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New Purchase Value"
+                    value={UpdateEquipment.evalue} onChange={e => SetEquipment({...UpdateEquipment, evalue:e.target.value})}/>
                   </div>
 
                   <div className="my-2">
-                    <label htmlFor="">Equipment Name:</label>
-                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Equipment Name"
-                    value={UpdateEquipment.ename} onChange={e => SetEquipment({...UpdateEquipment, ename:e.target.ename})}/>
+                    <label htmlFor="">New Location:</label>
+                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter New Location"
+                    value={UpdateEquipment.location} onChange={e => SetEquipment({...UpdateEquipment, location:e.target.location})}/>
                   </div>
 
                 </div>
+                  <div className="">
+                      <button type="submit" className="rounded py-4 px-16 border border-green-500 text-green-500 font-semibold my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Update Equipment</button>
+                  </div>
 
               </form>
             </div>
