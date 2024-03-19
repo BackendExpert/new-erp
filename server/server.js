@@ -444,6 +444,20 @@ app.get('/CountThesis', (req, res) => {
     });
 });
 
+//AddMagazine
+app.post('/AddMagazine', (req, res) => {
+    const sql = "INSERT INTO magazine(title, publisher, pyear, create_at, update_at) VALUES (?)";
+    const createTime = new Date();
+    const updateTime = new Date();
+
+    const value = [
+        req.body.title,
+        req.body.title,
+        req.body.title,
+        
+    ]
+})
+
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
