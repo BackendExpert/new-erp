@@ -498,7 +498,7 @@ app.delete('/DeleteMagazine/:id', (req, res) =>{
 //CountMagazine
 
 app.get('/CountMagazine', (req, res) => {
-    const sql = "SELECT COUNT(Mid) AS t maga magazine";
+    const sql = "SELECT COUNT(Mid) AS maga FROM magazine";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
     connection.query(sql, (error, results) => {
