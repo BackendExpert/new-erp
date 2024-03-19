@@ -54,7 +54,7 @@ const Thesis = () => {
                                                 <td className='px-6 py-4 font-bold'>{thesis.author}</td>
                                                 <td className='px-6 py-4 font-bold'>{thesis.pyear}</td>
                                                 <td className='px-6 py-4 font-bold'>
-                                                    
+                                                    <button onClick={() => headleDelete(thesis.Tid)} className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
                                                 </td>
 
                                             </tr>
