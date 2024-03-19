@@ -37,7 +37,7 @@ const AddMagazine = () => {
                                 /> 
                             </div>
                             <div className="">
-                                <label htmlFor="">Title</label>
+                                <label htmlFor="">Publisher</label>
                                 <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Publisher"
                                 /> 
                             </div>
@@ -45,8 +45,8 @@ const AddMagazine = () => {
 
                         <div className="lg:grid gird-cols-1">
                             <div className="">
-                                <label htmlFor="">Title</label>
-                                <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Publish Year"
+                                <label htmlFor="">Publish Year</label>
+                                <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Publish Year"
                                 /> 
                             </div>
                         </div>
