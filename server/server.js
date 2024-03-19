@@ -468,6 +468,18 @@ app.post('/AddMagazine', (req, res) => {
     })
 })
 
+app.get('/ViewMagazine', (req, res) => {
+    const sql = "SELECT * FROM magazine";
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
