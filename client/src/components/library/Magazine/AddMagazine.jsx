@@ -38,7 +38,6 @@ const AddMagazine = () => {
                     <Link to={'/Magazine'}>
                         <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </Link>
-                </div>
                 <div className="my-2">
                     <form onSubmit={headleSubmit}>
 
@@ -67,6 +66,7 @@ const AddMagazine = () => {
                         </div>
 
                     </form>
+                </div>
                 </div>
             </div>
         )
