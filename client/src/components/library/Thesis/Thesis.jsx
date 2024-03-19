@@ -49,11 +49,13 @@ const Thesis = () => {
                                         return (
                                             <tr key={index}>
                                                 <td className='px-6 py-4 font-bold'>{thesis.Tid}</td>
-                                                <td className='px-6 py-4 font-bold'>{thesis.JID}</td>
-                                                <td className='px-6 py-4 font-bold'>{thesis.JID}</td>
-                                                <td className='px-6 py-4 font-bold'>{thesis.JID}</td>
-                                                <td className='px-6 py-4 font-bold'>{thesis.JID}</td>
-                                                <td className='px-6 py-4 font-bold'>{thesis.JID}</td>
+                                                <td className='px-6 py-4 font-bold'>{thesis.title}</td>
+                                                <td className='px-6 py-4 font-bold'>{thesis.subject}</td>
+                                                <td className='px-6 py-4 font-bold'>{thesis.author}</td>
+                                                <td className='px-6 py-4 font-bold'>{thesis.pyear}</td>
+                                                <td className='px-6 py-4 font-bold'>
+                                                    
+                                                </td>
 
                                             </tr>
                                         )
