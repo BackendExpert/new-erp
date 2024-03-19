@@ -411,6 +411,22 @@ app.get('/ViewThesis', (req, res) => {
     })
 })
 
+//DeleteThesis
+
+app.delete('/DeleteThesis/:id', (req, res) =>{
+    const DeleteId = req.params.id;
+    const sql = "DELETE FROM thesis WHERE Tid = ?";
+
+    connection.query(sql, [DeleteId], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
