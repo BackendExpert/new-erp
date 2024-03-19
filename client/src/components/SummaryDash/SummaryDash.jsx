@@ -18,7 +18,6 @@ const SummaryDash = () => {
   const [division, setDivision] = useState(0);
   const [equipment, setEquipment] = useState(0);
   const [journal, setJournal] = useState(0);
-  const [thesis, setThesis] = useState(0);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -80,16 +79,10 @@ const SummaryDash = () => {
         console.error('Error fetching data:', error);
       }
 
-      try {
-        const ThesisCount = await axios.get('http://localhost:8081/CountThesis');
-        setThesis(ThesisCount.data.thes);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+    }
     
 
-  }, []);
+  }, [])
 
   const DataList = [
     {id: 1, name:"Admins" , value: <CountUp end={count}/>, icons: <Icons name="person" size="large"/>, style:"bg-green-600"},
@@ -100,8 +93,8 @@ const SummaryDash = () => {
     {id: 6, name:"Program" , value: <CountUp end={program}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-green-500" },
     {id: 7, name:"Divisions" , value: <CountUp end={division}/>, icons: <Icons name="business" size="large"/>, style:"bg-yellow-500" },
     {id: 8, name:"Equipments" , value: <CountUp end={equipment}/>, icons: <Icons name="build" size="large"/>, style:"bg-purple-500" },
-    {id: 9, name:"Journal" , value: <CountUp end={journal}/>, icons: <Icons name="journal" size="large"/>, style:"bg-green-500" },
-    {id: 10, name:"Thesis" , value: <CountUp end={thesis}/>, icons: <Icons name="copy" size="large"/>, style:"bg-yellow-500" },
+    {id: 9, name:"Journal" , value: <CountUp end={journal}/>, icons: <Icons name="journal" size="large"/>, style:"bg-green-500" }
+
   ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
@@ -145,7 +138,7 @@ const SummaryDash = () => {
             }
             //For Librarian
             if(RoleUser === "Librarian"){
-              if(data.id === 2 || data.id === 9 || data.id === 10){
+              if(data.id === 2 || data.id === 9){
                 return (           
                   <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
                     <div className="flex justify-between">

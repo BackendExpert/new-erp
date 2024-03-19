@@ -430,7 +430,7 @@ app.delete('/DeleteThesis/:id', (req, res) =>{
 //CountThesis
 
 app.get('/CountThesis', (req, res) => {
-    const sql = "SELECT COUNT(Tid) AS thes FROM thesis";
+    const sql = "SELECT COUNT(Tid) AS t FROM thesis";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
     connection.query(sql, (error, results) => {
@@ -440,7 +440,7 @@ app.get('/CountThesis', (req, res) => {
         return;
       }
   
-      res.json({ thes: results[0].thes }); // Send count in JSON format
+      res.json({ t: results[0].t }); // Send count in JSON format
     });
 });
 
