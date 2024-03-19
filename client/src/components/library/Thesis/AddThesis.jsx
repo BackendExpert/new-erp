@@ -57,7 +57,7 @@ const AddThesis = () => {
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Year of Publication</label>
-                                    <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Year"
+                                    <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Year"
                                     /> 
                                 </div>
                             </div>
