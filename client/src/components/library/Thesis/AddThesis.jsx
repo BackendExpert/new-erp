@@ -7,6 +7,18 @@ const AddThesis = () => {
     //check the current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const navigate = useNavigate();
+
+    const [Thesis, SetThesis] = useState({
+        title:'',
+        author:'',
+        pyear:'',
+        subject:'',
+        degree:''
+    })
+
+    
+
     if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
         return (
             <div className="bg-gray-200 py-4">
