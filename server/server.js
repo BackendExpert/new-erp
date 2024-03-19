@@ -364,6 +364,17 @@ app.get('/CountJournal', (req, res) => {
       res.json({ jour: results[0].jour }); // Send count in JSON format
     });
 });
+
+//AddThesis
+app.post('/AddThesis', (req, res) => {
+    if(req.body.degree === "Select Option"){
+        return res.json({Error: "Select the Any Degree"})
+    }
+    else{
+        
+    }
+})
+
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 

@@ -71,7 +71,7 @@ const AddThesis = () => {
                                 <div className="">
                                     <label htmlFor="">Degree</label>
                                     <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2">
-                                        <option >Select Option</option>
+                                        <option value='Select Option'>Select Option</option>
                                         <option value='PhD'>PhD</option>
                                         <option value='MPhil'>MPhil</option>
                                         <option value='MSc'>MSc</option>
