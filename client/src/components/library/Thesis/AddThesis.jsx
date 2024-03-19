@@ -48,17 +48,17 @@ const AddThesis = () => {
                                 <div className="">
                                     <label htmlFor="">Thesis Title</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Thesis Title"
-                                    /> 
+                                    onChange={e => SetThesis({...Thesis, title:e.target.value})}/> 
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Thesis Author</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Author"
-                                    /> 
+                                    onChange={e => SetThesis({...Thesis, author:e.target.value})}/> 
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Year of Publication</label>
                                     <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Year"
-                                    /> 
+                                    onChange={e => SetThesis({...Thesis, pyear:e.target.value})}/>  
                                 </div>
                             </div>
         
@@ -66,11 +66,12 @@ const AddThesis = () => {
                                 <div className="">
                                     <label htmlFor="">Subject Area</label>
                                     <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Subject Area"
-                                    /> 
+                                    onChange={e => SetThesis({...Thesis, subject:e.target.value})}/>   
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Degree</label>
-                                    <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2">
+                                    <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2"
+                                    onChange={e => SetThesis({...Thesis, degree:e.target.value})}   >
                                         <option value='Select Option'>Select Option</option>
                                         <option value='PhD'>PhD</option>
                                         <option value='MPhil'>MPhil</option>
