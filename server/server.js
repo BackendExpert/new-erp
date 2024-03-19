@@ -367,7 +367,8 @@ app.get('/CountJournal', (req, res) => {
 
 //AddThesis
 app.post('/AddThesis', (req, res) => {
-    if(req.body.degree === "Select Option"){
+    console.log(req.body)
+    if(req.body.degree === ""){
         return res.json({Error: "Please Select the Any Degree"})
     }
     else{
