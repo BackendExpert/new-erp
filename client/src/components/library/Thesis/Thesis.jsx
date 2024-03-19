@@ -12,7 +12,7 @@ const Thesis = () => {
 
     //fetch data
     useEffect(() => {
-        axios.post('http://localhost:8081/ViewThesis')
+        axios.get('http://localhost:8081/ViewThesis')
         .then(res => SetDataThesis(res.data))
         .catch(err => console.log(err))
     }, [])

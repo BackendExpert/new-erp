@@ -397,6 +397,10 @@ app.post('/AddThesis', (req, res) => {
     }
 })
 
+//ViewThesis
+
+app.get('/ViewThesis')
+
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
