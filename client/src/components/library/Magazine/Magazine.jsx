@@ -49,6 +49,9 @@ const Magazine = () => {
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{magazine.MID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{magazine.MID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{magazine.MID}</td>
+                                                    
                                                 </tr>
                                             )
                                         })
