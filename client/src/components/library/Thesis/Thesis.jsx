@@ -17,6 +17,21 @@ const Thesis = () => {
         .catch(err => console.log(err))
     }, [])
 
+    //delete Thesis
+    const headleDelete = (id) => {
+        e.preventDefault(); 
+        axios.delete('http://localhost:8081/DeleteThesis/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Thesis Deleted Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
         return (
             <div className="bg-gray-200 py-4">
