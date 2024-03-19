@@ -67,7 +67,7 @@ const Magazine = () => {
                                                     <td className='px-6 py-4 font-bold'>{magazine.publisher}</td>
                                                     <td className='px-6 py-4 font-bold'>{magazine.pyear}</td>
                                                     <td className='px-6 py-4 font-bold'>
-                                                        <button onClick={() => headleDelete(journal.JID)} className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
+                                                        <button onClick={() => headleDelete(magazine.Mid)} className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
                                                     </td>
                                                 </tr>
                                             )
