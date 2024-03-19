@@ -4,10 +4,17 @@ import { Link, useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 
 const AddMagazine = () => {
+    
+    const navigate = useNavigate()
     //check the current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    const navigate = useNavigate()
+    const [magazineData, SetmagazineData] = useState({
+        title:'',
+        publisher:'',
+        pyear:''
+    })
+
     
     if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
         return (
