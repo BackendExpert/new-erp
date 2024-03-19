@@ -15,6 +15,7 @@ const AddMagazine = () => {
         pyear:''
     })
 
+
     
     if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
         return (
@@ -27,11 +28,26 @@ const AddMagazine = () => {
                     </Link>
                 </div>
                 <div className="my-2">
-                    <form>
+                    <form onSubmit={headleSubmit}>
 
                         <div className="lg:grid grid-cols-2 gap-2">
                             <div className="">
-                                <label htmlFor=""></label>
+                                <label htmlFor="">Title</label>
+                                <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Title"
+                                /> 
+                            </div>
+                            <div className="">
+                                <label htmlFor="">Title</label>
+                                <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Publisher"
+                                /> 
+                            </div>
+                        </div>
+
+                        <div className="lg:grid gird-cols-1">
+                            <div className="">
+                                <label htmlFor="">Title</label>
+                                <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Publish Year"
+                                /> 
                             </div>
                         </div>
 
