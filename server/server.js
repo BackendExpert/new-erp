@@ -371,7 +371,7 @@ app.post('/AddThesis', (req, res) => {
         return res.json({Error: "Select the Any Degree"})
     }
     else{
-        const sql = "INSERT INTO"
+        const sql = "INSERT INTO thesis() VALUES(?)"
     }
 })
 
