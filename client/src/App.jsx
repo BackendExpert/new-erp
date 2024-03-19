@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom"
 import Login from "./components/LoginSignUp/Login"
 import { SignUp } from "./components/LoginSignUp/SignUp"
 import SuperAdmin from "./components/SuperAdmin/SuperAdmin"
@@ -41,6 +41,8 @@ import Journals from "./components/library/Journals/Journals"
 import AddJournal from "./components/library/Journals/AddJournal"
 import Thesis from "./components/library/Thesis/Thesis"
 import AddThesis from "./components/library/Thesis/AddThesis"
+import Magazine from "./components/library/Magazine/Magazine"
+import { AddMagazine } from "./components/library/Magazine/AddMagazine"
 
 export default function App() {
   return (
@@ -72,6 +74,9 @@ export default function App() {
         {/* Thesis */}
         <Route path="/Thesis" element={<PrivateRoute><Thesis /></PrivateRoute>} />
         <Route path="/AddThesis" element={<PrivateRoute><AddThesis /></PrivateRoute>} />
+        {/* Magazine */}
+        <Route path="/Magazine" element={<PrivateRoute><Magazine /></PrivateRoute>} />
+        <Route path="/AddMagazine" element={<PrivateRoute><AddMagazine /></PrivateRoute>} />
 
         {/* labManager */}
         <Route path="/labManager" element={<PrivateRoute><LabManager /></PrivateRoute>} />
