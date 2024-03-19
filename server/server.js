@@ -368,10 +368,10 @@ app.get('/CountJournal', (req, res) => {
 //AddThesis
 app.post('/AddThesis', (req, res) => {
     if(req.body.degree === "Select Option"){
-        return res.json({Error: "Select the Any Degree"})
+        return res.json({Error: "Please Select the Any Degree"})
     }
     else{
-        const sql = "INSERT INTO thesis() VALUES(?)"
+        const sql = "INSERT INTO thesis(title, author, pyear, subject, degree, create_at, update_at) VALUES(?)";
     }
 })
 
