@@ -90,7 +90,7 @@ const SummaryDash = () => {
 
       try {
         const MagazineCount = await axios.get('http://localhost:8081/CountMagazine');
-        setThesis(MagazineCount.data.maga);
+        setMagazine(MagazineCount.data.maga);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
