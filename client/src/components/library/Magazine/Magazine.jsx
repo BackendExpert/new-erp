@@ -15,8 +15,22 @@ const Magazine = () => {
     useEffect(() => {
         axios.get('http://localhost:8081/ViewMagazine')
         .then(res => SetViewMagazine(res.data))
-        .catch(err => console.log(err))
+        .catch(res => console.log(err))
     }, [])
+
+    //delete Data
+    const headleDelete = (id) => {
+        axios.delete('http://localhost:8081/DeleteMagazine/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Magazine Deleted Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
 
     if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
         return (
@@ -48,10 +62,13 @@ const Magazine = () => {
                                         ViewMagazine.map((magazine, index) => {
                                             return (
                                                 <tr key={index}>
-                                                    <td className='px-6 py-4 font-bold'>{magazine.MID}</td>
-                                                    <td className='px-6 py-4 font-bold'>{magazine.MID}</td>
-                                                    <td className='px-6 py-4 font-bold'>{magazine.MID}</td>
-                                                    
+                                                    <td className='px-6 py-4 font-bold'>{magazine.Mid}</td>
+                                                    <td className='px-6 py-4 font-bold'>{magazine.title}</td>
+                                                    <td className='px-6 py-4 font-bold'>{magazine.publisher}</td>
+                                                    <td className='px-6 py-4 font-bold'>{magazine.pyear}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <button onClick={() => headleDelete(journal.JID)} className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
+                                                    </td>
                                                 </tr>
                                             )
                                         })
