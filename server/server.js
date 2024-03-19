@@ -399,7 +399,17 @@ app.post('/AddThesis', (req, res) => {
 
 //ViewThesis
 
-app.get('/ViewThesis')
+app.get('/ViewThesis', (req, res) => {
+    const sql = "SELECT * FROM thesis";
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
 
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
