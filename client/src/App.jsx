@@ -42,7 +42,7 @@ import AddJournal from "./components/library/Journals/AddJournal"
 import Thesis from "./components/library/Thesis/Thesis"
 import AddThesis from "./components/library/Thesis/AddThesis"
 import Magazine from "./components/library/Magazine/Magazine"
-import { AddMagazine } from "./components/library/Magazine/AddMagazine"
+import AddMagazine from "./components/library/Magazine/AddMagazine"
 
 export default function App() {
   return (
