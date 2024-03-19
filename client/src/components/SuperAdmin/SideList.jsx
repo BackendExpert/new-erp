@@ -20,7 +20,7 @@ const SideList = () => {
 
 
     return (
-        <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-screen pl-4 py-4 ${openSide ? "w-72" : "w-20" }`}>
+        <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-auto pl-4 py-4 ${openSide ? "w-72" : "w-20" }`}>
             <div className="py-2">
                 <div className="flex">
                 <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
