@@ -480,6 +480,20 @@ app.get('/ViewMagazine', (req, res) => {
     })
 })
 
+app.delete('/DeleteMagazine/:id', (req, res) =>{
+    const DeleleID = req.params.id;
+    const sql = "DELETE FROM magazine WHERE Mid = ?";
+
+    connection.query(sql, [DeleleID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
