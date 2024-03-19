@@ -494,6 +494,23 @@ app.delete('/DeleteMagazine/:id', (req, res) =>{
     })
 })
 
+
+//CountMagazine
+
+app.get('/CountMagazine', (req, res) => {
+    const sql = "SELECT COUNT(Mid) AS t maga magazine";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ maga: results[0].maga }); // Send count in JSON format
+    });
+});
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
