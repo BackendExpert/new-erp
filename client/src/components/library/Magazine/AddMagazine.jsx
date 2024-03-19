@@ -34,12 +34,12 @@ const AddMagazine = () => {
                             <div className="">
                                 <label htmlFor="">Title</label>
                                 <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Title"
-                                /> 
+                                onChange={e => SetmagazineData({...magazineData, title:e.target.value})}/>
                             </div>
                             <div className="">
                                 <label htmlFor="">Publisher</label>
                                 <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Publisher"
-                                /> 
+                                onChange={e => SetmagazineData({...magazineData, publisher:e.target.value})}/> 
                             </div>
                         </div>
 
@@ -47,7 +47,7 @@ const AddMagazine = () => {
                             <div className="">
                                 <label htmlFor="">Publish Year</label>
                                 <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Publish Year"
-                                /> 
+                                onChange={e => SetmagazineData({...magazineData, pyear:e.target.value})}/> 
                             </div>
                         </div>
 
