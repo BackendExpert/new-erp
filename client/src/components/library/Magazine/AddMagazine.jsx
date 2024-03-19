@@ -15,7 +15,19 @@ const AddMagazine = () => {
         pyear:''
     })
 
-
+    const headleSubmit = (e) =>{
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/AddMagazine', magazineData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Magazine Added Successful")
+                navigate('/Magazine')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
     
     if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
         return (
