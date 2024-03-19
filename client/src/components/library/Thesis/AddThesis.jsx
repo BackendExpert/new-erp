@@ -17,7 +17,19 @@ const AddThesis = () => {
         degree:''
     })
 
-    
+    const headleSubmit = (e) =>{
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/AddThesis', Thesis )
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Thesis Added Successful")
+                navigate('/Thesis')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
 
     if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
         return (
@@ -30,7 +42,7 @@ const AddThesis = () => {
                     </Link>
         
                     <div className="my-2">
-                        <form>
+                        <form onSubmit={headleSubmit}>
         
                             <div className="lg:grid grid-cols-3 gap-3">
                                 <div className="">
