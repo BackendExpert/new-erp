@@ -86,6 +86,13 @@ const SummaryDash = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
+
+      try {
+        const MagazineCount = await axios.get('http://localhost:8081/CountMagazine');
+        setThesis(MagazineCount.data.maga);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     };    
     
     fetchData();
