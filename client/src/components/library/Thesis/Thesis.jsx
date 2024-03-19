@@ -19,7 +19,6 @@ const Thesis = () => {
 
     //delete Thesis
     const headleDelete = (id) => {
-        e.preventDefault(); 
         axios.delete('http://localhost:8081/DeleteThesis/' + id)
         .then(res => {
             if(res.data.Status === "Success"){
