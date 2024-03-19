@@ -372,6 +372,27 @@ app.post('/AddThesis', (req, res) => {
     }
     else{
         const sql = "INSERT INTO thesis(title, author, pyear, subject, degree, create_at, update_at) VALUES(?)";
+        const createTime = new Date();
+        const updateTime = new Date();
+
+        const value = [
+            req.body.title,
+            req.body.author,
+            req.body.pyear,
+            req.body.subject,
+            req.body.degree,
+            createTime,
+            updateTime            
+        ]
+
+        connection.query(sql, [value], (err, result) => {
+            if(err){
+                return res.json({Error: "Error On Server"})
+            }
+            else{
+                return res.json({Status: "Success"})
+            }
+        })
     }
 })
 
