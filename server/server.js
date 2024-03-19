@@ -452,10 +452,20 @@ app.post('/AddMagazine', (req, res) => {
 
     const value = [
         req.body.title,
-        req.body.title,
-        req.body.title,
-        
+        req.body.publisher,
+        req.body.pyear,
+        createTime,
+        updateTime
     ]
+
+    connection.query(sql, [value], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
 })
 
 //---------------------------- LIBRARY END ---------------------------------------------------------
