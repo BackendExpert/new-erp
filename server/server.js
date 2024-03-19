@@ -427,6 +427,23 @@ app.delete('/DeleteThesis/:id', (req, res) =>{
     })
 })
 
+//CountThesis
+
+app.get('/CountThesis', (req, res) => {
+    const sql = "SELECT COUNT(Tid) AS thes FROM thesis";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ thes: results[0].thes }); // Send count in JSON format
+    });
+});
+
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
