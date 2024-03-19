@@ -82,7 +82,7 @@ const SummaryDash = () => {
 
       try {
         const ThesisCount = await axios.get('http://localhost:8081/CountThesis');
-        setThesis(ThesisCount.data.jour);
+        setThesis(ThesisCount.data.t);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
