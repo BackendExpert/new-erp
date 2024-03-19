@@ -23,7 +23,9 @@ const AddMagazine = () => {
                     <form>
 
                         <div className="lg:grid grid-cols-2 gap-2">
-                            
+                            <div className="">
+                                <label htmlFor=""></label>
+                            </div>
                         </div>
 
                     </form>
