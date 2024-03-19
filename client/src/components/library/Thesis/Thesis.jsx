@@ -47,7 +47,15 @@ const Thesis = () => {
                                 </tr>
                             </thead>
                             <tbody>
-  
+                                {
+                                    DataThesis.map((thesis, index) => {
+                                        return (
+                                            <tr key={index}>
+                                                
+                                            </tr>
+                                        )
+                                    })
+                                }
                             </tbody>
                         </table>
                     </div>
