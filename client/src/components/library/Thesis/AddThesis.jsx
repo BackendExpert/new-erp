@@ -39,12 +39,11 @@ const AddThesis = () => {
                         </div>
                         <div className="">
                             <label htmlFor="">Degree</label>
-                            <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2"
-                                    onChange={e => SetjournalData({...journalData, category:e.target.value})}>
-                                    <option >Select Option</option>
-                                    <option value='Non-Refereed Journal'>Non-Refereed Journal</option>
-                                    <option value='International Journal'>International Journal</option>
-                                    <option value='Local Journal'>Local Journal</option>
+                            <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2">
+                                <option >Select Option</option>
+                                <option value='PhD'>PhD</option>
+                                <option value='MPhil'>MPhil</option>
+                                <option value='MSc'>MSc</option>
                             </select>
                         </div>
                     </div>
