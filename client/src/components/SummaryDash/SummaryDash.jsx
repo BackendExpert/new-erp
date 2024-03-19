@@ -19,7 +19,8 @@ const SummaryDash = () => {
   const [equipment, setEquipment] = useState(0);
   const [journal, setJournal] = useState(0);
   const [thesis, setThesis] = useState(0);
-  
+  const [magazine, setMagazine] = useState(0);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -109,7 +110,8 @@ const SummaryDash = () => {
     {id: 8, name:"Equipments" , value: <CountUp end={equipment}/>, icons: <Icons name="build" size="large"/>, style:"bg-purple-500" },
     {id: 9, name:"Journal" , value: <CountUp end={journal}/>, icons: <Icons name="journal" size="large"/>, style:"bg-green-500" },
     {id: 10, name:"Thesis" , value: <CountUp end={thesis}/>, icons: <Icons name="journal" size="large"/>, style:"bg-purple-500" },
-  ]
+    {id: 10, name:"Magazine" , value: <CountUp end={magazine}/>, icons: <Icons name="journal" size="large"/>, style:"bg-purple-500" },
+    ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
