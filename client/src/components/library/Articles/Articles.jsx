@@ -8,6 +8,7 @@ const Articles = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
 
+    
   return (
         <div className="bg-gray-200 py-4">
             <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
@@ -25,13 +26,13 @@ const Articles = () => {
                         <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                             <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
                                 <tr className='text-blue-500'>
-                                <th scope='col' className='px-6 py-3'>Journal ID</th>
-                                <th scope='col' className='px-6 py-3'>Journal Title</th>
-                                <th scope='col' className='px-6 py-3'>Journal Category</th>                            
-                                <th scope='col' className='px-6 py-3'>Publisher</th>
-                                <th scope='col' className='px-6 py-3'>Year</th>
-                                <th scope='col' className='px-6 py-3'>Impact Factor</th>          
-                                <th scope='col' className='px-6 py-3'>Indexing</th>                                       
+                                <th scope='col' className='px-6 py-3'>Article ID</th>
+                                <th scope='col' className='px-6 py-3'>Article Title</th>
+                                <th scope='col' className='px-6 py-3'>Article Category</th>                            
+                                <th scope='col' className='px-6 py-3'>Journal/Conference</th>
+                                <th scope='col' className='px-6 py-3'>Publish Year</th>
+                                <th scope='col' className='px-6 py-3'>Authors</th>          
+                                <th scope='col' className='px-6 py-3'>Page Numbers</th>                                       
                                 <th scope='col' className='px-6 py-3'>Action</th>
                             </tr>
                         </thead>
