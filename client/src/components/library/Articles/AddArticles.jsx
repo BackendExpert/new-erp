@@ -55,12 +55,12 @@ const AddArticles = () => {
                         </div>
                         <div className="">
                             <label htmlFor="">Year of Publication</label>
-                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Year of Publication"
+                            <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Year of Publication"
                             onChange={e => SetArticleData({...ArticleData, pyear:e.target.value})}/>
                         </div>
                     </div>
 
-                    <div className="lg:grid grid-cols-2 gap-2">
+                    <div className="lg:grid grid-cols-3 gap-2">
                         <div className="">
                             <label htmlFor="">Author 1</label>
                             <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Author 1"
