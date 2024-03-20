@@ -72,8 +72,8 @@ const AddArticles = () => {
                             onChange={e => SetArticleData({...ArticleData, author2:e.target.value})}/>
                         </div>
                         <div className="">
-                            <label htmlFor="">Name of the Journal/Conference</label>
-                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Name of the Journal/Conference"
+                            <label htmlFor="">Page Numbers</label>
+                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Page Numbers"
                             onChange={e => SetArticleData({...ArticleData, journal:e.target.value})}/>
                         </div>
                     </div>
