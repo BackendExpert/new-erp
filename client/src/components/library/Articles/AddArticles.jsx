@@ -39,7 +39,10 @@ const AddArticles = () => {
                             <label htmlFor="">Select Category</label>
                             <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2"
                             onChange={e => SetArticleData({...ArticleData, category:e.target.value})}>
-
+                                <option >Select Option</option>
+                                <option value='Journal Paper'>Journal Paper</option>
+                                <option value='Conference Paper'>Conference Paper</option>
+                                <option value='Abstract'>Abstract</option>
                             </select>
                         </div>
                     </div>
