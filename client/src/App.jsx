@@ -44,6 +44,8 @@ import AddThesis from "./components/library/Thesis/AddThesis"
 import Magazine from "./components/library/Magazine/Magazine"
 import AddMagazine from "./components/library/Magazine/AddMagazine"
 import Profile from "./components/Profile"
+import Articles from "./components/library/Articles/Articles"
+import AddArticles from "./components/library/Articles/AddArticles"
 
 export default function App() {
   return (
@@ -78,6 +80,9 @@ export default function App() {
         {/* Magazine */}
         <Route path="/Magazine" element={<PrivateRoute><Magazine /></PrivateRoute>} />
         <Route path="/AddMagazine" element={<PrivateRoute><AddMagazine /></PrivateRoute>} />
+        {/* Articles */}
+        <Route path="/Articles" element={<PrivateRoute><Articles /></PrivateRoute>} />
+        <Route path="/AddArticle" element={<PrivateRoute><AddArticles /></PrivateRoute>} />
 
         {/* labManager */}
         <Route path="/labManager" element={<PrivateRoute><LabManager /></PrivateRoute>} />
