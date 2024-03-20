@@ -564,7 +564,7 @@ app.get('/ViewArticle', (req, res) =>{
 
 //DeleteArticle
 
-app.delete('/DeleteArticle/:id', (req, result) => {
+app.delete('/DeleteArticle/:id', (req, res) => {
     const DeleteId = req.params.id;
     const sql = "DELETE FROM articles WHERE Aid = ?";
 
@@ -577,6 +577,25 @@ app.delete('/DeleteArticle/:id', (req, result) => {
         }
     })
 })
+
+
+//CountArticles
+
+app.get('/CountArticles', (req, res) => {
+    const sql = "SELECT COUNT(Aid) AS art FROM articles";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ art: results[0].art }); // Send count in JSON format
+    });
+});
+
 
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
