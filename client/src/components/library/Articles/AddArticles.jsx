@@ -37,8 +37,10 @@ const AddArticles = () => {
                         </div>
                         <div className="">
                             <label htmlFor="">Select Category</label>
-                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Journal Title"
-                            onChange={e => SetArticleData({...ArticleData, title:e.target.value})}/>
+                            <select className="w-full h-12 my-2 border border-blue-500 rounded pl-2"
+                            onChange={e => SetArticleData({...ArticleData, category:e.target.value})}>
+
+                            </select>
                         </div>
                     </div>
                 </form>
