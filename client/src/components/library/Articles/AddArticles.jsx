@@ -4,6 +4,18 @@ import { Link, useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 
 const AddArticles = () => {
+    const navigate = useNavigate();
+
+    const [ArticleData, SetArticleData] = useState({
+        title:'',
+        category:'',
+        journal:'',
+        pyear:'',
+        author1:'',
+        author2:'',
+        pages:''
+    })
+
     //check the current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
   return (
@@ -14,6 +26,18 @@ const AddArticles = () => {
             <Link to={'/Articles'}>
                 <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
             </Link>
+
+            <div className="my-2">
+                <form>
+                    <div className="lg:grid grid-cols-2 gap-2">
+                        <div className="">
+                            <label htmlFor="">Title of the Article</label>
+                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Journal Title"
+                            onChange={e => SetjournalData({...journalData, title:e.target.value})}/>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
   )
