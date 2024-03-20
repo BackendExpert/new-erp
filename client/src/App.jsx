@@ -43,6 +43,7 @@ import Thesis from "./components/library/Thesis/Thesis"
 import AddThesis from "./components/library/Thesis/AddThesis"
 import Magazine from "./components/library/Magazine/Magazine"
 import AddMagazine from "./components/library/Magazine/AddMagazine"
+import Profile from "./components/Profile"
 
 export default function App() {
   return (
@@ -130,7 +131,8 @@ export default function App() {
         <Route path="/Equipments" element={<PrivateRoute><Equipments /></PrivateRoute>} />
         <Route path="/UpdateEquipment/:id" element={<PrivateRoute><UpdateEquipment /></PrivateRoute>} />
 
-
+        {/* Profile */}
+        <Route path="/Profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>

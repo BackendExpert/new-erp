@@ -14,7 +14,7 @@ const navList = () => {
         {name: "Work Requests", link: ""},
         {name: "Gatepass Requests", link: ""},
         {name: "Increment Requests", link: ""},
-        {name: "Profile", link: ""},
+        {name: "Profile", link: "/Profile"},
         {name: "Logout", link: "", desc: "logout"}       
     ];
 
