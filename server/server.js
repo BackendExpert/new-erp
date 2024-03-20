@@ -223,7 +223,7 @@ app.post('/AddArticle', (req, res) => {
         return res.json({Error: "Please Select Any Category"})
     }
     else{
-        const sql = "INSERT INTO articles() VALUES (?)";
+        const sql = "INSERT INTO articles(title, category, journal, pyear, ) VALUES (?)";
     }
 })
 
