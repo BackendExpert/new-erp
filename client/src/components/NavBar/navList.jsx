@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Icons from "@reacticons/ionicons"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const navList = () => {
     const [navopen, SetNavOpen] = useState()
@@ -40,7 +40,9 @@ const navList = () => {
                     }
                     else{
                         return (
-                            <div className="cursor-pointer text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">{nav.name}</div>
+                            <Link to={nav.link}>
+                                <div className="cursor-pointer text-blue-500 px-4 lg:py-0 py-4 lg:border-0 border-b-4 border-blue-200">{nav.name}</div>
+                            </Link>                            
                         )
                     }
                 })
