@@ -89,7 +89,7 @@ const AddArticles = () => {
                         <div className="">
                             <label htmlFor="">Page Numbers</label>
                             <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Page Numbers"
-                            onChange={e => SetArticleData({...ArticleData, journal:e.target.value})}/>
+                            onChange={e => SetArticleData({...ArticleData, pages:e.target.value})}/>
                         </div>
                     </div>
                     <div className="">
