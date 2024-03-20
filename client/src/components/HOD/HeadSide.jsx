@@ -13,7 +13,7 @@ const HeadSide = () => {
         {name: "SRN Requests",  link: "#", icon: <Icons name="book" size="large"></Icons>},
         {name: "Gatepass Requests",  link: "#", icon: <Icons name="enter" size="large"></Icons>},
         {name: "Increment Requests",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
-        {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
         {name: "Logout", desc: "logout", icon: <Icons name="power" size="large"></Icons>}
     ]
 
