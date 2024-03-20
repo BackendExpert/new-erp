@@ -216,6 +216,17 @@ app.put('/ReactiveAccount/:id', (req, res) => {
 
 })
 
+
+//AddArticle
+app.post('/AddArticle', (req, res) => {
+    if(req.body.category === ""){
+        return res.json({Error: "Please Select Any Category"})
+    }
+    else{
+        const sql = "INSERT INTO articles() VALUES (?)";
+    }
+})
+
 //---------------------------- LIBRARY Start ---------------------------------------------------------
 
 // Count Books 
