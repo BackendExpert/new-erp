@@ -77,6 +77,9 @@ const AddArticles = () => {
                             onChange={e => SetArticleData({...ArticleData, journal:e.target.value})}/>
                         </div>
                     </div>
+                    <div className="">
+                        <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Add Article</button>
+                    </div>
                 </form>
             </div>
         </div>
