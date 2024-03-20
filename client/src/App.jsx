@@ -71,6 +71,10 @@ export default function App() {
         
         {/* librarian */}
         <Route path="/librarian" element={<PrivateRoute><Librarian /></PrivateRoute>} />
+        {/* Book */}
+        <Route path="/bookadd" element={<PrivateRoute><AddBook /></PrivateRoute>} />
+        <Route path="/booklist" element={<PrivateRoute><Books /></PrivateRoute>} />
+        <Route path="/BorrowBook/:id" element={<PrivateRoute><BookBorrow /></PrivateRoute>} />
         {/* Journals */}
         <Route path="/Journals" element={<PrivateRoute><Journals /></PrivateRoute>} />
         <Route path="/AddJournal" element={<PrivateRoute><AddJournal /></PrivateRoute>} />
@@ -92,11 +96,6 @@ export default function App() {
         
         {/* user */}
         <Route path="/user" element={<PrivateRoute><Users /></PrivateRoute>} />
-        
-        {/* Book */}
-        <Route path="/bookadd" element={<PrivateRoute><AddBook /></PrivateRoute>} />
-        <Route path="/booklist" element={<PrivateRoute><Books /></PrivateRoute>} />
-        <Route path="/BorrowBook/:id" element={<PrivateRoute><BookBorrow /></PrivateRoute>} />
         
         {/* Employee */}
         <Route path="/Employee" element={<PrivateRoute><Employees /></PrivateRoute>} />
