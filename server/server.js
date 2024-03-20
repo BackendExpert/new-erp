@@ -113,8 +113,8 @@ app.post('/login', (req, res) => {
 app.post('/UnAccess', (req, res) => {
     const userEmail = req.body.email;
     const userRole = req.body.role;
-    // console.log("Email is :", userEmail);
-    // console.log("Role is :", userRole);
+    console.log("Email is :", userEmail);
+    console.log("Role is :", userRole);
 
     const updateUser = "UPDATE users SET is_active = ? WHERE email = ?";
     const is_active = 0;
