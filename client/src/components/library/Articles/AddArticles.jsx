@@ -32,7 +32,7 @@ const AddArticles = () => {
                     <div className="lg:grid grid-cols-2 gap-2">
                         <div className="">
                             <label htmlFor="">Title of the Article</label>
-                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Journal Title"
+                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Title"
                             onChange={e => SetArticleData({...ArticleData, title:e.target.value})}/>
                         </div>
                         <div className="">
@@ -49,7 +49,32 @@ const AddArticles = () => {
 
                     <div className="lg:grid grid-cols-2 gap-2">
                         <div className="">
-                            
+                            <label htmlFor="">Name of the Journal/Conference</label>
+                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Name of the Journal/Conference"
+                            onChange={e => SetArticleData({...ArticleData, journal:e.target.value})}/>
+                        </div>
+                        <div className="">
+                            <label htmlFor="">Year of Publication</label>
+                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Year of Publication"
+                            onChange={e => SetArticleData({...ArticleData, pyear:e.target.value})}/>
+                        </div>
+                    </div>
+
+                    <div className="lg:grid grid-cols-2 gap-2">
+                        <div className="">
+                            <label htmlFor="">Author 1</label>
+                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Author 1"
+                            onChange={e => SetArticleData({...ArticleData, author1:e.target.value})}/>
+                        </div>
+                        <div className="">
+                            <label htmlFor="">Author 2</label>
+                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Author 2"
+                            onChange={e => SetArticleData({...ArticleData, author2:e.target.value})}/>
+                        </div>
+                        <div className="">
+                            <label htmlFor="">Name of the Journal/Conference</label>
+                            <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Name of the Journal/Conference"
+                            onChange={e => SetArticleData({...ArticleData, journal:e.target.value})}/>
                         </div>
                     </div>
                 </form>
