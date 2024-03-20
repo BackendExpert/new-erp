@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react"
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 import CountUp from 'react-countup'
 import Icons from '@reacticons/ionicons'
@@ -100,7 +100,7 @@ const SummaryDash = () => {
   }, []);
 
   const DataList = [
-    {id: 1, name:"User Roles" , icons: <Icons name="person" size="large"/>, style:"bg-green-600"},
+    {id: 1, name:"User Roles" , value: <CountUp end={count}/>, icons: <Icons name="person" size="large"/>, style:"bg-green-600"},
     {id: 2, name:"Books" , value: <CountUp end={books}/>, icons: <Icons name="book" size="large"/>, style:"bg-blue-600"},
     {id: 3, name:"Employee" , value: <CountUp end={employee}/>, icons: <Icons name="people" size="large"/>, style:"bg-yellow-600"},
     {id: 4, name:"Designations" , value: <CountUp end={designation}/>, icons: <Icons name="easel" size="large"/>, style:"bg-blue-400"},
@@ -122,39 +122,19 @@ const SummaryDash = () => {
         DataList.map((data, index) => {
             //for SuperAdmin
             if(RoleUser === "SuperAdmin"){
-              if(data.id === 1){
-                return (           
-                  <Link>
-                    <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
-                      <div className="flex justify-between">
-                        <div className="flex">
-                          <p>{data.icons}</p>
-                          <p className="text-2xl pl-4">{data.name}</p>
-                        </div>
-                        <div className="">
-                          <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
-                        </div>
-                      </div>
-                    </div>    
-                  </Link>
-                )
-              }
-              else{
-                return (           
-                  <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
-                    <div className="flex justify-between">
-                      <div className="flex">
-                        <p>{data.icons}</p>
-                        <p className="text-2xl pl-4">{data.name}</p>
-                      </div>
-                      <div className="">
-                        <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
-                      </div>
+              return (           
+                <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
+                  <div className="flex justify-between">
+                    <div className="flex">
+                      <p>{data.icons}</p>
+                      <p className="text-2xl pl-4">{data.name}</p>
                     </div>
-                  </div>       
-                )
-              }
-
+                    <div className="">
+                      <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
+                    </div>
+                  </div>
+                </div>       
+              )
             }
             //for Admin
             if(RoleUser === "Admin"){
