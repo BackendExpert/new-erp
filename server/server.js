@@ -217,15 +217,6 @@ app.put('/ReactiveAccount/:id', (req, res) => {
 })
 
 
-//AddArticle
-app.post('/AddArticle', (req, res) => {
-    if(req.body.category === ""){
-        return res.json({Error: "Please Select Any Category"})
-    }
-    else{
-        const sql = "INSERT INTO articles(title, category, journal, pyear, author1, author2, ) VALUES (?)";
-    }
-})
 
 //---------------------------- LIBRARY Start ---------------------------------------------------------
 
@@ -522,6 +513,41 @@ app.get('/CountMagazine', (req, res) => {
       res.json({ maga: results[0].maga }); // Send count in JSON format
     });
 });
+
+
+//AddArticle
+app.post('/AddArticle', (req, res) => {
+    if(req.body.category === ""){
+        return res.json({Error: "Please Select Any Category"})
+    }
+    else{
+        const sql = "INSERT INTO articles(title, category, journal, pyear, author1, author2, pages, create_at, update_at) VALUES (?)";
+        const createTime = new Date();
+        const updateTime = new Date();
+
+        const value = [
+            req.body.title,
+            req.body.category,
+            req.body.journal,
+            req.body.pyear,
+            req.body.author1,
+            req.body.author2,
+            req.body.pages,
+            createTime,
+            updateTime           
+        ]
+
+        connection.query(sql, [value], (err, result) => {
+            if(err){
+                return res.json({Error: "ERROR on Server"})
+            }
+            else{
+                return res.json({Status: "Success"})
+            }
+        })
+    }
+})
+
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
