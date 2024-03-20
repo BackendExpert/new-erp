@@ -548,6 +548,20 @@ app.post('/AddArticle', (req, res) => {
     }
 })
 
+//ViewArticle
+
+app.get('/ViewArticle', (req, res) =>{
+    const sql = "SELECT * FROM articles";
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
