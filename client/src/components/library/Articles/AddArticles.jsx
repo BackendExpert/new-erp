@@ -16,6 +16,21 @@ const AddArticles = () => {
         pages:''
     })
 
+    const headleSubmit = (e) => {
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/AddArticle', ArticleData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Article Added Successful")
+                navigate('/Articles')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
+
     //check the current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
   return (
@@ -28,7 +43,7 @@ const AddArticles = () => {
             </Link>
 
             <div className="my-2">
-                <form>
+                <form onSubmit={headleSubmit}>
                     <div className="lg:grid grid-cols-2 gap-2">
                         <div className="">
                             <label htmlFor="">Title of the Article</label>
