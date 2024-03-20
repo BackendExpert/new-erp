@@ -14,7 +14,7 @@ const AccSide = () => {
         {name: "Vehicle",  link: "#", icon: <Icons name="car" size="large"></Icons>},
         {name: "Equipment",  link: "#", icon: <Icons name="build" size="large"></Icons>},
         {name: "Increment",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
-        {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>}
+        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>}
     ]
   return (
     <div className={`${openSide ? "w-72" : "w-20" } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-full pl-4 py-4 `}>
