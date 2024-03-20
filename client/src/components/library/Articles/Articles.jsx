@@ -7,6 +7,16 @@ const Articles = () => {
     //check the current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const navigate = useNavigate()
+
+    const [ViewArticle, SetViewArticle] = useState([])
+
+    //fetch data from backend
+    useEffect(() => {
+        axios.post('http://localhost:8081/ViewArticle')
+        .then(res => SetViewArticle(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
     if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
         return (
