@@ -33,7 +33,7 @@ const AddArticles = () => {
                         <div className="">
                             <label htmlFor="">Title of the Article</label>
                             <input type="text" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Journal Title"
-                            onChange={e => SetjournalData({...journalData, title:e.target.value})}/>
+                            onChange={e => SetArticleData({...ArticleData, title:e.target.value})}/>
                         </div>
                     </div>
                 </form>
