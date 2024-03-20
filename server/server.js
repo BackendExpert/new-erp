@@ -562,6 +562,22 @@ app.get('/ViewArticle', (req, res) =>{
     })
 })
 
+//DeleteArticle
+
+app.delete('/DeleteArticle/:id', (req, result) => {
+    const DeleteId = req.params.id;
+    const sql = "DELETE FROM articles WHERE Aid = ?";
+
+    connection.query(sql, [DeleteId], (err, result) =>{
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 //---------------------------- LIBRARY END ---------------------------------------------------------
 
 
