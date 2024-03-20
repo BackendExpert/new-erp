@@ -18,7 +18,7 @@ const AddArticles = () => {
 
     const headleSubmit = (e) => {
         e.preventDefault(); 
-        axios.get('http://localhost:8081/AddArticle', ArticleData)
+        axios.post('http://localhost:8081/AddArticle', ArticleData)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Article Added Successful")

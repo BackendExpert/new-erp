@@ -13,7 +13,7 @@ const Articles = () => {
 
     //fetch data from backend
     useEffect(() => {
-        axios.post('http://localhost:8081/ViewArticle')
+        axios.get('http://localhost:8081/ViewArticle')
         .then(res => SetViewArticle(res.data))
         .catch(err => console.log(err))
     }, [])
