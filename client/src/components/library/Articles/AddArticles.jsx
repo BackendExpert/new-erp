@@ -46,6 +46,12 @@ const AddArticles = () => {
                             </select>
                         </div>
                     </div>
+
+                    <div className="lg:grid grid-cols-2 gap-2">
+                        <div className="">
+                            
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
