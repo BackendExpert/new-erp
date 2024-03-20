@@ -18,6 +18,21 @@ const Articles = () => {
         .catch(err => console.log(err))
     }, [])
 
+
+    //delete article
+    const headleDelete = (id) =>{
+        axios.delete('http://localhost:8081/DeleteArticle/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Article Deleted Successful")
+                window.location.reload();
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "Librarian" || RoleUser === "SuperAdmin"){
         return (
             <div className="bg-gray-200 py-4">
@@ -58,7 +73,7 @@ const Articles = () => {
                                                 <td className='px-6 py-4 font-bold'>{article.author1}, {article.author1}</td>
                                                 <td className='px-6 py-4 font-bold'>{article.pages}</td>
                                                 <td className='px-6 py-4 font-bold'>
-                                                    
+                                                    <button onClick={() => headleDelete(article.Aid)} className="rounded border border-red-500 text-red-500 font-semibold  mx-2 py-2 px-8 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
                                                 </td>
                                             </tr>
                                         )
