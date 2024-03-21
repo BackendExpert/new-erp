@@ -83,3 +83,5 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 
 
 <img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/8%20unaccess.PNG">
+
+- after this when user try to relogin to the system, but the system doesn't give persmision to do it because that user is suspended.
