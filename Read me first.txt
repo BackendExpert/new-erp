@@ -29,7 +29,7 @@ folders
 
     
     - please use the 
-    - - db/DumpAt20240306/ full db in mysql Workbench
+    - - db/DumpAt20240306 full db/ in mysql Workbench
 
 
     - - db_name: db_erp
