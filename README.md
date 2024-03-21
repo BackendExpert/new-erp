@@ -93,3 +93,9 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 - if are there any Suspended users in the System SuperAdmin can view it at the SuperAdmin Dashbord
 
 <img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/10%20unaccessUsers.PNG">
+
+- Account Reactivation
+
+<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/11%20reactiveaccout%20only%20can%20by%20SuperAdmin.PNG">
+
+<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/12%20accountreactive%20ok.PNG">
