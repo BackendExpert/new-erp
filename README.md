@@ -87,3 +87,9 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 - after this when user try to relogin to the system, but the system doesn't give persmision to do it because that user is suspended.
 
 <img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/9%20suspended.PNG">
+
+- According to this, the SuperAdmin of the System only reactivate the Suspeded accouts
+
+- if are there any Suspended users in the System SuperAdmin can view it at the SuperAdmin Dashbord
+
+<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/10%20unaccessUsers.PNG">
