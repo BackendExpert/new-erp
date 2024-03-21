@@ -1,0 +1,11 @@
+for first start project
+
+1. go to client and install
+    - npm install
+
+2. go to server
+    - npm install
+
+if you already install npm in client and server folders
+no need to install again skip the above step
+
