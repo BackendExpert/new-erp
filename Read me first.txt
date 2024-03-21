@@ -1,5 +1,6 @@
 for first start project
 
+(On terminal)
 1. go to client and install
     - npm install
 
@@ -8,6 +9,13 @@ for first start project
 
 if you already install npm in client and server folders
 no need to install again skip the above step
+
+for start
+- go to client, open terminal 
+    - npm run dev
+
+- go to server, open terminal
+    - npm start
 
 folders 
     - client
