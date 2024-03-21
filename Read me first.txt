@@ -27,6 +27,10 @@ folders
     - db
     - - database all tables
 
+    - please use the 
+    - - DumpAt20240306 full db in mysql Workbench
+
+
     - - db_name: db_erp
     - - db_password: 1234
     - - user: root
