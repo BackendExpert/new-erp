@@ -43,4 +43,4 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 
 ### Librarian Dashbaord
 
-<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/3%20SuperAdminDashDown.PNG">
+<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/4%20librarian.PNG">
