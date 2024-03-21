@@ -44,3 +44,11 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 ### Librarian Dashbaord
 
 <img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/4%20librarian.PNG">
+
+<hr>
+
+### view items
+
+- this is same as all items in the system
+
+<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/4%20librarian.PNG">
