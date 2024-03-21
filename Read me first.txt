@@ -9,3 +9,14 @@ for first start project
 if you already install npm in client and server folders
 no need to install again skip the above step
 
+folders 
+    - client
+    - - frontend of the project
+
+    - server
+    - - backend of the project
+
+    - db
+    - - database all tables
+
+    - - db_name: 
