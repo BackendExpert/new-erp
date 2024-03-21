@@ -60,3 +60,11 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 - this is same as all items in the system
 
 <img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/6%20addingItems%20same%20as%20all.PNG">
+
+<hr>
+
+### Updating items
+
+- this is same as all items in the system
+
+<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/6%20addingItems%20same%20as%20all.PNG">
