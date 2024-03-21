@@ -24,3 +24,8 @@ if any user try to access routes that user cannot access, the user will be suspe
 exmaple:
 
 if user type user try to access SuperAdmin  dashboard the user's account will autometicaly suspended by the system
+
+
+# Screen Shorts
+
+<img src="">
