@@ -32,6 +32,8 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 
 <img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/1SuperAdminDash.PNG">
 
+
 <img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/2%20SuperAdminDash1.PNG">
+
 
 <img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/3%20SuperAdminDashDown.PNG">
