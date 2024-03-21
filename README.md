@@ -31,3 +31,7 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 ### SuperAdmin Dashboard
 
 <img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/1SuperAdminDash.PNG">
+
+<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/1SuperAdminDash.PNG">
+
+<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/1SuperAdminDash.PNG">
