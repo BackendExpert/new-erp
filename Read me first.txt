@@ -19,4 +19,7 @@ folders
     - db
     - - database all tables
 
-    - - db_name: 
+    - - db_name: db_erp
+    - - db_password: 1234
+    - - user: root
+    - - server: localhost:8081 
