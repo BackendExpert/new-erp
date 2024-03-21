@@ -76,3 +76,9 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 - When User login to the System,
 
 - The User try to access routes, that the user doesn't have any access, the System autometicaly suspend that user
+
+- As Example: 
+
+- - if user type user try to access to the SuperAdmin Dashbaord the System autometicaly suspend that user's Account
+
+
