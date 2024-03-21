@@ -26,6 +26,8 @@ exmaple:
 if user type user try to access SuperAdmin  dashboard the user's account will autometicaly suspended by the system
 
 
-# Screen Shorts
+## Screen Shorts
+
+### SuperAdmin Dashboard
 
 <img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/1SuperAdminDash.PNG">
