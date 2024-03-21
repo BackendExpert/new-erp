@@ -82,3 +82,4 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 - - if user type user try to access to the SuperAdmin Dashbaord the System autometicaly suspend that user's Account
 
 
+<img src="hhttps://github.com/BackendExpert/new-erp/blob/master/screenShorts/8%20unaccess.PNG">
