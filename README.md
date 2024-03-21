@@ -51,4 +51,4 @@ if user type user try to access SuperAdmin  dashboard the user's account will au
 
 - this is same as all items in the system
 
-<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/4%20librarian.PNG">
+<img src="https://github.com/BackendExpert/new-erp/blob/master/screenShorts/5%20viewingitems%20same%20all%20items.PNG">
