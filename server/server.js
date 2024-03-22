@@ -1439,6 +1439,54 @@ app.get('/ProjectDataUpdate/:id', (req, res) => {
     })
 })
 
+//UpdateDataProject
+app.put('/UpdateDataProject/:id', (req, res) => {
+    const UpdateProjectId = req.params.id;
+    
+    const divisionID = req.body.divno;
+    const divisionsql = "SELECT * FROM division WHERE did = ?"
+    connection.query(divisionsql, [divisionID], (err, result) => {
+        if(err) throw err
+
+        if(result.length == 0){
+            return res.json({Error: "Division ID is not exists"})
+        }
+        else{
+            const hodsql = "SELECT * FROM users WHERE email = ?"
+            connection.query(hodsql, [req.body.hod], (err, result) => {
+                if(err) throw err
+
+                if(result.length == 0){
+                    return res.json({Error: "HOD is not exists"})
+                }
+                else if(result[0].role === "HOD"){
+                    const ra1sql = "SELECT * FROM employee WHERE email = ?"
+                    connection.query(ra1sql, [req.body.ra1], (err, result) => {
+                        if(err) throw err
+
+                        if(result.length == 0){
+                            return res.json({Error: "RA1 is not exists"})
+                        }
+                        else if(result[0].category === "RA"){
+                            const ra2sql = "SELECT * FROM employee WHERE email = ?"
+                            connection.query(ra2sql, [req.body.ra2], (err, result) => {
+                                if(err) throw err
+
+                                if(result.length == 0){
+                                    return res.json({Error: "RA2 is not exists"})
+                                }
+                                else if(result[0].category === "RA"){
+                                    
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+        }
+    })
+})
+
 //------------------- Project End  ---------------------------
 
 
