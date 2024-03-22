@@ -89,7 +89,7 @@ const Login = () => {
     <div className=' lg:py-32 lg:px-16 bg-[url(https://www.nifs.ac.lk/themes/custom/nifslk/dist/img/xnifs-enterence.jpg.pagespeed.ic.gWC6m0XOY_.webp)] bg-center bg-cover h-screen w-full'>
         <div className="lg:grid grid-cols-2 gap-4 backdrop-blur-xl h-full lg:py-0 py-20">
             <div className="text-center py-20 backdrop-opacity-10">
-                <div className="my-4">
+                <div className="my-4" style={{ fontFamily: '"Aclonica", sans-serif' }}>
                     <p className="py-2 text-[#1d2333] font-bold text-5xl font-sans" >Welcome to</p>
                     <p className="py-2 text-[#1d2333] font-bold text-4xl">ERP System</p>
                     <p className="py-2 text-[#1d2333] font-bold text-3xl">National Institute of Fundamental Studies</p>
@@ -117,7 +117,7 @@ const Login = () => {
                         </Link>
                     </p>
                 </div>
-                <p className=''>
+                <p className='pt-16 text-center'>
                     Copyright &copy; 2024. National Institute of Fundamental Studies
                 </p>
             </div>
