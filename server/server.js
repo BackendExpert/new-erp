@@ -1363,7 +1363,7 @@ app.post('/AddProject', (req, res) =>{
                         if(result.length == 0){
                             return res.json({Error: "RA 1 Not exists"})
                         }
-                        else if(result[0].designation === "RA"){
+                        else if(result[0].category === "RA"){
                             //check ra2 is exists on db
                             const ra2sql = "SELECT * FROM employee WHERE email = ?"
                             connection.query(ra2sql, [req.body.ra2], (err, result) => {
@@ -1372,7 +1372,7 @@ app.post('/AddProject', (req, res) =>{
                                 if(result.length == 0){
                                     return res.json({Error: "RA 2 Not exists" })
                                 }
-                                else if(result[0].designation === "RA"){
+                                else if(result[0].category === "RA"){
                                     if(req.body.ra1 === req.body.ra2){
                                         return res.json({Error: "RA1 and RA2 Same"})
                                     }
