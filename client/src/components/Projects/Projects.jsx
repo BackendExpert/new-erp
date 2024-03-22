@@ -33,7 +33,16 @@ const Projects = () => {
 
   //delete project
   const handleDelete = (id) => {
-
+    axios.delete('http://localhost:8081/DeleteProject/'+ id)
+    .then(res => {
+      if(res.data.Status === "Success"){
+        alert("Project Deleted Successful")
+        window.location.reload()
+      }
+      else{
+        alert(res.data.Error)
+      }
+    })
   }
 
   if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
