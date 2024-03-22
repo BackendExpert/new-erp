@@ -1488,11 +1488,9 @@ app.put('/UpdateDataProject/:id', (req, res) => {
                                             req.body.hod,
                                             req.body.ra1,
                                             req.body.ra2,
-                                            req.body.divno,
                                             update_at
-                                            
                                         ]
-                                        connection.query(sql, [value], (err, result) => {
+                                        connection.query(sql, [value, UpdateProjectId], (err, result) => {
                                             if(err){
                                                 return res.json({Error: "ERROR on SERVER"})
                                             }
