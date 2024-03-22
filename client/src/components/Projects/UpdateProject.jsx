@@ -30,6 +30,17 @@ const UpdateProject = () => {
     //headleUpdate
     const headleUpdate = (e) => {
       e.preventDefault();
+
+      axios.put('http://localhost:8081/UpdateDataProject/' + id, updateProject)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Project Updated Successful")
+          navigate('/Projects')
+        } 
+        else{
+          alert(res.data.Error)
+        }
+      })
     }
 
     //get the login user
