@@ -86,23 +86,29 @@ const Login = () => {
     }
 
   return (
-    <div className='lg:py-32 lg:px-16 bg-[url(https://www.nifs.ac.lk/themes/custom/nifslk/dist/img/xnifs-enterence.jpg.pagespeed.ic.gWC6m0XOY_.webp)] bg-center bg-cover h-screen w-full'>
-        <div className="lg:grid grid-cols-2 gap-4 backdrop-blur-sm h-full">
-            <div className=""></div>
-            <div className="bg-[#1d2333] mr-20 px-16 py-20 rounded-xl text-white">
+    <div className=' lg:py-32 lg:px-16 bg-[url(https://www.nifs.ac.lk/themes/custom/nifslk/dist/img/xnifs-enterence.jpg.pagespeed.ic.gWC6m0XOY_.webp)] bg-center bg-cover h-screen w-full'>
+        <div className="lg:grid grid-cols-2 gap-4 backdrop-blur-xl h-full lg:py-0 py-20">
+            <div className="text-center py-20 backdrop-opacity-10">
+                <div className="my-4">
+                    <p className="py-2 text-[#1d2333] font-bold text-5xl font-sans" >Welcome to</p>
+                    <p className="py-2 text-[#1d2333] font-bold text-4xl">ERP System</p>
+                    <p className="py-2 text-[#1d2333] font-bold text-3xl">National Institute of Fundamental Studies</p>
+                </div>
+            </div>
+            <div className="bg-[#1d2333] lg:mr-20 lg:my-0 lg:mx-0 mx-[10%] lg:px-16 px-4 py-10 rounded-xl text-white">
                 <p className="text-3xl">Login To ERP</p>
                 <div className="pl-4">
                     <form onSubmit={headleLogin}>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Email : </label>
-                            <input type="email" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Email Address' name='email' onChange={onChange} value={email}/>
+                            <input type="email" className="my-6 w-full lg:h-20 h-12 border border-gray-500 rounded pl-2 lg:text-2xl bg-transparent" required placeholder='Enter Email Address' name='email' onChange={onChange} value={email}/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Password : </label>
-                            <input type="password" className="my-2 w-full h-11 border rounded pl-2" required placeholder='Enter Password' name='password' onChange={onChange} value={password}/>
+                            <input type="password" className="my-6 w-full lg:h-20 h-12 border border-gray-500 rounded pl-2 lg:text-2xl bg-transparent" required placeholder='Enter Password' name='password' onChange={onChange} value={password}/>
                         </div>
                         <div className="my-4">
-                            <button type="submit" className="w-1/2 h-12 border border-blue-500 rounded text-blue-500 duration-500 hover:text-white hover:bg-blue-500">Login</button>
+                            <button type="submit" className="lg:text-2xl w-1/2 lg:h-20 h-12 border border-[#c026d3] rounded text-[#c026d3] duration-500 hover:text-white hover:bg-[#c026d3]">Login</button>
                         </div>
                     </form>
                     <p>Dont't have an Account ? 
@@ -111,6 +117,9 @@ const Login = () => {
                         </Link>
                     </p>
                 </div>
+                <p className=''>
+                    Copyright &copy; 2024. National Institute of Fundamental Studies
+                </p>
             </div>
         </div>
     </div>
