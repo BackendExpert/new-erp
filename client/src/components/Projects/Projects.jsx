@@ -20,7 +20,7 @@ const Projects = () => {
     }
   } 
 
-  const [viewProjects, SetViewProjects] = useState()
+  const [viewProjects, SetViewProjects] = useState([])
 
   // this page can access by following users
   // SuperAdmin, Admin
@@ -57,7 +57,20 @@ const Projects = () => {
                                 </tr>
                             </thead>
                             <tbody>
-
+                              {
+                                  viewProjects.map((project, index) => {
+                                    return (
+                                      <tr key={index}>
+                                        <td className='px-6 py-4 font-bold'>{project.pid}</td>
+                                        <td className='px-6 py-4 font-bold'>{project.title}</td>
+                                        <td className='px-6 py-4 font-bold'>{project.divno}</td>
+                                        <td className='px-6 py-4 font-bold'>{project.hod}</td>
+                                        <td className='px-6 py-4 font-bold'>{project.ra1}</td>
+                                        <td className='px-6 py-4 font-bold'>{project.ra2}</td>
+                                      </tr>
+                                    )
+                                })
+                              }
                             </tbody>
                         </table>
                     </div>          
