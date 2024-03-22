@@ -11,10 +11,17 @@ const AddProject = () => {
   // this page can access by following users
   // SuperAdmin, Admin
 
-    const [ProjectData, SetProjectData] = useState()
+    const [ProjectData, SetProjectData] = useState({
+      title:'',
+      divno:'',
+      hod:'',
+      ra1:'',
+      ra2:''
+    })
 
   const headleSubmit = (e) => {
     e.preventDefault();
+
   }
 
   if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
@@ -36,12 +43,12 @@ const AddProject = () => {
                 <div className="my-2">
                   <label htmlFor="">Project Name</label>
                   <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Project Name"
-                  />
+                  onChange={e => SetProjectData({...ProjectData, title:e.target.value})}/>
                 </div>
                 <div className="my-2">
                   <label htmlFor="">Division No</label>
                   <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Division No"
-                  />
+                  onChange={e => SetProjectData({...ProjectData, divno:e.target.value})}/>
                 </div>
               </div>
 
@@ -49,17 +56,17 @@ const AddProject = () => {
                 <div className="my-2">
                   <label htmlFor="">HOD Email</label>
                   <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Project Name"
-                  />
+                  onChange={e => SetProjectData({...ProjectData, hod:e.target.value})}/>
                 </div>
                 <div className="my-2">
                   <label htmlFor="">First Research Assistant</label>
                   <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter First RA Email"
-                  />
+                  onChange={e => SetProjectData({...ProjectData, ra1:e.target.value})}/>
                 </div>
                 <div className="my-2">
                   <label htmlFor="">Second Research Assistant</label>
                   <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Second RA Email"
-                  />
+                  onChange={e => SetProjectData({...ProjectData, ra2:e.target.value})}/>
                 </div>
               </div>
 
