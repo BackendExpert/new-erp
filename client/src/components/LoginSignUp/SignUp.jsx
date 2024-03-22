@@ -40,37 +40,43 @@ export const SignUp = () => {
     }
 
   return (
-    <div className='bg-[url(https://wallpapercave.com/wp/qkz7ffi.jpg)] bg-center bg-cover h-full w-full'>
-        <div className="lg:py-[150px] lg:mx-40 py-16 mx-8">
-            <div className="bg-white lg:py-8 lg:px-24 py-10 px-8 rounded-md">
-                <h1 className="text-3xl font-semibold">Register Here</h1>
-                
+    <div className='lg:py-24 lg:px-16 bg-[url(https://www.nifs.ac.lk/themes/custom/nifslk/dist/img/xnifs-enterence.jpg.pagespeed.ic.gWC6m0XOY_.webp)] bg-center bg-cover h-screen w-full'>
+        <div className="lg:grid grid-cols-2 gap-4 backdrop-blur-md h-full lg:py-0 py-20">
+            <div className="text-center py-20 backdrop-opacity-10">
+                <div className="my-4" style={{ fontFamily: '"Aclonica", sans-serif' }}>
+                    <p className="py-2 text-[#1d2333] font-bold text-5xl font-sans" >Welcome to</p>
+                    <p className="py-2 text-[#1d2333] font-bold text-4xl">ERP System</p>
+                    <p className="py-2 text-[#1d2333] font-bold text-3xl">National Institute of Fundamental Studies</p>
+                </div>
+            </div>
+            <div className="bg-[#1d2333] lg:mr-20 lg:my-0 lg:mx-0 mx-[10%] lg:px-16 px-4 py-10 rounded-xl text-white">
+                <p className="text-3xl">New To System ? </p>
                 <div className="pl-4">
                     <form onSubmit={headleSignUp}>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Name : </label>
-                            <input type="text" className="my-2 w-full h-11 border rounded pl-2" name='username' required placeholder='Enter Name' value={username} onChange={onChange}/>
+                            <input type="text" className="my-2 w-full lg:h-16 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent" name='username' required placeholder='Enter Name' value={username} onChange={onChange}/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Email : </label>
-                            <input type="email" className="my-2 w-full h-11 border rounded pl-2" name='email' required placeholder='Enter Email Address' value={email} onChange={onChange}/>
+                            <input type="email" className="my-2 w-full lg:h-16 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent" name='email' required placeholder='Enter Email Address' value={email} onChange={onChange}/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Enter Password : </label>
-                            <input type="password" className="my-2 w-full h-11 border rounded pl-2" name='password' required placeholder='Enter Password'value={password} onChange={onChange}/>
+                            <input type="password" className="my-2 w-full lg:h-16 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent" name='password' required placeholder='Enter Password'value={password} onChange={onChange}/>
                         </div>
                         <div className="my-4">
                             <label htmlFor="" className='text-xl'>Select Role : </label><br />
-                            <select name="role" id="" className='border w-full py-2 my-2 pl-2' onChange={onChange} value={role}>
-                                <option className='bg-gray-200 '>Select Allowance Name</option>
-                                <option value="SuperAdmin">SuperAdmin</option>
-                                <option value="Admin">Admin</option>
-                                <option value="HOD">Head</option>
-                                <option value="TO">Transport Office</option>
-                                <option value="Librarian">Librarian</option>
-                                <option value="Labmanager">Labmanager</option>
-                                <option value="Accountant">Accountant</option>
-                                <option value="User">User</option>
+                            <select name="role" id="" className='bg-black text-white my-2 w-full lg:h-16 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent' onChange={onChange} value={role}>
+                                <option className='bg-[#1d2333]'>Select Allowance Name</option>
+                                <option className='bg-[#1d2333]'value="SuperAdmin">SuperAdmin</option>
+                                <option className='bg-[#1d2333]'value="Admin">Admin</option>
+                                <option className='bg-[#1d2333]'value="HOD">Head</option>
+                                <option className='bg-[#1d2333]'value="TO">Transport Office</option>
+                                <option className='bg-[#1d2333]'value="Librarian">Librarian</option>
+                                <option className='bg-[#1d2333]'value="Labmanager">Labmanager</option>
+                                <option className='bg-[#1d2333]'value="Accountant">Accountant</option>
+                                <option className='bg-[#1d2333]'value="User">User</option>
                             </select>
                         </div>
                         <div className="my-4">
@@ -83,8 +89,20 @@ export const SignUp = () => {
                         </Link>
                     </p>
                 </div>
+                <p className='pt-16 text-center'>
+                    Copyright &copy; 2024. National Institute of Fundamental Studies
+                </p>
             </div>
         </div>
     </div>
+    // <div className='bg-[url(https://wallpapercave.com/wp/qkz7ffi.jpg)] bg-center bg-cover h-full w-full'>
+    //     <div className="lg:py-[150px] lg:mx-40 py-16 mx-8">
+    //         <div className="bg-white lg:py-8 lg:px-24 py-10 px-8 rounded-md">
+    //             <h1 className="text-3xl font-semibold">Register Here</h1>
+                
+
+    //         </div>
+    //     </div>
+    // </div>
   )
 }
