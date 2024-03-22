@@ -1336,6 +1336,23 @@ app.get('/EquiCount', (req, res) => {
 //------------------------------------- Equipment End -------------------------------------
 //------------------- Project Start -------------------------
 
+//AddProject
+app.post('/AddProject', (req, res) =>{
+    const checkdivison = "SELECT * FROM division WHERE did = ?";
+    connection.query(checkdivison, [req.body.divno], (err, result) => {
+        if(err) throw err
+
+        if(result.length == 0){
+            return res.json({Error: "Please Enter Valied Division Number, The Added Division Number is not exist"})
+        }
+        else{
+            const checkhod = "SELECT * FROM users WHERE email = ?"
+            connection.query(checkhod, [req.body.hod], (err, result) => {
+                
+            })
+        }
+    })
+})
 
 //------------------- Project End  ---------------------------
 
