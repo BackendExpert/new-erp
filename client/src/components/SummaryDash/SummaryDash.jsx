@@ -152,24 +152,18 @@ const SummaryDash = () => {
                   <span className="text-3xl" >{data.icons}</span>
                   <p className="text-xl py-2">{data.name}</p>
                   <p className="text-2xl font-bold">{data.value}</p>
-              </div>               
+                </div>               
               )
             }
             //For Librarian
             if(RoleUser === "Librarian"){
               if(data.id === 2 || data.id === 9 || data.id === 10 || data.id === 11 || data.id === 12){
                 return (           
-                  <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
-                    <div className="flex justify-between">
-                      <div className="flex">
-                        <p>{data.icons}</p>
-                        <p className="text-2xl pl-4">{data.name}</p>
-                      </div>
-                      <div className="">
-                        <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
-                      </div>
-                    </div>
-                  </div>            
+                  <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
+                    <span className="text-3xl" >{data.icons}</span>
+                    <p className="text-xl py-2">{data.name}</p>
+                    <p className="text-2xl font-bold">{data.value}</p>
+                  </div>              
                 )
               }
             }
