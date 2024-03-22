@@ -86,11 +86,11 @@ const Login = () => {
     }
 
   return (
-    <div className='bg-[url(https://wallpapercave.com/wp/qkz7ffi.jpg)] bg-center bg-cover h-screen w-full'>
-        <div className="lg:py-24 lg:mx-40 py-16 mx-8">
-            <div className="bg-white lg:py-8 lg:px-24 py-10 px-8 rounded-md">
-                <h1 className="text-3xl font-semibold">Login Here</h1>
-                
+    <div className='lg:py-32 lg:px-16 bg-[url(https://www.nifs.ac.lk/themes/custom/nifslk/dist/img/xnifs-enterence.jpg.pagespeed.ic.gWC6m0XOY_.webp)] bg-center bg-cover h-screen w-full'>
+        <div className="lg:grid grid-cols-2 gap-4 backdrop-blur-sm h-full">
+            <div className=""></div>
+            <div className="bg-[#1d2333] mr-20 px-16 py-20 rounded-xl text-white">
+                <p className="text-3xl">Login To ERP</p>
                 <div className="pl-4">
                     <form onSubmit={headleLogin}>
                         <div className="my-4">
@@ -114,6 +114,8 @@ const Login = () => {
             </div>
         </div>
     </div>
+
+
   )
 }
 
