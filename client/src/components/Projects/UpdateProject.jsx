@@ -32,11 +32,32 @@ const UpdateProject = () => {
           <form>
             <div className="lg:grid grid-cols-2 gap-2">
                 <div className="my-2">
-                  <label htmlFor="">Division No</label>
+                  <label htmlFor="">New Division No</label>
                   <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Division No"
                   onChange={e => SetProjectData({...ProjectData, divno:e.target.value})}/>
                 </div>
+
+                <div className="my-2">
+                  <label htmlFor="">New HOD Email</label>
+                  <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Project Name"
+                  onChange={e => SetProjectData({...ProjectData, hod:e.target.value})}/>
+                </div>
+            </div>
+            <div className="lg:grid grid-cols-2 gap-2">
+              <div className="my-2">
+                  <label htmlFor="">New First Research Assistant</label>
+                  <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter First RA Email"
+                  onChange={e => SetProjectData({...ProjectData, ra1:e.target.value})}/>
               </div>
+              <div className="my-2">
+                  <label htmlFor="">New Second Research Assistant</label>
+                  <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Second RA Email"
+                  onChange={e => SetProjectData({...ProjectData, ra2:e.target.value})}/>
+              </div>
+            </div>
+            <div className="">
+              <button type="submit" className="border border-green-500 rounded py-4 px-16 my-4 text-green-500 font-semibold duration-500 hover:bg-green-400 hover:text-white hover:shadow-xl">Update Program</button>
+            </div>
           </form>
         </div>
       </div>
