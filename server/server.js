@@ -1346,9 +1346,39 @@ app.post('/AddProject', (req, res) =>{
             return res.json({Error: "Please Enter Valied Division Number, The Added Division Number is not exist"})
         }
         else{
+            //check hod is exists on db
             const checkhod = "SELECT * FROM users WHERE email = ?"
             connection.query(checkhod, [req.body.hod], (err, result) => {
-                
+                if(err) throw err
+
+                if(result.length == 0){
+                    return res.json({Error: "HOD not exists"})
+                }
+                else if(result[0].role === "HOD"){
+                    //check ra1 is exists on db
+                    const ra1sql = "SELECT * FROM employee WHERE email = ?";
+                    connection.query(ra1sql, [req.body.ra1], (err, result) => {
+                        if(err) throw err
+
+                        if(result.length == 0){
+                            return res.json({Error: "RA 1 Not exists"})
+                        }
+                        else if(result[0].designation === "RA"){
+                            //check ra2 is exists on db
+                            const ra2sql = "SELECT * FROM employee WHERE email = ?"
+                            connection.query(ra2sql, [req.body.ra2], (err, result) => {
+                                if(err) throw err
+
+                                if(result.length == 0){
+                                    return res.json({Error: "RA 2 Not exists" })
+                                }
+                                else if(result[0].designation === "RA"){
+
+                                }
+                            })
+                        }
+                    })
+                }
             })
         }
     })
