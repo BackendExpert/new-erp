@@ -1442,6 +1442,9 @@ app.get('/ProjectDataUpdate/:id', (req, res) => {
 //UpdateDataProject
 app.put('/UpdateDataProject/:id', (req, res) => {
     const UpdateProjectId = req.params.id;
+
+    console.log(UpdateProjectId, req.body)
+
     
     const divisionID = req.body.divno;
     const divisionsql = "SELECT * FROM division WHERE did = ?"
@@ -1482,15 +1485,9 @@ app.put('/UpdateDataProject/:id', (req, res) => {
                                     else{
                                         //update data
                                         const sql = "UPDATE project SET divno = ?, hod = ?, ra1 = ?, ra2 = ?, update_at = ? WHERE pid = ?"
+                                        //const sql = "UPDATE division SET title = ?, location = ?, email = ?, update_at = ? WHERE did = ?";
                                         const update_at = new Date();
-                                        const value = [
-                                            req.body.divno,
-                                            req.body.hod,
-                                            req.body.ra1,
-                                            req.body.ra2,
-                                            update_at
-                                        ]
-                                        connection.query(sql, [value, UpdateProjectId], (err, result) => {
+                                        connection.query(sql, [req.body.divno, req.body.hod, req.body.ra1, req.body.ra2, update_at, UpdateProjectId], (err, result) => {
                                             if(err){
                                                 return res.json({Error: "ERROR on SERVER"})
                                             }
