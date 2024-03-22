@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/styled": "^11.11.0",
     "@mui/x-charts": "^7.0.0",
     "@reacticons/ionicons": "^7.1.0",
     "axios": "^1.6.7",

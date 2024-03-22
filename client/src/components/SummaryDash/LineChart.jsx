@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 
 
-const LineChart = () => {
+const CharLine = () => {
   return (
-    <div className="">
+    <div className="w-full h-auto">
 
     </div>
   )
 }
 
-export default LineChart
+export default CharLine

@@ -5,7 +5,7 @@ import secureLocalStorage from 'react-secure-storage'
 import CountUp from 'react-countup'
 import Icons from '@reacticons/ionicons'
 import UnAccessUsers from '../SuperAdmin/UnAccessUsers'
-import LineChart from "./LineChart";
+import CharLine from "./LineChart";
 
 const SummaryDash = () => {
   const navigate = useNavigate();
@@ -184,7 +184,7 @@ const SummaryDash = () => {
               <div className="">
               {RoleUser === "SuperAdmin" ? (
                     <div>
-                      <LineChart /> 
+                      <CharLine /> 
                       <div className="mt-8">
                       <UnAccessUsers />
                       </div>
