@@ -20,8 +20,16 @@ const Projects = () => {
     }
   } 
 
+  const [viewProjects, SetViewProjects] = useState()
+
   // this page can access by following users
   // SuperAdmin, Admin
+
+  useEffect(() => {
+    axios.get('http://localhost:8081/ViewProjects')
+    .then(res => SetViewProjects(res.data))
+    .catch(err => console.log(err))
+  }, [])
 
   if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
     return (
