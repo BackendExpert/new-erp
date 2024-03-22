@@ -5,6 +5,7 @@ import secureLocalStorage from 'react-secure-storage'
 import CountUp from 'react-countup'
 import Icons from '@reacticons/ionicons'
 import UnAccessUsers from '../SuperAdmin/UnAccessUsers'
+import LineChart from "./LineChart";
 
 const SummaryDash = () => {
   const navigate = useNavigate();
@@ -128,7 +129,7 @@ const SummaryDash = () => {
   return (
     <div>
        <div className="lg:grid grid-cols-2 gap-4 my-3">
-       <div className="lg:grid grid-cols-3 gap-5">
+        <div className="lg:grid grid-cols-3 gap-5">
       {
         DataList.map((data, index) => {
             //for SuperAdmin
@@ -178,17 +179,22 @@ const SummaryDash = () => {
         })
       }
         <br />  
-        </div>   
-        </div> 
-        <div className="">
-            {RoleUser === "SuperAdmin" ? (
-              <div>
-                <UnAccessUsers />
-              </div>
-            ) : (
-              <div></div>
-            )}
         </div>
+            <div className="">
+              <LineChart />  
+              <div className="mt-8">
+              {RoleUser === "SuperAdmin" ? (
+                    <div>
+                      <UnAccessUsers />
+                    </div>
+                  ) : (
+                    <div></div>
+                  )}
+              </div>   
+              </div>
+
+        </div> 
+
 
       
     </div>
