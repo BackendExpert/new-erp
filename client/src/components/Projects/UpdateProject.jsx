@@ -28,6 +28,17 @@ const UpdateProject = () => {
           </Link>
         </div>
 
+        <div className="my-2">
+          <form>
+            <div className="lg:grid grid-cols-2 gap-2">
+                <div className="my-2">
+                  <label htmlFor="">Division No</label>
+                  <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Division No"
+                  onChange={e => SetProjectData({...ProjectData, divno:e.target.value})}/>
+                </div>
+              </div>
+          </form>
+        </div>
       </div>
     </div>
   )
