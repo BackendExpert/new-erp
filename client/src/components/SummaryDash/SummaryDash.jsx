@@ -180,12 +180,14 @@ const SummaryDash = () => {
       }
         <br />  
         </div>
-            <div className="">
-              <LineChart />  
-              <div className="mt-8">
+            <div className="">               
+              <div className="">
               {RoleUser === "SuperAdmin" ? (
                     <div>
+                      <LineChart /> 
+                      <div className="mt-8">
                       <UnAccessUsers />
+                      </div>
                     </div>
                   ) : (
                     <div></div>
