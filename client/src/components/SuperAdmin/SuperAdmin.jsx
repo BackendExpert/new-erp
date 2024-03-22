@@ -5,6 +5,7 @@ import  secureLocalStorage  from  "react-secure-storage";
 import { useEffect } from "react";
 import SummaryDash from "../SummaryDash/SummaryDash";
 import UnauthorizedAccess from "../UnauthorizedAccess";
+import DashFooter from "../SummaryDash/dashFooter";
 
 const SuperAdmin = ({children}) => {
     const navigate = useNavigate();
@@ -39,6 +40,7 @@ const SuperAdmin = ({children}) => {
                     <hr className="mt-2 border-blue-100 border-2" />
                     <SummaryDash />
                 </div>
+                  <DashFooter />
               </div>
           </div>
       </div>

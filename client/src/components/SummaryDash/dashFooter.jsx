@@ -1,9 +1,12 @@
 import React from 'react'
 
-const dashFooter = () => {
+const DashFooter = () => {
   return (
-    <div>dashFooter</div>
+    <div className='shadow-xl border-l-4 bg-white my-4 rounded py-12 px-6 text-center'>
+        <p>Copyright &copy; 2024. All rights reserved.</p>
+        <p className='py-4'>Developed and designed by NIFS</p>
+    </div>
   )
 }
 
-export default dashFooter
+export default DashFooter

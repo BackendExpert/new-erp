@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 import Navlist from "../NavBar/navList"
 import LibData from "./LibData"
 import SummaryDash from "../SummaryDash/SummaryDash"
+import DashFooter from "../SummaryDash/dashFooter"
 
 
 const Librarian = ({children}) => {
@@ -39,6 +40,7 @@ const Librarian = ({children}) => {
                     <hr className="mt-2 border-blue-100 border-2" />
                     <SummaryDash />
                 </div>
+            <DashFooter />
           </div>
         </div>
       </div>
