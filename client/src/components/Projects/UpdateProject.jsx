@@ -27,6 +27,10 @@ const UpdateProject = () => {
       .catch(err=> console.log(err))
     }, [])
 
+    //headleUpdate
+    const headleUpdate = (e) => {
+      e.preventDefault();
+    }
 
     //get the login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
@@ -42,7 +46,7 @@ const UpdateProject = () => {
         </div>
 
         <div className="my-2">
-          <form>
+          <form onSubmit={headleUpdate}>
             <div className="lg:grid grid-cols-2 gap-2">
                 <div className="my-2">
                   <label htmlFor="">New Division No</label>
