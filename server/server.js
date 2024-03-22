@@ -1424,6 +1424,21 @@ app.get('/ViewProjects', (req, res) => {
     })
 })
 
+//ProjectDataUpdate
+app.get('/ProjectDataUpdate/:id', (req, res) => {
+    const getId = req.params.id
+    const sql = "SELECT * FROM project WHERE pid = ?"
+
+    connection.query(sql, [getId], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json(result);
+        }
+    })
+})
+
 //------------------- Project End  ---------------------------
 
 
