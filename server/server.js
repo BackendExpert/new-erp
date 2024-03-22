@@ -1476,7 +1476,31 @@ app.put('/UpdateDataProject/:id', (req, res) => {
                                     return res.json({Error: "RA2 is not exists"})
                                 }
                                 else if(result[0].category === "RA"){
-                                    
+                                    if(req.body.ra1 === req.body.ra2){
+                                        return res.json({Error: "RA1 and RA2 is same"})
+                                    }
+                                    else{
+                                        //update data
+                                        const sql = "UPDATE project SET divno = ?, hod = ?, ra1 = ?, ra2 = ?, update_at = ? WHERE pid = ?"
+                                        const update_at = new Date();
+                                        const value = [
+                                            req.body.divno,
+                                            req.body.hod,
+                                            req.body.ra1,
+                                            req.body.ra2,
+                                            req.body.divno,
+                                            update_at
+                                            
+                                        ]
+                                        connection.query(sql, [value], (err, result) => {
+                                            if(err){
+                                                return res.json({Error: "ERROR on SERVER"})
+                                            }
+                                            else{
+                                                return res.json({Status: "Success"})
+                                            }
+                                        })
+                                    }
                                 }
                             })
                         }
