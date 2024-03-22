@@ -1373,7 +1373,29 @@ app.post('/AddProject', (req, res) =>{
                                     return res.json({Error: "RA 2 Not exists" })
                                 }
                                 else if(result[0].designation === "RA"){
+                                    //now insert data to db
+                                    const sql = "INSERT INTO project(title, divno, hod, ra1, ra2, create_at, update_at) VALUES (?)";
+                                    const create_at = new Date();
+                                    const update_at = new Date();
 
+                                    const value = [
+                                        req.body.title,
+                                        req.body.divno,
+                                        req.body.hod,
+                                        req.body.ra1,
+                                        req.body.ra2,
+                                        create_at,
+                                        update_at                                        
+                                    ]
+
+                                    connection.query(sql, [value], (err, result) => {
+                                        if(err){
+                                            res.json({Error: "ERROR on SERVER"})
+                                        }
+                                        else{
+                                            res.json({Status: "Success"})
+                                        }
+                                    })
                                 }
                             })
                         }
