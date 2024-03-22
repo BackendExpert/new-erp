@@ -1434,7 +1434,7 @@ app.get('/ProjectDataUpdate/:id', (req, res) => {
             return res.json({Error: "ERROR on Server"})
         }
         else{
-            return res.json(result);
+            return res.json({Status: "Success", Result: result})
         }
     })
 })
