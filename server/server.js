@@ -1334,6 +1334,11 @@ app.get('/EquiCount', (req, res) => {
 })
 
 //------------------------------------- Equipment End -------------------------------------
+//------------------- Project Start -------------------------
+
+
+//------------------- Project End  ---------------------------
+
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
