@@ -57,28 +57,7 @@ const Projects = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {
-                                    programData.map((program, index) => {
-                                        return (
-                                            <tr key={index}>
-                                                <td className='px-6 py-4 font-bold'>{program.pid}</td>
-                                                <td className='px-6 py-4 font-bold'>{program.title}</td>
-                                                <td className='px-6 py-4 font-bold'>{program.location}</td>
-                                                <td className='px-6 py-4 font-bold'>{program.hod}</td>
-                                                <td className='px-6 py-4 font-bold'>{program.scientis1}</td>
-                                                <td className='px-6 py-4 font-bold'>{program.scientist2}</td>
-                                                <td className='px-6 py-4 font-bold'>
-                                                    <div className="flex">
-                                                        <Link to={'/UpdateProgram/' + program.pid}>
-                                                            <button className="rounded mx-2 py-2 px-6 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Update</button>
-                                                        </Link>
-                                                        <button onClick={()=>{handleDelete(program.pid)}} className="rounded mx-2 py-2 px-6 border border-red-500 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        )
-                                    })
-                                }
+
                             </tbody>
                         </table>
                     </div>          
