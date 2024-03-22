@@ -1411,6 +1411,19 @@ app.post('/AddProject', (req, res) =>{
     })
 })
 
+//ViewProjects
+app.get('/ViewProjects', (req, res) => {
+    const sql = "SELECT * FROM project";
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR ON SERVER"})
+        }
+        else{
+            return res.json(result);
+        }
+    })
+})
+
 //------------------- Project End  ---------------------------
 
 
