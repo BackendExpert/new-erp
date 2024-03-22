@@ -15,6 +15,19 @@ const UpdateProject = () => {
       ra2: ''
     })
 
+    useEffect(() => {
+      axios.get('http://localhost:8081/ProjectDataUpdate/' + id)
+      .then(res => {
+        SetupdateProject({...updateProject, divno:res.data.Result[0].divno,
+          hod:res.data.Result[0].hod,
+          ra1:res.data.Result[0].ra1,
+          ra2:res.data.Result[0].ra2
+        })
+      })
+      .catch(err=> console.log(err))
+    }, [])
+
+
     //get the login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
   return (
