@@ -22,9 +22,9 @@ const UnAccessUsers = () => {
         return (
             <div className="">
                 <h1 className="text-3xl font-semibold">Unauthorized Users</h1>
-                <div className="overflow-x-auto my-8">
-                    <table className="table-auto w-full">
-                    <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
+                <div className="overflow-x-auto my-8 shadow-2xl">
+                    <table className="table-auto w-full border-4 border-gray-200 rounded">
+                    <thead className="text-xs text-gray-700 uppercase bg-white">
                         <tr className='text-blue-500'>
                             <th scope='col' className='px-6 py-3'>Email</th>
                             <th scope='col' className='px-6 py-3'>User Role</th>                            
