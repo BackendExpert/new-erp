@@ -1506,6 +1506,22 @@ app.put('/UpdateDataProject/:id', (req, res) => {
     })
 })
 
+//DeleteProject 
+
+app.delete('/DeleteProject/:id', (req, res) =>{
+    const DeleteID = req.params.id;
+    const sql = "DELETE FROM project WHERE pid = ?"
+
+    connection.query(sql, [DeleteID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 //------------------- Project End  ---------------------------
 
 
