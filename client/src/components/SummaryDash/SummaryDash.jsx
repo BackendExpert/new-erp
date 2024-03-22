@@ -109,41 +109,36 @@ const SummaryDash = () => {
   }, []);
 
   const DataList = [
-    {id: 1, name:"User Roles" , value: <CountUp end={count}/>, icons: <Icons name="person" size="large"/>, style:"bg-green-600"},
-    {id: 2, name:"Books" , value: <CountUp end={books}/>, icons: <Icons name="book" size="large"/>, style:"bg-blue-600"},
-    {id: 3, name:"Employee" , value: <CountUp end={employee}/>, icons: <Icons name="people" size="large"/>, style:"bg-yellow-600"},
-    {id: 4, name:"Designations" , value: <CountUp end={designation}/>, icons: <Icons name="easel" size="large"/>, style:"bg-blue-400"},
-    {id: 5, name:"Viehicles" , value: <CountUp end={viehicle}/>, icons: <Icons name="car" size="large"/>, style:"bg-red-700" },
-    {id: 6, name:"Program" , value: <CountUp end={program}/>, icons: <Icons name="clipboard" size="large"/>, style:"bg-green-500" },
-    {id: 7, name:"Divisions" , value: <CountUp end={division}/>, icons: <Icons name="business" size="large"/>, style:"bg-yellow-500" },
-    {id: 8, name:"Equipments" , value: <CountUp end={equipment}/>, icons: <Icons name="build" size="large"/>, style:"bg-purple-500" },
-    {id: 9, name:"Journal" , value: <CountUp end={journal}/>, icons: <Icons name="journal" size="large"/>, style:"bg-green-500" },
-    {id: 10, name:"Thesis" , value: <CountUp end={thesis}/>, icons: <Icons name="journal" size="large"/>, style:"bg-purple-500" },
-    {id: 11, name:"Magazine" , value: <CountUp end={magazine}/>, icons: <Icons name="newspaper" size="large"/>, style:"bg-red-500" },
-    {id: 12, name:"Articles" , value: <CountUp end={article}/>, icons: <Icons name="document" size="large"/>, style:"bg-yellow-500" },
+    {id: 1, name:"User Roles" , value: <CountUp end={count}/>, icons: <Icons name="person" size="large"/>, style:"hover:border-green-200 hover:text-green-600"},
+    {id: 2, name:"Books" , value: <CountUp end={books}/>, icons: <Icons name="book" size="large"/>, style:"hover:border-blue-600 hover:text-blue-600"},
+    {id: 3, name:"Employee" , value: <CountUp end={employee}/>, icons: <Icons name="people" size="large"/>, style:"hover:border-yellow-600 hover:text-yellow-600"},
+    {id: 4, name:"Designations" , value: <CountUp end={designation}/>, icons: <Icons name="easel" size="large"/>, style:"hover:border-blue-400 hover:text-blue-600"},
+    {id: 5, name:"Viehicles" , value: <CountUp end={viehicle}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-red-700 hover:text-red-600" },
+    {id: 6, name:"Program" , value: <CountUp end={program}/>, icons: <Icons name="clipboard" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
+    {id: 7, name:"Divisions" , value: <CountUp end={division}/>, icons: <Icons name="business" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },
+    {id: 8, name:"Equipments" , value: <CountUp end={equipment}/>, icons: <Icons name="build" size="large"/>, style:"hover:border-purple-500 hover:text-purple-600" },
+    {id: 9, name:"Journal" , value: <CountUp end={journal}/>, icons: <Icons name="journal" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
+    {id: 10, name:"Thesis" , value: <CountUp end={thesis}/>, icons: <Icons name="journal" size="large"/>, style:"hover:border-purple-500 hover:text-purple-600" },
+    {id: 11, name:"Magazine" , value: <CountUp end={magazine}/>, icons: <Icons name="newspaper" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
+    {id: 12, name:"Articles" , value: <CountUp end={article}/>, icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },
   ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
   return (
     <div>
-       <div className="lg:grid grid-cols-3 gap-4 my-3">
+       <div className="lg:grid grid-cols-2 gap-4 my-3">
+       <div className="lg:grid grid-cols-3 gap-5">
       {
         DataList.map((data, index) => {
             //for SuperAdmin
             if(RoleUser === "SuperAdmin"){
               return (           
-                <div className={`rounded my-2 py-10 pl-4 text-white ${data.style}`}>
-                  <div className="flex justify-between">
-                    <div className="flex">
-                      <p>{data.icons}</p>
-                      <p className="text-2xl pl-4">{data.name}</p>
-                    </div>
-                    <div className="">
-                      <p className="font-semibold pr-8 pt-1 text-2xl">{data.value}</p>
-                    </div>
-                  </div>
-                </div>       
+                  <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
+                      <span className="text-3xl" >{data.icons}</span>
+                      <p className="text-xl py-2">{data.name}</p>
+                      <p className="text-2xl font-bold">{data.value}</p>
+                  </div>                
               )
             }
             //for Admin
@@ -182,7 +177,8 @@ const SummaryDash = () => {
             }
         })
       }
-        <br />     
+        <br />  
+        </div>   
         </div> 
         <div className="">
             {RoleUser === "SuperAdmin" ? (
