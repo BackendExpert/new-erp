@@ -8,6 +8,13 @@ const UpdateProject = () => {
     
     const {id} = useParams()
 
+    const [updateProject, SetupdateProject] = useState({
+      divno: '',
+      hod: '',
+      ra1: '',
+      ra2: ''
+    })
+
     //get the login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
   return (
@@ -20,6 +27,7 @@ const UpdateProject = () => {
             <button className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
           </Link>
         </div>
+
       </div>
     </div>
   )
