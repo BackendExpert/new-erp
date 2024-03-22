@@ -42,9 +42,49 @@ const Projects = () => {
               <Link to={'/AddProject'}>
                   <button className="lg:my-0 my-2 border border-green-500 py-3 px-16 rounded text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl lg:mx-2">Add New Project</button>
               </Link>
-            </div>
-        </div>
-      </div>
+          </div>
+                    <div className="relative overflow-x-auto my-8">
+                        <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                            <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
+                                <tr className='text-blue-500'>
+                                    <th scope='col' className='px-6 py-3'>Program Number</th>
+                                    <th scope='col' className='px-6 py-3'>Program Name</th>
+                                    <th scope='col' className='px-6 py-3'>Program Location</th>
+                                    <th scope='col' className='px-6 py-3'>HOD</th>
+                                    <th scope='col' className='px-6 py-3'>Scientist 1</th>
+                                    <th scope='col' className='px-6 py-3'>Scientist 2</th>
+                                    <th scope="col" className="px-6 py-3">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    programData.map((program, index) => {
+                                        return (
+                                            <tr key={index}>
+                                                <td className='px-6 py-4 font-bold'>{program.pid}</td>
+                                                <td className='px-6 py-4 font-bold'>{program.title}</td>
+                                                <td className='px-6 py-4 font-bold'>{program.location}</td>
+                                                <td className='px-6 py-4 font-bold'>{program.hod}</td>
+                                                <td className='px-6 py-4 font-bold'>{program.scientis1}</td>
+                                                <td className='px-6 py-4 font-bold'>{program.scientist2}</td>
+                                                <td className='px-6 py-4 font-bold'>
+                                                    <div className="flex">
+                                                        <Link to={'/UpdateProgram/' + program.pid}>
+                                                            <button className="rounded mx-2 py-2 px-6 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Update</button>
+                                                        </Link>
+                                                        <button onClick={()=>{handleDelete(program.pid)}} className="rounded mx-2 py-2 px-6 border border-red-500 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        )
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </div>          
+                </div>
+              </div>
+      
     )
   }
   else{
