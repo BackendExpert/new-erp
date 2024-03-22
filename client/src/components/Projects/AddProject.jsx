@@ -11,6 +11,12 @@ const AddProject = () => {
   // this page can access by following users
   // SuperAdmin, Admin
 
+    const [ProjectData, SetProjectData] = useState()
+
+  const headleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
     return (
       <div className="bg-gray-200 py-4">
@@ -24,7 +30,7 @@ const AddProject = () => {
           </div>
 
           <div className="my-2">
-            <form>
+            <form onSubmit={headleSubmit}>
 
               <div className="lg:grid grid-cols-2 gap-2">
                 <div className="my-2">
