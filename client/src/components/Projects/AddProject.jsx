@@ -22,6 +22,16 @@ const AddProject = () => {
   const headleSubmit = (e) => {
     e.preventDefault();
 
+    axios.post('http://localhost:8081/AddProject', ProjectData)
+    .then(res => {
+      if(res.data.Status === "Success"){
+        alert("Project Added Successful")
+        navigate('/Projects')
+      }
+      else{
+        alert(res.data.Error)
+      }
+    })
   }
 
   if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
