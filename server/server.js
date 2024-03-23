@@ -1227,7 +1227,7 @@ app.post('/AddDivision', (req, res) => {
         }
         else{
             const hodsql = "SELECT * FROM users WHERE email = ?"
-            connection.query(sql, [req.body.hod], (err, result) => {
+            connection.query(hodsql, [req.body.hod], (err, result) => {
                 if(err) throw err
 
                 if(result.length == 0){
