@@ -173,6 +173,21 @@ app.get('/UnAccessUser/:id', (req, res) => {
     })
 })
 
+//ViewAccounts End point
+app.get('/ViewAccounts', (req, res) =>{ 
+    const sql = "SELECT * FROM users" 
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
+
+
 // Count Admins Roles
 app.get('/AdminCount', (req, res) => {
     const sql = "SELECT COUNT(UserId) AS count FROM users WHERE role = 'Admin'";
