@@ -15,16 +15,11 @@ const Profile = () => {
 
     //  alert(EmailUser);
 
-    const [profileData, SetProfileData] = useState({
-      username: '',
-      email: '',
-      role: '',
-      join_data: ''
-    })
+    const [profileData, SetProfileData] = useState([])
 
     useEffect(() => {
       axios.get('http://localhost:8081/ViewProfile/' + EmailUser)
-      .then(res => SetProfileData({...profileData, username:res.data.Result[0].username}))
+      .then(res => SetProfileData(res.data))
       .catch(err => console.log(err))
     }, [])
 
@@ -67,10 +62,23 @@ const Profile = () => {
                   <p className="mt-2 pl-4">To Dashboard</p>
                 </button>
 
+        </div>
+
+        <div className="">
+          {
+            profileData.map((profile, index) =>{
+              return (
+                <div className="my-5">
+                  <p className="text-xl py-4">Username : {profile.username}</p>
+                  <p className="text-xl py-4">Email : {profile.email}</p>
+                  <p className="text-xl py-4">Role : {profile.role}</p>                 
+                  
                 </div>
-
-
-        
+              )
+            })
+          }
+        </div>
+       
       </div>
     </div>
   )
