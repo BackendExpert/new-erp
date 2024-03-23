@@ -9,6 +9,10 @@ const Accounts = () => {
 
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
+    
+
+    //get current login user's email
+    const EmailUser = secureLocalStorage.getItem("logiafter");
 
     //go back according to login user
     const headleBack = () => {
