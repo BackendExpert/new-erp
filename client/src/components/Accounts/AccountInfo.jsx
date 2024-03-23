@@ -48,6 +48,21 @@ const AccountInfo = () => {
         })
     }
 
+    //headleActive
+    const headleActive = (e) =>{
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/ReactiveAccount/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Account Reactivation in Successful")
+                navigate('/Accounts')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){        
         if(EmailUser === viewUserData.email){
             alert("Cannot Access")
@@ -82,7 +97,7 @@ const AccountInfo = () => {
                                </div>
                             ) : (
                                 <div className="">
-                                    <form>
+                                    <form onSubmit={headleActive}>
                                         <button type="submit" className="my-3 py-2 px-8 border border-green-500 rounded text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Reactive Account</button>
                                     </form>
                                </div>
