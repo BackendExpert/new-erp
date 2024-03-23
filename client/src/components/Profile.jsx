@@ -68,6 +68,8 @@ const Profile = () => {
                   <p className="mt-2 pl-4">To Dashboard</p>
                 </button>
       
+          <p className="">{profileData.email}</p>
+
         </div>
       </div>
     </div>
