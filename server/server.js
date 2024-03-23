@@ -1013,6 +1013,17 @@ app.post('/AddProgram', (req,res) => {
             return res.json({Error: "Program is Already Exists at Given Program Name"});
         }
         else{
+            const hodsql = "SELECT * FROM users WHERE email = ?"
+            connection.query(hodsql, [req.body.hod], (err, result) => {
+                if(err) throw err
+
+                if(result.length == 0){
+                    return res.json({Error: "HOD not exists"})
+                }
+                else if(result[0].role === "HOD"){
+                    const sci1sql = "SELECT * FROM "
+                }
+            })
             const sql = "INSERT INTO program(title, location, hod, scientis1, scientist2, create_at, update_at) VALUES (?)";
             
             const create_at = new Date();
