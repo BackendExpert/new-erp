@@ -22,22 +22,22 @@ const Profile = () => {
           navigate('/admin');
       }
       else if(RoleUser === "HOD"){
-        navigate('/admin');
+        navigate('/hod');
       }      
       else if(RoleUser === "TO"){
-        navigate('/admin');
+        navigate('/to');
       }  
       else if(RoleUser === "Librarian"){
-        navigate('/admin');
+        navigate('/librarian');
       } 
       else if(RoleUser === "Labmanager"){
-        navigate('/admin');
+        navigate('/labManager');
       }     
       else if(RoleUser === "Accountant"){
-        navigate('/admin');
+        navigate('/accountant');
       } 
       else if(RoleUser === "User"){
-        navigate('/admin');
+        navigate('/user');
       } 
   }
     
