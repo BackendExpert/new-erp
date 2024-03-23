@@ -74,7 +74,7 @@ const Accounts = () => {
                                                             account.is_active === 1 ? (
                                                                 <div className="">
                                                                     <Link>
-                                                                        <div className="py-3 px-8 border border-red-500 rounded text-red-500">Deactive</div>
+                                                                        <div className="py-3 px-8 border border-red-500 rounded text-red-500 duration-500 hover:text-white hover:shadow-xl hover:bg-red-500">Deactive</div>
                                                                     </Link>
                                                                 </div>
                                                             ) : (
