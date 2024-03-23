@@ -53,7 +53,15 @@ const Accounts = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    {
+                                        viewAccounts.map((account, index) =>{
+                                            return (
+                                                <tr key={index}>
+                                                    
+                                                </tr>
+                                            )
+                                        })
+                                    }
                                 </tbody>
                             </table>
                         </div>
