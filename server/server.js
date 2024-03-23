@@ -279,6 +279,12 @@ app.put('/ReactiveAccount/:id', (req, res) => {
 
 })
 
+//ViewProfileData
+app.get('/ViewProfileData:id', (req, res) => {
+    const ProfileEmail = req.params.email
+    console.log(ProfileEmail);
+})
+
 
 
 //---------------------------- LIBRARY Start ---------------------------------------------------------
