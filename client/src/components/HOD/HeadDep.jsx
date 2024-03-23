@@ -3,6 +3,7 @@ import HeadSide from './HeadSide'
 import { useEffect } from "react"
 import  secureLocalStorage  from  "react-secure-storage";
 import { useNavigate } from "react-router-dom"
+import DashFooter from '../SummaryDash/dashFooter';
 
 const HeadDep = ({children}) => {
 
@@ -31,10 +32,15 @@ const HeadDep = ({children}) => {
       <div className='bg-gray-200'>
           <div className="flex">
               <HeadSide />
-              <div className="shadow-xl rounded border-l-4 border-gray-200 bg-white my-4 py-4 px-6">
-                <h1 className="text-2xl font-semibold">Head of Department Dashboard</h1>
-              </div>
-          </div>
+              <div className="w-full mx-2">
+                <div className="shadow-xl rounded border-l-4 border-gray-200 bg-white my-4 py-4 px-6 w-full mr-2">
+                    <h1 className="text-2xl font-semibold">Head of Department Dashboard</h1>                
+                </div>  
+                <DashFooter />        
+            </div>
+            
+           </div> 
+          
       </div>
     )
   }
