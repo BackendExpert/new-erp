@@ -20,6 +20,18 @@ const AccountInfo = () => {
         is_active: ''
     })
 
+    //fetch data from database
+    useEffect(() => {
+        axios.get('http://localhost:8081/ViewUserData/' + id)
+        .then(res => {
+            SetviewUserData({...viewUserData, username:res.data.Result[0].username, 
+                email:res.data.Result[0].email,
+                role:res.data.Result[0].role,
+                is_active:res.data.Result[0].is_active
+            })
+        })
+    }, [])
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
         
         return (
