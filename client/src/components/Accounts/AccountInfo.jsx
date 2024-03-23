@@ -1,10 +1,11 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const AccountInfo = () => {
     const navigate = useNavigate()
+    const {id} = useParams()
 
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
@@ -16,7 +17,7 @@ const AccountInfo = () => {
         return (
             <div className="bg-gray-200 py-4">
                 <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
-                    <h1 className="text-xl font-semibold">Designations</h1>        
+                    <h1 className="text-xl font-semibold">Account Info</h1>        
                     <hr className="mb-4" />
                     <div className="lg:flex">
                         <Link to={'/Accounts'}>
