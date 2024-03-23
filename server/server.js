@@ -1037,7 +1037,7 @@ app.post('/AddProgram', (req,res) => {
                 }
                 else if(result[0].role === "HOD"){
                     if(result[0].is_active === 0){
-                        return res.json({Error: "The HOD has been Deactivate by administotar or Suspeded User"})
+                        return res.json({Error: "This HOD has been Deactivate by the administration or HOD is Suspeded User"})
                     }
                     const sci1sql = "SELECT * FROM employee WHERE email = ?"
                     connection.query(sci1sql, [req.body.scient1], (err, result) => {
