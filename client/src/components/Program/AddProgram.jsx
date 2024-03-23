@@ -46,6 +46,12 @@ const AddProgram = () => {
                             <button className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                        </Link>
                     </div>
+                    <div className="my-4">
+                        <p className="text-red-500 text-xl">IMPORTANT</p>
+                        <p>Before add the Program HOD, Scientist 1, Scientist 2 must exist in System</p>
+                        <p>HOD in Accounts</p>
+                        <p>Scientist 1 and Scientist 2 in Employees</p>
+                    </div>
 
                     <div className="my-2">
                         <form onSubmit={headleSubmit}>
