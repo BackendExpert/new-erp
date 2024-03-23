@@ -54,7 +54,15 @@ const AccountInfo = () => {
                             <button className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                         </Link>        
                     </div>
-                    <p>{viewUserData.role}</p>
+                    <div className="my-4">
+                        <p className="">Username : {viewUserData.username}</p>
+                        <p className="">Email : {viewUserData.email} </p>
+                        <p className="">User Role :  {viewUserData.role}</p>
+                        <p className="">User Status :  
+                            
+                        </p>
+                        
+                    </div>
                 </div>
             </div>
         )
