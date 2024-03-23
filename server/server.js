@@ -1021,7 +1021,17 @@ app.post('/AddProgram', (req,res) => {
                     return res.json({Error: "HOD not exists"})
                 }
                 else if(result[0].role === "HOD"){
-                    const sci1sql = "SELECT * FROM "
+                    const sci1sql = "SELECT * FROM employee WHERE email = ?"
+                    connection.query(sci1sql, [req.body.scient1], (err, result) => {
+                        if(err) throw err
+
+                        if(result.length == 0){
+                            return res.json({Error: "Scientist 1 not exists"})
+                        }
+                        else if(result[0].category === "Scientist"){
+                            
+                        }
+                    })
                 }
             })
             const sql = "INSERT INTO program(title, location, hod, scientis1, scientist2, create_at, update_at) VALUES (?)";
