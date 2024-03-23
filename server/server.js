@@ -1408,6 +1408,9 @@ app.post('/AddProject', (req, res) =>{
                     return res.json({Error: "HOD not exists"})
                 }
                 else if(result[0].role === "HOD"){
+                    if(result[0].is_active === 0){
+                        return res.json({Error: "This HOD has been Deactivate by the administration or HOD is Suspeded User"})
+                    }
                     //check ra1 is exists on db
                     const ra1sql = "SELECT * FROM employee WHERE email = ?";
                     connection.query(ra1sql, [req.body.ra1], (err, result) => {
