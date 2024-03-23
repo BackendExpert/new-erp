@@ -19,7 +19,7 @@ const AccountInfo = () => {
                     <h1 className="text-xl font-semibold">Designations</h1>        
                     <hr className="mb-4" />
                     <div className="lg:flex">
-                        <Link>
+                        <Link to={'/Accounts'}>
                             <button className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                         </Link>        
                     </div>
