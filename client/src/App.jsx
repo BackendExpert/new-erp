@@ -47,6 +47,7 @@ import Profile from "./components/Profile"
 import Articles from "./components/library/Articles/Articles"
 import AddArticles from "./components/library/Articles/AddArticles"
 import Accounts from "./components/Accounts/Accounts"
+import AccountInfo from "./components/Accounts/AccountInfo"
 
 export default function App() {
   return (
@@ -141,6 +142,7 @@ export default function App() {
 
         {/* Accounts */}
         <Route path="/Accounts" element={<PrivateRoute><Accounts /></PrivateRoute>} />
+        <Route path="/AccountInfo" element={<PrivateRoute><AccountInfo /></PrivateRoute>} />
 
 
       </Routes>
