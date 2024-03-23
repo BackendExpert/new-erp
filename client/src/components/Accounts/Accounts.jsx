@@ -76,7 +76,7 @@ const Accounts = () => {
                                                         </td>
                                                         <td className='px-6 py-4 font-bold'>
                                                             { EmailUser === account.email ? (
-                                                                <div className="py-1 px-8 bg-green-500 rounded text-white">Current Login User</div>
+                                                                <div className="">Current Login User</div>
                                                             ) : (
                                                                 <div className="">
                                                                     <Link>
@@ -104,9 +104,18 @@ const Accounts = () => {
                                                                 )}
                                                             </td>
                                                             <td className='px-6 py-4 font-bold'>
-        
-        
+                                                                { EmailUser === account.email ? (
+                                                                    <div className="">Current Login User</div>
+                                                                ) : (
+                                                                    <div className="">
+                                                                        <Link>
+                                                                            <div className="py-1 px-8 bg-red-500 rounded text-white">Deactive</div>
+                                                                        </Link>
+                                                                    </div>
+                                                                )}    
                                                             </td>
+        
+
                                                         </tr>
                                                     )
                                                 }
