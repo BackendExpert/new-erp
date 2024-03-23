@@ -146,9 +146,14 @@ const AddEmployee = () => {
                             <div className="my-4 lg:grid grid-cols-4 gap-2">
                                 <div className="">
                                     <label htmlFor="">Designation</label>
-                                    <input type="text" name="designation" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Designation" 
-                                    onChange={e => SetEmpData({...empData, designation:e.target.value})}/>
-                                    <p className="text-red-500">(String type, max length 20)</p>
+                                    <select className="w-full h-12 border border-blue-400 rounded pl-2"
+                                    onChange={e => SetEmpData({...empData, designation:e.target.value})}>
+                                        <option>Select Option</option>
+                                        <option value="Scientist">Scientist</option>
+                                        <option value="RA">RA</option>
+                                        <option value="Driver">Driver</option>
+                                        <option value="VRA">Volunteer RA</option>    
+                                    </select>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Job Category</label>
