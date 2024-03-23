@@ -201,6 +201,22 @@ app.get('/ViewUserData/:id', (req, res) =>{
     })
 })
 
+//DeavtiveAccount
+app.post('/DeavtiveAccount/:id', (req, res) => {
+    const DeactiveID = req.params.id
+    const sql = "UPDATE users SET is_active = ?, update_at = ? WHERE UserID = ?"
+    const update_at = new Date();
+    const deactive = 0;
+
+    connection.sql(sql, [deactive, update_at, DeactiveID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
 
 // Count Admins Roles
 app.get('/AdminCount', (req, res) => {
