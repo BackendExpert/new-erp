@@ -208,7 +208,7 @@ app.post('/DeavtiveAccount/:id', (req, res) => {
     const update_at = new Date();
     const deactive = 0;
 
-    connection.sql(sql, [deactive, update_at, DeactiveID], (err, result) => {
+    connection.query(sql, [deactive, update_at, DeactiveID], (err, result) => {
         if(err){
             return res.json({Error: "ERROR on SERVER"})
         }
