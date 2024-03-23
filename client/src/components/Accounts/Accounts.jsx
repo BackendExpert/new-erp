@@ -79,9 +79,9 @@ const Accounts = () => {
                                                                 <div className="">Current Login User</div>
                                                             ) : (
                                                                 <div className="">
-                                                                    <Link>
-                                                                        <div className="py-1 px-8 bg-red-500 rounded text-white">Deactive</div>
-                                                                    </Link>
+                                                                        <Link to={'/AccountInfo/' + account.UserID}>
+                                                                            <div className="py-1 px-8 bg-blue-500 rounded text-white">Account Info</div>
+                                                                        </Link>
                                                                 </div>
                                                             )}    
                                                         </td>
@@ -108,8 +108,8 @@ const Accounts = () => {
                                                                     <div className="">Current Login User</div>
                                                                 ) : (
                                                                     <div className="">
-                                                                        <Link>
-                                                                            <div className="py-1 px-8 bg-red-500 rounded text-white">Deactive</div>
+                                                                        <Link to={'/AccountInfo/' + account.UserID}>
+                                                                            <div className="py-1 px-8 bg-blue-500 rounded text-white">Account Info</div>
                                                                         </Link>
                                                                     </div>
                                                                 )}    

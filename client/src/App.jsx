@@ -142,7 +142,7 @@ export default function App() {
 
         {/* Accounts */}
         <Route path="/Accounts" element={<PrivateRoute><Accounts /></PrivateRoute>} />
-        <Route path="/AccountInfo" element={<PrivateRoute><AccountInfo /></PrivateRoute>} />
+        <Route path="/AccountInfo/:id" element={<PrivateRoute><AccountInfo /></PrivateRoute>} />
 
 
       </Routes>
