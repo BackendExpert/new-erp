@@ -13,7 +13,20 @@ const Profile = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
-    // alert(EmailUser);
+    //  alert(EmailUser);
+
+    const [profileData, SetProfileData] = useState({
+      username: '',
+      email: '',
+      role: '',
+      join_data: ''
+    })
+
+    useEffect(() => {
+      axios.get('http://localhost:8081/ViewProfile/' + EmailUser)
+      .then(res => SetProfileData({...profileData, username:res.data.Result[0].username}))
+      .catch(err => console.log(err))
+    }, [])
 
     //go back according to login user
     const headleBack = () => {
@@ -43,23 +56,6 @@ const Profile = () => {
       } 
   }
 
-  const [profileData, SetProfileData] = useState({
-    username: '',
-    email: '',
-    role: '',
-    join_data: ''
-  })
-
-
-  //fetch data
-  useEffect(() => {
-    axios.get('http://localhost:8081/ViewProfileData' )
-    .then(res => SetProfileData({...profileData, username:res.data.Result[0].username,
-          email:res.data.Result[0].email,
-          role:res.data.Result[0].role
-    }))
-  }, [])
-    
   return (
     <div className="bg-gray-200 py-4">
       <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
@@ -70,10 +66,11 @@ const Profile = () => {
                   <p><Icons name="speedometer" size="large"></Icons></p>
                   <p className="mt-2 pl-4">To Dashboard</p>
                 </button>
-      
-          <p className="">{profileData.email}</p>
 
-        </div>
+                </div>
+
+
+        
       </div>
     </div>
   )

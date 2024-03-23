@@ -279,13 +279,21 @@ app.put('/ReactiveAccount/:id', (req, res) => {
 
 })
 
-//ViewProfileData
-app.get('/ViewProfileData', (req, res) => {
-    const ProfileEmail = req.body
-    console.log(ProfileEmail)
+// ViewProfile
+app.get('/ViewProfile/:id', (req, res) => {
+    const Email = req.params.id
+    console.log(Email)
 
+    const sql = "SELECT * FROM users WHERE email = ?"
+    connection.query(sql, [Email], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
-
 
 
 //---------------------------- LIBRARY Start ---------------------------------------------------------
