@@ -73,17 +73,17 @@ const AccountInfo = () => {
                         <p className="">Username : {viewUserData.username}</p>
                         <p className="">Email : {viewUserData.email} </p>
                         <p className="">User Role :  {viewUserData.role}</p>
-                        <p className="">User Status :  
+                        <p className="my-2">User Status :  
                             { viewUserData.is_active === 1  ? (
                                <div className="">
                                     <form onSubmit={headleDeactive}>
-                                        <button type="submit" className="py-2 px-8 border border-red-500 rounded duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Deactive Account</button>
+                                        <button type="submit" className="my-3 py-2 px-8 border border-red-500 rounded text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Deactive Account</button>
                                     </form>
                                </div>
                             ) : (
                                 <div className="">
                                     <form>
-                                        <button type="submit" className="py-2 px-8 border border-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Reactive Account</button>
+                                        <button type="submit" className="my-3 py-2 px-8 border border-green-500 rounded text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Reactive Account</button>
                                     </form>
                                </div>
                             )}
