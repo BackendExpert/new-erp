@@ -1226,25 +1226,38 @@ app.post('/AddDivision', (req, res) => {
             return res.json({Error: "Division is Already Exists at Given Division Name"});
         }
         else{
-            const sql = "INSERT INTO division(title, location, email, create_at, update_at) VALUES (?)";
-            const create_at = new Date();
-            const update_at = new Date();
-            console.log(req.body);
+            const hodsql = "SELECT * FROM users WHERE email = ?"
+            connection.query(sql, [req.body.hod], (err, result) => {
+                if(err) throw err
 
-            const value = [
-                req.body.division,
-                req.body.location,
-                req.body.hod,
-                create_at,
-                update_at
-            ]
-            
-            connection.query(sql, [value], (err, result) => {
-                if(err){
-                    return res.json({Error: "Error IN Server"});
+                if(result.length == 0){
+                    return res.json({Error: "HOD not exists"})
                 }
-                else{
-                    return res.json({Status: "Success"});
+                else if(result[0].role === "HOD"){
+                    if(result[0].is_active === 0){
+                        return res.json({Error: "This HOD has been Deactivate by the administration or HOD is Suspeded User"})
+                    }
+                    const sql = "INSERT INTO division(title, location, email, create_at, update_at) VALUES (?)";
+                    const create_at = new Date();
+                    const update_at = new Date();
+                    console.log(req.body);
+        
+                    const value = [
+                        req.body.division,
+                        req.body.location,
+                        req.body.hod,
+                        create_at,
+                        update_at
+                    ]
+                    
+                    connection.query(sql, [value], (err, result) => {
+                        if(err){
+                            return res.json({Error: "Error IN Server"});
+                        }
+                        else{
+                            return res.json({Status: "Success"});
+                        }
+                    })
                 }
             })
         }
