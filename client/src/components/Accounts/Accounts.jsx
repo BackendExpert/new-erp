@@ -70,7 +70,23 @@ const Accounts = () => {
                                                         )}
                                                     </td>
                                                     <td className='px-6 py-4 font-bold'>
-
+                                                    { RoleUser === "SuperAdmin" ? (
+                                                            account.is_active === 1 ? (
+                                                                <div className="">
+                                                                    <Link>
+                                                                        <div className="py-3 px-8 bg-red-500 rounded text-white">Deactive</div>
+                                                                    </Link>
+                                                                </div>
+                                                            ) : (
+                                                                <div className="">
+                                                                    <Link>
+                                                                        <div className="py-1 px-8 bg-green-500 rounded text-white">Reactive</div>
+                                                                    </Link>
+                                                                </div>
+                                                            )
+                                                        ) : (
+                                                            <span className=""></span>
+                                                        )}
                                                     </td>
                                                 </tr>
                                             )
