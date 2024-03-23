@@ -70,7 +70,8 @@ const Accounts = () => {
                                                         )}
                                                     </td>
                                                     <td className='px-6 py-4 font-bold'>
-                                                    { RoleUser === "SuperAdmin" ? (
+                                                        <div className="flex">
+                                                        { RoleUser === "SuperAdmin" ? (
                                                             account.is_active === 1 ? (
                                                                 <div className="">
                                                                     <Link>
@@ -87,7 +88,29 @@ const Accounts = () => {
                                                         ) : (
                                                             <span className=""></span>
                                                         )}
-                                                        
+                                                        { RoleUser === "Admin" ? (
+                                                            account.is_active === 1 ? (
+                                                                account.role === "SuperAdmin" ? (
+                                                                    <div className="">                                                                        
+                                                                    </div>
+                                                                ) : (
+                                                                    <div className="">
+                                                                        <Link>
+                                                                            <div className="py-1 px-8 bg-green-500 rounded text-white">Reactive</div>
+                                                                        </Link>
+                                                                    </div>
+                                                                )
+                                                            ) : (
+                                                                <div className="">
+                                                                    <Link>
+                                                                        <div className="py-1 px-8 bg-green-500 rounded text-white">Reactive</div>
+                                                                    </Link>
+                                                                </div>
+                                                            )
+                                                        ) : (
+                                                            <span className=""></span>
+                                                        )}
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             )
