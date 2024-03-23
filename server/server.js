@@ -1029,33 +1029,47 @@ app.post('/AddProgram', (req,res) => {
                             return res.json({Error: "Scientist 1 not exists"})
                         }
                         else if(result[0].category === "Scientist"){
+                            const sci2sql = "SELECT * FROM employee WHERE email = ?"
+                            connection.query(sci2sql, [req.body.scient2], (err, result) => {
+                                if(err) throw err
+
+                                if(result.length == 0){
+                                    return res.json({Error: "Scientist 2 not exists"})
+                                }
+                                else if(result[0].category === "Scientist"){
+                                    if(req.body.scient1 === req.body.scient2){
+                                        return res.json({Error: "Scientist 1 and Scientist 2 Same"})
+                                    }
+                                    else{
+                                        const sql = "INSERT INTO program(title, location, hod, scientis1, scientist2, create_at, update_at) VALUES (?)";
+            
+                                        const create_at = new Date();
+                                        const update_at = new Date();
+                                        console.log(req.body);
                             
+                                        const values = [
+                                            req.body.title,
+                                            req.body.location,
+                                            req.body.hod,
+                                            req.body.scient1,
+                                            req.body.scient2,
+                                            create_at,
+                                            update_at                
+                                        ]
+                                        
+                                        connection.query(sql, [values], (err, result) => {
+                                            if(err){
+                                                return res.json({Error: "ERROR in Server"})
+                                            }
+                                            else{
+                                                return res.json({Status: "Success"});
+                                            }
+                                        })
+                                    }
+                                }
+                            })
                         }
                     })
-                }
-            })
-            const sql = "INSERT INTO program(title, location, hod, scientis1, scientist2, create_at, update_at) VALUES (?)";
-            
-            const create_at = new Date();
-            const update_at = new Date();
-            console.log(req.body);
-
-            const values = [
-                req.body.title,
-                req.body.location,
-                req.body.hod,
-                req.body.scient1,
-                req.body.scient2,
-                create_at,
-                update_at                
-            ]
-            
-            connection.query(sql, [values], (err, result) => {
-                if(err){
-                    return res.json({Error: "ERROR in Server"})
-                }
-                else{
-                    return res.json({Status: "Success"});
                 }
             })
         }
