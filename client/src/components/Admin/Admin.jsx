@@ -4,6 +4,7 @@ import NavlistAdmin from "../NavBar/navListAdmin"
 import SummaryDash from "../SummaryDash/SummaryDash"
 import { useEffect } from "react"
 import  secureLocalStorage  from  "react-secure-storage";
+import DashFooter from "../SummaryDash/dashFooter"
 
 const Admin = ({children}) => {
   const navigate = useNavigate();
@@ -37,8 +38,8 @@ const Admin = ({children}) => {
                 <h1 className="text-2xl">Welcome to Admin Dashboard</h1>
                 <hr className="mt-2 border-blue-100 border-2" />
                 <SummaryDash/>
-
               </div>
+              <DashFooter />
           </div>
       </div>
   </div>
