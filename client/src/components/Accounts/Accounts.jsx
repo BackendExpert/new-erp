@@ -56,42 +56,28 @@ const Accounts = () => {
                                 <tbody>
                                     {
                                         viewAccounts.map((account, index) =>{
-                                            return (
-                                                <tr key={index}>
-                                                    <td className='px-6 py-4 font-bold'>{account.UserID}</td>
-                                                    <td className='px-6 py-4 font-bold'>{account.username}</td>
-                                                    <td className='px-6 py-4 font-bold'>{account.email}</td>
-                                                    <td className='px-6 py-4 font-bold'>{account.role}</td>
-                                                    <td className='px-6 py-4 font-bold'>
-                                                    { account.is_active === 1 ? (
-                                                            <div className="py-1 px-8 bg-green-500 rounded text-white">Active</div>
-                                                        ) : (
-                                                            <div className="py-1 px-8 bg-red-500 rounded text-white">Deactive</div>
-                                                        )}
-                                                    </td>
-                                                    <td className='px-6 py-4 font-bold'>
-                                                        <div className="flex">
-                                                        { RoleUser === "SuperAdmin" ? (
-                                                            account.is_active === 1 ? (
-                                                                <div className="">
-                                                                    <Link>
-                                                                        <div className="py-3 px-8 border border-red-500 rounded text-red-500 duration-500 hover:text-white hover:shadow-xl hover:bg-red-500">Deactive</div>
-                                                                    </Link>
-                                                                </div>
+                                            if(RoleUser === "SuperAdmin"){
+                                                return (
+                                                    <tr key={index}>
+                                                        <td className='px-6 py-4 font-bold'>{account.UserID}</td>
+                                                        <td className='px-6 py-4 font-bold'>{account.username}</td>
+                                                        <td className='px-6 py-4 font-bold'>{account.email}</td>
+                                                        <td className='px-6 py-4 font-bold'>{account.role}</td>
+                                                        <td className='px-6 py-4 font-bold'>
+                                                        { account.is_active === 1 ? (
+                                                                <div className="py-1 px-8 bg-green-500 rounded text-white">Active</div>
                                                             ) : (
-                                                                <div className="">
-                                                                    <Link>
-                                                                        <div className="py-1 px-8 bg-green-500 rounded text-white">Reactive</div>
-                                                                    </Link>
-                                                                </div>
-                                                            )
-                                                        ) : (
-                                                            <span className=""></span>
-                                                        )}
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            )
+                                                                <div className="py-1 px-8 bg-red-500 rounded text-white">Deactive</div>
+                                                            )}
+                                                        </td>
+                                                        <td className='px-6 py-4 font-bold'>
+    
+    
+                                                        </td>
+                                                    </tr>
+                                                )
+                                            }
+
                                         })
                                     }
                                 </tbody>
