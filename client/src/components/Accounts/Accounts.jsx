@@ -10,6 +10,15 @@ const Accounts = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    //go back according to login user
+    const headleBack = () => {
+        if(RoleUser === "SuperAdmin"){
+            navigate('/superAdmin');
+        }
+        else if(RoleUser === "Admin"){
+            navigate('/admin');
+        }
+    }
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
         return (
