@@ -30,6 +30,7 @@ const AccountInfo = () => {
                 is_active:res.data.Result[0].is_active
             })
         })
+        .catch(err => console.log(err))
     }, [])
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
