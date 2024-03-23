@@ -33,6 +33,21 @@ const AccountInfo = () => {
         .catch(err => console.log(err))
     }, [])
 
+    //headleDeactive
+    const headleDeactive = (e) =>{
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/DeavtiveAccount/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Account Deactivation in Successful")
+                navigate('/Accounts')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){        
         if(EmailUser === viewUserData.email){
             alert("Cannot Access")
@@ -59,7 +74,19 @@ const AccountInfo = () => {
                         <p className="">Email : {viewUserData.email} </p>
                         <p className="">User Role :  {viewUserData.role}</p>
                         <p className="">User Status :  
-                            
+                            { viewUserData.is_active === 1  ? (
+                               <div className="">
+                                    <form onSubmit={headleDeactive}>
+                                        <button type="submit" className="py-2 px-8 border border-red-500 rounded duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Deactive Account</button>
+                                    </form>
+                               </div>
+                            ) : (
+                                <div className="">
+                                    <form>
+                                        <button type="submit" className="py-2 px-8 border border-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Reactive Account</button>
+                                    </form>
+                               </div>
+                            )}
                         </p>
                         
                     </div>
