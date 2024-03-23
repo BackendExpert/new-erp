@@ -281,7 +281,7 @@ app.put('/ReactiveAccount/:id', (req, res) => {
 
 //ViewProfileData
 app.get('/ViewProfileData/:id', (req, res) => {
-    const ProfileEmail = req.params.email
+    const ProfileEmail = req.params.id
    
     const sql = "SELECT * FROM users WHERE email = ?"
     console.log(ProfileEmail)
@@ -291,7 +291,7 @@ app.get('/ViewProfileData/:id', (req, res) => {
             return res.json({Error: "ERROR on SERVER"})
         }
         else{
-            return res.json(result)
+            return res.json({Status: "Success", Result: result})
         }
     })
 })
