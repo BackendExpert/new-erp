@@ -280,11 +280,12 @@ app.put('/ReactiveAccount/:id', (req, res) => {
 })
 
 //ViewProfileData
-app.get('/ViewProfileData/:id', (req, res) => {
-    const ProfileEmail = req.params.id
-   
-    const sql = "SELECT * FROM users WHERE email = ?"
+app.get('/ViewProfileData/:email', (req, res) => {
+    const ProfileEmail = req.body.email
     console.log(ProfileEmail)
+
+    const sql = "SELECT * FROM users WHERE email = ?"
+    
 
     connection.query(sql, [ProfileEmail], (err, result) => {
         if(err){
