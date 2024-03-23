@@ -186,6 +186,20 @@ app.get('/ViewAccounts', (req, res) =>{
     })
 })
 
+//ViewUserData
+app.get('/ViewUserData/:id', (req, res) =>{
+    const AccountID = req.params.id
+    const sql = "SELECT * FROM users WHERE UserID = ?"
+
+    connection.query(sql, [AccountID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success", Result: result})
+        }
+    })
+})
 
 
 // Count Admins Roles
