@@ -20,9 +20,13 @@ const Accounts = () => {
         }
     }
 
+    const [viewAccounts, SetviewAccounts] = useState([])
+
     //fetch data from backend
     useEffect(() => {
         axios.get('http://localhost:8081/ViewAccounts')
+        .then(res => SetviewAccounts(res.data))
+        .catch(err => console.log(err))
     },[])
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
