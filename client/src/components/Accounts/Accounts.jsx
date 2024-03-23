@@ -57,7 +57,7 @@ const Accounts = () => {
                                         viewAccounts.map((account, index) =>{
                                             return (
                                                 <tr key={index}>
-                                                    
+                                                    <td className='px-6 py-4 font-bold'>{account.UserID}</td>
                                                 </tr>
                                             )
                                         })
