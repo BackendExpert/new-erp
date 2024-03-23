@@ -220,7 +220,7 @@ app.post('/DeavtiveAccount/:id', (req, res) => {
 //ReactiveAccount
 app.post('/ReactiveAccount/:id', (req, res) => {
     const ReactiveID = req.params.id
-    const sql = "UPDATE users SET is_active = ?, update_at = ? WHERE = ?"
+    const sql = "UPDATE users SET is_active = ?, update_at = ? WHERE UserID = ?"
     const update_at = new Date()
     const reactive = 1
 
