@@ -49,6 +49,7 @@ const Accounts = () => {
                                         <th scope='col' className='px-6 py-3'>Username</th>
                                         <th scope='col' className='px-6 py-3'>Email</th>                            
                                         <th scope='col' className='px-6 py-3'>User Role</th>
+                                        <th scope='col' className='px-6 py-3'>Status</th>
                                         <th scope='col' className='px-6 py-3'>Action</th>
                                     </tr>
                                 </thead>
@@ -58,6 +59,11 @@ const Accounts = () => {
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{account.UserID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{account.username}</td>
+                                                    <td className='px-6 py-4 font-bold'>{account.email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{account.role}</td>
+                                                    <td className='px-6 py-4 font-bold'>{account.is_active}</td>
+                                                    <td className='px-6 py-4 font-bold'></td>
                                                 </tr>
                                             )
                                         })
