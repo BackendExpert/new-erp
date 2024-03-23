@@ -35,8 +35,14 @@ const AccountInfo = () => {
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){        
         if(EmailUser === viewUserData.email){
-            alert("You Cannot Access this")
+            alert("Cannot Access")
             navigate('/Accounts')
+        }
+        else if(RoleUser === "Admin"){
+            if(viewUserData.role === "SuperAdmin"){
+                alert("You Cannot Access this Page")
+                navigate('/Accounts')
+            }
         }
         return (
             <div className="bg-gray-200 py-4">
