@@ -77,6 +77,29 @@ const Accounts = () => {
                                                     </tr>
                                                 )
                                             }
+                                            else if(RoleUser === "Admin"){
+                                                if(account.role !== "SuperAdmin"){
+                                                    return (
+                                                        <tr key={index}>
+                                                            <td className='px-6 py-4 font-bold'>{account.UserID}</td>
+                                                            <td className='px-6 py-4 font-bold'>{account.username}</td>
+                                                            <td className='px-6 py-4 font-bold'>{account.email}</td>
+                                                            <td className='px-6 py-4 font-bold'>{account.role}</td>
+                                                            <td className='px-6 py-4 font-bold'>
+                                                            { account.is_active === 1 ? (
+                                                                    <div className="py-1 px-8 bg-green-500 rounded text-white">Active</div>
+                                                                ) : (
+                                                                    <div className="py-1 px-8 bg-red-500 rounded text-white">Deactive</div>
+                                                                )}
+                                                            </td>
+                                                            <td className='px-6 py-4 font-bold'>
+        
+        
+                                                            </td>
+                                                        </tr>
+                                                    )
+                                                }
+                                            }
 
                                         })
                                     }
