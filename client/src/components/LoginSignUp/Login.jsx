@@ -45,7 +45,7 @@ const Login = () => {
 
            if(res.data.Msg === "success"){
                 if(res.data.CheckRole[0].is_active === 0){
-                    alert('Your Account has been Suspended. unauthorized activity has been detected.')
+                    alert('Your Account has been Suspended. unauthorized activity has been detected. or Account has been Deactive by system')
                     localStorage.clear();
                     console.log('Unauthorized Access. Logedout...');
                     navigate('/');
