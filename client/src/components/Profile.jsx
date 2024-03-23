@@ -13,6 +13,8 @@ const Profile = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    // alert(EmailUser);
+
     //go back according to login user
     const headleBack = () => {
       if(RoleUser === "SuperAdmin"){
@@ -48,9 +50,10 @@ const Profile = () => {
     join_data: ''
   })
 
+
   //fetch data
   useEffect(() => {
-    axios.get('http://localhost:8081/ViewProfileData/' + {value: EmailUser})
+    axios.get('http://localhost:8081/ViewProfileData', EmailUser)
     .then(res => SetProfileData({...profileData, username:res.data.Result[0].username,
           email:res.data.Result[0].email,
           role:res.data.Result[0].role
