@@ -62,8 +62,16 @@ const Accounts = () => {
                                                     <td className='px-6 py-4 font-bold'>{account.username}</td>
                                                     <td className='px-6 py-4 font-bold'>{account.email}</td>
                                                     <td className='px-6 py-4 font-bold'>{account.role}</td>
-                                                    <td className='px-6 py-4 font-bold'>{account.is_active}</td>
-                                                    <td className='px-6 py-4 font-bold'></td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                    { account. === "SuperAdmin" || RoleUser === "Admin" ? (
+                                                            <button onClick={()=>{handleDelete(empData.eid)}} className="rounded mx-2 py-2 px-6 border border-red-500 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Delete</button>
+                                                        ) : (
+                                                            <span className=""></span>
+                                                        )}
+                                                    </td>
+                                                    <td className='px-6 py-4 font-bold'>
+
+                                                    </td>
                                                 </tr>
                                             )
                                         })
