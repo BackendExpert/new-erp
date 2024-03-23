@@ -12,7 +12,7 @@ const ToSide = () => {
         {name: "Reservations",  link: "#", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Process Request",  link: "#", icon: <Icons name="refresh-circle" size="large"></Icons>},        
         {name: "Vehicle",  link: "/Vehicles", icon: <Icons name="car" size="large"></Icons>},
-        {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
         {name: "Logout",  desc: "logout", icon: <Icons name="power" size="large"></Icons>}        
     ]
 
