@@ -50,7 +50,7 @@ const Profile = () => {
 
   //fetch data
   useEffect(() => {
-    axios.get('http://localhost:8081/ViewProfileData/' + EmailUser)
+    axios.get('http://localhost:8081/ViewProfileData/' + {value: EmailUser})
     .then(res => SetProfileData({...profileData, username:res.data.Result[0].username,
           email:res.data.Result[0].email,
           role:res.data.Result[0].role
