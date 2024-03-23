@@ -27,13 +27,16 @@ const Profile = () => {
       else if(RoleUser === "TO"){
         navigate('/admin');
       }  
-      else if(RoleUser === "TO"){
+      else if(RoleUser === "Librarian"){
         navigate('/admin');
       } 
-      else if(RoleUser === "TO"){
+      else if(RoleUser === "Labmanager"){
         navigate('/admin');
       }     
-      else if(RoleUser === "TO"){
+      else if(RoleUser === "Accountant"){
+        navigate('/admin');
+      } 
+      else if(RoleUser === "User"){
         navigate('/admin');
       } 
   }
