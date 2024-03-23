@@ -281,7 +281,7 @@ app.put('/ReactiveAccount/:id', (req, res) => {
 
 //ViewProfileData
 app.get('/ViewProfileData', (req, res) => {
-    const ProfileEmail = req.body.email
+    const ProfileEmail = req.body
     console.log(ProfileEmail)
 
 })
