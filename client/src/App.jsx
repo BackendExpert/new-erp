@@ -50,6 +50,7 @@ import Accounts from "./components/Accounts/Accounts"
 import AccountInfo from "./components/Accounts/AccountInfo"
 import AddLeave from "./components/Leaves/AddLeave"
 import DirectorDash from "./components/Director/DirectorDash"
+import Secretary from "./components/Secretary/Secretary"
 
 export default function App() {
   return (
@@ -62,7 +63,7 @@ export default function App() {
         {/* DirectorDash */}
         <Route path="/DirectorDash" element={<PrivateRoute><DirectorDash /></PrivateRoute>} />
         {/* Secretary */}
-        <Route path="/Secretary" element={<PrivateRoute><DirectorDash /></PrivateRoute>} />
+        <Route path="/Secretary" element={<PrivateRoute><Secretary /></PrivateRoute>} />
         {/* SuperAdmin */}
         <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
         {/* Route for View all Unauthorized users on System */}

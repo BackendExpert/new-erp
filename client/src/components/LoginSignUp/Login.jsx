@@ -54,7 +54,7 @@ const Login = () => {
                     navigate('/DirectorDash');
                 }
                 else if(res.data.CheckRole[0].role === 'Secretary'){
-                    navigate('/DirectorDash');
+                    navigate('/Secretary');
                 }
                 else if(res.data.CheckRole[0].role === 'SuperAdmin'){
                     navigate('/superAdmin');

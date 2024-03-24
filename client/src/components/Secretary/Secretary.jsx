@@ -32,15 +32,15 @@ const Secretary = () => {
     return (
       <div className="bg-gray-200">
           <div className="flex">
-              {/* <DirSecSide /> */}
+              <DirSecSide />
               <div className="w-full mx-2">
-                {/* <DirSecNav /> */}
+                <DirSecNav />
                 <div className="shadow-xl border-l-4 bg-white my-4 rounded py-4 px-6">
                     <h1 className="text-2xl">Welcome to Secretary Dashboard</h1>
                     <hr className="mt-2 border-blue-100 border-2" />
-                    {/* <SummaryDash /> */}
+                    <SummaryDash />
                 </div>
-                  {/* <DashFooter /> */}
+                  <DashFooter />
               </div>
           </div>
       </div>
