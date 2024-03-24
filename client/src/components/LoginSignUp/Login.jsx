@@ -50,6 +50,9 @@ const Login = () => {
                     console.log('Unauthorized Access. Logedout...');
                     navigate('/');
                 }
+                else if(res.data.CheckRole[0].role === 'Director'){
+                    navigate('/DirectorDash');
+                }
                 else if(res.data.CheckRole[0].role === 'SuperAdmin'){
                     navigate('/superAdmin');
                 }
