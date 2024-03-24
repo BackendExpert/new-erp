@@ -51,6 +51,7 @@ import AccountInfo from "./components/Accounts/AccountInfo"
 import AddLeave from "./components/Leaves/AddLeave"
 import DirectorDash from "./components/Director/DirectorDash"
 import Secretary from "./components/Secretary/Secretary"
+import ScientistsDash from "./components/Scientist/ScientistsDash"
 
 export default function App() {
   return (
@@ -105,6 +106,9 @@ export default function App() {
         
         {/* user */}
         <Route path="/user" element={<PrivateRoute><Users /></PrivateRoute>} />
+
+        {/* ScientistsDash */}
+        <Route path="/ScientistsDash" element={<PrivateRoute><ScientistsDash /></PrivateRoute>} />
         
         {/* Employee */}
         <Route path="/Employee" element={<PrivateRoute><Employees /></PrivateRoute>} />
