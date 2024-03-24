@@ -1672,9 +1672,9 @@ app.post('/RequestLeave', (req, res) => {
             const update_at = new Date()
 
             const value = [
+                req.body.StartTime,
                 req.body.Email,
-                req.body.Email,
-                req.body.Email,
+                req.body.HoDEmail,
                 req.body.Email,
                 req.body.Email,
                 req.body.Email,
