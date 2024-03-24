@@ -8,12 +8,12 @@ const DirSecNav = () => {
     const navigate = useNavigate();
 
     const navLists = [
-        {name: "Leave Requests", link: ""},
-        {name: "Vehicle Reservations", link: ""},
-        {name: "SRN Requests", link: ""},
-        {name: "Work Requests", link: ""},
-        {name: "Gatepass Requests", link: ""},
-        {name: "Increment Requests", link: ""},
+        {name: "Recommend Leave", link: ""},
+        {name: "Recommend Reservations", link: ""},
+        {name: "Recommend SRN", link: ""},
+        {name: "Recommend Work Requests", link: ""},
+        {name: "Recommend Gatepass", link: ""},
+        {name: "Recommend Increment", link: ""},        
         {name: "Profile", link: "/Profile"},
         {name: "Logout", link: "", desc: "logout"}       
     ];
