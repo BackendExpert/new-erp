@@ -75,7 +75,7 @@ const AddLeave = () => {
 
                   <div className="">
                     <label htmlFor="">HOD Email</label>
-                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" disabled placeholder="HOD Email"
+                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2"  placeholder="HOD Email"
                     onChange={e => SetLeaveData({...LeaveData, HoDEmail:e.target.value})}/>
                   </div>
 
@@ -84,11 +84,39 @@ const AddLeave = () => {
 
                   <div className="">
                     <label htmlFor="">Leave Type</label>
-                    <select className="w-full h-12 border border-blue-400 rounded pl-2"
+                    <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2"
                       onChange={e => SetEmpData({...empData, designation:e.target.value})}>
-
+                        <option>Select Option</option>
+                        <option value="Duty">Duty</option>
+                        <option value="Casual">Casual</option>
+                        <option value="Sick">Duty</option>
+                        <option value="Casual Half Day">Casual Half Day</option>
+                        <option value="Sick Half Day">Sick Half Day</option>
+                        <option value="Short Leave">Short Leave</option>
+                        <option value="Lieu">Lieu</option>
+                        <option value="Other">Other</option>
                     </select>
-                  </div>              
+                  </div>     
+
+                  <div className="">
+                    <label htmlFor="">Job Category</label>
+                    <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2 "
+                      onChange={e => SetEmpData({...empData, JobCategory:e.target.value})}>
+                        <option>Select Option</option>
+                        <option value="Scientists">Scientists</option>
+                        <option value="Secretary">Secretary</option>
+                        <option value="Director">Director</option>
+                        <option value="Non_Academic">Non Academic</option>
+                        <option value="RA">RA</option>
+                        <option value="Postdocoral_Fellow">Postdocoral Fellow</option>
+                    </select>
+                  </div>          
+
+                  <div className="">
+                    <label htmlFor="">Start Date</label>
+                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Date"
+                    onChange={e => SetLeaveData({...LeaveData, StartDate:e.target.value})}/>
+                  </div>
 
                 </div>
               </form>
