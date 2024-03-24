@@ -70,6 +70,7 @@ const Articles = () => {
                                                 <td className='px-6 py-4 font-bold'>{article.title}</td>
                                                 <td className='px-6 py-4 font-bold'>{article.category}</td>
                                                 <td className='px-6 py-4 font-bold'>{article.journal}</td>
+                                                <td className='px-6 py-4 font-bold'>{article.pyear}</td>
                                                 <td className='px-6 py-4 font-bold'>{article.author1}, {article.author1}</td>
                                                 <td className='px-6 py-4 font-bold'>{article.pages}</td>
                                                 <td className='px-6 py-4 font-bold'>
