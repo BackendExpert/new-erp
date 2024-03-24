@@ -1658,7 +1658,10 @@ app.delete('/DeleteProject/:id', (req, res) =>{
 //-------------------- Leave Start --------------------
 
 //RequestLeave
-app.post('/RequestLeave', (req, res) => {
+app.post('/RequestLeave/:id', (req, res) => {
+    const Email = req.params.id
+    console.log(Email)
+
     const hodsql = "SELECT * FROM users WHERE email = ?"
     connection.query(hodsql, [req.body.HoDEmail], (err, result) => {
         if(err) throw err
@@ -1673,7 +1676,7 @@ app.post('/RequestLeave', (req, res) => {
 
             const value = [
                 req.body.StartTime,
-                req.body.Email,
+                Email,
                 req.body.HoDEmail,
                 req.body.Type,
                 req.body.JobCategory,
@@ -1684,6 +1687,7 @@ app.post('/RequestLeave', (req, res) => {
                 update_at
             ]
             console.log(req.body)
+            console.log(value)
             connection.query(sql, [value], (err, result) =>{
                 if(err){
                     return res.json({Error: "Error on SERVER"})

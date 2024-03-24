@@ -12,7 +12,7 @@ const AddLeave = () => {
 
     const headleSubmit = (e) =>{
       e.preventDefault(); 
-      axios.post('http://localhost:8081/RequestLeave', LeaveData)
+      axios.post('http://localhost:8081/RequestLeave/' + EmailUser, LeaveData)
       .then(res => {
         if(res.data.Status === "Success"){
           alert("Leave Request is Successful Added Wait for the Approve")
