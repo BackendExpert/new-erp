@@ -1675,10 +1675,13 @@ app.post('/RequestLeave', (req, res) => {
                 req.body.StartTime,
                 req.body.Email,
                 req.body.HoDEmail,
-                req.body.Email,
-                req.body.Email,
-                req.body.Email,
-                req.body.Email,
+                req.body.Type,
+                req.body.JobCategory,
+                req.body.StartDate,
+                req.body.EndDate,
+                req.body.EndDate,
+                req.body.EndDate,
+                req.body.EndDate,
 
             ]
         }
