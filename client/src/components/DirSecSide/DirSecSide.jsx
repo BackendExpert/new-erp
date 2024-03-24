@@ -36,7 +36,7 @@ const DirSecSide = () => {
                                         <div className="">Secretary</div>
                                     )
                                 }
-                            })
+                            })()
                         }    
                     </div>                    
                 </div>
