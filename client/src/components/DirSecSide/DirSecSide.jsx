@@ -38,9 +38,7 @@ const DirSecSide = () => {
                             }
                         })()
                     }
-                    <Link to={'/DirectorDash'}>
-                        {openSide ? <p>Dashbord</p> : <Icons name="speedometer"></Icons> }
-                    </Link>
+
                 </div>
                 <hr className="mt-2 mr-4 border-b-2 border-blue-300"/>
             </div>
