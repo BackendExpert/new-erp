@@ -9,7 +9,7 @@ const AddLeave = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
-    
+
     //go back according to login user
     const headleBack = () => {
       if(RoleUser === "SuperAdmin"){
@@ -69,13 +69,13 @@ const AddLeave = () => {
 
                   <div className="">
                     <label htmlFor="">Email</label>
-                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder=""
                     value={EmailUser} onChange={e => SetLeaveData({...LeaveData, Email:e.target.value})}/>
                   </div>
 
                   <div className="">
                     <label htmlFor="">HOD Email</label>
-                    <input type="time" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" disabled placeholder="Start Time"
+                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" disabled placeholder="HOD Email"
                     onChange={e => SetLeaveData({...LeaveData, HoDEmail:e.target.value})}/>
                   </div>
 
