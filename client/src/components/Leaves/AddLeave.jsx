@@ -114,8 +114,23 @@ const AddLeave = () => {
 
                   <div className="">
                     <label htmlFor="">Start Date</label>
-                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Date"
+                    <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Date"
                     onChange={e => SetLeaveData({...LeaveData, StartDate:e.target.value})}/>
+                  </div>
+
+                </div>
+                <div className="lg:grid grid-cols-2 gap-4">
+
+                  <div className="">
+                    <label htmlFor="">End Date</label>
+                    <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="End Date"
+                    onChange={e => SetLeaveData({...LeaveData, EndDate:e.target.value})}/>
+                  </div>
+
+                  <div className="">
+                    <label htmlFor="">Dutarion</label>
+                    <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Dutarion"
+                    onChange={e => SetLeaveData({...LeaveData, designation:e.target.value})}/>
                   </div>
 
                 </div>
