@@ -7,7 +7,8 @@ const AddLeave = () => {
     const navigate = useNavigate()
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
-
+    //get current login user's email
+    const EmailUser = secureLocalStorage.getItem("logiafter");
     //go back according to login user
     const headleBack = () => {
       if(RoleUser === "SuperAdmin"){
@@ -36,6 +37,17 @@ const AddLeave = () => {
       } 
     }
 
+    const [LeaveData, SetLeaveData] = useState({
+      Type:'',
+      JobCategory:'',
+      StartDate:'',
+      Duration:'',
+      HoDEmail:'',
+      StartTime:'',
+      EndDate:'',
+      Status:'',
+      Email:''
+    })
 
   return (
     <div className="bg-gray-200 py-4">
@@ -46,7 +58,27 @@ const AddLeave = () => {
 
             <div className="my-2">
               <form>
+                <div className="lg:grid grid-cols-3 gap-4">
 
+                  <div className="">
+                    <label htmlFor="">Start Time</label>
+                    <input type="time" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                    onChange={e => SetLeaveData({...LeaveData, StartTime:e.target.value})}/>
+                  </div>
+
+                  <div className="">
+                    <label htmlFor="">Email</label>
+                    <input type="time" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                    value={EmailUser} onChange={e => SetLeaveData({...LeaveData, StartTime:e.target.value})}/>
+                  </div>
+
+                  <div className="">
+                    <label htmlFor="">Start Time</label>
+                    <input type="time" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                    onChange={e => SetLeaveData({...LeaveData, StartTime:e.target.value})}/>
+                  </div>
+
+                </div>
               </form>
             </div>                
         </div>
