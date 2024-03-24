@@ -1679,11 +1679,19 @@ app.post('/RequestLeave', (req, res) => {
                 req.body.JobCategory,
                 req.body.StartDate,
                 req.body.EndDate,
-                req.body.EndDate,
-                req.body.EndDate,
-                req.body.EndDate,
-
+                req.body.Duration,
+                create_at,
+                update_at
             ]
+
+            connection.query(sql, [value], (err, result) =>{
+                if(err){
+                    return res.json({Error: "Error on SERVER"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
         }
     })
 })
