@@ -80,6 +80,17 @@ const AddLeave = () => {
                   </div>
 
                 </div>
+                <div className="lg:grid grid-cols-3 gap-4">
+
+                  <div className="">
+                    <label htmlFor="">Leave Type</label>
+                    <select className="w-full h-12 border border-blue-400 rounded pl-2"
+                      onChange={e => SetEmpData({...empData, designation:e.target.value})}>
+
+                    </select>
+                  </div>              
+
+                </div>
               </form>
             </div>                
         </div>
