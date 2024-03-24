@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
-import  secureLocalStorage  from  "react-secure-storage";
-
+import  secureLocalStorage  from  "react-secure-storage"
 
 const Login = () => {
     //navigate
@@ -13,6 +12,8 @@ const Login = () => {
         email: '',
         password: ''
     });
+
+    const logo = '../../assets/nifs.jpg'
 
     //get data
     const {email, password} = LoginData;
@@ -93,10 +94,10 @@ const Login = () => {
     }
 
   return (
-    <div className=' lg:py-32 lg:px-16 bg-[url(https://www.nifs.ac.lk/themes/custom/nifslk/dist/img/xnifs-enterence.jpg.pagespeed.ic.gWC6m0XOY_.webp)] bg-center bg-cover h-screen w-full'>
+    <div className='lg:py-24 lg:px-16 bg-[url(https://wallpapercave.com/wp/OHd7y41.jpg)] bg-center bg-cover h-screen w-full'>
         <div className="lg:grid grid-cols-2 gap-4 backdrop-blur-xl h-full lg:py-0 py-20">
             <div className="text-center py-20 backdrop-opacity-10">
-                <div className="my-4" style={{ fontFamily: '"Aclonica", sans-serif' }}>
+                <div className="my-4" style={{ fontFamily: '"Aclonica", sans-serif' }}>                    
                     <p className="py-2 text-[#1d2333] font-bold text-5xl font-sans" >Welcome to</p>
                     <p className="py-2 text-[#1d2333] font-bold text-4xl">ERP System</p>
                     <p className="py-2 text-[#1d2333] font-bold text-3xl">National Institute of Fundamental Studies</p>

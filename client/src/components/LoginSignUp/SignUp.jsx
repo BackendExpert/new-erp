@@ -40,13 +40,13 @@ export const SignUp = () => {
     }
 
   return (
-    <div className='lg:py-24 lg:px-16 bg-[url(https://www.nifs.ac.lk/themes/custom/nifslk/dist/img/xnifs-enterence.jpg.pagespeed.ic.gWC6m0XOY_.webp)] bg-center bg-cover h-screen w-full'>
+    <div className='lg:py-24 lg:px-16 bg-[url(https://wallpapercave.com/wp/6gQZh65.jpg)] bg-center bg-cover h-screen w-full'>
         <div className="lg:grid grid-cols-2 gap-4 backdrop-blur-md h-full lg:py-0 py-20">
             <div className="text-center py-20 backdrop-opacity-10">
                 <div className="my-4" style={{ fontFamily: '"Aclonica", sans-serif' }}>
-                    <p className="py-2 text-[#1d2333] font-bold text-5xl font-sans" >Welcome to</p>
-                    <p className="py-2 text-[#1d2333] font-bold text-4xl">ERP System</p>
-                    <p className="py-2 text-[#1d2333] font-bold text-3xl">National Institute of Fundamental Studies</p>
+                    <p className="py-2 text-white font-bold text-5xl font-sans" >Welcome to</p>
+                    <p className="py-2 text-white font-bold text-4xl">ERP System</p>
+                    <p className="py-2 text-white font-bold text-3xl">National Institute of Fundamental Studies</p>
                 </div>
             </div>
             <div className="bg-[#1d2333] lg:mr-20 lg:my-0 lg:mx-0 mx-[10%] lg:px-16 px-4 py-10 rounded-xl text-white">
