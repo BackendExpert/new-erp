@@ -48,6 +48,7 @@ import Articles from "./components/library/Articles/Articles"
 import AddArticles from "./components/library/Articles/AddArticles"
 import Accounts from "./components/Accounts/Accounts"
 import AccountInfo from "./components/Accounts/AccountInfo"
+import AddLeave from "./components/Leaves/AddLeave"
 
 export default function App() {
   return (
@@ -144,6 +145,8 @@ export default function App() {
         <Route path="/Accounts" element={<PrivateRoute><Accounts /></PrivateRoute>} />
         <Route path="/AccountInfo/:id" element={<PrivateRoute><AccountInfo /></PrivateRoute>} />
 
+        {/* AddLeave */}
+        <Route path="/AddLeave" element={<PrivateRoute><AddLeave /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>

@@ -9,7 +9,7 @@ const navList = () => {
 
     const navLists = [
         {name: "Home", link: ""},
-        {name: "Leave Requests", link: ""},
+        {name: "Leave Requests", link: "/AddLeave"},
         {name: "Vehicle Reservations", link: ""},
         {name: "SRN Requests", link: ""},
         {name: "Work Requests", link: ""},
