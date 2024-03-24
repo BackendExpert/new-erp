@@ -1,4 +1,6 @@
-import React from 'react'
+import { useState } from "react"
+import Icons from "@reacticons/ionicons"
+import { Link, useNavigate } from "react-router-dom"
 
 const DirSecNav = () => {
     const [navopen, SetNavOpen] = useState()
