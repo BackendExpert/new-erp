@@ -1670,9 +1670,10 @@ app.post('/RequestLeave/:id', (req, res) => {
             return res.json({Error: "HOD not exists"})
         }
         else if(result[0].role === "HOD"){
-            const sql = "INSERT INTO leaves (StartTime, Email, HoDEmail, Type, JobCategory, StartDate, EndDate, Duration, create_at, update_at) VALUES (?)"
+            const sql = "INSERT INTO leaves (StartTime, Email, HoDEmail, Type, JobCategory, StartDate, EndDate, Duration, Status, create_at, update_at) VALUES (?)"
             const create_at = new Date()
             const update_at = new Date()
+            const status = "Requested"
 
             const value = [
                 req.body.StartTime,
@@ -1683,6 +1684,7 @@ app.post('/RequestLeave/:id', (req, res) => {
                 req.body.StartDate,
                 req.body.EndDate,
                 req.body.Duration,
+                status,
                 create_at,
                 update_at
             ]
