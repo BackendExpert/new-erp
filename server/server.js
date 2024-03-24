@@ -1660,14 +1660,14 @@ app.delete('/DeleteProject/:id', (req, res) =>{
 //RequestLeave
 app.post('/RequestLeave', (req, res) => {
     const hodsql = "SELECT * FROM users WHERE email = ?"
-    connection.query(sql, [req.body.HoDEmail], (err, result) => {
+    connection.query(hodsql, [req.body.HoDEmail], (err, result) => {
         if(err) throw err
 
         if(result.length == 0){
             return res.json({Error: "HOD not exists"})
         }
         else if(result[0].role === "HOD"){
-            const sql = "INSERT INTO leaves(StartTime, Email, HoDEmail, Type, JobCategory, StartDate, EndDate, Duration, create_at, update_at) VALUES (?)"
+            const sql = "INSERT INTO leaves (StartTime, Email, HoDEmail, Type, JobCategory, StartDate, EndDate, Duration, create_at, update_at) VALUES (?)"
             const create_at = new Date()
             const update_at = new Date()
 
@@ -1683,7 +1683,7 @@ app.post('/RequestLeave', (req, res) => {
                 create_at,
                 update_at
             ]
-
+            console.log(value)
             connection.query(sql, [value], (err, result) =>{
                 if(err){
                     return res.json({Error: "Error on SERVER"})

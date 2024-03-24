@@ -62,6 +62,7 @@ const AddLeave = () => {
         }
       })
     }
+
   return (
     <div className="bg-gray-200 py-4">
         <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
@@ -142,7 +143,7 @@ const AddLeave = () => {
                   <div className="">
                     <label htmlFor="">Dutarion</label>
                     <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Dutarion"
-                    onChange={e => SetLeaveData({...LeaveData, designation:e.target.value})}/>
+                    onChange={e => SetLeaveData({...LeaveData, Type:e.target.value})}/>
                   </div>
 
                 </div>
