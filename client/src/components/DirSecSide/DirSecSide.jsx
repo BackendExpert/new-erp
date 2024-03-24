@@ -23,7 +23,22 @@ const DirSecSide = () => {
             <div className="py-2">
                 <div className="flex">
                 <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
-                    <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>Directorssssssssss</div>                    
+                    <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>
+                        {
+                            (() => {
+                                if(RoleUser === "Director"){
+                                    return(
+                                        <div className="">Director</div>
+                                    )
+                                }
+                                else if(RoleUser === "Secretary"){
+                                    return (
+                                        <div className="">Secretary</div>
+                                    )
+                                }
+                            })
+                        }    
+                    </div>                    
                 </div>
                 <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
                     {
