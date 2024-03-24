@@ -68,14 +68,14 @@ const AddLeave = () => {
 
                   <div className="">
                     <label htmlFor="">Email</label>
-                    <input type="time" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
-                    value={EmailUser} onChange={e => SetLeaveData({...LeaveData, StartTime:e.target.value})}/>
+                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                    value={EmailUser} onChange={e => SetLeaveData({...LeaveData, Email:e.target.value})}/>
                   </div>
 
                   <div className="">
-                    <label htmlFor="">Start Time</label>
-                    <input type="time" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
-                    onChange={e => SetLeaveData({...LeaveData, StartTime:e.target.value})}/>
+                    <label htmlFor="">HOD Email</label>
+                    <input type="time" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" disabled placeholder="Start Time"
+                    onChange={e => SetLeaveData({...LeaveData, HoDEmail:e.target.value})}/>
                   </div>
 
                 </div>
