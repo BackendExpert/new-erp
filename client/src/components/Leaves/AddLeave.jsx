@@ -10,6 +10,19 @@ const AddLeave = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    const headleSubmit = (e) =>{
+      e.preventDefault(); 
+      axios.post('http://localhost:8081/RequestLeave', LeaveData)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Leave Request is Successful Added Wait for the Approve")
+        }
+        else{
+          alert(res.data.Error)
+        }
+      })
+    }
+
     //go back according to login user
     const headleBack = () => {
       if(RoleUser === "SuperAdmin"){
@@ -46,22 +59,10 @@ const AddLeave = () => {
       HoDEmail:'',
       StartTime:'',
       EndDate:'',
-      Status:'',
       Email:''
     })
 
-    const headleSubmit = (e) =>{
-      e.preventDefault(); 
-      axios.post('http://localhost:8081/RequestLeave', LeaveData)
-      .then(res => {
-        if(res.data.Status === "Success"){
-          alert("Leave Request is Successful Added Wait for the Approve")
-        }
-        else{
-          alert(res.data.Error)
-        }
-      })
-    }
+
 
   return (
     <div className="bg-gray-200 py-4">
@@ -98,7 +99,7 @@ const AddLeave = () => {
                   <div className="">
                     <label htmlFor="">Leave Type</label>
                     <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2"
-                      onChange={e => SetEmpData({...empData, designation:e.target.value})}>
+                      onChange={e => SetLeaveData({...LeaveData, Type:e.target.value})}>
                         <option>Select Option</option>
                         <option value="Duty">Duty</option>
                         <option value="Casual">Casual</option>
@@ -114,7 +115,7 @@ const AddLeave = () => {
                   <div className="">
                     <label htmlFor="">Job Category</label>
                     <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2 "
-                      onChange={e => SetEmpData({...empData, JobCategory:e.target.value})}>
+                      onChange={e => SetLeaveData({...LeaveData, JobCategory:e.target.value})}>
                         <option>Select Option</option>
                         <option value="Scientists">Scientists</option>
                         <option value="Secretary">Secretary</option>
@@ -143,7 +144,7 @@ const AddLeave = () => {
                   <div className="">
                     <label htmlFor="">Dutarion</label>
                     <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Dutarion"
-                    onChange={e => SetLeaveData({...LeaveData, Type:e.target.value})}/>
+                    onChange={e => SetLeaveData({...LeaveData, Duration:e.target.value})}/>
                   </div>
 
                 </div>

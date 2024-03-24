@@ -1683,7 +1683,7 @@ app.post('/RequestLeave', (req, res) => {
                 create_at,
                 update_at
             ]
-            console.log(value)
+            console.log(req.body)
             connection.query(sql, [value], (err, result) =>{
                 if(err){
                     return res.json({Error: "Error on SERVER"})
