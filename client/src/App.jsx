@@ -61,6 +61,8 @@ export default function App() {
         {/* PrivateRoute for protect the following routes from unauthrized access */}
         {/* DirectorDash */}
         <Route path="/DirectorDash" element={<PrivateRoute><DirectorDash /></PrivateRoute>} />
+        {/* Secretary */}
+        <Route path="/Secretary" element={<PrivateRoute><DirectorDash /></PrivateRoute>} />
         {/* SuperAdmin */}
         <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
         {/* Route for View all Unauthorized users on System */}
