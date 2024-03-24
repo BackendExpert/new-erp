@@ -49,6 +49,7 @@ import AddArticles from "./components/library/Articles/AddArticles"
 import Accounts from "./components/Accounts/Accounts"
 import AccountInfo from "./components/Accounts/AccountInfo"
 import AddLeave from "./components/Leaves/AddLeave"
+import DirectorDash from "./components/Director/DirectorDash"
 
 export default function App() {
   return (
@@ -58,6 +59,8 @@ export default function App() {
         <Route path="/register" element={<SignUp />} ></Route>
 
         {/* PrivateRoute for protect the following routes from unauthrized access */}
+        {/* DirectorDash */}
+        <Route path="/DirectorDash" element={<PrivateRoute><DirectorDash /></PrivateRoute>} />
         {/* SuperAdmin */}
         <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
         {/* Route for View all Unauthorized users on System */}
