@@ -168,7 +168,7 @@ export default function App() {
         <Route path="/Accounts" element={<PrivateRoute><Accounts /></PrivateRoute>} />
         <Route path="/AccountInfo/:id" element={<PrivateRoute><AccountInfo /></PrivateRoute>} />
 
-        {/* AddLeave */}
+        {/* Leave */}
         <Route path="/AddLeave" element={<PrivateRoute><AddLeave /></PrivateRoute>} />
         <Route path="/RecLeave" element={<PrivateRoute><RecLeave /></PrivateRoute>} />
 
