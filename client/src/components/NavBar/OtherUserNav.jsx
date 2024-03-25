@@ -8,12 +8,6 @@ const OtherUserNav = () => {
     const navigate = useNavigate();
 
     const navLists = [
-        {name: "Leave Requests", link: "/AddLeave"},
-        {name: "Vehicle Reservations", link: ""},
-        {name: "SRN Requests", link: ""},
-        {name: "Work Requests", link: ""},
-        {name: "Gatepass Requests", link: ""},
-        {name: "Increment Requests", link: ""},
         {name: "Profile", link: "/Profile"},
         {name: "Logout", link: "", desc: "logout"}       
     ];
