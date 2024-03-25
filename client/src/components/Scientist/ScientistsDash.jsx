@@ -6,7 +6,7 @@ const ScientistsDash = () => {
   const navigate = useNavigate()
   const RoleUser = secureLocalStorage.getItem("loginNew");
 
-  if(RoleUser === "RA" || RoleUser === "SuperAdmin"){
+  if(RoleUser === "Scientist" || RoleUser === "SuperAdmin"){
     return (
       <div>ScientistsDash</div>
     )
