@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Icons from "@reacticons/ionicons"
+import { Link } from 'react-router-dom';
 
 const ToNav = () => {
     const [navopen, SetNavOpen] = useState();

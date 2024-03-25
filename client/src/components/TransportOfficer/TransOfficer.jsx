@@ -3,7 +3,8 @@ import  secureLocalStorage  from  "react-secure-storage";
 import { useNavigate } from "react-router-dom"
 import ToSide from "./ToSide";
 import ToNav from "../NavBar/ToNav";
-import ToData from "./ToData";
+import SummaryDash from "../SummaryDash/SummaryDash";
+import DashFooter from "../SummaryDash/dashFooter";
 
 const TransOfficer = ({children}) => {
   
@@ -32,13 +33,18 @@ const TransOfficer = ({children}) => {
     return (
       <div className="bg-gray-200">
         <div className="flex">
-          <ToSide />
-          <div className="w-full mx-2">
+            <ToSide />
+            <div className="w-full mx-2">
               <ToNav />
-              <ToData />
-          </div>
+              <div className="shadow-xl border-l-4 bg-white my-4 rounded py-4 px-6">
+                  <h1 className="text-2xl">Welcome to Transport Officer Dashboard</h1>
+                  <hr className="mt-2 border-blue-100 border-2" />
+                  <SummaryDash />
+              </div>
+                <DashFooter />
+            </div>
         </div>
-      </div>
+    </div>
     )
   }
   else{
