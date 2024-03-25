@@ -41,6 +41,11 @@ const RecLeave = () => {
             </div>    
         )
     }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
 }
 
 export default RecLeave
