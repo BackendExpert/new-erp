@@ -105,7 +105,7 @@ const AddLeave = () => {
                   </div>
 
                 </div>
-                <div className="lg:grid grid-cols-3 gap-4">
+                <div className="lg:grid grid-cols-2 gap-4">
 
                   <div className="">
                     <label htmlFor="">Leave Type</label>
