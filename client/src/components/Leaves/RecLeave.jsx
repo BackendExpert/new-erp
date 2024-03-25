@@ -35,6 +35,20 @@ const RecLeave = () => {
         .catch(err => console.log(err))
     }, [])
 
+    //Recommend 
+    const headleRec = (id) =>{
+        axios.post('http://localhost:8081/RecLeave')
+        .then(rec => {
+            if(res.data.Status === "Success"){
+                alert("The Leave Request is Recommended")
+                navigate('/to')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
@@ -90,7 +104,10 @@ const RecLeave = () => {
                                                                     <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leave.Status}</span>
                                                                 </td>                                                          
                                                                 <td className='px-6 py-4 font-bold'>
-                                                                    
+                                                                    <div className="flex">
+                                                                        <button onClick={() => headleRec(leave.LID)} className="py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommend</button>
+                                                                        <button className="py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Denied</button>
+                                                                    </div>
                                                                 </td>
                                                             </tr>
                                                         )                                                        
