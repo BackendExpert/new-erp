@@ -12,6 +12,9 @@ const RecLeave = () => {
     const [leaveDataAccept, SetleaveDataAccept] = useState([])
 
     const [buttonValue, SetButtonValue] = useState()
+    const HeadleButtonClick = (clickValue) => {
+        SetButtonValue(clickValue)   
+    }
 
     //fetch leave data
     useEffect(() => {
@@ -44,9 +47,9 @@ const RecLeave = () => {
                         </Link>
                     </div>
                     <div className="flex pl-2 my-4">
-                        <button onClick={() => SetButtonValue('Requested')} className="ml-2 py-2 px-4 border border-yellow-500 text-yellow-500 rounded duration-500 hover:bg-yellow-500 hover:text-white hover:shadow-xl">Request Leaves</button>
-                        <button onClick={() => SetButtonValue('Denied')} className="ml-2 py-2 px-4 border border-red-500 text-red-500 rounded duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Request Denied</button>
-                        <button onClick={() => SetButtonValue('Accept')} className="ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Accept</button>
+                        <button onClick={() => HeadleButtonClick('Requested')} className="ml-2 py-2 px-4 border border-yellow-500 text-yellow-500 rounded duration-500 hover:bg-yellow-500 hover:text-white hover:shadow-xl">Request Leaves</button>
+                        <button onClick={() => HeadleButtonClick('Denied')} className="ml-2 py-2 px-4 border border-red-500 text-red-500 rounded duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Request Denied</button>
+                        <button onClick={() => HeadleButtonClick('Accept')} className="ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Accept</button>
                     </div>
 
                     <div className="relative overflow-x-auto my-8">
