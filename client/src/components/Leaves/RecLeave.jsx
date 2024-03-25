@@ -7,12 +7,26 @@ const RecLeave = () => {
     const navigate = useNavigate()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    const [leaveData, SetLeaveData] = useState([])
+    const [leaveDataReq, SetLeaveData] = useState([])
+    const [leaveDataDenied, SetleaveDataDenied] = useState([])
+    const [leaveDataAccept, SetleaveDataAccept] = useState([])
 
     //fetch leave data
     useEffect(() => {
         axios.get('http://localhost:8081/LeaveRec')
         .then(res => SetLeaveData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/LeaveRecDenied')
+        .then(res => SetleaveDataDenied(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/LeaveRecAccept')
+        .then(res => SetleaveDataAccept(res.data))
         .catch(err => console.log(err))
     }, [])
 
