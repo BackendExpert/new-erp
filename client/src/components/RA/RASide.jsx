@@ -8,10 +8,10 @@ const RASide = () => {
     const sidemenu = [
         {name: "Leave Requests",  link: "/Profile", icon: <Icons name="log-out" size="large"></Icons>},
         {name: "Vehicle Reservations",  link: "/Profile", icon: <Icons name="car" size="large"></Icons>},
-        {name: "SRN Requests",  link: "/Profile", icon: <Icons name="document-text" size="large"></Icons>},
-        {name: "Work Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Gatepass Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Increment Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
+        {name: "SRN Requests",  link: "/Profile", icon: <Icons name="newspaper" size="large"></Icons>},
+        {name: "Work Requests",  link: "/Profile", icon: <Icons name="document-text" size="large"></Icons>},
+        {name: "Gatepass Requests",  link: "/Profile", icon: <Icons name="car" size="large"></Icons>},
+        {name: "Increment Requests",  link: "/Profile", icon: <Icons name="cash" size="large"></Icons>},
     ]
   return (
     <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-auto pl-4 py-4 ${openSide ? "w-72" : "w-20" }`}>
