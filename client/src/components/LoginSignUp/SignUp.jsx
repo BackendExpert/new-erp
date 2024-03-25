@@ -29,7 +29,6 @@ export const SignUp = () => {
                 username,
                 email,
                 password,
-                role
             });
 
             navigate('/');

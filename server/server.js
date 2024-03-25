@@ -57,10 +57,11 @@ app.post('/register', (req, res) => {
         var createTime = new Date();
         var updateTime = new Date();
         const is_active = 1;
+        const userRole = "user"
 
         connection.query(
             'INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?, ?, ?, ?, ?, ?, ?)',
-            [username, email, role, hashPass, createTime, updateTime, is_active],
+            [username, email, userRole, hashPass, createTime, updateTime, is_active],
             (error, result) => {
                 if(error) throw error;
                 res.status(201).send("User registered Successfully");
