@@ -11,6 +11,8 @@ const RecLeave = () => {
     const [leaveDataDenied, SetleaveDataDenied] = useState([])
     const [leaveDataAccept, SetleaveDataAccept] = useState([])
 
+    const [buttonValue, SetButtonValue] = useState()
+
     //fetch leave data
     useEffect(() => {
         axios.get('http://localhost:8081/LeaveRec')
@@ -41,6 +43,11 @@ const RecLeave = () => {
                             <button className="lg:my-0 my-2 border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl lg:mx-2">Back</button>
                         </Link>
                     </div>
+                    <div className="flex pl-2 my-4">
+                        <button onClick={() => SetButtonValue('Requested')} className="ml-2 py-2 px-4 border border-yellow-500 text-yellow-500 rounded duration-500 hover:bg-yellow-500 hover:text-white hover:shadow-xl">Request Leaves</button>
+                        <button onClick={() => SetButtonValue('Denied')} className="ml-2 py-2 px-4 border border-red-500 text-red-500 rounded duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Request Denied</button>
+                        <button onClick={() => SetButtonValue('Accept')} className="ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Accept</button>
+                    </div>
 
                     <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -61,38 +68,39 @@ const RecLeave = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        leaveData.map((leave, index) => {
-                                            return (
-                                                <tr key={index}>
-                                                    <td className='px-6 py-4 font-bold'>{leave.LID}</td>
-                                                    <td className='px-6 py-4 font-bold'>{leave.Name}</td>
-                                                    <td className='px-6 py-4 font-bold'>{leave.Email}</td>
-                                                    <td className='px-6 py-4 font-bold'>{leave.Type}</td>
-                                                    <td className='px-6 py-4 font-bold'>{leave.JobCategory}</td>
-                                                    <td className='px-6 py-4 font-bold'>{leave.StartDate}</td>
-                                                    <td className='px-6 py-4 font-bold'>{leave.StartTime}</td>
-                                                    <td className='px-6 py-4 font-bold'>{leave.EndDate}</td>
-                                                    <td className='px-6 py-4 font-bold'>{leave.Duration}</td>
-                                                    <td className='px-6 py-4 font-bold'>
-                                                        {
-                                                            (() => {
-                                                                if(leave.Status === "Requested"){
-                                                                    return(
-                                                                        <div className="">
-                                                                            <p className="py-1 px-4 bg-yellow-500 rounded text-white">Requested</p>
-                                                                        </div>
-                                                                    )
+                                        (() => {
+                                            if(buttonValue === "Requested"){
+                                                leaveData.map((leave, index) => {
+                                                    return (
+                                                        <tr key={index}>
+                                                            <td className='px-6 py-4 font-bold'>{leave.LID}</td>
+                                                            <td className='px-6 py-4 font-bold'>{leave.Name}</td>
+                                                            <td className='px-6 py-4 font-bold'>{leave.Email}</td>
+                                                            <td className='px-6 py-4 font-bold'>{leave.Type}</td>
+                                                            <td className='px-6 py-4 font-bold'>{leave.JobCategory}</td>
+                                                            <td className='px-6 py-4 font-bold'>{leave.StartDate}</td>
+                                                            <td className='px-6 py-4 font-bold'>{leave.StartTime}</td>
+                                                            <td className='px-6 py-4 font-bold'>{leave.EndDate}</td>
+                                                            <td className='px-6 py-4 font-bold'>{leave.Duration}</td>
+                                                            <td className='px-6 py-4 font-bold'>
+                                                                {
+                                                                    (() => {
+                                                                        if(leave.Status === "Requested"){
+                                                                            return(
+                                                                                <div className="">
+                                                                                    <p className="py-1 px-4 bg-yellow-500 rounded text-white">Requested</p>
+                                                                                </div>
+                                                                            )
+                                                                        }
+                                                                    })()
                                                                 }
-                                                            })()
-                                                        }
-                                                    </td>
-                                                    <td className='px-6 py-4 font-bold'>OK</td>
-
-
-
-                                                </tr>
-                                            )
-                                        })
+                                                            </td>
+                                                            <td className='px-6 py-4 font-bold'>OK</td>
+                                                        </tr>
+                                                    )
+                                                })
+                                            }
+                                        })()
                                     }
                                 </tbody>
                             </table>
@@ -109,3 +117,4 @@ const RecLeave = () => {
 }
 
 export default RecLeave
+
