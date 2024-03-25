@@ -25,7 +25,7 @@ const Users = () => {
                   <label htmlFor="">User Role: </label><br />
                   <select className="w-1/2 h-12 border border-blue-400 rounded pl-2 my-2"
                         onChange={e => SetLeaveData({...LeaveData, Type:e.target.value})}>
-                          <option className=''>Select Allowance Name</option>
+                          <option className=''>Select Role</option>
                           <option className=''value="HOD">Head</option>
                           <option className=''value="TO">Transport Office</option>
                           <option className=''value="Librarian">Librarian</option>
@@ -41,7 +41,7 @@ const Users = () => {
                   <button type="submit" className="py-2 px-8 rounded bg-blue-500 text-white">Request</button>
                 </div>
               </form>
-              <button onChange={() => GoBack()} className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
+              <button onChange={GoBack} className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
 
               <div className="my-4">
                 <p className="text-xl text-red-500 font-semibold">Important Notice </p>

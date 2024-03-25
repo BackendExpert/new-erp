@@ -59,7 +59,7 @@ app.post('/register', (req, res) => {
         var createTime = new Date();
         var updateTime = new Date();
         const is_active = 1;
-        const userRole = "user"
+        const userRole = "User"
 
         connection.query(
             'INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?, ?, ?, ?, ?, ?, ?)',
