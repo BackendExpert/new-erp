@@ -6,22 +6,19 @@ const RASide = () => {
     const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
-        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        
+        {name: "Leave Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Vehicle Reservations",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
+        {name: "SRN Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Work Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Gatepass Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Increment Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
     ]
   return (
     <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-auto pl-4 py-4 ${openSide ? "w-72" : "w-20" }`}>
         <div className="py-2">
             <div className="flex">
             <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
-                <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>SuperAdmin</div>                    
+                <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>RA</div>                    
             </div>
             <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
                 <Link to={'/RADash'}>
