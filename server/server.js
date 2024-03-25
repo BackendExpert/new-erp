@@ -1779,7 +1779,19 @@ app.post('/RecLeave/:id', (req, res) => {
 })
 //RecLeaveN
 app.post('/RecLeaveN/:id', (req, res) => {
+    const LeaveID = req.params.id
+    const sql = "UPDATE leaves SET Status = ?, update_at = ? WHERE LID = ?"
+    const update_at = new Date()
+    const status = "Denied"
     
+    connection.query(sql, [status, update_at, LeaveID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
 })
 //--------------------- Leave End -------------------
 

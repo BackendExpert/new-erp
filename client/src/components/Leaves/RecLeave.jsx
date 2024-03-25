@@ -141,8 +141,10 @@ const RecLeave = () => {
                                                                 <td className='px-6 py-4 font-bold'>{dleave.StartTime}</td>
                                                                 <td className='px-6 py-4 font-bold'>{dleave.EndDate}</td>
                                                                 <td className='px-6 py-4 font-bold'>{dleave.Duration}</td>
-                                                                <td className='px-6 py-4 font-bold'>{dleave.Status}</td>                                                          
-                                                                <td className='px-6 py-4 font-bold'>OK</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <p className="py-2 px-4 bg-red-500 text-white rounded">{dleave.Status}</p>    
+                                                                </td>                                                          
+                                                                <td className='px-6 py-4 font-bold'></td>
                                                             </tr>
                                                         )                                                        
                                                     })
@@ -162,8 +164,10 @@ const RecLeave = () => {
                                                                 <td className='px-6 py-4 font-bold'>{Rleave.StartTime}</td>
                                                                 <td className='px-6 py-4 font-bold'>{Rleave.EndDate}</td>
                                                                 <td className='px-6 py-4 font-bold'>{Rleave.Duration}</td>
-                                                                <td className='px-6 py-4 font-bold'>{Rleave.Status}</td>                                                          
-                                                                <td className='px-6 py-4 font-bold'>OK</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <p className="py-2 px-4 bg-green-500 text-white rounded">{Rleave.Status}</p>        
+                                                                </td>                                                          
+                                                                <td className='px-6 py-4 font-bold'></td>
                                                             </tr>
                                                         )                                                        
                                                     })
