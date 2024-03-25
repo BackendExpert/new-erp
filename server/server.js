@@ -8,6 +8,7 @@ const cors = require('cors');
 const path = require('path')
 
 const resourceLimits = require('worker_threads');
+const e = require('express');
 
 
 
@@ -1671,35 +1672,43 @@ app.post('/RequestLeave/:id', (req, res) => {
             return res.json({Error: "HOD not exists"})
         }
         else if(result[0].role === "HOD"){
-            const sql = "INSERT INTO leaves (StartTime, Email, HoDEmail, Type, JobCategory, StartDate, EndDate, Duration, Status, create_at, update_at) VALUES (?)"
-            const create_at = new Date()
-            const update_at = new Date()
-            const status = "Requested"
-            const JobCategory = result[0].role;
+            const roleSql = "SELECT * FROM users WHERE email = ?"
+            connection.query(roleSql, [Email], (err, result) => {
+                if(err) throw err
 
-            const value = [
-                req.body.StartTime,
-                Email,
-                req.body.HoDEmail,
-                req.body.Type,
-                JobCategory,
-                req.body.StartDate,
-                req.body.EndDate,
-                req.body.Duration,
-                status,
-                create_at,
-                update_at
-            ]
-            console.log(req.body)
-            console.log(value)
-            connection.query(sql, [value], (err, result) =>{
-                if(err){
-                    return res.json({Error: "Error on SERVER"})
-                }
-                else{
-                    return res.json({Status: "Success"})
+                if(result.length > 0){
+                    const sql = "INSERT INTO leaves (StartTime, Email, HoDEmail, Type, JobCategory, StartDate, EndDate, Duration, Status, create_at, update_at) VALUES (?)"
+                    const create_at = new Date()
+                    const update_at = new Date()
+                    const status = "Requested"
+                    const JobCategory = result[0].role;
+        
+                    const value = [
+                        req.body.StartTime,
+                        Email,
+                        req.body.HoDEmail,
+                        req.body.Type,
+                        JobCategory,
+                        req.body.StartDate,
+                        req.body.EndDate,
+                        req.body.Duration,
+                        status,
+                        create_at,
+                        update_at
+                    ]
+                    console.log(req.body)
+                    console.log(value)
+                    connection.query(sql, [value], (err, result) =>{
+                        if(err){
+                            return res.json({Error: "Error on SERVER"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    })
                 }
             })
+
         }
     })
 })
