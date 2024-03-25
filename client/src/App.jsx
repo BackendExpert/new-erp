@@ -53,6 +53,7 @@ import DirectorDash from "./components/Director/DirectorDash"
 import Secretary from "./components/Secretary/Secretary"
 import ScientistsDash from "./components/Scientist/ScientistsDash"
 import RADash from "./components/RA/RADash"
+import NonAcademic from "./components/NonAcademic/NonAcademic"
 
 export default function App() {
   return (
@@ -110,6 +111,9 @@ export default function App() {
 
         {/* ScientistsDash */}
         <Route path="/ScientistsDash" element={<PrivateRoute><ScientistsDash /></PrivateRoute>} />
+
+        {/* NonAcademic */}
+        <Route path="/NonAcademic" element={<PrivateRoute><NonAcademic /></PrivateRoute>} />
 
         {/* RADash */}
         <Route path="/RADash" element={<PrivateRoute><RADash /></PrivateRoute>} />
