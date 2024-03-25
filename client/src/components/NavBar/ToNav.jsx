@@ -27,7 +27,9 @@ const ToNav = () => {
                 navlists.map((nav) => {
                     return (
                         <div className="">
-                            <div className="cursor-pointer text-blue-500 py-4 border-b-4 border-blue-200">{nav.name}</div>
+                            <Link to={nav.link}>
+                                <div className="cursor-pointer text-blue-500 py-4 border-b-4 border-blue-200">{nav.name}</div>
+                            </Link>
                         </div>
                     )
                 })
