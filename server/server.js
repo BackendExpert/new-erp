@@ -1730,6 +1730,21 @@ app.get('/LeaveRec', (req, res) => {
     })
 })
 
+// LeaveRecDenied
+app.get('/LeaveRecDenied', (req, res) => {
+    const sql = "SELECT * FROM leaves WHERE Status = ?"
+    const status = "Denied"
+
+    connection.query(sql, [status], (err, result) =>{
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //--------------------- Leave End -------------------
 
 //check the server is working
