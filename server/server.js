@@ -1776,7 +1776,10 @@ app.post('/RecLeave/:id', (req, res) => {
             return res.json({Status: "Success"})
         }
     })
-
+})
+//RecLeaveN
+app.post('/RecLeaveN/:id', (req, res) => {
+    
 })
 //--------------------- Leave End -------------------
 
