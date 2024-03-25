@@ -39,7 +39,7 @@ const Projects = () => {
         alert("Project Deleted Successful")
         window.location.reload()
       }
-      else{
+      else{      
         alert(res.data.Error)
       }
     })
