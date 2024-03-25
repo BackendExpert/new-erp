@@ -7,7 +7,14 @@ const RecLeave = () => {
     const navigate = useNavigate()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    
+    const [leaveData, SetLeaveData] = useState([])
+
+    //fetch leave data
+    useEffect(() => {
+        axios.get('http://localhost:8081/LeaveRec')
+        .then(res => SetLeaveData(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
