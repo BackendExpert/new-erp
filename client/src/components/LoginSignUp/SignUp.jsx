@@ -68,7 +68,7 @@ export const SignUp = () => {
                             <label htmlFor="" className='text-xl'>Enter Password : </label>
                             <input type="password" className="my-2 w-full lg:h-14 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent" name='password' required placeholder='Enter Password'value={password} onChange={onChange}/>
                         </div>
-                        <div className="my-2">
+                        {/* <div className="my-2">
                             <label htmlFor="" className='text-xl'>Select Role : </label><br />
                             <select name="role" id="" className='bg-black text-white my-2 w-full lg:h-16 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent' onChange={onChange} value={role}>
                                 <option className='bg-[#1d2333]'>Select Allowance Name</option>
@@ -81,7 +81,7 @@ export const SignUp = () => {
                                 <option className='bg-[#1d2333]'value="Accountant">Accountant</option>
                                 <option className='bg-[#1d2333]'value="User">User</option>
                             </select>
-                        </div>
+                        </div> */}
                         <div className="my-4">
                             <button type="submit" className="w-1/2 h-12 border border-blue-500 rounded text-blue-500 duration-500 hover:text-white hover:bg-blue-500">Register</button>
                         </div>
