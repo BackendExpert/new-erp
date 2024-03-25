@@ -1748,7 +1748,7 @@ app.get('/LeaveRecDenied', (req, res) => {
 // LeaveRecAccept
 app.get('/LeaveRecAccept', (req, res) => {
     const sql = "SELECT * FROM leaves WHERE Status = ?"
-    const status = "Accept"
+    const status = "Recommend"
 
     connection.query(sql, [status], (err, result) =>{
         if(err){

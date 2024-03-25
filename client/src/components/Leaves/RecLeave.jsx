@@ -116,9 +116,23 @@ const RecLeave = () => {
                                             }
                                             else if(buttonValue === 'Recommend'){
                                                 return (
-                                                    <tr>
-                                                        <td>Hi all Accept</td>
-                                                    </tr>
+                                                    leaveDataAccept.map((Rleave, index) => {
+                                                        return (
+                                                            <tr key={index}>
+                                                                <td className='px-6 py-4 font-bold'>{Rleave.LID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Rleave.Name}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Rleave.Email}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Rleave.Type}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Rleave.JobCategory}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Rleave.StartDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Rleave.StartTime}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Rleave.EndDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Rleave.Duration}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Rleave.Status}</td>                                                          
+                                                                <td className='px-6 py-4 font-bold'>OK</td>
+                                                            </tr>
+                                                        )                                                        
+                                                    })
                                                 )
                                             }
                                         })()
