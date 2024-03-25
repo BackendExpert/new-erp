@@ -89,16 +89,29 @@ const RecLeave = () => {
                                                                 <td className='px-6 py-4 font-bold'>{leave.Status}</td>                                                          
                                                                 <td className='px-6 py-4 font-bold'>OK</td>
                                                             </tr>
-                                                        )
-                                                        
+                                                        )                                                        
                                                     })
                                                 )
                                             }
                                             else if(buttonValue === 'Denied'){
                                                 return (
-                                                    <tr>
-                                                        <td>Hi all Denied</td>
-                                                    </tr>
+                                                    leaveDataDenied.map((dleave, index) => {
+                                                        return (
+                                                            <tr key={index}>
+                                                                <td className='px-6 py-4 font-bold'>{dleave.LID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{dleave.Name}</td>
+                                                                <td className='px-6 py-4 font-bold'>{dleave.Email}</td>
+                                                                <td className='px-6 py-4 font-bold'>{dleave.Type}</td>
+                                                                <td className='px-6 py-4 font-bold'>{dleave.JobCategory}</td>
+                                                                <td className='px-6 py-4 font-bold'>{dleave.StartDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{dleave.StartTime}</td>
+                                                                <td className='px-6 py-4 font-bold'>{dleave.EndDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{dleave.Duration}</td>
+                                                                <td className='px-6 py-4 font-bold'>{dleave.Status}</td>                                                          
+                                                                <td className='px-6 py-4 font-bold'>OK</td>
+                                                            </tr>
+                                                        )                                                        
+                                                    })
                                                 )
                                             }
                                             else if(buttonValue === 'Recommend'){
