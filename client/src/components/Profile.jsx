@@ -52,6 +52,9 @@ const Profile = () => {
       else if(RoleUser === "RA"){
         navigate('/RADash');
       } 
+      else if(RoleUser === "Scientist"){
+        navigate('/ScientistsDash');
+      } 
   }
 
   return (

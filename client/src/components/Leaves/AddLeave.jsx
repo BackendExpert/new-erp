@@ -52,6 +52,9 @@ const AddLeave = () => {
       else if(RoleUser === "RA"){
         navigate('/RADash');
       } 
+      else if(RoleUser === "Scientist"){
+        navigate('/ScientistsDash');
+      } 
     }
 
     const [LeaveData, SetLeaveData] = useState({
