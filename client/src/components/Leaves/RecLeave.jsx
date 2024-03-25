@@ -7,7 +7,7 @@ const RecLeave = () => {
     const navigate = useNavigate()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    const [leaveDataReq, SetLeaveData] = useState([])
+    const [leaveData, SetLeaveData] = useState([])
     const [leaveDataDenied, SetleaveDataDenied] = useState([])
     const [leaveDataAccept, SetleaveDataAccept] = useState([])
 
