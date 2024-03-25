@@ -86,8 +86,12 @@ const RecLeave = () => {
                                                                 <td className='px-6 py-4 font-bold'>{leave.StartTime}</td>
                                                                 <td className='px-6 py-4 font-bold'>{leave.EndDate}</td>
                                                                 <td className='px-6 py-4 font-bold'>{leave.Duration}</td>
-                                                                <td className='px-6 py-4 font-bold'>{leave.Status}</td>                                                          
-                                                                <td className='px-6 py-4 font-bold'>OK</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leave.Status}</span>
+                                                                </td>                                                          
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    
+                                                                </td>
                                                             </tr>
                                                         )                                                        
                                                     })
