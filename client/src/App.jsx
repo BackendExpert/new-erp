@@ -52,6 +52,7 @@ import AddLeave from "./components/Leaves/AddLeave"
 import DirectorDash from "./components/Director/DirectorDash"
 import Secretary from "./components/Secretary/Secretary"
 import ScientistsDash from "./components/Scientist/ScientistsDash"
+import RADash from "./components/RA/RADash"
 
 export default function App() {
   return (
@@ -110,6 +111,9 @@ export default function App() {
         {/* ScientistsDash */}
         <Route path="/ScientistsDash" element={<PrivateRoute><ScientistsDash /></PrivateRoute>} />
         
+        {/* RADash */}
+        <Route path="/RADash" element={<PrivateRoute><RADash /></PrivateRoute>} />
+
         {/* Employee */}
         <Route path="/Employee" element={<PrivateRoute><Employees /></PrivateRoute>} />
         <Route path="/AddEmployee" element={<PrivateRoute><AddEmployee /></PrivateRoute>} />
