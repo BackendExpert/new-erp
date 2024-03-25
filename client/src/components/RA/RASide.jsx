@@ -6,9 +6,9 @@ const RASide = () => {
     const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
-        {name: "Leave Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "Vehicle Reservations",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
-        {name: "SRN Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
+        {name: "Leave Requests",  link: "/Profile", icon: <Icons name="log-out" size="large"></Icons>},
+        {name: "Vehicle Reservations",  link: "/Profile", icon: <Icons name="car" size="large"></Icons>},
+        {name: "SRN Requests",  link: "/Profile", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Work Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
         {name: "Gatepass Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
         {name: "Increment Requests",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
