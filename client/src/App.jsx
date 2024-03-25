@@ -55,6 +55,7 @@ import ScientistsDash from "./components/Scientist/ScientistsDash"
 import RADash from "./components/RA/RADash"
 import NonAcademic from "./components/NonAcademic/NonAcademic"
 import PDFellow from "./components/PDFellow/PDFellow"
+import RecLeave from "./components/Leaves/RecLeave"
 
 export default function App() {
   return (
@@ -169,6 +170,7 @@ export default function App() {
 
         {/* AddLeave */}
         <Route path="/AddLeave" element={<PrivateRoute><AddLeave /></PrivateRoute>} />
+        <Route path="/RecLeave" element={<PrivateRoute><RecLeave /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
