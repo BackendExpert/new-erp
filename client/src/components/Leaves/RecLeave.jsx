@@ -50,7 +50,7 @@ const RecLeave = () => {
                                         leaveData.map((leave, index) => {
                                             return (
                                                 <tr key={index}>
-                                                    
+                                                    <td className='px-6 py-4 font-bold'>{leave.LID}</td>
                                                 </tr>
                                             )
                                         })
