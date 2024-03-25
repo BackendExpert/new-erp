@@ -1675,13 +1675,14 @@ app.post('/RequestLeave/:id', (req, res) => {
             const create_at = new Date()
             const update_at = new Date()
             const status = "Requested"
+            const JobCategory = result[0].role;
 
             const value = [
                 req.body.StartTime,
                 Email,
                 req.body.HoDEmail,
                 req.body.Type,
-                req.body.JobCategory,
+                JobCategory,
                 req.body.StartDate,
                 req.body.EndDate,
                 req.body.Duration,
