@@ -38,9 +38,22 @@ const RecLeave = () => {
     //Recommend 
     const headleRec = (id) =>{
         axios.post('http://localhost:8081/RecLeave/' + id)
-        .then(rec => {
+        .then(res => {
             if(res.data.Status === "Success"){
                 alert("The Leave Request is Recommended")
+                navigate('/to')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+    //Denied
+    const headleRecN = (id) => {
+        axios.post('http://localhost:8081/RecLeaveN/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Leave Request is Denied")
                 navigate('/to')
             }
             else{
@@ -105,8 +118,8 @@ const RecLeave = () => {
                                                                 </td>                                                          
                                                                 <td className='px-6 py-4 font-bold'>
                                                                     <div className="flex">
-                                                                        <button onClick={() => headleRec(leave.LID)} className="py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommend</button>
-                                                                        <button className="py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Denied</button>
+                                                                        <button onClick={() => headleRec(leave.LID)} className="ml-2 py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommend</button>
+                                                                        <button onClick={() => headleRecN(leave.LID)} className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
                                                                     </div>
                                                                 </td>
                                                             </tr>
