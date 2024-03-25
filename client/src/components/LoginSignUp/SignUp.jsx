@@ -50,22 +50,25 @@ export const SignUp = () => {
                 </div>
             </div>
             <div className="bg-[#1d2333] lg:mr-[5%] lg:my-0 lg:mx-0 mx-[10%] lg:px-16 px-4 py-10 rounded-xl text-white">
-                <p className="text-3xl">New To System ? </p>
+                <p className="text-2xl">New To System ? </p>
                 <div className="pl-4">
                     <form onSubmit={headleSignUp}>
-                        <div className="my-4">
-                            <label htmlFor="" className='text-xl'>Enter Name : </label>
-                            <input type="text" className="my-2 w-full lg:h-16 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent" name='username' required placeholder='Enter Name' value={username} onChange={onChange}/>
+                        <div className="lg:grid grid-cols-2 gap-2">
+                            <div className="my-2">
+                                <label htmlFor="" className='text-xl'>Enter Name : </label>
+                                <input type="text" className="my-2 w-full lg:h-14 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent" name='username' required placeholder='Enter Name' value={username} onChange={onChange}/>
+                            </div>
+                            <div className="my-2">
+                                <label htmlFor="" className='text-xl'>Enter Email : </label>
+                                <input type="email" className="my-2 w-full lg:h-14 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent" name='email' required placeholder='Enter Email Address' value={email} onChange={onChange}/>
+                            </div>
                         </div>
-                        <div className="my-4">
-                            <label htmlFor="" className='text-xl'>Enter Email : </label>
-                            <input type="email" className="my-2 w-full lg:h-16 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent" name='email' required placeholder='Enter Email Address' value={email} onChange={onChange}/>
-                        </div>
-                        <div className="my-4">
+
+                        <div className="my-2">
                             <label htmlFor="" className='text-xl'>Enter Password : </label>
-                            <input type="password" className="my-2 w-full lg:h-16 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent" name='password' required placeholder='Enter Password'value={password} onChange={onChange}/>
+                            <input type="password" className="my-2 w-full lg:h-14 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent" name='password' required placeholder='Enter Password'value={password} onChange={onChange}/>
                         </div>
-                        <div className="my-4">
+                        <div className="my-2">
                             <label htmlFor="" className='text-xl'>Select Role : </label><br />
                             <select name="role" id="" className='bg-black text-white my-2 w-full lg:h-16 h-12 border border-gray-500 rounded pl-2 lg:text-xl bg-transparent' onChange={onChange} value={role}>
                                 <option className='bg-[#1d2333]'>Select Allowance Name</option>
