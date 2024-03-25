@@ -9,6 +9,7 @@ const path = require('path')
 
 const resourceLimits = require('worker_threads');
 const e = require('express');
+const { stat } = require('fs');
 
 
 
@@ -1761,7 +1762,22 @@ app.get('/LeaveRecAccept', (req, res) => {
 })
 
 //RecLeave
-app.post('/RecLeave/:id')
+app.post('/RecLeave/:id', (req, res) => {
+    const LeaveID = req.params.id
+    const sql = "UPDATE leaves SET Status = ?, update_at = ? WHERE LID = ?"
+    const update_at = new Date()
+    const status = "Recommend"
+    
+    connection.query(sql, [status, update_at, LeaveID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+
+})
 //--------------------- Leave End -------------------
 
 //check the server is working
