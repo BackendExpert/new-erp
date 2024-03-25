@@ -91,6 +91,9 @@ const Login = () => {
                 else if(res.data.CheckRole[0].role === "NonAcademic"){
                     navigate('/NonAcademic');
                 }
+                else if(res.data.CheckRole[0].role === "PDFellow"){
+                    navigate('/PDFellow');
+                }
                 else{
                     alert("ERROR");
                 }
