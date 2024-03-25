@@ -54,6 +54,7 @@ import Secretary from "./components/Secretary/Secretary"
 import ScientistsDash from "./components/Scientist/ScientistsDash"
 import RADash from "./components/RA/RADash"
 import NonAcademic from "./components/NonAcademic/NonAcademic"
+import PDFellow from "./components/PDFellow/PDFellow"
 
 export default function App() {
   return (
@@ -114,6 +115,9 @@ export default function App() {
 
         {/* NonAcademic */}
         <Route path="/NonAcademic" element={<PrivateRoute><NonAcademic /></PrivateRoute>} />
+
+        {/* PDFellow */}
+        <Route path="/PDFellow" element={<PrivateRoute><PDFellow /></PrivateRoute>} />
 
         {/* RADash */}
         <Route path="/RADash" element={<PrivateRoute><RADash /></PrivateRoute>} />
