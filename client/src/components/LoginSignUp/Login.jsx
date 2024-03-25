@@ -82,9 +82,13 @@ const Login = () => {
                 else if(res.data.CheckRole[0].role === "User"){
                     navigate('/user');
                 }
+                else if(res.data.CheckRole[0].role === "Scientist"){
+                    navigate('/ScientistsDash');
+                }
                 else if(res.data.CheckRole[0].role === "RA"){
                     navigate('/RADash');
                 }
+
                 else{
                     alert("ERROR");
                 }
