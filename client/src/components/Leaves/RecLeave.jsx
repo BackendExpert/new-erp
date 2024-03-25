@@ -56,9 +56,22 @@ const RecLeave = () => {
                                                     <td className='px-6 py-4 font-bold'>{leave.Type}</td>
                                                     <td className='px-6 py-4 font-bold'>{leave.JobCategory}</td>
                                                     <td className='px-6 py-4 font-bold'>{leave.StartDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{leave.StartTime}</td>
                                                     <td className='px-6 py-4 font-bold'>{leave.EndDate}</td>
                                                     <td className='px-6 py-4 font-bold'>{leave.Duration}</td>
-                                                    <td className='px-6 py-4 font-bold'>{leave.Status}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        {
+                                                            (() => {
+                                                                if(leave.Status === "Requested"){
+                                                                    return(
+                                                                        <div className="">
+                                                                            <p className="py-1 px-4 bg-yellow-500 rounded text-white">Requested</p>
+                                                                        </div>
+                                                                    )
+                                                                }
+                                                            })()
+                                                        }
+                                                    </td>
                                                     <td className='px-6 py-4 font-bold'>OK</td>
 
 
