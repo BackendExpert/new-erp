@@ -3,6 +3,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 const ScientistSide = () => {
+    const [openSide, SetSideOpen] = useState();
     const sidemenu = [
         {name: "Leave Requests",  link: "/AddLeave", icon: <Icons name="log-out" size="large"></Icons>},
         {name: "Vehicle Reservations",  link: "#", icon: <Icons name="car" size="large"></Icons>},
