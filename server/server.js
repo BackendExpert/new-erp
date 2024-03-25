@@ -1677,15 +1677,17 @@ app.post('/RequestLeave/:id', (req, res) => {
                 if(err) throw err
 
                 if(result.length > 0){
-                    const sql = "INSERT INTO leaves (StartTime, Email, HoDEmail, Type, JobCategory, StartDate, EndDate, Duration, Status, create_at, update_at) VALUES (?)"
+                    const sql = "INSERT INTO leaves (StartTime, Email, Name, HoDEmail, Type, JobCategory, StartDate, EndDate, Duration, Status, create_at, update_at) VALUES (?)"
                     const create_at = new Date()
                     const update_at = new Date()
                     const status = "Requested"
-                    const JobCategory = result[0].role;
+                    const JobCategory = result[0].role
+                    const empName = result[0].username
         
                     const value = [
                         req.body.StartTime,
                         Email,
+                        empName,
                         req.body.HoDEmail,
                         req.body.Type,
                         JobCategory,
