@@ -51,6 +51,18 @@ const RecLeave = () => {
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{leave.LID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{leave.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{leave.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{leave.Type}</td>
+                                                    <td className='px-6 py-4 font-bold'>{leave.JobCategory}</td>
+                                                    <td className='px-6 py-4 font-bold'>{leave.StartDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{leave.EndDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{leave.Duration}</td>
+                                                    <td className='px-6 py-4 font-bold'>{leave.Status}</td>
+                                                    <td className='px-6 py-4 font-bold'>OK</td>
+
+
+
                                                 </tr>
                                             )
                                         })
