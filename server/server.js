@@ -1759,6 +1759,9 @@ app.get('/LeaveRecAccept', (req, res) => {
         }
     })
 })
+
+//RecLeave
+app.post('/RecLeave/:id')
 //--------------------- Leave End -------------------
 
 //check the server is working

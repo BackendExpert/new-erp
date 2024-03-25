@@ -37,7 +37,7 @@ const RecLeave = () => {
 
     //Recommend 
     const headleRec = (id) =>{
-        axios.post('http://localhost:8081/RecLeave')
+        axios.post('http://localhost:8081/RecLeave/' + id)
         .then(rec => {
             if(res.data.Status === "Success"){
                 alert("The Leave Request is Recommended")
