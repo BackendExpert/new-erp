@@ -46,7 +46,15 @@ const RecLeave = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    {
+                                        leaveData.map((leave, index) => {
+                                            return (
+                                                <tr key={index}>
+                                                    
+                                                </tr>
+                                            )
+                                        })
+                                    }
                                 </tbody>
                             </table>
                         </div>
