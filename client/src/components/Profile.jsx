@@ -49,6 +49,9 @@ const Profile = () => {
       else if(RoleUser === "User"){
         navigate('/user');
       } 
+      else if(RoleUser === "RA"){
+        navigate('/RADash');
+      } 
   }
 
   return (
