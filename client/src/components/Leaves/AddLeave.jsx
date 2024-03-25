@@ -65,7 +65,6 @@ const AddLeave = () => {
 
     const [LeaveData, SetLeaveData] = useState({
       Type:'',
-      JobCategory:'',
       StartDate:'',
       Duration:'',
       HoDEmail:'',
@@ -123,20 +122,6 @@ const AddLeave = () => {
                         <option value="Other">Other</option>
                     </select>
                   </div>     
-
-                  <div className="">
-                    <label htmlFor="">Job Category</label>
-                    <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2 "
-                      onChange={e => SetLeaveData({...LeaveData, JobCategory:e.target.value})}>
-                        <option>Select Option</option>
-                        <option value="Scientists">Scientists</option>
-                        <option value="Secretary">Secretary</option>
-                        <option value="Director">Director</option>
-                        <option value="Non_Academic">Non Academic</option>
-                        <option value="RA">RA</option>
-                        <option value="Postdocoral_Fellow">Postdocoral Fellow</option>
-                    </select>
-                  </div>          
 
                   <div className="">
                     <label htmlFor="">Start Date</label>
