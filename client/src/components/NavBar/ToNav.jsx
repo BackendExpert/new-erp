@@ -6,7 +6,7 @@ const ToNav = () => {
     const [navopen, SetNavOpen] = useState();
 
     const navlists = [
-        {name: "Recommend Leave", link: ""},
+        {name: "Recommend Leave", link: "/RecLeave"},
         {name: "Recommend Reservations", link: ""},
         {name: "Recommend WRs", link: ""},
         {name: "Recommend SRN", link: ""},
