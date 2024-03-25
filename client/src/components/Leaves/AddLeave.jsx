@@ -16,6 +16,7 @@ const AddLeave = () => {
       .then(res => {
         if(res.data.Status === "Success"){
           alert("Leave Request is Successful Added Wait for the Approve")
+          headleBack();
         }
         else{
           alert(res.data.Error)
