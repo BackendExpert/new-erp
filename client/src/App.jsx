@@ -110,6 +110,9 @@ export default function App() {
 
         {/* ScientistsDash */}
         <Route path="/ScientistsDash" element={<PrivateRoute><ScientistsDash /></PrivateRoute>} />
+
+        {/* ScientistsDash */}
+        <Route path="/ScientistsDash" element={<PrivateRoute><ScientistsDash /></PrivateRoute>} />
         
         {/* RADash */}
         <Route path="/RADash" element={<PrivateRoute><RADash /></PrivateRoute>} />
