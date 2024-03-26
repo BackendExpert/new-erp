@@ -177,6 +177,7 @@ app.get('/ViewUserRoleData', (req, res) =>{
             return res.json({Error: "ERROR on Server"})
         }
         else{
+            console.log(result)
             return res.json(result);
         }
     })

@@ -69,7 +69,11 @@ const UserRoleRequest = () => {
                                                 UserRoleData.map((request, index) => {
                                                     return (
                                                         <tr key={index}>
-                                                            
+                                                            <td className='px-6 py-4 font-bold'>{request.ID}</td>
+                                                            <td className='px-6 py-4 font-bold'>{request.email}</td>
+                                                            <td className='px-6 py-4 font-bold'>{request.status}</td>
+                                                            <td className='px-6 py-4 font-bold'>{request.request_date}</td>
+                                                            <td className='px-6 py-4 font-bold'>OK</td>
                                                         </tr>
                                                     )
                                                 })
