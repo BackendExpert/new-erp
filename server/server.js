@@ -133,12 +133,13 @@ app.post('/UserRoleRequest/:id', (req, res) => {
             const userRole = req.body.userRole
             const request_at = new Date()
             const request_status = "Request"
-            const sql = "INSERT INTO request_role(email, status, request_date) VALUE (?)"
+            const sql = "INSERT INTO request_role(email, status, request_date, role) VALUE (?)"
         
             const value = [
                 userEmail,
                 request_status,
-                request_at
+                request_at,
+                userRole
             ]
             connection.query(sql, [value], (err, result) => {
                 if(err){
