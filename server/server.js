@@ -183,8 +183,8 @@ app.post('/RequestAcceptRole/:id', (req, res) => {
     })
 })
 
-// RequestAcceptRole
-app.post('/RequestAcceptRole/:id', (req, res) => {
+// RequestRejectRole
+app.post('/RequestRejectRole/:id', (req, res) => {
     const RejectID = req.params.id
     const sql = "UPDATE request_role SET status = ? WHERE ID = ?"
     const status = "Reject"
