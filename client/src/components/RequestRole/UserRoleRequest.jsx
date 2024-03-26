@@ -72,17 +72,19 @@ const UserRoleRequest = () => {
                                     {
                                         (() => {
                                             if(btnValue === "Request"){
-                                                UserRoleData.map((request, index) => {
-                                                    return (
-                                                        <tr key={index}>
-                                                            <td className='px-6 py-4 font-bold'>{request.ID}</td>
-                                                            <td className='px-6 py-4 font-bold'>{request.email}</td>
-                                                            <td className='px-6 py-4 font-bold'>{request.status}</td>
-                                                            <td className='px-6 py-4 font-bold'>{request.request_date}</td>
-                                                            <td className='px-6 py-4 font-bold'>OK</td>
-                                                        </tr>
-                                                    )
-                                                })
+                                                return(
+                                                    UserRoleData.map((request, index) => {
+                                                        return (
+                                                            <tr key={index}>
+                                                                <td className='px-6 py-4 font-bold'>{request.ID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{request.email}</td>
+                                                                <td className='px-6 py-4 font-bold'>{request.status}</td>
+                                                                <td className='px-6 py-4 font-bold'>{request.request_date}</td>
+                                                                <td className='px-6 py-4 font-bold'>OK</td>
+                                                            </tr>
+                                                        )
+                                                    })
+                                                )
                                             }
                                         })()
                                     }                                    
