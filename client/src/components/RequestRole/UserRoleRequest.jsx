@@ -30,7 +30,7 @@ const UserRoleRequest = () => {
     const [userDataAccept, SetuserDataAccept] = useState({})
     useEffect(() => {
         axios.get('http://localhost:8081/ViewUserRoleAccept')
-        .then(res => SetUserRoleData(res.data))
+        .then(res => SetuserDataAccept(res.data))
         .catch(err => console.log(err))
     }, [])
 
