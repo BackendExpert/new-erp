@@ -120,7 +120,11 @@ app.post('/login', (req, res) => {
 
 app.post('/UserRoleRequest/:id', (req, res) => {
     const userEmail = req.params.id;
-    console.log(userEmail)
+    // console.log(userEmail)
+    const userRole = req.body.userRole
+    const update_at = new Date()
+
+    const sql = "UPDATE users SET role = ?, "
 })
 
 
