@@ -38,6 +38,20 @@ const UserRoleRequest = () => {
         .catch(err => console.log(err))
     }, [])
 
+    //headleAccept
+    const headleAccept = (id) => {
+        axios.post('http://localhost:8081/RequestAcceptRole/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Request Accepted")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" ){
         return (
             <div className="bg-gray-200 py-4">
@@ -52,9 +66,7 @@ const UserRoleRequest = () => {
                         <button onClick={() => HeadleButtonClick('Accept')} className="py-2 px-6 ml-2 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Accept</button>
                     </div>
                     
-                    <p className="">{btnValue}</p>
-                    <p className="">{UserRoleData.ID}</p>
-                    <p className="">{userDataAccept.ID}</p>
+
 
                     <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
