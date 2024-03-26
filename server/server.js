@@ -152,10 +152,10 @@ app.post('/UserRoleRequest/:id', (req, res) => {
     })
 })
 
-// ViewUserRoleData
-app.get('/ViewUserRoleData', (req, body) =>{
+// ViewUserRoleAccept
+app.get('/ViewUserRoleAccept', (req, body) =>{
     const sql = "SELECT * FROM request_role WHERE status = ?"
-    const status = "Request"
+    const status = "Accept"
 
     connection.query(sql, [status], (err, result) => {
         if(err){
