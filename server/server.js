@@ -121,22 +121,33 @@ app.post('/login', (req, res) => {
 app.post('/UserRoleRequest/:id', (req, res) => {
     const userEmail = req.params.id;
     // console.log(userEmail)
-    const userRole = req.body.userRole
-    const request_at = new Date()
-    const request_status = "Request"
-    const sql = "INSERT INTO request_role(email, status, request_date) VALUE (?)"
 
-    const value = [
-        userEmail,
-        request_status,
-        request_at
-    ]
-    connection.query(sql, [value], (err, result) => {
-        if(err){
-            return res.json({Error: "Error On Server"})
+    const checksql = "SELECT * FROM request_role WHERE email = ?"
+    connection.query(checksql, [userEmail], (err, result) =>{
+        if(err) throw err
+
+        if(result.length > 0){
+            return res.json({Error: "You Already Request"})
         }
         else{
-            return res.json({Status: "Success"})
+            const userRole = req.body.userRole
+            const request_at = new Date()
+            const request_status = "Request"
+            const sql = "INSERT INTO request_role(email, status, request_date) VALUE (?)"
+        
+            const value = [
+                userEmail,
+                request_status,
+                request_at
+            ]
+            connection.query(sql, [value], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error On Server"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
         }
     })
 })
