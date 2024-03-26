@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import  secureLocalStorage  from  "react-secure-storage"
 
@@ -15,6 +15,13 @@ const UserRoleRequest = () => {
             navigate('/admin')
         }
     }
+
+    const [UserRoleData, SetUserRoleData] = useState({})
+    useEffect(() => {
+        axios.get('http://localhost:8081/ViewUserRoleData')
+        .then(res => SetUserRoleData(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" ){
         return (
