@@ -15,6 +15,10 @@ const UserRoleRequest = () => {
             navigate('/admin')
         }
     }
+    const [btnValue, SetbtnValue] = useState()
+    const ButtonClickValue = (e) => {
+        SetbtnValue()
+    }
 
     const [UserRoleData, SetUserRoleData] = useState({})
     useEffect(() => {
