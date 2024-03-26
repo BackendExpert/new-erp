@@ -167,6 +167,22 @@ app.get('/ViewUserRoleAccept', (req, res) =>{
     })
 })
 
+// RequestAcceptRole
+app.post('/RequestAcceptRole/:id', (req, res) => {
+    const AcceptID = req.params.id
+    const sql = "UPDATE request_role SET status = ? WHERE ID = ?"
+    const status = "Accept"
+
+    connection.query(sql, [status, AcceptID], (err, result) =>{
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 // ViewUserRoleData
 app.get('/ViewUserRoleData', (req, res) =>{
     const sql = "SELECT * FROM request_role WHERE status = ?"
