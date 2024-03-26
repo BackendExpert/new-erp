@@ -130,8 +130,8 @@ const UserRoleRequest = () => {
                                                                 </td>
                                                                 <td className='px-6 py-4 font-bold'>{request.request_date}</td>
                                                                 <td className='px-6 py-4 font-bold'>
-                                                                    <button onClick={headleAccept(request.ID)} className='ml-2 py-2 px-4 rounded border border-green-500 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl'>Accept the Request</button>
-                                                                    <button onClick={headleReject(request.ID)} className='ml-2 py-2 px-4 rounded border border-red-500 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl'>Reject</button>
+                                                                    <button onClick={() => headleAccept(request.ID)} className='ml-2 py-2 px-4 rounded border border-green-500 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl'>Accept the Request</button>
+                                                                    <button onClick={() => headleReject(request.ID)} className='ml-2 py-2 px-4 rounded border border-red-500 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl'>Reject</button>
                                                                 </td>
                                                             </tr>
                                                         )
