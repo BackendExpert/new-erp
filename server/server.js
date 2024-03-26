@@ -112,6 +112,18 @@ app.post('/login', (req, res) => {
     );
 });
 
+//UserRoleRequest
+/*
+    This end point design for when someone register using register route 
+    that user cannot access to the system while the administation accept the request
+*/
+
+app.post('/UserRoleRequest/:id', (req, res) => {
+    const userEmail = req.params.id;
+    console.log(userEmail)
+})
+
+
 //unAccess
 app.post('/UnAccess', (req, res) => {
     const userEmail = req.body.email;
