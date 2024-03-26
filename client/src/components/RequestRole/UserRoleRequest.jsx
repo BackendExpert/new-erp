@@ -32,7 +32,11 @@ const UserRoleRequest = () => {
                     <div className="lg:flex">
                         <button onClick={headleBack} className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </div>
-
+                    <div className="flex">
+                        <button className=""></button>
+                        <button className=""></button>
+                    </div>
+            
                     <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
