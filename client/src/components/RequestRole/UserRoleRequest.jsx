@@ -66,7 +66,13 @@ const UserRoleRequest = () => {
                                     {
                                         (() => {
                                             if(btnValue === "Request"){
-                                                
+                                                UserRoleData.map((request, index) => {
+                                                    return (
+                                                        <tr key={index}>
+                                                            
+                                                        </tr>
+                                                    )
+                                                })
                                             }
                                         })()
                                     }                                    
