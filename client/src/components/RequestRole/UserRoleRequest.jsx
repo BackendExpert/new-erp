@@ -7,9 +7,17 @@ const UserRoleRequest = () => {
     const navigate = useNavigate()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-  return (
-    <div>UserRoleRequest</div>
-  )
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin" ){
+        return (
+            <div>UserRoleRequest</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])     
+    }
+
 }
 
 export default UserRoleRequest
