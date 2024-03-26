@@ -1,6 +1,7 @@
 import axios from "axios"
 import logo from "../../assets/nifs_logo.png"
 import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 
 const Users = () => {
     const navigate = useNavigate()
@@ -9,10 +10,27 @@ const Users = () => {
       localStorage.clear()
       navigate('/')
     }
+    
+    //get current login user's email
+    const EmailUser = secureLocalStorage.getItem("logiafter");
+    
+    //userrole Date
+    const [userRoleData, SetuserRoleData] = useState({
+      userRole: ''
+    })
+
     //request for user Role
     const headleUserRole = (e) => {
       e.preventDefault();
-      axios.post('http://localhost:8081/UserRoleRequest/' + )
+      axios.post('http://localhost:8081/UserRoleRequest/' + EmailUser, userRoleData)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Your Request has been added to system successful, Wait for the Approve by Administration")
+        }
+        else{
+          alert(res.data.Error)
+        }
+      })
     }
 
   return (
@@ -31,7 +49,7 @@ const Users = () => {
                 <div className="">
                   <label htmlFor="">User Role: </label><br />
                   <select className="w-1/2 h-12 border border-blue-400 rounded pl-2 my-2"
-                        onChange={e => SetLeaveData({...LeaveData, Type:e.target.value})}>
+                        onChange={e => SetuserRoleData({...userRoleData, userRole:e.target.value})}>
                           <option className=''>Select Role</option>
                           <option className=''value="HOD">Head</option>
                           <option className=''value="TO">Transport Office</option>
