@@ -56,6 +56,7 @@ import RADash from "./components/RA/RADash"
 import NonAcademic from "./components/NonAcademic/NonAcademic"
 import PDFellow from "./components/PDFellow/PDFellow"
 import RecLeave from "./components/Leaves/RecLeave"
+import UserRoleRequest from "./components/RequestRole/UserRoleRequest"
 
 export default function App() {
   return (
@@ -73,6 +74,8 @@ export default function App() {
         <Route path="/superAdmin" element={<PrivateRoute><SuperAdmin /></PrivateRoute>} />
         {/* Route for View all Unauthorized users on System */}
         <Route path="/Unauthorizedusers/:id" element={<PrivateRoute><UsersUnAccess /></PrivateRoute>} />
+        {/* UserRoleRequest */}
+        <Route path="/UserRoleRequest" element={<PrivateRoute><UserRoleRequest /></PrivateRoute>} />
 
         {/* Admin */}
         <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
