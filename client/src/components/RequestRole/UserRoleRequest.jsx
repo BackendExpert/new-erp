@@ -16,13 +16,20 @@ const UserRoleRequest = () => {
         }
     }
     const [btnValue, SetbtnValue] = useState()
-    const ButtonClickValue = (e) => {
-        SetbtnValue()
+    const HeadleButtonClick = (clickValue) => {
+        SetbtnValue(clickValue)
     }
 
     const [UserRoleData, SetUserRoleData] = useState({})
     useEffect(() => {
         axios.get('http://localhost:8081/ViewUserRoleData')
+        .then(res => SetUserRoleData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
+    const [userDataAccept, SetuserDataAccept] = useState({})
+    useEffect(() => {
+        axios.get('http://localhost:8081/ViewUserRoleAccept')
         .then(res => SetUserRoleData(res.data))
         .catch(err => console.log(err))
     }, [])
@@ -37,10 +44,12 @@ const UserRoleRequest = () => {
                         <button onClick={headleBack} className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </div>
                     <div className="flex my-4">
-                        <button className="py-2 px-6 ml-2 border border-yellow-500 text-yellow-500 rounded duration-500 hover:bg-yellow-500 hover:text-white hover:shadow-xl">Request</button>
-                        <button className="py-2 px-6 ml-2 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Accept</button>
+                        <button onClick={() => HeadleButtonClick('Request')} className="py-2 px-6 ml-2 border border-yellow-500 text-yellow-500 rounded duration-500 hover:bg-yellow-500 hover:text-white hover:shadow-xl">Request</button>
+                        <button onClick={() => HeadleButtonClick('Accept')} className="py-2 px-6 ml-2 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Accept</button>
                     </div>
-            
+                    
+                    <p className="">{btnValue}</p>
+
                     <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
