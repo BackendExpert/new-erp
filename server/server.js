@@ -153,7 +153,34 @@ app.post('/UserRoleRequest/:id', (req, res) => {
 })
 
 // ViewUserRoleData
+app.get('/ViewUserRoleData', (req, body) =>{
+    const sql = "SELECT * FROM request_role WHERE status = ?"
+    const status = "Request"
 
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json(result);
+        }
+    })
+})
+
+// ViewUserRoleData
+app.get('/ViewUserRoleData', (req, body) =>{
+    const sql = "SELECT * FROM request_role WHERE status = ?"
+    const status = "Request"
+
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json(result);
+        }
+    })
+})
 
 //unAccess
 app.post('/UnAccess', (req, res) => {
