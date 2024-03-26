@@ -91,7 +91,7 @@ export const SignUp = () => {
                         </Link>
                     </p>
                 </div>
-                <p className='pt-16 text-center'>
+                <p className='pt-8 text-center'>
                     Copyright &copy; 2024. National Institute of Fundamental Studies
                 </p>
             </div>
