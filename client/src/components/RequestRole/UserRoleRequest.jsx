@@ -52,6 +52,20 @@ const UserRoleRequest = () => {
         })
     }
 
+    // headleReject
+    const headleReject = (id) => {
+        axios.post('http://localhost:8081/RequestRejectRole/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Request Rejected")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" ){
         return (
             <div className="bg-gray-200 py-4">
