@@ -15,19 +15,23 @@ const UserRoleRequest = () => {
             navigate('/admin')
         }
     }
+
+    const [UserRoleData, SetUserRoleData] = useState([])
+    const [userDataAccept, SetuserDataAccept] = useState([])
+
     const [btnValue, SetbtnValue] = useState()
     const HeadleButtonClick = (clickValue) => {
         SetbtnValue(clickValue)
     }
 
-    const [UserRoleData, SetUserRoleData] = useState({})
+
     useEffect(() => {
         axios.get('http://localhost:8081/ViewUserRoleData')
         .then(res => SetUserRoleData(res.data))
         .catch(err => console.log(err))
     }, [])
 
-    const [userDataAccept, SetuserDataAccept] = useState({})
+
     useEffect(() => {
         axios.get('http://localhost:8081/ViewUserRoleAccept')
         .then(res => SetuserDataAccept(res.data))
@@ -49,6 +53,7 @@ const UserRoleRequest = () => {
                     </div>
                     
                     <p className="">{btnValue}</p>
+                    <p className="">{UserRoleData.ID}</p>
 
                     <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
