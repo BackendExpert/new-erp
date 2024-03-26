@@ -71,7 +71,27 @@ const UserRoleRequest = () => {
                                 <tbody>
                                     {
                                         (() => {
-                                            if(btnValue === "Request"){
+                                            if(btnValue === "Accept"){
+                                                return(
+                                                    userDataAccept.map((accept, index) => {
+                                                        return (
+                                                            <tr key={index}>
+                                                                <td className='px-6 py-4 font-bold'>{accept.ID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{accept.email}</td>
+                                                                <td className='px-6 py-4 font-bold'>{accept.role}</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <span className='py-2 px-4 bg-green-500 rounded text-white'>{accept.status}</span>
+                                                                </td>
+                                                                <td className='px-6 py-4 font-bold'>{accept.request_date}</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <span className='py-2 px-4 bg-green-500 rounded text-white'>The Request Accepted</span>
+                                                                </td>
+                                                            </tr>
+                                                        )
+                                                    })
+                                                )
+                                            }
+                                            else if(btnValue === "Request"){
                                                 return(
                                                     UserRoleData.map((request, index) => {
                                                         return (
@@ -79,9 +99,13 @@ const UserRoleRequest = () => {
                                                                 <td className='px-6 py-4 font-bold'>{request.ID}</td>
                                                                 <td className='px-6 py-4 font-bold'>{request.email}</td>
                                                                 <td className='px-6 py-4 font-bold'>{request.role}</td>
-                                                                <td className='px-6 py-4 font-bold'>{request.status}</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <span className='py-2 px-4 bg-yellow-500 rounded text-white'>{request.status}</span>
+                                                                </td>
                                                                 <td className='px-6 py-4 font-bold'>{request.request_date}</td>
-                                                                <td className='px-6 py-4 font-bold'>OK</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    
+                                                                </td>
                                                             </tr>
                                                         )
                                                     })
