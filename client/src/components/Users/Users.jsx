@@ -1,16 +1,16 @@
-import Navlist from "../NavBar/navList"
 import logo from "../../assets/nifs_logo.png"
 import { useNavigate } from "react-router-dom"
 
 const Users = () => {
     const navigate = useNavigate()
+    
     const GoBack = () =>{
       localStorage.clear()
       navigate('/')
     }
   return (
     <div className="">
-      <div className="bg-gray-200 h-screen w-full py-24 px-40">
+      <div className="bg-gray-200 h-auto w-full py-24 px-40">
         <div className="bg-white py-12 px-20 rounded shadow-xl border-l-4 border-blue-500">
         <div className="lg:grid grid-cols-2 gap-2">
         <div className="">
