@@ -153,7 +153,7 @@ app.post('/UserRoleRequest/:id', (req, res) => {
 })
 
 // ViewUserRoleAccept
-app.get('/ViewUserRoleAccept', (req, body) =>{
+app.get('/ViewUserRoleAccept', (req, res) =>{
     const sql = "SELECT * FROM request_role WHERE status = ?"
     const status = "Accept"
 
@@ -168,7 +168,7 @@ app.get('/ViewUserRoleAccept', (req, body) =>{
 })
 
 // ViewUserRoleData
-app.get('/ViewUserRoleData', (req, body) =>{
+app.get('/ViewUserRoleData', (req, res) =>{
     const sql = "SELECT * FROM request_role WHERE status = ?"
     const status = "Request"
 
