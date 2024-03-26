@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import  secureLocalStorage  from  "react-secure-storage"
 
 const UserRoleRequest = () => {
@@ -25,6 +25,23 @@ const UserRoleRequest = () => {
                     <div className="lg:flex">
                         <button onClick={headleBack} className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </div>
+
+                    <div className="relative overflow-x-auto my-8">
+                            <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
+                                    <tr className='text-blue-500'>
+                                        <th scope='col' className='px-6 py-3'>ID</th>
+                                        <th scope='col' className='px-6 py-3'>Email</th>
+                                        <th scope='col' className='px-6 py-3'>Request User Role</th>                            
+                                        <th scope='col' className='px-6 py-3'>Request Status</th>
+                                        <th scope='col' className='px-6 py-3'>Request Date</th>
+                                        <th scope='col' className='px-6 py-3'>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
                 </div>
             </div>    
 
