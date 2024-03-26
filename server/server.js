@@ -146,7 +146,7 @@ app.post('/UserRoleRequest/:id', (req, res) => {
                     return res.json({Error: "Error On Server"})
                 }
                 else{
-                    const updaterole = "UPDARE users SET role = ? WHERE email = ?"
+                    const updaterole = "UPDATE users SET role = ? WHERE email = ?"
                     connection.query(updaterole, [userRole, userEmail], (err, result) => {
                         if(err){
                             return res.json({Error: "ERRROR on SERVER"})
