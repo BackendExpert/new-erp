@@ -159,10 +159,10 @@ app.get('/ViewUserRoleAccept', (req, res) =>{
 
     connection.query(sql, [status], (err, result) => {
         if(err){
-            return res.json({Error: "ERROR on Server"})
+            return res.json({Error: "ERROR on SERVER"})
         }
         else{
-            return res.json(result);
+            return res.json(result)
         }
     })
 })
@@ -174,11 +174,10 @@ app.get('/ViewUserRoleData', (req, res) =>{
 
     connection.query(sql, [status], (err, result) => {
         if(err){
-            return res.json({Error: "ERROR on Server"})
+            return res.json({Error: "ERROR on SERVER"})
         }
         else{
-            console.log(result)
-            return res.json(result);
+            return res.json(result)
         }
     })
 })
