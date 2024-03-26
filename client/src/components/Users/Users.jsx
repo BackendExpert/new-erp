@@ -8,6 +8,11 @@ const Users = () => {
       localStorage.clear()
       navigate('/')
     }
+    //request for user Role
+    const headleUserRole = (e) => {
+      e.preventDefault();
+    }
+
   return (
     <div className="">
       <div className="bg-gray-200 h-auto w-full py-24 px-40">
@@ -19,7 +24,7 @@ const Users = () => {
           <p className="text-xl py-4">The Administration of the system will accept the request ASAP</p>          
             
               <div className="my-4">
-              <form>
+              <form onSubmit={headleUserRole}>
 
                 <div className="">
                   <label htmlFor="">User Role: </label><br />
