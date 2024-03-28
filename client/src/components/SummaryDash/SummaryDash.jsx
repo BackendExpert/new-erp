@@ -5,6 +5,7 @@ import secureLocalStorage from 'react-secure-storage'
 import CountUp from 'react-countup'
 import Icons from '@reacticons/ionicons'
 import UnAccessUsers from '../SuperAdmin/UnAccessUsers'
+import PendingUsers from "../SuperAdmin/PendingUsers";
 
 
 const SummaryDash = () => {
@@ -177,6 +178,7 @@ const SummaryDash = () => {
                     <div>
                       <div className="mt-8">
                       <UnAccessUsers />
+                      <PendingUsers />
                       </div>
                     </div>
                   ) : (
