@@ -172,7 +172,7 @@ export default function App() {
         <Route path="/AccountInfo/:id" element={<PrivateRoute><AccountInfo /></PrivateRoute>} />
 
         {/* PendingUsers */}
-        
+
 
         {/* Leave */}
         <Route path="/AddLeave" element={<PrivateRoute><AddLeave /></PrivateRoute>} />
