@@ -112,6 +112,117 @@ app.post('/login', (req, res) => {
     );
 });
 
+//UserRoleRequest
+/*
+    This end point design for when someone register using register route 
+    that user cannot access to the system while the administation accept the request
+*/
+
+app.post('/UserRoleRequest/:id', (req, res) => {
+    const userEmail = req.params.id;
+    // console.log(userEmail)
+
+    const checksql = "SELECT * FROM request_role WHERE email = ?"
+    connection.query(checksql, [userEmail], (err, result) =>{
+        if(err) throw err
+
+        if(result.length > 0){
+            return res.json({Error: "You Already Request"})
+        }
+        else{
+            const userRole = req.body.userRole
+            const request_at = new Date()
+            const request_status = "Request"
+            const sql = "INSERT INTO request_role(email, status, request_date, role) VALUE (?)"
+        
+            const value = [
+                userEmail,
+                request_status,
+                request_at,
+                userRole
+            ]
+            connection.query(sql, [value], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error On Server"})
+                }
+                else{
+                    const updaterole = "UPDATE users SET role = ? WHERE email = ?"
+                    connection.query(updaterole, [userRole, userEmail], (err, result) => {
+                        if(err){
+                            return res.json({Error: "ERRROR on SERVER"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    })
+                }
+            })
+        }
+    })
+})
+
+// ViewUserRoleAccept
+app.get('/ViewUserRoleAccept', (req, res) =>{
+    const sql = "SELECT * FROM request_role WHERE status = ?"
+    const status = "Accept"
+
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
+// RequestAcceptRole
+app.post('/RequestAcceptRole/:id', (req, res) => {
+    const AcceptID = req.params.id
+    const sql = "UPDATE request_role SET status = ? WHERE ID = ?"
+    const Rolestatus = "Accept"
+
+    connection.query(sql, [Rolestatus, AcceptID], (err, result) =>{
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
+// RequestRejectRole
+app.post('/RequestRejectRole/:id', (req, res) => {
+    const RejectID = req.params.id
+    const sql = "UPDATE request_role SET status = ? WHERE ID = ?"
+    const Rolestatus = "Reject"
+
+    connection.query(sql, [Rolestatus, RejectID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
+// ViewUserRoleData
+app.get('/ViewUserRoleData', (req, res) =>{
+    const sql = "SELECT * FROM request_role WHERE status = ?"
+    const status = "Request"
+
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //unAccess
 app.post('/UnAccess', (req, res) => {
     const userEmail = req.body.email;

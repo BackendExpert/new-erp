@@ -1,16 +1,42 @@
-import Navlist from "../NavBar/navList"
+import axios from "axios"
 import logo from "../../assets/nifs_logo.png"
 import { useNavigate } from "react-router-dom"
+import { useState } from "react"
+import  secureLocalStorage  from  "react-secure-storage"
 
 const Users = () => {
     const navigate = useNavigate()
+
     const GoBack = () =>{
       localStorage.clear()
       navigate('/')
     }
+    
+    //get current login user's email
+    const EmailUser = secureLocalStorage.getItem("logiafter");
+    
+    //userrole Date
+    const [userRoleData, SetuserRoleData] = useState({
+      userRole: ''
+    })
+
+    //request for user Role
+    const headleUserRole = (e) => {
+      e.preventDefault();
+      axios.post('http://localhost:8081/UserRoleRequest/' + EmailUser, userRoleData)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Your Request has been added to system successful, Wait for the Approve by Administration")
+        }
+        else{
+          alert(res.data.Error)
+        }
+      })
+    }
+
   return (
     <div className="">
-      <div className="bg-gray-200 h-screen w-full py-24 px-40">
+      <div className="bg-gray-200 h-auto w-full py-24 px-40">
         <div className="bg-white py-12 px-20 rounded shadow-xl border-l-4 border-blue-500">
         <div className="lg:grid grid-cols-2 gap-2">
         <div className="">
@@ -19,12 +45,12 @@ const Users = () => {
           <p className="text-xl py-4">The Administration of the system will accept the request ASAP</p>          
             
               <div className="my-4">
-              <form>
+              <form onSubmit={headleUserRole}>
 
                 <div className="">
                   <label htmlFor="">User Role: </label><br />
                   <select className="w-1/2 h-12 border border-blue-400 rounded pl-2 my-2"
-                        onChange={e => SetLeaveData({...LeaveData, Type:e.target.value})}>
+                        onChange={e => SetuserRoleData({...userRoleData, userRole:e.target.value})}>
                           <option className=''>Select Role</option>
                           <option className=''value="HOD">Head</option>
                           <option className=''value="TO">Transport Office</option>
@@ -41,7 +67,7 @@ const Users = () => {
                   <button type="submit" className="py-2 px-8 rounded bg-blue-500 text-white">Request</button>
                 </div>
               </form>
-              <button onChange={GoBack} className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
+              <button onClick={GoBack} className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
 
               <div className="my-4">
                 <p className="text-xl text-red-500 font-semibold">Important Notice </p>

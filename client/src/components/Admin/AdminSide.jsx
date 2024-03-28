@@ -15,6 +15,7 @@ const SideListAdmin = () => {
         {name: "Equipment",  link: "/Equipments", icon: <Icons name="build" size="large"></Icons>},
         {name: "Increment",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
         {name: "Accounts",  link: "/Accounts", icon: <Icons name="people-circle" size="large"></Icons>},
+        {name: "Request Roles",  link: "/UserRoleRequest", icon: <Icons name="people" size="large"></Icons>},
         {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>}
     ]
 
