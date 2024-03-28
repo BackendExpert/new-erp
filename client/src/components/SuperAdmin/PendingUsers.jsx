@@ -30,7 +30,13 @@ const PendingUsers = () => {
                         </thead>
                         <tbody>                    
                             {
-        
+                                viewPendingUsers.map((pendingUser, index) => {
+                                    return(
+                                        <tr key={index}>
+                                            
+                                        </tr>
+                                    )
+                                })
                             }
                         </tbody>
                     </table>
