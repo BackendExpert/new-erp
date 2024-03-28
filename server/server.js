@@ -144,7 +144,6 @@ app.post('/UserRoleRequest/:id', (req, res) => {
             return res.json({Error: "You Already Request"})
         }
         else{
-
             const checkReject = "SELECT * FROM request_role WHERE status = ?"
             const status = "Reject"
             connection.query(checkReject, [status], (err, result) => {
@@ -153,7 +152,7 @@ app.post('/UserRoleRequest/:id', (req, res) => {
                 if(result.length > 0){
                     return res.json({Error: "You Cannot Apply, Because Your Request is Rejected By the Administration"})
                 }
-                else if(result.length == 0){
+                else{
                     const userRole = req.body.userRole
                     const request_at = new Date()
                     const request_status = "Request"
