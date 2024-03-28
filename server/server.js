@@ -61,14 +61,28 @@ app.post('/register', (req, res) => {
         const is_active = 1;
         const userRole = "User"
 
-        connection.query(
-            'INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?, ?, ?, ?, ?, ?, ?)',
-            [username, email, userRole, hashPass, createTime, updateTime, is_active],
-            (error, result) => {
-                if(error) throw error;
-                res.status(201).send("User registered Successfully");
+        const checkSql = "SELECT * FROM users WHERE email = ?"
+        connection.query(checkSql, [req.body.email], (err, result) => {
+            if(err) throw err
+
+            if(result.length > 0){
+                return res.json({Error: "Email Already exsist"})
             }
-        );
+            else{
+                connection.query(
+                    'INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?, ?, ?, ?, ?, ?, ?)',
+                    [username, email, userRole, hashPass, createTime, updateTime, is_active],
+                    (error, result) => {
+                        if(err){
+                            return res.json({Error: "ERROR on SERVER"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    }
+                );
+            }
+        })
     });
 });
 
@@ -130,29 +144,41 @@ app.post('/UserRoleRequest/:id', (req, res) => {
             return res.json({Error: "You Already Request"})
         }
         else{
-            const userRole = req.body.userRole
-            const request_at = new Date()
-            const request_status = "Request"
-            const sql = "INSERT INTO request_role(email, status, request_date, role) VALUE (?)"
-        
-            const value = [
-                userEmail,
-                request_status,
-                request_at,
-                userRole
-            ]
-            connection.query(sql, [value], (err, result) => {
-                if(err){
-                    return res.json({Error: "Error On Server"})
+
+            const checkReject = "SELECT * FROM request_role WHERE status = ?"
+            const status = "Reject"
+            connection.query(checkReject, [status], (err, result) => {
+                if(err) throw err
+
+                if(result.length > 0){
+                    return res.json({Error: "You Cannot Apply, Because Your Request is Rejected By the Administration"})
                 }
                 else{
-                    const updaterole = "UPDATE users SET role = ? WHERE email = ?"
-                    connection.query(updaterole, [userRole, userEmail], (err, result) => {
+                    const userRole = req.body.userRole
+                    const request_at = new Date()
+                    const request_status = "Request"
+                    const sql = "INSERT INTO request_role(email, status, request_date, role) VALUE (?)"
+                
+                    const value = [
+                        userEmail,
+                        request_status,
+                        request_at,
+                        userRole
+                    ]
+                    connection.query(sql, [value], (err, result) => {
                         if(err){
-                            return res.json({Error: "ERRROR on SERVER"})
+                            return res.json({Error: "Error On Server"})
                         }
                         else{
-                            return res.json({Status: "Success"})
+                            const updaterole = "UPDATE users SET role = ? WHERE email = ?"
+                            connection.query(updaterole, [userRole, userEmail], (err, result) => {
+                                if(err){
+                                    return res.json({Error: "ERRROR on SERVER"})
+                                }
+                                else{
+                                    return res.json({Status: "Success"})
+                                }
+                            })
                         }
                     })
                 }
