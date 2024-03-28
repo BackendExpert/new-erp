@@ -134,7 +134,7 @@ app.post('/login', (req, res) => {
 
 app.post('/UserRoleRequest/:id', (req, res) => {
     const userEmail = req.params.id;
-    // console.log(userEmail)
+     console.log(userEmail)
 
     const checksql = "SELECT * FROM request_role WHERE email = ?"
     connection.query(checksql, [userEmail], (err, result) =>{
@@ -153,7 +153,7 @@ app.post('/UserRoleRequest/:id', (req, res) => {
                 if(result.length > 0){
                     return res.json({Error: "You Cannot Apply, Because Your Request is Rejected By the Administration"})
                 }
-                else{
+                else if(result.length == 0){
                     const userRole = req.body.userRole
                     const request_at = new Date()
                     const request_status = "Request"
