@@ -140,46 +140,33 @@ app.post('/UserRoleRequest/:id', (req, res) => {
     connection.query(checksql, [userEmail], (err, result) =>{
         if(err) throw err
 
-        if(result.length > 0){
+        if(result[0].status === "Reject"){
+            return res.json({Error: "You Cannot Apply, Because Your Request is Rejected By the Administration"})
+        }
+        else if(result.length > 0){
             return res.json({Error: "You Already Request"})
         }
         else{
-            const checkReject = "SELECT * FROM request_role WHERE status = ?"
-            const status = "Reject"
-            connection.query(checkReject, [status], (err, result) => {
-                if(err) throw err
+            const userRole = req.body.userRole
+            const request_at = new Date()
+            const request_status = "Request"
+            const sql = "INSERT INTO request_role(email, status, request_date, role) VALUE (?)"
+        
+            const value = [
+                userEmail,
+                request_status,
+                request_at,
+                userRole
+            ]
 
-                if(result.length > 0){
-                    return res.json({Error: "You Cannot Apply, Because Your Request is Rejected By the Administration"})
+            console.log(value)
+
+            connection.query(sql, [value], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error On Server"})
                 }
                 else{
-                    const userRole = req.body.userRole
-                    const request_at = new Date()
-                    const request_status = "Request"
-                    const sql = "INSERT INTO request_role(email, status, request_date, role) VALUE (?)"
-                
-                    const value = [
-                        userEmail,
-                        request_status,
-                        request_at,
-                        userRole
-                    ]
-                    connection.query(sql, [value], (err, result) => {
-                        if(err){
-                            return res.json({Error: "Error On Server"})
-                        }
-                        else{
-                            const updaterole = "UPDATE users SET role = ? WHERE email = ?"
-                            connection.query(updaterole, [userRole, userEmail], (err, result) => {
-                                if(err){
-                                    return res.json({Error: "ERRROR on SERVER"})
-                                }
-                                else{
-                                    return res.json({Status: "Success"})
-                                }
-                            })
-                        }
-                    })
+                    return res.json({Status: "Success"})
                 }
             })
         }
