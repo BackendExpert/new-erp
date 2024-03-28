@@ -1,6 +1,11 @@
-import React from 'react'
+import secureLocalStorage from "react-secure-storage"
+import { useEffect, useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import axios from "axios";
 
 const PendingUsers = () => {
+    const navigate = useNavigate();
+    const RoleUser = secureLocalStorage.getItem("loginNew");
   return (
     <div className="">
         <h1 className="text-3xl font-semibold">Pending Approvel Users</h1>
