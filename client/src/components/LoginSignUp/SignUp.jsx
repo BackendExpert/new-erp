@@ -24,19 +24,17 @@ export const SignUp = () => {
     // headle SignUp
     const headleSignUp = async (e) => {
         e.preventDefault();
-        try{
-            const res = await axios.post('http://localhost:8081/register', {
-                username,
-                email,
-                password,
-            });
-
-            navigate('/');
-        }
-        catch (err){
-            console.log(err);
-        }
+        await axios.post('http://localhost:8081/register')
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Registation Successful")
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
+    Status
 
   return (
     <div className='lg:py-[4%] lg:px-16 bg-[url(https://wallpapercave.com/wp/6gQZh65.jpg)] bg-center bg-cover h-screen w-full'>
