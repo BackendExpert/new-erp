@@ -24,7 +24,7 @@ export const SignUp = () => {
     // headle SignUp
     const headleSignUp = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:8081/register')
+        await axios.post('http://localhost:8081/register', dataForm)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Registation Successful")
@@ -34,7 +34,7 @@ export const SignUp = () => {
             }
         })
     }
-    Status
+    
 
   return (
     <div className='lg:py-[4%] lg:px-16 bg-[url(https://wallpapercave.com/wp/6gQZh65.jpg)] bg-center bg-cover h-screen w-full'>
