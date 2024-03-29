@@ -42,11 +42,11 @@ const PendingUesr = () => {
                     </div>
 
                     <div className="flex">
-                        <form>
+                        <form onSubmit={headleAccept}>
                             <button type="submit" className="py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Accept Request</button>
                         </form>
-                        <form className="ml-4">
-                            <button type="submit" className="py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Accept Request</button>
+                        <form onSubmit={headleReject} className="ml-4">
+                            <button type="submit" className="py-2 px-4 border border-red-500 text-red-500 rounded duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Reject Request</button>
                         </form>
                     </div>
                 </div>
