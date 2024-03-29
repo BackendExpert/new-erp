@@ -78,7 +78,7 @@ const Users = () => {
               </form>
               <button onClick={GoBack} className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
               <div className="my-4">
-              
+                <p>{rejectRole.status} asdas</p>
               </div>
               <div className="my-4">
                 <p className="text-xl text-red-500 font-semibold">Important Notice </p>
