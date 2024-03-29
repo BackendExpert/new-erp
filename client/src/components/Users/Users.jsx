@@ -7,10 +7,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 const Users = () => {
     const navigate = useNavigate()
 
-    const GoBack = () =>{
-      localStorage.clear()
-      navigate('/')
-    }
+
     
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
@@ -49,6 +46,11 @@ const Users = () => {
       .catch(err => console.log(err))
     }, [])
 
+
+    // const GoBack = () =>{
+    //   localStorage.clear()
+    //   navigate('/')
+    // }
   return (
     <div className="">
       <div className="bg-gray-200 h-auto w-full py-24 px-40">
@@ -82,7 +84,7 @@ const Users = () => {
                   <button type="submit" className="py-2 px-8 rounded bg-blue-500 text-white">Request</button>
                 </div>
               </form>
-              <button onClick={GoBack} className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
+              <button  className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
               <div className="my-4">
                 <p>{rejectRole.status} asdas</p>
 
