@@ -15,6 +15,12 @@ const PendingUesr = () => {
         role: '',
     })   
 
+    useEffect(() => {
+        axios.get('http://localhost:8081/ViewRequstUser/' + id)
+        .then(res => SetrequestUserData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "SuperAdmin"){
         return (
             <div className="bg-gray-200 py-4">
@@ -24,6 +30,11 @@ const PendingUesr = () => {
                     <Link to={'/SuperAdmin'}>
                         <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </Link>
+                    <div className="my-4">
+                        <p className="mt-4 py-3">Email : </p>
+                        <p className="mt-4 py-3">Status : </p>
+                        <p className="mt-4 py-3">Request Role : </p>
+                    </div>
                 </div>
             </div>
         )
