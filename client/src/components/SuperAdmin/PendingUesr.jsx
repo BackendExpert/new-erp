@@ -17,7 +17,12 @@ const PendingUesr = () => {
 
     useEffect(() => {
         axios.get('http://localhost:8081/ViewRequstUser/' + id)
-        .then(res => SetrequestUserData(res.data))
+        .then(res => SetrequestUserData({
+            ...requestUserData, email:res.data.Result[0].email,
+                status:res.data.Result[0].status,
+                request_date:res.data.Result[0].request_date,
+                role:res.data.Result[0].role
+        }))
         .catch(err => console.log(err))
     }, [])
 
@@ -31,7 +36,7 @@ const PendingUesr = () => {
                         <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </Link>
                     <div className="my-4 ml-5">
-                        <p className="mt-4 py-3">Email : </p>
+                        <p className="mt-4 py-3">Email : {requestUserData.email}</p>
                         <p className="mt-4 py-3">Status : </p>
                         <p className="mt-4 py-3">Request Role : </p>
                     </div>
