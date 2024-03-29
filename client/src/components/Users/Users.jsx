@@ -33,18 +33,34 @@ const Users = () => {
 
     //check user is rejected
     const [rejectRole, SetrejectRole] = useState({
-      email: ''
+      email: '',
+      status: ''
     })
 
 
     useEffect(() => {
       axios.get('http://localhost:8081/RoleViewReject/' + EmailUser)
       .then(res => SetrejectRole({
-        ...rejectRole, 
+        ...rejectRole, email:res.data.Result[0].email,
+          status:res.data.Result[0].status
       }))
       .catch(err => console.log(err))
     }, [])
 
+    const headleDeleteRquest = (e) => {
+      e.preventDefault();
+      axios.post('http://localhost:8081/DeleteRequest/' + EmailUser)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Request has been Deleted")
+          localStorage.clear()
+          navigate('/')
+        }
+        else{
+          alert(res.data.Error)
+        }
+      })
+    }
 
     // const GoBack = () =>{
     //   localStorage.clear()
@@ -85,7 +101,20 @@ const Users = () => {
               </form>
               <button  className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
               <div className="my-4">
-                <p>{rejectRole.email} dsasd</p>
+                {
+                  (() => {
+                    if(rejectRole.status === "Reject"){
+                      return(
+                        <div className="">
+                          <p className="">Your Requet has been rejected</p>
+                          <form onSubmit={headleDeleteRquest}>
+                            <button type="submite" className="py-2 px-4 bg-red-500 text-white rounded">Delete Request</button>
+                          </form>
+                        </div>
+                      )
+                    }
+                  })()
+                }
               </div>
               <div className="my-4">
                 <p className="text-xl text-red-500 font-semibold">Important Notice </p>
