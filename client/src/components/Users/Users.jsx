@@ -1,7 +1,7 @@
 import axios from "axios"
 import logo from "../../assets/nifs_logo.png"
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import  secureLocalStorage  from  "react-secure-storage"
 
 const Users = () => {
@@ -33,6 +33,13 @@ const Users = () => {
         }
       })
     }
+
+    //check user is rejected
+    cons [rejectRole, SetrejectRole] = useState([])
+
+    useEffect(() => {
+      
+    }, [])
 
   return (
     <div className="">
@@ -68,11 +75,14 @@ const Users = () => {
                 </div>
               </form>
               <button onClick={GoBack} className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
-
+              <div className="my-4">
+              
+              </div>
               <div className="my-4">
                 <p className="text-xl text-red-500 font-semibold">Important Notice </p>
                 <p>The request will be rejected, if you try to access any other pages on this system.</p>
               </div>
+              
 
             </div>
             </div>
