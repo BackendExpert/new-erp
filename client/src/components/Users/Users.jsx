@@ -37,7 +37,9 @@ const Users = () => {
     //check user is rejected
     const [rejectRole, SetrejectRole] = useState({
       email: '',
-
+      status: '',
+      request_date: '',
+      role: '',
     })
 
     useEffect(() => {
