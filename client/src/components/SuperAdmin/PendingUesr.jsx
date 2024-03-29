@@ -32,7 +32,7 @@ const PendingUesr = () => {
 
     const headleAccept = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8081/AcceptUserRole/' + id, acceptRole)
+        axios.post('http://localhost:8081/AcceptUserRole/' + id, requestUserData)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("User Request is Accepted")
@@ -75,7 +75,6 @@ const PendingUesr = () => {
 
                     <div className="flex">
                         <form onSubmit={headleAccept}>
-                            <input type="hidden" value={requestUserData.email} onChange={e => SetacceptRole({...acceptRole, role:e.target.value})}/>
                             <button type="submit" className="py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Accept Request</button>
                         </form>
                         <form onSubmit={headleReject} className="ml-4">
