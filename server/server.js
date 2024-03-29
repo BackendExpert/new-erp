@@ -266,7 +266,24 @@ app.get('/RoleViewReject/:id', (req, res) => {
 //DeleteRequest
 app.delete('/DeleteRequest/:id', (req, res) => {
     const DeleteID = req.params.id;
+    const sql = "DELETE FROM request_role WHERE email = ?"
 
+    connection.query(sql, [DeleteID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error IN server"})
+        }
+        else{
+            const usersql = "DELETE FROM users WHERE email = ?"
+            connection.query(usersql, [DeleteID], (err, result) => {
+                if(err){
+                    return res.json({Error: "ERROR on SERVER"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
+        }
+    })
 })
 
 //unAccess
