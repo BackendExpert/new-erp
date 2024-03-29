@@ -141,7 +141,7 @@ app.post('/UserRoleRequest/:id', (req, res) => {
         if(err) throw err
 
         if(result[0].status === "Reject"){
-            return res.json({Error: "You Cannot Apply, Because Your Request is Rejected By the Administration", Result: result})
+            return res.json({Error: "You Cannot Apply, Because Your Request is Rejected By the Administration"})
         }
         else if(result.length > 0){
             return res.json({Error: "You Already Request"})
