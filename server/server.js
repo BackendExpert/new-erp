@@ -328,6 +328,22 @@ app.post('/AcceptUserRole/:id', (req, res) => {
     })
 })
 
+//RejectUserRole
+app.post('/RejectUserRole/:id', (req, res) => {
+    const UserID = req.params.id
+    const sql = "UPDATE request_role SET status = ? WHERE email = ?"
+    const status = "Reject"
+
+    connection.query(sql, [status, UserID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error On Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 //unAccess
 app.post('/UnAccess', (req, res) => {
     const userEmail = req.body.email;
