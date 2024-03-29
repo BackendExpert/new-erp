@@ -36,10 +36,12 @@ const PendingUesr = () => {
                         <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </Link>
                     <div className="my-4 ml-5">
-                        <p className="mt-4 py-3">Email : {requestUserData.email}</p>
-                        <p className="mt-4 py-3">Status : {requestUserData.status}</p>
-                        <p className="mt-4 py-3">Request Role : {requestUserData.role}</p>
+                        <p className="mt-4 py-3">Email : <b>{requestUserData.email}</b></p>
+                        <p className="mt-4 py-3">Status : <b>{requestUserData.status}</b></p>
+                        <p className="mt-4 py-3">Request Role : <b>{requestUserData.role}</b></p>
                     </div>
+
+                    
                 </div>
             </div>
         )
