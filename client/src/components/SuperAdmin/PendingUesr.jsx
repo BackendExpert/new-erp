@@ -8,6 +8,13 @@ const PendingUesr = () => {
     const {id} = useParams()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const [requestUserData, SetrequestUserData] = useState({
+        email: '',
+        status: '',
+        request_date: '',
+        role: '',
+    })   
+
     if(RoleUser === "SuperAdmin"){
         return (
             <div className="bg-gray-200 py-4">
