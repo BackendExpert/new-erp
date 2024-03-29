@@ -50,6 +50,11 @@ const PendingUsers = () => {
             </div>   
         )
     }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
 }
 
 export default PendingUsers
