@@ -143,9 +143,6 @@ app.post('/UserRoleRequest/:id', (req, res) => {
         else if(result.length > 0){
             return res.json({Error: "You Already Request"})
         }
-        if(result[0].status === "Reject"){
-            return res.json({Error: "You Cannot Apply, Because Your Request is Rejected By the Administration"})
-        }
         else{
             const userRole = req.body.userRole
             const request_at = new Date()
@@ -254,13 +251,14 @@ app.get('/RoleViewReject/:id', (req, res) => {
     const userEmail = req.params.id;
     console.log(userEmail)
 
-    const sql = "SELECT * FROM request_role WHERE email = ?"
-    connection.query(sql, [userEmail], (err, result) => {
+    const sql = "SELECT * FROM request_role WHERE email = ? && status = ?"
+    const status = "Reject"
+    connection.query(sql, [userEmail, status], (err, result) => {
         if(err){
             return res.json({Error: "ERROR on SERVER"})
         }
         else{
-            return res.json(result)
+            return res.json({Result: result})
         }
     })
 })
