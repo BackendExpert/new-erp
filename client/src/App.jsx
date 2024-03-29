@@ -57,6 +57,7 @@ import NonAcademic from "./components/NonAcademic/NonAcademic"
 import PDFellow from "./components/PDFellow/PDFellow"
 import RecLeave from "./components/Leaves/RecLeave"
 import UserRoleRequest from "./components/RequestRole/UserRoleRequest"
+import PendingUesr from "./components/SuperAdmin/PendingUesr"
 
 export default function App() {
   return (
@@ -171,8 +172,8 @@ export default function App() {
         <Route path="/Accounts" element={<PrivateRoute><Accounts /></PrivateRoute>} />
         <Route path="/AccountInfo/:id" element={<PrivateRoute><AccountInfo /></PrivateRoute>} />
 
-        {/* PendingUsers */}
-
+        {/* PendingUesr */}
+        <Route path="/PendingUesr/:id" element={<PrivateRoute><PendingUesr /></PrivateRoute>} />
 
         {/* Leave */}
         <Route path="/AddLeave" element={<PrivateRoute><AddLeave /></PrivateRoute>} />
