@@ -40,11 +40,11 @@ const Users = () => {
     })
 
 
-    useEffect(() => {
-      axios.get('http://localhost:8081/RoleViewReject/' + EmailUser)
-      .then(res => SetrejectRole(res.data))
-      .catch(err => console.log(err))
-    }, [])
+    // useEffect(() => {
+    //   axios.get('http://localhost:8081/RoleViewReject/' + EmailUser)
+    //   .then(res => SetrejectRole(res.data))
+    //   .catch(err => console.log(err))
+    // }, [])
 
 
     // const GoBack = () =>{
@@ -86,7 +86,6 @@ const Users = () => {
               </form>
               <button  className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
               <div className="my-4">
-                <p>{rejectRole.status} asdas</p>
 
               </div>
               <div className="my-4">
