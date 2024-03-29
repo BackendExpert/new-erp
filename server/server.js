@@ -304,7 +304,17 @@ app.get('/ViewRequstUser/:id', (req, res) => {
 //AcceptUserRole
 app.post('/AcceptUserRole/:id', (req, res) => {
     const UserID = req.params.id
-    const sql = "UPDATE request_role SET "
+    const sql = "UPDATE request_role SET status WHERE email = ?"
+    const status = "Accept"
+
+    connection.query(sql, [status, UserID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            const usersSql = "UPDATE users SET"
+        }
+    })
 })
 
 //unAccess
