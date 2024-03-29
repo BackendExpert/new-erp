@@ -5,7 +5,6 @@ import axios from "axios";
 
 const PendingUsers = () => {
     const navigate = useNavigate();
-    const {id} = useParams()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
     const [viewPendingUsers, SetPendingUsers] = useState([])
