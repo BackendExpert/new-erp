@@ -35,7 +35,7 @@ const Users = () => {
     }
 
     //check user is rejected
-    cons [rejectRole, SetrejectRole] = useState([])
+    const [rejectRole, SetrejectRole] = useState([])
 
     useEffect(() => {
       axios.get('http://localhost:8081/RoleViewReject/' + EmailUser)
