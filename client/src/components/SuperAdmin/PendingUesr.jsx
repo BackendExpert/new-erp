@@ -41,7 +41,14 @@ const PendingUesr = () => {
                         <p className="mt-4 py-3">Request Role : <b>{requestUserData.role}</b></p>
                     </div>
 
-                    
+                    <div className="flex">
+                        <form>
+                            <button type="submit" className="py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Accept Request</button>
+                        </form>
+                        <form>
+                            <button type="submit" className="py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Accept Request</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         )
