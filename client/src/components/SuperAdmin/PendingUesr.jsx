@@ -37,8 +37,8 @@ const PendingUesr = () => {
                     </Link>
                     <div className="my-4 ml-5">
                         <p className="mt-4 py-3">Email : {requestUserData.email}</p>
-                        <p className="mt-4 py-3">Status : </p>
-                        <p className="mt-4 py-3">Request Role : </p>
+                        <p className="mt-4 py-3">Status : {requestUserData.status}</p>
+                        <p className="mt-4 py-3">Request Role : {requestUserData.role}</p>
                     </div>
                 </div>
             </div>
