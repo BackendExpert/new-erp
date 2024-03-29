@@ -304,7 +304,7 @@ app.get('/ViewRequstUser/:id', (req, res) => {
 //AcceptUserRole
 app.post('/AcceptUserRole/:id', (req, res) => {
     const UserID = req.params.id
-    const sql = "UPDATE request_role SET status WHERE email = ?"
+    const sql = "UPDATE request_role SET status = ? WHERE email = ?"
     const status = "Accept"
     console.log(req.body)
 
@@ -315,7 +315,7 @@ app.post('/AcceptUserRole/:id', (req, res) => {
         else{
             const usersSql = "UPDATE users SET role = ? WHERE email = ?"
             const role = req.body.role
-
+            console.log(role)
             connection.query(usersSql, [role, UserID], (err, result) => {
                 if(err){
                     return res.json({Error: "ERROR in SERVER"})
