@@ -251,10 +251,11 @@ app.get('/ViewPendingUsers', (req, res) => {
 
 //RoleViewReject
 app.get('/RoleViewReject/:id', (req, res) => {
-    const RoleRejectEmail = req.params.id
+    const userEmail = req.params.id;
+    console.log(userEmail)
 
     const sql = "SELECT * FROM request_role WHERE email = ?"
-    connection.query(sql, [RoleRejectEmail], (err, result) => {
+    connection.query(sql, [userEmail], (err, result) => {
         if(err){
             return res.json({Error: "ERROR on SERVER"})
         }
