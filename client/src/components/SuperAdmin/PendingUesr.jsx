@@ -26,6 +26,34 @@ const PendingUesr = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleAccept = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:8081/AcceptUserRole/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("User Request is Accepted")
+                navigate('/SuperAdmin')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
+    const headleReject = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:8081/RejectUserRole/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("User Request is Rejected")
+                navigate('/SuperAdmin')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin"){
         return (
             <div className="bg-gray-200 py-4">
