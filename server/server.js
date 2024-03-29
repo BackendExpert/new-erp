@@ -301,6 +301,12 @@ app.get('/ViewRequstUser/:id', (req, res) => {
     })
 })
 
+//AcceptUserRole
+app.post('/AcceptUserRole/:id', (req, res) => {
+    const UserID = req.params.id
+    const sql = "UPDATE request_role SET "
+})
+
 //unAccess
 app.post('/UnAccess', (req, res) => {
     const userEmail = req.body.email;
