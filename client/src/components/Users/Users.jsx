@@ -32,19 +32,14 @@ const Users = () => {
     }
 
     //check user is rejected
-    const [rejectRole, SetrejectRole] = useState({
-      email: '',
-      status: '',
-      request_date: '',
-      role: '',
-    })
+    const [rejectRole, SetrejectRole] = useState([])
 
 
-    // useEffect(() => {
-    //   axios.get('http://localhost:8081/RoleViewReject/' + EmailUser)
-    //   .then(res => SetrejectRole(res.data))
-    //   .catch(err => console.log(err))
-    // }, [])
+    useEffect(() => {
+      axios.get('http://localhost:8081/RoleViewReject/' + EmailUser)
+      .then(res => SetrejectRole(res.data))
+      .catch(err => console.log(err))
+    }, [])
 
 
     // const GoBack = () =>{
@@ -86,7 +81,7 @@ const Users = () => {
               </form>
               <button  className="py-2 px-4 bg-blue-500 rounded text-white">Go back for Now</button>
               <div className="my-4">
-
+                <p>{rejectRole.status} dsasd</p>
               </div>
               <div className="my-4">
                 <p className="text-xl text-red-500 font-semibold">Important Notice </p>
