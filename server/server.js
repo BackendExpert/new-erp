@@ -249,6 +249,21 @@ app.get('/ViewPendingUsers', (req, res) => {
     })
 })
 
+//RoleViewReject
+app.get('/RoleViewReject/:id', (req, res) => {
+    const RoleRejectEmail = req.params.id
+
+    const sql = "SELECT * FROM request_role WHERE email = ?"
+    connection.query(sql, [RoleRejectEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //unAccess
 app.post('/UnAccess', (req, res) => {
     const userEmail = req.body.email;
