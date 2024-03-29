@@ -49,7 +49,7 @@ const Users = () => {
 
     const headleDeleteRquest = (e) => {
       e.preventDefault();
-      axios.post('http://localhost:8081/DeleteRequest/' + EmailUser)
+      axios.delete('http://localhost:8081/DeleteRequest/' + EmailUser)
       .then(res => {
         if(res.data.Status === "Success"){
           alert("Request has been Deleted")
