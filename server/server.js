@@ -264,9 +264,9 @@ app.get('/RoleViewReject/:id', (req, res) => {
 })
 
 //DeleteRequest
-app.post('/DeleteRequest/:id', (req, res) => {
+app.delete('/DeleteRequest/:id', (req, res) => {
     const DeleteID = req.params.id;
-    
+
 })
 
 //unAccess
