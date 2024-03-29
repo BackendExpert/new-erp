@@ -286,6 +286,21 @@ app.delete('/DeleteRequest/:id', (req, res) => {
     })
 })
 
+//ViewRequstUser
+app.get('/ViewRequstUser/:id', (req, res) => {
+    const userEmail = req.params.id
+    const sql = "SELECT * FROM request_role WHERE email = ?"
+
+    connection.query(sql, [userEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success", Result: result})
+        }
+    })
+})
+
 //unAccess
 app.post('/UnAccess', (req, res) => {
     const userEmail = req.body.email;
