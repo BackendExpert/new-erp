@@ -339,6 +339,17 @@ app.post('/AcceptUserRole/:id', (req, res) => {
                         if(result.length == 0){
                             return res.json({Error: "This User cannot be accept, The user not exists in System"})
                         }
+                        else{
+                            const updateSql = "UPDATE employee SET category = ? WHERE eid = ? && email = ?"
+                            connection.query(updateSql, [role, req.body.empID, UserID], (err, result) => {
+                                if(err){
+                                    return res.json({Error: "ERROR on Server"})
+                                }
+                                else{
+                                    return res.json({Status: "Success"})
+                                }
+                            })
+                        }
                     })
                 }
             })
