@@ -14,7 +14,8 @@ const Users = () => {
     
     //userrole Date
     const [userRoleData, SetuserRoleData] = useState({
-      userRole: ''
+      userRole: '',
+      empID: ''
     })
 
     //request for user Role
@@ -78,7 +79,11 @@ const Users = () => {
             
               <div className="my-4">
               <form onSubmit={headleUserRole}>
-
+                <div className="">
+                  <label htmlFor="">Employee ID: </label><br />
+                  <input type="text" className="w-1/2 h-12 border border-blue-400 rounded pl-2 my-2" required placeholder="Employee ID"
+                  onChange={e => SetuserRoleData({...userRoleData, empID:e.target.value})}/>
+                </div>
                 <div className="">
                   <label htmlFor="">User Role: </label><br />
                   <select className="w-1/2 h-12 border border-blue-400 rounded pl-2 my-2"
