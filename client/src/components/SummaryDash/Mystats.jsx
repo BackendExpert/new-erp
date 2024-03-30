@@ -6,9 +6,9 @@ import axios from "axios";
 const Mystats = () => {
     const navigate = useNavigate()
     const RoleUser = secureLocalStorage.getItem("loginNew");
-    
+
   return (
-    <div>Mystats</div>
+    <div>My Stats</div>
   )
 }
 
