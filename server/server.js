@@ -321,7 +321,7 @@ app.post('/AcceptUserRole/:id', (req, res) => {
                     return res.json({Error: "ERROR in SERVER"})
                 }
                 else{
-                    return res.json({Status: "Success"})
+                    const empsql = "INSERT INTO employee() VALUES (?)"
                 }
             })
         }
