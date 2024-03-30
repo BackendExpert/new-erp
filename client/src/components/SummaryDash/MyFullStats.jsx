@@ -23,7 +23,9 @@ const MyFullStats = () => {
         )
     }
     else{
-        alert("Don't Try to view Other's Information You Account has been Suspended")
+        alert("Don't Try to view Other's Information")
+        localStorage.clear();
+        navigate('/')
     }
 
 }
