@@ -82,7 +82,24 @@ const ApproveLeave = () => {
                                         (() => {
                                             if(buttonValue === "Recommend"){
                                                 return (
-
+                                                    leaveApprove.map((leaveA, index) => {
+                                                        return (
+                                                            <tr key={index}>
+                                                                <td className='px-6 py-4 font-bold'>{leaveA.LID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveA.Name}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveA.Email}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveA.Type}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveA.JobCategory}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveA.StartDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveA.StartTime}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveA.EndDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveA.Duration}</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leaveA.Status}</span>
+                                                                </td>  
+                                                            </tr>
+                                                        )
+                                                    })
                                                 )
                                             }
                                             else if(buttonValue === "Reject"){
