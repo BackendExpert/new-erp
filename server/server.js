@@ -144,6 +144,8 @@ app.post('/UserRoleRequest/:id', (req, res) => {
             return res.json({Error: "You Already Request"})
         }
         else{
+            const empcheck = "SELECT * FROM "
+
             const userRole = req.body.userRole
             const request_at = new Date()
             const request_status = "Request"
