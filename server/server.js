@@ -962,31 +962,16 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
             return res.json({Error: "Employee Already Exists...!"});
         }
         else{
-            const hash = bcrypt.hash(req.body.password, 10);
-            const sql = "INSERT INTO employee (eid, initial, surname, address, phone, email, password, salary, image, category, designation, nic, dob, emgcontact, type, civilstatus, gender, relig, create_at, update_at) VALUES (?)";
+            const sql = "INSERT INTO employee (eid, email, image, designation, create_at, update_at) VALUES (?)";
          //    const sql = "INSERT INTO employee VALUES (?)"
             const create_at = new Date();
             const update_at = new Date();
             
             const values = [
              req.body.eid,
-             req.body.initial,
-             req.body.surname,
-             req.body.address,
-             req.body.phone,
              req.body.email,
-             hash,
-             req.body.salary, 
              req.file.filename,
-             req.body.category, 
              req.body.designation,
-             req.body.nic,
-             req.body.dob,
-             req.body.emgcontact,
-             req.body.type,
-             req.body.civilstatus,
-             req.body.gender,
-             req.body.relig,
              create_at,
              update_at
             ]
