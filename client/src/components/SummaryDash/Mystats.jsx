@@ -24,7 +24,7 @@ const Mystats = () => {
             </div>
             <div className="">
                 <div className="lg:grid grid-cols-3 gap-2">
-                    <div className="">
+
                         {
                             StatsData.map((stats) => {
                                 return (
@@ -34,7 +34,7 @@ const Mystats = () => {
                                 )
                             })
                         }
-                    </div>
+
                 </div>
             </div>
         </div>
