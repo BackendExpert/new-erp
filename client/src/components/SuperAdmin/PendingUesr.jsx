@@ -73,6 +73,7 @@ const PendingUesr = () => {
                         <p className="mt-4 py-3">Email : <b>{requestUserData.email}</b></p>
                         <p className="mt-4 py-3">Status : <b>{requestUserData.status}</b></p>
                         <p className="mt-4 py-3">Request Role : <b>{requestUserData.role}</b></p>
+                        <p className="mt-4 py-3">Employee ID : <b>{requestUserData.empID}</b></p>
                     </div>
 
                     <div className="flex">
