@@ -332,7 +332,14 @@ app.post('/AcceptUserRole/:id', (req, res) => {
                     return res.json({Error: "ERROR in SERVER"})
                 }
                 else{
-                    
+                    const checkemp = "SELECT * FROM employee WHERE email = ? && eid = ?"
+                    connection.query(checkemp, [UserID, req.body.empID], (err, result) => {
+                        if(err) throw err
+
+                        if(result.length == 0){
+                            return res.json({Error: "This User cannot be accept, The user not exists in System"})
+                        }
+                    })
                 }
             })
         }
