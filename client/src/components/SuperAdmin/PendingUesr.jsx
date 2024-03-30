@@ -23,7 +23,7 @@ const PendingUesr = () => {
                 status:res.data.Result[0].status,
                 request_date:res.data.Result[0].request_date,
                 role:res.data.Result[0].role,
-                empID:res.data.Result[0].empID
+                empID:res.data.Result[0].eid
         }))
         .catch(err => console.log(err))
     }, [])
