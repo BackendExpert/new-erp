@@ -322,22 +322,7 @@ app.post('/AcceptUserRole/:id', (req, res) => {
                     return res.json({Error: "ERROR in SERVER"})
                 }
                 else{
-                    const empsql = "INSERT INTO employee (eid, email, category) VALUES (?)"
-                    
-                    const value = [
-                        req.body.empID,
-                        UserID,
-                        role
-                    ]
-                    console.log(value)
-                    connection.query(empsql, [value], (err, result) => {
-                        if(err){
-                            return res.json({Error: "ERROR on SERVER"})
-                        }
-                        else{
-                            return res.json({Status: "Success"})
-                        }
-                    })
+
                 }
             })
         }
