@@ -8,7 +8,16 @@ const Mystats = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
   return (
-    <div>My Stats</div>
+    <div>
+        <div className="my-4 mx-4">
+            <div className="">
+                <h1 className="text-2xl">My Stats</h1>                
+            </div>
+            <div className="">
+                
+            </div>
+        </div>
+    </div>
   )
 }
 
