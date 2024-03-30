@@ -2083,12 +2083,28 @@ app.get('/LeaveApproved', (req, res) => {
 })
 
 //ApproveLeave
-app.get('/ApproveLeave/:id', (req, res) => {
+app.post('/ApproveLeave/:id', (req, res) => {
     const ApproveID = req.params.id
     const sql = "UPDATE leaves SET Status = ? WHERE LID = ?"
     const status = "Approve"
 
     connection.query(sql, [status, ApproveID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
+// RejectLeave
+app.post('/RejectLeave/:id', (req, res) => {
+    const RejectID = req.params.id
+    const sql = "UPDATE leaves SET Status = ? WHERE LID = ?"
+    const status = "Reject"
+
+    connection.query(sql, [status, RejectID], (err, result) => {
         if(err){
             return res.json({Error: "ERROR on SERVER"})
         }
