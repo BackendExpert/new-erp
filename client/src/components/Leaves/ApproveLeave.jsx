@@ -104,12 +104,46 @@ const ApproveLeave = () => {
                                             }
                                             else if(buttonValue === "Reject"){
                                                 return (
-
+                                                    leaveReject.map((leaveR, index) => {
+                                                        return (
+                                                            <tr key={index}>
+                                                                <td className='px-6 py-4 font-bold'>{leaveR.LID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveR.Name}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveR.Email}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveR.Type}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveR.JobCategory}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveR.StartDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveR.StartTime}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveR.EndDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{leaveR.Duration}</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leaveR.Status}</span>
+                                                                </td>  
+                                                            </tr>
+                                                        )
+                                                    })
                                                 )
                                             }
                                             else if(buttonValue === "Approve"){
                                                 return (
-
+                                                    ApprovedLeaves.map((Aleaves, index) => {
+                                                        return (
+                                                            <tr key={index}>
+                                                                <td className='px-6 py-4 font-bold'>{Aleaves.LID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Aleaves.Name}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Aleaves.Email}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Aleaves.Type}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Aleaves.JobCategory}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Aleaves.StartDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Aleaves.StartTime}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Aleaves.EndDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{Aleaves.Duration}</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <span className="py-2 px-4 rounded bg-yellow-500 text-white">{Aleaves.Status}</span>
+                                                                </td>  
+                                                            </tr>
+                                                        )
+                                                    })
                                                 )                                                     
                                             }
                                         })()
