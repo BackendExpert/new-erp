@@ -2123,7 +2123,7 @@ app.post('/RejectLeave/:id', (req, res) => {
 
 app.get('/CountMyLeavs/:id', (req, res) => {
     const CurrentEmail = req.params.id
-    console.log(CurrentEmail)
+    // console.log(CurrentEmail)
     const sql = "SELECT COUNT(LID) AS le FROM leaves WHERE Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
