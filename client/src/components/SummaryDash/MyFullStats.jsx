@@ -16,7 +16,7 @@ const MyFullStats = () => {
     
   return (
     <div>
-        <p>{Currentemail}</p>
+        <p>hi all{Currentemail}</p>
     </div>
   )
 }
