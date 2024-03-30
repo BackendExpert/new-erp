@@ -65,6 +65,7 @@ const Employees = () => {
                             <th scope='col' className='px-6 py-3'>Initials</th>
                             <th scope='col' className='px-6 py-3'>Surname</th>
                             <th scope='col' className='px-6 py-3'>Designation</th>
+                            <th scope='col' className='px-6 py-3'>UserRole</th>
                             <th scope='col' className='px-6 py-3'>Phone</th>
                             <th scope='col' className='px-6 py-3'>Emerg Contact</th>
                             <th scope='col' className='px-6 py-3'>Email</th>
@@ -86,6 +87,7 @@ const Employees = () => {
                                         <td className="px-6 py-4">{empData.initial}</td>
                                         <td className="px-6 py-4">{empData.surname}</td>
                                         <td className="px-6 py-4">{empData.designation}</td>
+                                        <td className="px-6 py-4">{empData.category}</td>
                                         <td className="px-6 py-4">{empData.phone}</td>
                                         <td className="px-6 py-4">{empData.emgcontact}</td>
                                         <td className="px-6 py-4">{empData.email}</td>
