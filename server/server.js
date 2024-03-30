@@ -2039,6 +2039,12 @@ app.post('/RecLeaveN/:id', (req, res) => {
         }
     })
 })
+
+//LeavesToApprove
+app.get('/LeavesToApprove', (req, res) => {
+    const sql = "SELECT * FROM "
+})
+
 //--------------------- Leave End -------------------
 
 //check the server is working
