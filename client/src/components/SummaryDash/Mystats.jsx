@@ -17,6 +17,10 @@ const Mystats = () => {
         {name: "My Increment Requests", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-green-500"},  
     ]
 
+    //count data
+
+    const [myLeaves, SetmyLeaves] = useState(0)
+
   return (
     <div>
         <div className="my-4 mx-4">
