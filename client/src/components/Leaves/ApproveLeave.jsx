@@ -149,7 +149,7 @@ const ApproveLeave = () => {
                                                                 <td className='px-6 py-4 font-bold'>{leaveR.EndDate}</td>
                                                                 <td className='px-6 py-4 font-bold'>{leaveR.Duration}</td>
                                                                 <td className='px-6 py-4 font-bold'>
-                                                                    <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leaveR.Status}</span>
+                                                                    <span className="py-2 px-4 rounded bg-red-500 text-white">{leaveR.Status}</span>
                                                                 </td>  
                                                             </tr>
                                                         )
@@ -171,7 +171,7 @@ const ApproveLeave = () => {
                                                                 <td className='px-6 py-4 font-bold'>{Aleaves.EndDate}</td>
                                                                 <td className='px-6 py-4 font-bold'>{Aleaves.Duration}</td>
                                                                 <td className='px-6 py-4 font-bold'>
-                                                                    <span className="py-2 px-4 rounded bg-yellow-500 text-white">{Aleaves.Status}</span>
+                                                                    <span className="py-2 px-4 rounded bg-green-500 text-white">{Aleaves.Status}</span>
                                                                 </td>  
                                                             </tr>
                                                         )
