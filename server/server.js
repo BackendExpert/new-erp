@@ -2123,8 +2123,8 @@ app.post('/RejectLeave/:id', (req, res) => {
 
 app.get('/CountMyLeavs/:id', (req, res) => {
     const CurrentEmail = req.params.id
-    
-    const sql = "SELECT COUNT(LID) AS left FROM leaves WHERE Email = ?";
+    console.log(CurrentEmail)
+    const sql = "SELECT COUNT(LID) AS leave FROM leaves WHERE Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
     connection.query(sql, [CurrentEmail], (error, results) => {
@@ -2134,7 +2134,7 @@ app.get('/CountMyLeavs/:id', (req, res) => {
         return;
       }
   
-      res.json({ left: results[0].left }); // Send count in JSON format
+      res.json({ leave: results[0].leave }); // Send count in JSON format
     });
 })
 
