@@ -25,7 +25,7 @@ const Mystats = () => {
         const fetchData = async () => {
             try {
                 const leaveMy = await axios.get('http://localhost:8081/CountMyLeavs');
-                setArticle(ArticleCount.data.art);
+                SetmyLeaves(leaveMy.data.art);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
