@@ -8,7 +8,7 @@ const DirSecSide = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
     const sidemenu = [
-        {name: "Approve Leave",  link: "#", icon: <Icons name="log-out" size="large"></Icons>},
+        {name: "Approve Leave",  link: "/ApproveLeave", icon: <Icons name="log-out" size="large"></Icons>},
         {name: "Approve Reservation",  link: "#", icon: <Icons name="car" size="large"></Icons>},
         {name: "Approve SRN",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "Approve Work Request",  link: "#", icon: <Icons name="document-text" size="large"></Icons>},
@@ -68,10 +68,10 @@ const DirSecSide = () => {
                 {
                     sidemenu.map((sidem) => (
                         <Link to={sidem.link}>
-                        <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
-                            <p>{sidem.icon}</p>
-                            <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
-                        </div>
+                            <div className="flex py-4 text-gray-400 duration-500 hover:text-[#3B71CA]">                        
+                                <p>{sidem.icon}</p>
+                                <p className={`pt-2 pl-2 ${!openSide && 'scale-0'}`}>{sidem.name}</p>                        
+                            </div>
                         </Link>
                     ))
                 }
