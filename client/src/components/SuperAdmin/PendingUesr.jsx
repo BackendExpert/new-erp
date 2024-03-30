@@ -13,6 +13,7 @@ const PendingUesr = () => {
         status: '',
         request_date: '',
         role: '',
+        empID: '',
     })   
 
     useEffect(() => {
@@ -21,7 +22,8 @@ const PendingUesr = () => {
             ...requestUserData, email:res.data.Result[0].email,
                 status:res.data.Result[0].status,
                 request_date:res.data.Result[0].request_date,
-                role:res.data.Result[0].role
+                role:res.data.Result[0].role,
+                empID:res.data.Result[0].empID
         }))
         .catch(err => console.log(err))
     }, [])
