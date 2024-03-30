@@ -30,7 +30,7 @@ const Mystats = () => {
         }, [])
 
     const StatsData = [
-        {name: "My Leaves", value: "2", icon: <Icons name="log-out" size="large"></Icons>, style: "bg-green-500"},
+        {name: "My Leaves", value: <CountUp end={myLeaves}/>, icon: <Icons name="log-out" size="large"></Icons>, style: "bg-green-500"},
         {name: "My Reservations", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-red-500"},
         {name: "My SRN", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-purple-500"},
         {name: "My Work Requests", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-blue-500"},        
