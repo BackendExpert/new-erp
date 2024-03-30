@@ -151,29 +151,30 @@ app.post('/UserRoleRequest/:id', (req, res) => {
                 if (result.length == 0){
                     return res.json({Error: "Request Cannot be Continue, The Added Employee ID and Email not exists in System"})
                 }
-            })
-
-            const userRole = req.body.userRole
-            const request_at = new Date()
-            const request_status = "Request"
-            const sql = "INSERT INTO request_role(email, status, request_date, role, eid) VALUE (?)"
-        
-            const value = [
-                userEmail,
-                request_status,
-                request_at,
-                userRole,
-                req.body.empID
-            ]
-
-            console.log(value)
-
-            connection.query(sql, [value], (err, result) => {
-                if(err){
-                    return res.json({Error: "Error On Server"})
-                }
                 else{
-                    return res.json({Status: "Success"})
+                    const userRole = req.body.userRole
+                    const request_at = new Date()
+                    const request_status = "Request"
+                    const sql = "INSERT INTO request_role(email, status, request_date, role, eid) VALUE (?)"
+                
+                    const value = [
+                        userEmail,
+                        request_status,
+                        request_at,
+                        userRole,
+                        req.body.empID
+                    ]
+        
+                    console.log(value)
+        
+                    connection.query(sql, [value], (err, result) => {
+                        if(err){
+                            return res.json({Error: "Error On Server"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    })
                 }
             })
         }
