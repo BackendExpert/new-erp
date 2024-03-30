@@ -21,6 +21,14 @@ const Mystats = () => {
 
     const [myLeaves, SetmyLeaves] = useState(0)
 
+    useEffect(() => {
+        const fetchData = async () => {
+
+        }
+        
+        fetchData();
+    }, [])
+
   return (
     <div>
         <div className="my-4 mx-4">
