@@ -96,7 +96,10 @@ const ApproveLeave = () => {
                                                                 <td className='px-6 py-4 font-bold'>{leaveA.Duration}</td>
                                                                 <td className='px-6 py-4 font-bold'>
                                                                     <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leaveA.Status}</span>
-                                                                </td>  
+                                                                </td> 
+                                                                <td>
+                                                                    
+                                                                </td> 
                                                             </tr>
                                                         )
                                                     })
