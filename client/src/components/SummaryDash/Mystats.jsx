@@ -8,12 +8,12 @@ const Mystats = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
     const StatsData = [
-        {name: "My Leaves", value: "", icon: "", style: ""},
-        {name: "My Reservations", value: "", icon: "", style: ""},
-        {name: "My SRN", value: "", icon: "", style: ""},
-        {name: "My Work Requests", value: "", icon: "", style: ""},        
-        {name: "My Gate Pass", value: "", icon: "", style: ""},  
-        {name: "My Increment Requests", value: "", icon: "", style: ""},  
+        {name: "My Leaves", value: "2", icon: "", style: ""},
+        {name: "My Reservations", value: "2", icon: "", style: ""},
+        {name: "My SRN", value: "2", icon: "", style: ""},
+        {name: "My Work Requests", value: "2", icon: "", style: ""},        
+        {name: "My Gate Pass", value: "2", icon: "", style: ""},  
+        {name: "My Increment Requests", value: "2", icon: "", style: ""},  
     ]
 
   return (
@@ -24,7 +24,6 @@ const Mystats = () => {
             </div>
             <div className="">
                 <div className="lg:grid grid-cols-3 gap-2">
-
                         {
                             StatsData.map((stats) => {
                                 return (
@@ -34,7 +33,6 @@ const Mystats = () => {
                                 )
                             })
                         }
-
                 </div>
             </div>
         </div>
