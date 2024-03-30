@@ -19,11 +19,24 @@ const ApproveLeave = () => {
     }
 
     const [leaveApprove, SetLaeaveApprove] = useState([])
-
     //fetch data
     useEffect(() => {
         axios.get('http://localhost:8081/LeavesToApprove')
         .then(res => SetLaeaveApprove(res.data))
+        .catch(err => console.log(err))
+    }, [])
+    
+    const [leaveReject, SetleaveReject] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/LeaveReject')
+        .then(res => SetleaveReject(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
+    const [ApprovedLeaves, SetApprovedLeaves] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/LeaveApproved')
+        .then(res => SetApprovedLeaves(res.data))
         .catch(err => console.log(err))
     }, [])
 
@@ -69,17 +82,17 @@ const ApproveLeave = () => {
                                         (() => {
                                             if(buttonValue === "Recommend"){
                                                 return (
-                                                    
+
                                                 )
                                             }
                                             else if(buttonValue === "Reject"){
                                                 return (
-                                                    
+
                                                 )
                                             }
                                             else if(buttonValue === "Approve"){
                                                 return (
-                                                    
+
                                                 )                                                     
                                             }
                                         })()
