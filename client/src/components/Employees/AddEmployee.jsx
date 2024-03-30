@@ -151,7 +151,7 @@ const AddEmployee = () => {
                                         <option>Select Option</option>
                                         <option value="Scientist">Scientist</option>
                                         <option value="RA">RA</option>
-                                        <option value="Driver">Non Academic</option>
+                                        <option value="Non Academic">Non Academic</option>
                                         <option value="VRA">Volunteer RA</option>    
                                     </select>
                                 </div>
@@ -162,7 +162,12 @@ const AddEmployee = () => {
                                         <option>Select Option</option>
                                         <option value="Director">Director</option>
                                         <option value="Secretary">Secretary</option>
-                                        <option value="Non Academic"></option>
+                                        <option value="Head">Head</option>
+                                        <option value="Transport Office">Transport Office</option>
+                                        <option value="Librarian">Librarian</option>
+                                        <option value="Labmanager">Labmanager</option>
+                                        <option value="Accountant">Accountant</option> 
+                                        <option value="Driver">Driver</option>                                       
                                         <option value="RA">RA</option>
                                         <option value="PostDoc">PostDoc</option>
                                     </select>
