@@ -58,6 +58,7 @@ import PDFellow from "./components/PDFellow/PDFellow"
 import RecLeave from "./components/Leaves/RecLeave"
 import UserRoleRequest from "./components/RequestRole/UserRoleRequest"
 import PendingUesr from "./components/SuperAdmin/PendingUesr"
+import ApproveLeave from "./components/Leaves/ApproveLeave"
 
 export default function App() {
   return (
@@ -178,6 +179,7 @@ export default function App() {
         {/* Leave */}
         <Route path="/AddLeave" element={<PrivateRoute><AddLeave /></PrivateRoute>} />
         <Route path="/RecLeave" element={<PrivateRoute><RecLeave /></PrivateRoute>} />
+        <Route path="/ApproveLeave" element={<PrivateRoute><ApproveLeave /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
