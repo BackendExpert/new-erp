@@ -14,7 +14,11 @@ const Mystats = () => {
                 <h1 className="text-2xl">My Stats</h1>                
             </div>
             <div className="">
-                
+                <div className="lg:grid grid-cols-3 gap-2">
+                    <div className="">
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
