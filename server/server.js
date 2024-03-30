@@ -2123,18 +2123,18 @@ app.post('/RejectLeave/:id', (req, res) => {
 
 app.get('/CountMyLeavs/:id', (req, res) => {
     const CurrentEmail = req.params.id
-
-    const sql = "SELECT COUNT(Aid) AS art FROM articles ";
+    
+    const sql = "SELECT COUNT(LID) AS left FROM leaves WHERE Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
-    connection.query(sql, (error, results) => {
+    connection.query(sql, [CurrentEmail], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
         return;
       }
   
-      res.json({ art: results[0].art }); // Send count in JSON format
+      res.json({ left: results[0].left }); // Send count in JSON format
     });
 })
 
