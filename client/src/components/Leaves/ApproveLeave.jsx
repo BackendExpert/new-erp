@@ -59,7 +59,16 @@ const ApproveLeave = () => {
     }
 
     const headleReject = (id) => {
-
+        axios.post('http://localhost:8081/RejectLeave/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Leave Reject Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
 
     if(RoleUser === "Director" || RoleUser === "Secretary"){
