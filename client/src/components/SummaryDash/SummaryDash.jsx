@@ -127,10 +127,7 @@ const SummaryDash = () => {
   ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
-    const chartData = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-      values: [65, 59, 80, 81, 56, 55, 40] // Sample data values
-    };
+
   return (
     <div>
        <div className="lg:grid grid-cols-2 gap-4 my-3">
@@ -170,7 +167,7 @@ const SummaryDash = () => {
               }
             }
             if(RoleUser === "Librarian"){
-              
+
             }
         })
       }
