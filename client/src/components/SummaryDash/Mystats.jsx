@@ -10,11 +10,11 @@ const Mystats = () => {
 
     const StatsData = [
         {name: "My Leaves", value: "2", icon: <Icons name="log-out" size="large"></Icons>, style: "bg-green-500"},
-        {name: "My Reservations", value: "2", icon: "", style: "bg-red-500"},
-        {name: "My SRN", value: "2", icon: "", style: "bg-purple-500"},
-        {name: "My Work Requests", value: "2", icon: "", style: "bg-blue-500"},        
-        {name: "My Gate Pass", value: "2", icon: "", style: "bg-yellow-500"},  
-        {name: "My Increment Requests", value: "2", icon: "", style: "bg-green-500"},  
+        {name: "My Reservations", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-red-500"},
+        {name: "My SRN", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-purple-500"},
+        {name: "My Work Requests", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-blue-500"},        
+        {name: "My Gate Pass", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-yellow-500"},  
+        {name: "My Increment Requests", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-green-500"},  
     ]
 
   return (
@@ -29,10 +29,12 @@ const Mystats = () => {
                             StatsData.map((stats) => {
                                 return (
                                     <div className={`text-xl text-white my-2 mx-3 rounded py-8 px-4 ${stats.style}`}>
-                                        <div className="flex">
-                                            <span>{stats.icon}</span>
-                                            <p className="pl-4 pt-2">{stats.name}</p>
-                                            <p className="align-right">{stats.value}</p>
+                                        <div className="flex justify-between">
+                                            <div className="flex">
+                                                <span>{stats.icon}</span>
+                                                <p className="pl-4 pt-2">{stats.name}</p>
+                                            </div>
+                                            <p className="text-2xl font-semibold pr-4 pt-2">{stats.value}</p>
                                         </div>
                                     </div>
                                 )
