@@ -8,7 +8,7 @@ const DirSecNav = () => {
     const navigate = useNavigate();
 
     const navLists = [
-        {name: "Recommend Leave", link: ""},
+        {name: "Recommend Leave", link: "/RecLeave"},
         {name: "Recommend Reservations", link: ""},
         {name: "Recommend SRN", link: ""},
         {name: "Recommend Work Requests", link: ""},
