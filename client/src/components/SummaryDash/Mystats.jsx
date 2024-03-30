@@ -64,6 +64,9 @@ const Mystats = () => {
                             })
                         }
                 </div>
+                <Link>
+                    <button className="pt-4 px-6 border border-blue-500 text-blue-500 duraton-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View More</button>
+                </Link>
             </div>
         </div>
     </div>
