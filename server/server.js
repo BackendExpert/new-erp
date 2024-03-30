@@ -2042,7 +2042,16 @@ app.post('/RecLeaveN/:id', (req, res) => {
 
 //LeavesToApprove
 app.get('/LeavesToApprove', (req, res) => {
-    const sql = "SELECT * FROM "
+    const sql = "SELECT * FROM leaves WHERE Status = ?"
+    const status = "Recommend"
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 //--------------------- Leave End -------------------
