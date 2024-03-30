@@ -18,6 +18,15 @@ const ApproveLeave = () => {
         }
     }
 
+    const [leaveApprove, SetLaeaveApprove] = useState([])
+    
+    //fetch data
+    useEffect(() => {
+        axios.get('http://localhost:8081/LeavesToApprove')
+        .then(res => SetLaeaveApprove(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
