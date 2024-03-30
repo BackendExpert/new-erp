@@ -2,13 +2,14 @@ import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import axios from "axios";
+import Icons from '@reacticons/ionicons'
 
 const Mystats = () => {
     const navigate = useNavigate()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
     const StatsData = [
-        {name: "My Leaves", value: "2", icon: "", style: "bg-green-500"},
+        {name: "My Leaves", value: "2", icon: <Icons name="log-out" size="large"></Icons>, style: "bg-green-500"},
         {name: "My Reservations", value: "2", icon: "", style: "bg-red-500"},
         {name: "My SRN", value: "2", icon: "", style: "bg-purple-500"},
         {name: "My Work Requests", value: "2", icon: "", style: "bg-blue-500"},        
@@ -27,8 +28,12 @@ const Mystats = () => {
                         {
                             StatsData.map((stats) => {
                                 return (
-                                    <div className={`text-2xl text-white my-2 mx-3 rounded py-8 px-4 ${stats.style}`}>
-                                        {stats.name}
+                                    <div className={`text-xl text-white my-2 mx-3 rounded py-8 px-4 ${stats.style}`}>
+                                        <div className="flex">
+                                            <span>{stats.icon}</span>
+                                            <p className="pl-4 pt-2">{stats.name}</p>
+                                            <p className="align-right">{stats.value}</p>
+                                        </div>
                                     </div>
                                 )
                             })
