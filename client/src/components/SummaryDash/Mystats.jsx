@@ -35,7 +35,7 @@ const Mystats = () => {
         {name: "My SRN", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-purple-500"},
         {name: "My Work Requests", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-blue-500"},        
         {name: "My Gate Pass", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-yellow-500"},  
-        {name: "My Increment Requests", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-green-500"},  
+        {name: "My Increment Requests", value: "2", icon: <Icons name="cash" size="large"></Icons>, style: "bg-green-500"},  
     ]
 
 
@@ -65,7 +65,7 @@ const Mystats = () => {
                         }
                 </div>
                 <Link>
-                    <button className="pt-4 px-6 border border-blue-500 text-blue-500 duraton-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View More</button>
+                    <button className="rounded py-4 px-6 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View More</button>
                 </Link>
             </div>
         </div>
