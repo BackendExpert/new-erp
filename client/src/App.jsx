@@ -59,6 +59,7 @@ import RecLeave from "./components/Leaves/RecLeave"
 import UserRoleRequest from "./components/RequestRole/UserRoleRequest"
 import PendingUesr from "./components/SuperAdmin/PendingUesr"
 import ApproveLeave from "./components/Leaves/ApproveLeave"
+import MyFullStats from "./components/SummaryDash/MyFullStats"
 
 export default function App() {
   return (
@@ -127,6 +128,9 @@ export default function App() {
 
         {/* RADash */}
         <Route path="/RADash" element={<PrivateRoute><RADash /></PrivateRoute>} />
+
+        {/* MyFullStats */}
+        <Route path="/MyFullStats/:id" element={<PrivateRoute><MyFullStats /></PrivateRoute>} />
 
         {/* Employee */}
         <Route path="/Employee" element={<PrivateRoute><Employees /></PrivateRoute>} />
