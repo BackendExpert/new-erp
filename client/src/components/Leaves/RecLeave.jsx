@@ -63,7 +63,18 @@ const RecLeave = () => {
     }
 
     //GoBack
-    
+    const GoBack = () => {
+        if(RoleUser === "Director"){
+            navigate('/DirectorDash');
+        }
+        else if(RoleUser === "Secretary"){
+            navigate('/Secretary');
+        }
+        else if(RoleUser === "TO"){
+            navigate('/to');
+        }
+    }
+  
 
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
