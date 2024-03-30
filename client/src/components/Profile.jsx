@@ -25,6 +25,12 @@ const Profile = () => {
 
     //go back according to login user
     const headleBack = () => {
+      if(RoleUser === "Director"){
+        navigate('/DirectorDash');
+      }
+      if(RoleUser === "Secretary"){
+          navigate('/Secretary');
+      }
       if(RoleUser === "SuperAdmin"){
           navigate('/superAdmin');
       }
