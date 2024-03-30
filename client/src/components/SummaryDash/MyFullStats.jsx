@@ -23,11 +23,7 @@ const MyFullStats = () => {
         )
     }
     else{
-        return (
-            <div>
-              Hi all noooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo 
-            </div>
-        )
+        alert("Don't Try to view Other's Information")
     }
 
 }
