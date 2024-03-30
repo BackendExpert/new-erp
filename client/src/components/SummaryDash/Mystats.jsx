@@ -27,7 +27,7 @@ const Mystats = () => {
                         {
                             StatsData.map((stats) => {
                                 return (
-                                    <div className={`text-white my-2 mx-3 rounded py-8 px-4 ${stats.style}`}>
+                                    <div className={`text-2xl text-white my-2 mx-3 rounded py-8 px-4 ${stats.style}`}>
                                         {stats.name}
                                     </div>
                                 )
