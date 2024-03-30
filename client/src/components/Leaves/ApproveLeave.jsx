@@ -45,6 +45,23 @@ const ApproveLeave = () => {
         SetButtonValue(clickValue)   
     }
 
+    const headleApprove = (id) => {
+        axios.post('http://localhost:8081/ApproveLeave/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Leave Approve Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
+    const headleReject = (id) => {
+
+    }
+
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
@@ -99,8 +116,8 @@ const ApproveLeave = () => {
                                                                 </td> 
                                                                 <td className="px-6 py-4 font-bold">
                                                                     <div className="flex">
-                                                                        <button onClick={() => headleRec(leaveA.LID)} className="ml-2 py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Approve</button>
-                                                                        <button onClick={() => headleRecN(leaveA.LID)} className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Reject</button>
+                                                                        <button onClick={() => headleApprove(leaveA.LID)} className="ml-2 py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Approve</button>
+                                                                        <button onClick={() => headleReject(leaveA.LID)} className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Reject</button>
                                                                     </div>
                                                                 </td> 
                                                             </tr>
