@@ -2082,6 +2082,12 @@ app.get('/LeaveApproved', (req, res) => {
     })
 })
 
+//ApproveLeave
+app.get('/ApproveLeave/:id', (req, res) => {
+    const sql = "UPDATE leaves SET "
+})
+
+
 //--------------------- Leave End -------------------
 
 //check the server is working
