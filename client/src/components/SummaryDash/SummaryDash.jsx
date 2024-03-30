@@ -6,6 +6,7 @@ import CountUp from 'react-countup'
 import Icons from '@reacticons/ionicons'
 import UnAccessUsers from '../SuperAdmin/UnAccessUsers'
 import PendingUsers from "../SuperAdmin/PendingUsers";
+import Mystats from "./Mystats";
 
 
 const SummaryDash = () => {
@@ -184,12 +185,11 @@ const SummaryDash = () => {
                   ) : (
                     <div></div>
                   )}
+                  <Mystats />
               </div>   
               </div>
 
         </div> 
-
-
       
     </div>
   )
