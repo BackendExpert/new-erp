@@ -2117,5 +2117,13 @@ app.post('/RejectLeave/:id', (req, res) => {
 
 //--------------------- Leave End -------------------
 
+//my stats
+
+//CountMyLeavs
+
+app.get('/CountMyLeavs/:id', (req, res) => {
+    
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
