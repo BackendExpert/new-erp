@@ -2084,7 +2084,7 @@ app.get('/LeaveApproved', (req, res) => {
 
 //ApproveLeave
 app.get('/ApproveLeave/:id', (req, res) => {
-    const sql = "UPDATE leaves SET "
+    const sql = "UPDATE leaves SET Status =  ? WHERE "
 })
 
 
