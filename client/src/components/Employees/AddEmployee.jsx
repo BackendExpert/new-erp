@@ -151,7 +151,7 @@ const AddEmployee = () => {
                                         <option>Select Option</option>
                                         <option value="Scientist">Scientist</option>
                                         <option value="RA">RA</option>
-                                        <option value="Driver">Driver</option>
+                                        <option value="Driver">Non Academic</option>
                                         <option value="VRA">Volunteer RA</option>    
                                     </select>
                                 </div>
