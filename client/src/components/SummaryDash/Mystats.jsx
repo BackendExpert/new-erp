@@ -32,9 +32,9 @@ const Mystats = () => {
     const StatsData = [
         {name: "My Leaves", value: <CountUp end={myLeaves}/>, icon: <Icons name="log-out" size="large"></Icons>, style: "bg-green-500"},
         {name: "My Reservations", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-red-500"},
-        {name: "My SRN", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-purple-500"},
-        {name: "My Work Requests", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-blue-500"},        
-        {name: "My Gate Pass", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-yellow-500"},  
+        {name: "My SRN", value: "2", icon: <Icons name="document-text" size="large"></Icons>, style: "bg-purple-500"},
+        {name: "My Work Requests", value: "2", icon: <Icons name="documents" size="large"></Icons>, style: "bg-blue-500"},        
+        {name: "My Gate Pass", value: "2", icon: <Icons name="map" size="large"></Icons>, style: "bg-yellow-500"},  
         {name: "My Increment Requests", value: "2", icon: <Icons name="cash" size="large"></Icons>, style: "bg-green-500"},  
     ]
 
