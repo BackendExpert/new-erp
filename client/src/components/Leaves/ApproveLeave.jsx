@@ -65,6 +65,25 @@ const ApproveLeave = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    {
+                                        (() => {
+                                            if(buttonValue === "Recommend"){
+                                                return (
+                                                    
+                                                )
+                                            }
+                                            else if(buttonValue === "Reject"){
+                                                return (
+                                                    
+                                                )
+                                            }
+                                            else if(buttonValue === "Approve"){
+                                                return (
+                                                    
+                                                )                                                     
+                                            }
+                                        })()
+                                    }
                                 </tbody>
                             </table>
                         </div>
