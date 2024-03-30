@@ -7,17 +7,24 @@ import CountUp from 'react-countup'
 
 const MyFullStats = () => {
     const navigate = useNavigate()
-    const Currentemail = useParams()
+    const {id} = useParams()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
     
-  return (
-    <div>
-        
-    </div>
-  )
+
+    if(id === EmailUser){
+        return (
+            <div>
+              Hi all  
+            </div>
+        )
+    }
+    else{
+        alert("NO")
+    }
+
 }
 
 export default MyFullStats
