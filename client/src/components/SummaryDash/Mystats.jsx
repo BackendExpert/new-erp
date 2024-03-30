@@ -64,7 +64,7 @@ const Mystats = () => {
                             })
                         }
                 </div>
-                <Link>
+                <Link to={'/MyFullStats/' + EmailUser}>
                     <button className="rounded py-4 px-6 border border-blue-500 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View More</button>
                 </Link>
             </div>
