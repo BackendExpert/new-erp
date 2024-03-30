@@ -149,7 +149,7 @@ app.post('/UserRoleRequest/:id', (req, res) => {
                 if (err) throw err
 
                 if (result.length == 0){
-                    return res.json({Error: "Request Cannot be Continue, The Added Employee ID and Email not exsist in System"})
+                    return res.json({Error: "Request Cannot be Continue, The Added Employee ID and Email not exists in System"})
                 }
             })
 
