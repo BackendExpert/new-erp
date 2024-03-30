@@ -23,11 +23,11 @@ const Mystats = () => {
                 <h1 className="text-2xl">My Stats</h1>                
             </div>
             <div className="">
-                <div className="lg:grid grid-cols-3 gap-2">
+                <div className="lg:grid grid-cols-2 gap-2 my-4">
                         {
                             StatsData.map((stats) => {
                                 return (
-                                    <div className="">
+                                    <div className="my-2 mx-3 bg-green-500 rounded py-8 px-4">
                                         {stats.name}
                                     </div>
                                 )
