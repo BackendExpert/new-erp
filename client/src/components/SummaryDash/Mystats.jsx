@@ -8,6 +8,9 @@ const Mystats = () => {
     const navigate = useNavigate()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    //get current login user's email
+    const EmailUser = secureLocalStorage.getItem("logiafter");
+
     const StatsData = [
         {name: "My Leaves", value: "2", icon: <Icons name="log-out" size="large"></Icons>, style: "bg-green-500"},
         {name: "My Reservations", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "bg-red-500"},
@@ -24,7 +27,7 @@ const Mystats = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const leaveMy = await axios.get('http://localhost:8081/CountMyLeavs');
+                const leaveMy = await axios.get('http://localhost:8081/CountMyLeavs/' + EmailUser);
                 SetmyLeaves(leaveMy.data.art);
             } catch (error) {
                 console.error('Error fetching data:', error);
