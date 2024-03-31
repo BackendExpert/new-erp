@@ -39,6 +39,17 @@ const connection = mysql.createConnection({
     password: "1234",
     database: "db_erp"
 })
+//email Sending - Nodemailer transporter
+
+const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: '',
+        pass: ''
+    }
+})
+
+
 
 // middleware
 app.use(express.json())
