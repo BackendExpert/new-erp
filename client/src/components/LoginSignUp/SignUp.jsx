@@ -37,6 +37,7 @@ export const SignUp = () => {
     }
     
 
+    
   return (
     <div className='lg:py-[4%] lg:px-16 bg-[url(https://wallpapercave.com/wp/6gQZh65.jpg)] bg-center bg-cover lg:h-screen h-auto w-full'>
         <div className="lg:grid grid-cols-2 gap-4 backdrop-blur-md h-full lg:py-0 py-20">
