@@ -130,6 +130,15 @@ const MyFullStats = () => {
                                               </tr>
                                             )
                                           }
+                                          if(leaveUser.Status === "Reject" && buttonValue === "Reject"){
+                                            return(
+                                              <tr key={index}>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.LID}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.Type}</td>
+                                                <p>hi</p>
+                                              </tr>
+                                            )
+                                          }
                                         }
                                         else{
                                           // localStorage.clear();
