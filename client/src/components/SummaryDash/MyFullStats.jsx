@@ -64,6 +64,14 @@ const MyFullStats = () => {
         const HeadleButtonClick = (clickValue) => {
             SetButtonValue(clickValue)   
         }
+
+        //fetch leaves according to login users
+        const [ViewuserLeaves, SetViewuserLeaves] = useState([])
+        useEffect(() => {
+          axios.get('http://localhost:8081/UserViewLeaves/' + EmailUser)
+          .then(res => SetViewuserLeaves(res.data))
+          .catch(err => console.log(err))
+        }, [])
     
 
     if(id === EmailUser){
