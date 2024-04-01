@@ -127,7 +127,7 @@ const AddReservation = () => {
                             />
                         </div>
                         <div className="my-2">
-                            <label htmlFor="">Travel Mode : </label>
+                            <label htmlFor="">Vehicle Type : </label>
                             <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
                             >
                                 <option>Select Option</option>
@@ -136,6 +136,18 @@ const AddReservation = () => {
                                 <option value="Car">Car</option>
                                 <option value="Three Wheeler">Three Wheeler</option>
                                 <option value="Other">Other</option>
+
+                            </select>
+                        </div>
+                        <div className="my-2">
+                            <label htmlFor="">Funding Source : </label>
+                            <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                            >
+                                <option>Select Option</option>
+                                <option value="NIFS Funds">NIFS Funds</option>
+                                <option value="Grant">Grant</option>
+                                <option value="Earning">Earning</option>
+                                <option value="Private">Private</option>
 
                             </select>
                         </div>
