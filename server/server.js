@@ -2184,11 +2184,10 @@ app.get('/CountReqLeaves', (req, res) => {
 // CountDeniedLeaves
 
 app.get('/CountDeniedLeaves', (req, res) => {
-    const sql = "SELECT COUNT(LID) AS DenLeave FROM leaves WHERE Status = ? || Status = ?";
+    const sql = "SELECT COUNT(LID) AS DenLeave FROM leaves WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status1 = "Denied"
-    const status2 = "Reject"
-    connection.query(sql, [status1, status2], (error, results) => {
+    connection.query(sql, [status1], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
