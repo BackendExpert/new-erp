@@ -126,6 +126,19 @@ const AddReservation = () => {
                             <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purpose"
                             />
                         </div>
+                        <div className="my-2">
+                            <label htmlFor="">Travel Mode : </label>
+                            <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                            >
+                                <option>Select Option</option>
+                                <option value="Van">Van</option>
+                                <option value="Cab">Cab</option>
+                                <option value="Car">Car</option>
+                                <option value="Three Wheeler">Three Wheeler</option>
+                                <option value="Other">Other</option>
+
+                            </select>
+                        </div>
                     </div>
                 </form>
             </div>
