@@ -70,6 +70,11 @@ const AddReservation = () => {
                             <label htmlFor="">Location and Route : </label>
                             <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Location and Route"/>
                         </div>
+                        <div className="my-2">
+                            <label htmlFor="">Email : </label>
+                            <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Your Email"
+                            value={EmailUser}/>
+                        </div>
                     </div>
                 </form>
             </div>
