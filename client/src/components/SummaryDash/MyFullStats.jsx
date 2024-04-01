@@ -113,19 +113,7 @@ const MyFullStats = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                      (() => {
-                                        if(buttonValue === 'Requested'){
-                                          return (
-                                            viewLeaves.map((leave, index) => {
-                                              return (
-                                                <tr key={index}>
-                                                  <td className='px-6 py-4 font-bold'>{leave.LID}</td>
-                                                </tr>
-                                              )
-                                            })
-                                          )
-                                      }
-                                      })()
+                                      
                                     }
                                 </tbody>
                             </table>
