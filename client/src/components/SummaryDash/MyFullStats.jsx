@@ -76,12 +76,20 @@ const MyFullStats = () => {
         //count Data
 
         const [requestLeave, SetrequestLeave] = useState(0);
+        const [rejectLeave, SetRejectLeave] = useState(0);
+        const [approveLeave, SetapproveLeave] = useState(0);  
 
         useEffect(() => {
           const fetchData = async () => {
             try {
               const CountMyRequestLeav = await axios.get('http://localhost:8081/CountMyReqLeave/' + EmailUser);
               SetrequestLeave(CountMyRequestLeav.data.MyRecLeave);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+            try {
+              const CountMyRejectLeav = await axios.get('http://localhost:8081/CountMyRejLeave/' + EmailUser);
+              SetRejectLeave(CountMyRejectLeav.data.MyRecLeave);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
