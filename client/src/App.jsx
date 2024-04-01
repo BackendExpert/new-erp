@@ -185,7 +185,7 @@ export default function App() {
         <Route path="/AddLeave" element={<PrivateRoute><AddLeave /></PrivateRoute>} />
         <Route path="/RecLeave" element={<PrivateRoute><RecLeave /></PrivateRoute>} />
         <Route path="/ApproveLeave" element={<PrivateRoute><ApproveLeave /></PrivateRoute>} />
-        <Route path="/UpdateLeave/:id" element={<PrivateRoute><UpdateLeave /></PrivateRoute>} />
+
 
       </Routes>
     </BrowserRouter>
