@@ -60,20 +60,28 @@ const AddReservation = () => {
                     <div className="lg:grid grid-cols-3 gap-4">
                         <div className="my-2">
                             <label htmlFor="">Employee Name : </label>
-                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"/>
+                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                            />
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Start Time : </label>
-                            <input type="time" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Start Time"/>
+                            <input type="time" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Start Time"
+                            />
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Location and Route : </label>
-                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Location and Route"/>
+                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Location and Route"
+                            />
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Email : </label>
                             <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Your Email"
                             value={EmailUser}/>
+                        </div>
+                        <div className="my-2">
+                            <label htmlFor="">HOD Email : </label>
+                            <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter HOD Email"
+                            />
                         </div>
                     </div>
                 </form>
