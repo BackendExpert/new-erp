@@ -81,7 +81,7 @@ const MyFullStats = () => {
           const fetchData = async () => {
             try {
               const CountMyRequestLeav = await axios.get('http://localhost:8081/CountMyReqLeave/' + EmailUser);
-              SetrequestLeave(CountMyRequestLeav.data.count);
+              SetrequestLeave(CountMyRequestLeav.data.MyRecLeave);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
@@ -102,13 +102,16 @@ const MyFullStats = () => {
                     </div>
                     <div className="lg:flex pl-2 my-4 my-2">
                         <div onClick={() => HeadleButtonClick('Requested')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
-                          My Request Leaves
+                          <div className="flex">
+                            My Request Leaves 
+                            <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
+                          </div>
                         </div>
                         <div onClick={() => HeadleButtonClick('Reject')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           My Reject Reject
                         </div>
                         <div onClick={() => HeadleButtonClick('Approve')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
-                          My Approve Approve
+                          My Approve Approve 
                         </div>
                                                                      
                     </div>
