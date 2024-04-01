@@ -41,13 +41,13 @@ const connection = mysql.createConnection({
 })
 //email Sending - Nodemailer transporter
 
-const transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        user: 'jehanweerasuriya@gmail.com',
-        pass: 'cpvagmiwqxvydvam'
-    }
-})
+// const transporter = nodemailer.createTransport({
+//     service: 'Gmail',
+//     auth: {
+//         user: 'jehanweerasuriya@gmail.com',
+//         pass: 'cpvagmiwqxvydvam'
+//     }
+// })
 
 
 
