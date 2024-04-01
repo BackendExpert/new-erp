@@ -82,8 +82,10 @@ const MyFullStats = () => {
                         </div>
                         <div onClick={() => HeadleButtonClick('Approve')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           My Approve Approve
-                        </div>                        
+                        </div>
+                                                                     
                     </div>
+                    <p>My {buttonValue} Leave</p> 
                     <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
