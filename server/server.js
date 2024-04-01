@@ -2268,9 +2268,9 @@ app.get('/CountMyRejLeave/:id', (req, res) => {
 // CountAppLeave
 app.get('/CountAppLeave/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(LID) AS MyRejLeave FROM leaves WHERE Status = ? && Email = ?";
+    const sql = "SELECT COUNT(LID) AS MyAppLeave FROM leaves WHERE Status = ? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = "Reject"
+    const status = "Approve"
 
     connection.query(sql, [status, UserEmail], (error, results) => {
       if (error) {
@@ -2279,7 +2279,7 @@ app.get('/CountAppLeave/:id', (req, res) => {
         return;
       }
   
-      res.json({ MyRejLeave: results[0].MyRejLeave }); // Send count in JSON format
+      res.json({ MyAppLeave: results[0].MyAppLeave }); // Send count in JSON format
     });
 })
 
