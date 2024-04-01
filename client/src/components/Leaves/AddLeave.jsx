@@ -62,6 +62,9 @@ const AddLeave = () => {
       else if(RoleUser === "PDFellow"){
         navigate('/PDFellow');
       } 
+      else if(RoleUser === "PDFellow"){
+        navigate('/PDFellow');
+      } 
     }
 
     const [LeaveData, SetLeaveData] = useState({
