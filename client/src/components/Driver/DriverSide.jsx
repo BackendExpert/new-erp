@@ -16,6 +16,11 @@ const DriverSide = () => {
         {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
         {name: "Logout", desc: "logout", icon: <Icons name="power" size="large"></Icons>}
     ]
+
+    const logout = () => {
+        localStorage.clear();
+        navigate('/')
+    }
     
   return (
     <div>DriverSide</div>
