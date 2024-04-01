@@ -116,7 +116,7 @@ const MyFullStats = () => {
                                       viewLeaves.map((leaveUser, index) => {
                                         if(leaveUser.Email === EmailUser){
                                           return(
-                                            <p className="">Hi alllllllllll</p>
+                                            <td className='px-6 py-4 font-bold'>{leave.LID}</td>
                                           )
                                         }
                                         else{
