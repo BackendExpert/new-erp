@@ -116,8 +116,8 @@ const SummaryDash = () => {
       }
 
       try {
-        const CountLeavesReq = await axios.get('http://localhost:8081/CountDeniedLeaves');
-        setReqleaves(CountLeavesReq.data.ReqLeave);
+        const CountLeaveDenied = await axios.get('http://localhost:8081/CountDeniedLeaves');
+        SetDeniedLeaves(CountLeaveDenied.data.ReqLeave);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
