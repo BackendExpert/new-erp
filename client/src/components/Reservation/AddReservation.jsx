@@ -88,6 +88,11 @@ const AddReservation = () => {
                             <input type="date" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Start Date"
                             />
                         </div>
+                        <div className="my-2">
+                            <label htmlFor="">End Date : </label>
+                            <input type="date" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter End Date"
+                            />
+                        </div>
                     </div>
                 </form>
             </div>
