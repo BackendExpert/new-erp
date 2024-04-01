@@ -154,23 +154,27 @@ const SummaryDash = () => {
         DataList.map((data, index) => {
             //for SuperAdmin
             if(RoleUser === "SuperAdmin"){
-              return (           
+              if(data.id !== 13 && data.id !== 14){
+                return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 my-5 cursor-pointer rounded duration-500 ${data.style}`}>
                       <span className="text-3xl" >{data.icons}</span>
                       <p className="text-xl py-2">{data.name}</p>
                       <p className="text-2xl font-bold">{data.value}</p>
                   </div>                
-              )
+                )
+              }  
             }
             //for Admin
             if(RoleUser === "Admin"){
-              return (           
-                <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
-                  <span className="text-3xl" >{data.icons}</span>
-                  <p className="text-xl py-2">{data.name}</p>
-                  <p className="text-2xl font-bold">{data.value}</p>
-                </div>               
-              )
+              if(data.id !== 13 && data.id !== 14){
+                return (           
+                  <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
+                    <span className="text-3xl" >{data.icons}</span>
+                    <p className="text-xl py-2">{data.name}</p>
+                    <p className="text-2xl font-bold">{data.value}</p>
+                  </div>               
+                )
+              }    
             }
             //For Librarian
             if(RoleUser === "Librarian"){
