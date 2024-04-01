@@ -8,10 +8,15 @@ const DriverDash = () => {
     const navigate = useNavigate()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    if(RoleUser === "Driver" ||RoleUser === "TO" || RoleUser === "SuperAdmin"){
+    if(RoleUser === "Driver" || RoleUser === "TO" || RoleUser === "SuperAdmin"){
         return (
             <div>DriverDash</div>
         )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])   
     }
 
 }
