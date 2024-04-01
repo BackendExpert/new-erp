@@ -66,25 +66,10 @@ const MyFullStats = () => {
         }
 
         //fetch leaves according to login users
-        const [viewLeaves, SetviewLeaves] = useState({
-          LID: '',
-          Type: '',
-          StartDate: '',
-          StartTime: '',
-          EndDate: '',
-          Duration: '',
-          Status: '',
-        })
+        const [viewLeaves, SetviewLeaves] = useState([])
         useEffect(() => {
           axios.get('http://localhost:8081/UserViewLeaves/' + id)
-          .then(res => SetviewLeaves({...viewLeaves, LID:res.data.Result[0].LID,
-              Type:res.data.Result[0].Type,
-              StartDate:res.data.Result[0].StartDate,
-              StartTime:res.data.Result[0].StartTime,
-              EndDate:res.data.Result[0].EndDate,
-              Duration:res.data.Result[0].Duration,
-              Status:res.data.Result[0].Status
-          }))
+            .then(res => SetButtonValue(res.data))
           .catch(err => console.log(err))
         }, [])
     
