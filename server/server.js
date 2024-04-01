@@ -2219,7 +2219,7 @@ app.get('/CountApproveLeave', (req, res) => {
 app.get('/CountLeaveRec', (req, res) => {
     const sql = "SELECT COUNT(LID) AS RecLeaves FROM leaves WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = "Approve"
+    const status = "Recommend"
     connection.query(sql, [status], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
@@ -2227,7 +2227,7 @@ app.get('/CountLeaveRec', (req, res) => {
         return;
       }
   
-      res.json({ ApproveLeaves: results[0].ApproveLeaves }); // Send count in JSON format
+      res.json({ RecLeaves: results[0].RecLeaves }); // Send count in JSON format
     });
 })
 
