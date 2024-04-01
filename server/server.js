@@ -2202,7 +2202,7 @@ app.get('/CountDeniedLeaves', (req, res) => {
 app.get('/CountApproveLeave', (req, res) => {
     const sql = "SELECT COUNT(LID) AS ApproveLeaves FROM leaves WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = "Denied"
+    const status = "Approve"
     connection.query(sql, [status], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);

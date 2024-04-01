@@ -125,7 +125,7 @@ const SummaryDash = () => {
 
       try {
         const CountLeaveApprove = await axios.get('http://localhost:8081/CountApproveLeave');
-        SetApproveLeaves(CountLeaveApprove.data.DenLeave);
+        SetApproveLeaves(CountLeaveApprove.data.ApproveLeaves);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
