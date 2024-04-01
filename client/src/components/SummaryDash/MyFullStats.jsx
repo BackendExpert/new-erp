@@ -113,7 +113,18 @@ const MyFullStats = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                      
+                                      viewLeaves.map((leaveUser, index) => {
+                                        if(leaveUser.Email === EmailUser){
+                                          return(
+                                            <p className="">Hi alllllllllll</p>
+                                          )
+                                        }
+                                        else{
+                                          // localStorage.clear();
+                                          // window.location.reload()
+                                          // navigate('/')                                          
+                                        }
+                                      })
                                     }
                                 </tbody>
                             </table>
