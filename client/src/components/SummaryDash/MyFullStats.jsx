@@ -134,7 +134,13 @@ const MyFullStats = () => {
                                               <tr key={index}>
                                                 <td className='px-6 py-4 font-bold'>{leaveUser.LID}</td>
                                                 <td className='px-6 py-4 font-bold'>{leaveUser.Type}</td>
-                                                <p>hi</p>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.StartDate}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.StartTime}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.EndDate}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.Duration}</td>
+                                                <td className='px-6 py-4 font-bold'>
+                                                  <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leaveUser.Status}</span>
+                                                </td>   
                                               </tr>
                                             )
                                           }
@@ -143,7 +149,13 @@ const MyFullStats = () => {
                                               <tr key={index}>
                                                 <td className='px-6 py-4 font-bold'>{leaveUser.LID}</td>
                                                 <td className='px-6 py-4 font-bold'>{leaveUser.Type}</td>
-                                                <p>hi Approve</p>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.StartDate}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.StartTime}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.EndDate}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.Duration}</td>
+                                                <td className='px-6 py-4 font-bold'>
+                                                  <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leaveUser.Status}</span>
+                                                </td>   
                                               </tr>
                                             )
                                           }
