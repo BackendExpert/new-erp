@@ -98,6 +98,7 @@ const Users = () => {
                           <option className=''value="RA">RA</option>
                           <option className=''value="NonAcademic">NonAcademic</option>
                           <option className=''value="PDFellow">PostDocoral Fellow</option>
+                          <option className=''value="Driver">Driver</option>
                     </select>
                 </div>
                 <div className="my-2">
