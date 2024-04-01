@@ -7,8 +7,8 @@ const HeadSide = () => {
     const navigate = useNavigate();
 
     const sidemenu = [
-        {name: "Leave",  link: "#", icon: <Icons name="calendar" size="large"></Icons>},
-        {name: "Reservations",  link: "#", icon: <Icons name="document-text" size="large"></Icons>},
+        {name: "Leave",  link: "/AddLeave", icon: <Icons name="calendar" size="large"></Icons>},
+        {name: "Reservations",  link: "/AddReservation", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Work Requests",  link: "#", icon: <Icons name="receipt" size="large"></Icons>},
         {name: "SRN Requests",  link: "#", icon: <Icons name="book" size="large"></Icons>},
         {name: "Gatepass Requests",  link: "#", icon: <Icons name="enter" size="large"></Icons>},
