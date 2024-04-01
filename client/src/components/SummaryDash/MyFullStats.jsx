@@ -113,7 +113,7 @@ const MyFullStats = () => {
                                     {
                                       viewLeaves.map((leaveUser, index) => {
                                         if(leaveUser.Email === EmailUser){
-                                          if(leaveUser.Status === "Requested"){
+                                          if(leaveUser.Status === "Requested" && buttonValue === "Requested"){
                                             return(
                                               <tr key={index}>
                                                 <td className='px-6 py-4 font-bold'>{leaveUser.LID}</td>
