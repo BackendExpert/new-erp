@@ -73,9 +73,18 @@ const MyFullStats = () => {
           .catch(err => console.log(err))
         }, [])
         
+        //count Data
+
+        const [requestLeave, SetrequestLeave] = useState(0);
+
         useEffect(() => {
           const fetchData = async () => {
-
+            try {
+              const CountMyRequestLeav = await axios.get('http://localhost:8081/CountMyReqLeave/' + EmailUser);
+              SetrequestLeave(CountMyRequestLeav.data.count);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
           }
           fetchData();
         }, []);
