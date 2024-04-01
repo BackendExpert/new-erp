@@ -207,7 +207,7 @@ const SummaryDash = () => {
               }
             }
             if(RoleUser === "TO"){
-              if(data.id === 5 || data.id === 13 || data.id === 14 || data.id === 15){
+              if(data.id === 5 || data.id === 13 || data.id === 14 || data.id === 15 || data.id === 16){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
