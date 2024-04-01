@@ -70,11 +70,14 @@ const MyFullStats = () => {
           LID: '',
           Type: '',
           StartDate: '',
-          
+          StartTime: '',
+          EndDate: '',
+          Duration: '',
+          Status: '',
         })
         useEffect(() => {
           axios.get('http://localhost:8081/UserViewLeaves/' + id)
-          .then(res => SetviewLeaves(res.data))
+          .then(res => SetviewLeaves())
           .catch(err => console.log(err))
         }, [])
     
