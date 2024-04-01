@@ -81,6 +81,9 @@ const MyFullStats = () => {
                     <h1 className="text-xl font-semibold">My All Stats</h1>        
                     <hr className="mb-4" />
                     <button onClick={headleBack} className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
+                    <div className="text-xl mt-6 my-2 font-semibold">
+                      My Leaves
+                    </div>
                     <div className="lg:flex pl-2 my-4 my-2">
                         <div onClick={() => HeadleButtonClick('Requested')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           My Request Leaves
