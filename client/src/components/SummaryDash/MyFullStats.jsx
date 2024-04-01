@@ -66,7 +66,7 @@ const MyFullStats = () => {
         }
 
         //fetch leaves according to login users
-        const [ViewuserLeaves, SetViewuserLeaves] = useState([])
+        const [viewuserLeaves, SetViewuserLeaves] = useState([])
         useEffect(() => {
           axios.get('http://localhost:8081/UserViewLeaves/' + EmailUser)
           .then(res => SetViewuserLeaves(res.data))
@@ -116,7 +116,7 @@ const MyFullStats = () => {
                                       (() => {
                                         if(buttonValue === 'Requested'){
                                           return (
-                                            ViewuserLeaves.map((leave, index) => {
+                                            viewuserLeaves.map((leave, index) => {
                                               return (
                                                 <tr key={index}>
                                                   <td className='px-6 py-4 font-bold'>{leave.LID}</td>
