@@ -114,10 +114,15 @@ const MyFullStats = () => {
                                     {
                                       viewLeaves.map((leaveUser, index) => {
                                         if(buttonValue === "Requested"){
-                                          if(leaveUser.Status === "Request"){
+                                          if(leaveUser.Status === "Requested"){
                                             return(
                                               <tr key={index}>
                                                 <td className="px-6 py-4 font-bold">{leaveUser.LID}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.Type}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.StartDate}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.StartTime}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.EndDate}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.Duration}</td>
                                               </tr>
                                             )
                                           }
@@ -127,6 +132,25 @@ const MyFullStats = () => {
                                             return(
                                               <tr key={index}>
                                                 <td className="px-6 py-4 font-bold">{leaveUser.LID}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.Type}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.StartDate}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.StartTime}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.EndDate}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.Duration}</td>
+                                              </tr>
+                                            )
+                                          }
+                                        }
+                                        if(buttonValue === "Approve"){
+                                          if(leaveUser.Status === "Approve"){
+                                            return(
+                                              <tr key={index}>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.LID}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.Type}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.StartDate}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.StartTime}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.EndDate}</td>
+                                                <td className="px-6 py-4 font-bold">{leaveUser.Duration}</td>
                                               </tr>
                                             )
                                           }
