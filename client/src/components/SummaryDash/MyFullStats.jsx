@@ -175,9 +175,9 @@ const MyFullStats = () => {
     }
     else{
         alert("Don't Try to view Other's Information")
-        // localStorage.clear();
-        // window.location.reload()
-        // navigate('/')
+        localStorage.clear();
+        window.location.reload()
+        navigate('/')
     }
 
 }
