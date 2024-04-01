@@ -103,7 +103,6 @@ const MyFullStats = () => {
                                     <tr className='text-blue-500'>
                                         <th scope='col' className='px-6 py-3'>Leave ID</th>                      
                                         <th scope='col' className='px-6 py-3'>Leave Type</th>
-                                        <th scope='col' className='px-6 py-3'>Category</th>
                                         <th scope='col' className='px-6 py-3'>Starting Date</th>                                        
                                         <th scope='col' className='px-6 py-3'>Starting Time</th>
                                         <th scope='col' className='px-6 py-3'>End Date</th>
@@ -121,6 +120,18 @@ const MyFullStats = () => {
                                               <tr key={index}>
                                                 <td className='px-6 py-4 font-bold'>{leaveUser.LID}</td>
                                                 <td className='px-6 py-4 font-bold'>{leaveUser.Type}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.StartDate}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.StartTime}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.EndDate}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.Duration}</td>
+                                                <td className='px-6 py-4 font-bold'>
+                                                  <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leaveUser.Status}</span>
+                                                </td>  
+                                                <td className='px-6 py-4 font-bold'>
+                                                  <Link>
+                                                    
+                                                  </Link>
+                                                </td>     
                                               </tr>
                                             )
                                           }
