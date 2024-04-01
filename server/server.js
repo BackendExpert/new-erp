@@ -2184,9 +2184,9 @@ app.get('/CountReqLeaves', (req, res) => {
 // CountDeniedLeaves
 
 app.get('/CountDeniedLeaves', (req, res) => {
-    const sql = "SELECT COUNT(LID) AS ReqLeave FROM leaves WHERE Status = ?";
+    const sql = "SELECT COUNT(LID) AS DenLeave FROM leaves WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = "Requested"
+    const status = "Denied"
     connection.query(sql, [status], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
@@ -2194,7 +2194,7 @@ app.get('/CountDeniedLeaves', (req, res) => {
         return;
       }
   
-      res.json({ ReqLeave: results[0].ReqLeave }); // Send count in JSON format
+      res.json({ DenLeave: results[0].DenLeave }); // Send count in JSON format
     });
 })
 
