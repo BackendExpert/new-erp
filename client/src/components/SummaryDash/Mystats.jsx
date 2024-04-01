@@ -52,7 +52,7 @@ const Mystats = () => {
                         {
                             StatsData.map((stats) => {
                                 return (
-                                    <div className={`text-xl text-white my-2 mx-3 rounded py-8 px-4 ${stats.style}`}>
+                                    <div className={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${stats.style}`}>
                                         <div className="flex justify-between">
                                             <div className="flex">
                                                 <span>{stats.icon}</span>
