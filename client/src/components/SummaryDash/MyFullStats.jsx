@@ -66,9 +66,14 @@ const MyFullStats = () => {
         }
 
         //fetch leaves according to login users
-        const [viewLeaves, SetviewLeaves] = useState([])
+        const [viewLeaves, SetviewLeaves] = useState({
+          LID: '',
+          Type: '',
+          StartDate: '',
+          
+        })
         useEffect(() => {
-          axios.get('http://localhost:8081/UserViewLeaves')
+          axios.get('http://localhost:8081/UserViewLeaves/' + id)
           .then(res => SetviewLeaves(res.data))
           .catch(err => console.log(err))
         }, [])
@@ -161,6 +166,7 @@ const MyFullStats = () => {
                                           }
                                         }
                                         else{
+                                          alert("hiiiiiiiii")
                                           localStorage.clear();
                                           window.location.reload()
                                           navigate('/')                                          
