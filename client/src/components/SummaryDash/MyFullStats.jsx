@@ -130,12 +130,12 @@ const MyFullStats = () => {
                                               </tr>
                                             )
                                           }
-                                          if(leaveUser.Status === "Reject" && buttonValue === "Reject"){
+                                          if(leaveUser.Status === "Approve" && buttonValue === "Approve"){
                                             return(
                                               <tr key={index}>
                                                 <td className='px-6 py-4 font-bold'>{leaveUser.LID}</td>
                                                 <td className='px-6 py-4 font-bold'>{leaveUser.Type}</td>
-                                                <p>hi</p>
+                                                <p>hi Approve</p>
                                               </tr>
                                             )
                                           }
