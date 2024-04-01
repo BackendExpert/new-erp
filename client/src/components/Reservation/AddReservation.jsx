@@ -64,7 +64,11 @@ const AddReservation = () => {
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Start Time : </label>
-                            <input type="time" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"/>
+                            <input type="time" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Start Time"/>
+                        </div>
+                        <div className="my-2">
+                            <label htmlFor="">Location and Route : </label>
+                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Location and Route"/>
                         </div>
                     </div>
                 </form>
