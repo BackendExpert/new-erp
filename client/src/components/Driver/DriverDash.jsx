@@ -4,6 +4,7 @@ import  secureLocalStorage  from  "react-secure-storage";
 import DashFooter from "../SummaryDash/dashFooter"
 import { useNavigate } from "react-router-dom";
 import OtherUserNav from '../NavBar/OtherUserNav'
+import DriverSide from "./DriverSide";
 
 const DriverDash = () => {
     const navigate = useNavigate()
@@ -13,7 +14,7 @@ const DriverDash = () => {
         return (
             <div className="bg-gray-200">
                 <div className="flex">
-                    
+                    <DriverSide />
                     <div className="w-full mx-2">
                     <OtherUserNav />
                     <div className="shadow-xl border-l-4 bg-white my-4 rounded py-4 px-6">
