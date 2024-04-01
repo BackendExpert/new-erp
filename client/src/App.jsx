@@ -60,6 +60,7 @@ import UserRoleRequest from "./components/RequestRole/UserRoleRequest"
 import PendingUesr from "./components/SuperAdmin/PendingUesr"
 import ApproveLeave from "./components/Leaves/ApproveLeave"
 import MyFullStats from "./components/SummaryDash/MyFullStats"
+import UpdateLeave from "./components/Leaves/UpdateLeave"
 
 export default function App() {
   return (
@@ -184,7 +185,7 @@ export default function App() {
         <Route path="/AddLeave" element={<PrivateRoute><AddLeave /></PrivateRoute>} />
         <Route path="/RecLeave" element={<PrivateRoute><RecLeave /></PrivateRoute>} />
         <Route path="/ApproveLeave" element={<PrivateRoute><ApproveLeave /></PrivateRoute>} />
-        <Route path="/UpdateLeave/:id" element={<PrivateRoute></PrivateRoute>} />
+        <Route path="/UpdateLeave/:id" element={<PrivateRoute><UpdateLeave /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
