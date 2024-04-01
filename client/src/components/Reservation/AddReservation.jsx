@@ -95,7 +95,11 @@ const AddReservation = () => {
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Travel Mode : </label>
+                            <select className="w-full h-12 border border-blue-400 rounded pl-2"
+                            >
+                                
 
+                            </select>
                         </div>
                     </div>
                 </form>
