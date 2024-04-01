@@ -150,7 +150,7 @@ const SummaryDash = () => {
     {id: 12, name:"Articles" , value: <CountUp end={article}/>, icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },
     {id: 13, name:"Request Leaves" , value: <CountUp end={reqLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },
     {id: 14, name:"Denied Leaves" , value: <CountUp end={DeniedLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
-    {id: 15, name:"Accept Leaves" , value: <CountUp end={DeniedLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
+    {id: 15, name:"Accept Leaves" , value: <CountUp end={ApproveLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
   ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
@@ -163,7 +163,7 @@ const SummaryDash = () => {
         DataList.map((data, index) => {
             //for SuperAdmin
             if(RoleUser === "SuperAdmin"){
-              if(data.id !== 13 && data.id !== 14){
+              if(data.id !== 13 && data.id !== 14 && data.id !== 15){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 my-5 cursor-pointer rounded duration-500 ${data.style}`}>
                       <span className="text-3xl" >{data.icons}</span>
@@ -175,7 +175,7 @@ const SummaryDash = () => {
             }
             //for Admin
             if(RoleUser === "Admin"){
-              if(data.id !== 13 && data.id !== 14){
+              if(data.id !== 13 && data.id !== 14 && data.id !== 15){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
@@ -198,7 +198,7 @@ const SummaryDash = () => {
               }
             }
             if(RoleUser === "TO"){
-              if(data.id === 5 || data.id === 13 || data.id === 14){
+              if(data.id === 5 || data.id === 13 || data.id === 14  || data.id === 15){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
