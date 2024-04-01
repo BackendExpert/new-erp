@@ -2151,11 +2151,10 @@ app.get('/CountMyLeavs/:id', (req, res) => {
 
 // UserViewLeaves
 app.get('/UserViewLeaves', (req, res) => {
-    // const UserEmail = req.body.id
-    const sql = "SELECT * FROM leaves"
-    const status = "Requested"
-
-    connection.query(sql, (err, result) => {
+    const UserEmail = req.params.id
+    const sql = "SELECT * FROM leaves Email = ?"
+    console.log(UserEmail)
+    connection.query(sql, [UserEmail], (err, result) => {
         if(err){
             return res.json({Error: "ERROR on SERVER"})
         }
