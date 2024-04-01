@@ -60,7 +60,6 @@ import UserRoleRequest from "./components/RequestRole/UserRoleRequest"
 import PendingUesr from "./components/SuperAdmin/PendingUesr"
 import ApproveLeave from "./components/Leaves/ApproveLeave"
 import MyFullStats from "./components/SummaryDash/MyFullStats"
-import UpdateLeave from "./components/Leaves/UpdateLeave"
 import DriverDash from "./components/Driver/DriverDash"
 
 export default function App() {
