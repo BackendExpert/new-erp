@@ -109,7 +109,7 @@ const SummaryDash = () => {
 
       try {
         const CountLeavesReq = await axios.get('http://localhost:8081/CountReqLeaves');
-        setReqleaves(CountLeavesReq.data.art);
+        setReqleaves(CountLeavesReq.data.ReqLeave);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -132,7 +132,7 @@ const SummaryDash = () => {
     {id: 10, name:"Thesis" , value: <CountUp end={thesis}/>, icons: <Icons name="journal" size="large"/>, style:"hover:border-purple-500 hover:text-purple-600" },
     {id: 11, name:"Magazine" , value: <CountUp end={magazine}/>, icons: <Icons name="newspaper" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
     {id: 12, name:"Articles" , value: <CountUp end={article}/>, icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },
-    {id: 13, name:"Request Leaves" , value: <CountUp end={article}/>, icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },
+    {id: 13, name:"Request Leaves" , value: <CountUp end={reqLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },
   ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
