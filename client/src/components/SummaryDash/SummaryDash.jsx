@@ -24,6 +24,7 @@ const SummaryDash = () => {
   const [thesis, setThesis] = useState(0);
   const [magazine, setMagazine] = useState(0);
   const [article, setArticle] = useState(0);
+  const [reqLeaves, setReqleaves] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -102,6 +103,13 @@ const SummaryDash = () => {
       try {
         const ArticleCount = await axios.get('http://localhost:8081/CountArticles');
         setArticle(ArticleCount.data.art);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+
+      try {
+        const CountLeavesReq = await axios.get('http://localhost:8081/CountReqLeaves');
+        setReqleaves(CountLeavesReq.data.art);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
