@@ -58,7 +58,10 @@ const AddReservation = () => {
             <div className="my-4">
                 <form>
                     <div className="lg:grid grid-cols-3 gap-4">
-                        
+                        <div className="my-2">
+                            <label htmlFor="">Employee Name : </label>
+                            <input type="text" name="" id="" className="" />
+                        </div>
                     </div>
                 </form>
             </div>
