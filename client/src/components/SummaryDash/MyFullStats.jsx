@@ -69,7 +69,7 @@ const MyFullStats = () => {
         const [viewLeaves, SetviewLeaves] = useState([])
         useEffect(() => {
           axios.get('http://localhost:8081/UserViewLeaves/' + id)
-            .then(res => SetButtonValue(res.data))
+          .then(res => SetviewLeaves(res.data))
           .catch(err => console.log(err))
         }, [])
     
@@ -177,9 +177,9 @@ const MyFullStats = () => {
     }
     else{
         alert("Don't Try to view Other's Information")
-        localStorage.clear();
-        window.location.reload()
-        navigate('/')
+        // localStorage.clear();
+        // window.location.reload()
+        // navigate('/')
     }
 
 }

@@ -2150,7 +2150,7 @@ app.get('/CountMyLeavs/:id', (req, res) => {
 })
 
 // UserViewLeaves
-app.get('/UserViewLeaves', (req, res) => {
+app.get('/UserViewLeaves/:id', (req, res) => {
     const UserEmail = req.params.id
     const sql = "SELECT * FROM leaves Email = ?"
     console.log(UserEmail)
