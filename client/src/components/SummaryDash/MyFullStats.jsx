@@ -98,7 +98,7 @@ const MyFullStats = () => {
             //count for my Approve Leave
             try {
               const CountMyApproveLeav = await axios.get('http://localhost:8081/CountAppLeave/' + EmailUser);
-              SetapproveLeave(CountMyApproveLeav.data.MyRejLeave);
+              SetapproveLeave(CountMyApproveLeav.data.MyAppLeave);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
@@ -135,7 +135,7 @@ const MyFullStats = () => {
                           
                           <div className="flex">
                             My Approve Approve 
-                            <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
+                            <p className="mx-4 text-xl font-bold"><CountUp end={approveLeave} /></p>
                           </div>                          
                         </div>
                                                                      
