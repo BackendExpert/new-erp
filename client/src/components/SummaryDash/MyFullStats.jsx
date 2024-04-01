@@ -113,11 +113,14 @@ const MyFullStats = () => {
                                     {
                                       viewLeaves.map((leaveUser, index) => {
                                         if(leaveUser.Email === EmailUser){
-                                          return(
-                                            <tr key={index}>
-                                              <td className='px-6 py-4 font-bold'>{leaveUser.LID}</td>
-                                            </tr>
-                                          )
+                                          if(leaveUser.Status === "Requested"){
+                                            return(
+                                              <tr key={index}>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.LID}</td>
+                                                <td className='px-6 py-4 font-bold'>{leaveUser.Type}</td>
+                                              </tr>
+                                            )
+                                          }
                                         }
                                         else{
                                           // localStorage.clear();
