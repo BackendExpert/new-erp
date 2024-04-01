@@ -2169,15 +2169,15 @@ app.get('/UserViewLeaves', (req, res) => {
 app.get('/CountReqLeaves', (req, res) => {
     const sql = "SELECT COUNT(LID) AS ReqLeave FROM leaves WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = ""
-    connection.query(sql, [CurrentEmail], (error, results) => {
+    const status = "Requested"
+    connection.query(sql, [status], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
         return;
       }
   
-      res.json({ le: results[0].le }); // Send count in JSON format
+      res.json({ ReqLeave: results[0].ReqLeave }); // Send count in JSON format
     });
 })
 
