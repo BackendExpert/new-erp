@@ -61,6 +61,7 @@ import PendingUesr from "./components/SuperAdmin/PendingUesr"
 import ApproveLeave from "./components/Leaves/ApproveLeave"
 import MyFullStats from "./components/SummaryDash/MyFullStats"
 import UpdateLeave from "./components/Leaves/UpdateLeave"
+import DriverDash from "./components/Driver/DriverDash"
 
 export default function App() {
   return (
@@ -129,6 +130,9 @@ export default function App() {
 
         {/* RADash */}
         <Route path="/RADash" element={<PrivateRoute><RADash /></PrivateRoute>} />
+
+        {/* DriverDash */}
+        <Route path="/DriverDash" element={<PrivateRoute><DriverDash /></PrivateRoute>} />
 
         {/* MyFullStats */}
         <Route path="/MyFullStats/:id" element={<PrivateRoute><MyFullStats /></PrivateRoute>} />
