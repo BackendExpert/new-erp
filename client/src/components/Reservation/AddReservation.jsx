@@ -56,7 +56,11 @@ const AddReservation = () => {
             <button onClick={headleBack} className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
 
             <div className="my-4">
-                
+                <form>
+                    <div className="lg:grid grid-cols-3 gap-4">
+                        
+                    </div>
+                </form>
             </div>
         </div>
     </div>
