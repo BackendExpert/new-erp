@@ -81,15 +81,24 @@ const MyFullStats = () => {
 
         useEffect(() => {
           const fetchData = async () => {
+            //count for my Request Leave
             try {
               const CountMyRequestLeav = await axios.get('http://localhost:8081/CountMyReqLeave/' + EmailUser);
               SetrequestLeave(CountMyRequestLeav.data.MyRecLeave);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
+            //count for my Reject Leave
             try {
               const CountMyRejectLeav = await axios.get('http://localhost:8081/CountMyRejLeave/' + EmailUser);
               SetRejectLeave(CountMyRejectLeav.data.MyRejLeave);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+            //count for my Approve Leave
+            try {
+              const CountMyApproveLeav = await axios.get('http://localhost:8081/CountAppLeave/' + EmailUser);
+              SetapproveLeave(CountMyApproveLeav.data.MyRejLeave);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
@@ -119,7 +128,7 @@ const MyFullStats = () => {
                           
                           <div className="flex">
                             My Reject Reject
-                            <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
+                            <p className="mx-4 text-xl font-bold"><CountUp end={rejectLeave} /></p>
                           </div>
                         </div>
                         <div onClick={() => HeadleButtonClick('Approve')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
