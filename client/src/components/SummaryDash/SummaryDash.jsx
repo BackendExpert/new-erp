@@ -124,6 +124,7 @@ const SummaryDash = () => {
     {id: 10, name:"Thesis" , value: <CountUp end={thesis}/>, icons: <Icons name="journal" size="large"/>, style:"hover:border-purple-500 hover:text-purple-600" },
     {id: 11, name:"Magazine" , value: <CountUp end={magazine}/>, icons: <Icons name="newspaper" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
     {id: 12, name:"Articles" , value: <CountUp end={article}/>, icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },
+    {id: 13, name:"Articles" , value: <CountUp end={article}/>, icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },
   ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
