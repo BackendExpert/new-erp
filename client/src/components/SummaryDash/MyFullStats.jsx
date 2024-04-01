@@ -111,7 +111,7 @@ const MyFullStats = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {
+                                    {/* {
                                       viewLeaves.map((leaveUser, index) => {
                                         if(leaveUser.Email === EmailUser){
                                           if(leaveUser.Status === "Requested" && buttonValue === "Requested"){
@@ -167,7 +167,7 @@ const MyFullStats = () => {
                                           navigate('/')                                          
                                         }
                                       })
-                                    }
+                                    } */}
                                 </tbody>
                             </table>
                         </div>
