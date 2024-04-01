@@ -26,6 +26,7 @@ const SummaryDash = () => {
   const [article, setArticle] = useState(0);
   const [reqLeaves, setReqleaves] = useState(0);
   const [DeniedLeaves, SetDeniedLeaves] = useState(0);
+  const [ApproveLeaves, SetApproveLeaves] = useState(0)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -124,7 +125,7 @@ const SummaryDash = () => {
 
       try {
         const CountLeaveApprove = await axios.get('http://localhost:8081/CountApproveLeave');
-        SetDeniedLeaves(CountLeaveDenied.data.DenLeave);
+        SetApproveLeaves(CountLeaveApprove.data.DenLeave);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
