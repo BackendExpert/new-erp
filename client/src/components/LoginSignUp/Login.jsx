@@ -94,6 +94,9 @@ const Login = () => {
                 else if(res.data.CheckRole[0].role === "PDFellow"){
                     navigate('/PDFellow');
                 }
+                else if(res.data.CheckRole[0].role === "Driver"){
+                    navigate('/PDFellow');
+                }
                 else{
                     alert("ERROR");
                 }
