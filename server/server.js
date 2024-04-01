@@ -2198,5 +2198,21 @@ app.get('/CountDeniedLeaves', (req, res) => {
     });
 })
 
+// CountApproveLeave
+app.get('/CountApproveLeave', (req, res) => {
+    const sql = "SELECT COUNT(LID) AS ApproveLeaves FROM leaves WHERE Status = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "Denied"
+    connection.query(sql, [status], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ ApproveLeaves: results[0].ApproveLeaves }); // Send count in JSON format
+    });
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
