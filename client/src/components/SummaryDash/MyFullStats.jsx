@@ -72,7 +72,14 @@ const MyFullStats = () => {
           .then(res => SetviewLeaves(res.data))
           .catch(err => console.log(err))
         }, [])
-   
+        
+        useEffect(() => {
+          const fetchData = async () => {
+
+          }
+          fetchData();
+        }, []);
+
 
     if(id === EmailUser){
         return (
