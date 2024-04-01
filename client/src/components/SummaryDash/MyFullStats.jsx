@@ -119,7 +119,18 @@ const MyFullStats = () => {
                                             ViewuserLeaves.map((leaves, index) => {
                                               return (
                                                 <tr key={index}>
-                                                  
+                                                  <td className='px-6 py-4 font-bold'>{leaves.LID}</td>
+                                                  <td className='px-6 py-4 font-bold'>{leaves.Name}</td>
+                                                  <td className='px-6 py-4 font-bold'>{leaves.Email}</td>
+                                                  <td className='px-6 py-4 font-bold'>{leaves.Type}</td>
+                                                  <td className='px-6 py-4 font-bold'>{leaves.JobCategory}</td>
+                                                  <td className='px-6 py-4 font-bold'>{leaves.StartDate}</td>
+                                                  <td className='px-6 py-4 font-bold'>{leaves.StartTime}</td>
+                                                  <td className='px-6 py-4 font-bold'>{leaves.EndDate}</td>
+                                                  <td className='px-6 py-4 font-bold'>{leaves.Duration}</td>
+                                                  <td className='px-6 py-4 font-bold'>
+                                                      <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leaves.Status}</span>
+                                                  </td>                                       
                                                 </tr>
                                               )
                                             })
