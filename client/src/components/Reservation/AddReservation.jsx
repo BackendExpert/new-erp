@@ -83,6 +83,11 @@ const AddReservation = () => {
                             <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter HOD Email"
                             />
                         </div>
+                        <div className="my-2">
+                            <label htmlFor="">Start Date : </label>
+                            <input type="date" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Start Date"
+                            />
+                        </div>
                     </div>
                 </form>
             </div>
