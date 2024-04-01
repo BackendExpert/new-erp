@@ -2165,5 +2165,10 @@ app.get('/UserViewLeaves', (req, res) => {
     })
 })
 
+// CountReqLeaves
+app.get('/CountReqLeaves', (req, res) => {
+    
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
