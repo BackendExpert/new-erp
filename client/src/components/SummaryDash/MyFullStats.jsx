@@ -81,7 +81,7 @@ const MyFullStats = () => {
                     <h1 className="text-xl font-semibold">My All Stats</h1>        
                     <hr className="mb-4" />
                     <button onClick={headleBack} className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
-                    <div className="flex pl-2 my-4">
+                    <div className="lg:flex pl-2 my-4 my-2">
                         <div onClick={() => HeadleButtonClick('Requested')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           My Request Leaves
                         </div>
@@ -114,28 +114,17 @@ const MyFullStats = () => {
                                 <tbody>
                                     {
                                       (() => {
-                                        if(buttonValue === "Requested"){
+                                        if(buttonValue === 'Requested'){
                                           return (
-                                            ViewuserLeaves.map((leaves, index) => {
+                                            ViewuserLeaves.map((leave, index) => {
                                               return (
                                                 <tr key={index}>
-                                                  <td className='px-6 py-4 font-bold'>{leaves.LID}</td>
-                                                  <td className='px-6 py-4 font-bold'>{leaves.Name}</td>
-                                                  <td className='px-6 py-4 font-bold'>{leaves.Email}</td>
-                                                  <td className='px-6 py-4 font-bold'>{leaves.Type}</td>
-                                                  <td className='px-6 py-4 font-bold'>{leaves.JobCategory}</td>
-                                                  <td className='px-6 py-4 font-bold'>{leaves.StartDate}</td>
-                                                  <td className='px-6 py-4 font-bold'>{leaves.StartTime}</td>
-                                                  <td className='px-6 py-4 font-bold'>{leaves.EndDate}</td>
-                                                  <td className='px-6 py-4 font-bold'>{leaves.Duration}</td>
-                                                  <td className='px-6 py-4 font-bold'>
-                                                      <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leaves.Status}</span>
-                                                  </td>                                       
+                                                  
                                                 </tr>
                                               )
                                             })
                                           )
-                                        }
+                                      }
                                       })()
                                     }
                                 </tbody>
