@@ -107,8 +107,7 @@ const MyFullStats = () => {
                                         <th scope='col' className='px-6 py-3'>Starting Time</th>
                                         <th scope='col' className='px-6 py-3'>End Date</th>
                                         <th scope='col' className='px-6 py-3'>No. of Days</th>
-                                        <th scope='col' className='px-6 py-3'>Status</th>
-                                        <th scope='col' className='px-6 py-3'>Action</th>                                        
+                                        <th scope='col' className='px-6 py-3'>Status</th>                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -126,12 +125,7 @@ const MyFullStats = () => {
                                                 <td className='px-6 py-4 font-bold'>{leaveUser.Duration}</td>
                                                 <td className='px-6 py-4 font-bold'>
                                                   <span className="py-2 px-4 rounded bg-yellow-500 text-white">{leaveUser.Status}</span>
-                                                </td>  
-                                                <td className='px-6 py-4 font-bold'>
-                                                  <Link to={'/UpdateLeave/' + leaveUser.LID}>
-                                                    <button className="py-2 px-8 rounded border border-blue-500 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Update</button>
-                                                  </Link>
-                                                </td>     
+                                                </td>    
                                               </tr>
                                             )
                                           }
