@@ -2149,5 +2149,20 @@ app.get('/CountMyLeavs/:id', (req, res) => {
     });
 })
 
+// UserViewLeaves
+app.get('/UserViewLeaves/:id', (req, res) => {
+    const UserEmail = req.body.id
+    const sql = "SELECT * FROM leaves WHERE email = ?"
+
+    connection.query(sql, [UserEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
