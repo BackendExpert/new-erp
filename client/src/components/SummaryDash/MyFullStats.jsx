@@ -118,7 +118,9 @@ const MyFullStats = () => {
                                           return (
                                             ViewuserLeaves.map((leaves, index) => {
                                               return (
-                                                
+                                                <tr key={index}>
+                                                  
+                                                </tr>
                                               )
                                             })
                                           )
