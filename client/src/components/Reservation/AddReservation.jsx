@@ -121,6 +121,11 @@ const AddReservation = () => {
                             <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Other Travellers"
                             />
                         </div>
+                        <div className="my-2">
+                            <label htmlFor="">Division : </label>
+                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purpose"
+                            />
+                        </div>
                     </div>
                 </form>
             </div>
