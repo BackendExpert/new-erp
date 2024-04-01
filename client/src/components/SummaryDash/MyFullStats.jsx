@@ -108,10 +108,18 @@ const MyFullStats = () => {
                           </div>
                         </div>
                         <div onClick={() => HeadleButtonClick('Reject')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
-                          My Reject Reject
+                          
+                          <div className="flex">
+                            My Reject Reject
+                            <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
+                          </div>
                         </div>
                         <div onClick={() => HeadleButtonClick('Approve')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
-                          My Approve Approve 
+                          
+                          <div className="flex">
+                            My Approve Approve 
+                            <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
+                          </div>                          
                         </div>
                                                                      
                     </div>
