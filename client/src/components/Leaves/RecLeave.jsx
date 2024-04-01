@@ -41,7 +41,7 @@ const RecLeave = () => {
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("The Leave Request is Recommended")
-                navigate('/to')
+                window.location.reload()
             }
             else{
                 alert(res.data.Error)
@@ -54,7 +54,7 @@ const RecLeave = () => {
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("The Leave Request is Denied")
-                navigate('/to')
+                window.location.reload()
             }
             else{
                 alert(res.data.Error)
