@@ -95,7 +95,7 @@ const Login = () => {
                     navigate('/PDFellow');
                 }
                 else if(res.data.CheckRole[0].role === "Driver"){
-                    navigate('/PDFellow');
+                    navigate('/DriverDash');
                 }
                 else{
                     alert("ERROR");
