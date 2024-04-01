@@ -53,13 +53,9 @@ const Mystats = () => {
                             StatsData.map((stats) => {
                                 return (
                                     <div className={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${stats.style}`}>
-                                        <div className="flex justify-between">
-                                            <div className="flex">
-                                                <span>{stats.icon}</span>
-                                                <p className="pl-4 pt-2">{stats.name}</p>
-                                            </div>
-                                            <p className="text-2xl font-semibold pr-4 pt-2">{stats.value}</p>
-                                        </div>
+                                        <span className="text-3xl" >{data.icons}</span>
+                                        <p className="text-xl py-2">{data.name}</p>
+                                        <p className="text-2xl font-bold">{data.value}</p>
                                     </div>
                                 )
                             })
