@@ -19,7 +19,7 @@ const AddUsers = () => {
         axios.post('http://localhost:8081/AddSuperAdmin', AdminData)
         .then(res => {
             if(res.data.Status === "Success"){
-                alert("Admin or SuperAdmin Added Successful")
+                alert("User Added Successful")
                 navigate('/superAdmin')
             }
             else{
