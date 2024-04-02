@@ -62,6 +62,7 @@ const AddEmployee = () => {
         formdata.append('gender', empData.gender);
         formdata.append('relig', empData.relig);
         formdata.append('image', empData.image); 
+        formdata.append('image', empData.image); 
 
         axios.post('http://localhost:8081/createEmp', formdata)
         .then(res => {
@@ -93,6 +94,12 @@ const AddEmployee = () => {
                             <div className="my-4 lg:grid grid-cols-3 gap-2">
                                 <div className="">
                                     <label htmlFor="">Employee No</label>
+                                    <input type="text" name="eid" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Employee ID" 
+                                    onChange={e => SetEmpData({...empData, eid:e.target.value})}/>
+                                    <p className="text-red-500">(Integer type, max length 11, unique)</p>
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Division No</label>
                                     <input type="text" name="eid" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Employee ID" 
                                     onChange={e => SetEmpData({...empData, eid:e.target.value})}/>
                                     <p className="text-red-500">(Integer type, max length 11, unique)</p>
