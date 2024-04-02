@@ -51,7 +51,20 @@ const AddReservation = () => {
 
       //send data to backend
       const [AddRese, SetAddRese] = useState({
-        
+        StartDate:'',
+        Time:'',
+        Location:'',
+        HoDEmail:'',
+        Passengers:'',
+        Name:'',
+        EndDate:'',
+        Mode:'',
+        Email:'',
+        Designation:'',
+        Funding:'',     
+        Division:'',
+        Purpose:'',
+        Vehicle:''
       })
 
       const headleSubmit = (e) => {
