@@ -62,7 +62,7 @@ const AddEmployee = () => {
         formdata.append('gender', empData.gender);
         formdata.append('relig', empData.relig);
         formdata.append('image', empData.image); 
-        formdata.append('image', empData.image); 
+        formdata.append('image', empData.dno); 
 
         axios.post('http://localhost:8081/createEmp', formdata)
         .then(res => {
