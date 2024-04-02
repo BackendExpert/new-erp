@@ -1069,7 +1069,7 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
             return res.json({Error: "Employee Already Exists...!"});
         }
         else{
-            const sql = "INSERT INTO employee (eid, email, image, designation, dno, create_at, update_at) VALUES (?)";
+            const sql = "INSERT INTO employee (eid, email, image, category, designation, dno, create_at, update_at) VALUES (?)";
          //    const sql = "INSERT INTO employee VALUES (?)"
             const create_at = new Date();
             const update_at = new Date();
@@ -1078,6 +1078,7 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
              req.body.eid,
              req.body.email,
              req.file.filename,
+             req.body.category,
              req.body.designation,
              req.body.dno,
              create_at,
