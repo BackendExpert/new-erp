@@ -84,21 +84,23 @@ const Profile = () => {
                 </button>
 
         </div>
-
-        <div className="">
-          {
-            profileData.map((profile, index) =>{
-              return (
-                <div className="my-5">
-                  <p className="text-xl py-4">Username : {profile.username}</p>
-                  <p className="text-xl py-4">Email : {profile.email}</p>
-                  <p className="text-xl py-4">Role : {profile.role}</p>                
-                  
-                </div>
-              )
-            })
-          }
+        <div className="lg:grid grid-cols-2 gap-4">
+          <div className="">
+            {
+              profileData.map((profile, index) =>{
+                return (
+                  <div className="my-5">
+                    <p className="text-xl py-4">Username : {profile.username}</p>
+                    <p className="text-xl py-4">Email : {profile.email}</p>
+                    <p className="text-xl py-4">Role : {profile.role}</p>                
+                    
+                  </div>
+                )
+              })
+            }
+          </div>
         </div>
+
         <div className="">
           <p className="">Your Data As Employee</p>
         </div>
