@@ -599,7 +599,8 @@ app.post('/AddSuperAdmin', (req, res) => {
         var createTime = new Date();
         var updateTime = new Date();
         const is_active = 1;
-        const userRole = "User"
+
+        
     })
         
 
