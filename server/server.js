@@ -1027,8 +1027,21 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
         }
    })
 
-
 });
+
+// GetDiviNo
+app.get('/GetDiviNo', (req, res) => {
+    const sql = "SELECT * FROM division";
+
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
 
 app.get('/ReadEmployee', (req, res) => {
     const sql = "SELECT * from employee";
