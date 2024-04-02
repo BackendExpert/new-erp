@@ -589,8 +589,10 @@ app.get('/MyEmpDataView/:id', (req, res) => {
 // AddSuperAdmin
 app.post('/AddSuperAdmin', (req, res) => {
     console.log(req.body)
+    const is_active = 1
+    
 
-    const checkUser = "SELECT * FROM users WHERE email = ?"
+    const sql = "INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?)"
     connection.query(sql, [req.body.email], (err, result) => {
         if(err){
             return res.json({Error: "Error on Server"})
