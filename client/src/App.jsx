@@ -63,7 +63,6 @@ import MyFullStats from "./components/SummaryDash/MyFullStats"
 import DriverDash from "./components/Driver/DriverDash"
 import AddReservation from "./components/Reservation/AddReservation"
 import AddUsers from "./components/SuperAdmin/AddUsers"
-import Reservation from "./components/Reservation/Reservation"
 
 export default function App() {
   return (
