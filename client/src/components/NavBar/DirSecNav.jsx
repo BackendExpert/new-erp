@@ -9,7 +9,7 @@ const DirSecNav = () => {
 
     const navLists = [
         {name: "Recommend Leave", link: "/RecLeave"},
-        {name: "Recommend Reservations", link: "/Reservation"},
+        {name: "Recommend Reservations", link: ""},
         {name: "Recommend SRN", link: ""},
         {name: "Recommend Work Requests", link: ""},
         {name: "Recommend Gatepass", link: ""},
