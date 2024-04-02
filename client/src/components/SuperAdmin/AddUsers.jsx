@@ -11,6 +11,7 @@ const AddUsers = () => {
         username: '',
         email: '',
         password: '',
+        role: '',
     })
 
     const headleSubmit = (e) => {
@@ -58,11 +59,12 @@ const AddUsers = () => {
                                 <div className="">
                                     <label htmlFor="">User Role</label>
                                     <select name="" id="" className="w-full h-12 border border-blue-400 rounded pl-2"
-                                    onChange={e => SetEmpData({...empData, gender:e.target.value})}>
-                                        <option>Select Option</option>
-                                        <option value="Male">Admin</option>
-                                        <option value="Female">SuperAdmin</option>
-                                        <option value="Other">Other</option>
+                                    onChange={e => SetAdminData({...AdminData, role:e.target.value})}>
+                                        <option>Select Option</option>                               
+                                        <option value="Director">Director</option>
+                                        <option value="Secretary">Secretary</option>
+                                        <option value="SuperAdmin">SuperAdmin</option>
+                                        <option value="Admin">Admin</option>
                                     </select>
                                 </div>
                             </div>
