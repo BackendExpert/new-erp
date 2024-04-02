@@ -102,7 +102,7 @@ const AddEmployee = () => {
                                     <label htmlFor="">Division No</label>
                                     <input type="text" name="eid" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Division ID" 
                                     onChange={e => SetEmpData({...empData, eid:e.target.value})}/>
-                                    <p className="text-red-500">(Integer type, max length 11, unique)</p>
+                                    <p className="text-red-500">(Integer type, max length 11)</p>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Initials</label>
