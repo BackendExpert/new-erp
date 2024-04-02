@@ -600,19 +600,33 @@ app.post('/AddSuperAdmin', (req, res) => {
         var updateTime = new Date();
         const is_active = 1;
 
-        
-    })
-        
-
-    const sql = "INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?)"
-    connection.query(sql, [req.body.email], (err, result) => {
-        if(err){
-            return res.json({Error: "Error on Server"})
-        }
-        else{
-            return res.json({Status: "Success"})
-        }
-    })
+        const sql = "INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?)"
+        const values = [
+            req.body.username,
+            req.body.email,
+            req.body.role,
+            hashPass,
+            createTime,
+            updateTime,
+            is_active
+        ]
+        connection.query(sql, [values], (err, result) => {
+            if(err){
+                return res.json({Error: "Error on Server"})
+            }
+            else{
+                const updateEmp = "UPDATE employee SET category = ? WHERE email = ?"
+                connection.query(updateEmp, [req.body.role, req.body.email], (err, result) => {
+                    if(err){
+                        return res.json({Error: "Error on Server"})
+                    }
+                    else{
+                        return res.json({Status: "Success"})
+                    }
+                })
+            }
+        })
+    })      
 })
 
 //---------------------------- LIBRARY Start ---------------------------------------------------------
