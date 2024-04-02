@@ -7,10 +7,16 @@ const AddUsers = () => {
     const navigate = useNavigate()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    
-  return (
-    <div>AddUsers</div>
-  )
+    if(RoleUser === "SuperAdmin"){
+        return (
+            <div>AddUsers</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
 }
 
 export default AddUsers
