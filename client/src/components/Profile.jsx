@@ -25,12 +25,13 @@ const Profile = () => {
 
     // my employee data
     const [myEmpData, SetmyEmpData] = useState({
-      
+
     })
 
     useEffect(() => {
       axios.get('http://localhost:8081/MyEmpDataView/' + EmailUser)
-      
+      .then(res => SetmyEmpData(res.data))
+      .catch(err => console.log(err))
     }, [])
 
     //go back according to login user
