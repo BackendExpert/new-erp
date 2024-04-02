@@ -165,12 +165,12 @@ app.post('/UserRoleRequest/:id', (req, res) => {
             return res.json({Error: "You Already Request"})
         }
         else{
-            const empcheck = "SELECT * FROM employee WHERE eid = ? && email = ?"
-            connection.query(empcheck, [req.body.empID, userEmail], (err, result) => {
+            const empcheck = "SELECT * FROM employee WHERE eid = ? && category = ? && email = ?"
+            connection.query(empcheck, [req.body.empID, req.body.userRole , userEmail], (err, result) => {
                 if (err) throw err
 
                 if (result.length == 0){
-                    return res.json({Error: "Request Cannot be Continue, The Added Employee ID and Email not exists in System"})
+                    return res.json({Error: "Request Cannot be Continue, The Added Employee ID and Email not exists in System or You Request As a other User"})
                 }
                 else{
                     const userRole = req.body.userRole
