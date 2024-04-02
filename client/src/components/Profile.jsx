@@ -86,6 +86,9 @@ const Profile = () => {
         </div>
         <div className="lg:grid grid-cols-2 gap-4">
           <div className="">
+            <p className="">Your Data As Employee</p>
+          </div>
+          <div className="">
             {
               profileData.map((profile, index) =>{
                 return (
@@ -101,9 +104,7 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className="">
-          <p className="">Your Data As Employee</p>
-        </div>
+
        
       </div>
     </div>
