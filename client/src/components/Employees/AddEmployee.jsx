@@ -182,8 +182,6 @@ const AddEmployee = () => {
                                     <select className="w-full h-12 border border-blue-400 rounded pl-2"
                                     onChange={e => SetEmpData({...empData, category:e.target.value})}>
                                         <option>Select Option</option>
-                                        <option value="Director">Director</option>
-                                        <option value="Secretary">Secretary</option>
                                         <option value="HOD">Head</option>
                                         <option value="TO">Transport Office</option>
                                         <option value="Librarian">Librarian</option>
