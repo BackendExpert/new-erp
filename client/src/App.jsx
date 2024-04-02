@@ -62,6 +62,7 @@ import ApproveLeave from "./components/Leaves/ApproveLeave"
 import MyFullStats from "./components/SummaryDash/MyFullStats"
 import DriverDash from "./components/Driver/DriverDash"
 import AddReservation from "./components/Reservation/AddReservation"
+import AddUsers from "./components/SuperAdmin/AddUsers"
 
 export default function App() {
   return (
@@ -81,6 +82,8 @@ export default function App() {
         <Route path="/Unauthorizedusers/:id" element={<PrivateRoute><UsersUnAccess /></PrivateRoute>} />
         {/* UserRoleRequest */}
         <Route path="/UserRoleRequest" element={<PrivateRoute><UserRoleRequest /></PrivateRoute>} />
+        {/* AddUsers */}
+        <Route path="AddUsers" element={<PrivateRoute><AddUsers /></PrivateRoute>} />
 
         {/* Admin */}
         <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
