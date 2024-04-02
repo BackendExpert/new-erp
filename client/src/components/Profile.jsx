@@ -23,6 +23,16 @@ const Profile = () => {
       .catch(err => console.log(err))
     }, [])
 
+    // my employee data
+    const [myEmpData, SetmyEmpData] = useState({
+      
+    })
+
+    useEffect(() => {
+      axios.get('http://localhost:8081/MyEmpDataView/' + EmailUser)
+      
+    }, [])
+
     //go back according to login user
     const headleBack = () => {
       if(RoleUser === "Director"){
