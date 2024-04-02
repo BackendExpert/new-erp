@@ -95,13 +95,6 @@ const AddEmployee = () => {
                     <div className="flex">
                         <button onClick={headleBack} className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </div>
-                    {
-                        divisionData.map((divi => {
-                            return (
-                                <p className="">{divi.did}</p>
-                            )
-                        })) 
-                    }
                     <div className="my-4">
                         <form onSubmit={headleEmpSubmit}>
                             <div className="my-4 lg:grid grid-cols-3 gap-2">
