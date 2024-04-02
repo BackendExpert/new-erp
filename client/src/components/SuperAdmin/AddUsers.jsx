@@ -7,6 +7,17 @@ const AddUsers = () => {
     const navigate = useNavigate()
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
+    const [AdminData, SetAdminData] = useState({
+        username: '',
+        email: '',
+        password: '',
+    })
+
+    const headleSubmit = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:8081/AddSuperAdmin', AdminData)
+    }
+
     if(RoleUser === "SuperAdmin"){
         return (
             <div className="bg-gray-200 py-4">
@@ -18,7 +29,7 @@ const AddUsers = () => {
                     </Link>
 
                     <div className="my-4">
-                        <form >
+                        <form  onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="">
                                     <label htmlFor="">Username : </label>
