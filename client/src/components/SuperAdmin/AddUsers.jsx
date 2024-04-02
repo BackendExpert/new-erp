@@ -22,7 +22,18 @@ const AddUsers = () => {
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="">
                                     <label htmlFor="">Username : </label>
-                                    <input type="text" name="" id="" className="" />
+                                    <input type="text" className="w-full h-12 border border-blue-400 rounded pl-2" required placeholder="Username"
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Email : </label>
+                                    <input type="email" className="w-full h-12 border border-blue-400 rounded pl-2" required placeholder="Email"
+                                    />
+                                </div>
+                                <div className="">
+                                    <label htmlFor="">Password : </label>
+                                    <input type="password" className="w-full h-12 border border-blue-400 rounded pl-2" required placeholder="Password"
+                                    />
                                 </div>
                             </div>
                         </form>
