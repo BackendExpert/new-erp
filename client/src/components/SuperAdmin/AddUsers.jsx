@@ -55,6 +55,16 @@ const AddUsers = () => {
                                     <input type="password" className="w-full h-12 border border-blue-400 rounded pl-2" required placeholder="Password"
                                     onChange={e => SetAdminData({...AdminData, password:e.target.value})}/>
                                 </div>
+                                <div className="">
+                                    <label htmlFor="">User Role</label>
+                                    <select name="" id="" className="w-full h-12 border border-blue-400 rounded pl-2"
+                                    onChange={e => SetEmpData({...empData, gender:e.target.value})}>
+                                        <option>Select Option</option>
+                                        <option value="Male">Admin</option>
+                                        <option value="Female">SuperAdmin</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
                             </div>
                             <div className="">
                                 <button type="submit" className="my-6 rounded px-16 py-2 border border-green-500 text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">
