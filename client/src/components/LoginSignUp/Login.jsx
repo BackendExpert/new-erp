@@ -80,7 +80,8 @@ const Login = () => {
                     navigate('/accountant');
                 }
                 else if(res.data.CheckRole[0].role === "User"){
-                    navigate('/user');
+                    // navigate('/user');
+                    
                 }
                 else if(res.data.CheckRole[0].role === "Scientist"){
                     navigate('/ScientistsDash');
