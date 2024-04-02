@@ -78,6 +78,17 @@ const UserRoleRequest = () => {
                     <div className="flex my-4">
                         <button onClick={() => HeadleButtonClick('Request')} className="py-2 px-6 ml-2 border border-yellow-500 text-yellow-500 rounded duration-500 hover:bg-yellow-500 hover:text-white hover:shadow-xl">Request</button>
                         <button onClick={() => HeadleButtonClick('Accept')} className="py-2 px-6 ml-2 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Accept</button>
+
+                        {
+                            (() => {
+
+                            })()
+                        }                   
+
+                        <Link>
+                            <button className="py-2 px-6 ml-2 border border-yellow-500 text-yellow-500 rounded duration-500 hover:bg-yellow-500 hover:text-white hover:shadow-xl">Add SuperAdmin/Admin</button>
+                        </Link>
+                    
                     </div>
                     
 
