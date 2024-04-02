@@ -9,7 +9,7 @@ const ToSide = () => {
     const navigate = useNavigate();
 
     const sidemenu = [
-        {name: "Reservations",  link: "/Reservation", icon: <Icons name="document-text" size="large"></Icons>},
+        {name: "Reservations",  link: "", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Process Request",  link: "#", icon: <Icons name="refresh-circle" size="large"></Icons>},        
         {name: "Vehicle",  link: "/Vehicles", icon: <Icons name="car" size="large"></Icons>},
         {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
