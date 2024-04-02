@@ -77,10 +77,11 @@ const AddEmployee = () => {
             }
         })
     }
-    const [DivisionNo, SetDivisionNo] = useState([])
+    const [divisionData, SetdivisionData] = useState([]);
+
     useEffect(() => {
-        axios.get('http://localhost:80801/GetDiviNo')
-        .then(res => SetDivisionNo(res.data))
+        axios.get('http://localhost:8081/DivisionView')
+        .then(res => SetdivisionData(res.data))
         .catch(err => console.log(err))
     }, [])
 
@@ -94,7 +95,13 @@ const AddEmployee = () => {
                     <div className="flex">
                         <button onClick={headleBack} className="border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </div>
-
+                    {
+                        divisionData.map((divi => {
+                            return (
+                                <p className="">{divi.did}</p>
+                            )
+                        })) 
+                    }
                     <div className="my-4">
                         <form onSubmit={headleEmpSubmit}>
                             <div className="my-4 lg:grid grid-cols-3 gap-2">
@@ -108,16 +115,14 @@ const AddEmployee = () => {
                                     <label htmlFor="">Division No</label>
                                     <select className="w-full h-12 border border-blue-400 rounded pl-2"
                                     onChange={e => SetEmpData({...empData, designation:e.target.value})}>
-                                        {
-                                           DivisionNo.map((divi) => [
-                                                <option value={divi.did}>{divi.}}</option>
-                                           ]) 
-                                        }
-                                        <option>Select Option</option>
-                                        <option value="Scientist">Scientist</option>
-                                        <option value="RA">RA</option>
-                                        <option value="Non Academic">Non Academic</option>
-                                        <option value="VRA">Volunteer RA</option>    
+                                        <option value="">Select Division</option>
+                                    {
+                                        divisionData.map((divi => {
+                                            return (
+                                                <option value={divi.did}>{divi.title}</option>
+                                            )
+                                        })) 
+                                    }
                                     </select>
                                 </div>
                                 <div className="">
