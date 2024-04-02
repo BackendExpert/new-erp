@@ -85,7 +85,7 @@ app.post('/register', (req, res) => {
                     if(err) throw err
 
                     if(result.length == 0){
-                        return res.json({Error: "You Cannot Register, Because You are not a Employee"})
+                        return res.json({Error: "You Cannot Register, Because You are not an Employee"})
                     }
                     else{
                         connection.query(
