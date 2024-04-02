@@ -587,8 +587,18 @@ app.get('/MyEmpDataView/:id', (req, res) => {
 })
 
 // AddSuperAdmin
-app.get('/AddSuperAdmin', (req, res) => {
+app.post('/AddSuperAdmin', (req, res) => {
     console.log(req.body)
+
+    const checkUser = "SELECT * FROM users WHERE email = ?"
+    connection.query(sql, [req.body.email], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
 })
 
 //---------------------------- LIBRARY Start ---------------------------------------------------------
