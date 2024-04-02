@@ -80,18 +80,28 @@ app.post('/register', (req, res) => {
                 return res.json({Error: "Email Already exsist"})
             }
             else{
-                connection.query(
-                    'INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?, ?, ?, ?, ?, ?, ?)',
-                    [username, email, userRole, hashPass, createTime, updateTime, is_active],
-                    (error, result) => {
-                        if(err){
-                            return res.json({Error: "ERROR on SERVER"})
-                        }
-                        else{
-                            return res.json({Status: "Success"})
-                        }
+                const checkEmp = "SELECT * FROM employee WHERE email = ?"
+                connection.query(checkEmp, [req.body.email], (err, result) => {
+                    if(err) throw err
+
+                    if(result.length == 0){
+                        return res.json({Error: "You Cannot Register, Because You are not a Employee"})
                     }
-                );
+                    else{
+                        connection.query(
+                            'INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?, ?, ?, ?, ?, ?, ?)',
+                            [username, email, userRole, hashPass, createTime, updateTime, is_active],
+                            (error, result) => {
+                                if(err){
+                                    return res.json({Error: "ERROR on SERVER"})
+                                }
+                                else{
+                                    return res.json({Status: "Success"})
+                                }
+                            }
+                        );
+                    }
+                })
             }
         })
     });
