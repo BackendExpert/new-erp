@@ -570,6 +570,21 @@ app.get('/ViewProfile/:id', (req, res) => {
     })
 })
 
+// MyEmpDataView
+app.get('/MyEmpDataView/:id', (req, res) => {
+    const myEmail = req.params.id;
+
+    const sql = "SELECT * FROM employee WHERE email = ?"
+
+    connection.query(sql, [myEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
 
 //---------------------------- LIBRARY Start ---------------------------------------------------------
 
