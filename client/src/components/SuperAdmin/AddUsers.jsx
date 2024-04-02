@@ -16,6 +16,12 @@ const AddUsers = () => {
     const headleSubmit = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8081/AddSuperAdmin', AdminData)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Admin or SuperAdmin Added Successful")
+                navigate('')
+            }
+        })
     }
 
     if(RoleUser === "SuperAdmin"){
