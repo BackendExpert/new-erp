@@ -24,9 +24,7 @@ const Profile = () => {
     }, [])
 
     // my employee data
-    const [myEmpData, SetmyEmpData] = useState({
-      
-    })
+    const [myEmpData, SetmyEmpData] = useState([])
 
     useEffect(() => {
       axios.get('http://localhost:8081/MyEmpDataView/' + EmailUser)
