@@ -586,6 +586,11 @@ app.get('/MyEmpDataView/:id', (req, res) => {
     })
 })
 
+// AddSuperAdmin
+app.get('/AddSuperAdmin', (req, res) => {
+    console.log(req.body)
+})
+
 //---------------------------- LIBRARY Start ---------------------------------------------------------
 
 // Count Books 
