@@ -84,23 +84,6 @@ const Users = () => {
                   <input type="text" className="w-1/2 h-12 border border-blue-400 rounded pl-2 my-2" required placeholder="Employee ID"
                   onChange={e => SetuserRoleData({...userRoleData, empID:e.target.value})}/>
                 </div>
-                <div className="">
-                  <label htmlFor="">User Role: </label><br />
-                  <select className="w-1/2 h-12 border border-blue-400 rounded pl-2 my-2"
-                        onChange={e => SetuserRoleData({...userRoleData, userRole:e.target.value})}>
-                          <option className=''>Select Role</option>
-                          <option className=''value="HOD">Head</option>
-                          <option className=''value="TO">Transport Office</option>
-                          <option className=''value="Librarian">Librarian</option>
-                          <option className=''value="Labmanager">Labmanager</option>
-                          <option className=''value="Accountant">Accountant</option>
-                          <option className=''value="Scientist">Scientist</option>
-                          <option className=''value="RA">RA</option>
-                          <option className=''value="NonAcademic">NonAcademic</option>
-                          <option className=''value="PDFellow">PostDocoral Fellow</option>
-                          <option className=''value="Driver">Driver</option>
-                    </select>
-                </div>
                 <div className="my-2">
                   <button type="submit" className="py-2 px-8 rounded bg-blue-500 text-white">Request</button>
                 </div>
