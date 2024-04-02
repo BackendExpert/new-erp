@@ -83,7 +83,7 @@ const UserRoleRequest = () => {
                             (() => {
                                 if(RoleUser === "SuperAdmin"){
                                     return (
-                                        <Link>
+                                        <Link to={'/AddUsers'}>
                                             <button className="py-2 px-6 ml-2 border border-red-500 text-red-500 rounded duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Add SuperAdmin/Admin</button>
                                         </Link>
                                     )
