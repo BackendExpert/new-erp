@@ -37,7 +37,8 @@ const AddEmployee = () => {
         civilstatus:'',
         gender:'',
         designation:'',
-        relig:''
+        relig:'',
+        dno:''
     })
 
     const headleEmpSubmit = (e) => {
