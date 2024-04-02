@@ -1,5 +1,9 @@
 # ERP
 
+## Project Stats
+
+[![wakatime](https://wakatime.com/badge/user/bfaf5bf3-6788-4b8f-bc98-b22bc13f4a44/project/018df900-4bab-4801-875b-844b5007e739.svg)](https://wakatime.com/badge/user/bfaf5bf3-6788-4b8f-bc98-b22bc13f4a44/project/018df900-4bab-4801-875b-844b5007e739)
+
 ## Access Control of the Project
 
 ### to prevent unauthorized access
