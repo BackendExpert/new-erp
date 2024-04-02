@@ -92,7 +92,7 @@ const Profile = () => {
                 <div className="my-5">
                   <p className="text-xl py-4">Username : {profile.username}</p>
                   <p className="text-xl py-4">Email : {profile.email}</p>
-                  <p className="text-xl py-4">Role : {profile.role}</p>                 
+                  <p className="text-xl py-4">Role : {profile.role}</p>                
                   
                 </div>
               )
