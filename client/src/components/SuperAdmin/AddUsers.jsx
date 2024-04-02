@@ -34,17 +34,17 @@ const AddUsers = () => {
                                 <div className="">
                                     <label htmlFor="">Username : </label>
                                     <input type="text" className="w-full h-12 border border-blue-400 rounded pl-2" required placeholder="Username"
-                                    />
+                                    onChange={e => SetAdminData({...AdminData, username:e.target.value})}/>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Email : </label>
                                     <input type="email" className="w-full h-12 border border-blue-400 rounded pl-2" required placeholder="Email"
-                                    />
+                                    onChange={e => SetAdminData({...AdminData, email:e.target.value})}/>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Password : </label>
                                     <input type="password" className="w-full h-12 border border-blue-400 rounded pl-2" required placeholder="Password"
-                                    />
+                                    onChange={e => SetAdminData({...AdminData, password:e.target.value})}/>
                                 </div>
                             </div>
                         </form>
