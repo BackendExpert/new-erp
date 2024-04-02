@@ -106,9 +106,19 @@ const AddEmployee = () => {
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Division No</label>
-                                    <input type="text" name="eid" className="pl-2 border border-blue-400 rounded w-full h-12" required placeholder="Enter Division ID" 
-                                    onChange={e => SetEmpData({...empData, eid:e.target.value})}/>
-                                    <p className="text-red-500">(Integer type, max length 11)</p>
+                                    <select className="w-full h-12 border border-blue-400 rounded pl-2"
+                                    onChange={e => SetEmpData({...empData, designation:e.target.value})}>
+                                        {
+                                           DivisionNo.map((divi) => [
+                                                <option value={divi.did}>{divi.}}</option>
+                                           ]) 
+                                        }
+                                        <option>Select Option</option>
+                                        <option value="Scientist">Scientist</option>
+                                        <option value="RA">RA</option>
+                                        <option value="Non Academic">Non Academic</option>
+                                        <option value="VRA">Volunteer RA</option>    
+                                    </select>
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Initials</label>
