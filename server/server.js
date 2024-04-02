@@ -589,8 +589,19 @@ app.get('/MyEmpDataView/:id', (req, res) => {
 // AddSuperAdmin
 app.post('/AddSuperAdmin', (req, res) => {
     console.log(req.body)
-    const is_active = 1
-    
+
+    bcrypt.hash(req.body.password, 10, (err, hashPass) => {
+        if(err) throw err;
+
+        // save the user to database
+
+        // get current time
+        var createTime = new Date();
+        var updateTime = new Date();
+        const is_active = 1;
+        const userRole = "User"
+    })
+        
 
     const sql = "INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?)"
     connection.query(sql, [req.body.email], (err, result) => {
