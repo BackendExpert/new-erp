@@ -69,7 +69,14 @@ const AddReservation = () => {
 
       const headleSubmit = (e) => {
         e.preventDefault(); 
-        axios.post('http://localhost:8081/AddReservation')
+        axios.post('http://localhost:8081/AddReservation', AddRese)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Reservation Added Successful")
+                navigate('/')
+            }
+        })
+
       }
 
   return (
