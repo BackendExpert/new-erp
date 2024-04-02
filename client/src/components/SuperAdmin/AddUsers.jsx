@@ -21,6 +21,9 @@ const AddUsers = () => {
                 alert("Admin or SuperAdmin Added Successful")
                 navigate('/superAdmin')
             }
+            else{
+                alert(res.data.Error)
+            }
         })
     }
 
