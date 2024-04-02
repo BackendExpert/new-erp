@@ -73,8 +73,9 @@ const AddReservation = () => {
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Reservation Added Successful")
-                navigate('/')
+                navigate('/Reservation')
             }
+            
         })
 
       }
