@@ -56,6 +56,11 @@ const AddUsers = () => {
                                     onChange={e => SetAdminData({...AdminData, password:e.target.value})}/>
                                 </div>
                             </div>
+                            <div className="">
+                                <button type="submit" className="my-6 rounded px-16 py-2 border border-green-500 text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">
+                                    Add SuperAdmin or Admin
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>                
