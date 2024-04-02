@@ -21,7 +21,8 @@ const AddUsers = () => {
                         <form >
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="">
-                                    <label htmlFor=""></label>
+                                    <label htmlFor="">Username : </label>
+                                    <input type="text" name="" id="" className="" />
                                 </div>
                             </div>
                         </form>
