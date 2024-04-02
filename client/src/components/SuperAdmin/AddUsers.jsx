@@ -19,7 +19,7 @@ const AddUsers = () => {
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Admin or SuperAdmin Added Successful")
-                navigate('')
+                navigate('/superAdmin')
             }
         })
     }
