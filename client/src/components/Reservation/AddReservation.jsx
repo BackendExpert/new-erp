@@ -50,11 +50,15 @@ const AddReservation = () => {
       }
 
       //send data to backend
+      const [AddRese, SetAddRese] = useState({
+        
+      })
 
       const headleSubmit = (e) => {
-
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/AddReservation')
       }
-      
+
   return (
     <div className="bg-gray-200 py-4">
         <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
