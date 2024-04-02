@@ -1051,8 +1051,8 @@ app.get('/CountArticles', (req, res) => {
 
 app.post('/createEmp', upload.single('image'), async (req, res) => 
 {
-   const checksql = "SELECT * FROM employee WHERE eid = ?";
-   connection.query(checksql, req.body.eid, (err, result) => {
+   const checksql = "SELECT * FROM employee WHERE eid = ? || email = ?";
+   connection.query(checksql, [req.body.eid, req.body.email], (err, result) => {
         if(err) throw err;
 
         if(result.length > 0) {
