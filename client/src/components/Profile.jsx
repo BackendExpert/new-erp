@@ -96,7 +96,18 @@ const Profile = () => {
         <div className="lg:grid grid-cols-2 gap-4">
           <div className="my-4">
             <p className="text-xl my-2">Your Data As Employee</p>
-            <p>{myEmpData.email}</p>
+            {
+              profileData.map((myEmpData, index) =>{
+                return (
+                  <div className="my-5">
+                    <p className="text-xl py-4">Username : {myEmpData.category}</p>
+                    <p className="text-xl py-4">Email : {myEmpData.email}</p>
+                    <p className="text-xl py-4">Role : {myEmpData.type}</p>                
+                    
+                  </div>
+                )
+              })
+            }
           </div>
           <div className="">
             {
