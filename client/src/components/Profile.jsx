@@ -85,7 +85,7 @@ const Profile = () => {
 
         </div>
         <div className="lg:grid grid-cols-2 gap-4">
-          <div className="">
+          <div className="my-4">
             <p className="">Your Data As Employee</p>
           </div>
           <div className="">
