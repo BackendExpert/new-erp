@@ -75,7 +75,9 @@ const AddReservation = () => {
                 alert("Reservation Added Successful")
                 navigate('/Reservation')
             }
-            
+            else{
+                alert(res.data.Error)
+            }
         })
 
       }
