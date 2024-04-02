@@ -77,6 +77,12 @@ const AddEmployee = () => {
             }
         })
     }
+    const [DivisionNo, SetDivisionNo] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:80801/GetDiviNo')
+        .then(res => SetDivisionNo(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
 
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
