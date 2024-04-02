@@ -96,7 +96,7 @@ const Profile = () => {
         <div className="lg:grid grid-cols-2 gap-4">
           <div className="my-4">
             <p className="text-xl my-2">Your Data As Employee</p>
-
+            <p>{myEmpData.email}</p>
           </div>
           <div className="">
             {
