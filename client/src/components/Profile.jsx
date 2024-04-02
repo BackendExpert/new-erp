@@ -25,7 +25,7 @@ const Profile = () => {
 
     // my employee data
     const [myEmpData, SetmyEmpData] = useState({
-
+      
     })
 
     useEffect(() => {
