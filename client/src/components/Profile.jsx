@@ -99,6 +99,9 @@ const Profile = () => {
             })
           }
         </div>
+        <div className="">
+          <p className="">Your Data As Employee</p>
+        </div>
        
       </div>
     </div>
