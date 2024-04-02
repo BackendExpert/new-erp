@@ -107,7 +107,7 @@ const AddEmployee = () => {
                                 <div className="">
                                     <label htmlFor="">Division No</label>
                                     <select className="w-full h-12 border border-blue-400 rounded pl-2"
-                                    onChange={e => SetEmpData({...empData, designation:e.target.value})}>
+                                    onChange={e => SetEmpData({...empData, dno:e.target.value})}>
                                         <option value="">Select Division</option>
                                     {
                                         divisionData.map((divi => {

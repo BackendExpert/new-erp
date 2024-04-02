@@ -67,6 +67,9 @@ const Profile = () => {
       else if(RoleUser === "PDFellow"){
         navigate('/PDFellow');
       } 
+      else if(RoleUser === "Driver"){
+        navigate('/DriverDash');
+      } 
   }
 
   return (
