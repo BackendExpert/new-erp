@@ -2380,8 +2380,9 @@ app.get('/CountAppLeave/:id', (req, res) => {
 // AddReservation
 app.post('/AddReservation/:id', (req, res) => {
     const UserEmail = req.params.id
-    console.log(UserEmail)
-    console.log(req.body)
+    // console.log(UserEmail)
+    // console.log(req.body)
+    
 })
 
 // ---------------------------- Reservation END ---------------------
