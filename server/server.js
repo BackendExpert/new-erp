@@ -2379,7 +2379,7 @@ app.get('/CountAppLeave/:id', (req, res) => {
 
 // AddReservation
 app.post('/AddReservation', (req, res) => {
-    
+    console.log(req.body)
 })
 
 // ---------------------------- Reservation END ---------------------
