@@ -2396,7 +2396,10 @@ app.post('/AddReservation/:id', (req, res) => {
                 if(err) throw err
 
                 if(result.length > 0){
-                    const sql = "INSERT INTO reservations(StartDate, time, ) VALUES(?)"
+                    const sql = "INSERT INTO reservations(StartDate, time, loc_route, HoDEmail, other_passengers, Name, EndDate, mode_travel, Status, Email, designation, fundingsource, division, purpose, veh_type, create_at, update_at) VALUES(?)"
+                    const values = [
+                        
+                    ]
                 }
             })
         }
