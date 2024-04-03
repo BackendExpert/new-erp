@@ -2396,12 +2396,11 @@ app.post('/AddReservation/:id', (req, res) => {
                 if(err) throw err
 
                 if(result.length > 0){
-                    const sql = "INSERT INTO reservations(StartDate,) VALUES(?)"
+                    const sql = "INSERT INTO reservations(StartDate, time, ) VALUES(?)"
                 }
             })
         }
     })
-
 
 })
 
