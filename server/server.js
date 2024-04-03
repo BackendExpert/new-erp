@@ -2382,7 +2382,27 @@ app.post('/AddReservation/:id', (req, res) => {
     const UserEmail = req.params.id
     // console.log(UserEmail)
     // console.log(req.body)
-    
+
+    const checkhod = "SELECT * FROM users WHERE email = ?"
+    connection.query(checkhod, [req.body.HoDEmail], (req, result) => {
+        if(err) throw err
+
+        if(result.length == 0){
+            return res.json({Error: "HOD not exists"})
+        }
+        else if(result[0].role === "HOD"){
+            const checkuser = "SELECT * FROM users WHERE email = ?"
+            connection.query(checkuser, [UserEmail], (err, result) => {
+                if(err) throw err
+
+                if(result.length > 0){
+                    const sql = "INSERT INTO reservations(StartDate,) VALUES(?)"
+                }
+            })
+        }
+    })
+
+
 })
 
 // ---------------------------- Reservation END ---------------------
