@@ -2375,6 +2375,11 @@ app.get('/CountAppLeave/:id', (req, res) => {
       res.json({ MyAppLeave: results[0].MyAppLeave }); // Send count in JSON format
     });
 })
+// ---------------------------- Reservation ---------------------
+
+// AddReservation
+
+// ---------------------------- Reservation END ---------------------
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
