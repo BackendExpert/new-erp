@@ -97,19 +97,34 @@ const AddReservation = () => {
         .catch(err => console.log(err))
       }, [])
 
+      // employee name
+      const [empName, SetEmpname] = useState('')
+      useEffect(() => {
+        axios.get('http://localhost:8081/EmpName/' + EmailUser)
+        .then(res => SetEmpname(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
   return (
     <div className="bg-gray-200 py-4">
         <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
             <h1 className="text-xl font-semibold">New Reservation</h1>        
             <hr className="mb-4" />
             <button onClick={headleBack} className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
+              {
+                empName.map((nameemp) => {
+                  return (
+                    <div className="">{nameemp.email}</div>
+                  )
+                })
+              }
             <div className="my-4">
                 <form onSubmit={headleSubmit}>
                     <div className="lg:grid grid-cols-3 gap-4">
                         <div className="my-2">
                             <label htmlFor="">Employee Name : </label>
-                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                            onChange={e => SetAddRese({...AddRese, Name:e.target.value})}/>
+                            <input type="text" disabled name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                            value={empName} onChange={e => SetAddRese({...AddRese, Name:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Start Time : </label>
