@@ -125,7 +125,7 @@ const ViewEmployee = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="lg:grid grid-cols-2 gap-4">
+                                        <div className="lg:grid grid-cols-3 gap-4">
                                             <div className="my-4">
                                                 <div className="flex">
                                                     <p className="text-md font-semibold">Gender : </p>
