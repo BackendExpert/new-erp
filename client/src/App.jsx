@@ -63,6 +63,7 @@ import MyFullStats from "./components/SummaryDash/MyFullStats"
 import DriverDash from "./components/Driver/DriverDash"
 import AddReservation from "./components/Reservation/AddReservation"
 import AddUsers from "./components/SuperAdmin/AddUsers"
+import ViewEmployee from "./components/Employees/ViewEmployee"
 
 export default function App() {
   return (
@@ -144,6 +145,7 @@ export default function App() {
         <Route path="/Employee" element={<PrivateRoute><Employees /></PrivateRoute>} />
         <Route path="/AddEmployee" element={<PrivateRoute><AddEmployee /></PrivateRoute>} />
         <Route path="/UpdateEmp/:id" element={<PrivateRoute><UpdateEmployee /></PrivateRoute>} />
+        <Route path="/ViewEmployee/:id" element={<PrivateRoute><ViewEmployee /></PrivateRoute>} />
         
         {/* Designations */}
         <Route path="/AddDesignation" element={<PrivateRoute><AddDesignation /></PrivateRoute>} />
