@@ -2406,6 +2406,22 @@ app.get('/hodEmail', (req, res) => {
     })
 })
 
+// UserDivivsion
+app.get('/UserDivivsion/:id', (req, res) => {
+    const UserEmail = req.params.id;
+
+    const sql = "SELECT * FROM employee WHERE email = ?"
+
+    connection.query(sql, [UserEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // AddReservation
 app.post('/AddReservation/:id', (req, res) => {
     const UserEmail = req.params.id

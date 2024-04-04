@@ -181,8 +181,17 @@ const AddReservation = () => {
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Division : </label>
-                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purpose"
-                            onChange={e => SetAddRese({...AddRese, Division:e.target.value})}/>
+                            <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                              onChange={e => SetEmpData({...empData, civilstatus:e.target.value})}>
+                                  <option>Select Option</option>
+                                  {
+                                    emailHOD.map((hod) => {
+                                      return(
+                                        <option value={hod.email}>{hod.email}</option>
+                                      )
+                                    })
+                                  }
+                            </select>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Vehicle Type : </label>
