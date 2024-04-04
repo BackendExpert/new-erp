@@ -109,8 +109,8 @@ const ViewEmployee = () => {
                                         <div className="lg:grid grid-cols-3 gap-4">
                                             <div className="my-4">
                                                 <div className="flex">
-                                                    <p className="text-md font-semibold">Employee Designation : </p>
-                                                    <p className="text-md pl-4">{emp.designation}</p>
+                                                    <p className="text-md font-semibold">Emergency Phone No : </p>
+                                                    <p className="text-md pl-4">{emp.emgcontact}</p>
                                                 </div>
                                             </div>
                                             <div className="my-4">
