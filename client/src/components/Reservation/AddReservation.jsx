@@ -138,7 +138,7 @@ const AddReservation = () => {
                         <div className="my-2">
                             <label htmlFor="">HOD Email : </label>
                             <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
-                              onChange={e => SetEmpData({...empData, civilstatus:e.target.value})}>
+                              onChange={e => SetEmpData({...empData, HoDEmail:e.target.value})}>
                                   <option>Select Option</option>
                                   {
                                     emailHOD.map((hod) => {
@@ -190,7 +190,7 @@ const AddReservation = () => {
                         <div className="my-2">
                             <label htmlFor="">Division : </label>
                             <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
-                              onChange={e => SetEmpData({...empData, civilstatus:e.target.value})}>
+                              onChange={e => SetEmpData({...empData, Division:e.target.value})}>
                                   <option>Select Option</option>
                                   {
                                     userDivision.map((divi) => {
