@@ -160,7 +160,7 @@ const SummaryDash = () => {
     {id: 14, name:"Denied Leaves" , value: <CountUp end={DeniedLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
     {id: 15, name:"Accept Leaves" , value: <CountUp end={ApproveLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
     {id: 16, name:"Recommend Leaves" , value: <CountUp end={RecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-purple-500 hover:text-purple-600" },
-    {id: 16, name:"Recommend Reservation" , value: <CountUp end={RecLeaves}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-orange-500 hover:text-orange-600" },
+    {id: 17, name:"Recommend Reservation" , value: <CountUp end={RecLeaves}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-orange-500 hover:text-orange-600" },
   ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
@@ -208,7 +208,7 @@ const SummaryDash = () => {
               }
             }
             if(RoleUser === "TO"){
-              if(data.id === 5 || data.id === 13 || data.id === 14 || data.id === 16){
+              if(data.id === 5 || data.id === 13 || data.id === 14 || data.id === 16 || data.id === 17){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
