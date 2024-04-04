@@ -119,28 +119,28 @@ const AddReservation = () => {
                     <div className="lg:grid grid-cols-3 gap-4">
                         <div className="my-2">
                             <label htmlFor="">Employee Name : </label>
-                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                            <input type="text" name="empName" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
                             value={empUsername} onChange={e => SetAddRese({...AddRese, Name:e.target.value})}/>
 
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Start Time : </label>
-                            <input type="time" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Start Time"
+                            <input type="time" name="STime" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Start Time"
                             onChange={e => SetAddRese({...AddRese, Time:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Location and Route : </label>
-                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Location and Route"
+                            <input type="text" name="Location" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Location and Route"
                             onChange={e => SetAddRese({...AddRese, Location:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Email : </label>
-                            <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Your Email"
+                            <input type="email" name="Email" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Your Email"
                             value={EmailUser} onChange={e => SetAddRese({...AddRese, Email:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">HOD Email : </label>
-                            <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                            <select name="HodEmail" className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
                               onChange={e => SetAddRese({...AddRese, HoDEmail:e.target.value})}>
                                   <option>Select Option</option>
                                   {
@@ -154,17 +154,17 @@ const AddReservation = () => {
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Start Date : </label>
-                            <input type="date" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Start Date"
+                            <input type="date" name="SDate" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Start Date"
                             onChange={e => SetAddRese({...AddRese, StartDate:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">End Date : </label>
-                            <input type="date" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter End Date"
+                            <input type="date" name="EDate" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter End Date"
                             onChange={e => SetAddRese({...AddRese, EndDate:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Travel Mode : </label>
-                            <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                            <select name="Tmode" className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
                             onChange = {e => SetAddRese({...AddRese, Mode:e.target.value})}>
                                 <option>Select Option</option>
                                 <option value="Official">Official</option>
@@ -177,22 +177,22 @@ const AddReservation = () => {
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Other Travellers : </label>
-                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Other Travellers"
+                            <input type="text" name="Others" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Other Travellers"
                             onChange={e => SetAddRese({...AddRese, Passengers:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Purpose : </label>
-                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purpose"
+                            <input type="text" name="Purpose" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purpose"
                             onChange={e => SetAddRese({...AddRese, Purpose:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Designation : </label>
-                            <input type="text" disabled name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Other Travellers"
+                            <input type="text" disabled name="Designation" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Other Travellers"
                             value={empRole} onChange={e => SetAddRese({...AddRese, Designation:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Division : </label>
-                            <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                            <select name="Division" className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
                               onChange={e => SetAddRese({...AddRese, Division:e.target.value})}>
                                   <option>Select Option</option>
                                   {
@@ -206,7 +206,7 @@ const AddReservation = () => {
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Vehicle Type : </label>
-                            <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                            <select name="vType" className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
                             onChange = {e => SetAddRese({...AddRese, Vehicle:e.target.value})}>
                                 <option>Select Option</option>
                                 <option value="Van">Van</option>
@@ -219,7 +219,7 @@ const AddReservation = () => {
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Funding Source : </label>
-                            <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                            <select name="Fsource" className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
                             onChange = {e => SetAddRese({...AddRese, Funding:e.target.value})}>
                                 <option>Select Option</option>
                                 <option value="NIFS Funds">NIFS Funds</option>
