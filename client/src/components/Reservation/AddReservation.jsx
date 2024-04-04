@@ -105,7 +105,7 @@ const AddReservation = () => {
         .catch(err => console.log(err))
       }, [])
 
-      // alert(empName.username)
+      const Name = empName.username 
   return (
     <div className="bg-gray-200 py-4">
         <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
@@ -118,7 +118,7 @@ const AddReservation = () => {
                         <div className="my-2">
                             <label htmlFor="">Employee Name : </label>
                             <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                            value={empName.username} onChange={e => SetEmpname({...empName, Name:e.target.value})}/>
+                            value={Name} onChange={e => SetEmpname({...empName, Name:e.target.value})}/>
 
                         </div>
                         <div className="my-2">
