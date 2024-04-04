@@ -2411,7 +2411,7 @@ app.post('/AddReservation/:id', (req, res) => {
                         req.body.Designation,
                         req.body.Funding,
                         req.body.Division,
-                        req.body.Purpose,
+                        req.body.Purpose, 
                         req.body.Vehicle
                     ]
 
