@@ -97,6 +97,14 @@ const AddReservation = () => {
         .catch(err => console.log(err))
       }, [])
 
+      // employee name
+      const [empName, SetEmpname] = useState([])
+      useEffect(() => {
+        axios.get('http://localhost:8081/EmpName/' + EmailUser)
+        .then(res => SetEmpname(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
   return (
     <div className="bg-gray-200 py-4">
         <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
