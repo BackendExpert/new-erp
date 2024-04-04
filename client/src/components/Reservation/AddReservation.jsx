@@ -83,7 +83,12 @@ const AddReservation = () => {
 
       // get all hod emails
       const [hodemail, SetHodEmail] = useState()
-      
+      useEffect(() => {
+        axios.get('http://localhost:8081/hodEmail')
+        .then(res => SetHodEmail(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
 
   return (
     <div className="bg-gray-200 py-4">
