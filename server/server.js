@@ -5,6 +5,7 @@ const multer = require('multer');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+require('dotenv').config(); // Load environment variables
 
 const path = require('path')
 
@@ -41,13 +42,13 @@ const connection = mysql.createConnection({
 })
 //email Sending - Nodemailer transporter
 
-// const transporter = nodemailer.createTransport({
-//     service: 'Gmail',
-//     auth: {
-//         user: 'jehanweerasuriya@gmail.com',
-//         pass: 'cpvagmiwqxvydvam'
-//     }
-// })
+const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'jehanweerasuriya@gmail.com',
+        pass: 'cpvagmiwqxvydvam'
+    }
+})
 
 
 
