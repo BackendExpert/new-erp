@@ -82,7 +82,7 @@ const AddReservation = () => {
       }
 
       // get all hod emails
-      const [hodemail, SetHodEmail] = useState()
+      const [emailHOD, SetHodEmail] = useState()
       useEffect(() => {
         axios.get('http://localhost:8081/hodEmail')
         .then(res => SetHodEmail(res.data))
@@ -126,7 +126,7 @@ const AddReservation = () => {
                               onChange={e => SetEmpData({...empData, civilstatus:e.target.value})}>
                                   <option>Select Option</option>
                                   {
-                                    hodemail.map((hod) => {
+                                    emailHOD.map((hod) => {
                                       return(
                                         <option value={hod.email}>{hod.email}</option>
                                       )
