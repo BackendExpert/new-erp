@@ -75,8 +75,8 @@ const ViewEmployee = () => {
                                         <div className="lg:grid grid-cols-2 gap-4">
                                             <div className="my-4">
                                                 <div className="flex">
-                                                    <p className="text-md font-semibold">Employee  : </p>
-                                                    <p className="text-md pl-4">{emp.initial}</p>
+                                                    <p className="text-md font-semibold">Employee Address : </p>
+                                                    <p className="text-md pl-4">{emp.address}</p>
                                                 </div>
                                             </div>
                                             <div className="my-4">
