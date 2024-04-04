@@ -111,13 +111,7 @@ const AddReservation = () => {
             <h1 className="text-xl font-semibold">New Reservation</h1>        
             <hr className="mb-4" />
             <button onClick={headleBack} className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
-              {
-                empName.map((nameemp) => {
-                  return (
-                    <div className="">{nameemp.email}</div>
-                  )
-                })
-              }
+            <p className="">{empName}</p>
             <div className="my-4">
                 <form onSubmit={headleSubmit}>
                     <div className="lg:grid grid-cols-3 gap-4">
