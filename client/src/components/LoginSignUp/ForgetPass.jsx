@@ -11,12 +11,12 @@ const ForgetPass = () => {
             <h1 className="text-2xl font-semibold">Forget Password</h1>
             <div className="my-8 mx-12">
                 <label htmlFor="">Email : </label>
-                <input type="email" name="" id="" required placeholder='Enter Your Email Address'/>
+                <input type="email" name="" id="" className='' required placeholder='Enter Your Email Address'/>
 
-                <p className="">The OTP (One Time Password) will send to above you Entered Email</p>
+                <p className="text-red-500">The OTP (One Time Password) will send to above you Entered Email</p>
 
-                <div className="">
-                    <button type='submit' className='border broder-red-500 rounded py-2 px-8 duration-500 hover:text-white hover:bg-red-500 hover:shadow-xl'>Request OTP</button>
+                <div className="my-2">
+                  <button type="submit" className="rounded text-red-500 border border-red-500 py-2 px-16 my-2 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Request OTP</button>
                 </div>
             </div>
         </div>
