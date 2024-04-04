@@ -433,7 +433,14 @@ app.post('/UnAccess', (req, res) => {
                             };
 
                             transporter.sendMail(mailOptions, (err, result) => {
-                                
+                                if(err){
+                                    res.json({Error: "While Sending Emails"})
+                                    console.log("Error Sending Email")
+                                }
+                                else{
+                                    res.json({Status: "Success"})
+                                    console.log("Email Send Successful")
+                                }
                             })
                         }
                     })
