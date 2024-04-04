@@ -5,8 +5,23 @@ import { useState } from 'react'
 const ForgetPass = () => {
     const navigate = useNavigate()
 
+    const [ForgetPass, SetForgetPass] = useState({
+        email: '',
+    })
+
     const headleSubmit = (e) => {
         e.preventDefault(); 
+
+        axios.post('http://localhost:8081/ForgetPass', ForgetPass)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The OTP will send to Your Email Address")
+                
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
   return (
     <div className='bg-gray-200 py-4'>
@@ -16,7 +31,8 @@ const ForgetPass = () => {
             <form onSubmit={headleSubmit}>
                 <div className="my-8 mx-12">
                     <label htmlFor="">Email : </label>
-                    <input type="email" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter Your Email Address'/>
+                    <input type="email" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter Your Email Address'
+                    onChange={e => SetForgetPass({...ForgetPass, email:e.target.value})}/>
 
                     <p className="text-red-500">The OTP (One Time Password) will send to above you Entered Email</p>
 
