@@ -45,11 +45,10 @@ const connection = mysql.createConnection({
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD
     }
-})
-
+});
 
 
 // middleware
@@ -432,16 +431,16 @@ app.post('/UnAccess', (req, res) => {
                                 text
                             };
 
-                            transporter.sendMail(mailOptions, (err, result) => {
-                                if(err){
-                                    res.json({Error: "While Sending Emails"})
-                                    console.log("Error Sending Email")
+
+                            transporter.sendMail(mailOptions, (error, info) => {
+                                if (error) {
+                                  console.error(error);
+                                  res.status(500).send('Error sending email');
+                                } else {
+                                  console.log('Email sent: ' + info.response);
+                                  res.send('Email sent successfully');
                                 }
-                                else{
-                                    res.json({Status: "Success"})
-                                    console.log("Email Send Successful")
-                                }
-                            })
+                            });
                         }
                     })
                 }
