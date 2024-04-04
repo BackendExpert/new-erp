@@ -421,6 +421,16 @@ app.post('/UnAccess', (req, res) => {
                         }
                         else{
                             return res.json({ message: 'UnAccess Reported, The account has been suspended' });
+                            const to = userEmail
+                            const subject = "Your Account has been suspended"
+                            const text = "Your Account has been suspended due to unauthorized access"
+                            
+                            const mailOptions = {
+                                from: process.env.EMAIL_USER,
+                                to,
+                                subject,
+                                text
+                            };
                         }
                     })
                 }
