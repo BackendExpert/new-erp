@@ -66,6 +66,7 @@ import AddUsers from "./components/SuperAdmin/AddUsers"
 import ViewEmployee from "./components/Employees/ViewEmployee"
 import RecReservation from "./components/Reservation/RecReservation"
 import ForgetPass from "./components/LoginSignUp/ForgetPass"
+import CheckOTP from "./components/LoginSignUp/CheckOTP"
 
 export default function App() {
   return (
@@ -76,6 +77,7 @@ export default function App() {
 
         {/* ForgetPass */}
         <Route path="/ForgetPass" element={<ForgetPass />} />
+        <Route path="/CheckOTP" element={<CheckOTP />} />
 
 
 
