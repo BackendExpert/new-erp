@@ -15,6 +15,25 @@ const ViewEmployee = () => {
         .catch(err => console.log(err))
     }, [])
 
+    ViewEmp.map((emp) => {
+        const empDaata = [
+            {name: "Employee ID", data: emp.eid},
+            {name: "", data: ""},
+            {name: "", data: ""},
+            {name: "", data: ""},
+            {name: "", data: ""},
+            {name: "", data: ""},
+            {name: "", data: ""},
+            {name: "", data: ""},
+            {name: "", data: ""},
+            {name: "", data: ""},
+            {name: "", data: ""},
+            {name: "", data: ""},
+        ]
+    })
+
+
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
         return (
             <div className="bg-gray-200 py-4">
@@ -26,6 +45,16 @@ const ViewEmployee = () => {
                             <button className="lg:my-0 my-2 border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl lg:mx-2">Back</button>
                         </Link>
                     </div>
+                    {
+                        empDaata.map((dataEmp) => {
+                            return (
+                                <div className="">
+                                    <p className="">{dataEmp.name}</p>
+                                    <p className="">{dataEmp.data}</p>
+                                </div>
+                            )
+                        })
+                    }
 
                     <div className="my-5">
                         {
