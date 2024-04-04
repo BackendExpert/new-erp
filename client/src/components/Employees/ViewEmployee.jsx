@@ -126,6 +126,26 @@ const ViewEmployee = () => {
                                                 </div>
                                             </div>
                                         </div>
+                                        <div className="lg:grid grid-cols-3 gap-4">
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Emergency Phone No : </p>
+                                                    <p className="text-md pl-4">{emp.emgcontact}</p>
+                                                </div>
+                                            </div>
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employement Type : </p>
+                                                    <p className="text-md pl-4">{emp.type}</p>
+                                                </div>
+                                            </div>
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Marital Status : </p>
+                                                    <p className="text-md pl-4">{emp.civilstatus}</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 )
                             })
