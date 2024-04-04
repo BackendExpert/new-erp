@@ -86,6 +86,26 @@ const ViewEmployee = () => {
                                                 </div>
                                             </div>
                                         </div>
+                                        <div className="lg:grid grid-cols-3 gap-4">
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee Address : </p>
+                                                    <p className="text-md pl-4">{emp.address}</p>
+                                                </div>
+                                            </div>
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee Salary : </p>
+                                                    <p className="text-md pl-4">{emp.salary}</p>
+                                                </div>
+                                            </div>
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee Salary : </p>
+                                                    <p className="text-md pl-4">{emp.salary}</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 )
                             })
