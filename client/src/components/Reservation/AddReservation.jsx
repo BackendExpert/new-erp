@@ -125,7 +125,9 @@ const AddReservation = () => {
                             <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
                               onChange={e => SetEmpData({...empData, civilstatus:e.target.value})}>
                                   <option>Select Option</option>
-
+                                  {
+                                    hodemail
+                                  }
                             </select>
                         </div>
                         <div className="my-2">
