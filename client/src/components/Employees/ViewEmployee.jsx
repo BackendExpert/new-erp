@@ -1,10 +1,13 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
-
 const ViewEmployee = () => {
+    const navigate = useNavigate();
+    const RoleUser = secureLocalStorage.getItem("loginNew");
+    const {id} = useParams();
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
         return (
             <div className="bg-gray-200 py-4">
@@ -21,7 +24,9 @@ const ViewEmployee = () => {
         )
     }
     else{
-        
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
     }
 
 
