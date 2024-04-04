@@ -79,6 +79,8 @@ export default function App() {
         <Route path="/ForgetPass" element={<ForgetPass />} />
         <Route path="/CheckOTP" element={<CheckOTP />} />
 
+        
+
 
 
         {/* PrivateRoute for protect the following routes from unauthrized access */}
