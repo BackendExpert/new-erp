@@ -2392,6 +2392,11 @@ app.get('/CountAppLeave/:id', (req, res) => {
 })
 // ---------------------------- Reservation ---------------------
 
+// hodEmail
+app.get('/hodEmail', (req, res) => {
+    
+})
+
 // AddReservation
 app.post('/AddReservation/:id', (req, res) => {
     const UserEmail = req.params.id
