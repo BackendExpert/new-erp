@@ -96,7 +96,7 @@ const Users = () => {
                           <option className=''value="Accountant">Accountant</option>
                           <option className=''value="Scientist">Scientist</option>
                           <option className=''value="RA">RA</option>
-                          <option className=''value="NonAcademic">NonAcademic</option>
+                          <option className=''value="NonAcademic">NonAcademic Staff</option>
                           <option className=''value="PDFellow">PostDocoral Fellow</option>
                           <option className=''value="Driver">Driver</option>
                     </select>
