@@ -2394,7 +2394,16 @@ app.get('/CountAppLeave/:id', (req, res) => {
 
 // hodEmail
 app.get('/hodEmail', (req, res) => {
-    const sql = "SELECT * FROM users WHERE "
+    const sql = "SELECT * FROM users WHERE role = ?"
+    const hod = "HOD";
+    connection.query(sql, [hod], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 // AddReservation
