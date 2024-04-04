@@ -8,6 +8,13 @@ const ViewEmployee = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     const {id} = useParams();
 
+    const [ViewEmp, SetVeiwEmp] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/ViewEmployee/' + id)
+        .then(res => SetVeiwEmp(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
         return (
             <div className="bg-gray-200 py-4">
