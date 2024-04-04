@@ -2431,7 +2431,7 @@ app.get('/EmpName/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            return res.json(result)
+            return res.json({Status: "Success", Result: result})
         }
     })
 })
