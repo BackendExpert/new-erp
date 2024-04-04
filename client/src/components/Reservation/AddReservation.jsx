@@ -98,7 +98,7 @@ const AddReservation = () => {
       }, [])
 
       // employee name
-      const [empName, SetEmpname] = useState('')
+      const [empName, SetEmpname] = useState([])
       useEffect(() => {
         axios.get('http://localhost:8081/EmpName/' + EmailUser)
         .then(res => SetEmpname(res.data))

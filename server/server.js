@@ -2424,7 +2424,7 @@ app.get('/UserDivivsion', (req, res) => {
 app.get('/EmpName/:id', (req, res) => {
     const empEmail = req.params.id
     console.log(empEmail)
-    const sql = "SELECT * FROM users WHERE email = ?"
+    const sql = "SELECT username FROM users WHERE email = ?"
     
     connection.query(sql, [empEmail], (err, result) => {
         if(err){
@@ -2432,7 +2432,7 @@ app.get('/EmpName/:id', (req, res) => {
         }
         else{
             console.log(result)
-            return res.json(result)
+            res.json(result[0].username);
         }
     })
 })
