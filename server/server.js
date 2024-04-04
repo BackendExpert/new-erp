@@ -149,7 +149,10 @@ app.post('/login', (req, res) => {
 
 // ForgetPass
 app.post('/ForgetPass', (req, res) => {
-    
+    const checkEmail = "SELECT * FROM users WHERE email = ?"
+    connection.query(checkEmail, [req.body.email], (err, result) => {
+        if(err) throw err
+    })
 })
 
 //UserRoleRequest
