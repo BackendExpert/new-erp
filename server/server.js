@@ -2394,7 +2394,7 @@ app.get('/CountAppLeave/:id', (req, res) => {
 
 // hodEmail
 app.get('/hodEmail', (req, res) => {
-    
+    const sql = "SELECT * FROM users WHERE "
 })
 
 // AddReservation
