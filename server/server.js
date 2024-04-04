@@ -432,7 +432,9 @@ app.post('/UnAccess', (req, res) => {
                                 text
                             };
 
-                            transporter.sendMail()
+                            transporter.sendMail(mailOptions, (err, result) => {
+                                
+                            })
                         }
                     })
                 }
