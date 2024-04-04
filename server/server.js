@@ -2410,7 +2410,7 @@ app.get('/hodEmail', (req, res) => {
 app.get('/UserDivivsion', (req, res) => {
     const sql = "SELECT * FROM division"
 
-    connection.query(sql, [UserEmail], (err, result) => {
+    connection.query(sql, (err, result) => {
         if(err){
             return res.json({Error: "Error on server"})
         }
