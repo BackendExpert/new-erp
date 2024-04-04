@@ -79,8 +79,11 @@ const AddReservation = () => {
                 alert(res.data.Error)
             }
         })
-
       }
+
+      // get all hod emails
+      const [hodemail, SetHodEmail] = useState()
+      
 
   return (
     <div className="bg-gray-200 py-4">
