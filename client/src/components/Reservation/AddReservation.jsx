@@ -117,8 +117,9 @@ const AddReservation = () => {
                     <div className="lg:grid grid-cols-3 gap-4">
                         <div className="my-2">
                             <label htmlFor="">Employee Name : </label>
-                            <input type="text" disabled name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                            value={empName.username} onChange={e => SetAddRese({...AddRese, Name:e.target.value})}/>
+                            <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                            value={empName.username} onChange={e => SetEmpname({...empName, Name:e.target.value})}/>
+
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Start Time : </label>
