@@ -69,6 +69,20 @@ const AddReservation = () => {
 
       const headleSubmit = (e) => {
         e.preventDefault(); 
+        const formdata = new FormData()
+
+        formdata.append('empName', AddRese.Name);
+        formdata.append('STime', AddRese.Time);
+        formdata.append('empName', AddRese.Name);
+        formdata.append('empName', AddRese.Name);
+        formdata.append('empName', AddRese.Name);
+        formdata.append('empName', AddRese.Name);
+        formdata.append('empName', AddRese.Name);
+        formdata.append('empName', AddRese.Name);
+        formdata.append('empName', AddRese.Name);
+        formdata.append('empName', AddRese.Name);
+        
+
         axios.post('http://localhost:8081/AddReservation/' + EmailUser, AddRese, {empUsername, empRole})
         .then(res => {
             if(res.data.Status === "Success"){
