@@ -137,7 +137,11 @@ const Login = () => {
                     <p>Dont't have an Account ? 
                         <Link to={'/register'}>
                             <span className="pl-2 text-blue-500">Create New</span>
+                        </Link> ||
+                        <Link to={'/ForgetPass'}>
+                            <span className="pl-2 text-blue-500">Forget Password</span>
                         </Link>
+                        
                     </p>
                 </div>
                 <p className='pt-12 text-center'>
