@@ -2408,7 +2408,7 @@ app.get('/hodEmail', (req, res) => {
 
 // UserDivivsion
 app.get('/UserDivivsion', (req, res) => {
-    const sql = "SELECT * FROM employee WHERE email = ?"
+    const sql = "SELECT * FROM division"
 
     connection.query(sql, [UserEmail], (err, result) => {
         if(err){
