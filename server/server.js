@@ -420,27 +420,21 @@ app.post('/UnAccess', (req, res) => {
                         }
                         else{
                             return res.json({ message: 'UnAccess Reported, The account has been suspended' });
-                            const to = userEmail
-                            const subject = "Your Account has been suspended"
-                            const text = "Your Account has been suspended due to unauthorized access"
-
                             const mailOptions = {
                                 from: process.env.EMAIL_USER,
-                                to,
-                                subject,
-                                text
+                                to: userEmail,
+                                subject: "Your Account has been suspended",
+                                text: "Your Account has been suspended due to unauthorized access"
                             };
 
 
-                            transporter.sendMail(mailOptions, (error, info) => {
+                            transporter.sendMail(mailOptions, function(error, info){
                                 if (error) {
-                                  console.error(error);
-                                  res.status(500).send('Error sending email');
+                                  console.log(error);
                                 } else {
                                   console.log('Email sent: ' + info.response);
-                                  res.send('Email sent successfully');
                                 }
-                            });
+                              });
                         }
                     })
                 }
