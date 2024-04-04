@@ -2432,7 +2432,7 @@ app.get('/EmpName/:id', (req, res) => {
         }
         else{
             console.log(result)
-            res.json(result);
+            res.json(result[0]);
         }
     })
 })
