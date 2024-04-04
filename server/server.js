@@ -45,8 +45,8 @@ const connection = mysql.createConnection({
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'jehanweerasuriya@gmail.com',
-        pass: 'cpvagmiwqxvydvam'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD
     }
 })
 
