@@ -26,6 +26,23 @@ const ViewEmployee = () => {
                             <button className="lg:my-0 my-2 border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl lg:mx-2">Back</button>
                         </Link>
                     </div>
+
+                    <div className="my-5">
+                        {
+                            ViewEmp.map((emp) => {
+                                return (
+                                    <div className="lg:grid grid-cols-3 gap-4">
+                                        <div className="">
+                                            <div className="flex">
+                                                <p className="text-xl font-semibold">Employee ID</p>
+                                                <p className="text-xl">{emp.eid}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         )
