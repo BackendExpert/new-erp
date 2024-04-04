@@ -73,17 +73,19 @@ const AddReservation = () => {
 
         formdata.append('empName', AddRese.Name);
         formdata.append('STime', AddRese.Time);
-        formdata.append('empName', AddRese.Name);
-        formdata.append('empName', AddRese.Name);
-        formdata.append('empName', AddRese.Name);
-        formdata.append('empName', AddRese.Name);
-        formdata.append('empName', AddRese.Name);
-        formdata.append('empName', AddRese.Name);
-        formdata.append('empName', AddRese.Name);
-        formdata.append('empName', AddRese.Name);
-        
+        formdata.append('Location', AddRese.Location);
+        formdata.append('Email', AddRese.Email);
+        formdata.append('HodEmail', AddRese.HodEmail);
+        formdata.append('SDate', AddRese.StartDate);
+        formdata.append('EDate', AddRese.EndDate);
+        formdata.append('Tmode', AddRese.Mode);
+        formdata.append('Others', AddRese.Passengers);
+        formdata.append('Designation', AddRese.Designation);
+        formdata.append('Division', AddRese.Division);
+        formdata.append('vType', AddRese.Vehicle);
+        formdata.append('Fsource', AddRese.Funding);
 
-        axios.post('http://localhost:8081/AddReservation/' + EmailUser, AddRese, {empUsername, empRole})
+        axios.post('http://localhost:8081/AddReservation/' + EmailUser, formdata)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Reservation Added Successful")
