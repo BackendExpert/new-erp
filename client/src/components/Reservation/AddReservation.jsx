@@ -185,9 +185,9 @@ const AddReservation = () => {
                               onChange={e => SetEmpData({...empData, civilstatus:e.target.value})}>
                                   <option>Select Option</option>
                                   {
-                                    emailHOD.map((hod) => {
+                                    userDivision.map((divi) => {
                                       return(
-                                        <option value={hod.email}>{hod.email}</option>
+                                        <option value={divi.did}>{divi.title}</option>
                                       )
                                     })
                                   }
