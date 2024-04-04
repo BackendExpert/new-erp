@@ -1194,6 +1194,21 @@ app.get('/EmpCount', (req, res) => {
     });
 });
 
+// ViewEmployee
+app.get('/ViewEmployee/:id', (req, res) => {
+    const empID = req.params.id;
+
+    const sql = "SELECT * FROM employee WHERE eid = ?"
+    connection.query(sql, [empID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 
 // ------------------------------------ Employee End ---------------------------------------------------
 
