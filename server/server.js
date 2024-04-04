@@ -2500,20 +2500,18 @@ app.post('/AddReservation/:id', (req, res) => {
 })
 
 // ReseReqCount
-app.get('/ReseReqCount/:id', (req, res) => {
-    const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(LID) AS MyAppLeave FROM leaves WHERE Status = ? && Email = ?";
+app.get('/ReseReqCount', (req, res) => {
+    const sql = "SELECT COUNT(LID) AS RecRese FROM reservations WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = "Approve"
-
-    connection.query(sql, [status, UserEmail], (error, results) => {
+    const status = "Requested"
+    connection.query(sql, [status], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
         return;
       }
   
-      res.json({ MyAppLeave: results[0].MyAppLeave }); // Send count in JSON format
+      res.json({ RecRese: results[0].RecRese }); // Send count in JSON format
     });
 })
 
