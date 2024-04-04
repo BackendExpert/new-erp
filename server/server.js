@@ -2397,6 +2397,8 @@ app.post('/AddReservation/:id', (req, res) => {
 
                 if(result.length > 0){
                     const sql = "INSERT INTO reservations(StartDate, time, loc_route, HoDEmail, other_passengers, Name, EndDate, mode_travel, Status, Email, designation, fundingsource, division, purpose, veh_type, create_at, update_at) VALUES(?)"
+                    const create_at = new Date()
+                    const update_at = new Date()
                     const values = [
                         req.body.StartDate,
                         req.body.Time,
@@ -2412,7 +2414,9 @@ app.post('/AddReservation/:id', (req, res) => {
                         req.body.Funding,
                         req.body.Division,
                         req.body.Purpose, 
-                        req.body.Vehicle
+                        req.body.Vehicle,
+                        create_at,
+                        update_at,
                     ]
 
                     connection.query(sql, [values], (err, result) => {
