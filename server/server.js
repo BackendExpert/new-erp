@@ -2444,6 +2444,7 @@ app.post('/AddReservation/:id', (req, res) => {
     const UserEmail = req.params.id
     // console.log(UserEmail)
     console.log(req.body)
+    console.log(req.body.AddRese.Time)
 
     const checkhod = "SELECT * FROM users WHERE email = ?"
     connection.query(checkhod, [req.body.HoDEmail], (err, result) => {
