@@ -410,9 +410,6 @@ app.post('/UnAccess', (req, res) => {
         }   
         else{
             // res.json({ message: 'Email received successfully' });
-            const checksql = "SELECT * FROM unauthorized WHERE email = ? ";
-            connection.query(checksql, [userEmail], (err, result) => {
-                if(result.length == 0) {
                     const sql = "INSERT INTO unauthorized(email, role, access_time) VALUES (?, ?, ?)";
                     var unaccessTime = new Date();
                     connection.query(sql, [userEmail, userRole, unaccessTime], (err, result) => {
@@ -444,11 +441,7 @@ app.post('/UnAccess', (req, res) => {
                             })
                         }
                     })
-                }
-                else{
-                    return false;
-                }
-            })
+            
         }
     }) 
 })
