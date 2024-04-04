@@ -64,6 +64,7 @@ import DriverDash from "./components/Driver/DriverDash"
 import AddReservation from "./components/Reservation/AddReservation"
 import AddUsers from "./components/SuperAdmin/AddUsers"
 import ViewEmployee from "./components/Employees/ViewEmployee"
+import RecReservation from "./components/Reservation/RecReservation"
 
 export default function App() {
   return (
@@ -197,6 +198,7 @@ export default function App() {
 
         {/* Reservation */}
         <Route path="/AddReservation" element={<PrivateRoute><AddReservation /></PrivateRoute>} />
+        <Route path="/RecReservation" element={<PrivateRoute><RecReservation /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
