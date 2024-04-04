@@ -2086,7 +2086,22 @@ app.post('/RequestLeave/:id', (req, res) => {
                             return res.json({Error: "Error on SERVER"})
                         }
                         else{
-                            return res.json({Status: "Success"})
+                            
+                            var mailOptions = {
+                                from: process.env.EMAIL_USER,
+                                to: Email,
+                                subject: 'Request a Leave',
+                                text: 'You Request a Leave in ERP at NIFS'
+                            };
+
+                            transporter.sendMail(mailOptions, function(error, info){
+                                if (error) {
+                                  console.log(error);
+                                } else {
+                                  console.log('Email sent: ' + info.response);
+                                  return res.json({Status: "Success"})
+                                }
+                            });
                         }
                     })
                 }
