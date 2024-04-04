@@ -95,8 +95,8 @@ const ViewEmployee = () => {
                                             </div>
                                             <div className="my-4">
                                                 <div className="flex">
-                                                    <p className="text-md font-semibold">Employee Salary : </p>
-                                                    <p className="text-md pl-4">{emp.salary}</p>
+                                                    <p className="text-md font-semibold">Employee Nic : </p>
+                                                    <p className="text-md pl-4">{emp.nic}</p>
                                                 </div>
                                             </div>
                                             <div className="my-4">
