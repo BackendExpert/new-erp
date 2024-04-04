@@ -147,6 +147,11 @@ app.post('/login', (req, res) => {
     );
 });
 
+// ForgetPass
+app.post('/ForgetPass', (req, res) => {
+    
+})
+
 //UserRoleRequest
 /*
     This end point design for when someone register using register route 
