@@ -2407,9 +2407,7 @@ app.get('/hodEmail', (req, res) => {
 })
 
 // UserDivivsion
-app.get('/UserDivivsion/:id', (req, res) => {
-    const UserEmail = req.params.id;
-
+app.get('/UserDivivsion', (req, res) => {
     const sql = "SELECT * FROM employee WHERE email = ?"
 
     connection.query(sql, [UserEmail], (err, result) => {
