@@ -172,8 +172,7 @@ const AddEmployee = () => {
                                     onChange={e => SetEmpData({...empData, designation:e.target.value})}>
                                         <option>Select Option</option>
                                         <option value="Non Academic">Non Academic</option>
-                                        <option value="Non Academic">Academic</option>
-                                        <option value="VRA">Volunteer RA</option>    
+                                        <option value="Non Academic">Academic</option>                                        
                                     </select>
                                 </div>
                                 <div className="">
@@ -186,10 +185,11 @@ const AddEmployee = () => {
                                         <option value="Librarian">Librarian</option>
                                         <option value="Labmanager">Labmanager</option>
                                         <option value="Accountant">Accountant</option> 
-                                        <option value="Driver">Driver</option>                                       
-                                        <option value="RA">RA</option>
                                         <option value="PostDoc">PostDoc</option>
                                         <option value="Scientist">Scientist</option>
+                                        <option value="RA">RA</option>  
+                                        <option value="VRA">Volunteer RA</option>  
+                                        <option value="Driver">Driver</option>      
                                     </select>
                                 </div>
                                 <div className="">
