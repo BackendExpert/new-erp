@@ -129,14 +129,14 @@ const ViewEmployee = () => {
                                         <div className="lg:grid grid-cols-3 gap-4">
                                             <div className="my-4">
                                                 <div className="flex">
-                                                    <p className="text-md font-semibold">Emergency Gender : </p>
+                                                    <p className="text-md font-semibold">Gender : </p>
                                                     <p className="text-md pl-4">{emp.Gender}</p>
                                                 </div>
                                             </div>
                                             <div className="my-4">
                                                 <div className="flex">
-                                                    <p className="text-md font-semibold">Employement Type : </p>
-                                                    <p className="text-md pl-4">{emp.type}</p>
+                                                    <p className="text-md font-semibold">Religous  : </p>
+                                                    <p className="text-md pl-4">{emp.relig}</p>
                                                 </div>
                                             </div>
                                             <div className="my-4">
