@@ -92,7 +92,7 @@ const AddReservation = () => {
       // user division
       const [userDivision, SetUserDivision] = useState()
       useEffect(() => {
-        axios.get('http://localhost:8081/UserDivivsion/' + EmailUser)
+        axios.get('http://localhost:8081/UserDivivsion')
         .then(res => SetUserDivision(res.data))
         .catch(err => console.log(err))
       }, [])
