@@ -105,7 +105,7 @@ const AddReservation = () => {
         .catch(err => console.log(err))
       }, [])
 
-      const Name = empName.username 
+
   return (
     <div className="bg-gray-200 py-4">
         <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
@@ -118,7 +118,7 @@ const AddReservation = () => {
                         <div className="my-2">
                             <label htmlFor="">Employee Name : </label>
                             <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                            value={Name} onChange={e => SetEmpname({...empName, Name:e.target.value})}/>
+                            value={empName.username} onChange={e => SetAddRese({...AddRese, Name:e.target.value})}/>
 
                         </div>
                         <div className="my-2">
@@ -139,7 +139,7 @@ const AddReservation = () => {
                         <div className="my-2">
                             <label htmlFor="">HOD Email : </label>
                             <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
-                              onChange={e => SetEmpData({...empData, HoDEmail:e.target.value})}>
+                              onChange={e => SetAddRese({...AddRese, HoDEmail:e.target.value})}>
                                   <option>Select Option</option>
                                   {
                                     emailHOD.map((hod) => {
@@ -191,7 +191,7 @@ const AddReservation = () => {
                         <div className="my-2">
                             <label htmlFor="">Division : </label>
                             <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
-                              onChange={e => SetEmpData({...empData, Division:e.target.value})}>
+                              onChange={e => SetAddRese({...AddRese, Division:e.target.value})}>
                                   <option>Select Option</option>
                                   {
                                     userDivision.map((divi) => {
