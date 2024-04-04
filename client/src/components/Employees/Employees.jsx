@@ -62,16 +62,9 @@ const Employees = () => {
                         <tr className='text-blue-500'>
                             <th scope='col' className='px-6 py-3'>Emp ID</th>
                             <th scope='col' className='px-6 py-3'>Photo</th>
-                            <th scope='col' className='px-6 py-3'>Initials</th>
-                            <th scope='col' className='px-6 py-3'>Surname</th>
                             <th scope='col' className='px-6 py-3'>Designation</th>
                             <th scope='col' className='px-6 py-3'>UserRole</th>
-                            <th scope='col' className='px-6 py-3'>Phone</th>
-                            <th scope='col' className='px-6 py-3'>Emerg Contact</th>
                             <th scope='col' className='px-6 py-3'>Email</th>
-                            <th scope='col' className='px-6 py-3'>Type</th>
-                            <th scope='col' className='px-6 py-3'>Gender</th>
-                            <th scope="col" className="px-6 py-3">Civil Status</th>
                             <th scope="col" className="px-6 py-3">Action</th>
                         </tr>
                     </thead>
@@ -84,16 +77,9 @@ const Employees = () => {
                                         <td className='px-6 py-4'>
                                             <img src={'http://localhost:8081/images/' + empData.image} className="h-12 w-12 rounded"/>
                                         </td>
-                                        <td className="px-6 py-4">{empData.initial}</td>
-                                        <td className="px-6 py-4">{empData.surname}</td>
                                         <td className="px-6 py-4">{empData.designation}</td>
                                         <td className="px-6 py-4">{empData.category}</td>
-                                        <td className="px-6 py-4">{empData.phone}</td>
-                                        <td className="px-6 py-4">{empData.emgcontact}</td>
                                         <td className="px-6 py-4">{empData.email}</td>
-                                        <td className="px-6 py-4">{empData.type}</td>
-                                        <td className="px-6 py-4">{empData.gender}</td>
-                                        <td className="px-6 py-4">{empData.civilstatus}</td>
                                         <td>
                                             <div className="flex">
                                                 <Link to={'/UpdateEmp/' + empData.eid}>
