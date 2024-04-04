@@ -31,23 +31,59 @@ const ViewEmployee = () => {
                         {
                             ViewEmp.map((emp) => {
                                 return (
-                                    <div className="lg:grid grid-cols-3 gap-4">
-                                        <div className="">
-                                            <div className="flex">
-                                                <p className="text-md font-semibold">Employee ID : </p>
-                                                <p className="text-md pl-4">{emp.eid}</p>
+                                    <div className="">
+                                        <div className="lg:grid grid-cols-3 gap-4">
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee ID : </p>
+                                                    <p className="text-md pl-4">{emp.eid}</p>
+                                                </div>
+                                            </div>
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee Email : </p>
+                                                    <p className="text-md pl-4">{emp.email}</p>
+                                                </div>
+                                            </div>
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee Role : </p>
+                                                    <p className="text-md pl-4">{emp.category}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className="">
-                                            <div className="flex">
-                                                <p className="text-md font-semibold">Employee Email : </p>
-                                                <p className="text-md pl-4">{emp.email}</p>
+                                        <div className="lg:grid grid-cols-3 gap-4">
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee Initial : </p>
+                                                    <p className="text-md pl-4">{emp.initial}</p>
+                                                </div>
+                                            </div>
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee Surname : </p>
+                                                    <p className="text-md pl-4">{emp.surname}</p>
+                                                </div>
+                                            </div>
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee Phone : </p>
+                                                    <p className="text-md pl-4">{emp.phone}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className="">
-                                            <div className="flex">
-                                                <p className="text-md font-semibold">Employee ID : </p>
-                                                <p className="text-md pl-4">{emp.eid}</p>
+                                        <div className="lg:grid grid-cols-2 gap-4">
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee Initial : </p>
+                                                    <p className="text-md pl-4">{emp.initial}</p>
+                                                </div>
+                                            </div>
+                                            <div className="my-4">
+                                                <div className="flex">
+                                                    <p className="text-md font-semibold">Employee Surname : </p>
+                                                    <p className="text-md pl-4">{emp.surname}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
