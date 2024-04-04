@@ -2398,8 +2398,31 @@ app.post('/AddReservation/:id', (req, res) => {
                 if(result.length > 0){
                     const sql = "INSERT INTO reservations(StartDate, time, loc_route, HoDEmail, other_passengers, Name, EndDate, mode_travel, Status, Email, designation, fundingsource, division, purpose, veh_type, create_at, update_at) VALUES(?)"
                     const values = [
-                        
+                        req.body.StartDate,
+                        req.body.Time,
+                        req.body.Location,
+                        req.body.HoDEmail,
+                        req.body.Passengers,
+                        req.body.Name,
+                        req.body.EndDate,
+                        req.body.Mode,
+                        'Requested',
+                        req.body.Email,
+                        req.body.Designation,
+                        req.body.Funding,
+                        req.body.Division,
+                        req.body.Purpose,
+                        req.body.Vehicle
                     ]
+
+                    connection.query(sql, [values], (err, result) => {
+                        if(err) {
+                            return res.json({Error: "ERROR on SERVER"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    })
                 }
             })
         }
