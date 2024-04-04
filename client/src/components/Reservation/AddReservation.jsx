@@ -73,7 +73,7 @@ const AddReservation = () => {
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Reservation Added Successful")
-                navigate('/Reservation')
+                headleBack()
             }
             else{
                 alert(res.data.Error)
