@@ -65,6 +65,7 @@ import AddReservation from "./components/Reservation/AddReservation"
 import AddUsers from "./components/SuperAdmin/AddUsers"
 import ViewEmployee from "./components/Employees/ViewEmployee"
 import RecReservation from "./components/Reservation/RecReservation"
+import ForgetPass from "./components/LoginSignUp/ForgetPass"
 
 export default function App() {
   return (
@@ -72,6 +73,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} ></Route>
         <Route path="/register" element={<SignUp />} ></Route>
+
+        {/* ForgetPass */}
+        <Route path="/ForgetPass" element={<ForgetPass />} />
+
+
 
         {/* PrivateRoute for protect the following routes from unauthrized access */}
         {/* DirectorDash */}
