@@ -15,7 +15,7 @@ const ViewEmployee = () => {
                     <h1 className="text-xl font-semibold">Employee Data</h1>
                     <hr className="mb-4" />
                     <div className="lg:flex">
-                        <Link to={'/Employees'}>
+                        <Link to={'/Employee'}>
                             <button className="lg:my-0 my-2 border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl lg:mx-2">Back</button>
                         </Link>
                     </div>
