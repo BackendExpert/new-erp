@@ -194,9 +194,7 @@ export default function App() {
         <Route path="/ApproveLeave" element={<PrivateRoute><ApproveLeave /></PrivateRoute>} />
 
         {/* Reservation */}
-
         <Route path="/AddReservation" element={<PrivateRoute><AddReservation /></PrivateRoute>} />
-
 
       </Routes>
     </BrowserRouter>

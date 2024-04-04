@@ -2375,6 +2375,66 @@ app.get('/CountAppLeave/:id', (req, res) => {
       res.json({ MyAppLeave: results[0].MyAppLeave }); // Send count in JSON format
     });
 })
+// ---------------------------- Reservation ---------------------
+
+// AddReservation
+app.post('/AddReservation/:id', (req, res) => {
+    const UserEmail = req.params.id
+    // console.log(UserEmail)
+    // console.log(req.body)
+
+    const checkhod = "SELECT * FROM users WHERE email = ?"
+    connection.query(checkhod, [req.body.HoDEmail], (err, result) => {
+        if(err) throw err
+
+        if(result.length == 0){
+            return res.json({Error: "HOD not exists"})
+        }
+        else if(result[0].role === "HOD"){
+            const checkuser = "SELECT * FROM users WHERE email = ?"
+            connection.query(checkuser, [UserEmail], (err, result) => {
+                if(err) throw err
+
+                if(result.length > 0){
+                    const sql = "INSERT INTO reservations(StartDate, time, loc_route, HoDEmail, other_passengers, Name, EndDate, mode_travel, Status, Email, designation, fundingsource, division, purpose, veh_type, create_at, update_at) VALUES(?)"
+                    const create_at = new Date()
+                    const update_at = new Date()
+                    const values = [
+                        req.body.StartDate,
+                        req.body.Time,
+                        req.body.Location,
+                        req.body.HoDEmail,
+                        req.body.Passengers,
+                        req.body.Name,
+                        req.body.EndDate,
+                        req.body.Mode,
+                        'Requested',
+                        req.body.Email,
+                        req.body.Designation,
+                        req.body.Funding,
+                        req.body.Division,
+                        req.body.Purpose, 
+                        req.body.Vehicle,
+                        create_at,
+                        update_at,
+                    ]
+
+                    connection.query(sql, [values], (err, result) => {
+                        if(err) {
+                            return res.json({Error: "ERROR on SERVER"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    })
+                }
+            })
+        }
+    })
+
+})
+
+// ---------------------------- Reservation END ---------------------
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
