@@ -2440,8 +2440,8 @@ app.get('/EmpName/:id', (req, res) => {
 })
 
 // AddReservation
-app.post('/AddReservation', (req, res) => {
-    // const UserEmail = req.params.id
+app.post('/AddReservation/:id', (req, res) => {
+    const UserEmail = req.params.id
     // console.log(UserEmail)
     console.log(req.body)
 
@@ -2454,7 +2454,7 @@ app.post('/AddReservation', (req, res) => {
         }
         else if(result[0].role === "HOD"){
             const checkuser = "SELECT * FROM users WHERE email = ?"
-            connection.query(checkuser, [req.body.Email], (err, result) => {
+            connection.query(checkuser, [UserEmail], (err, result) => {
                 if(err) throw err
 
                 if(result.length > 0){
