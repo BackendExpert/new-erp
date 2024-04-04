@@ -2501,7 +2501,7 @@ app.post('/AddReservation/:id', (req, res) => {
 
 // ReseReqCount
 app.get('/ReseReqCount', (req, res) => {
-    const sql = "SELECT COUNT(LID) AS RecRese FROM reservations WHERE Status = ?";
+    const sql = "SELECT COUNT(RID) AS RecRese FROM reservations WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Requested"
     connection.query(sql, [status], (error, results) => {
