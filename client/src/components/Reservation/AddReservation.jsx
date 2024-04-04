@@ -69,7 +69,7 @@ const AddReservation = () => {
 
       const headleSubmit = (e) => {
         e.preventDefault(); 
-        axios.post('http://localhost:8081/AddReservation/' + EmailUser, AddRese)
+        axios.post('http://localhost:8081/AddReservation/' + EmailUser, AddRese, empUsername, empRole)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Reservation Added Successful")
@@ -105,7 +105,9 @@ const AddReservation = () => {
         .catch(err => console.log(err))
       }, [])
 
-
+      const empUsername = empName.username
+      const empRole = empName.role
+      
   return (
     <div className="bg-gray-200 py-4">
         <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
@@ -118,7 +120,7 @@ const AddReservation = () => {
                         <div className="my-2">
                             <label htmlFor="">Employee Name : </label>
                             <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                            value={empName.username} onChange={e => SetAddRese({...AddRese, Name:e.target.value})}/>
+                            value={empUsername} onChange={e => SetAddRese({...AddRese, Name:e.target.value})}/>
 
                         </div>
                         <div className="my-2">
@@ -186,7 +188,7 @@ const AddReservation = () => {
                         <div className="my-2">
                             <label htmlFor="">Designation : </label>
                             <input type="text" disabled name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Other Travellers"
-                            value={empName.role} onChange={e => SetAddRese({...AddRese, Designation:e.target.value})}/>
+                            value={empRole} onChange={e => SetAddRese({...AddRese, Designation:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Division : </label>
