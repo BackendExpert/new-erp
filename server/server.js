@@ -2660,6 +2660,22 @@ app.get('/RequestRese', (req, res) => {
     })
 })
 
+// DriverData
+
+app.get('/DriverData', (req, res) => {
+    const sql = "SELECT * FROM users WHERE role = ?"
+    const DriverRole = "Driver"
+
+    connection.query(sql, [DriverRole], (err, result) => {
+        if(err){
+            return res.json({Error: "Error in server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
