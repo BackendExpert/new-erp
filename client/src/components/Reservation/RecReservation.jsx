@@ -28,12 +28,15 @@ const RecReservation = () => {
           }
       }
 
+      // for request Reservations
     const [RequestReses, SetRequestReses] = useState([])
     useEffect(() => {
       axios.get('http://localhost:8081/RequestRese')
       .then(res => SetRequestReses(res.data))
       .catch(err => console.log(err))
     }, [])
+
+
     
 
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
@@ -81,7 +84,7 @@ const RecReservation = () => {
                               return (
                                 RequestReses.map((Rese, index) => {
                                   return (
-                                    
+                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
                                   )
                                 })
                               )
