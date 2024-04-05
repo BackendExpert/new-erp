@@ -2679,17 +2679,18 @@ app.get('/DriverData', (req, res) => {
 // AssignDriver
 app.post('/AssignDriver/:id', (req, res) => {
     const RequstID = req.params.id;
-    // console.log(req.body)
+    console.log(req.body)
+    console.log(RequstID)
 
-    const sql = "UPDATE reservations SET DEmail = ? WHERE RID = ?"
-    connection.query(sql, [req.body.DEmail], (err, result) =>{
-        if(err){
-            return res.json({Error: "Error on Server"})
-        }
-        else{
-            return res.json({Status: "Success"})
-        }
-    })
+    // const sql = "UPDATE reservations SET DEmail = ? WHERE RID = ?"
+    // connection.query(sql, [req.body.DEmail], (err, result) =>{
+    //     if(err){
+    //         return res.json({Error: "Error on Server"})
+    //     }
+    //     else{
+    //         return res.json({Status: "Success"})
+    //     }
+    // })
 })
 
 // ---------------------------- Reservation END ---------------------
