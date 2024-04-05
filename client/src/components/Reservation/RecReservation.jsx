@@ -9,9 +9,18 @@ const RecReservation = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
-  return (
-    <div>RecReservation</div>
-  )
+
+    if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
+      return (
+        <div>RecReservation</div>
+      )
+    }
+    else{
+      useEffect(() => {
+        navigate('/UnAccess');
+      }, [])
+    }
+
 }
 
 export default RecReservation
