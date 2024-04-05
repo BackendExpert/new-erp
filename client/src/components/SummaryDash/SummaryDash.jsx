@@ -187,7 +187,7 @@ const SummaryDash = () => {
     {id: 17, name:"Request Reservation" , value: <CountUp end={ReqRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-orange-500 hover:text-orange-600" },
     {id: 18, name:"Recommend Reservation" , value: <CountUp end={RecommendRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
     {id: 19, name:"Denied Reservation" , value: <CountUp end={DeniedRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
-    {id: 20, name:"Denied Reservation" , value: <CountUp end={DeniedRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
+    {id: 20, name:"Approve Reservation" , value: <CountUp end={DeniedRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
   
   ]
 
@@ -248,7 +248,7 @@ const SummaryDash = () => {
               }
             }
             if(RoleUser === "Director" || RoleUser === "Secretary"){
-              if(data.id === 13 || data.id === 14 || data.id === 16 || data.id === 17 || data.id === 18 || data.id === 19){
+              if(data.id === 13 || data.id === 14 || data.id === 16 || data.id === 17 || data.id === 18 || data.id === 19 || data.id === 20){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
