@@ -11,6 +11,7 @@ const ForgetPass = () => {
         email: '',
     })
 
+    const [userEmail, setuserEmail] = useState('');
     
     
 
