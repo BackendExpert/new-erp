@@ -6,7 +6,7 @@ import secureLocalStorage from "react-secure-storage"
 const CheckOTP = () => {
     const navigate = useNavigate()
 
-    const Token1 = secureLocalStorage.getItem('Token1')    
+    const Token1 = secureLocalStorage.getItem("Token1");
 
     const [OTPCheck, SetOTPCheck] = useState({
         otp: ''
