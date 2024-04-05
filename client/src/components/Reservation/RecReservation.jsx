@@ -63,8 +63,7 @@ const RecReservation = () => {
                           <th scope='col' className='px-6 py-3'>Funding</th>
                           <th scope='col' className='px-6 py-3'>HOD</th>
                           <th scope='col' className='px-6 py-3'>Passengers</th>
-
-
+                          <th scope='col' className='px-6 py-3'>Status</th>
                           <th scope='col' className='px-6 py-3'>Action</th>                                        
                         </tr>
                     </thead>
