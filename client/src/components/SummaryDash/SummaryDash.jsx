@@ -178,7 +178,7 @@ const SummaryDash = () => {
     {id: 16, name:"Recommend Leaves" , value: <CountUp end={RecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-purple-500 hover:text-purple-600" },
     {id: 17, name:"Request Reservation" , value: <CountUp end={ReqRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-orange-500 hover:text-orange-600" },
     {id: 18, name:"Recommend Reservation" , value: <CountUp end={RecommendRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
-    {id: 19, name:"Denied Reservation" , value: <CountUp end={RecommendRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
+    {id: 19, name:"Denied Reservation" , value: <CountUp end={RecommendRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
   ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
