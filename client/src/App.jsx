@@ -80,9 +80,9 @@ export default function App() {
         <Route path="/ForgetPass" element={<ForgetPass />} />
         <Route path="/CheckOTP" element={<CheckOTP />} />
         
-        {/*UpdatePass - Private Route*/}
+        {/*UpdatePass */}
 
-        <Route path="/UpdatePass" element={<PrivateRoute><UpdatePass /></PrivateRoute>} />
+        <Route path="/UpdatePass" element={<UpdatePass />}/>
 
 
 
