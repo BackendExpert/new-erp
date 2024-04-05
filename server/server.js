@@ -2712,7 +2712,10 @@ app.post('/ReservationRec/:id', (req, res) => {
 })
 
 // ReservationDenied
-app.post('/ReservationDenied/:id')
+app.post('/ReservationDenied/:id', (req, res) => {
+    const ResID = req.params.id
+    const Status = ""
+})
 
 // ---------------------------- Reservation END ---------------------
 
