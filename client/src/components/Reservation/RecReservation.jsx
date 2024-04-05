@@ -135,7 +135,7 @@ const RecReservation = () => {
                                             }
                                           })()
                                         }
-                                        <button className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
+                                        <button  onClick={() => headleDenied(Rese.RID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
                                         </div>
                                       </td>
                                     </tr>
