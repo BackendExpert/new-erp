@@ -40,7 +40,7 @@ const ForgetPass = () => {
                 <div className="my-8 mx-12">
                     <label htmlFor="">Email : </label>
                     <input type="email" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter Your Email Address'
-                    onChange={e => SetForgetPass({...ForgetPass, email:e.target.value})}/>
+                    value={userEmail} onChange={e => SetForgetPass({...ForgetPass, email:e.target.value})}/>
 
                     <p className="text-red-500">The OTP (One Time Password) will send to above you Entered Email</p>
 
