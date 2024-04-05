@@ -162,6 +162,17 @@ const RecReservation = () => {
                                 })
                               )
                             }
+                            else if(buttonValue === "Denied"){
+                              return (
+                                DeniedReses.map((DRese, index) => {
+                                  return (
+                                    <tr key={index}>
+                                      
+                                    </tr>
+                                  )
+                                })
+                              )
+                            }
                           })()
                         }
                     </tbody>
