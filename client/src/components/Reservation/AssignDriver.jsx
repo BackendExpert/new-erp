@@ -29,6 +29,15 @@ const AssignDriver = () => {
     const HeadleSubmit = (e) => {
         e.preventDefault(); 
         axios.post('http://localhost:8081/AssignDriver/' + id, AssignDriver)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Driver Assign Successful")
+                navigate('/RecReservation')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
 
 
