@@ -2837,6 +2837,13 @@ app.post('/RejectRese/:id', (req, res) => {
     })
 })
 
+// RejectReseData
+app.get('/RejectReseData', (req, res) => {
+    const sql = "SELECT * FROM reservations WHERE Status = ?"
+    const Status = "Reject"
+    
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
