@@ -39,7 +39,7 @@ const RecReservation = () => {
       // for Denied Reservations
     const [DeniedReses, SetDeniedReses] = useState([])
     useEffect(() => {
-      axios.post('http://localhost:8081/ReseDenied')
+      axios.get('http://localhost:8081/ReseDenied')
       .then(res => SetDeniedReses(res.data))
       .catch(err => console.log(err))
     }, [])
