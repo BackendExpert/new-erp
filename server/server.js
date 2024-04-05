@@ -2788,6 +2788,20 @@ app.get('/DeniedReseCount', (req, res) => {
     });
 })
 
+// ViewRecommendedRese
+app.get('/ViewRecommendedRese', (req, res) => {
+    const sql = "SELECT * FROM reservations WHERE Status = ?"
+    const Status = "Recommend"
+
+    connection.query(sql, [Status], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
 
 // ---------------------------- Reservation END ---------------------
 
