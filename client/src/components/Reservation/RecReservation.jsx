@@ -201,7 +201,25 @@ const RecReservation = () => {
                               return(
                                 ReservationsRese.map((ReceRese, index) => {
                                   return (
-                                    
+                                    <tr key={index}>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.Name}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.designation}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.Email}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.purpose}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.division}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.time}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.StartDate}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.EndDate}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.loc_route}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.veh_type}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.fundingsource}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.HoDEmail}</td>
+                                      <td className='px-6 py-4 font-bold'>{ReceRese.other_passengers}</td>
+                                      <td className='px-6 py-4 font-bold'>
+                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{ReceRese.Status}</span>
+                                      </td>  
+                                    </tr>                                    
                                   )
                                 })
                               )
