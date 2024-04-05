@@ -68,7 +68,6 @@ const RecReservation = () => {
                           <th scope='col' className='px-6 py-3'>Division</th>                                        
                           <th scope='col' className='px-6 py-3'>Starting Time</th>
                           <th scope='col' className='px-6 py-3'>Date</th>
-                          <th scope='col' className='px-6 py-3'>Time</th>
                           <th scope='col' className='px-6 py-3'>Arrival Date</th>
                           <th scope='col' className='px-6 py-3'>Route</th>
                           <th scope='col' className='px-6 py-3'>Vehicle Type</th>
@@ -92,9 +91,9 @@ const RecReservation = () => {
                                       <td className='px-6 py-4 font-bold'>{Rese.designation}</td>
                                       <td className='px-6 py-4 font-bold'>{Rese.Email}</td>
                                       <td className='px-6 py-4 font-bold'>{Rese.purpose}</td>
-                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
-                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
-                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.division}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.StartDate}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.time}</td>
 
 
                                       <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
