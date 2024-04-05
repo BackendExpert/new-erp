@@ -183,7 +183,7 @@ const SummaryDash = () => {
         DataList.map((data, index) => {
             //for SuperAdmin
             if(RoleUser === "SuperAdmin"){
-              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16){
+              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 my-5 cursor-pointer rounded duration-500 ${data.style}`}>
                       <span className="text-3xl" >{data.icons}</span>
@@ -195,7 +195,7 @@ const SummaryDash = () => {
             }
             //for Admin
             if(RoleUser === "Admin"){
-              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16){
+              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
@@ -218,7 +218,7 @@ const SummaryDash = () => {
               }
             }
             if(RoleUser === "TO"){
-              if(data.id === 5 || data.id === 13 || data.id === 14 || data.id === 16 || data.id === 17){
+              if(data.id === 5 || data.id === 13 || data.id === 14 || data.id === 16 || data.id === 17 || data.id === 18){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
