@@ -178,6 +178,15 @@ app.post('/ForgetPass', (req, res) => {
                             hashOtp,
                             change_at
                         ]
+
+                        connection.query(sql, [value], (err, result) => {
+                            if(err){
+                                return res.json({Error: "Error on Server"})
+                            }
+                            else{
+                                return res.json({Status: "Success"})
+                            }
+                        })
                     }
                 })
             }
