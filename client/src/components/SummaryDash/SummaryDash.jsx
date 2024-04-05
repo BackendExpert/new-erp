@@ -178,6 +178,7 @@ const SummaryDash = () => {
     {id: 16, name:"Recommend Leaves" , value: <CountUp end={RecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-purple-500 hover:text-purple-600" },
     {id: 17, name:"Request Reservation" , value: <CountUp end={ReqRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-orange-500 hover:text-orange-600" },
     {id: 18, name:"Recommend Reservation" , value: <CountUp end={RecommendRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
+    {id: 19, name:"Denied Reservation" , value: <CountUp end={RecommendRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
   ]
 
     const RoleUser = secureLocalStorage.getItem("loginNew");
@@ -190,7 +191,7 @@ const SummaryDash = () => {
         DataList.map((data, index) => {
             //for SuperAdmin
             if(RoleUser === "SuperAdmin"){
-              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18){
+              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18 && data.id !== 19){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 my-5 cursor-pointer rounded duration-500 ${data.style}`}>
                       <span className="text-3xl" >{data.icons}</span>
@@ -202,7 +203,7 @@ const SummaryDash = () => {
             }
             //for Admin
             if(RoleUser === "Admin"){
-              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18){
+              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18 && data.id !== 19){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
@@ -225,7 +226,7 @@ const SummaryDash = () => {
               }
             }
             if(RoleUser === "TO"){
-              if(data.id === 5 || data.id === 13 || data.id === 14 || data.id === 16 || data.id === 17 || data.id === 18){
+              if(data.id === 5 || data.id === 13 || data.id === 14 || data.id === 16 || data.id === 17 || data.id === 18 || data.id === 19){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
