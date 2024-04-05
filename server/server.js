@@ -153,10 +153,13 @@ app.post('/ForgetPass', (req, res) => {
     const max = 999999;
 
     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-
     console.log(randomNumber);
 
-    bcrypt.hash(randomNumber, 10, (err, hashOtp) => {
+    const otp = "Hi all"
+
+    bcrypt.hash(otp, 10, (err, hashOtp) => {
+        if(err) throw err;
+
         const checkEmail = "SELECT * FROM users WHERE email = ?"
         connection.query(checkEmail, [req.body.email], (err, result) => {
             if(err) throw err
@@ -178,6 +181,7 @@ app.post('/ForgetPass', (req, res) => {
                             hashOtp,
                             change_at
                         ]
+                        console.log(value)
 
                         connection.query(sql, [value], (err, result) => {
                             if(err){
