@@ -64,11 +64,6 @@ const RecReservation = () => {
       })
     }
 
-    
-
-
-    
-
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
       return (
         <div className="bg-gray-200 py-4">
