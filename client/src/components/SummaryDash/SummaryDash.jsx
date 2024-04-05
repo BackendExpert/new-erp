@@ -31,6 +31,7 @@ const SummaryDash = () => {
   const [ReqRese, SetReqRese] = useState(0);
   const [RecommendRese, SetRecommendRese] = useState(0);
   const [DeniedRese, SetDeniedRese] = useState(0);
+  const [ApproveRese, SetApproveRese] = useState(0)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -158,6 +159,13 @@ const SummaryDash = () => {
       try {
         const CountDeniedRese = await axios.get('http://localhost:8081/DeniedReseCount');
         SetDeniedRese(CountDeniedRese.data.DeniedRese);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+
+      try {
+        const CountApproveRese = await axios.get('http://localhost:8081/ApproveReseCount');
+        SetDeniedRese(CountApproveRese.data.DeniedRese);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
