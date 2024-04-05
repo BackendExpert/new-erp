@@ -25,6 +25,16 @@ const ApproveReservation = () => {
             }
         }
 
+    // get Recommended Reservations from backend
+    const [ViewReservation, SetViewReservation] = useState([])
+    useEffect(() => {
+        axios.post('http://localhost:8081/ViewRecommendedRese')
+        .then(res => SetViewReservation(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
+
+
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
