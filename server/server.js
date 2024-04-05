@@ -213,6 +213,12 @@ app.post('/ForgetPass', (req, res) => {
     })
 })
 
+// CheckOTP
+
+app.post('/CheckOTP', (req, res) => {
+    const = "SELECT * FROM pass_otp WHERE "
+})
+
 //UserRoleRequest
 /*
     This end point design for when someone register using register route 
