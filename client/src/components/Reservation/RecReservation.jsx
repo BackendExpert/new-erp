@@ -5,6 +5,10 @@ import axios from "axios";
 
 const RecReservation = () => {
     const navigate = useNavigate()
+    //check current login user
+    const RoleUser = secureLocalStorage.getItem("loginNew");
+    //get current login user's email
+    const EmailUser = secureLocalStorage.getItem("logiafter");
   return (
     <div>RecReservation</div>
   )
