@@ -234,11 +234,11 @@ app.post('/CheckOTP', (req, res) => {
                         'your-secret-key',
                         {expiresIn: '1h' }
                     );
-                    res.json({ token:token, Msg:"success", CheckRole:result });
+                    res.json({ token:token, Msg:"success", CheckEmail:result });
                     console.log(result)
                 }
                 else {
-                    res.status(401).send("Invalid Credentials");
+                    res.status(401).send("Access cannot be Continue");
                 }
             })
         }
