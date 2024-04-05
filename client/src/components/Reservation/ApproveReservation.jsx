@@ -28,7 +28,7 @@ const ApproveReservation = () => {
     // get Recommended Reservations from backend
     const [ViewReservation, SetViewReservation] = useState([])
     useEffect(() => {
-        axios.post('http://localhost:8081/ViewRecommendedRese')
+        axios.get('http://localhost:8081/ViewRecommendedRese')
         .then(res => SetViewReservation(res.data))
         .catch(err => console.log(err))
     }, [])
@@ -77,7 +77,13 @@ const ApproveReservation = () => {
                             (() => {
                                 if(buttonValue === "Recommend"){
                                     return (
-                                        
+                                        ViewReservation.map((ReseRece, index) => {
+                                            return(
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.RID}</td>
+                                                </tr>
+                                            )
+                                        })
                                     )
                                 }
                             })()
