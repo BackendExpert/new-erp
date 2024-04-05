@@ -149,24 +149,27 @@ app.post('/login', (req, res) => {
 
 // ForgetPass
 app.post('/ForgetPass', (req, res) => {
-    const checkEmail = "SELECT * FROM users WHERE email = ?"
-    connection.query(checkEmail, [req.body.email], (err, result) => {
-        if(err) throw err
 
-        if(result.length == 0){
-            return res.json({Error: "Email not Found...!"})
-        }
-        else{
-            const checkotp = "SELECT * FROM pass_otp WHERE email = ?"
-            connection.query(checkotp, [req.body.email], (err, result) => {
-                if(err){
-                    return res.json({Error: "Error on Server"})
-                }
-                else{
-                    const sql = "INSERT INTO pass_otp(email, otp, change_at) VALUES (?)"
-                }
-            })
-        }
+    bcrypt.hash(password, 10, (err, hashPass) => {
+        const checkEmail = "SELECT * FROM users WHERE email = ?"
+        connection.query(checkEmail, [req.body.email], (err, result) => {
+            if(err) throw err
+    
+            if(result.length == 0){
+                return res.json({Error: "Email not Found...!"})
+            }
+            else{
+                const checkotp = "SELECT * FROM pass_otp WHERE email = ?"
+                connection.query(checkotp, [req.body.email], (err, result) => {
+                    if(err){
+                        return res.json({Error: "Error on Server"})
+                    }
+                    else{
+                        const sql = "INSERT INTO pass_otp(email, otp, change_at) VALUES (?)"
+                    }
+                })
+            }
+        })
     })
 })
 
