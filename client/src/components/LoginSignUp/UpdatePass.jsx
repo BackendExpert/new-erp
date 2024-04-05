@@ -7,11 +7,19 @@ const UpdatePass = () => {
     //Stroge the token in local stroge
     const PassToken = res.data.token
     localStorage.setItem('Token2', PassToken)
+    const Token1 = secureLocalStorage.getItem("Token1");
 
     console.log(loingToken)
-  return (
-    <div>UpdatePass</div>
-  )
+
+    if(Token1 === res.data.CheckEmail[0].email){
+        return (
+            <div>UpdatePass</div>
+        )
+    }
+    else{
+        alert("Nothing")
+    }
+
 }
 
 export default UpdatePass
