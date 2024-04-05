@@ -14,6 +14,16 @@ const ApproveReservation = () => {
     const HeadleButtonClick = (clickValue) => {
         SetButtonValue(clickValue)   
     }
+    
+        //GoBack
+        const GoBack = () => {
+            if(RoleUser === "Director"){
+                navigate('/DirectorDash');
+            }
+            else if(RoleUser === "Secretary"){
+                navigate('/Secretary');
+            }
+        }
 
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
