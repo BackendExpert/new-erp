@@ -49,7 +49,7 @@ const AssignDriver = () => {
                             </div>
                             <div className="">
                                 <button type="submit" className="rounded px-16 py-2 border border-green-500 text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">
-                                    Add Employee
+                                    Assign Driver
                                 </button>
                             </div>
                         </form>
