@@ -163,7 +163,7 @@ app.post('/ForgetPass', (req, res) => {
                     return res.json({Error: "Error on Server"})
                 }
                 else{
-                    
+                    const sql = "INSERT INTO pass_otp(email, otp, change_at) VALUES (?)"
                 }
             })
         }
