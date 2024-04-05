@@ -50,9 +50,9 @@ const RecReservation = () => {
                         <tr className='text-blue-500'>
                           <th scope='col' className='px-6 py-3'>Reservation ID</th>
                           <th scope='col' className='px-6 py-3'>Name</th>
-                          <th scope='col' className='px-6 py-3'>Email</th>                            
-                          <th scope='col' className='px-6 py-3'>Leave Type</th>
-                          <th scope='col' className='px-6 py-3'>Category</th>
+                          <th scope='col' className='px-6 py-3'>Designation</th>                            
+                          <th scope='col' className='px-6 py-3'>Email</th>
+                          <th scope='col' className='px-6 py-3'>Purpose</th>
                           <th scope='col' className='px-6 py-3'>Starting Date</th>                                        
                           <th scope='col' className='px-6 py-3'>Starting Time</th>
                           <th scope='col' className='px-6 py-3'>End Date</th>
