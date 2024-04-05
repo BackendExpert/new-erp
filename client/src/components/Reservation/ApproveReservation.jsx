@@ -95,8 +95,12 @@ const ApproveReservation = () => {
                                                     <td className='px-6 py-4 font-bold'>{ReseRece.HoDEmail}</td>
                                                     <td className='px-6 py-4 font-bold'>{ReseRece.other_passengers}</td>
                                                     <td className='px-6 py-4 font-bold'>
-                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{Rese.Status}</span>
-                                                    </td>  
+                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{ReseRece.Status}</span>
+                                                    </td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        
+                                                    </td>
+
                                                 </tr>
                                             )
                                         })
