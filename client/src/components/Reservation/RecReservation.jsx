@@ -106,7 +106,7 @@ const RecReservation = () => {
                                       <td className='px-6 py-4 font-bold'>
                                         {
                                           (() => {
-                                            if(Rese.DEmail === ""){
+                                            if(Rese.DEmail === null){
                                               return (
                                                 <Link>
                                                   <button className="border border-purple-500 rounded py-2 px-4 text-purple-500 duratiom-500 hover:bg-purple-500 hover:text-white hover:shadow-xl">Assign Driver</button>
