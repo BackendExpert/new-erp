@@ -217,7 +217,7 @@ const RecReservation = () => {
                                       <td className='px-6 py-4 font-bold'>{ReceRese.HoDEmail}</td>
                                       <td className='px-6 py-4 font-bold'>{ReceRese.other_passengers}</td>
                                       <td className='px-6 py-4 font-bold'>
-                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{ReceRese.Status}</span>
+                                        <span className="py-2 px-4 rounded bg-green-500 text-white">{ReceRese.Status}</span>
                                       </td>  
                                     </tr>                                    
                                   )
