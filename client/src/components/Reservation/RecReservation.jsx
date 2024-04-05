@@ -65,7 +65,7 @@ const RecReservation = () => {
                           <th scope='col' className='px-6 py-3'>Designation</th>                            
                           <th scope='col' className='px-6 py-3'>Email</th>
                           <th scope='col' className='px-6 py-3'>Purpose</th>
-                          <th scope='col' className='px-6 py-3'>Division</th>                                        
+                          <th scope='col' className='px-6 py-3'>Division No</th>                                        
                           <th scope='col' className='px-6 py-3'>Starting Time</th>
                           <th scope='col' className='px-6 py-3'>Date</th>
                           <th scope='col' className='px-6 py-3'>Arrival Date</th>
@@ -92,11 +92,16 @@ const RecReservation = () => {
                                       <td className='px-6 py-4 font-bold'>{Rese.Email}</td>
                                       <td className='px-6 py-4 font-bold'>{Rese.purpose}</td>
                                       <td className='px-6 py-4 font-bold'>{Rese.division}</td>
-                                      <td className='px-6 py-4 font-bold'>{Rese.StartDate}</td>
                                       <td className='px-6 py-4 font-bold'>{Rese.time}</td>
-
-
-                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.StartDate}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.EndDate}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.loc_route}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.veh_type}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.fundingsource}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.HoDEmail}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.other_passengers}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.loc_route}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.loc_route}</td>
                                     </tr>
                                   )
                                 })
