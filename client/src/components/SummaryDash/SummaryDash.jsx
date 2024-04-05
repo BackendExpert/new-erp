@@ -165,7 +165,7 @@ const SummaryDash = () => {
 
       try {
         const CountApproveRese = await axios.get('http://localhost:8081/ApproveReseCount');
-        SetDeniedRese(CountApproveRese.data.DeniedRese);
+        SetApproveRese(CountApproveRese.data.DeniedRese);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -195,7 +195,7 @@ const SummaryDash = () => {
     {id: 17, name:"Request Reservation" , value: <CountUp end={ReqRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-orange-500 hover:text-orange-600" },
     {id: 18, name:"Recommend Reservation" , value: <CountUp end={RecommendRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
     {id: 19, name:"Denied Reservation" , value: <CountUp end={DeniedRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
-    {id: 20, name:"Approve Reservation" , value: <CountUp end={DeniedRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
+    {id: 20, name:"Approve Reservation" , value: <CountUp end={ApproveRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
   
   ]
 
