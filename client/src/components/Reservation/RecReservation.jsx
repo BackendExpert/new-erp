@@ -109,7 +109,7 @@ const RecReservation = () => {
                                           (() => {
                                             if(Rese.DEmail === null){
                                               return (
-                                                <Link>
+                                                <Link to={'/AssignDriver/' + Rese.RID}>
                                                   <button className="border border-purple-500 rounded py-2 px-4 text-purple-500 duration-500 hover:bg-purple-500 hover:text-white hover:shadow-xl">Assign Driver</button>
                                                 </Link>
                                               )
