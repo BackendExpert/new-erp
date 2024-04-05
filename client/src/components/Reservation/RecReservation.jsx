@@ -36,6 +36,20 @@ const RecReservation = () => {
       .catch(err => console.log(err))
     }, [])
 
+    // headleRec 
+    const headleRec = (id) => {
+      axios.post('http://localhost:8081/ReservationRec/' + id)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Reservations Recommend Successful")
+          GoBack()
+        }
+        else{
+          alert(res.data.Error)
+        }
+      })
+    }
+
     
 
 
@@ -116,7 +130,7 @@ const RecReservation = () => {
                                             }
                                             else if(Rese.DEmail !== null){
                                               return (
-                                                <button className="border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommend</button>
+                                                <button  onClick={() => headleRec(Rese.RID)} className="border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommend</button>
                                               )
                                             }
                                           })()
