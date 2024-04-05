@@ -61,8 +61,6 @@ const ApproveReservation = () => {
         })
     }
 
-
-
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
