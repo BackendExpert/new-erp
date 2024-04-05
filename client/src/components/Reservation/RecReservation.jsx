@@ -44,6 +44,14 @@ const RecReservation = () => {
       .catch(err => console.log(err))
     }, [])
 
+      // for Recommend Reservations
+    const [ReservationsRese, SetReservationsRese] = useState([])
+    useEffect(() => {
+      axios.get('http://localhost:8081/ReservationsRece')
+      .then(res => SetReservationsRese(res.data))
+      .catch(err => console.log(err))
+    }, [])
+
 
 
     // headleRec 
