@@ -2645,6 +2645,20 @@ app.get('/ReseReqCount', (req, res) => {
     });
 })
 
+// RequestRese
+
+app.get('/RequestRese', (req, res) => {
+    const sql = "SELECT * FROM reservations WHERE Status = ?"
+    const status = "Requested"
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "Error in server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
 
 // ---------------------------- Reservation END ---------------------
 
