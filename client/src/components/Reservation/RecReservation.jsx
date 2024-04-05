@@ -50,6 +50,17 @@ const RecReservation = () => {
       })
     }
 
+    // headleDenied
+    const headleDenied = (id) => {
+      axios.post('http://localhost:8081/ReservationDenied/' + id)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Reservations Denied Successful")
+          
+        }
+      })
+    }
+
     
 
 
