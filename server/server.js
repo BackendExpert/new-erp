@@ -2676,6 +2676,13 @@ app.get('/DriverData', (req, res) => {
     })
 })
 
+// AssignDriver
+app.post('/AssignDriver/:id', (req, res) => {
+    const RequstID = req.params.id;
+
+    const sql = "UPDATE "
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
