@@ -7,7 +7,7 @@ const ToNav = () => {
 
     const navlists = [
         {name: "Recommend Leave", link: "/RecLeave"},
-        {name: "Recommend Reservations", link: ""},
+        {name: "Recommend Reservations", link: "/RecReservation"},
         {name: "Recommend WRs", link: ""},
         {name: "Recommend SRN", link: ""},
         {name: "Recommend Gatepass", link: ""},
