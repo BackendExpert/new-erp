@@ -53,11 +53,18 @@ const RecReservation = () => {
                           <th scope='col' className='px-6 py-3'>Designation</th>                            
                           <th scope='col' className='px-6 py-3'>Email</th>
                           <th scope='col' className='px-6 py-3'>Purpose</th>
-                          <th scope='col' className='px-6 py-3'>Starting Date</th>                                        
+                          <th scope='col' className='px-6 py-3'>Division</th>                                        
                           <th scope='col' className='px-6 py-3'>Starting Time</th>
-                          <th scope='col' className='px-6 py-3'>End Date</th>
-                          <th scope='col' className='px-6 py-3'>No. of Days</th>
-                          <th scope='col' className='px-6 py-3'>Status</th>
+                          <th scope='col' className='px-6 py-3'>Date</th>
+                          <th scope='col' className='px-6 py-3'>Time</th>
+                          <th scope='col' className='px-6 py-3'>Arrival Date</th>
+                          <th scope='col' className='px-6 py-3'>Route</th>
+                          <th scope='col' className='px-6 py-3'>Vehicle Type</th>
+                          <th scope='col' className='px-6 py-3'>Funding</th>
+                          <th scope='col' className='px-6 py-3'>HOD</th>
+                          <th scope='col' className='px-6 py-3'>Passengers</th>
+
+
                           <th scope='col' className='px-6 py-3'>Action</th>                                        
                         </tr>
                     </thead>
