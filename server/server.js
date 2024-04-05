@@ -172,7 +172,12 @@ app.post('/ForgetPass', (req, res) => {
                     }
                     else{
                         const sql = "INSERT INTO pass_otp(email, otp, change_at) VALUES (?)"
-                        
+                        const change_at = new Date()
+                        const value = [
+                            req.body.email,
+                            hashOtp,
+                            change_at
+                        ]
                     }
                 })
             }
