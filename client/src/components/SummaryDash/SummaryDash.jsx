@@ -29,6 +29,7 @@ const SummaryDash = () => {
   const [ApproveLeaves, SetApproveLeaves] = useState(0);
   const [RecLeaves, SetRecLeaves] = useState(0);
   const [ReqRese, SetReqRese] = useState(0);
+  const [RecommendRese, SetRecommendRese] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
