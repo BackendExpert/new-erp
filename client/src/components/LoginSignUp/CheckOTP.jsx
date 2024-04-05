@@ -22,6 +22,7 @@ const CheckOTP = () => {
             }
             else{
                 alert(res.data.Error)
+                localStorage.clear()
             }
         })
     }
