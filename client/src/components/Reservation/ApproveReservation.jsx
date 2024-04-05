@@ -33,6 +33,20 @@ const ApproveReservation = () => {
         .catch(err => console.log(err))
     }, [])
 
+    //Approve Data
+    const headleApprove = (id) => {
+        axios.post('http://localhost:8081/ApproveRese/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Reservations Approve Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
 
 
     if(RoleUser === "Director" || RoleUser === "Secretary"){
