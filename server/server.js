@@ -2696,7 +2696,19 @@ app.post('/AssignDriver/:id', (req, res) => {
 // ReservationRec
 
 app.post('/ReservationRec/:id', (req, res) => {
-    
+    const RecID = req.params.id;
+    const Status = "Recommend"
+    const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"
+
+    connection.query(sql, [Status, RecID], (err, result) => {
+        if(err) {
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+
 })
 
 // ---------------------------- Reservation END ---------------------
