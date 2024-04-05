@@ -2804,7 +2804,7 @@ app.get('/ViewRecommendedRese', (req, res) => {
 })
 
 // ApproveRese
-app.get('/ApproveRese/:id', (req, res) => {
+app.post('/ApproveRese/:id', (req, res) => {
     const ApproveID = req.params.id
     const Stauts = "Approve"
 
