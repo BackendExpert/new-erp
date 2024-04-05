@@ -2682,7 +2682,14 @@ app.post('/AssignDriver/:id', (req, res) => {
     // console.log(req.body)
 
     const sql = "UPDATE reservations SET DEmail = ? WHERE RID = ?"
-    connection.query(sql, [])
+    connection.query(sql, [req.body.DEmail], (err, result) =>{
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
 })
 
 // ---------------------------- Reservation END ---------------------
