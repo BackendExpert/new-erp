@@ -167,7 +167,23 @@ const RecReservation = () => {
                                 DeniedReses.map((DRese, index) => {
                                   return (
                                     <tr key={index}>
-                                      
+                                      <td className='px-6 py-4 font-bold'>{DRese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.Name}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.designation}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.Email}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.purpose}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.division}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.time}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.StartDate}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.EndDate}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.loc_route}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.veh_type}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.fundingsource}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.HoDEmail}</td>
+                                      <td className='px-6 py-4 font-bold'>{DRese.other_passengers}</td>
+                                      <td className='px-6 py-4 font-bold'>
+                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{DRese.Status}</span>
+                                      </td>  
                                     </tr>
                                   )
                                 })
