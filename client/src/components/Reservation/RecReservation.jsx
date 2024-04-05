@@ -36,6 +36,9 @@ const RecReservation = () => {
       .catch(err => console.log(err))
     }, [])
 
+      // for Denied Reservations
+
+
     // headleRec 
     const headleRec = (id) => {
       axios.post('http://localhost:8081/ReservationRec/' + id)
