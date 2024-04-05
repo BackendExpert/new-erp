@@ -12,7 +12,7 @@ const ForgetPass = () => {
     })
 
     const [userEmail, setuserEmail] = useState('');
-    
+    secureLocalStorage.setItem("Token1", userEmail);
     
 
     const headleSubmit = (e) => {
