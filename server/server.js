@@ -216,7 +216,17 @@ app.post('/ForgetPass', (req, res) => {
 // CheckOTP
 
 app.post('/CheckOTP', (req, res) => {
-    const = "SELECT * FROM pass_otp WHERE "
+    const checkotp = "SELECT * FROM pass_otp WHERE email = ?"
+    connection.query(checkotp, [req.body.Token1], (err, result) => {
+        if(err) throw err
+
+        if(result.length == 0){
+            return res.json({Error: "No Email Found"})
+        }
+        else{
+            
+        }
+    })
 })
 
 //UserRoleRequest
