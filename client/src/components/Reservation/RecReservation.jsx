@@ -10,6 +10,25 @@ const RecReservation = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    const [buttonValue, SetButtonValue] = useState()
+    const HeadleButtonClick = (clickValue) => {
+        SetButtonValue(clickValue)   
+    }
+
+        //GoBack
+        const GoBack = () => {
+          if(RoleUser === "Director"){
+              navigate('/DirectorDash');
+          }
+          else if(RoleUser === "Secretary"){
+              navigate('/Secretary');
+          }
+          else if(RoleUser === "TO"){
+              navigate('/to');
+          }
+      }
+    
+
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
       return (
         <div className="bg-gray-200 py-4">
