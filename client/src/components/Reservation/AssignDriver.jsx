@@ -10,9 +10,15 @@ const AssignDriver = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
-    const [DriverData, SetDriverData] = useStateO({
-        DEmail: '',
-    })
+    // get Drivers 
+    const [DriverData, SetDriverData] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/DriverData')
+        .then(res => SetDriverData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
+
 
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
