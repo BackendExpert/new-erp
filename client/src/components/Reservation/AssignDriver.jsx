@@ -18,6 +18,16 @@ const AssignDriver = () => {
         .catch(err => console.log(err))
     }, [])
 
+    // send driver data to backend
+
+    const [AssignDriver, SetAssignDriver] = useState({
+        DEmail: '',
+    })
+
+    const HeadleSubmit = (e) => {
+        e.preventDefault(); 
+    }
+
 
 
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
@@ -30,7 +40,7 @@ const AssignDriver = () => {
                         <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </Link>
                     <div className="my-4">
-                        <form>
+                        <form onSubmit={HeadleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="">
                                     <label htmlFor="">Select Driver</label>
@@ -47,7 +57,7 @@ const AssignDriver = () => {
                                     </select>
                                 </div>
                             </div>
-                            <div className="">
+                            <div className="my-4">
                                 <button type="submit" className="rounded px-16 py-2 border border-green-500 text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">
                                     Assign Driver
                                 </button>
