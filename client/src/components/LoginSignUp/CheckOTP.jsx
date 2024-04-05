@@ -9,7 +9,19 @@ const CheckOTP = () => {
         otp: ''
     })
 
-    
+    const headleSubmit = (e) => {
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/CheckOTP', OTPCheck)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("OTP is Correct")
+                
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
 
 
   return (
@@ -17,7 +29,7 @@ const CheckOTP = () => {
         <div className="bg-white my-2 lg:mx-40 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
             <h1 className="text-2xl font-semibold">Enter OTP Password</h1>
             
-            <form>
+            <form onSubmit={headleSubmit}>
                 <div className="my-8 mx-12">
                     <label htmlFor="">Email : </label>
                     <input type="number" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter OTP'
