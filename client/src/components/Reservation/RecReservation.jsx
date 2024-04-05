@@ -75,7 +75,19 @@ const RecReservation = () => {
                         </tr>
                     </thead>
                     <tbody>
-
+                        {
+                          (() => {
+                            if(buttonValue === "Requested"){
+                              return (
+                                RequestReses.map((Rese, index) => {
+                                  return (
+                                    
+                                  )
+                                })
+                              )
+                            }
+                          })()
+                        }
                     </tbody>
                   </table>
                 </div>
