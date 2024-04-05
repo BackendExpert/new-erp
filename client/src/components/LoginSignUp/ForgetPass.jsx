@@ -11,12 +11,16 @@ const ForgetPass = () => {
         email: '',
     })
 
+    
+    
+
     const headleSubmit = (e) => {
         e.preventDefault(); 
 
         axios.post('http://localhost:8081/ForgetPass', ForgetPass)
         .then(res => {
             if(res.data.Status === "Success"){
+                secureLocalStorage.setItem("Token1", ForgetPass);
                 alert("The OTP will send to Your Email Address")
                 navigate('/CheckOTP')
             }
@@ -24,6 +28,8 @@ const ForgetPass = () => {
                 alert(res.data.Error)
             }
         })
+
+        
     }
   return (
     <div className='bg-gray-200 py-4'>
