@@ -2776,7 +2776,7 @@ app.get('/ReseReceCount', (req, res) => {
 app.get('/DeniedReseCount', (req, res) => {
     const sql = "SELECT COUNT(RID) AS DeniedRese FROM reservations WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = "Recommend"
+    const status = "Denied"
     connection.query(sql, [status], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);

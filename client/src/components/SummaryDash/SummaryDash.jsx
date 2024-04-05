@@ -157,7 +157,7 @@ const SummaryDash = () => {
 
       try {
         const CountDeniedRese = await axios.get('http://localhost:8081/DeniedReseCount');
-        SetDeniedRese(CountDeniedRese.data.ReceRese);
+        SetDeniedRese(CountDeniedRese.data.DeniedRese);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
