@@ -15,12 +15,19 @@ const Mystats = () => {
         //count data
 
         const [myLeaves, SetmyLeaves] = useState(0)
+        const [myRese, SetmyRese] = useState(0)
 
         useEffect(() => {
             const fetchData = async () => {
                 try {
                     const leaveMy = await axios.get('http://localhost:8081/CountMyLeavs/' + EmailUser);
                     SetmyLeaves(leaveMy.data.le);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+                try {
+                    const ReseMy = await axios.get('http://localhost:8081/CountMyRese/' + EmailUser);
+                    SetmyRese(ReseMy.data.le);
                 } catch (error) {
                     console.error('Error fetching data:', error);
                 }
@@ -31,7 +38,7 @@ const Mystats = () => {
 
     const StatsData = [
         {name: "My Leaves", value: <CountUp end={myLeaves}/>, icon: <Icons name="log-out" size="large"></Icons>, style: "hover:border-red-500 hover:text-red-600"},
-        {name: "My Reservations", value: "2", icon: <Icons name="car" size="large"></Icons>, style: "hover:border-yellow-500 hover:text-yellow-600"},
+        {name: "My Reservations", value: <CountUp end={myRese}/>, icon: <Icons name="car" size="large"></Icons>, style: "hover:border-yellow-500 hover:text-yellow-600"},
         {name: "My SRN", value: "2", icon: <Icons name="document-text" size="large"></Icons>, style: "hover:border-green-500 hover:text-green-600"},
         {name: "My Work Requests", value: "2", icon: <Icons name="documents" size="large"></Icons>, style: "hover:border-purple-500 hover:text-purple-600"},        
         {name: "My Gate Pass", value: "2", icon: <Icons name="map" size="large"></Icons>, style: "hover:border-yellow-500 hover:text-yellow-600"},  
