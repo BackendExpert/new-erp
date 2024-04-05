@@ -56,7 +56,6 @@ const RecReservation = () => {
                   <button onClick={() => HeadleButtonClick('Recommend')} className="ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Recommend</button>
               </div>
               <div className="">{buttonValue}</div>
-                <p><span className="text-red-500">For Recommend: First Assign Driver then Recommend Button will </span></p>
                 <div className="relative overflow-x-auto my-8">
                     <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                       <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
