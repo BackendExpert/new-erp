@@ -9,7 +9,7 @@ const ApproveReservation = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
-    
+
     const [buttonValue, SetButtonValue] = useState()
     const HeadleButtonClick = (clickValue) => {
         SetButtonValue(clickValue)   
@@ -29,6 +29,7 @@ const ApproveReservation = () => {
                         <button onClick={() => HeadleButtonClick('Reject')} className="ml-2 py-2 px-4 border border-red-500 text-red-500 rounded duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Request Denied</button>
                         <button onClick={() => HeadleButtonClick('Approve')} className="ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Recommend</button>
                     </div>
+                    <div className="">{buttonValue}</div>
                 </div>
             </div>
         )
