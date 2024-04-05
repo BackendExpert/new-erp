@@ -2679,8 +2679,10 @@ app.get('/DriverData', (req, res) => {
 // AssignDriver
 app.post('/AssignDriver/:id', (req, res) => {
     const RequstID = req.params.id;
+    console.log(req.body)
 
-    const sql = "UPDATE reservations SET "
+    // const sql = "UPDATE reservations SET DEmail = ? WHERE RID = ?"
+    // connection.query(sql, [])
 })
 
 // ---------------------------- Reservation END ---------------------
