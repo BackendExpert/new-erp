@@ -2803,6 +2803,23 @@ app.get('/ViewRecommendedRese', (req, res) => {
     })
 })
 
+// ApproveRese
+app.get('/ApproveRese/:id', (req, res) => {
+    const ApproveID = req.params.id
+    const Stauts = "Approve"
+
+    const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"
+
+    connection.query(sql, [Stauts, ApproveID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
