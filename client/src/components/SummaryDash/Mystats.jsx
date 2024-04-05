@@ -27,7 +27,7 @@ const Mystats = () => {
                 }
                 try {
                     const ReseMy = await axios.get('http://localhost:8081/CountMyRese/' + EmailUser);
-                    SetmyRese(ReseMy.data.le);
+                    SetmyRese(ReseMy.data.myRese);
                 } catch (error) {
                     console.error('Error fetching data:', error);
                 }
