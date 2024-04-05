@@ -236,7 +236,7 @@ app.post('/CheckOTP', (req, res) => {
                         'your-secret-key',
                         {expiresIn: '5m' }
                     );
-                    res.json({ token:token, Msg:"success", CheckEmail:result });
+                    return res.json({Status: "Success", token:token, CheckEmail:result})
                     console.log(result)
                 }
                 else {
