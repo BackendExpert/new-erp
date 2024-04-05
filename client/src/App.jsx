@@ -213,7 +213,7 @@ export default function App() {
         {/* Reservation */}
         <Route path="/AddReservation" element={<PrivateRoute><AddReservation /></PrivateRoute>} />
         <Route path="/RecReservation" element={<PrivateRoute><RecReservation /></PrivateRoute>} />
-        <Route path="/AssignDriver" element={<PrivateRoute><AssignDriver /></PrivateRoute>} />
+        <Route path="/AssignDriver/:id" element={<PrivateRoute><AssignDriver /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
