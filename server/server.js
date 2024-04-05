@@ -2820,6 +2820,23 @@ app.get('/ApproveRese/:id', (req, res) => {
     })
 })
 
+// RejectRese
+app.post('/RejectRese/:id', (req, res) => {
+    const RejectID = req.params.id
+    const Status = "Reject"
+
+    const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"
+
+    connection.query(sql, [Status, RejectID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
