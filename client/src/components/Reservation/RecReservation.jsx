@@ -90,9 +90,8 @@ const RecReservation = () => {
                                       <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
                                       <td className='px-6 py-4 font-bold'>{Rese.Name}</td>
                                       <td className='px-6 py-4 font-bold'>{Rese.designation}</td>
-                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
-
-                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.Email}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.purpose}</td>
                                       <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
                                       <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
                                       <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
