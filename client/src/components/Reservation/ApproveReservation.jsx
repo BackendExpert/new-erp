@@ -9,10 +9,18 @@ const ApproveReservation = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
-    
-  return (
-    <div>ApproveReservation</div>
-  )
+
+    if(RoleUser === "Director" || RoleUser === "Secretary"){
+        return (
+            <div>ApproveReservation</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
+
 }
 
 export default ApproveReservation
