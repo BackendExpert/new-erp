@@ -68,6 +68,7 @@ import RecReservation from "./components/Reservation/RecReservation"
 import ForgetPass from "./components/LoginSignUp/ForgetPass"
 import CheckOTP from "./components/LoginSignUp/CheckOTP"
 import UpdatePass from "./components/LoginSignUp/UpdatePass"
+import AssignDriver from "./components/Reservation/AssignDriver"
 
 export default function App() {
   return (
@@ -212,6 +213,7 @@ export default function App() {
         {/* Reservation */}
         <Route path="/AddReservation" element={<PrivateRoute><AddReservation /></PrivateRoute>} />
         <Route path="/RecReservation" element={<PrivateRoute><RecReservation /></PrivateRoute>} />
+        <Route path="/AssignDriver" element={<PrivateRoute><AssignDriver /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
