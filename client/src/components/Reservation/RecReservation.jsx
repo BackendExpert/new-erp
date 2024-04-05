@@ -42,7 +42,7 @@ const RecReservation = () => {
       .then(res => {
         if(res.data.Status === "Success"){
           alert("Reservations Recommend Successful")
-          GoBack()
+          window.location.reload();  
         }
         else{
           alert(res.data.Error)
@@ -56,7 +56,10 @@ const RecReservation = () => {
       .then(res => {
         if(res.data.Status === "Success"){
           alert("Reservations Denied Successful")
-          
+          window.location.reload();
+        }
+        else{
+          alert(res.data.Error)
         }
       })
     }
