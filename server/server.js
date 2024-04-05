@@ -225,7 +225,21 @@ app.post('/CheckOTP', (req, res) => {
         }
         else{
             bcrypt.compare(password, result[0].otp, (err, OtpMatch) => {
+                if(err) throw err
 
+                if(OtpMatch) {
+                    // generate JWT Token
+                    const token = jwt.sign(
+                        {email: result[0].email},
+                        'your-secret-key',
+                        {expiresIn: '1h' }
+                    );
+                    res.json({ token:token, Msg:"success", CheckRole:result });
+                    console.log(result)
+                }
+                else {
+                    res.status(401).send("Invalid Credentials");
+                }
             })
         }
     })
