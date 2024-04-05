@@ -86,18 +86,20 @@ const RecReservation = () => {
                               return (
                                 RequestReses.map((Rese, index) => {
                                   return (
-                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
-                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
-                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
-                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                    <tr key={index}>
+                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.Name}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.designation}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
 
-                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
-                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
-                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
-                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
 
 
-                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                      <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                    </tr>
                                   )
                                 })
                               )
