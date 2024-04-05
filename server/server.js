@@ -2852,6 +2852,22 @@ app.get('/RejectReseData', (req, res) => {
     })
 })
 
+// ApproveReseData
+
+app.get('/ApproveReseData', (req, res) => {
+    const sql = "SELECT * FROM reservations WHERE Status = ?"
+    const Status = "Approve"
+
+    connection.query(sql, [Status], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
