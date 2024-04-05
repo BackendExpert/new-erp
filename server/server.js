@@ -2870,9 +2870,9 @@ app.get('/ApproveReseData', (req, res) => {
 
 // ApproveReseCount
 app.get('/ApproveReseCount', (req, res) => {
-    const sql = "SELECT COUNT(RID) AS DeniedRese FROM reservations WHERE Status = ?";
+    const sql = "SELECT COUNT(RID) AS ApproveRese FROM reservations WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = "Denied"
+    const status = "Approve"
     connection.query(sql, [status], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
@@ -2880,7 +2880,7 @@ app.get('/ApproveReseCount', (req, res) => {
         return;
       }
   
-      res.json({ DeniedRese: results[0].DeniedRese }); // Send count in JSON format
+      res.json({ ApproveRese: results[0].ApproveRese }); // Send count in JSON format
     });
 })
 
