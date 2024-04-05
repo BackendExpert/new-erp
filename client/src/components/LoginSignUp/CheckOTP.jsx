@@ -9,11 +9,13 @@ const CheckOTP = () => {
         otp: ''
     })
 
+    
+
 
   return (
     <div className='bg-gray-200 py-4'>
         <div className="bg-white my-2 lg:mx-40 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
-            <h1 className="text-2xl font-semibold">Forget Password</h1>
+            <h1 className="text-2xl font-semibold">Enter OTP Password</h1>
             
             <form>
                 <div className="my-8 mx-12">
