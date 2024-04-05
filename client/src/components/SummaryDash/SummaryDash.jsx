@@ -149,7 +149,7 @@ const SummaryDash = () => {
 
       try {
         const CountReceRese = await axios.get('http://localhost:8081/ReseReceCount');
-        SetRecommendRese(CountReceRese.data.RecRese);
+        SetRecommendRese(CountReceRese.data.ReceRese);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
