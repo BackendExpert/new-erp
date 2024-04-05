@@ -151,6 +151,60 @@ const ApproveReservation = () => {
                                         })
                                     )
                                 }
+                                if(buttonValue === "Reject"){
+                                    return (
+                                        ViewRejectRese.map((RejectRese, index) => {
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.RID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.designation}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.time}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.StartDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.EndDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.loc_route}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.veh_type}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.fundingsource}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.HoDEmail}</td>
+                                                    <td className='px-6 py-4 font-bold'>{RejectRese.other_passengers}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{RejectRese.Status}</span>
+                                                    </td>                                                    
+                                                </tr>
+                                            )
+                                        })
+                                    )
+                                }
+                                if(buttonValue === "Approve"){
+                                    return (
+                                        ViewApproveRese.map((ApproveRese, index) => {
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.RID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.designation}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.time}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.StartDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.EndDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.loc_route}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.veh_type}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.fundingsource}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.HoDEmail}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ApproveRese.other_passengers}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{ApproveRese.Status}</span>
+                                                    </td>                                                    
+                                                </tr>
+                                            )
+                                        })
+                                    )
+                                }
                             })()
                         }
                     </tbody>
