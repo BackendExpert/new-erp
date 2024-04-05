@@ -218,6 +218,7 @@ app.post('/ForgetPass', (req, res) => {
 app.post('/CheckOTP', (req, res) => {
     const checkotp = "SELECT * FROM pass_otp WHERE email = ?"
     connection.query(checkotp, [req.body.Token1], (err, result) => {
+        console.log(req.body)
         if(err) throw err
 
         if(result.length == 0){
