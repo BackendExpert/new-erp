@@ -224,7 +224,9 @@ app.post('/CheckOTP', (req, res) => {
             return res.json({Error: "No Email Found"})
         }
         else{
-            
+            bcrypt.compare(password, result[0].otp, (err, OtpMatch) => {
+
+            })
         }
     })
 })
