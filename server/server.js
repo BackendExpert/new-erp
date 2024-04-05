@@ -232,13 +232,13 @@ app.post('/CheckOTP', (req, res) => {
                     const token = jwt.sign(
                         {email: result[0].email},
                         'your-secret-key',
-                        {expiresIn: '1h' }
+                        {expiresIn: '5m' }
                     );
                     res.json({ token:token, Msg:"success", CheckEmail:result });
                     console.log(result)
                 }
                 else {
-                    res.status(401).send("Access cannot be Continue");
+                    return res.json({Error: "Access cannot be Continue"});
                 }
             })
         }
