@@ -1,6 +1,6 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const AssignDriver = () => {
@@ -9,6 +9,8 @@ const AssignDriver = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
+
+    const {id} = useParams()
 
     // get Drivers 
     const [DriverData, SetDriverData] = useState([])
@@ -26,6 +28,7 @@ const AssignDriver = () => {
 
     const HeadleSubmit = (e) => {
         e.preventDefault(); 
+        axios.post('http://localhost:8081/AssignDriver/' + id, AssignDriver)
     }
 
 
@@ -45,7 +48,7 @@ const AssignDriver = () => {
                                 <div className="">
                                     <label htmlFor="">Select Driver</label>
                                     <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
-                                    onChange={e => SetAddRese({...AddRese, HoDEmail:e.target.value})}>
+                                    onChange={e => SetAssignDriver({...AssignDriver, DEmail:e.target.value})}>
                                         <option>Select Option</option>
                                         {
                                             DriverData.map((driver) => {
