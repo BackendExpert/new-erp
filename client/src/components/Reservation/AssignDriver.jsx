@@ -10,6 +10,10 @@ const AssignDriver = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    const [DriverData, SetDriverData] = useStateO({
+        DEmail: '',
+    })
+
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
