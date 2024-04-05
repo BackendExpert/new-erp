@@ -11,7 +11,7 @@ const ForgetPass = () => {
         email: '',
     })
 
-    
+    secureLocalStorage.setItem("Token1", ForgetPass);
     
 
     const headleSubmit = (e) => {
@@ -19,12 +19,12 @@ const ForgetPass = () => {
 
         axios.post('http://localhost:8081/ForgetPass', ForgetPass)
         .then(res => {
-            if(res.data.Status === "Success"){
-                secureLocalStorage.setItem("Token1", email);
+            if(res.data.Status === "Success"){                
                 alert("The OTP will send to Your Email Address")
                 navigate('/CheckOTP')
             }
             else{
+                localStorage.clear()
                 alert(res.data.Error)
             }
         })
