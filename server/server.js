@@ -2387,6 +2387,25 @@ app.get('/CountMyLeavs/:id', (req, res) => {
     });
 })
 
+// CountMyRese
+
+app.get('/CountMyRese/:id', (req, res) => {
+    const CurrentEmail = req.params.id
+    // console.log(CurrentEmail)
+    const sql = "SELECT COUNT(RID) AS myRese FROM reservations WHERE Email = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, [CurrentEmail], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ myRese: results[0].myRese }); // Send count in JSON format
+    });
+})
+
 // UserViewLeaves
 app.get('/UserViewLeaves/:id', (req, res) => {
     const UserEmail = req.params.id
