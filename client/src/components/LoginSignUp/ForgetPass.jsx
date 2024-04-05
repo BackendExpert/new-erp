@@ -11,7 +11,7 @@ const ForgetPass = () => {
         email: '',
     })
 
-    secureLocalStorage.setItem("Token1", ForgetPass);
+    
     
 
     const headleSubmit = (e) => {
