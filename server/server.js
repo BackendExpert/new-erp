@@ -2727,6 +2727,20 @@ app.post('/ReservationDenied/:id', (req, res) => {
     })
 })
 
+// ReseDenied
+app.get('/ReseDenied', (req, res) => {
+    const sql = "SELECT * FROM reservations WHERE Status = ?"
+    const status = "Denied"
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "Error in server"})
+        }
+        else{
+            return res.json(result)
+        }
+    }) 
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
