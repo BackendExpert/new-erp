@@ -104,7 +104,22 @@ const RecReservation = () => {
                                         <span className="py-2 px-4 rounded bg-yellow-500 text-white">{Rese.Status}</span>
                                       </td>  
                                       <td className='px-6 py-4 font-bold'>
-
+                                        {
+                                          (() => {
+                                            if(Rese.DEmail === ""){
+                                              return (
+                                                <Link>
+                                                  <button className="border border-purple-500 rounded py-2 px-4 text-purple-500 duratiom-500 hover:bg-purple-500 hover:text-white hover:shadow-xl">Assign Driver</button>
+                                                </Link>
+                                              )
+                                            }
+                                            else if(Rese.DEmail !== ""){
+                                              return (
+                                                <button className="border border-green-500 rounded py-2 px-4 text-green-500 duratiom-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommend</button>
+                                              )
+                                            }
+                                          })()
+                                        }
                                       </td>
                                     </tr>
                                   )
