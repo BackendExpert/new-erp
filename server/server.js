@@ -149,8 +149,14 @@ app.post('/login', (req, res) => {
 
 // ForgetPass
 app.post('/ForgetPass', (req, res) => {
+    const min = 100000;
+    const max = 999999;
 
-    bcrypt.hash(password, 10, (err, hashPass) => {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    console.log(randomNumber);
+
+    bcrypt.hash(randomNumber, 10, (err, hashOtp) => {
         const checkEmail = "SELECT * FROM users WHERE email = ?"
         connection.query(checkEmail, [req.body.email], (err, result) => {
             if(err) throw err
@@ -166,6 +172,7 @@ app.post('/ForgetPass', (req, res) => {
                     }
                     else{
                         const sql = "INSERT INTO pass_otp(email, otp, change_at) VALUES (?)"
+                        
                     }
                 })
             }
