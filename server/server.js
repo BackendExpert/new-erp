@@ -2711,6 +2711,9 @@ app.post('/ReservationRec/:id', (req, res) => {
 
 })
 
+// ReservationDenied
+app.post('/ReservationDenied/:id')
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
