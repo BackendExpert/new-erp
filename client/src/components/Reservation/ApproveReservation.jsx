@@ -47,6 +47,20 @@ const ApproveReservation = () => {
         })
     }
 
+    // Reject Data
+    const headleReject = (id) => {
+        axios.post('http://localhost:8081/RejectRese/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Reservations Reject Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
 
 
     if(RoleUser === "Director" || RoleUser === "Secretary"){
