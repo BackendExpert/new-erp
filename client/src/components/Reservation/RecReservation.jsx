@@ -36,6 +36,8 @@ const RecReservation = () => {
       .catch(err => console.log(err))
     }, [])
 
+    
+
 
     
 
@@ -84,6 +86,17 @@ const RecReservation = () => {
                               return (
                                 RequestReses.map((Rese, index) => {
                                   return (
+                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+
+                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+                                    <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
+
+
                                     <td className='px-6 py-4 font-bold'>{Rese.RID}</td>
                                   )
                                 })
