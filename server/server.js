@@ -2693,6 +2693,12 @@ app.post('/AssignDriver/:id', (req, res) => {
     })
 })
 
+// ReservationRec
+
+app.post('/ReservationRec/:id', (req, res) => {
+    
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
