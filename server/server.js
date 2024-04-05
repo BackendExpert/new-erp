@@ -154,10 +154,11 @@ app.post('/ForgetPass', (req, res) => {
 
     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     console.log(randomNumber);
+    
+    const StringOTP = randomNumber.toString()
+    console.log(StringOTP)
 
-    const otp = "Hi all"
-
-    bcrypt.hash(otp, 10, (err, hashOtp) => {
+    bcrypt.hash(StringOTP, 10, (err, hashOtp) => {
         if(err) throw err;
 
         const checkEmail = "SELECT * FROM users WHERE email = ?"
@@ -170,8 +171,8 @@ app.post('/ForgetPass', (req, res) => {
             else{
                 const checkotp = "SELECT * FROM pass_otp WHERE email = ?"
                 connection.query(checkotp, [req.body.email], (err, result) => {
-                    if(err){
-                        return res.json({Error: "Error on Server"})
+                    if(result.length > 0){
+                        return res.json({Error: "Your OTP already send to Email"})
                     }
                     else{
                         const sql = "INSERT INTO pass_otp(email, otp, change_at) VALUES (?)"
