@@ -2714,7 +2714,17 @@ app.post('/ReservationRec/:id', (req, res) => {
 // ReservationDenied
 app.post('/ReservationDenied/:id', (req, res) => {
     const ResID = req.params.id
-    const Status = ""
+    const Status = "Denied"
+    const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"
+
+    connection.query(sql, [Status, ResID], (err, result) => {
+        if(err) {
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
 })
 
 // ---------------------------- Reservation END ---------------------
