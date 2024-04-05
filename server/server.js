@@ -2841,7 +2841,15 @@ app.post('/RejectRese/:id', (req, res) => {
 app.get('/RejectReseData', (req, res) => {
     const sql = "SELECT * FROM reservations WHERE Status = ?"
     const Status = "Reject"
-    
+
+    connection.query(sql, [Status], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 // ---------------------------- Reservation END ---------------------
