@@ -81,6 +81,19 @@ const ApproveReservation = () => {
                                             return(
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{ReseRece.RID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.designation}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.time}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.StartDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.EndDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.loc_route}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.veh_type}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.fundingsource}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.HoDEmail}</td>
+                                                    <td className='px-6 py-4 font-bold'>{ReseRece.other_passengers}</td>
                                                 </tr>
                                             )
                                         })
