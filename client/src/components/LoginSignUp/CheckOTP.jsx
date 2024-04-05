@@ -19,6 +19,7 @@ const CheckOTP = () => {
             if(res.data.Status === "Success"){
                 alert("OTP is Correct")
                 
+                
             }
             else{
                 alert(res.data.Error)
