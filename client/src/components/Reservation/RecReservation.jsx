@@ -197,6 +197,15 @@ const RecReservation = () => {
                                 })
                               )
                             }
+                            else if(buttonValue === "Recommend"){
+                              return(
+                                ReservationsRese.map((ReceRese, index) => {
+                                  return (
+                                    
+                                  )
+                                })
+                              )
+                            }
                           })()
                         }
                     </tbody>
