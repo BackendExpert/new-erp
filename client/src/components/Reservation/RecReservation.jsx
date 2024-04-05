@@ -27,6 +27,13 @@ const RecReservation = () => {
               navigate('/to');
           }
       }
+
+    const [RequestReses, SetRequestReses] = useState([])
+    useEffect(() => {
+      axios.get('http://localhost:8081/RequestRese')
+      .then(res => SetRequestReses(res.data))
+      .catch(err => console.log(err))
+    }, [])
     
 
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
