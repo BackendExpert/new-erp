@@ -73,7 +73,15 @@ const ApproveReservation = () => {
                         </tr>
                     </thead>
                     <tbody>
-
+                        {
+                            (() => {
+                                if(buttonValue === "Recommend"){
+                                    return (
+                                        
+                                    )
+                                }
+                            })()
+                        }
                     </tbody>
                   </table>
                 </div>                    
