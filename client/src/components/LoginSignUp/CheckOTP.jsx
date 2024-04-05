@@ -31,7 +31,7 @@ const CheckOTP = () => {
             
             <form onSubmit={headleSubmit}>
                 <div className="my-8 mx-12">
-                    <label htmlFor="">Email : </label>
+                    <label htmlFor="">Enter OTP : </label>
                     <input type="number" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter OTP'
                     onChange={e => SetOTPCheck({...OTPCheck, otp:e.target.value})}/>
                     
