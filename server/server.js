@@ -2756,6 +2756,22 @@ app.get('/ReservationsRece', (req, res) => {
     }) 
 })
 
+// ReseReceCount
+app.get('/ReseReceCount', (req, res) => {
+    const sql = "SELECT COUNT(RID) AS ReceRese FROM reservations WHERE Status = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "Recommend"
+    connection.query(sql, [status], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ ReceRese: results[0].ReceRese }); // Send count in JSON format
+    });
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
