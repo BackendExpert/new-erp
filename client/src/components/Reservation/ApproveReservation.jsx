@@ -33,6 +33,14 @@ const ApproveReservation = () => {
         .catch(err => console.log(err))
     }, [])
 
+    // get Reject Reservations from backend
+    const [ViewRejectRese, SetViewRejectRese] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/RejectReseData')
+        .then(res => SetViewRejectRese(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     //Approve Data
     const headleApprove = (id) => {
         axios.post('http://localhost:8081/ApproveRese/' + id)
