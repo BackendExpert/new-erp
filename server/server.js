@@ -189,7 +189,21 @@ app.post('/ForgetPass', (req, res) => {
                                 return res.json({Error: "Error on Server"})
                             }
                             else{
-                                return res.json({Status: "Success"})
+                                var mailOptions = {
+                                    from: process.env.EMAIL_USER,
+                                    to: req.body.email,
+                                    subject: 'Password Reset OTP of ERP NIFS',
+                                    text: 'Your Password Reset OTP is: '+ randomNumber, 
+                                };
+    
+                                transporter.sendMail(mailOptions, function(error, info){
+                                    if (error) {
+                                      console.log(error);
+                                    } else {
+                                      console.log('Email sent: ' + info.response);
+                                      return res.json({Status: "Success"})
+                                    }
+                                });
                             }
                         })
                     }
