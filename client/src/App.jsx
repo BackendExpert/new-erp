@@ -70,6 +70,7 @@ import CheckOTP from "./components/LoginSignUp/CheckOTP"
 import UpdatePass from "./components/LoginSignUp/UpdatePass"
 import AssignDriver from "./components/Reservation/AssignDriver"
 import ApproveReservation from "./components/Reservation/ApproveReservation"
+import ReservationCost from "./components/Reservation/ReservationCost"
 
 export default function App() {
   return (
@@ -216,6 +217,7 @@ export default function App() {
         <Route path="/RecReservation" element={<PrivateRoute><RecReservation /></PrivateRoute>} />
         <Route path="/AssignDriver/:id" element={<PrivateRoute><AssignDriver /></PrivateRoute>} />
         <Route path="/ApproveReservation" element={<PrivateRoute><ApproveReservation /></PrivateRoute>} />
+        <Route path="/ReservationCost" element={<PrivateRoute><ReservationCost /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
