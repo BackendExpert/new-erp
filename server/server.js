@@ -262,7 +262,10 @@ app.post('/UpdatePassword', (req, res) => {
                 if(OTPCheck){
                     if(req.body.UpdatePass.email === result[0].email){
                         if(req.body.UpdatePass.npass === req.body.UpdatePass.npass2){
-                            
+
+                        }
+                        else{
+                            return res.json({Error: "Error on server"})
                         }
                     }
                 }
