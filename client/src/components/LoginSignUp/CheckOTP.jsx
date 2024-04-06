@@ -26,6 +26,7 @@ const CheckOTP = () => {
             }
         })
     }
+    secureLocalStorage.setItem("Token3", OTPCheck);
 
     // alert(Token1)
   return (
