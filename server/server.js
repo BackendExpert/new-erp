@@ -286,8 +286,16 @@ app.post('/UpdatePassword', (req, res) => {
                                     if(err){
                                         return res.json({Error: "Error on SERVERE"})
                                     }
-                                    else{
-                                        return res.json({Status: "Success"})
+                                    else{                                        
+                                        const deletePassReques = "DELETE FROM pass_otp WHERE email = ?"
+                                        connection.query(deletePassReques, [req.body.UpdatePass.email], (err, result) => {
+                                            if(err){
+                                                return res.json({Error: "ERROR on SERVER"})
+                                            }
+                                            else{
+                                                return res.json({Status: "Success"})
+                                            }
+                                        })
                                     }
                                 })
                             }
