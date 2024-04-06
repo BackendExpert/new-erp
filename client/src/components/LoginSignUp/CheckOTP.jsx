@@ -16,9 +16,7 @@ const CheckOTP = () => {
         e.preventDefault(); 
         axios.post('http://localhost:8081/CheckOTP', {OTPCheck, Token1})
         .then(res => {
-            if(res.data.Status === "Success"){
-                alert("OTP is Correct")
-                navigate('/UpdatePass')                
+            if(){       
             }
             else{
                 alert(res.data.Error)
