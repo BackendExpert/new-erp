@@ -247,6 +247,37 @@ app.post('/CheckOTP', (req, res) => {
     })
 })
 
+// UpdatePassword
+app.post('/UpdatePassword', (req, res) => {
+    console.log(req.body.Token3.otp)
+
+    const checkOTP = "SELECT * FROM pass_otp WHERE otp = ? && email = ?"
+    const otp = req.body.Token3.otp;
+    const email = req.body.Token1;
+    
+    connection.query(checkOTP, [otp, email], (err, result) => {
+        if(err) throw err
+
+        if(result.length == 0){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            if(req.body.UpdatePass.email === result[0].email){
+                if(req.body.UpdatePass.npass === req.body.UpdatePass.npass2){
+                    bcrypt.hash(npass, 10, (err, hashNewPass) => {
+                        if(err) throw err
+
+                        
+                    })
+                }
+                else{
+                    return res.json({Error: "Password Not Match"})
+                }
+            }
+        }
+    })
+})
+
 //UserRoleRequest
 /*
     This end point design for when someone register using register route 
