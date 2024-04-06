@@ -263,7 +263,16 @@ app.post('/UpdatePassword', (req, res) => {
                     if(req.body.UpdatePass.email === result[0].email){
                         if(req.body.UpdatePass.npass === req.body.UpdatePass.npass2){
                             bcrypt.hash(password, 10, (err, hashPass) => {
-                                
+                                if(err) throw err
+
+                                const checkUser = "SELECT * FROM user WHERE email = ?"
+                                connection.query(checkUser, [req.body.UpdatePass.email], (err, result) => {
+                                    if(err) throw err
+
+                                    if(result.length > 0){
+                                        
+                                    }
+                                })
                             })
                         }
                         else{
