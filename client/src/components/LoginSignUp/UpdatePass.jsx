@@ -5,10 +5,12 @@ import  secureLocalStorage  from  "react-secure-storage"
 
 const UpdatePass = () => {
     //Stroge the token in local stroge
-    const PassToken = res.data.token
-    localStorage.setItem('Token2', PassToken)
+    // const PassToken = res.data.token
+    // localStorage.setItem('Token2', PassToken)
+
+
     const Token1 = secureLocalStorage.getItem("Token1");
-    console.log(loingToken)
+    console.log(Token1)
 
     if(Token1 === res.data.CheckEmail[0].email){
         return (
