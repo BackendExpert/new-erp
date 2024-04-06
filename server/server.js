@@ -269,8 +269,26 @@ app.post('/UpdatePassword', (req, res) => {
                                 connection.query(checkUser, [req.body.UpdatePass.email], (err, result) => {
                                     if(err) throw err
 
-                                    if(result.length > 0){
-                                        
+                                    if(result.length > 0){                                                                                
+                                        const sql = "UPDATE users SET password = ?, update_at = ? WHERE email = ?"
+                                        const  user_pass = req.body.UpdatePass.npass
+                                        const update_at = new Date()
+                                        connection.query(sql, [user_pass, update_at, req.body.UpdatePass.email], (err, result) => {
+                                            if(err){
+                                                return res.json({Error: "Error on Server"})
+                                            }
+                                            else{
+                                                const deleteOTP = "DELETE FROM pass_otp WHERE email = ?"
+                                                connection.query(deleteOTP, [req.body.UpdatePass.email], (err, result) => {
+                                                    if(err){
+                                                        return res.json({Error: "Error Deleting OTP"})
+                                                    }
+                                                    else{
+                                                        return res.json({Status: "Success"})
+                                                    }
+                                                })
+                                            }
+                                        })
                                     }
                                 })
                             })
