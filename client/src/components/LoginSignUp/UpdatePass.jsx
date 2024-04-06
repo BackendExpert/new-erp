@@ -13,9 +13,15 @@ const UpdatePass = () => {
     const Token3 = secureLocalStorage.getItem("Token3");
     // console.log(Token1)
 
-   
+    const [UpdatePass, SetUpdatePass] = useState({
+        email: '',
+        npass: '',
+        npass2: '',
+   })
+
     const headleSubmit = (e) =>{
         e.preventDefault(); 
+        axios.post('http://localhost:8081/UpdatePassword')
     }
 
     return (
@@ -27,13 +33,15 @@ const UpdatePass = () => {
                     <div className="my-8 mx-12">
                         <label htmlFor="">Enter Email : </label>
                         <input type="email" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter Email'
-                        />
+                        onChange={e => SetUpdatePass({...UpdatePass, email:e.target.value})}/>
+
                         <label htmlFor="">Enter New Password : </label>
                         <input type="password" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter Password'
-                        />
+                        onChange={e => SetUpdatePass({...UpdatePass, npass:e.target.value})}/>
+
                         <label htmlFor="">Enter New Password Again : </label>
                         <input type="password" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter Password Again'
-                        />
+                        onChange={e => SetUpdatePass({...UpdatePass, npass2:e.target.value})}/>
                         
                         <div className="my-2">
                         <button type="submit" className="rounded text-green-500 border border-green-500 py-2 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request OTP</button>
