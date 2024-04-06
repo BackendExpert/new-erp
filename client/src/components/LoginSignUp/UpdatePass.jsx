@@ -20,15 +20,14 @@ const UpdatePass = () => {
         npass2: '',
    })
 
-    const headleSubmit = async (e) =>{
+    const headleSubmit =  (e) =>{
         e.preventDefault(); 
-        try{
-            const res = await axios.post('http://localhost:8081/UpdatePassword', {
+        axios.post('http://localhost:8081/UpdatePassword', {
                 UpdatePass,
                 Token1,
                 Token3
-            })
-
+        })
+        .then(res => {
             if(res.data.Status === "Success"){
                 alert("Password Update Successful")
                 localStorage.clear()
@@ -37,10 +36,7 @@ const UpdatePass = () => {
             else{
                 alert(res.data.Error)
             }
-        }
-        catch (err){
-            console.log(err);
-        }
+        })
     }
 
     return (

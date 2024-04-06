@@ -249,64 +249,26 @@ app.post('/CheckOTP', (req, res) => {
 
 // UpdatePassword
 app.post('/UpdatePassword', (req, res) => {
-    console.log(req.body.Token3.otp)
+    console.log(req.body)
+    const checkOTP = "SELECT * FROM pass_otp WHERE email = ?"
 
-    const checkOTP = "SELECT * FROM pass_otp WHERE otp = ? && email = ?"
-    const otp = req.body.Token3.otp;
-    const email = req.body.Token1;
-    
-    connection.query(checkOTP, [otp, email], (err, result) => {
+    connection.query(checkOTP, [req.body.Token1], (err, result) => {
         if(err) throw err
 
-        if(result.length == 0){
-            return res.json({Error: "Error on Server"})
-        }
-        else{
-            if(req.body.UpdatePass.email === result[0].email){
-                if(req.body.UpdatePass.npass === req.body.UpdatePass.npass2){
-                    bcrypt.hash(npass, 10, (err, hashNewPass) => {
-                        if(err) throw err
+        if(result.length > 0){
+            bcrypt.compare(req.body.Token3.otp, result[0].otp, (err, OTPCheck) => {
+                if(err) throw err
 
-                        const checkUser = "SELECT * FROM users WHERE is_active = ? && email = ?"
-                        const is_active = 1;
-                        const userEmail = req.body.UpdatePass.email;
-
-                        connection.query(checkUser, [is_active, userEmail], (err, result) => {
-                            if(err) throw err
-
-                            if(result.length == 0){
-                                return res.json({Error: "User not Found"})
-                            }
-                            else{
-                                const sql = "UPDATE users SET password = ? WHERE email = ?"
-                                const new_pass = hashNewPass;
-                                const email = req.body.UpdatePass.email;
-
-                                connection.query(sql, [new_pass, email], (err, result) => {
-                                    if(err){
-                                        return res.json({Error: "Error on SERVERE"})
-                                    }
-                                    else{                                        
-                                        const deletePassReques = "DELETE FROM pass_otp WHERE email = ?"
-                                        connection.query(deletePassReques, [req.body.UpdatePass.email], (err, result) => {
-                                            if(err){
-                                                return res.json({Error: "ERROR on SERVER"})
-                                            }
-                                            else{
-                                                return res.json({Status: "Success"})
-                                            }
-                                        })
-                                    }
-                                })
-                            }
-                        })
-                    })
+                if(OTPCheck){
+                    if(req.body.UpdatePass.email === result[0].email){
+                        if(req.body.UpdatePass.npass === req.body.UpdatePass.npass2){
+                            
+                        }
+                    }
                 }
-                else{
-                    return res.json({Error: "Password Not Match"})
-                }
-            }
+            })
         }
+
     })
 })
 
