@@ -8,7 +8,6 @@ const UpdatePass = () => {
     const PassToken = res.data.token
     localStorage.setItem('Token2', PassToken)
     const Token1 = secureLocalStorage.getItem("Token1");
-
     console.log(loingToken)
 
     if(Token1 === res.data.CheckEmail[0].email){
