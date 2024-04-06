@@ -8,6 +8,7 @@ const UpdatePass = () => {
     // const PassToken = res.data.token
     // localStorage.setItem('Token2', PassToken)
 
+    const navigate = useNavigate()
 
     const Token1 = secureLocalStorage.getItem("Token1");
     const Token3 = secureLocalStorage.getItem("Token3");
@@ -27,6 +28,15 @@ const UpdatePass = () => {
                 Token1,
                 Token3
             })
+
+            if(res.data.Status === "Success"){
+                alert("Password Update Successful")
+                localStorage.clear()
+                navigate('/')                
+            }
+            else{
+                alert(res.data.Error)
+            }
         }
         catch (err){
             console.log(err);
