@@ -10,16 +10,15 @@ const UpdatePass = () => {
 
 
     const Token1 = secureLocalStorage.getItem("Token1");
-    console.log(Token1)
+    const Token3 = secureLocalStorage.getItem("Token3");
+    // console.log(Token1)
 
-    if(Token1 === res.data.CheckEmail[0].email){
-        return (
-            <div>UpdatePass</div>
-        )
-    }
-    else{
-        alert("Nothing")
-    }
+   
+    return (
+        <div>UpdatePass</div>
+    )
+
+
 
 }
 
