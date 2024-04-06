@@ -16,7 +16,8 @@ const CheckOTP = () => {
         e.preventDefault(); 
         axios.post('http://localhost:8081/CheckOTP', {OTPCheck, Token1})
         .then(res => {
-            if(){       
+            if(Token1 === res.data.CheckEmail[0].email){
+                navigate('/UpdatePass')       
             }
             else{
                 alert(res.data.Error)
