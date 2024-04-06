@@ -267,7 +267,20 @@ app.post('/UpdatePassword', (req, res) => {
                     bcrypt.hash(npass, 10, (err, hashNewPass) => {
                         if(err) throw err
 
-                        
+                        const checkUser = "SELECT * FROM users WHERE is_active = ? && email = ?"
+                        const is_active = 1;
+                        const userEmail = req.body.UpdatePass.email;
+
+                        connection.query(checkUser, [is_active, userEmail], (err, result) => {
+                            if(err) throw err
+
+                            if(result.length == 0){
+                                return res.json({Error: "Error on SERVER"})
+                            }
+                            else{
+                                
+                            }
+                        })
                     })
                 }
                 else{
