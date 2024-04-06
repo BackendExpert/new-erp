@@ -275,10 +275,21 @@ app.post('/UpdatePassword', (req, res) => {
                             if(err) throw err
 
                             if(result.length == 0){
-                                return res.json({Error: "Error on SERVER"})
+                                return res.json({Error: "User not Found"})
                             }
                             else{
-                                
+                                const sql = "UPDATE users SET password = ? WHERE email = ?"
+                                const new_pass = hashNewPass;
+                                const email = req.body.UpdatePass.email;
+
+                                connection.query(sql, [new_pass, email], (err, result) => {
+                                    if(err){
+                                        return res.json({Error: "Error on SERVERE"})
+                                    }
+                                    else{
+                                        return res.json({Status: "Success"})
+                                    }
+                                })
                             }
                         })
                     })
