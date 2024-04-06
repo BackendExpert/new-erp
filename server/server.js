@@ -262,7 +262,9 @@ app.post('/UpdatePassword', (req, res) => {
                 if(OTPCheck){
                     if(req.body.UpdatePass.email === result[0].email){
                         if(req.body.UpdatePass.npass === req.body.UpdatePass.npass2){
-
+                            bcrypt.hash(password, 10, (err, hashPass) => {
+                                
+                            })
                         }
                         else{
                             return res.json({Error: "Error on server"})
@@ -271,7 +273,6 @@ app.post('/UpdatePassword', (req, res) => {
                 }
             })
         }
-
     })
 })
 
