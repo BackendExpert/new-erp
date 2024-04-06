@@ -19,9 +19,18 @@ const UpdatePass = () => {
         npass2: '',
    })
 
-    const headleSubmit = (e) =>{
+    const headleSubmit = async (e) =>{
         e.preventDefault(); 
-        axios.post('http://localhost:8081/UpdatePassword')
+        try{
+            const res = await axios.post('http://localhost:8081/UpdatePassword', {
+                UpdatePass,
+                Token1,
+                Token3
+            })
+        }
+        catch (err){
+            console.log(err);
+        }
     }
 
     return (
