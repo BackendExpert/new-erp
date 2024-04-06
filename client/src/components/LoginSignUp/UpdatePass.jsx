@@ -14,21 +14,25 @@ const UpdatePass = () => {
     // console.log(Token1)
 
    
+    const headleSubmit = (e) =>{
+        e.preventDefault(); 
+    }
+
     return (
         <div className='bg-gray-200 py-4'>
             <div className="bg-white my-2 lg:mx-40 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
                 <h1 className="text-2xl font-semibold">Update Password</h1>
 
-                <form>
+                <form onSubmit={headleSubmit}>
                     <div className="my-8 mx-12">
-                        <label htmlFor="">Enter OTP : </label>
-                        <input type="number" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter OTP'
+                        <label htmlFor="">Enter Email : </label>
+                        <input type="email" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter Email'
                         />
-                        <label htmlFor="">Enter OTP : </label>
-                        <input type="number" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter OTP'
+                        <label htmlFor="">Enter New Password : </label>
+                        <input type="password" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter Password'
                         />
-                        <label htmlFor="">Enter OTP : </label>
-                        <input type="number" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter OTP'
+                        <label htmlFor="">Enter New Password Again : </label>
+                        <input type="password" name="" id="" className='w-full h-12 border border-blue-500 rounded pl-2 my-2' required placeholder='Enter Password Again'
                         />
                         
                         <div className="my-2">
