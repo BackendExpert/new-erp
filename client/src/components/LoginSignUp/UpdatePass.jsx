@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import  secureLocalStorage  from  "react-secure-storage"
@@ -36,10 +36,14 @@ const UpdatePass = () => {
             else{
                 alert(res.data.Error)
             }
-        })
+        })        
     }
 
-    if(localStorage !== null){
+    if(localStorage === null || localStorage.length === 0) {
+        useEffect(() => {
+            navigate('/')
+        }, [])
+    } else {
         return (
             <div className='bg-gray-200 py-4'>
                 <div className="bg-white my-2 lg:mx-40 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
@@ -69,9 +73,9 @@ const UpdatePass = () => {
             </div>
         )
     }
-    else{
-        navigate('/')
-    }
+
+
+
 }
 
 export default UpdatePass
