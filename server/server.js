@@ -2907,7 +2907,16 @@ app.post('/ApproveRese/:id', (req, res) => {
             return res.json({Error: "ERROR on Server"})
         }
         else{
-            
+            // get data
+            const getRData = "SELECT * FROM reservations WHERE RID = ?"
+            connection.query(getRData, [ApproveID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error ON Server"})
+                }
+                else{
+                    
+                }
+            })
         }
     })
 })
