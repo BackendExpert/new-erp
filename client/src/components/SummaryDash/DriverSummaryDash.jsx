@@ -28,7 +28,7 @@ const DriverSummaryDash = () => {
         fetchData();
       }, []);
     
-      const DataList = [
+      const DriverDataList = [
         {id: 1, name:"User Roles" , value: "2", icons: <Icons name="person" size="large"/>, style:"hover:border-green-200 hover:text-green-600"},
       ]
 
@@ -36,7 +36,7 @@ const DriverSummaryDash = () => {
         return (
             <div>
                 {   
-                    DataList.map((data) => {
+                    DriverDataList.map((data) => {
                         if(data.id === 1){
                             <div class={`text-center text-gray-500 shadow-2xl py-12 my-5 cursor-pointer rounded duration-500 ${data.style}`}>
                                 <span className="text-3xl" >{data.icons}</span>
