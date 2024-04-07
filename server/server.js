@@ -2930,10 +2930,10 @@ app.post('/ApproveRese/:id', (req, res) => {
                         status
                     ]
 
-                    // console.log(value)
+                    console.log(value)
                     connection.query(sqlTrips, [value], (err, result) => {
                         if(err){
-                            return res.json({Error: "ERROR on SERVER"})
+                            return res.json({Error: "ERROR on SERVERsss"})
                         }
                         else{
                             return res.json({Status: "Success"})
