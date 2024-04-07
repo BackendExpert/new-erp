@@ -42,7 +42,7 @@ const ApproveReservation = () => {
     }, [])
 
     // get Approve Reservations from backend
-    const [ViewApproveRese, SetViewApproveRese] = useState({})
+    const [ViewApproveRese, SetViewApproveRese] = useState([])
     useEffect(() => {
         axios.get('http://localhost:8081/ApproveReseData')
         .then(res => SetViewApproveRese(res.data))
