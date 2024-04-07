@@ -66,6 +66,8 @@ const Vehicles = () => {
                                     <th scope='col' className='px-6 py-3'>Milage</th>
                                     <th scope='col' className='px-6 py-3'>Manufaturing Year</th>
                                     <th scope='col' className='px-6 py-3'>Purchase Value</th>
+                                    <th scope='col' className='px-6 py-3'>Status</th>
+                                    <th scope='col' className='px-6 py-3'>Unit Charge</th>
                                     <th scope='col' className='px-6 py-3'>Action</th>                              
                                 </tr>
                             </thead>
@@ -82,6 +84,8 @@ const Vehicles = () => {
                                                 <td className='px-6 py-4 font-bold'>{vehicle.milage}</td>
                                                 <td className='px-6 py-4 font-bold'>{vehicle.myear}</td>
                                                 <td className='px-6 py-4 font-bold'>{vehicle.value}</td>
+                                                <td className='px-6 py-4 font-bold'>{vehicle.status}</td>
+                                                <td className='px-6 py-4 font-bold'>{vehicle.unit_charge}</td>
                                                 <td className='px-6 py-4 font-bold'>
                                                    <div className="flex">
                                                         <Link to={'/UpdateVehicle/' + vehicle.VID}>
