@@ -8,7 +8,7 @@ const DriverSide = () => {
 
     const sidemenu = [
         {name: "Leave",  link: "/AddLeave", icon: <Icons name="calendar" size="large"></Icons>},
-        {name: "Reservations",  link: "#", icon: <Icons name="document-text" size="large"></Icons>},
+        {name: "Reservations",  link: "/AddReservation", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Work Requests",  link: "#", icon: <Icons name="receipt" size="large"></Icons>},
         {name: "SRN Requests",  link: "#", icon: <Icons name="book" size="large"></Icons>},
         {name: "Gatepass Requests",  link: "#", icon: <Icons name="enter" size="large"></Icons>},
@@ -23,7 +23,7 @@ const DriverSide = () => {
     }
 
   return (
-        <div className={`${openSide ? "w-72" : "w-20" } duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-full pl-4 py-4`}>
+        <div className={`${openSide ? "w-72" : "w-20" } duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-auto pl-4 py-4`}>
         <div className="py-2">
             <div className="flex">
             <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
