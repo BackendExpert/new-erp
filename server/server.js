@@ -2907,32 +2907,7 @@ app.post('/ApproveRese/:id', (req, res) => {
             return res.json({Error: "ERROR on Server"})
         }
         else{
-            // add data to trip tbl
-            const tripSql = "INSERT INTO trips(DEmail, UserEmail, vehiRegNo, is_aprove) VALUES(?)"
-            const DEmail = req.body.DEmail;
-            const UserEmail = req.body.Email;
-            const status = "Pending"
-
-            const value = [
-                DEmail,
-                UserEmail,   
-                req.body.veh_reg_no,             
-                status
-            ]
             
-            console.log(req.body.DEmail)
-            console.log(ApproveID)            
-            console.log(req.body)
-            
-
-            connection.query(tripSql, [value], (err, result) => {
-                if(err){
-                    return res.json({Error: "ERROR on SERVERsss"})
-                }
-                else{
-                    return res.json({Status: "Success"})
-                }
-            })            
         }
     })
 })
