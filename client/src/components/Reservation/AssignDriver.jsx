@@ -21,6 +21,12 @@ const AssignDriver = () => {
     }, [])
 
     // get vehicale
+    const [VehiRegNo, SetVehiRegNo] = useState()
+    useEffect(() => {
+        axios.get('http://localhost:8081/GetVehicleRegNo')
+        .then(res => SetVehiRegNo(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
     // send driver data to backend
 
