@@ -2959,6 +2959,13 @@ app.get('/ApproveReseCount', (req, res) => {
     });
 })
 
+// GetVehicleRegNo
+
+app.get('/GetVehicleRegNo', (req, res) => {
+    const sql = "SELECT * FROM vehicles"
+
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
