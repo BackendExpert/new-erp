@@ -17,8 +17,8 @@ const DriverSummaryDash = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const adminCout = await axios.get('http://localhost:8081/AdminCount');
-            setCount(adminCout.data.count);
+            const myTaskCount = await axios.get('http://localhost:8081/CountMyTasks/' + EmailUser);
+            SetMyTask(myTaskCount.data.myTasks);
           } catch (error) {
             console.error('Error fetching data:', error);
           }
@@ -34,7 +34,11 @@ const DriverSummaryDash = () => {
 
     if(RoleUser === "Driver" || RoleUser === "TO"){
         return (
-            <div>DriverSummaryDash</div>
+            <div>
+                {   
+
+                }
+            </div>
         )
     }
     else{
