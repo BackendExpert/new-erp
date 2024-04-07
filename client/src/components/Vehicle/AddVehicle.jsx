@@ -89,6 +89,11 @@ const AddVehicle = () => {
                                     <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Purchase "
                                     onChange={e => SetvehicleData({...vehicleData, value:e.target.value })}/>
                                 </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Unit Charge: </label>
+                                    <input type="number" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Unit Charge "
+                                    onChange={e => SetvehicleData({...vehicleData, unit_charge:e.target.value })}/>
+                                </div>
                             </div>
                             
                             <div className="">
