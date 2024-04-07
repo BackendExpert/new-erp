@@ -516,13 +516,25 @@ app.post('/AcceptUserRole/:id', (req, res) => {
                         if(result.length == 0){
                             return res.json({Error: "This User cannot be accept, The user not exists in System"})
                         }
-                        else{
+                        else{                            
                             const updateSql = "UPDATE employee SET category = ? WHERE eid = ? && email = ?"
                             connection.query(updateSql, [role, req.body.empID, UserID], (err, result) => {
                                 if(err){
                                     return res.json({Error: "ERROR on Server"})
                                 }
                                 else{
+                                    if(role === "Driver"){
+                                        const DriverSql = "INSERT INTO drivers(DEmail, Status, add_at) VALUES (?)"
+                                        const add_at = new Date()
+                                        const value = [
+                                            UserID,
+                                            "Off Duty",
+                                            add_at
+                                        ]
+    
+                                        connection.query(DriverSql, [value], (err, result) => {})
+                                    }
+
                                     return res.json({Status: "Success"})
                                 }
                             })
