@@ -2914,7 +2914,7 @@ app.post('/ApproveRese/:id', (req, res) => {
                     return res.json({Error: "Error ON Server"})
                 }
                 else{
-                    
+                    console.log(result)
                 }
             })
         }
