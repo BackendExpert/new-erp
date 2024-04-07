@@ -167,6 +167,13 @@ const SummaryDash = () => {
         const CountApproveRese = await axios.get('http://localhost:8081/ApproveReseCount');
         SetApproveRese(CountApproveRese.data.ApproveRese);
       } catch (error) {
+        consol
+        e.error('Error fetching data:', error);
+      }
+      try {
+        const CountApproveRese = await axios.get('http://localhost:8081/ApproveReseCount');
+        SetApproveRese(CountApproveRese.data.ApproveRese);
+      } catch (error) {
         console.error('Error fetching data:', error);
       }
     };    
