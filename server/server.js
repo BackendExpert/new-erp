@@ -2753,8 +2753,8 @@ app.get('/RequestRese', (req, res) => {
 // DriverData
 
 app.get('/DriverData', (req, res) => {
-    const sql = "SELECT * FROM users WHERE role = ?"
-    const DriverRole = "Driver"
+    const sql = "SELECT * FROM drivers WHERE Status = ?"
+    const DriverStatus = "Off Duty"
 
     connection.query(sql, [DriverRole], (err, result) => {
         if(err){
