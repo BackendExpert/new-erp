@@ -62,7 +62,14 @@ const UpdateVehicle = () => {
                                 <div className="my-2">
                                     <label htmlFor="">New Value: </label>
                                     <input type="number" required className="rounded w-full h-12 border border-blue-500 pl-2 my-4" placeholder="Enter New Value"
-                                    value={vehicleValue.value} onChange={e => SetvehicleValue({...vehicleValue, value:e.target.value})}/>                                </div>
+                                    value={vehicleValue.value} onChange={e => SetvehicleValue({...vehicleValue, value:e.target.value})}/> 
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">New Unit Charge: </label>
+                                    <input type="number" required className="rounded w-full h-12 border border-blue-500 pl-2 my-4" placeholder="Enter New Value"
+                                    value={vehicleValue.unit_charge} onChange={e => SetvehicleValue({...vehicleValue, unit_charge:e.target.value})}/> 
+                                </div>
+                                
                             </div>
                             <div className="">
                                 <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Update Vehicle</button>
