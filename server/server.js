@@ -2898,7 +2898,7 @@ app.post('/ApproveRese/:id', (req, res) => {
     const ApproveID = req.params.id
     const Stauts = "Approve"
 
-    // console.log(req.body)
+    console.log(req.body)
 
     const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"
 
@@ -2915,18 +2915,19 @@ app.post('/ApproveRese/:id', (req, res) => {
 
             const value = [
                 DEmail,
-                UserEmail,                
+                UserEmail,   
+                req.body.veh_reg_no,             
                 status
             ]
 
-            // connection.query(tripSql, [value], (err, result) => {
-            //     if(err){
-            //         return res.json({Error: "ERROR on SERVERsss"})
-            //     }
-            //     else{
-            //         return res.json({Status: "Success"})
-            //     }
-            // })            
+            connection.query(tripSql, [value], (err, result) => {
+                if(err){
+                    return res.json({Error: "ERROR on SERVERsss"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })            
         }
     })
 })
