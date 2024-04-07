@@ -2912,20 +2912,21 @@ app.post('/ApproveRese/:id', (req, res) => {
             const DEmail = req.body.ViewReservation.DEmail;
             const UserEmail = req.body.ViewReservation.Email;
             const status = "Pending"
+
             const value = [
                 DEmail,
-                UserEmail,
+                UserEmail,                
                 status
             ]
 
-            connection.query(tripSql, [value], (err, result) => {
-                if(err){
-                    return res.json({Error: "ERROR on SERVER"})
-                }
-                else{
-                    return res.json({Status: "Success"})
-                }
-            })            
+            // connection.query(tripSql, [value], (err, result) => {
+            //     if(err){
+            //         return res.json({Error: "ERROR on SERVERsss"})
+            //     }
+            //     else{
+            //         return res.json({Status: "Success"})
+            //     }
+            // })            
         }
     })
 })
