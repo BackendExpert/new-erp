@@ -1519,9 +1519,10 @@ app.post('/AddVehicle', (req,res) => {
             return res.json({Error: "Vehicle Already Exists at Given Registation Number...!"});
         }
         else{
-            const sql = "INSERT INTO vehicles(regno, model, brand, fueltype, myear, value, milage, create_at, update_at) VALUES (?)";
+            const sql = "INSERT INTO vehicles(regno, model, brand, fueltype, myear, value, milage, create_at, update_at, status, unit_charge) VALUES (?)";
             const create_at = new Date();
             const update_at = new Date();
+            const status = "Off Duty"
         
             const values = [
                 req.body.regno,
@@ -1530,10 +1531,11 @@ app.post('/AddVehicle', (req,res) => {
                 req.body.fueltype,
                 req.body.myear,
                 req.body.value,
-                req.body.milage,  
-                req.body.unit_charge,
+                req.body.milage, 
                 create_at,
-                update_at
+                update_at,
+                status,
+                req.body.unit_charge
             ]
         
             connection.query(sql, [values], (err, result) => {
