@@ -2909,16 +2909,21 @@ app.post('/ApproveRese/:id', (req, res) => {
         else{
             // add data to trip tbl
             const tripSql = "INSERT INTO trips(DEmail, UserEmail, vehiRegNo, is_aprove) VALUES(?)"
-            const DEmail = req.body.ViewReservation.DEmail;
-            const UserEmail = req.body.ViewReservation.Email;
+            const DEmail = req.body.DEmail;
+            const UserEmail = req.body.Email;
             const status = "Pending"
 
             const value = [
                 DEmail,
                 UserEmail,   
-                req.body.ViewReservation.veh_reg_no,             
+                req.body.veh_reg_no,             
                 status
             ]
+            
+            console.log(req.body.DEmail)
+            console.log(ApproveID)            
+            console.log(req.body)
+            
 
             connection.query(tripSql, [value], (err, result) => {
                 if(err){
