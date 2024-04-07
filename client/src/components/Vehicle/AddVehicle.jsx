@@ -16,7 +16,8 @@ const AddVehicle = () => {
         fueltype:'',
         milage:'',
         myear:'',
-        value:''
+        value:'',
+        unit_charge: ''
     })
 
     const headleSubmit = (e) => {
