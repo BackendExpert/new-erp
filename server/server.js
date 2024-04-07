@@ -2914,7 +2914,23 @@ app.post('/ApproveRese/:id', (req, res) => {
                     return res.json({Error: "Error ON Server"})
                 }
                 else{
-                    console.log(result)
+                    console.log("Result: ", result)
+                    // insert data to trips tbl
+
+                    const sqlTrips = "INSERT INTO trips(DEmail, UserEmail, vehiRegNo, is_aprove) VALUES (?)"
+                    const DEmail = result[0].DEmail
+                    const UserEmail = result[0].Email
+                    const vehicle = result[0].veh_reg_no
+                    const status = "Driver Pending"
+
+                    const value = [
+                        DEmail, 
+                        UserEmail,
+                        vehicle,
+                        status
+                    ]
+
+                    console.log(value)
                 }
             })
         }
