@@ -12,9 +12,17 @@ const DriverSummaryDash = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
-  return (
-    <div>DriverSummaryDash</div>
-  )
+    if(RoleUser === "Driver" || RoleUser === "TO"){
+        return (
+            <div>DriverSummaryDash</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
+
 }
 
 export default DriverSummaryDash
