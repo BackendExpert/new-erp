@@ -18,7 +18,8 @@ const UpdateVehicle = () => {
         axios.get('http://localhost:8081/VehicleData/' + id)
         .then(res => {
             SetvehicleValue({...vehicleValue, milage:res.data.Result[0].milage,
-                value:res.data.Result[0].value
+                value:res.data.Result[0].value,
+                unit_charge:res.data.Result[0].unit_charge,
             });
         })
     }, [])
@@ -66,7 +67,7 @@ const UpdateVehicle = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">New Unit Charge: </label>
-                                    <input type="number" required className="rounded w-full h-12 border border-blue-500 pl-2 my-4" placeholder="Enter New Value"
+                                    <input type="number" required className="rounded w-full h-12 border border-blue-500 pl-2 my-4" placeholder="Enter New Unit Charge"
                                     value={vehicleValue.unit_charge} onChange={e => SetvehicleValue({...vehicleValue, unit_charge:e.target.value})}/> 
                                 </div>
                                 
