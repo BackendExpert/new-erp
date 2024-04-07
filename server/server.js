@@ -2898,18 +2898,18 @@ app.post('/ApproveRese/:id', (req, res) => {
     const ApproveID = req.params.id
     const Stauts = "Approve"
 
-    const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"
+    // const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"
 
-    connection.query(sql, [Stauts, ApproveID], (err, result) => {
-        if(err){
-            return res.json({Error: "ERROR on Server"})
-        }
-        else{
-            // add data to trip tbl
-            const tripSql = "INSERT INTO trips(DEmail, UserEmail, vehiRegNo, is_aprove) VALUES(?)"
-            return res.json({Status: "Success"})
-        }
-    })
+    // connection.query(sql, [Stauts, ApproveID], (err, result) => {
+    //     if(err){
+    //         return res.json({Error: "ERROR on Server"})
+    //     }
+    //     else{
+    //         // add data to trip tbl
+    //         const tripSql = "INSERT INTO trips(DEmail, UserEmail, vehiRegNo, is_aprove) VALUES(?)"
+    //         return res.json({Status: "Success"})
+    //     }
+    // })
 })
 
 // RejectRese
