@@ -12,6 +12,23 @@ const DriverSummaryDash = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    const [myTasks, SetMyTask] = useState(0);
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const adminCout = await axios.get('http://localhost:8081/AdminCount');
+            setCount(adminCout.data.count);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };  
+        
+    
+        fetchData();
+      }, []);
+    
+
     if(RoleUser === "Driver" || RoleUser === "TO"){
         return (
             <div>DriverSummaryDash</div>
