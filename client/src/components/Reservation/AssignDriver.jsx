@@ -32,6 +32,7 @@ const AssignDriver = () => {
 
     const [AssignDriver, SetAssignDriver] = useState({
         DEmail: '',
+        VehiReg: ''
     })
 
     const HeadleSubmit = (e) => {
