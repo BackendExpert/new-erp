@@ -10,7 +10,11 @@ import Mystats from "./Mystats";
 
 
 const SummaryDash = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+  //check current login user
+  const RoleUser = secureLocalStorage.getItem("loginNew");
+  //get current login user's email
+  const EmailUser = secureLocalStorage.getItem("logiafter");
 
   const [count, setCount] = useState(0);
   const [books, setBooks] = useState(0);
@@ -171,7 +175,7 @@ const SummaryDash = () => {
         e.error('Error fetching data:', error);
       }
       try {
-        const CountApproveRese = await axios.get('http://localhost:8081/ApproveReseCount');
+        const CountApproveRese = await axios.get('http://localhost:8081/CountMyTasks/' + );
         SetApproveRese(CountApproveRese.data.ApproveRese);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -207,7 +211,7 @@ const SummaryDash = () => {
   ]
 
 
-    const RoleUser = secureLocalStorage.getItem("loginNew");
+
 
   return (
     <div>
