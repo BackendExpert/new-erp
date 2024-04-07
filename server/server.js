@@ -1530,7 +1530,8 @@ app.post('/AddVehicle', (req,res) => {
                 req.body.fueltype,
                 req.body.myear,
                 req.body.value,
-                req.body.milage,       
+                req.body.milage,  
+                req.body.unit_charge,
                 create_at,
                 update_at
             ]
