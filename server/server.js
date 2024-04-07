@@ -643,19 +643,19 @@ app.get('/ViewAccounts', (req, res) =>{
 })
 
 //ViewUserData
-app.get('/ViewUserData/:id', (req, res) =>{
-    const AccountID = req.params.id
-    const sql = "SELECT * FROM users WHERE UserID = ?"
+// app.get('/ViewUserData/:id', (req, res) =>{
+//     const AccountID = req.params.id
+//     const sql = "SELECT * FROM users WHERE UserID = ?"
 
-    connection.query(sql, [AccountID], (err, result) => {
-        if(err){
-            return res.json({Error: "ERROR on SERVER"})
-        }
-        else{
-            return res.json({Status: "Success", Result: result})
-        }
-    })
-})
+//     connection.query(sql, [AccountID], (err, result) => {
+//         if(err){
+//             return res.json({Error: "ERROR on SERVER"})
+//         }
+//         else{
+//             return res.json({Status: "Success", Result: result})
+//         }
+//     })
+// })
 
 //DeavtiveAccount
 app.post('/DeavtiveAccount/:id', (req, res) => {
@@ -1280,12 +1280,8 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
                             if(err){
                                 return res.json({Error: "Error on SERVER"})
                             }
-                            else{
-                                return res.json({Status: "Success"})
-                            }
                         })
                      }
-
                      return res.json({Status: "Success"})
                  }
              });
