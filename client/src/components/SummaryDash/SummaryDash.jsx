@@ -176,8 +176,8 @@ const SummaryDash = () => {
         e.error('Error fetching data:', error);
       }
       try {
-        const CountApproveRese = await axios.get('http://localhost:8081/CountMyTasks/' + EmailUser);
-        SetApproveRese(CountApproveRese.data.ApproveRese);
+        const CountDriverTasks = await axios.get('http://localhost:8081/CountMyTasks/' + EmailUser);
+        SetDriverTasks(CountDriverTasks.data.ApproveRese);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
