@@ -3026,6 +3026,26 @@ app.get('/GetVehicleRegNo', (req, res) => {
 
 })
 
+// CountMyTasks
+// This is for Driver's Tasks
+
+app.get('/CountMyTasks/:id', (req, res) => {
+    const Email = req.params.id;
+    
+    const sql = "SELECT COUNT(RID) AS myTasks FROM reservations WHERE Status = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "Approve"
+    connection.query(sql, [status], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ myTasks: results[0].myTasks }); // Send count in JSON format
+    });
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
