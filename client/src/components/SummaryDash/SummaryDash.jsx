@@ -7,6 +7,7 @@ import Icons from '@reacticons/ionicons'
 import UnAccessUsers from '../SuperAdmin/UnAccessUsers'
 import PendingUsers from "../SuperAdmin/PendingUsers";
 import Mystats from "./Mystats";
+import DriverSummaryDash from "./DriverSummaryDash";
 
 
 const SummaryDash = () => {
@@ -269,11 +270,7 @@ const SummaryDash = () => {
             // for Driver
             if(RoleUser === "Driver"){
               return (
-                <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
-                  <span className="text-3xl" >{data.icons}</span>
-                  <p className="text-xl py-2">{data.name}</p>
-                  <p className="text-2xl font-bold">{data.value}</p>
-                </div>  
+                <DriverSummaryDash />
               )
             }
         })
