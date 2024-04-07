@@ -2756,7 +2756,7 @@ app.get('/DriverData', (req, res) => {
     const sql = "SELECT * FROM drivers WHERE Status = ?"
     const DriverStatus = "Off Duty"
 
-    connection.query(sql, [DriverRole], (err, result) => {
+    connection.query(sql, [DriverStatus], (err, result) => {
         if(err){
             return res.json({Error: "Error in server"})
         }
