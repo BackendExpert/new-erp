@@ -2893,25 +2893,41 @@ app.get('/ViewRecommendedRese', (req, res) => {
     })
 })
 
-// ApproveRese
+// ApproveResereq.body.ViewReservation.DEmail;
 app.post('/ApproveRese/:id', (req, res) => {
     const ApproveID = req.params.id
     const Stauts = "Approve"
 
-    console.log(req.body)
+    // console.log(req.body)
 
-    // const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"
+    const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"
 
-    // connection.query(sql, [Stauts, ApproveID], (err, result) => {
-    //     if(err){
-    //         return res.json({Error: "ERROR on Server"})
-    //     }
-    //     else{
-    //         // add data to trip tbl
-    //         const tripSql = "INSERT INTO trips(DEmail, UserEmail, vehiRegNo, is_aprove) VALUES(?)"
-    //         return res.json({Status: "Success"})
-    //     }
-    // })
+    connection.query(sql, [Stauts, ApproveID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            // add data to trip tbl
+            const tripSql = "INSERT INTO trips(DEmail, UserEmail, vehiRegNo, is_aprove) VALUES(?)"
+            const DEmail = req.body.ViewReservation.DEmail;
+            const UserEmail = req.body.ViewReservation.Email;
+            const status = "Pending"
+            const value = [
+                DEmail,
+                UserEmail,
+                status
+            ]
+
+            connection.query(tripSql, [value], (err, result) => {
+                if(err){
+                    return res.json({Error: "ERROR on SERVER"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })            
+        }
+    })
 })
 
 // RejectRese
