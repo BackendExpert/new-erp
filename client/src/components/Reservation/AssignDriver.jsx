@@ -21,7 +21,7 @@ const AssignDriver = () => {
     }, [])
 
     // get vehicale
-    const [VehiRegNo, SetVehiRegNo] = useState()
+    const [VehiRegNo, SetVehiRegNo] = useState([])
     useEffect(() => {
         axios.get('http://localhost:8081/GetVehicleRegNo')
         .then(res => SetVehiRegNo(res.data))
@@ -80,7 +80,7 @@ const AssignDriver = () => {
                                 <div className="">
                                     <label htmlFor="">Select Vehicle</label>
                                     <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
-                                    onChange={e => SetAssignDriver({...AssignDriver, DEmail:e.target.value})}>
+                                    onChange={e => SetAssignDriver({...AssignDriver, VehiReg:e.target.value})}>
                                         <option>Select Option</option>
                                         {
                                             VehiRegNo.map((vehicle) => {
