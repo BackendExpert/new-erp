@@ -65,7 +65,7 @@ const ApproveReservation = () => {
 
     // Reject Data
     const headleReject = (id) => {
-        axios.post('http://localhost:8081/RejectRese/' + id)
+        axios.post('http://localhost:8081/RejectRese/' + id, ViewApproveRese)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Reservations Reject Successful")
