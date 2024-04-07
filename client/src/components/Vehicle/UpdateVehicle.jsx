@@ -9,7 +9,8 @@ const UpdateVehicle = () => {
 
     const [vehicleValue, SetvehicleValue] = useState({
         milage: '',
-        value: ''
+        value: '',
+        unit_charge: '',
     })
 
     //fetch data to update
