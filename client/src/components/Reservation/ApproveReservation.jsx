@@ -42,7 +42,7 @@ const ApproveReservation = () => {
     }, [])
 
     // get Approve Reservations from backend
-    const [ViewApproveRese, SetViewApproveRese] = useState([])
+    const [ViewApproveRese, SetViewApproveRese] = useState({})
     useEffect(() => {
         axios.get('http://localhost:8081/ApproveReseData')
         .then(res => SetViewApproveRese(res.data))
@@ -51,7 +51,7 @@ const ApproveReservation = () => {
 
     //Approve Data
     const headleApprove = (id) => {
-        axios.post('http://localhost:8081/ApproveRese/' + id)
+        axios.post('http://localhost:8081/ApproveRese/' + id, ViewApproveRese)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Reservations Approve Successful")
@@ -65,7 +65,7 @@ const ApproveReservation = () => {
 
     // Reject Data
     const headleReject = (id) => {
-        axios.post('http://localhost:8081/RejectRese/' + id, ViewApproveRese)
+        axios.post('http://localhost:8081/RejectRese/' + id )
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Reservations Reject Successful")
