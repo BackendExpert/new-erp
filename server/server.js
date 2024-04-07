@@ -2898,6 +2898,8 @@ app.post('/ApproveRese/:id', (req, res) => {
     const ApproveID = req.params.id
     const Stauts = "Approve"
 
+    console.log(req.body)
+
     // const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"
 
     // connection.query(sql, [Stauts, ApproveID], (err, result) => {
