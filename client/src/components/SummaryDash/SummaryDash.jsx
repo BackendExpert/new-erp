@@ -35,7 +35,8 @@ const SummaryDash = () => {
   const [ReqRese, SetReqRese] = useState(0);
   const [RecommendRese, SetRecommendRese] = useState(0);
   const [DeniedRese, SetDeniedRese] = useState(0);
-  const [ApproveRese, SetApproveRese] = useState(0)
+  const [ApproveRese, SetApproveRese] = useState(0);
+  const [DriverTasks, SetDriverTasks] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -175,7 +176,7 @@ const SummaryDash = () => {
         e.error('Error fetching data:', error);
       }
       try {
-        const CountApproveRese = await axios.get('http://localhost:8081/CountMyTasks/' + );
+        const CountApproveRese = await axios.get('http://localhost:8081/CountMyTasks/' + EmailUser);
         SetApproveRese(CountApproveRese.data.ApproveRese);
       } catch (error) {
         console.error('Error fetching data:', error);
