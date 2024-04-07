@@ -2916,7 +2916,7 @@ app.post('/ApproveRese/:id', (req, res) => {
             const value = [
                 DEmail,
                 UserEmail,   
-                req.body.veh_reg_no,             
+                req.body.ViewReservation.veh_reg_no,             
                 status
             ]
 
