@@ -70,7 +70,7 @@ const AssignDriver = () => {
                                         {
                                             DriverData.map((driver) => {
                                                 return (
-                                                    <option value={driver.email}>{driver.username} : {driver.email}</option>
+                                                    <option value={driver.email}>{driver.email}</option>
                                                 )
                                             })
                                         }
