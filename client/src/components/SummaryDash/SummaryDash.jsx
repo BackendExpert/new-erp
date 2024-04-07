@@ -281,7 +281,7 @@ const SummaryDash = () => {
             }
             // for Driver
             if(RoleUser === "Driver"){
-              if(data.id === 5){
+              if(data.id === 5 || data.id === 21){
                 return (
                   <div className="">
                       <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
