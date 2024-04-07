@@ -2998,7 +2998,17 @@ app.get('/ApproveReseCount', (req, res) => {
 // GetVehicleRegNo
 
 app.get('/GetVehicleRegNo', (req, res) => {
-    const sql = "SELECT * FROM vehicles"
+    const sql = "SELECT * FROM vehicles WHERE status = ?"
+    const stats = "Off Duty"
+
+    connection.query(sql, [stats], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 
 })
 
