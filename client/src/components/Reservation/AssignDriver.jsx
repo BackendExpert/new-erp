@@ -77,6 +77,20 @@ const AssignDriver = () => {
                                         }
                                     </select>
                                 </div>
+                                <div className="">
+                                    <label htmlFor="">Select Vehicle</label>
+                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                                    onChange={e => SetAssignDriver({...AssignDriver, DEmail:e.target.value})}>
+                                        <option>Select Option</option>
+                                        {
+                                            VehiRegNo.map((vehicle) => {
+                                                return (
+                                                    <option value={vehicle.regno}>{vehicle.brand} {vehicle.model}</option>
+                                                )
+                                            })
+                                        }
+                                    </select>
+                                </div>
                             </div>
                             <div className="my-4">
                                 <button type="submit" className="rounded px-16 py-2 border border-green-500 text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">
