@@ -3032,7 +3032,7 @@ app.get('/GetVehicleRegNo', (req, res) => {
 app.get('/CountMyTasks/:id', (req, res) => {
     const Email = req.params.id;
     
-    const sql = "SELECT COUNT(RID) AS myTasks FROM trips WHERE is_aprove = ? && DEmail = ?";
+    const sql = "SELECT COUNT(ID) AS myTasks FROM trips WHERE is_aprove = ? && DEmail = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const is_aprove = "Driver Pending"
     
