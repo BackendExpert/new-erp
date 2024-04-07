@@ -2772,8 +2772,8 @@ app.post('/AssignDriver/:id', (req, res) => {
     // console.log(req.body)
     // console.log(RequstID)
 
-    const sql = "UPDATE reservations SET DEmail = ? WHERE RID = ?"
-    connection.query(sql, [req.body.DEmail, RequstID], (err, result) =>{
+    const sql = "UPDATE reservations SET DEmail = ?, veh_reg_no = ? WHERE RID = ?"
+    connection.query(sql, [req.body.DEmail, req.body.VehiReg, RequstID], (err, result) =>{
         if(err){
             return res.json({Error: "Error on Server"})
         }
