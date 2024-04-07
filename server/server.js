@@ -2905,6 +2905,8 @@ app.post('/ApproveRese/:id', (req, res) => {
             return res.json({Error: "ERROR on Server"})
         }
         else{
+            // add data to trip tbl
+            const tripSql = "INSERT INTO trips(DEmail, UserEmail, vehiRegNo, is_aprove) VALUES(?)"
             return res.json({Status: "Success"})
         }
     })
