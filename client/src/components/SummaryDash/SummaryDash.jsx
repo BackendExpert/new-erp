@@ -7,7 +7,6 @@ import Icons from '@reacticons/ionicons'
 import UnAccessUsers from '../SuperAdmin/UnAccessUsers'
 import PendingUsers from "../SuperAdmin/PendingUsers";
 import Mystats from "./Mystats";
-import DriverSummaryDash from "./DriverSummaryDash";
 
 
 const SummaryDash = () => {
@@ -277,7 +276,6 @@ const SummaryDash = () => {
                         <p className="text-xl py-2">{data.name}</p>
                         <p className="text-2xl font-bold">{data.value}</p>
                       </div>
-                      <DriverSummaryDash />
                   </div>
 
                     
