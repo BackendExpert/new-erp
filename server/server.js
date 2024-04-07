@@ -1271,6 +1271,21 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
                      return res.json({Error: "ERROR in Data Processing"});
                  }
                  else{
+                     if(req.body.category === "Driver"){
+                        const addDriver = "INSERT INTO drivers(DEmail, Status, add_at) VALUES (?)"
+                        const status = "Off Duty"
+                        const add_at = new Date()
+
+                        connection.query(addDriver, [req.body.email, status, add_at], (err, result) => {
+                            if(err){
+                                return res.json({Error: "Error on SERVER"})
+                            }
+                            else{
+                                return res.json({Status: "Success"})
+                            }
+                        })
+                     }
+
                      return res.json({Status: "Success"})
                  }
              });
