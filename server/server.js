@@ -3183,7 +3183,7 @@ app.post('/AddKm/:id', (req, res) => {
     const ReseID = req.params.id
 
     const sql = "UPDATE reservations SET milage = ? WHERE RID = ?"
-    const milage = req.body.addKm
+    const milage = req.body.KMadd
 
     connection.query(sql, [milage, ReseID], (err, result) => {
         if(err){
