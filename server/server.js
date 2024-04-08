@@ -3063,6 +3063,11 @@ app.get('/MyNewTrip/:id', (req, res) => {
     })
 })
 
+// GetDuty
+app.get('/GetDuty/:id', (req, res) => {
+    console.log(req.params.id, req.body)
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
