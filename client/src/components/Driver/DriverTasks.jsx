@@ -20,7 +20,7 @@ const DriverTasks = () => {
     // get all data accourding to login user from trip talbe
     const [NewDriveTrip, SetNewDriveTrip] = useState()
     useEffect(() => {
-        axios.get('http://localhost:8081/MyNewTrip/' + id)
+        axios.get('http://localhost:8081/MyNewTrip/' + EmailUser)
         .then(res => SetNewDriveTrip(res.data))
         .catch(err => console.log(err))
     }, [])
