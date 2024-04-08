@@ -242,8 +242,8 @@ const RecReservation = () => {
                           <th scope='col' className='px-6 py-3'>Reservation ID</th>
                           <th scope='col' className='px-6 py-3'>User Email</th>
                           <th scope='col' className='px-6 py-3'>Name</th>                            
-                          <th scope='col' className='px-6 py-3'>Email</th>
-                          <th scope='col' className='px-6 py-3'>Purpose</th>
+                          <th scope='col' className='px-6 py-3'>Drive Milage</th>
+                          <th scope='col' className='px-6 py-3'>Vehicle Reg No</th>
                           <th scope='col' className='px-6 py-3'>Division No</th>                                        
                           <th scope='col' className='px-6 py-3'>Starting Time</th>
                           <th scope='col' className='px-6 py-3'>Date</th>
