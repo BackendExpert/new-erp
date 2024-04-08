@@ -25,6 +25,15 @@ const DriverTasks = () => {
         .catch(err => console.log(err))
     }, [])
     
+    // get on Duty Tasks
+    const [DriverOnDuty, SetDriverOnDuty] = useState()
+    useEffect(() => {
+        axios.get('http://localhost:8081/GetOnDuty/' + EmailUser)
+        .then(res => SetDriverOnDuty(res.data))
+        .catch(err => console.log(err))
+    }, [])
+    
+
     const headleGetDuty = (id) => {
         axios.post('http://localhost:8081/GetDuty/' + id)
         .then(res => {
