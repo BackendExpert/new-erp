@@ -21,7 +21,11 @@ const DriverKm = () => {
         axios.post('http://localhost:8081/AddKm/' + id)
         .then(res => {
             if(res.data.Status === "Success"){
-                alert("")
+                alert("KM added Successful")
+                navigate('/DriverTasks')
+            }
+            else{
+                alert(res.data.Error)
             }
         }) 
     }
