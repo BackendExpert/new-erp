@@ -3065,7 +3065,7 @@ app.get('/MyNewTrip/:id', (req, res) => {
 
 // GetDuty
 app.get('/GetDuty/:id', (req, res) => {
-    console.log(req.params.id, req.body)
+    console.log(req.body)
 })
 
 // ---------------------------- Reservation END ---------------------
