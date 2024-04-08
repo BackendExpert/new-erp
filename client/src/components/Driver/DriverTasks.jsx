@@ -150,7 +150,7 @@ const DriverTasks = () => {
                                                                 <td className='px-6 py-4 font-bold'>{allTasks.UserEmail}</td>
                                                                 <td className='px-6 py-4 font-bold'>{allTasks.vehiRegNo}</td>
                                                                 <td className='px-6 py-4 font-bold'>
-                                                                    <span className="py-2 px-4 rounded bg-yellow-500 text-white">{allTasks.is_aprove}</span>
+                                                                    <span className="py-2 px-4 rounded bg-green-500 text-white">{allTasks.is_aprove}</span>
                                                                 </td>
                                                             </tr>
                                                         )
