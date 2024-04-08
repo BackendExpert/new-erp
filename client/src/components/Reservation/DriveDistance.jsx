@@ -1,6 +1,6 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const DriveDistance = () => {
@@ -8,7 +8,7 @@ const DriveDistance = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
-
+    const {id} = useParams()
     
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
@@ -17,6 +17,16 @@ const DriveDistance = () => {
     })
     const headleSubmit = (e) => {
         e.preventDefault();
+        axios.post('http://localhost:8081/AddDistance/' + id, DriveDistance)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Drive Distance Added Successful")
+                navigate('/RecReservation')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
 
     if(RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
