@@ -46,7 +46,7 @@ const DriverTasks = () => {
             }
         })
     }
-
+    // backend nt
     const headleGetOffDuty = (id) => {
         axios.post('http://localhost:8081/EndDuty/' + id)
         .then(res => {
