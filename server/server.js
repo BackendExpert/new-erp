@@ -3064,7 +3064,7 @@ app.get('/MyNewTrip/:id', (req, res) => {
 })
 
 // GetDuty
-app.get('/GetDuty/:id', (req, res) => {
+app.post('/GetDuty/:id', (req, res) => {
     const TripID = req.params.id
    
     const sql = "UPDATE trips SET is_aprove = ? WHERE ID = ?"

@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios"
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom";
 import  secureLocalStorage  from  "react-secure-storage";
@@ -29,9 +29,9 @@ const DriverTasks = () => {
         axios.post('http://localhost:8081/GetDuty/' + id)
         .then(res => {
             if(res.data.Status === "Success"){
-                alert("Get Duty is Successful")
-                navigate('/DriverDash')
-            } 
+                alert("Get Duty Successful")
+                window.location.reload()
+            }
             else{
                 alert(res.data.Error)
             }
