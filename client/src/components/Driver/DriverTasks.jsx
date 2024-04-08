@@ -10,10 +10,17 @@ const DriverTasks = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
-    
-  return (
-    <div>DriverTasks</div>
-  )
+    if(RoleUser === "Driver"){
+        return (
+            <div>DriverTasks</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])   
+    }    
+
 }
 
 export default DriverTasks
