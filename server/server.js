@@ -3147,7 +3147,16 @@ app.get('/GetAllTrips/:id', (req, res) => {
 
 // ViewCalPrice
 app.get('/ViewCalPrice', (req, res) => {
-    const sql = "SELECT * FROM "
+    const sql = "SELECT * FROM reservations WHERE Status = ?"
+    const status = "Approve"
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 // ---------------------------- Reservation END ---------------------
