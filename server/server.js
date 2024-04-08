@@ -3145,6 +3145,11 @@ app.get('/GetAllTrips/:id', (req, res) => {
     })
 })
 
+// ViewCalPrice
+app.get('/ViewCalPrice', (req, res) => {
+    const sql = "SELECT * FROM "
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
