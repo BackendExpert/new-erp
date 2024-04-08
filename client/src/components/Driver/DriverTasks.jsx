@@ -17,6 +17,14 @@ const DriverTasks = () => {
         SetButtonValue(clickValue)   
     }
 
+    // get all data accourding to login user from trip talbe
+    const [NewDriveTrip, SetNewDriveTrip] = useState()
+    useEffect(() => {
+        axios.get('http://localhost:8081/MyNewTrip/' + id)
+        .then(res => SetNewDriveTrip(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
 
     if(RoleUser === "Driver"){
         return (
