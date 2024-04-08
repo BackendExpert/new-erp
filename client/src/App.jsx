@@ -221,7 +221,7 @@ export default function App() {
         <Route path="/ApproveReservation" element={<PrivateRoute><ApproveReservation /></PrivateRoute>} />
         <Route path="/ReservationCost" element={<PrivateRoute><ReservationCost /></PrivateRoute>} />
         {/* DriverTasks */}
-        <Route path="/DriverTasks/:id" element={<PrivateRoute><DriverTasks /></PrivateRoute>} />
+        <Route path="/DriverTasks" element={<PrivateRoute><DriverTasks /></PrivateRoute>} />
 
 
       </Routes>
