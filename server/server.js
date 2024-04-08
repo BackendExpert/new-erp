@@ -3130,6 +3130,12 @@ app.post('/EndDuty/:id', (req, res) => {
     })
 })
 
+// GetAllTrips
+app.get('/GetAllTrips/:id', (req, res) => {
+    const UserEmail = req.params.id
+    const sql = "SELECT * FROM trips WHERE DEmail = ?"
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
