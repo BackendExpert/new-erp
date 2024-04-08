@@ -3083,10 +3083,18 @@ app.post('/GetDuty/:id', (req, res) => {
                 else{
                     const updateDriver = "UPDATE drivers SET Status = ? WHERE DEmail = ?"
                     const status = "Driver On Duty"
-                    
+                    const DEmail = result[0].DEmail
+
+                    connection.query(updateDriver, [status, DEmail], (err, result) => {
+                        if(err){
+                            return res.json({Error: "ERROR in Server"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    })
                 }
-            })
-            return res.json({Status: "Success"})
+            })            
         }
     })
 })
