@@ -3094,6 +3094,22 @@ app.get('/GetOnDuty/:id', (req, res) => {
     })
 })
 
+// EndDuty
+app.get('/EndDuty/:id', (req, res) => {
+    const TripID = req.body.id
+    
+    const sql = "UPDATE trips SET is_aprove = ? WHERE ID = ?"
+    const status = "Driver on Duty"
+    connection.query(sql, [status, TripID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
