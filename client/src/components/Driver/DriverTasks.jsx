@@ -73,7 +73,6 @@ const DriverTasks = () => {
                                                                 <td className='px-6 py-4 font-bold'>
                                                                     
                                                                 </td>
-
                                                             </tr>
                                                         )
                                                     })
