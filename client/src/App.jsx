@@ -72,6 +72,7 @@ import AssignDriver from "./components/Reservation/AssignDriver"
 import ApproveReservation from "./components/Reservation/ApproveReservation"
 import ReservationCost from "./components/Reservation/ReservationCost"
 import DriverTasks from "./components/Driver/DriverTasks"
+import DriveDistance from "./components/Reservation/DriveDistance"
 
 
 export default function App() {
@@ -223,7 +224,7 @@ export default function App() {
         <Route path="/ReservationCost/:id" element={<PrivateRoute><ReservationCost /></PrivateRoute>} />
         {/* DriverTasks */}
         <Route path="/DriverTasks" element={<PrivateRoute><DriverTasks /></PrivateRoute>} />
-
+        <Route path="/DriveDistance/:id" element={<PrivateRoute><DriveDistance /></PrivateRoute>} />
 
 
       </Routes>
