@@ -53,10 +53,11 @@ const RecReservation = () => {
     }, [])
 
     // get data for calculate 
-    const [CalPrice, SetCalPrice] = useState()
-    useEffect(() => {
-      
-    }, [])
+    // const [CalPrice, SetCalPrice] = useState()
+    // useEffect(() => {
+    //   axios.get('http://localhost:8081/ViewCalPrice')
+    //   .then
+    // }, [])
 
 
 
