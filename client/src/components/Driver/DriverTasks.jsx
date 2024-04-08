@@ -133,23 +133,7 @@ const DriverTasks = () => {
                                                                     <span className="py-2 px-4 rounded bg-yellow-500 text-white">{onDuty.is_aprove}</span>
                                                                 </td>
                                                                 <td className='px-6 py-4 font-bold'>
-                                                                    {
-                                                                        (() => {
-                                                                            if(onDuty.milage == null){
-                                                                                return (
-                                                                                    <Link to={'/DriverKm/' + onDuty.ID}>
-                                                                                        <button className="ml-2 py-2 px-4 rounded border border-blue-500 text-blue-500 cursor-pointer duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Set Drive KM</button>
-                                                                                    </Link>
-                                                                                )
-                                                                            }
-                                                                            else{
-                                                                                return (
-                                                                                    <button onClick={() => headleGetOffDuty(trip.ID)} className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">End Duty</button>
-                                                                                )
-                                                                            }
-                                                                        })()
-                                                                    }
-
+                                                                    <button onClick={() => headleGetOffDuty(trip.ID)} className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">End Duty</button>
                                                                 </td>
                                                             </tr>
                                                         )
