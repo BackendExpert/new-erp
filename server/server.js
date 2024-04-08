@@ -3201,7 +3201,20 @@ app.get('/ViewCalPrice', (req, res) => {
 
 app.post('/AddDistance/:id', (req, res) => {
     const ReseID = req.params.id
-    console.log(ReseID, req.body)
+    // console.log(ReseID, req.body)
+
+    const sql = "UPDATE reservations SET milage = ? WHERE RID = ?"
+    const milage = req.body.Distance
+
+    connection.query(sql, [milage, ReseID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR in Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+
 })
 
 // ---------------------------- Reservation END ---------------------
