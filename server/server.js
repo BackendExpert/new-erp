@@ -3065,7 +3065,8 @@ app.get('/MyNewTrip/:id', (req, res) => {
 
 // GetDuty
 app.get('/GetDuty/:id', (req, res) => {
-    console.log(req.body)
+    const TripID = req.params.id
+    console.log(TripID)
 })
 
 // ---------------------------- Reservation END ---------------------

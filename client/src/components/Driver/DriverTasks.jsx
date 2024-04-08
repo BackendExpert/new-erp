@@ -26,7 +26,7 @@ const DriverTasks = () => {
     }, [])
     
     const headleGetDuty = (id) => {
-        axios.post('http://localhost:8081/GetDuty/' + id, EmailUser)
+        axios.post('http://localhost:8081/GetDuty/' + id)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Get Duty is Successful")
