@@ -308,7 +308,7 @@ const RecReservation = () => {
                                       })()
                                     }  
                                   </td>    
-                                  <td className='px-6 py-4 font-bold'>{TripCost}</td>                              
+                                  <td className='px-6 py-4 font-bold'>{price.cost}</td>                              
                                 </tr>
                               )
                             })
