@@ -300,6 +300,11 @@ const RecReservation = () => {
                                             </Link>
                                           )
                                         }
+                                        else if(price.cost != null){
+                                          return (
+                                           <span className="py-1 px-8 rounded bg-green-500 text-white">Cost Calculated</span>
+                                          )
+                                        }
                                         else{
                                           return(
                                             <button onClick={() => headleCost(price.RID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Calculate Price</button>
