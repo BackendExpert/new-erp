@@ -142,7 +142,11 @@ const DriverTasks = () => {
                                             }
                                             else if(buttonValue === "All Tasks"){
                                                 return (
-                                                    
+                                                    AllTripDriver.map((allTasks, index) => {
+                                                        return (
+                                                            
+                                                        )
+                                                    })
                                                 )
                                             }
                                         })()
