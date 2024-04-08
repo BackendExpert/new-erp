@@ -3197,6 +3197,13 @@ app.get('/ViewCalPrice', (req, res) => {
 //     // })
 // })
 
+// AddDistance
+
+app.post('/AddDistance/:id', (req, res) => {
+    const ReseID = req.params.id
+    console.log(ReseID, req.body)
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
