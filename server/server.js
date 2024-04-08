@@ -3231,8 +3231,16 @@ app.post('/CalculateCost/:id', (req, res) => {
             const unitPrice = result[0].uprice
 
             const cost = milage * unitPrice
-
+            const constsql = "UPDATE reservations SET cost = ? WHERE RID = ?"
             
+            connection.query(constsql, [cost], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    return res.json({})
+                }
+            })
         }
     })
 })
