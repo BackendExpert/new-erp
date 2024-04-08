@@ -95,6 +95,7 @@ const RecReservation = () => {
                   <button onClick={() => HeadleButtonClick('Requested')} className="ml-2 py-2 px-4 border border-yellow-500 text-yellow-500 rounded duration-500 hover:bg-yellow-500 hover:text-white hover:shadow-xl">Request Reservations</button>
                   <button onClick={() => HeadleButtonClick('Denied')} className="ml-2 py-2 px-4 border border-red-500 text-red-500 rounded duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Request Denied</button>
                   <button onClick={() => HeadleButtonClick('Recommend')} className="ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Recommend</button>
+                  <button onClick={() => HeadleButtonClick('Cost')} className="ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Cost Calculate</button>
               </div>
               <div className="">{buttonValue}</div>
                 <div className="relative overflow-x-auto my-8">
@@ -229,6 +230,42 @@ const RecReservation = () => {
                     </tbody>
                   </table>
                 </div>
+
+                  {
+                    (() => {
+                      if(buttonValue === "Cost"){
+                        return(
+                          <div className="relative overflow-x-auto my-8">
+                    <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                      <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
+                        <tr className='text-blue-500'>
+                          <th scope='col' className='px-6 py-3'>Reservation ID</th>
+                          <th scope='col' className='px-6 py-3'>User Email</th>
+                          <th scope='col' className='px-6 py-3'>Name</th>                            
+                          <th scope='col' className='px-6 py-3'>Email</th>
+                          <th scope='col' className='px-6 py-3'>Purpose</th>
+                          <th scope='col' className='px-6 py-3'>Division No</th>                                        
+                          <th scope='col' className='px-6 py-3'>Starting Time</th>
+                          <th scope='col' className='px-6 py-3'>Date</th>
+                          <th scope='col' className='px-6 py-3'>Arrival Date</th>
+                          <th scope='col' className='px-6 py-3'>Route</th>
+                          <th scope='col' className='px-6 py-3'>Vehicle Type</th>
+                          <th scope='col' className='px-6 py-3'>Funding</th>
+                          <th scope='col' className='px-6 py-3'>HOD</th>
+                          <th scope='col' className='px-6 py-3'>Passengers</th>
+                          <th scope='col' className='px-6 py-3'>Status</th>
+                          <th scope='col' className='px-6 py-3'>Action</th>                                        
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                  </table>
+                </div>
+                        )
+                      }
+                    })()
+                  }
             </div>
           </div>
       )
