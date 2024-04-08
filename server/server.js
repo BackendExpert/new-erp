@@ -3134,6 +3134,15 @@ app.post('/EndDuty/:id', (req, res) => {
 app.get('/GetAllTrips/:id', (req, res) => {
     const UserEmail = req.params.id
     const sql = "SELECT * FROM trips WHERE DEmail = ?"
+
+    connection.query(sql, [UserEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 // ---------------------------- Reservation END ---------------------
