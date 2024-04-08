@@ -269,6 +269,19 @@ const RecReservation = () => {
                                   <td className='px-6 py-4 font-bold'>{price.veh_reg_no}</td>
                                   <td className='px-6 py-4 font-bold'>{price.uprice}</td>
                                   <td className='px-6 py-4 font-bold'>{price.Status}</td>
+                                  <td className='px-6 py-4 font-bold'>
+                                    {
+                                      (() => {
+                                        if(price.milage == null){
+                                          return (
+                                            <Link>
+                                              
+                                            </Link>
+                                          )
+                                        }
+                                      })()
+                                    }  
+                                  </td>                                  
                                 </tr>
                               )
                             })
