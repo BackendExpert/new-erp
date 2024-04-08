@@ -24,8 +24,8 @@ const DriverKm = () => {
 
                 <form>
                     <div className="my-2">
-                        <label htmlFor="">Add Drive KM</label>
-                        <input type="number" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Drive KM"
+                        <label htmlFor="">Add Drive KM : </label><br />
+                        <input type="number" className="rounded w-1/2 h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Drive KM"
                         onChange={e => SetaddDriveKm({...addDriveKm, addKm:e.target.value})} />
                     </div>
                 </form>
