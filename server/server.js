@@ -2785,10 +2785,18 @@ app.post('/AssignDriver/:id', (req, res) => {
                     return res.json({Error: "Error on Server"})
                 }
                 else{
-                    
+                    const vehi_unit_p = result[0].unit_charge
+                    const Updaterese = "UPDATE reservations SET uprice = ? WHERE RID = ?"
+                    connection.query(Updaterese, [vehi_unit_p, RequstID], (err, result) => {
+                        if(err){
+                            return res.json({Error: "Error on server"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    })
                 }
             })
-            return res.json({Status: "Success"})
         }
     })
 })
