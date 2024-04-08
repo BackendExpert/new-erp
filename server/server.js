@@ -3217,6 +3217,26 @@ app.post('/AddDistance/:id', (req, res) => {
 
 })
 
+// CalculateCost
+app.post('/CalculateCost/:id', (req, res) => {
+    const ReseID = req.params.id
+    const sql = "SELECT * FROM reservations WHERE RID = ?"
+    connection.query(sql, [ReseID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            // calculate cost
+            const milage = result[0].milage
+            const unitPrice = result[0].uprice
+
+            const cost = milage * unitPrice
+
+            
+        }
+    })
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
