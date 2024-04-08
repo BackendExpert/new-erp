@@ -80,7 +80,7 @@ const DriverTasks = () => {
                                                                 <td className='px-6 py-4 font-bold'>{trip.UserEmail}</td>
                                                                 <td className='px-6 py-4 font-bold'>{trip.vehiRegNo}</td>
                                                                 <td className='px-6 py-4 font-bold'>
-                                                                    <span className="py-1 px-4 rounded bg-yellow-500 text-white">{trip.is_aprove}</span>
+                                                                    <span className="py-2 px-4 rounded bg-yellow-500 text-white">{trip.is_aprove}</span>
                                                                 </td>
                                                                 <td className='px-6 py-4 font-bold'>
                                                                     <button onClick={() => headleGetDuty(trip.ID)} className="ml-2 py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Get Duty</button>
