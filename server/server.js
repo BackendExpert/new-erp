@@ -3182,7 +3182,7 @@ app.get('/ViewCalPrice', (req, res) => {
 app.post('/AddKm/:id', (req, res) => {
     const ReseID = req.params.id
 
-    const sql = "UPDATE reservations SET milage ? WHERE RID = ?"
+    const sql = "UPDATE reservations SET milage = ? WHERE RID = ?"
     const milage = req.body.addKm
 
     connection.query(sql, [milage, ReseID], (err, result) => {
