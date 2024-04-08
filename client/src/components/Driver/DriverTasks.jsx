@@ -54,18 +54,18 @@ const DriverTasks = () => {
         })
     }
 
-    // const headleGetOffDuty = (id) => {
-    //     axios.post('http://localhost:8081/EndDuty/' + id)
-    //     .then(res => {
-    //         if(res.data.Status === "Success"){
-    //             alert("The Duty End Successful")
-    //             navigate('/DriverDash')
-    //         }
-    //         else{
-    //             alert(res.data.Error)
-    //         }
-    //     })
-    // }
+    const headleGetOffDuty = (id) => {
+        axios.post('http://localhost:8081/EndDuty/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Duty End Successful")
+                navigate('/DriverDash')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
 
     if(RoleUser === "Driver"){
         return (
@@ -133,9 +133,21 @@ const DriverTasks = () => {
                                                                     <span className="py-2 px-4 rounded bg-yellow-500 text-white">{onDuty.is_aprove}</span>
                                                                 </td>
                                                                 <td className='px-6 py-4 font-bold'>
-                                                                    <Link to={'/DriverKm/' + onDuty.ID}>
-                                                                        <button className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">End Duty</button>
-                                                                    </Link>
+                                                                    {
+                                                                        (() => {
+                                                                            if(onDuty.milage === ""){
+                                                                                return (
+                                                                                    <Link to={'/DriverKm/' + onDuty.ID}>
+                                                                                        <button className="ml-2 py-2 px-4 rounded border border-blue-500 text-blue-500 cursor-pointer duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Set Drive KM</button>
+                                                                                    </Link>
+                                                                                )
+                                                                            }
+                                                                            else{
+                                                                                <button onClick={() => headleGetOffDuty(trip.ID)} className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">End Duty</button>
+                                                                            }
+                                                                        })()
+                                                                    }
+
                                                                 </td>
                                                             </tr>
                                                         )
