@@ -62,6 +62,9 @@ const AddLeave = () => {
       else if(RoleUser === "PDFellow"){
         navigate('/PDFellow');
       } 
+      else if(RoleUser === "Driver"){
+        navigate('/DriverDash');
+      } 
     }
 
     const [LeaveData, SetLeaveData] = useState({
