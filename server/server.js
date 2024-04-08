@@ -3230,18 +3230,33 @@ app.post('/CalculateCost/:id', (req, res) => {
             // calculate cost
             const milage = result[0].milage
             const unitPrice = result[0].uprice
+            const userEmail = result[0].Email
 
             const cost = milage * unitPrice
 
-            console.log(cost)
+            console.log(userEmail)
             const constsql = "UPDATE reservations SET cost = ? WHERE RID = ?"
             
-            connection.query(constsql, [cost], (err, result) => {
+            connection.query(constsql, [cost, ReseID], (err, result) => {
                 if(err){
                     return res.json({Error: "Error on Server"})
                 }
                 else{
-                    return res.json({Status: "Success"})
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: userEmail,
+                        subject: 'Vehicle Reservation Charge',
+                        text: 'Your Vehicle Reservation Charge : '+ cost, 
+                    };
+
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                          console.log(error);
+                        } else {
+                          console.log('Email sent: ' + info.response);
+                          return res.json({Status: "Success"})
+                        }
+                    });
                 }
             })
         }
