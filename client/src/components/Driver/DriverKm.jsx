@@ -17,6 +17,7 @@ const DriverKm = () => {
     })
     
     const headleSubmit = (e) => {
+        e.preventDefault(); 
         
     }
 
