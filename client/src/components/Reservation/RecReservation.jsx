@@ -263,6 +263,12 @@ const RecReservation = () => {
                               return(
                                 <tr key={index}>
                                   <td className='px-6 py-4 font-bold'>{price.RID}</td>
+                                  <td className='px-6 py-4 font-bold'>{price.RID}</td>
+                                  <td className='px-6 py-4 font-bold'>{price.RID}</td>
+                                  <td className='px-6 py-4 font-bold'>{price.RID}</td>
+                                  <td className='px-6 py-4 font-bold'>{price.RID}</td>
+                                  <td className='px-6 py-4 font-bold'>{price.RID}</td>
+                                  <td className='px-6 py-4 font-bold'>{price.RID}</td>
                                 </tr>
                               )
                             })
