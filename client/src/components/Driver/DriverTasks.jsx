@@ -64,10 +64,10 @@ const DriverTasks = () => {
                                                         return (
                                                             <tr key={index}>
                                                                 <td className='px-6 py-4 font-bold'>{trip.ID}</td>
-                                                                <td className='px-6 py-4 font-bold'>{trip.ID}</td>
-                                                                <td className='px-6 py-4 font-bold'>{trip.ID}</td>
-                                                                <td className='px-6 py-4 font-bold'>{trip.ID}</td>
-                                                                <td className='px-6 py-4 font-bold'>{trip.ID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{trip.DEmail}</td>
+                                                                <td className='px-6 py-4 font-bold'>{trip.UserEmail}</td>
+                                                                <td className='px-6 py-4 font-bold'>{trip.vehiRegNo}</td>
+                                                                <td className='px-6 py-4 font-bold'>{trip.is_aprove}</td>
                                                             </tr>
                                                         )
                                                     })
