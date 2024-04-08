@@ -3181,13 +3181,16 @@ app.get('/ViewCalPrice', (req, res) => {
 
 app.post('/AddKm/:id', (req, res) => {
     const ReseID = req.params.id
-    // console.log(req.body)
+
     const sql = "UPDATE reservations SET milage = ? WHERE RID = ?"
     const milage = req.body.addKm
 
     connection.query(sql, [milage, ReseID], (err, result) => {
         if(err){
             return res.json({Error: "ERROR on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
         }
     })
 })
