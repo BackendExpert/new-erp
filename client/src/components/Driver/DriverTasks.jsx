@@ -67,7 +67,13 @@ const DriverTasks = () => {
                                                                 <td className='px-6 py-4 font-bold'>{trip.DEmail}</td>
                                                                 <td className='px-6 py-4 font-bold'>{trip.UserEmail}</td>
                                                                 <td className='px-6 py-4 font-bold'>{trip.vehiRegNo}</td>
-                                                                <td className='px-6 py-4 font-bold'>{trip.is_aprove}</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <span className="py-1 px-4 rounded bg-yellow-500 text-white">{trip.is_aprove}</span>
+                                                                </td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    
+                                                                </td>
+
                                                             </tr>
                                                         )
                                                     })
