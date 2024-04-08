@@ -35,6 +35,11 @@ const DriveDistance = () => {
                                 <input type="number" className="rounded w-1/2 h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Driver Distance"
                                 onChange={e => SetDriveDistance({...DriveDistance, Distance:e.target.value})} />
                             </div>
+                            <div className="my-4">
+                                <button type="submit" className="rounded px-16 py-2 border border-green-500 text-green-500 font-semibold duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">
+                                    Submit
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
