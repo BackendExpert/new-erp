@@ -140,6 +140,11 @@ const DriverTasks = () => {
                                                     })
                                                 )
                                             }
+                                            else if(buttonValue === "All Tasks"){
+                                                return (
+                                                    
+                                                )
+                                            }
                                         })()
                                     }
                                 </tbody>
