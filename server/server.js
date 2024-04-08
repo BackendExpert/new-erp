@@ -3238,7 +3238,7 @@ app.post('/CalculateCost/:id', (req, res) => {
                     return res.json({Error: "Error on Server"})
                 }
                 else{
-                    return res.json({})
+                    return res.json({Status: "Success"})
                 }
             })
         }
