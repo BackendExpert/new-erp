@@ -51,7 +51,8 @@ const DriverTasks = () => {
                                         <th scope='col' className='px-6 py-3'>Driver Email</th>
                                         <th scope='col' className='px-6 py-3'>User Email</th>                            
                                         <th scope='col' className='px-6 py-3'>Vehicle Numver</th>
-                                        <th scope='col' className='px-6 py-3'>Status</th>                                      
+                                        <th scope='col' className='px-6 py-3'>Status</th> 
+                                        <th scope='col' className='px-6 py-3'>Action</th>                                      
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -62,6 +63,10 @@ const DriverTasks = () => {
                                                     NewDriveTrip.map((trip, index) => {
                                                         return (
                                                             <tr key={index}>
+                                                                <td className='px-6 py-4 font-bold'>{trip.ID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{trip.ID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{trip.ID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{trip.ID}</td>
                                                                 <td className='px-6 py-4 font-bold'>{trip.ID}</td>
                                                             </tr>
                                                         )
