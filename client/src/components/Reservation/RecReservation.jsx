@@ -258,7 +258,15 @@ const RecReservation = () => {
                         </tr>
                     </thead>
                     <tbody>
-
+                          {
+                            CalPrice.map((price, index) => {
+                              return(
+                                <tr key={index}>
+                                  <td className='px-6 py-4 font-bold'>{price.RID}</td>
+                                </tr>
+                              )
+                            })
+                          }
                     </tbody>
                   </table>
                 </div>
