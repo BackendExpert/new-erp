@@ -48,7 +48,16 @@ const DriverTasks = () => {
     }
 
     const headleGetOffDuty = (id) => {
-        
+        axios.post('http://localhost:8081/EndDuty/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Duty End Successful")
+                navigate('/DriverDash')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
 
     if(RoleUser === "Driver"){
