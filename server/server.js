@@ -3047,6 +3047,22 @@ app.get('/CountMyTasks/:id', (req, res) => {
     });
 })
 
+// MyNewTrip
+
+app.get('/MyNewTrip/:id', (req, res) => {
+    const UserEmail = req.params.id
+    const sql = "SELECT * FROM trips WHERE is_aprove = ? && DEmail = ?"
+    const is_aprove = "Driver Pending"
+    connection.query(sql, [is_aprove, UserEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
