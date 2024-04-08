@@ -55,7 +55,21 @@ const DriverTasks = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    {
+                                        (() => {
+                                            if(buttonValue === "New Tasks"){
+                                                return (
+                                                    NewDriveTrip.map((trip, index) => {
+                                                        return (
+                                                            <tr key={index}>
+                                                                
+                                                            </tr>
+                                                        )
+                                                    })
+                                                )
+                                            }
+                                        })()
+                                    }
                                 </tbody>
                             </table>
                         </div>
