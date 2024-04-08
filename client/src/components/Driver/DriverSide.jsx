@@ -1,13 +1,17 @@
 import Icons from "@reacticons/ionicons"
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import secureLocalStorage from "react-secure-storage"
 
 const DriverSide = () => {
     const [openSide, SetSideOpen] = useState();
     const navigate = useNavigate();
 
+        //get current login user's email
+        const EmailUser = secureLocalStorage.getItem("logiafter");
+
     const sidemenu = [
-        {name: "My Tasks",  link: "/DriverTasks", icon: <Icons name="document-text" size="large"></Icons>},
+        {name: "My Tasks",  link: "/DriverTasks/" + EmailUser, icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Leave",  link: "/AddLeave", icon: <Icons name="calendar" size="large"></Icons>},
         {name: "Reservations",  link: "/AddReservation", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Work Requests",  link: "#", icon: <Icons name="receipt" size="large"></Icons>},
