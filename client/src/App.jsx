@@ -72,7 +72,7 @@ import AssignDriver from "./components/Reservation/AssignDriver"
 import ApproveReservation from "./components/Reservation/ApproveReservation"
 import ReservationCost from "./components/Reservation/ReservationCost"
 import DriverTasks from "./components/Driver/DriverTasks"
-import DriverKm from "./components/Reservation/DriverKm"
+import DriverKm from "./components/Driver/DriverKm"
 
 export default function App() {
   return (
