@@ -3185,14 +3185,16 @@ app.post('/AddKm/:id', (req, res) => {
     const sql = "UPDATE reservations SET milage = ? WHERE RID = ?"
     const milage = req.body.KMadd
 
-    connection.query(sql, [milage, ReseID], (err, result) => {
-        if(err){
-            return res.json({Error: "ERROR on Server"})
-        }
-        else{
-            return res.json({Status: "Success"})
-        }
-    })
+    console.log(ReseID, milage)
+
+    // connection.query(sql, [milage, ReseID], (err, result) => {
+    //     if(err){
+    //         return res.json({Error: "ERROR on Server"})
+    //     }
+    //     else{
+    //         return res.json({Status: "Success"})
+    //     }
+    // })
 })
 
 // ---------------------------- Reservation END ---------------------
