@@ -62,7 +62,7 @@ const DriverTasks = () => {
                                                     NewDriveTrip.map((trip, index) => {
                                                         return (
                                                             <tr key={index}>
-                                                                
+                                                                <td className='px-6 py-4 font-bold'>{trip.ID}</td>
                                                             </tr>
                                                         )
                                                     })
