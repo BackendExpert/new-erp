@@ -90,6 +90,13 @@ const RecReservation = () => {
       })
     }
 
+    // headleCost
+    const [TripCost, SetTripConst] = useState()
+    const headleCost = (milage, unitPrice) => {
+      const veh_cost = milage * unitPrice;
+      SetTripConst(veh_cost)
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
       return (
         <div className="bg-gray-200 py-4">
@@ -282,13 +289,13 @@ const RecReservation = () => {
                                         }
                                         else{
                                           return(
-                                            <button className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Calculate Price</button>
+                                            <button onClick={() => headleCost(price.milage, price.uprice)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Calculate Price</button>
                                           )
                                         }
                                       })()
                                     }  
                                   </td>    
-                                  <td className='px-6 py-4 font-bold'>{price.cost}</td>                              
+                                  <td className='px-6 py-4 font-bold'>{TripCost}</td>                              
                                 </tr>
                               )
                             })
