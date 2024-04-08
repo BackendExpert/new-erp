@@ -13,12 +13,12 @@ const DriverKm = () => {
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
     const [addDriveKm, SetaddDriveKm] = useState({
-        addKm: '',
+        KMadd: '',
     })
     
     const headleSubmit = (e) => {
         e.preventDefault(); 
-        axios.post('http://localhost:8081/AddKm/' + id)
+        axios.post('http://localhost:8081/AddKm/' + id, addDriveKm)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("KM added Successful")
@@ -42,7 +42,7 @@ const DriverKm = () => {
                     <div className="my-2">
                         <label htmlFor="">Add Drive KM : </label><br />
                         <input type="number" className="rounded w-1/2 h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Drive KM"
-                        onChange={e => SetaddDriveKm({...addDriveKm, addKm:e.target.value})} />
+                        onChange={e => SetaddDriveKm({...addDriveKm, KMadd:e.target.value})} />
                     </div>
 
                     <div className="">
