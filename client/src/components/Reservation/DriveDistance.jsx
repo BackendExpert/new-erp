@@ -19,6 +19,15 @@ const DriveDistance = () => {
                     <Link to={'/RecReservation'}>
                         <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                     </Link>
+                    <div className="my-4">
+                        <form>
+                            <div className="my-2">
+                                <label htmlFor="">Scientist 2</label>
+                                <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Scientist 2"
+                                onChange={e => SetProgramData({...programData, scient2:e.target.value})} />
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         )
