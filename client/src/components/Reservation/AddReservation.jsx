@@ -47,6 +47,9 @@ const AddReservation = () => {
         else if(RoleUser === "PDFellow"){
           navigate('/PDFellow');
         } 
+        else if(RoleUser === "Driver"){
+          navigate('/DriverDash');
+        } 
       }
 
       //send data to backend
