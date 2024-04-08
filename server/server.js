@@ -3074,6 +3074,18 @@ app.post('/GetDuty/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
+            // update drivers tbl
+            const getDriver = "SELECT * FROM trips WHERE ID = ?"
+            connection.query(getDriver, [TripID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on SERVER"})
+                }
+                else{
+                    const updateDriver = "UPDATE drivers SET Status = ? WHERE DEmail = ?"
+                    const status = "Driver On Duty"
+                    
+                }
+            })
             return res.json({Status: "Success"})
         }
     })
