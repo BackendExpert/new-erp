@@ -254,7 +254,8 @@ const RecReservation = () => {
                           <th scope='col' className='px-6 py-3'>Vehicle Reg No</th>
                           <th scope='col' className='px-6 py-3'>Unit Price</th>                                        
                           <th scope='col' className='px-6 py-3'>Status</th>
-                          <th scope='col' className='px-6 py-3'>Action</th>                                        
+                          <th scope='col' className='px-6 py-3'>Action</th>       
+                          <th scope='col' className='px-6 py-3'>Cost</th>                                   
                         </tr>
                     </thead>
                     <tbody>
@@ -281,7 +282,8 @@ const RecReservation = () => {
                                         }
                                       })()
                                     }  
-                                  </td>                                  
+                                  </td>    
+                                  <td className='px-6 py-4 font-bold'>{price.cost}</td>                              
                                 </tr>
                               )
                             })
