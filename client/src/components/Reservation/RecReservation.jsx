@@ -52,6 +52,12 @@ const RecReservation = () => {
       .catch(err => console.log(err))
     }, [])
 
+    // get data for calculate 
+    const [CalPrice, SetCalPrice] = useState()
+    useEffect(() => {
+      
+    }, [])
+
 
 
     // headleRec 
