@@ -2778,6 +2778,16 @@ app.post('/AssignDriver/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
+            // Add unit price of vehicle 
+            const vehiUp = "SELECT * FROM vehicles WHERE regno = ?"
+            connection.query(vehiUp, [req.body.VehiReg], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    
+                }
+            })
             return res.json({Status: "Success"})
         }
     })
