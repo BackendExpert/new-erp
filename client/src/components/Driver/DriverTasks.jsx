@@ -28,8 +28,8 @@ const DriverTasks = () => {
                         </Link>
                     </div>
                     <div className="flex">
-                        <button onClick={() => HeadleButtonClick('New Tasks')} className="my-2 ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">New Tasks</button>
-                        <button onClick={() => HeadleButtonClick('All Tasks')} className="my-2 ml-2 py-2 px-4 border border-purple-500 text-purple-500 rounded duration-500 hover:bg-purple-500 hover:text-white hover:shadow-xl">All Tasks</button>
+                        <button onClick={() => HeadleButtonClick('New Tasks')} className="my-2 ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">My New Tasks</button>
+                        <button onClick={() => HeadleButtonClick('All Tasks')} className="my-2 ml-2 py-2 px-4 border border-purple-500 text-purple-500 rounded duration-500 hover:bg-purple-500 hover:text-white hover:shadow-xl">My All Tasks</button>
                     </div>
                     <p>{buttonValue}</p>
                 </div>
