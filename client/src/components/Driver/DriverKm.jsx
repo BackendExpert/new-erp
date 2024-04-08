@@ -12,13 +12,15 @@ const DriverKm = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+
+
     const [addDriveKm, SetaddDriveKm] = useState({
         KMadd: '',
     })
     
     const headleSubmit = (e) => {
         e.preventDefault(); 
-        axios.post('http://localhost:8081/AddKm/' + id, addDriveKm)
+        axios.post('http://localhost:8081/AddKm/' + EmailUser, addDriveKm)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("KM added Successful")
