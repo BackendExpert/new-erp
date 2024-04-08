@@ -16,6 +16,11 @@ const ReservationCost = () => {
       <div>ReservationCost</div>
     )
   }
+  else{
+    useEffect(() => {
+      navigate('/UnAccess');
+    }, [])
+  }
 }
 
 export default ReservationCost
