@@ -91,10 +91,23 @@ const RecReservation = () => {
     }
 
     // headleCost
-    const [TripCost, SetTripConst] = useState()
-    const headleCost = (milage, unitPrice) => {
-      const veh_cost = milage * unitPrice;
-      SetTripConst(veh_cost)
+    // const [TripCost, SetTripConst] = useState()
+    // const headleCost = (milage, unitPrice) => {
+    //   const veh_cost = milage * unitPrice;
+    //   SetTripConst(veh_cost)
+    // }
+
+    const headleCost = (id) => {
+      axios.post('http://localhost:8081/CalculateCost/' + id)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("Calculate Cost Successful")
+          window.location.reload()
+        }
+        else{
+          alert(res.data.Error)
+        }
+      })
     }
 
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
@@ -289,7 +302,7 @@ const RecReservation = () => {
                                         }
                                         else{
                                           return(
-                                            <button onClick={() => headleCost(price.milage, price.uprice)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Calculate Price</button>
+                                            <button onClick={() => headleCost(price.RID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Calculate Price</button>
                                           )
                                         }
                                       })()
