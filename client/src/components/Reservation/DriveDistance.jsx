@@ -9,9 +9,18 @@ const DriveDistance = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
-  return (
-    <div>DriveDistance</div>
-  )
+
+    if(RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
+        return (
+            <div>DriveDistance</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
+
 }
 
 export default DriveDistance
