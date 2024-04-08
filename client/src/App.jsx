@@ -71,6 +71,7 @@ import UpdatePass from "./components/LoginSignUp/UpdatePass"
 import AssignDriver from "./components/Reservation/AssignDriver"
 import ApproveReservation from "./components/Reservation/ApproveReservation"
 import ReservationCost from "./components/Reservation/ReservationCost"
+import DriverTasks from "./components/Driver/DriverTasks"
 
 export default function App() {
   return (
@@ -155,6 +156,7 @@ export default function App() {
         {/* DriverDash */}
         <Route path="/DriverDash" element={<PrivateRoute><DriverDash /></PrivateRoute>} />
 
+
         {/* MyFullStats */}
         <Route path="/MyFullStats/:id" element={<PrivateRoute><MyFullStats /></PrivateRoute>} />
 
@@ -218,6 +220,9 @@ export default function App() {
         <Route path="/AssignDriver/:id" element={<PrivateRoute><AssignDriver /></PrivateRoute>} />
         <Route path="/ApproveReservation" element={<PrivateRoute><ApproveReservation /></PrivateRoute>} />
         <Route path="/ReservationCost" element={<PrivateRoute><ReservationCost /></PrivateRoute>} />
+        {/* DriverTasks */}
+        <Route path="/DriverTasks/:id" element={<PrivateRoute><DriverTasks /></PrivateRoute>} />
+
 
       </Routes>
     </BrowserRouter>
