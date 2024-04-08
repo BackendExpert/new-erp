@@ -17,7 +17,7 @@ const DriverTasks = () => {
         SetButtonValue(clickValue)   
     }
 
-    // get  accourding to login user from trip talbe
+    // get pending data accourding to login user from trip talbe
     const [NewDriveTrip, SetNewDriveTrip] = useState()
     useEffect(() => {
         axios.get('http://localhost:8081/MyNewTrip/' + EmailUser)
@@ -33,7 +33,13 @@ const DriverTasks = () => {
         .catch(err => console.log(err))
     }, [])
     
-    // get all trips acco
+    // get all trips according to login user
+    const [AllTripDriver, SetAllTripDriver] = useState()
+    useEffect(() => {
+        axios.get('http://localhost:8081/GetAllTrips/' + EmailUser)
+        .then(res => SetAllTripDriver(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
     const headleGetDuty = (id) => {
         axios.post('http://localhost:8081/GetDuty/' + id)
