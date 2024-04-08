@@ -144,7 +144,15 @@ const DriverTasks = () => {
                                                 return (
                                                     AllTripDriver.map((allTasks, index) => {
                                                         return (
-                                                            
+                                                            <tr key={index}>
+                                                                <td className='px-6 py-4 font-bold'>{allTasks.ID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{allTasks.DEmail}</td>
+                                                                <td className='px-6 py-4 font-bold'>{allTasks.UserEmail}</td>
+                                                                <td className='px-6 py-4 font-bold'>{allTasks.vehiRegNo}</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <span className="py-2 px-4 rounded bg-yellow-500 text-white">{allTasks.is_aprove}</span>
+                                                                </td>
+                                                            </tr>
                                                         )
                                                     })
                                                 )
