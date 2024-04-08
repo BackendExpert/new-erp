@@ -3177,25 +3177,25 @@ app.get('/ViewCalPrice', (req, res) => {
     })
 })
 
-// AddKm
+// // AddKm
 
-app.post('/AddKm/:id', (req, res) => {
-    const ReseID = req.params.id
+// app.post('/AddKm/:id', (req, res) => {
+//     const ReseID = req.params.id
 
-    const sql = "UPDATE reservations SET milage = ? WHERE RID = ?"
-    const milage = req.body.KMadd
+//     const sql = "UPDATE reservations SET milage = ? WHERE RID = ?"
+//     const milage = req.body.KMadd
 
-    console.log(ReseID, milage)
+//     console.log(ReseID, milage)
 
-    // connection.query(sql, [milage, ReseID], (err, result) => {
-    //     if(err){
-    //         return res.json({Error: "ERROR on Server"})
-    //     }
-    //     else{
-    //         return res.json({Status: "Success"})
-    //     }
-    // })
-})
+//     // connection.query(sql, [milage, ReseID], (err, result) => {
+//     //     if(err){
+//     //         return res.json({Error: "ERROR on Server"})
+//     //     }
+//     //     else{
+//     //         return res.json({Status: "Success"})
+//     //     }
+//     // })
+// })
 
 // ---------------------------- Reservation END ---------------------
 
