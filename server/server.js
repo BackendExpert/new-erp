@@ -3220,6 +3220,7 @@ app.post('/AddDistance/:id', (req, res) => {
 // CalculateCost
 app.post('/CalculateCost/:id', (req, res) => {
     const ReseID = req.params.id
+
     const sql = "SELECT * FROM reservations WHERE RID = ?"
     connection.query(sql, [ReseID], (err, result) => {
         if(err){
@@ -3231,6 +3232,8 @@ app.post('/CalculateCost/:id', (req, res) => {
             const unitPrice = result[0].uprice
 
             const cost = milage * unitPrice
+
+            console.log(cost)
             const constsql = "UPDATE reservations SET cost = ? WHERE RID = ?"
             
             connection.query(constsql, [cost], (err, result) => {
