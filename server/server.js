@@ -3177,6 +3177,21 @@ app.get('/ViewCalPrice', (req, res) => {
     })
 })
 
+// AddKm
+
+app.post('/AddKm/:id', (req, res) => {
+    const ReseID = req.params.id
+
+    const sql = "UPDATE reservations SET milage ? WHERE RID = ?"
+    const milage = req.body.addKm
+
+    connection.query(sql, [milage, ReseID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on Server"})
+        }
+    })
+})
+
 // ---------------------------- Reservation END ---------------------
 
 //check the server is working
