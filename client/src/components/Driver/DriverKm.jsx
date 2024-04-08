@@ -5,6 +5,8 @@ import axios from "axios";
 
 const DriverKm = () => {
     const navigate = useNavigate()
+
+    const {id} = useParams()
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
@@ -27,6 +29,10 @@ const DriverKm = () => {
                         <label htmlFor="">Add Drive KM : </label><br />
                         <input type="number" className="rounded w-1/2 h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Drive KM"
                         onChange={e => SetaddDriveKm({...addDriveKm, addKm:e.target.value})} />
+                    </div>
+
+                    <div className="">
+                        <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Add KM</button>
                     </div>
                 </form>
             </div>
