@@ -1267,7 +1267,7 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
             const create_at = new Date();
             const update_at = new Date();
 
-            console.log(req.body)
+            // console.log(req.body)
 
             const values = [
                 req.body.eid,

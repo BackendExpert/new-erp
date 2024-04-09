@@ -64,7 +64,7 @@ const AddEmployee = () => {
         formdata.append('image', empData.image); 
         formdata.append('did', empData.dno); 
 
-        axios.post('http://localhost:8081/createEmp', {formdata, dno})
+        axios.post('http://localhost:8081/createEmp', formdata)
         .then(res => {
             if(res.data.Status === "Success"){
 
