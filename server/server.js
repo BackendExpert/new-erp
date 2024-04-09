@@ -2455,8 +2455,9 @@ app.post('/RejectLeave/:id', (req, res) => {
 app.get('/HODRecLeaves/:id', (req, res) => {
     const HodEmail = req.params.id
 
-    const sql = "SELECT * FROM leaves WHERE HoDEmail = ?"
-    connection.query(sql, [HodEmail], (err, result) => {
+    const sql = "SELECT * FROM leaves WHERE Status =? HoDEmail = ?"
+    const status = "Requested"
+    connection.query(sql, [status, HodEmail], (err, result) => {
         if(err){
             return res.json({Error: "Error on server"})
         }
