@@ -117,6 +117,7 @@ const AddEmployee = () => {
                                         })) 
                                     }
                                     </select>
+
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Initials</label>
