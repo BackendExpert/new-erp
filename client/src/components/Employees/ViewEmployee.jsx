@@ -129,7 +129,7 @@ const ViewEmployee = () => {
                                             <div className="my-4">
                                                 <div className="flex">
                                                     <p className="text-md font-semibold">Gender : </p>
-                                                    <p className="text-md pl-4">{emp.Gender}</p>  
+                                                    <p className="text-md pl-4">{emp.gender}</p>  
                                                 </div>
                                             </div>
                                             <div className="my-4">
