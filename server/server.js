@@ -1303,15 +1303,15 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
                        ]
 
                        console.log(values)
-                       // console.log(dNo)
-                       // connection.query(sql, [values], (err, result) => {
-                       //      if(err){
-                       //          return res.json({Error: "ERROR in Data Processing"});
-                       //      }
-                       //      else{
-                       //          return res.json({Status: "Success"})
-                       //      }
-                       //  });
+                       console.log(dNo)
+                       connection.query(sql, [values], (err, result) => {
+                            if(err){
+                                return res.json({Error: "ERROR in Data Processing"});
+                            }
+                            else{
+                                return res.json({Status: "Success"})
+                            }
+                        });
                 }
             })
         }
