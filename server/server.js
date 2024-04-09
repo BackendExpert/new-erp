@@ -2474,7 +2474,7 @@ app.get('/CountHodLeaves/:id', (req, res) => {
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const Status = "Requested"
 
-    connection.query(sql, [Status, CurrentEmail], (error, results) => {
+    connection.query(sql, [Status, HoDEmail], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
