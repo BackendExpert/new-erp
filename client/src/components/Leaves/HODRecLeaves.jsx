@@ -68,6 +68,17 @@ const HODRecLeaves = () => {
                                                             return (
                                                                 <tr key={index}>
                                                                     <td className='px-6 py-4 font-bold'>{headLeaves.LID}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{headLeaves.Name}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{headLeaves.Email}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{headLeaves.Type}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{headLeaves.JobCategory}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{headLeaves.StartDate}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{headLeaves.StartTime}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{headLeaves.EndDate}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{headLeaves.Duration}</td>
+                                                                    <td className='px-6 py-4 font-bold'>
+                                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{headLeaves.Status}</span>
+                                                                    </td>   
                                                                 </tr>
                                                             )
                                                         })
