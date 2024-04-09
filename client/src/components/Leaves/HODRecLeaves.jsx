@@ -127,7 +127,24 @@ const HODRecLeaves = () => {
                                                 }
                                                 else if(buttonValue === "Recommend"){
                                                     return (
-
+                                                        HeadRecoLeaves.map((ReceLeaves, index) => {
+                                                            return (
+                                                                <tr key={index}>
+                                                                    <td className='px-6 py-4 font-bold'>{ReceLeaves.LID}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{ReceLeaves.Name}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{ReceLeaves.Email}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{ReceLeaves.Type}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{ReceLeaves.JobCategory}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{ReceLeaves.StartDate}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{ReceLeaves.StartTime}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{ReceLeaves.EndDate}</td>
+                                                                    <td className='px-6 py-4 font-bold'>{ReceLeaves.Duration}</td>
+                                                                    <td className='px-6 py-4 font-bold'>
+                                                                        <span className="py-2 px-4 rounded bg-green-500 text-white">{ReceLeaves.Status}</span>
+                                                                    </td>
+                                                                </tr>
+                                                            )
+                                                        })
                                                     )
                                                 }
                                             })()
