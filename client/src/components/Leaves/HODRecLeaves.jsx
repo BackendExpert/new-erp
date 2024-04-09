@@ -156,7 +156,22 @@ const HODRecLeaves = () => {
                                                 }
                                                 else if(buttonValue === "Denied"){
                                                     return (
-
+                                                        headRejectLeave.map((rejectHod, index) => {
+                                                            <tr key={index}>
+                                                                <td className='px-6 py-4 font-bold'>{rejectHod.LID}</td>
+                                                                <td className='px-6 py-4 font-bold'>{rejectHod.Name}</td>
+                                                                <td className='px-6 py-4 font-bold'>{rejectHod.Email}</td>
+                                                                <td className='px-6 py-4 font-bold'>{rejectHod.Type}</td>
+                                                                <td className='px-6 py-4 font-bold'>{rejectHod.JobCategory}</td>
+                                                                <td className='px-6 py-4 font-bold'>{rejectHod.StartDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{rejectHod.StartTime}</td>
+                                                                <td className='px-6 py-4 font-bold'>{rejectHod.EndDate}</td>
+                                                                <td className='px-6 py-4 font-bold'>{rejectHod.Duration}</td>
+                                                                <td className='px-6 py-4 font-bold'>
+                                                                    <span className="py-2 px-4 rounded bg-red-500 text-white">{rejectHod.Status}</span>
+                                                                </td>
+                                                            </tr>
+                                                        })
                                                     )
                                                 }
                                             })()
