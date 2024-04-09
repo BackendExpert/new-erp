@@ -220,7 +220,7 @@ const SummaryDash = () => {
   ]
 
   const hodData = [
-    {name: "My Division", value: "Computer Science", style: "bg-green-500"},
+    {id: 1, name: "My Division", value: "Computer Science", style: "bg-green-500"},
     {name: "My Division", value: "Computer Science", style: "bg-red-500"},
     {name: "My Division", value: "Computer Science", style: "bg-yellow-500"},
     {name: "My Division", value: "Computer Science", style: "bg-purple-500"}
