@@ -51,7 +51,6 @@ const AddEmployee = () => {
         formdata.append('phone', empData.phone);
         formdata.append('email', empData.email);
         formdata.append('password', empData.password);
-        formdata.append('salary', empData.salary);
         formdata.append('category', empData.category);
         formdata.append('nic', empData.nic);
         formdata.append('dob', empData.dob);
@@ -159,12 +158,12 @@ const AddEmployee = () => {
                                     onChange={e => SetEmpData({...empData, password:e.target.value})}/>
                                     <p className="text-red-500">(String type, max length 120)</p>
                                 </div>
-                                <div className="">
+                                {/* <div className="">
                                     <label htmlFor="">Salary</label>
                                     <input type="text" required name="salary" className="pl-2 border border-blue-400 rounded w-full h-12" placeholder="Enter Salary" 
                                     onChange={e => SetEmpData({...empData, salary:e.target.value})}/>
                                     <p className="text-red-500">(desimal type, max length 8, eg: 150000.00)</p>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="my-4 lg:grid grid-cols-4 gap-2">
                                 <div className="">
