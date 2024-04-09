@@ -24,7 +24,7 @@ const HODRecLeaves = () => {
     }
 
     //Recommend 
-    const headleRec = (id) =>{
+    const headleRecHOD = (id) =>{
         axios.post('http://localhost:8081/RecLeave/' + id)
         .then(res => {
             if(res.data.Status === "Success"){
@@ -37,7 +37,7 @@ const HODRecLeaves = () => {
         })
     }
     //Denied
-    const headleRecN = (id) => {
+    const headleRecNHOD = (id) => {
         axios.post('http://localhost:8081/RecLeaveN/' + id)
         .then(res => {
             if(res.data.Status === "Success"){
@@ -108,8 +108,8 @@ const HODRecLeaves = () => {
                                                                     </td>  
                                                                     <td className='px-6 py-4 font-bold'>
                                                                         <div className="flex">
-                                                                            <button onClick={() => headleRec(headLeaves.LID)} className="ml-2 py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommend</button>
-                                                                            <button onClick={() => headleRecN(headLeaves.LID)} className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
+                                                                            <button onClick={() => headleRecHOD(headLeaves.LID)} className="ml-2 py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommend</button>
+                                                                            <button onClick={() => headleRecNHOD(headLeaves.LID)} className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
                                                                         </div>
                                                                     </td> 
                                                                 </tr>
