@@ -1309,7 +1309,21 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
                                 return res.json({Error: "ERROR in Data Processing"});
                             }
                             else{
-                                return res.json({Status: "Success"})
+                                var mailOptions = {
+                                    from: process.env.EMAIL_USER,
+                                    to: req.body.email,
+                                    subject: 'Your Approvel Email',
+                                    text: 'Now You can Register to the ERP System using this Email : ' + req.body.email, 
+                                };
+    
+                                transporter.sendMail(mailOptions, function(error, info){
+                                    if (error) {
+                                      console.log(error);
+                                    } else {
+                                      console.log('Email sent: ' + info.response);
+                                      return res.json({Status: "Success"})
+                                    }
+                                });                                
                             }
                         });
                 }
