@@ -216,8 +216,11 @@ const SummaryDash = () => {
     {id: 19, name:"Denied Reservation" , value: <CountUp end={DeniedRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
     {id: 20, name:"Approve Reservation" , value: <CountUp end={ApproveRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
     {id: 21, name:"My Tasks" , value: <CountUp end={DriverTasks}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
-    {id: 22, name:"Leave Requests" , value: <CountUp end={HODRecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },
-  
+    {id: 22, name:"Leave Requests" , value: <CountUp end={HODRecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
+  ]
+
+  const hodData = [
+    {id: 1, name: "My Division", value: "Computer Science", style: "bg-green-500"}
   ]
 
 
@@ -225,6 +228,21 @@ const SummaryDash = () => {
 
   return (
     <div>
+      <div className="lg:grid grid-cols-3 gap-4">
+      {
+          (() => {
+            if(RoleUser === "HOD"){
+              return (
+                hodData.map((hod) => {
+                  <div className="">
+                    
+                  </div>
+                })
+              )
+            }
+          })()
+        }
+      </div>
        <div className="lg:grid grid-cols-2 gap-4 my-3">
         <div className="lg:grid grid-cols-3 gap-5">
       {
