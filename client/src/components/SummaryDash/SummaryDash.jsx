@@ -220,7 +220,10 @@ const SummaryDash = () => {
   ]
 
   const hodData = [
-    {id: 1, name: "My Division", value: "Computer Science", style: "bg-green-500"}
+    {name: "My Division", value: "Computer Science", style: "bg-green-500"},
+    {name: "My Division", value: "Computer Science", style: "bg-red-500"},
+    {name: "My Division", value: "Computer Science", style: "bg-yellow-500"},
+    {name: "My Division", value: "Computer Science", style: "bg-purple-500"}
   ]
 
 
@@ -228,21 +231,27 @@ const SummaryDash = () => {
 
   return (
     <div>
-      <div className="lg:grid grid-cols-3 gap-4">
+      <div className="lg:grid grid-cols-3 gap-4 my-8">
       {
           (() => {
             if(RoleUser === "HOD"){
               return (
                 hodData.map((hod) => {
-                  <div className="">
-                    
-                  </div>
+                  return (
+                    <div className={`text-white py-8 px-6 rounded ${hod.style}`}>
+                      <h1 className="text-xl">
+                        {hod.name}
+                      </h1>
+                      <p className="">{hod.value}</p>
+                    </div>
+                  )
                 })
               )
             }
           })()
         }
       </div>
+
        <div className="lg:grid grid-cols-2 gap-4 my-3">
         <div className="lg:grid grid-cols-3 gap-5">
       {
