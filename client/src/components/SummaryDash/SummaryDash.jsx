@@ -227,11 +227,11 @@ const SummaryDash = () => {
     .catch(err => console.log(err))
   }, [])
 
-  const divName = GetHodData[1];
+
   
 
   const hodData = [
-    {id: 1, name: "My Division", value: "2", style: "bg-green-500"},
+    {id: 1, name: "My Division", value: GetHodData.title, style: "bg-green-500"},
     {name: "My Projects", value: "2", style: "bg-red-500"},
     {name: "My Division", value: "2", style: "bg-yellow-500"},
     {name: "My Division", value: "2", style: "bg-purple-500"}
@@ -239,7 +239,6 @@ const SummaryDash = () => {
 
   return (
     <div>
-      <p>{GetHodData.title} asdasd</p>
       <div className="lg:grid grid-cols-3 gap-4 my-8">
       {
           (() => {
@@ -252,14 +251,8 @@ const SummaryDash = () => {
                         <h1 className="text-xl">
                           {hod.name}
                         </h1>
-                        <p className="">
-                          {
-                            GetHodData.map((divi) => {
-                              return (
-                                divi.title
-                              )
-                            })
-                          }
+                        <p className="pl-8 pt-2">
+                          {hod.value}
                         </p>
                       </div>
                     )
