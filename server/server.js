@@ -2408,7 +2408,21 @@ app.post('/RecLeaveN/:id', (req, res) => {
             return res.json({Error: "ERROR on SERVER"})
         }
         else{
-            return res.json({Status: "Success"})
+            var mailOptions = {
+                from: process.env.EMAIL_USER,
+                to: result[0].Email,
+                subject: 'About Your Leave Request',
+                text: 'Your Leave Request has been Rejected by Head of the Department', 
+            };
+
+            transporter.sendMail(mailOptions, function(error, info){
+                if (error) {
+                  console.log(error);
+                } else {
+                  console.log('Email sent: ' + info.response);
+                  return res.json({Status: "Success"})
+                }
+            });  
         }
     })
 })
