@@ -1277,7 +1277,7 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
            
                        // console.log(req.body)
                        const dNo = req.body.dno
-                       const salary = parseInt(result[0].Basic_Salary) + parseInt(result[0].increment)
+                       const salary = parseInt(result[0].Basic_Salary) + parseInt(result[0].increment);
            
                        const values = [
                            req.body.eid,
