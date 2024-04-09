@@ -26,6 +26,13 @@ const HODRecLeaves = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const [headRejectLeave, SetheadRejectLeave] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/HodRejectLeves/' + EmailUser)
+        .then(res => SetheadRejectLeave(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     const [buttonValue, SetButtonValue] = useState()
     const HeadleButtonClick = (clickValue) => {
         SetButtonValue(clickValue)   
@@ -149,7 +156,7 @@ const HODRecLeaves = () => {
                                                 }
                                                 else if(buttonValue === "Denied"){
                                                     return (
-                                                        
+
                                                     )
                                                 }
                                             })()
