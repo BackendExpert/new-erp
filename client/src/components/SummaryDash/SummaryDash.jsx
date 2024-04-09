@@ -219,15 +219,20 @@ const SummaryDash = () => {
     {id: 22, name:"Leave Requests" , value: <CountUp end={HODRecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
   ]
 
+  // hod data
+  const [GetHodData, SetHodData] = useState([])
+  useEffect(() => {
+    axios.post('http://localhost:8081/HoDdivision/' + EmailUser)
+    .then(res => SetHodData(res.data))
+    .catch(err => console.log(err))
+  }, [])
+
   const hodData = [
     {id: 1, name: "My Division", value: "Computer Science", style: "bg-green-500"},
     {name: "My Projects", value: "2", style: "bg-red-500"},
     {name: "My Division", value: "2", style: "bg-yellow-500"},
     {name: "My Division", value: "2", style: "bg-purple-500"}
   ]
-
-
-
 
   return (
     <div>
