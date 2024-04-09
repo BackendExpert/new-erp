@@ -66,7 +66,7 @@ const HODRecLeaves = () => {
                                                     return (
                                                         HeadRecLeaves.map((headLeaves, index) => {
                                                             <tr key={index}>
-                                                                
+                                                                <td className='px-6 py-4 font-bold'>{headLeaves.LID}</td>
                                                             </tr>
                                                         })
                                                     )
