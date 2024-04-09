@@ -239,7 +239,7 @@ const SummaryDash = () => {
 
   return (
     <div>
-      <p>{divName} asdasd</p>
+      <p>{GetHodData.title} asdasd</p>
       <div className="lg:grid grid-cols-3 gap-4 my-8">
       {
           (() => {
