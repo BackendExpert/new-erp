@@ -1262,48 +1262,56 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
             return res.json({Error: "Employee Already Exists...!"});
         }
         else{
-            const addSalary = "SELECT * FROM "
+            const addSalary = "SELECT * FROM designation WHERE DName = ?"
+            connection.query(addSalary, [req.body.category], (err, result) => {
+                if(err) throw err
 
-            const sql = "INSERT INTO employee (eid, initial, surname, address, phone, email, salary, image, category, designation, nic, dob, emgcontact, type, civilstatus, gender, relig, dno, create_at, update_at) VALUES (?)";
-         //    const sql = "INSERT INTO employee VALUES (?)"
-            const create_at = new Date();
-            const update_at = new Date();
-
-            // console.log(req.body)
-            const dNo = req.body.dno
-            
-
-            const values = [
-                req.body.eid,
-                req.body.initial,
-                req.body.surname,
-                req.body.address,
-                req.body.phone,
-                req.body.email,
-                req.body.salary, 
-                req.file.filename,
-                req.body.category, 
-                req.body.designation,
-                req.body.nic,
-                req.body.dob,
-                req.body.emgcontact,
-                req.body.type,
-                req.body.civilstatus,
-                req.body.gender,
-                req.body.relig,
-                dNo,
-                create_at,
-                update_at
-            ]
-            // console.log(dNo)
-            // connection.query(sql, [values], (err, result) => {
-            //      if(err){
-            //          return res.json({Error: "ERROR in Data Processing"});
-            //      }
-            //      else{
-            //          return res.json({Status: "Success"})
-            //      }
-            //  });
+                if(result.length == 0){
+                    return res.json({Error: " Designation not in Database"})
+                }
+                else{
+                    const sql = "INSERT INTO employee (eid, initial, surname, address, phone, email, salary, image, category, designation, nic, dob, emgcontact, type, civilstatus, gender, relig, dno, create_at, update_at) VALUES (?)";
+                    //    const sql = "INSERT INTO employee VALUES (?)"
+                       const create_at = new Date();
+                       const update_at = new Date();
+           
+                       // console.log(req.body)
+                       const dNo = req.body.dno
+                       const salary = result[0].Basic_Salary + result[0].increment
+           
+                       const values = [
+                           req.body.eid,
+                           req.body.initial,
+                           req.body.surname,
+                           req.body.address,
+                           req.body.phone,
+                           req.body.email,
+                           salary, 
+                           req.file.filename,
+                           req.body.category, 
+                           req.body.designation,
+                           req.body.nic,
+                           req.body.dob,
+                           req.body.emgcontact,
+                           req.body.type,
+                           req.body.civilstatus,
+                           req.body.gender,
+                           req.body.relig,
+                           dNo,
+                           create_at,
+                           update_at
+                       ]
+                       // console.log(dNo)
+                       // connection.query(sql, [values], (err, result) => {
+                       //      if(err){
+                       //          return res.json({Error: "ERROR in Data Processing"});
+                       //      }
+                       //      else{
+                       //          return res.json({Status: "Success"})
+                       //      }
+                       //  });
+                }
+            })
         }
    })
 
