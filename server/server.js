@@ -1268,6 +1268,8 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
             const update_at = new Date();
 
             // console.log(req.body)
+            const dNo = req.body.dno
+            
 
             const values = [
                 req.body.eid,
@@ -1287,11 +1289,10 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
                 req.body.civilstatus,
                 req.body.gender,
                 req.body.relig,
-                req.body.dno,
                 create_at,
                 update_at
             ]
-            console.log(values)
+            console.log(dNo)
             // connection.query(sql, [values], (err, result) => {
             //      if(err){
             //          return res.json({Error: "ERROR in Data Processing"});
