@@ -2291,9 +2291,9 @@ app.post('/RequestLeave/:id', (req, res) => {
                             
                             var mailOptions = {
                                 from: process.env.EMAIL_USER,
-                                to: Email,
+                                to: req.body.HoDEmail,
                                 subject: 'Request a Leave',
-                                text: 'You Request a Leave in ERP at NIFS'
+                                text: 'There is a Leave Request From' + Email + 'To Recommend or Reject'
                             };
 
                             transporter.sendMail(mailOptions, function(error, info){
