@@ -10,6 +10,14 @@ const HODRecLeaves = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    // get leaves according to login HEAD
+    const [HeadRecLeaves, SetHeadRecLeaves] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/HODRecLeaves/' + EmailUser)
+        .then(res => SetHeadRecLeaves(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
