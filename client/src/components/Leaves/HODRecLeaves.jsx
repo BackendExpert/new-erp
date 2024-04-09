@@ -147,6 +147,11 @@ const HODRecLeaves = () => {
                                                         })
                                                     )
                                                 }
+                                                else if(buttonValue === "Denied"){
+                                                    return (
+                                                        
+                                                    )
+                                                }
                                             })()
                                         }
                                 </tbody>
