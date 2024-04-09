@@ -73,6 +73,7 @@ import ApproveReservation from "./components/Reservation/ApproveReservation"
 import ReservationCost from "./components/Reservation/ReservationCost"
 import DriverTasks from "./components/Driver/DriverTasks"
 import DriveDistance from "./components/Reservation/DriveDistance"
+import HODRecLeaves from "./components/Leaves/HODRecLeaves"
 
 
 export default function App() {
@@ -215,6 +216,7 @@ export default function App() {
         <Route path="/AddLeave" element={<PrivateRoute><AddLeave /></PrivateRoute>} />
         <Route path="/RecLeave" element={<PrivateRoute><RecLeave /></PrivateRoute>} />
         <Route path="/ApproveLeave" element={<PrivateRoute><ApproveLeave /></PrivateRoute>} />
+        <Route path="/HODRecLeaves" element={<PrivateRoute><HODRecLeaves /></PrivateRoute>} />
 
         {/* Reservation */}
         <Route path="/AddReservation" element={<PrivateRoute><AddReservation /></PrivateRoute>} />
