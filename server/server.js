@@ -3332,5 +3332,20 @@ app.post('/CalculateCost/:id', (req, res) => {
 
 // ---------------------------- Reservation END ---------------------
 
+// HoDdivision
+
+app.get('/HoDdivision/:id', (req, res) => {
+    const HodEmail = req.params.id
+    const sql = "SELECT * FROM division WHERE email = ?"
+    connection.query(sql, [HodEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
