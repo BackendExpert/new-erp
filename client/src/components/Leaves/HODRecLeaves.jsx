@@ -18,6 +18,14 @@ const HODRecLeaves = () => {
         .catch(err => console.log(err))
     }, [])
 
+
+    const [HeadRecoLeaves, SetHeadRecoLeaves] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/HODRecoLeaves/' + EmailUser)
+        .then(res => SetHeadRecoLeaves(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     const [buttonValue, SetButtonValue] = useState()
     const HeadleButtonClick = (clickValue) => {
         SetButtonValue(clickValue)   
@@ -119,7 +127,7 @@ const HODRecLeaves = () => {
                                                 }
                                                 else if(buttonValue === "Recommend"){
                                                     return (
-                                                        
+
                                                     )
                                                 }
                                             })()
