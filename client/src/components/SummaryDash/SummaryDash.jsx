@@ -227,8 +227,10 @@ const SummaryDash = () => {
     .catch(err => console.log(err))
   }, [])
 
+  const divName = GetHodData.title;
+
   const hodData = [
-    {id: 1, name: "My Division", value: "Computer Science", style: "bg-green-500"},
+    {id: 1, name: "My Division", value: {divName[]}, style: "bg-green-500"},
     {name: "My Projects", value: "2", style: "bg-red-500"},
     {name: "My Division", value: "2", style: "bg-yellow-500"},
     {name: "My Division", value: "2", style: "bg-purple-500"}
