@@ -1301,6 +1301,8 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
                            create_at,
                            update_at
                        ]
+
+                       console.log(values)
                        // console.log(dNo)
                        // connection.query(sql, [values], (err, result) => {
                        //      if(err){
