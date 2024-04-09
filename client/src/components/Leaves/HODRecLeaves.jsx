@@ -61,7 +61,17 @@ const HODRecLeaves = () => {
                                 </thead>
                                 <tbody>
                                         {
-
+                                            (() => {
+                                                if(buttonValue === "Requested"){
+                                                    return (
+                                                        HeadRecLeaves.map((headLeaves, index) => {
+                                                            <tr key={index}>
+                                                                
+                                                            </tr>
+                                                        })
+                                                    )
+                                                }
+                                            })()
                                         }
                                 </tbody>
                             </table>
