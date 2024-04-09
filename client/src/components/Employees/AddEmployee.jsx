@@ -62,7 +62,7 @@ const AddEmployee = () => {
         formdata.append('gender', empData.gender);
         formdata.append('relig', empData.relig);
         formdata.append('image', empData.image); 
-        formdata.append('image', empData.dno); 
+        formdata.append('did', empData.dno); 
 
         axios.post('http://localhost:8081/createEmp', formdata)
         .then(res => {
@@ -106,7 +106,7 @@ const AddEmployee = () => {
                                 </div>
                                 <div className="">
                                     <label htmlFor="">Division No</label>
-                                    <select className="w-full h-12 border border-blue-400 rounded pl-2" required
+                                    <select className="w-full h-12 border border-blue-400 rounded pl-2" required name="did"
                                     onChange={e => SetEmpData({...empData, dno:e.target.value})}>
                                         <option value="">Select Division</option>
                                     {
