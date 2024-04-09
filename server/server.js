@@ -1262,6 +1262,8 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
             return res.json({Error: "Employee Already Exists...!"});
         }
         else{
+            const addSalary = "SELECT * FROM "
+
             const sql = "INSERT INTO employee (eid, initial, surname, address, phone, email, salary, image, category, designation, nic, dob, emgcontact, type, civilstatus, gender, relig, dno, create_at, update_at) VALUES (?)";
          //    const sql = "INSERT INTO employee VALUES (?)"
             const create_at = new Date();
