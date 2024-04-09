@@ -2451,6 +2451,20 @@ app.post('/RejectLeave/:id', (req, res) => {
     })
 })
 
+// HODRecLeaves
+app.get('/HODRecLeaves/:id', (req, res) => {
+    const HodEmail = req.params.id
+
+    const sql = "SELECT * FROM leaves WHERE HoDEmail = ?"
+    connection.query(sql, [HodEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
 
 //--------------------- Leave End -------------------
 
