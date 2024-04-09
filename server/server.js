@@ -1285,7 +1285,7 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
                 req.body.civilstatus,
                 req.body.gender,
                 req.body.relig,
-                dno,
+                req.body.dno,
                 create_at,
                 update_at
             ]
