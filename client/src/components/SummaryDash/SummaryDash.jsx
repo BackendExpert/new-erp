@@ -37,6 +37,7 @@ const SummaryDash = () => {
   const [DeniedRese, SetDeniedRese] = useState(0);
   const [ApproveRese, SetApproveRese] = useState(0);
   const [DriverTasks, SetDriverTasks] = useState(0);
+  const [HODRecLeaves, SetHODLeaves] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -181,6 +182,12 @@ const SummaryDash = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
+      try {
+        const CountHodLeaves = await axios.get('http://localhost:8081/CountHodLeaves/' + EmailUser);
+        SetHODLeaves(CountHodLeaves.data.myTasks);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     };    
     
 
@@ -209,6 +216,7 @@ const SummaryDash = () => {
     {id: 19, name:"Denied Reservation" , value: <CountUp end={DeniedRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-red-500 hover:text-red-600" },
     {id: 20, name:"Approve Reservation" , value: <CountUp end={ApproveRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
     {id: 21, name:"My Tasks" , value: <CountUp end={DriverTasks}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
+    {id: 22, name:"Leave Requests" , value: <CountUp end={DriverTasks}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
   
   ]
 
