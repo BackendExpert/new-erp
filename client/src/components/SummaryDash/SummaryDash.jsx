@@ -221,9 +221,9 @@ const SummaryDash = () => {
 
   const hodData = [
     {id: 1, name: "My Division", value: "Computer Science", style: "bg-green-500"},
-    {name: "My Division", value: "Computer Science", style: "bg-red-500"},
-    {name: "My Division", value: "Computer Science", style: "bg-yellow-500"},
-    {name: "My Division", value: "Computer Science", style: "bg-purple-500"}
+    {name: "My Projects", value: "2", style: "bg-red-500"},
+    {name: "My Division", value: "2", style: "bg-yellow-500"},
+    {name: "My Division", value: "2", style: "bg-purple-500"}
   ]
 
 
@@ -237,14 +237,30 @@ const SummaryDash = () => {
             if(RoleUser === "HOD"){
               return (
                 hodData.map((hod) => {
-                  return (
-                    <div className={`text-white py-8 px-6 rounded ${hod.style}`}>
-                      <h1 className="text-xl">
-                        {hod.name}
-                      </h1>
-                      <p className="">{hod.value}</p>
-                    </div>
-                  )
+                  if(hod.id == 1){
+                    return (
+                      <div className={`text-white py-8 px-6 rounded ${hod.style}`}>
+                        <h1 className="text-xl">
+                          {hod.name}
+                        </h1>
+                        <p className="">{hod.value}</p>
+                      </div>
+                    )
+                  }
+                  else{
+                    return (
+                      <div className={`text-white py-8 px-6 rounded ${hod.style}`}>
+                        <div className="flex justify-between">
+                          <h1 className="text-xl">
+                            {hod.name}
+                          </h1>
+                          <p className="text-2xl font-semibold">
+                            {hod.value}
+                          </p>
+                        </div>
+                      </div>
+                    )
+                  }
                 })
               )
             }
