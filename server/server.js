@@ -2370,7 +2370,29 @@ app.post('/RecLeave/:id', (req, res) => {
             return res.json({Error: "Error on SERVER"})
         }
         else{
-            return res.json({Status: "Success"})
+            const emailsql = "SELECT * FROM leaves WHERE LID = ?"
+            connection.query(emailsql, [LeaveID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on server"})
+                }
+                else{
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: result[0].Email,
+                        subject: 'About Your Leave Request',
+                        text: 'Your Leave Request has been recommended by Head of the Department', 
+                    };
+
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                          console.log(error);
+                        } else {
+                          console.log('Email sent: ' + info.response);
+                          return res.json({Status: "Success"})
+                        }
+                    });  
+                }
+            })
         }
     })
 })
