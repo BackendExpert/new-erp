@@ -2560,6 +2560,22 @@ app.get('/HODRecoLeaves/:id', (req, res) => {
     })
 })
 
+// HodRejectLeves
+app.get('/HodRejectLeves/:id', (req, res) => {
+    const HodEmail = req.params.id
+
+    const sql = "SELECT * FROM leaves WHERE Status =? && HoDEmail = ?"
+    const status = "Denied"
+    connection.query(sql, [status, HodEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            return res.json(result)
+        }
+    }) 
+})
+
 //--------------------- Leave End -------------------
 
 //my stats
