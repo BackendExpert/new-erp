@@ -108,6 +108,8 @@ const AddEmployee = () => {
                                     <select className="w-full h-12 border border-blue-400 rounded pl-2" required name="did"
                                     onChange={e => SetEmpData({...empData, dno:e.target.value})}>
                                         <option value="">Select Division</option>
+                                        <option value="Testing">Testing</option>
+                                        
                                     {
                                         divisionData.map((divi => {
                                             return (
