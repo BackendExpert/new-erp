@@ -1823,17 +1823,7 @@ app.post('/AddDivision', (req, res) => {
             return res.json({Error: "Division is Already Exists at Given Division Name"});
         }
         else{
-            const hodsql = "SELECT * FROM users WHERE email = ?"
-            connection.query(hodsql, [req.body.hod], (err, result) => {
-                if(err) throw err
 
-                if(result.length == 0){
-                    return res.json({Error: "HOD not exists"})
-                }
-                else if(result[0].role === "HOD"){
-                    if(result[0].is_active === 0){
-                        return res.json({Error: "This HOD has been Deactivate by the administration or HOD is Suspeded User"})
-                    }
                     const sql = "INSERT INTO division(title, location, email, create_at, update_at) VALUES (?)";
                     const create_at = new Date();
                     const update_at = new Date();
@@ -1855,8 +1845,7 @@ app.post('/AddDivision', (req, res) => {
                             return res.json({Status: "Success"});
                         }
                     })
-                }
-            })
+
         }
     })
 
