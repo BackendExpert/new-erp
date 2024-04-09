@@ -1296,14 +1296,14 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
                 update_at
             ]
             // console.log(dNo)
-            connection.query(sql, [values], (err, result) => {
-                 if(err){
-                     return res.json({Error: "ERROR in Data Processing"});
-                 }
-                 else{
-                     return res.json({Status: "Success"})
-                 }
-             });
+            // connection.query(sql, [values], (err, result) => {
+            //      if(err){
+            //          return res.json({Error: "ERROR in Data Processing"});
+            //      }
+            //      else{
+            //          return res.json({Status: "Success"})
+            //      }
+            //  });
         }
    })
 
