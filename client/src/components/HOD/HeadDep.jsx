@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import  secureLocalStorage  from  "react-secure-storage";
 import { useNavigate } from "react-router-dom"
 import DashFooter from '../SummaryDash/dashFooter';
+import SummaryDash from '../SummaryDash/SummaryDash';
 
 const HeadDep = ({children}) => {
 
@@ -34,7 +35,8 @@ const HeadDep = ({children}) => {
               <HeadSide />
               <div className="w-full mx-2">
                 <div className="shadow-xl rounded border-l-4 border-gray-200 bg-white my-4 py-4 px-6 w-full mr-2">
-                    <h1 className="text-2xl font-semibold">Head of Department Dashboard</h1>                
+                    <h1 className="text-2xl font-semibold">Head of Department Dashboard</h1> 
+                    <SummaryDash />               
                 </div>  
                 <DashFooter />        
             </div>
