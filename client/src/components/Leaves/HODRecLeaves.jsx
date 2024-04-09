@@ -108,8 +108,8 @@ const HODRecLeaves = () => {
                                                                     </td>  
                                                                     <td className='px-6 py-4 font-bold'>
                                                                         <div className="flex">
-                                                                            <button onClick={() => headleRec(leave.LID)} className="ml-2 py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommend</button>
-                                                                            <button onClick={() => headleRecN(leave.LID)} className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
+                                                                            <button onClick={() => headleRec(headLeaves.LID)} className="ml-2 py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommend</button>
+                                                                            <button onClick={() => headleRecN(headLeaves.LID)} className="ml-2 py-2 px-4 rounded border border-red-500 text-red-500 cursor-pointer duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
                                                                         </div>
                                                                     </td> 
                                                                 </tr>
