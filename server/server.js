@@ -2455,7 +2455,7 @@ app.post('/RejectLeave/:id', (req, res) => {
 app.get('/HODRecLeaves/:id', (req, res) => {
     const HodEmail = req.params.id
 
-    const sql = "SELECT * FROM leaves WHERE Status =? HoDEmail = ?"
+    const sql = "SELECT * FROM leaves WHERE Status =? && HoDEmail = ?"
     const status = "Requested"
     connection.query(sql, [status, HodEmail], (err, result) => {
         if(err){
@@ -2472,7 +2472,7 @@ app.get('/HODRecLeaves/:id', (req, res) => {
 app.get('/HODRecoLeaves/:id', (req, res) => {
     const HodEmail = req.params.id
 
-    const sql = "SELECT * FROM leaves WHERE Status =? HoDEmail = ?"
+    const sql = "SELECT * FROM leaves WHERE Status =? && HoDEmail = ?"
     const status = "Recommend"
     connection.query(sql, [status, HodEmail], (err, result) => {
         if(err){
