@@ -3342,7 +3342,7 @@ app.get('/HoDdivision/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            return res.json({Status: "Success", Result: result})
+            return res.json(result)
         }
     })
 })

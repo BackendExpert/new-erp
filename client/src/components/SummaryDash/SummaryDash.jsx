@@ -222,15 +222,16 @@ const SummaryDash = () => {
   // hod data
   const [GetHodData, SetHodData] = useState([])
   useEffect(() => {
-    axios.post('http://localhost:8081/HoDdivision/' + EmailUser)
+    axios.get('http://localhost:8081/HoDdivision/' + EmailUser)
     .then(res => SetHodData(res.data))
     .catch(err => console.log(err))
   }, [])
 
-  const divName = GetHodData.title;
+  const divName = GetHodData[1];
+  
 
   const hodData = [
-    {id: 1, name: "My Division", value: {divName[]}, style: "bg-green-500"},
+    {id: 1, name: "My Division", value: "2", style: "bg-green-500"},
     {name: "My Projects", value: "2", style: "bg-red-500"},
     {name: "My Division", value: "2", style: "bg-yellow-500"},
     {name: "My Division", value: "2", style: "bg-purple-500"}
@@ -238,6 +239,7 @@ const SummaryDash = () => {
 
   return (
     <div>
+      <p>{divName} asdasd</p>
       <div className="lg:grid grid-cols-3 gap-4 my-8">
       {
           (() => {
@@ -250,7 +252,15 @@ const SummaryDash = () => {
                         <h1 className="text-xl">
                           {hod.name}
                         </h1>
-                        <p className="">{hod.value}</p>
+                        <p className="">
+                          {
+                            GetHodData.map((divi) => {
+                              return (
+                                divi.title
+                              )
+                            })
+                          }
+                        </p>
                       </div>
                     )
                   }
