@@ -3421,5 +3421,19 @@ app.get('/HoDdivision/:id', (req, res) => {
     })
 })
 
+// HodProject
+app.get('/HodProject/:id', (req, res) => {
+    const HodEmail = req.params.id
+    const sql = "SELECT title FROM project WHERE hod = ?"
+    connection.query(sql, [HodEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result[0])
+        }
+    })
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
