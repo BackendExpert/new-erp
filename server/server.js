@@ -2129,6 +2129,19 @@ app.post('/AddProject', (req, res) =>{
     })
 })
 
+// ProjectDivi
+app.get('/ProjectDivi', (req, res) => {
+    const sql = "SELECT * FROM division"
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+}) 
+
 //ViewProjects
 app.get('/ViewProjects', (req, res) => {
     const sql = "SELECT * FROM project";
