@@ -34,6 +34,13 @@ const AddProject = () => {
     })
   }
 
+  const [ProjectDiviv, SetProjectDivi] = useState()
+  useEffect(() => {
+    axios.get('http://localhost:8081/ProjectDivi')
+    .then(res => SetProjectDivi(res.data))
+    .catch(err => console.log(err))
+  }, [])
+
   if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
     return (
       <div className="bg-gray-200 py-4">
