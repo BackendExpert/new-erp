@@ -1680,7 +1680,7 @@ app.get('/VehicleCount', (req, res) => {
 
 app.post('/AddProgram', (req,res) => {
     const checksql = "SELECT * FROM program WHERE title = ?";
-
+    console.log(req.body)
     connection.query(checksql, [req.body.title], (err, result) => {
         if(err) throw err;
 
@@ -1706,7 +1706,7 @@ app.post('/AddProgram', (req,res) => {
                         if(result.length == 0){
                             return res.json({Error: "Scientist 1 not exists"})
                         }
-                        else if(result[0].designation === "Scientist"){
+                        else if(result[0].category === "Scientist"){
                             const sci2sql = "SELECT * FROM employee WHERE email = ?"
                             connection.query(sci2sql, [req.body.scient2], (err, result) => {
                                 if(err) throw err
@@ -1714,7 +1714,7 @@ app.post('/AddProgram', (req,res) => {
                                 if(result.length == 0){
                                     return res.json({Error: "Scientist 2 not exists"})
                                 }
-                                else if(result[0].designation === "Scientist"){
+                                else if(result[0].category === "Scientist"){
                                     if(req.body.scient1 === req.body.scient2){
                                         return res.json({Error: "Scientist 1 and Scientist 2 Same"})
                                     }
