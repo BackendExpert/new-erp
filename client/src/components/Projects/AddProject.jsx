@@ -64,8 +64,11 @@ const AddProject = () => {
                 </div>
                 <div className="my-2">
                   <label htmlFor="">Division No</label>
-                  <input type="text" className="rounded w-full h-12 border border-blue-500 pl-2 my-2" required placeholder="Enter Division No"
-                  onChange={e => SetProjectData({...ProjectData, divno:e.target.value})}/>
+                    <select className="w-full h-12 border border-blue-400 rounded pl-2" required
+                    onChange={e => SetProjectData({...ProjectData, divno:e.target.value})}>
+                        <option>Select Option</option>
+                    
+                    </select> 
                 </div>
               </div>
 
