@@ -231,6 +231,8 @@ const SummaryDash = () => {
   const [HodDProject, SetHodPrject] = useState([])
   useEffect(() => {
     axios.get('http://localhost:8081/HodProject')
+    .then(res => SetHodPrject(res.data))
+    .catch(err => console.log(err))
   }, [])
 
 
