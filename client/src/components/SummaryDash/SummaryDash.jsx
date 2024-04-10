@@ -230,7 +230,7 @@ const SummaryDash = () => {
   // hod division
   const [HodDProject, SetHodPrject] = useState([])
   useEffect(() => {
-    axios.get('http://localhost:8081/HodProject')
+    axios.get('http://localhost:8081/HodProject/' + EmailUser)
     .then(res => SetHodPrject(res.data))
     .catch(err => console.log(err))
   }, [])
