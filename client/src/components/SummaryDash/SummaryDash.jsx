@@ -255,7 +255,7 @@ const SummaryDash = () => {
             if(RoleUser === "HOD"){
               return (
                 hodData.map((hod) => {
-                  if(hod.id == 1){
+                  if(hod.id == 1 || hod.id == 2){
                     return (
                       <div className={`text-white py-8 px-6 rounded ${hod.style}`}>
                         <h1 className="text-xl">
