@@ -705,8 +705,8 @@ app.post('/ReactiveAccount/:id', (req, res) => {
 
 
 // Count Admins Roles
-app.get('/AdminCount', (req, res) => {
-    const sql = "SELECT COUNT(UserId) AS count FROM users WHERE role = 'Admin'";
+app.get('/UserRolesCount', (req, res) => {
+    const sql = "SELECT COUNT(Code) AS count FROM designation";
   
     connection.query(sql, (error, results) => {
       if (error) {
