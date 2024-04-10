@@ -243,8 +243,6 @@ const SummaryDash = () => {
   const hodData = [
     {id: 1, name: "My Division", value: GetHodData.title, style: "bg-green-500"},
     {id: 2, name: "My Project", value: HodDProject.title, style: "bg-red-500"},
-    {name: "My Division", value: "2", style: "bg-yellow-500"},
-    {name: "My Division", value: "2", style: "bg-purple-500"}
   ]
 
   return (
@@ -264,20 +262,6 @@ const SummaryDash = () => {
                         <p className="pl-8 pt-2">
                           {hod.value}
                         </p>
-                      </div>
-                    )
-                  }
-                  else{
-                    return (
-                      <div className={`text-white py-8 px-6 rounded ${hod.style}`}>
-                        <div className="flex justify-between">
-                          <h1 className="text-xl">
-                            {hod.name}
-                          </h1>
-                          <p className="text-2xl font-semibold">
-                            {hod.value}
-                          </p>
-                        </div>
                       </div>
                     )
                   }
