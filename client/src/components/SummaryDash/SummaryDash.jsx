@@ -227,6 +227,10 @@ const SummaryDash = () => {
     .catch(err => console.log(err))
   }, [])
 
+  // hod division
+  const [HodDivision, SetHodDivision] = useState([])
+  
+
 
   
 
