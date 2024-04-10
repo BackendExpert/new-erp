@@ -34,7 +34,7 @@ const AddProject = () => {
     })
   }
 
-  const [ProjectDiviv, SetProjectDivi] = useState()
+  const [ProjectDiviv, SetProjectDivi] = useState([])
   useEffect(() => {
     axios.get('http://localhost:8081/ProjectDivi')
     .then(res => SetProjectDivi(res.data))
@@ -64,7 +64,7 @@ const AddProject = () => {
                 </div>
                 <div className="my-2">
                   <label htmlFor="">Division No</label>
-                    <select className="w-full h-12 border border-blue-400 rounded pl-2" required
+                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
                     onChange={e => SetProjectData({...ProjectData, divno:e.target.value})}>
                         <option>Select Option</option>
                         {
