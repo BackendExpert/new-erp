@@ -228,8 +228,11 @@ const SummaryDash = () => {
   }, [])
 
   // hod division
-  const [HodDivision, SetHodDivision] = useState([])
-  
+  const [HodDProject, SetHodPrject] = useState([])
+  useEffect(() => {
+    axios.get('http://localhost:8081/HodProject')
+  }, [])
+
 
 
   
