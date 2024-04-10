@@ -706,7 +706,7 @@ app.post('/ReactiveAccount/:id', (req, res) => {
 
 // Count Admins Roles
 app.get('/UserRolesCount', (req, res) => {
-    const sql = "SELECT COUNT(Code) AS count FROM designation";
+    const sql = "SELECT COUNT(Code) AS userRole FROM designation";
   
     connection.query(sql, (error, results) => {
       if (error) {
@@ -715,7 +715,7 @@ app.get('/UserRolesCount', (req, res) => {
         return;
       }
   
-      res.json({ count: results[0].count }); // Send count in JSON format
+      res.json({ userRole: results[0].userRole }); // Send count in JSON format
     });
 });
 
