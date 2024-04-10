@@ -247,7 +247,7 @@ const SummaryDash = () => {
 
   return (
     <div>
-      <div className="lg:grid grid-cols-3 gap-4 my-8">
+      <div className="lg:grid grid-cols-2 gap-4 my-8">
       {
           (() => {
             if(RoleUser === "HOD"){
