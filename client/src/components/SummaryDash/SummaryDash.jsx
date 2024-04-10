@@ -16,7 +16,7 @@ const SummaryDash = () => {
   //get current login user's email
   const EmailUser = secureLocalStorage.getItem("logiafter");
 
-  const [count, setCount] = useState(0);
+  const [UserRole, setUserRoles] = useState(0);
   const [books, setBooks] = useState(0);
   const [employee, setEmp] = useState(0);
   const [designation, setDesignation] = useState(0);
@@ -42,8 +42,8 @@ const SummaryDash = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const adminCout = await axios.get('http://localhost:8081/AdminCount');
-        setCount(adminCout.data.count);
+        const UserRoles = await axios.get('http://localhost:8081/UserRolesCount');
+        setUserRoles(UserRoles.data.userRole);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
