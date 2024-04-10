@@ -1306,7 +1306,8 @@ app.post('/createEmp', upload.single('image'), async (req, res) =>
                        console.log(dNo)
                        connection.query(sql, [values], (err, result) => {
                             if(err){
-                                return res.json({Error: "ERROR in Data Processing"});
+                                // return res.json({Error: "ERROR in Data Processing"});
+                                console.log(err)
                             }
                             else{
                                 var mailOptions = {
