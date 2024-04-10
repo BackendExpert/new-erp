@@ -67,7 +67,13 @@ const AddProject = () => {
                     <select className="w-full h-12 border border-blue-400 rounded pl-2" required
                     onChange={e => SetProjectData({...ProjectData, divno:e.target.value})}>
                         <option>Select Option</option>
-                    
+                        {
+                          ProjectDiviv.map((divi) => {
+                            return (
+                              <option value={divi.did}>{divi.title}</option>
+                            )
+                          })
+                        }
                     </select> 
                 </div>
               </div>
