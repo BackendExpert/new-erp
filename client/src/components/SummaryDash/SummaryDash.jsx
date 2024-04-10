@@ -188,6 +188,7 @@ const SummaryDash = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
+
     };    
     
 
@@ -241,7 +242,7 @@ const SummaryDash = () => {
 
   const hodData = [
     {id: 1, name: "My Division", value: GetHodData.title, style: "bg-green-500"},
-    {name: "My Projects", value: "2", style: "bg-red-500"},
+    {id: 2, name: "My Project", value: HodDProject.title, style: "bg-red-500"},
     {name: "My Division", value: "2", style: "bg-yellow-500"},
     {name: "My Division", value: "2", style: "bg-purple-500"}
   ]
