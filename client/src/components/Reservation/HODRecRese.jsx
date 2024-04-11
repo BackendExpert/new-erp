@@ -152,7 +152,24 @@ const HODRecRese = () => {
                               }
                               else if(buttonValue === "Recommend"){
                                 return (
-
+                                  HODAccetRese.map((HodAccept, index) => {
+                                    return (
+                                      <tr key={index}>
+                                          <td className='px-6 py-4 font-bold'>{HodAccept.RID}</td>
+                                          <td className='px-6 py-4 font-bold'>{HodAccept.Name}</td>
+                                          <td className='px-6 py-4 font-bold'>{HodAccept.designation}</td>
+                                          <td className='px-6 py-4 font-bold'>{HodAccept.Email}</td>
+                                          <td className='px-6 py-4 font-bold'>{HodAccept.purpose}</td>
+                                          <td className='px-6 py-4 font-bold'>{HodAccept.time}</td>
+                                          <td className='px-6 py-4 font-bold'>{HodAccept.StartDate}</td>
+                                          <td className='px-6 py-4 font-bold'>{HodAccept.EndDate}</td>
+                                          <td className='px-6 py-4 font-bold'>{HodAccept.loc_route}</td>
+                                          <td className='px-6 py-4 font-bold'>
+                                            <span className="py-2 px-4 rounded bg-red-500 text-white">{HodAccept.Status}</span>
+                                          </td> 
+                                    </tr>
+                                    )
+                                  })
                                 )
                               }
                             })()
