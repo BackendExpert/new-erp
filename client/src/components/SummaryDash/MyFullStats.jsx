@@ -127,7 +127,7 @@ const MyFullStats = () => {
                         <div onClick={() => HeadleButtonClick('Reject Leaves')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
-                            My Approve Leaves 
+                            My Reject Leaves 
                             <p className="mx-4 text-xl font-bold"><CountUp end={approveLeave} /></p>
                           </div>                          
                         </div>
