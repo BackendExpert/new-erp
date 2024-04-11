@@ -2866,9 +2866,9 @@ app.post('/AddReservation/:id', (req, res) => {
                         else{
                             var mailOptions = {
                                 from: process.env.EMAIL_USER,
-                                to: userEmail,
-                                subject: 'Vehicle Reservation Charge',
-                                text: 'Your Vehicle Reservation Charge : '+ cost, 
+                                to: HoDEmail,
+                                subject: 'Notification: Reservation',
+                                text: 'The Reservation has been Requested from : ' + UserEmail, 
                             };
         
                             transporter.sendMail(mailOptions, function(error, info){
