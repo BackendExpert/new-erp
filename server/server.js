@@ -2560,7 +2560,20 @@ app.get('/CountHodRese/:id', (req, res) => {
 
 // CountHodScientist
 app.get('/CountHodScientist/:id', (req, res) => {
-    
+    const HoDEmail = req.params.id
+    const sql = "SELECT COUNT(UserID) AS HodReseSci FROM users WHERE Status =? && HoDEmail = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const Status = "Requested"
+
+    connection.query(sql, [Status, HoDEmail], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ HodReseSci: results[0].HodReseSci }); // Send count in JSON format
+    });
 })
 
 // HODRecoLeaves
