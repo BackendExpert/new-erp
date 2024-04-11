@@ -809,18 +809,8 @@ app.post('/AddSuperAdmin', (req, res) => {
                         return res.json({Error: "Error on Server"})
                     }
                     else{
-                        const updateEmp = "UPDATE employee SET category = ? WHERE email = ?"
-                        connection.query(updateEmp, [req.body.role, req.body.email], (err, result) => {
-                            if(err){
-                                return res.json({Error: "Error on Server"})
-                            }
-                            else{
-                                return res.json({Status: "Success"})
-                            }
-                        })
+                        return res.json({Status: "Success"})
                     }
-                })
-
     })      
 })
 
