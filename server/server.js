@@ -3453,7 +3453,7 @@ app.get('/HodProject/:id', (req, res) => {
 app.get('/HodRecRese/:id', (req, res) => {
     const HodEmail = req.params.id
     const sql = "SELECT * FROM reservations WHERE Status =? && HoDEmail = ?"
-    const status = ""
+    const status = "Requested"
     connection.query(sql, [HodEmail], (err, result) => {
         if(err){
             return res.json({Error: "ERROR on server"})
