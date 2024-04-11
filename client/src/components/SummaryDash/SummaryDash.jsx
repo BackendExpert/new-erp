@@ -243,7 +243,7 @@ const SummaryDash = () => {
     {id: 22, name:"Leave Requests" , value: <CountUp end={HODRecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
     {id: 23, name:"Reservation Requests" , value: <CountUp end={HODRecRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
     {id: 24, name:"Scientists" , value: <CountUp end={CountScientist}/>, icons: <Icons name="search" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
-    {id: 25, name:"Research Assistant" , value: <CountUp end={CountRA}/>, icons: <Icons name="school" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
+    {id: 25, name:"Research Assistants" , value: <CountUp end={CountRA}/>, icons: <Icons name="school" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
   ]
   
   // hod data
