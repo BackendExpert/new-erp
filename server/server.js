@@ -2561,6 +2561,17 @@ app.get('/CountHodRese/:id', (req, res) => {
 // CountHodScientist
 app.get('/CountHodScientist/:id', (req, res) => {
     const HoDEmail = req.params.id
+    const checkDivi = "SELECT * FROM division WHERE email = ?"
+
+    connection.query(checkDivi, [HoDEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            
+        }
+    })
+
     const sql = "SELECT COUNT(UserID) AS HodReseSci FROM employee WHERE category =? && HoDEmail = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const Status = "Requested"
