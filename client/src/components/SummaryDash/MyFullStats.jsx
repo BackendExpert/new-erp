@@ -97,21 +97,21 @@ const MyFullStats = () => {
             } catch (error) {
               console.error('Error fetching data:', error);
             }
-            //count for my Approve Leave
+            //count for my Reject Leave
             try {
               const CountMyRejectLeav = await axios.get('http://localhost:8081/CountMyRejLeave/' + EmailUser);
               SetapproveLeave(CountMyRejectLeav.data.MyRejLeave);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
-            //count for my Request Reservations
+            //count for my Approve Leave
             try {
               const CountMyApproveLeav = await axios.get('http://localhost:8081/CountAppLeave/' + EmailUser);
               SetapproveLeave(CountMyApproveLeav.data.MyAppLeave);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
-            //count for my Request Reservations
+            //count for my  Reservations
             try {
               const CountMyApproveLeav = await axios.get('http://localhost:8081/CountAppLeave/' + EmailUser);
               SetapproveLeave(CountMyApproveLeav.data.MyAppLeave);
