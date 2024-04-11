@@ -2561,7 +2561,7 @@ app.get('/CountHodRese/:id', (req, res) => {
 // CountHodScientist
 app.get('/CountHodScientist/:id', (req, res) => {
     const HoDEmail = req.params.id
-    const sql = "SELECT COUNT(UserID) AS HodReseSci FROM users WHERE Status =? && HoDEmail = ?";
+    const sql = "SELECT COUNT(UserID) AS HodReseSci FROM employee WHERE category =? && HoDEmail = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const Status = "Requested"
 
