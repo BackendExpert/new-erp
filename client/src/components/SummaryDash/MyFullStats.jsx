@@ -262,9 +262,9 @@ const MyFullStats = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                      (() => {
-                                        if(buttonValue === " ")
-                                      })()
+                                      ViewRese.map((ReseV, index) => {
+                                        if(buttonValue === )
+                                      })
                                     }
                                 </tbody>
                             </table>
