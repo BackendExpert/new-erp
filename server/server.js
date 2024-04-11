@@ -2990,9 +2990,9 @@ app.post('/ReservationRec/:id', (req, res) => {
                 else{
                     var mailOptions = {
                         from: process.env.EMAIL_USER,
-                        to: result[0].Email,
-                        subject: 'Notification: About Your Reservation',
-                        text: 'The Reservation has been Recommended By Head of the Dep', 
+                        to: result[0].DEmail,
+                        subject: 'Notification: Assign a Trip',
+                        text: 'You are assign as a Driver for Vehicle Number: ' + result[0].veh_reg_no, 
                     };
 
                     transporter.sendMail(mailOptions, function(error, info){
