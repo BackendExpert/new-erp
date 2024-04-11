@@ -30,6 +30,13 @@ const HODRecRese = () => {
       .catch(err => console.log(err))
     }, [])
 
+    const [HODAccetRese, SetHODAccetRese] = useState([])
+    useEffect(() => {
+      axios.get('http://localhost:8081/ReseHODAccept/'+ EmailUser)
+      .then(res => SetHODAccetRese(res.data))
+      .catch(err => console.log(err))
+    }, []) 
+
     const ReseHODRec = (id) => {
       axios.post('http://localhost:8081/HodReceRecommended/' + id)
       .then(res => {
@@ -141,6 +148,11 @@ const HODRecRese = () => {
                                       </tr>
                                     )
                                   })
+                                )
+                              }
+                              else if(buttonValue === "Recommend"){
+                                return (
+
                                 )
                               }
                             })()
