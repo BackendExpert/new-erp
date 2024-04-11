@@ -2540,6 +2540,25 @@ app.get('/CountHodLeaves/:id', (req, res) => {
     });
 })
 
+// CountHodRese
+app.get('/CountHodRese/:id', (req, res) => {
+    const HoDEmail = req.params.id
+    const sql = "SELECT COUNT(LID) AS HodRese FROM reservations WHERE Status =? && HoDEmail = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const Status = "Requested"
+
+    connection.query(sql, [Status, HoDEmail], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ HodRese: results[0].HodRese }); // Send count in JSON format
+    });
+})
+
+
 // HODRecoLeaves
 
 app.get('/HODRecoLeaves/:id', (req, res) => {
@@ -3648,10 +3667,6 @@ app.post('/HodRejectVehiRec/:id', (req, res) => {
     }) 
 })
 
-// CountHodRese
-app.get('/CountHodRese/:id', (req, res) => {
-    
-})
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
