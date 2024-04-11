@@ -2570,9 +2570,10 @@ app.get('/CountHodScientist/:id', (req, res) => {
         else{
             const sql = "SELECT COUNT(eid) AS HodReseSci FROM employee WHERE dno =? && category =? && HoDEmail = ?";
             // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-            const Status = "Requested"
-        
-            connection.query(sql, [Status, HoDEmail], (error, results) => {
+            const UserRole = "Scientist"
+            const dno = result[0].did
+                    
+            connection.query(sql, [dno, UserRole, HoDEmail], (error, results) => {
               if (error) {
                 console.error('Error fetching data:', error);
                 res.status(500).send({ message: 'Error fetching data' });
