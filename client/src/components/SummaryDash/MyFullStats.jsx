@@ -162,7 +162,7 @@ const MyFullStats = () => {
                     <div className="text-xl mt-6 my-2 font-semibold">
                       My Leaves 
                     </div>
-                    <div className="relative overflow-x-auto my-8">
+                        <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
                                     <tr className='text-blue-500'>
@@ -238,6 +238,24 @@ const MyFullStats = () => {
                       <div className="text-xl mt-6 my-2 font-semibold">
                         My Reservations 
                       </div> 
+                      <div className="relative overflow-x-auto my-8">
+                            <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
+                                    <tr className='text-blue-500'>
+                                        <th scope='col' className='px-6 py-3'>Leave ID</th>                      
+                                        <th scope='col' className='px-6 py-3'>Leave Type</th>
+                                        <th scope='col' className='px-6 py-3'>Starting Date</th>                                        
+                                        <th scope='col' className='px-6 py-3'>Starting Time</th>
+                                        <th scope='col' className='px-6 py-3'>End Date</th>
+                                        <th scope='col' className='px-6 py-3'>No. of Days</th>
+                                        <th scope='col' className='px-6 py-3'>Status</th>                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  
+                                </tbody>
+                            </table>
+                        </div>
                 </div>
             </div>
         )
