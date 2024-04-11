@@ -2596,7 +2596,7 @@ app.get('/CountHodRA/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            const sql = "SELECT COUNT(eid) AS HodReseSci FROM employee WHERE dno =? && category =? ";
+            const sql = "SELECT COUNT(eid) AS HodRA FROM employee WHERE dno =? && category =? ";
             // const sql = "SELECT COUNT(eid) AS emp FROM employee";
             const UserRole = "Scientist"
             const dno = result[0].did
@@ -2608,7 +2608,7 @@ app.get('/CountHodRA/:id', (req, res) => {
                 return;
               }
           
-              res.json({ HodReseSci: results[0].HodReseSci }); // Send count in JSON format
+              res.json({ HodRA: results[0].HodRA }); // Send count in JSON format
             });
         }
     })
