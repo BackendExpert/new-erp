@@ -3481,18 +3481,40 @@ app.get('/HodRecRese/:id', (req, res) => {
 
 // HodReceRecommended
 app.post('/HodReceRecommended/:id', (req, res) => {
-    const ReseID = res.params.id
+    const ReseID = req.params.id
     console.log(ReseID)
-    // const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"   
-    // const status = "HOD Recommended"
-    // connection.query(sql, [status, ReseID], (err, result) => {
-    //     if(err){
-    //         return res.json({Error: "Error on SERVER"})
-    //     }
-    //     else{
-    //         return res.json({Status: "Success"})
-    //     }
-    // }) 
+    const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"   
+    const status = "HOD Recommended"
+    connection.query(sql, [status, ReseID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on SERVER"})
+        }
+        else{
+            const userEmailsql = "SELECT * FROM reservations WHERE RID = ?"
+            connection.query(userEmailsql, [ReseID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on server"})
+                }
+                else{
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: result[0].Email,
+                        subject: 'Notification: About Your Reservation',
+                        text: 'The Reservation has been Recommended By Head of the Dep', 
+                    };
+
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
+                }
+            })
+        }
+    }) 
 })
 
 //check the server is working
