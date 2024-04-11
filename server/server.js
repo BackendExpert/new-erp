@@ -2711,6 +2711,21 @@ app.get('/UserViewLeaves/:id', (req, res) => {
     })
 })
 
+// UserReseView
+app.get('/UserReseView/:id', (req, res) => {
+    const UserEmail = req.params.id
+    const sql = "SELECT * FROM reservations WHERE Email = ?"
+    console.log(UserEmail)
+    connection.query(sql, [UserEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // CountReqLeaves
 app.get('/CountReqLeaves', (req, res) => {
     const sql = "SELECT COUNT(LID) AS ReqLeave FROM leaves WHERE Status = ?";
