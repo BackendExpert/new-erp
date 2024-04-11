@@ -293,6 +293,27 @@ const MyFullStats = () => {
                                             )
                                           }
                                         }
+                                        else if(buttonValue === "Requested Reservations"){
+                                          if(ReseV.Status === "Requested"){
+                                            return (
+                                              <tr key={index}>
+                                                <td className="px-6 py-4 font-bold">{ReseV.RID}</td>
+                                                <td className="px-6 py-4 font-bold">{ReseV.purpose}</td>
+                                                <td className="px-6 py-4 font-bold">{ReseV.division}</td>
+                                                <td className="px-6 py-4 font-bold">{ReseV.time}</td>
+                                                <td className="px-6 py-4 font-bold">{ReseV.StartDate}</td>
+                                                <td className="px-6 py-4 font-bold">{ReseV.EndDate}</td>
+                                                <td className="px-6 py-4 font-bold">{ReseV.loc_route}</td>
+                                                <td className="px-6 py-4 font-bold">{ReseV.veh_type}</td>
+                                                <td className="px-6 py-4 font-bold">{ReseV.fundingsource}</td>
+                                                <td className="px-6 py-4 font-bold">{ReseV.other_passengers}</td>
+                                                <td className='px-6 py-4 font-bold'>
+                                                  <span className="py-2 px-4 rounded bg-yellow-500 text-white">{ReseV.Status}</span>
+                                                </td>    
+                                              </tr>
+                                            )
+                                          }
+                                        }
                                       })
                                     }
                                 </tbody>
