@@ -121,6 +121,11 @@ const HODRecRese = () => {
                                 })
                                 )
                               }
+                              else if(buttonValue === "Denied"){
+                                return (
+                                  
+                                )
+                              }
                             })()
                           }
                         </tbody>
