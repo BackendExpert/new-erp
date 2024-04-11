@@ -3129,7 +3129,21 @@ app.post('/ApproveRese/:id', (req, res) => {
                             return res.json({Error: "ERROR on SERVERsss"})
                         }
                         else{
-                            return res.json({Status: "Success"})
+                            var mailOptions = {
+                                from: process.env.EMAIL_USER,
+                                to: UserEmail,
+                                subject: 'Notification: About Your Reservation',
+                                text: 'The Reservation has been Approved', 
+                            };
+        
+                            transporter.sendMail(mailOptions, function(error, info){
+                                if (error) {
+                                console.log(error);
+                                } else {
+                                console.log('Email sent: ' + info.response);
+                                return res.json({Status: "Success"})
+                                }
+                            });
                         }
                     })
                 }
