@@ -75,6 +75,18 @@ const HODRecRese = () => {
                                 return (
                                     <tr key={index}>
                                         <td className='px-6 py-4 font-bold'>{ReseHOD.RID}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.Name}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.designation}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.Email}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.purpose}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.time}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.StartDate}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.EndDate}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.loc_route}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.veh_type}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.fundingsource}</td>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.other_passengers}</td>
+
                                     </tr>
                                 )
                             })
