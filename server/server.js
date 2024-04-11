@@ -2982,7 +2982,30 @@ app.post('/ReservationRec/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            return res.json({Status: "Success"})
+            const DriveEmailSql = "SELECT * FROM reservations WHERE RID = ?"
+            connection.query(DriveEmailSql, [RecID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Errror on server"})
+                }
+                else{
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: result[0].Email,
+                        subject: 'Notification: About Your Reservation',
+                        text: 'The Reservation has been Recommended By Head of the Dep', 
+                    };
+
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
+                }
+            })
+
         }
     })
 
