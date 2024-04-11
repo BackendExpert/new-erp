@@ -2862,6 +2862,24 @@ app.get('/CountRequestRese/:id', (req, res) => {
       res.json({ MyReqRese: results[0].MyReqRese }); // Send count in JSON format
     });
 })
+// CountApproveRese
+
+app.get('/CountApproveRese/:id', (req, res) => {
+    const UserEmail = req.params.id;
+    const sql = "SELECT COUNT(RID) AS MyReqRese FROM reservations WHERE Status = ? && Email = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "Approve"
+
+    connection.query(sql, [status, UserEmail], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ MyReqRese: results[0].MyReqRese }); // Send count in JSON format
+    });
+})
 
 // ---------------------------- Reservation ---------------------
 
