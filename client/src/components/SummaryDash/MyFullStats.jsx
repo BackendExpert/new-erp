@@ -135,7 +135,7 @@ const MyFullStats = () => {
                         <div onClick={() => HeadleButtonClick('Approve')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
-                            My Approve Approve 
+                            My Approve Leaves 
                             <p className="mx-4 text-xl font-bold"><CountUp end={approveLeave} /></p>
                           </div>                          
                         </div>
@@ -219,23 +219,23 @@ const MyFullStats = () => {
                       My Leaves 
                     </div>
                     <div className="lg:flex pl-2 my-4 my-2">
-                        <div onClick={() => HeadleButtonClick('Requested')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Requested Reservations')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           <div className="flex">
-                            My Request  
+                            My Request Reservations
                             <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
                           </div>
                         </div>
-                        <div onClick={() => HeadleButtonClick('Reject')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Reject Reservations')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
-                            My Reject Leaves
+                            My Reject Reservations
                             <p className="mx-4 text-xl font-bold"><CountUp end={rejectLeave} /></p>
                           </div>
                         </div>
-                        <div onClick={() => HeadleButtonClick('Approve')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Approve Reservations')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
-                            My Approve Approve 
+                            My Approve Reservations 
                             <p className="mx-4 text-xl font-bold"><CountUp end={approveLeave} /></p>
                           </div>                          
                         </div>
