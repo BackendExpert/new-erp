@@ -3334,7 +3334,7 @@ app.post('/EndDuty/:id', (req, res) => {
         else{
             // Update Drives tbl
             const getDriver = "SELECT * FROM trips WHERE ID = ?"
-            connection.query(getDriver, [TripID], (err, DEmail) => {
+            connection.query(getDriver, [TripID], (err, result) => {
                 if(err){
                     return res.json({Error: "ERROR on Server"})
                 }
