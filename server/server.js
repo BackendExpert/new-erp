@@ -2586,6 +2586,34 @@ app.get('/CountHodScientist/:id', (req, res) => {
     })
 })
 
+// CountHodRA
+app.get('/CountHodRA/:id', (req, res) => {
+    const HoDEmail = req.params.id
+    const checkDivi = "SELECT * FROM division WHERE email = ?"
+
+    connection.query(checkDivi, [HoDEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            const sql = "SELECT COUNT(eid) AS HodReseSci FROM employee WHERE dno =? && category =? ";
+            // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+            const UserRole = "Scientist"
+            const dno = result[0].did
+                    
+            connection.query(sql, [dno, UserRole], (error, results) => {
+              if (error) {
+                console.error('Error fetching data:', error);
+                res.status(500).send({ message: 'Error fetching data' });
+                return;
+              }
+          
+              res.json({ HodReseSci: results[0].HodReseSci }); // Send count in JSON format
+            });
+        }
+    })
+})
+
 // HODRecoLeaves
 
 app.get('/HODRecoLeaves/:id', (req, res) => {
