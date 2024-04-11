@@ -39,7 +39,7 @@ const SummaryDash = () => {
   const [DriverTasks, SetDriverTasks] = useState(0);
   const [HODRecLeaves, SetHODLeaves] = useState(0);
   const [HODRecRese, SetHODRecRese] = useState(0);
-  const [CountScientist, SetCountScientist] = useEffect(0);
+  const [CountScientist, SetCountScientist] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -198,7 +198,7 @@ const SummaryDash = () => {
       }
       try {
         const CountHodScientist = await axios.get('http://localhost:8081/CountHodScientist/' + EmailUser);
-        SetHODRecRese(CountHodScientist.data.HodReseSci);
+        SetCountScientist(CountHodScientist.data.HodReseSci);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -235,8 +235,10 @@ const SummaryDash = () => {
     // HOD
     {id: 22, name:"Leave Requests" , value: <CountUp end={HODRecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
     {id: 23, name:"Reservation Requests" , value: <CountUp end={HODRecRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
+    {id: 24, name:"" , value: <CountUp end={CountScientist}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
+  
   ]
-
+  
   // hod data
   const [GetHodData, SetHodData] = useState([])
   useEffect(() => {
