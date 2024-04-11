@@ -811,6 +811,7 @@ app.post('/AddSuperAdmin', (req, res) => {
                     else{
                         return res.json({Status: "Success"})
                     }
+                })    
     })      
 })
 
