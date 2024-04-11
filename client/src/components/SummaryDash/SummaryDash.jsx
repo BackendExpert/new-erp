@@ -40,6 +40,7 @@ const SummaryDash = () => {
   const [HODRecLeaves, SetHODLeaves] = useState(0);
   const [HODRecRese, SetHODRecRese] = useState(0);
   const [CountScientist, SetCountScientist] = useState(0);
+  const [CountRA, SetCountRA] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
