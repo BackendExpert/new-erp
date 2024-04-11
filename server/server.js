@@ -793,14 +793,7 @@ app.post('/AddSuperAdmin', (req, res) => {
         var updateTime = new Date();
         const is_active = 1;
 
-        const checkuser = "SELECT * FROM employee WHERE email = ?"
-        connection.query(checkuser, [req.body.email], (err, result) => {
-            if(err) throw err
 
-            if(result.length == 0){
-                return res.json({Error: "No Email Found..."})
-            }
-            else{
                 const sql = "INSERT INTO users(username, email, role, password, create_at, update_at, is_active) VALUES (?)"
                 const values = [
                     req.body.username,
@@ -827,8 +820,7 @@ app.post('/AddSuperAdmin', (req, res) => {
                         })
                     }
                 })
-            }
-        })
+
     })      
 })
 
