@@ -123,7 +123,24 @@ const HODRecRese = () => {
                               }
                               else if(buttonValue === "Denied"){
                                 return (
-
+                                  HodRejectRese.map((rejectHOD, index) => {
+                                    return (
+                                      <tr key={index}>
+                                            <td className='px-6 py-4 font-bold'>{rejectHOD.RID}</td>
+                                            <td className='px-6 py-4 font-bold'>{rejectHOD.Name}</td>
+                                            <td className='px-6 py-4 font-bold'>{rejectHOD.designation}</td>
+                                            <td className='px-6 py-4 font-bold'>{rejectHOD.Email}</td>
+                                            <td className='px-6 py-4 font-bold'>{rejectHOD.purpose}</td>
+                                            <td className='px-6 py-4 font-bold'>{rejectHOD.time}</td>
+                                            <td className='px-6 py-4 font-bold'>{rejectHOD.StartDate}</td>
+                                            <td className='px-6 py-4 font-bold'>{rejectHOD.EndDate}</td>
+                                            <td className='px-6 py-4 font-bold'>{rejectHOD.loc_route}</td>
+                                            <td className='px-6 py-4 font-bold'>
+                                              <span className="py-2 px-4 rounded bg-red-500 text-white">{rejectHOD.Status}</span>
+                                            </td> 
+                                      </tr>
+                                    )
+                                  })
                                 )
                               }
                             })()
