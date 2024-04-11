@@ -3648,5 +3648,10 @@ app.post('/HodRejectVehiRec/:id', (req, res) => {
     }) 
 })
 
+// CountHodRese
+app.get('/CountHodRese/:id', (req, res) => {
+    
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
