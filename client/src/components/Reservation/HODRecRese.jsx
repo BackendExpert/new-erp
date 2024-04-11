@@ -30,7 +30,7 @@ const HODRecRese = () => {
         .catch(err => console.log(err))
     }, [])
 
-    const ReseHOD = (id) => {
+    const ReseHODRec = (id) => {
       axios.post('http://localhost:8081/HodReceRecommended/' + id)
       .then(res => {
         if(res.data.Status === "Success"){
@@ -99,7 +99,7 @@ const HODRecRese = () => {
                                             </td> 
                                             <td>
                                               <div className="flex">
-                                                <button  onClick={() => ReseHOD(ReseHOD.RID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button>
+                                                <button  onClick={() => ReseHODRec(ReseHOD.RID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button>
                                                 <button  onClick={() => HodReject(ReseHOD.RID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
                                               </div>
                                             </td>
