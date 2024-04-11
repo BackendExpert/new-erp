@@ -261,7 +261,11 @@ const MyFullStats = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    {
+                                      (() => {
+                                        if(buttonValue === " ")
+                                      })()
+                                    }
                                 </tbody>
                             </table>
                         </div>
