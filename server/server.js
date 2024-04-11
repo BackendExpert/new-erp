@@ -2568,7 +2568,7 @@ app.get('/CountHodScientist/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            const sql = "SELECT COUNT(UserID) AS HodReseSci FROM employee WHERE category =? && HoDEmail = ?";
+            const sql = "SELECT COUNT(eid) AS HodReseSci FROM employee WHERE dno =? && category =? && HoDEmail = ?";
             // const sql = "SELECT COUNT(eid) AS emp FROM employee";
             const Status = "Requested"
         
