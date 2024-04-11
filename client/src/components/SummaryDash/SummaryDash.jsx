@@ -191,7 +191,7 @@ const SummaryDash = () => {
       }
       try {
         const CountHodRese = await axios.get('http://localhost:8081/CountHodRese/' + EmailUser);
-        SetHODRecRese(CountHodLeaves.data.HodRese);
+        SetHODRecRese(CountHodRese.data.HodRese);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
