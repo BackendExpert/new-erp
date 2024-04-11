@@ -3449,5 +3449,19 @@ app.get('/HodProject/:id', (req, res) => {
     })
 })
 
+// HodRecRese
+app.get('/HodRecRese/:id', (req, res) => {
+    const HodEmail = req.params.id
+    const sql = "SELECT * FROM reservations WHERE HoDEmail = ?"
+    connection.query(sql, [HodEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
