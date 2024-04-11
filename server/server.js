@@ -2908,7 +2908,7 @@ app.get('/ReseReqCount', (req, res) => {
 
 app.get('/RequestRese', (req, res) => {
     const sql = "SELECT * FROM reservations WHERE Status = ?"
-    const status = "Requested"
+    const status = "HOD Recommended"
     connection.query(sql, [status], (err, result) => {
         if(err){
             return res.json({Error: "Error in server"})
