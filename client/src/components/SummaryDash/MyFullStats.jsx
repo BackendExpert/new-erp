@@ -236,8 +236,8 @@ const MyFullStats = () => {
                         </div>
 
                       <div className="text-xl mt-6 my-2 font-semibold">
-                      My Reservations 
-                    </div> 
+                        My Reservations 
+                      </div> 
                 </div>
             </div>
         )
