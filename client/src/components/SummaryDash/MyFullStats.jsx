@@ -96,6 +96,13 @@ const MyFullStats = () => {
             } catch (error) {
               console.error('Error fetching data:', error);
             }
+            //count for my Request Reservations
+            try {
+              const CountMyApproveLeav = await axios.get('http://localhost:8081/CountAppLeave/' + EmailUser);
+              SetapproveLeave(CountMyApproveLeav.data.MyAppLeave);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
 
           }
           fetchData();
@@ -117,7 +124,13 @@ const MyFullStats = () => {
                             <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
                           </div>
                         </div>
-
+                        <div onClick={() => HeadleButtonClick('Reject Leaves')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Approve Leaves 
+                            <p className="mx-4 text-xl font-bold"><CountUp end={approveLeave} /></p>
+                          </div>                          
+                        </div>
                         <div onClick={() => HeadleButtonClick('Approve Leaves')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
