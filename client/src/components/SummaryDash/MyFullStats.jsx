@@ -308,7 +308,7 @@ const MyFullStats = () => {
                                                 <td className="px-6 py-4 font-bold">{ReseV.fundingsource}</td>
                                                 <td className="px-6 py-4 font-bold">{ReseV.other_passengers}</td>
                                                 <td className='px-6 py-4 font-bold'>
-                                                  <span className="py-2 px-4 rounded bg-yellow-500 text-white">{ReseV.Status}</span>
+                                                  <span className="py-2 px-4 rounded bg-green-500 text-white">{ReseV.Status}</span>
                                                 </td>    
                                               </tr>
                                             )
