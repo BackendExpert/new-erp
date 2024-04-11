@@ -72,6 +72,14 @@ const MyFullStats = () => {
           .then(res => SetviewLeaves(res.data))
           .catch(err => console.log(err))
         }, [])
+
+        // fetch reseversion data according to login user
+        const [ViewRese, SetViewRese] = useState([])
+        useEffect(() => {
+          axios.post('http://localhost:8081/UserReseView/' + EmailUser)
+          .then(res => SetViewRese(res.data))
+          .catch(err => console.log(err))
+        }, [])
         
         //count Data
 
