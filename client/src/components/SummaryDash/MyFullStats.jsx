@@ -243,9 +243,6 @@ const MyFullStats = () => {
                                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
                                     <tr className='text-blue-500'>
                                       <th scope='col' className='px-6 py-3'>Reservation ID</th>
-                                      <th scope='col' className='px-6 py-3'>Name</th>
-                                      <th scope='col' className='px-6 py-3'>Designation</th>                            
-                                      <th scope='col' className='px-6 py-3'>Email</th>
                                       <th scope='col' className='px-6 py-3'>Purpose</th>
                                       <th scope='col' className='px-6 py-3'>Division No</th>                                        
                                       <th scope='col' className='px-6 py-3'>Starting Time</th>
@@ -254,7 +251,6 @@ const MyFullStats = () => {
                                       <th scope='col' className='px-6 py-3'>Route</th>
                                       <th scope='col' className='px-6 py-3'>Vehicle Type</th>
                                       <th scope='col' className='px-6 py-3'>Funding</th>
-                                      <th scope='col' className='px-6 py-3'>HOD</th>
                                       <th scope='col' className='px-6 py-3'>Passengers</th>
                                       <th scope='col' className='px-6 py-3'>Status</th>
                                       <th scope='col' className='px-6 py-3'>Action</th>                                        
