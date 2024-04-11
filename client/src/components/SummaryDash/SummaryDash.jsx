@@ -246,10 +246,6 @@ const SummaryDash = () => {
     .catch(err => console.log(err))
   }, [])
 
-
-
-  
-
   const hodData = [
     {id: 1, name: "My Division", value: GetHodData.title, style: "bg-green-500"},
     {id: 2, name: "My Project", value: HodDProject.title, style: "bg-red-500"},
