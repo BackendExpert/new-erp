@@ -22,7 +22,7 @@ const HODRecRese = () => {
       .then(res => SetHodRese(res.data))
       .catch(err => console.log(err))
     }, [])
-    
+
   return (
     <div className="bg-gray-200 py-4">
       <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
@@ -61,7 +61,19 @@ const HODRecRese = () => {
                     </thead>
                     <tbody>
                       {
-
+                        (() => {
+                          if(buttonValue === "Requested"){
+                            return (
+                              HodRece.map((hodRese, index) => {
+                                return (
+                                  <tr key={index}>
+                                    <td className='px-6 py-4 font-bold'>{hodRese.RID}</td>
+                                  </tr>
+                                )
+                              })
+                            )
+                          }
+                        })()
                       }
                     </tbody>
                   </table>
