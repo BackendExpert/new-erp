@@ -214,6 +214,33 @@ const MyFullStats = () => {
                                 </tbody>
                             </table>
                         </div>
+
+                        <div className="text-xl mt-6 my-2 font-semibold">
+                      My Leaves 
+                    </div>
+                    <div className="lg:flex pl-2 my-4 my-2">
+                        <div onClick={() => HeadleButtonClick('Requested')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          <div className="flex">
+                            My Request  
+                            <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
+                          </div>
+                        </div>
+                        <div onClick={() => HeadleButtonClick('Reject')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Reject Leaves
+                            <p className="mx-4 text-xl font-bold"><CountUp end={rejectLeave} /></p>
+                          </div>
+                        </div>
+                        <div onClick={() => HeadleButtonClick('Approve')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Approve Approve 
+                            <p className="mx-4 text-xl font-bold"><CountUp end={approveLeave} /></p>
+                          </div>                          
+                        </div>
+                                                                     
+                    </div>
                 </div>
             </div>
         )
