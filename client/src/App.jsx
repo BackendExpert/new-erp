@@ -74,6 +74,7 @@ import DriverTasks from "./components/Driver/DriverTasks"
 import DriveDistance from "./components/Reservation/DriveDistance"
 import HODRecLeaves from "./components/Leaves/HODRecLeaves"
 import HODRecRese from "./components/Reservation/HODRecRese"
+import AddSRN from "./components/SRN/AddSRN"
 
 
 export default function App() {
@@ -228,6 +229,8 @@ export default function App() {
         <Route path="/DriverTasks" element={<PrivateRoute><DriverTasks /></PrivateRoute>} />
         <Route path="/DriveDistance/:id" element={<PrivateRoute><DriveDistance /></PrivateRoute>} />
 
+        {/* AddSRN */}
+        <Route path="/AddSRN" element={<PrivateRoute><AddSRN /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
