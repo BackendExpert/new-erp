@@ -42,6 +42,19 @@ const HODRecRese = () => {
         }
       })
     }
+
+    const HodReject = (id) => {
+      axios.post('http://localhost:8081/HodRejectVehiRec/' + id)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("he Reservation Successful Rejected")
+          window.location.reload()
+        }
+        else{
+          alert(res.data.Error)
+        }
+      })
+    }
     
     if(RoleUser === "HOD"){
       return (
