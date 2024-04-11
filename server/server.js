@@ -3332,7 +3332,27 @@ app.post('/EndDuty/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            return res.json({Status: "Success"})
+            // Update Drives tbl
+            const getDriver = "SELECT * FROM trips WHERE ID = ?"
+            connection.query(getDriver, [TripID], (err, DEmail) => {
+                if(err){
+                    return res.json({Error: "ERROR on Server"})
+                }
+                else{
+                    // Update drivers tbl
+                    const UpdateDriver = "UPDATE drivers SET Status = ? WHERE DEmail = ?"
+                    const Status = "End Duty"
+                    const DriverEmail = result[0].DEmail
+                    connection.query(UpdateDriver, [Status, DriverEmail], (err, result) => {
+                        if(err){
+                            return res.json({Error: "ERROR in SERVER"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    })
+                }
+            })            
         }
     })
 })
