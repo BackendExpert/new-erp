@@ -2906,7 +2906,7 @@ app.get('/RequestRese', (req, res) => {
 
 app.get('/DriverData', (req, res) => {
     const sql = "SELECT * FROM drivers WHERE Status = ?"
-    const DriverStatus = "Off Duty"
+    const DriverStatus = "End Duty"
 
     connection.query(sql, [DriverStatus], (err, result) => {
         if(err){
