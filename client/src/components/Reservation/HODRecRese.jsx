@@ -34,7 +34,7 @@ const HODRecRese = () => {
       axios.post('http://localhost:8081/HodReceRecommended/' + id)
       .then(res => {
         if(res.data.Status === "Success"){
-          alert("The Reservation Successful Recommended")
+          alert("The Reservation Successfully Recommended")
           window.location.reload()
         }
         else{
@@ -47,7 +47,7 @@ const HODRecRese = () => {
       axios.post('http://localhost:8081/HodRejectVehiRec/' + id)
       .then(res => {
         if(res.data.Status === "Success"){
-          alert("he Reservation Successful Rejected")
+          alert("The Reservation Successfully Rejected")
           window.location.reload()
         }
         else{
