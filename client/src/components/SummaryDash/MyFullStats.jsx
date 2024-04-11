@@ -263,7 +263,13 @@ const MyFullStats = () => {
                                 <tbody>
                                     {
                                       ViewRese.map((ReseV, index) => {
-                                        if(buttonValue === )
+                                        if(buttonValue === "Requested Reservations"){
+                                          return (
+                                            <tr key={index}>
+                                              <td className="px-6 py-4 font-bold">{ReseV.RID}</td>
+                                            </tr>
+                                          )
+                                        }
                                       })
                                     }
                                 </tbody>
