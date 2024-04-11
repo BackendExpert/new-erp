@@ -124,8 +124,8 @@ const MyFullStats = () => {
             }
             //count for my Approve Reservations
             try {
-              const CountMyRequestRese = await axios.get('http://localhost:8081/CountRequestRese/' + EmailUser);
-              SetApproveMyRese(CountMyRequestRese.data.MyReqRese);
+              const CountMyApproveRese = await axios.get('http://localhost:8081/CountApproveRese/' + EmailUser);
+              SetApproveMyRese(CountMyApproveRese.data.MyApproveRese);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
