@@ -203,6 +203,12 @@ const SummaryDash = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
+      try {
+        const CountHodRA = await axios.get('http://localhost:8081/CountHodRA/' + EmailUser);
+        SetCountRA(CountHodRA.data.HodRA);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
 
     };    
     
