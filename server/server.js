@@ -3482,16 +3482,17 @@ app.get('/HodRecRese/:id', (req, res) => {
 // HodReceRecommended
 app.post('/HodReceRecommended/:id', (req, res) => {
     const ReseID = res.params.id
-    const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"   
-    const status = "HOD Recommended"
-    connection.query(sql, [status, ReseID], (err, result) => {
-        if(err){
-            return res.json({Error: "Error on SERVER"})
-        }
-        else{
-            return res.json({Status: "Success"})
-        }
-    }) 
+    console.log(ReseID)
+    // const sql = "UPDATE reservations SET Status = ? WHERE RID = ?"   
+    // const status = "HOD Recommended"
+    // connection.query(sql, [status, ReseID], (err, result) => {
+    //     if(err){
+    //         return res.json({Error: "Error on SERVER"})
+    //     }
+    //     else{
+    //         return res.json({Status: "Success"})
+    //     }
+    // }) 
 })
 
 //check the server is working
