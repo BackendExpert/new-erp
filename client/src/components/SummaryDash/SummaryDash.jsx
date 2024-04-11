@@ -227,6 +227,7 @@ const SummaryDash = () => {
     {id: 21, name:"My Tasks" , value: <CountUp end={DriverTasks}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },
     // HOD
     {id: 22, name:"Leave Requests" , value: <CountUp end={HODRecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
+    {id: 23, name:"Reservation Requests" , value: <CountUp end={HODRecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
   ]
 
   // hod data
@@ -287,7 +288,7 @@ const SummaryDash = () => {
         DataList.map((data, index) => {
             //for SuperAdmin
             if(RoleUser === "SuperAdmin"){
-              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18 && data.id !== 19 && data.id !== 20 && data.id !== 21 && data.id !== 22){
+              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18 && data.id !== 19 && data.id !== 20 && data.id !== 21 && data.id !== 22 && data.id !== 23){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 my-5 cursor-pointer rounded duration-500 ${data.style}`}>
                       <span className="text-3xl" >{data.icons}</span>
@@ -299,7 +300,7 @@ const SummaryDash = () => {
             }
             //for Admin
             if(RoleUser === "Admin"){
-              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18 && data.id !== 19 && data.id !== 20 && data.id !== 21 && data.id !== 22){
+              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18 && data.id !== 19 && data.id !== 20 && data.id !== 21 && data.id !== 22 && data.id !== 23){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
@@ -359,7 +360,7 @@ const SummaryDash = () => {
             }
             //  for HOD
             if(RoleUser === "HOD"){
-              if(data.id === 22){
+              if(data.id === 22 || data.id === 23){
                 return (
                   <div className="">
                       <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
