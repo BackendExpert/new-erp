@@ -3433,22 +3433,40 @@ app.post('/CalculateCost/:id', (req, res) => {
                 }
                 else{
                     // update vehicle milage
-                    const sqlMilage = "SELECT * FROM "
-                    var mailOptions = {
-                        from: process.env.EMAIL_USER,
-                        to: userEmail,
-                        subject: 'Vehicle Reservation Charge',
-                        text: 'Your Vehicle Reservation Charge : '+ cost, 
-                    };
-
-                    transporter.sendMail(mailOptions, function(error, info){
-                        if (error) {
-                          console.log(error);
-                        } else {
-                          console.log('Email sent: ' + info.response);
-                          return res.json({Status: "Success"})
+                    const sqlMilage = "SELECT * FROM vehicles WHERE regno = ?"
+                    connection.query(sqlMilage, [veh_reg_no], (err, result) => {
+                        if(err){
+                            return res.json({Error: "ERROR on Serve"})
                         }
-                    });
+                        else{
+                            // calculate new milage
+                            const newMilage = parseInt(result[0].milage) + parseInt(milage) 
+                            // update vehicle tbl
+                            const milgeVehicle = "UPDATE vehicles SET milage = ? WHERE regno = ?"
+                            connection.query(milgeVehicle, [newMilage, veh_reg_no], (err, result) => {
+                                if(err){
+                                    return res.json({Error: "Error on SERVER"})
+                                }
+                                else{
+                                    var mailOptions = {
+                                        from: process.env.EMAIL_USER,
+                                        to: userEmail,
+                                        subject: 'Vehicle Reservation Charge',
+                                        text: 'Your Vehicle Reservation Charge : '+ cost, 
+                                    };
+                
+                                    transporter.sendMail(mailOptions, function(error, info){
+                                        if (error) {
+                                          console.log(error);
+                                        } else {
+                                          console.log('Email sent: ' + info.response);
+                                          return res.json({Status: "Success"})
+                                        }
+                                    });
+                                }
+                            })
+                        }
+                    })
                 }
             })
         }
