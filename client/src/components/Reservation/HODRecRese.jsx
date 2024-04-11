@@ -30,6 +30,20 @@ const HODRecRese = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const ReseHOD = (id) => {
+      axios.post('http://localhost:8081/ReseHodRece/' + id)
+      .then(res => {
+        if(res.data.Status === "Success"){
+          alert("The Reservation Successful Recommended")
+          window.location.reload()
+        }
+        else{
+          alert(res.data.Error)
+        }
+      })
+    }
+    
+
   return (
     <div className="bg-gray-200 py-4">
       <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
@@ -59,9 +73,6 @@ const HODRecRese = () => {
                           <th scope='col' className='px-6 py-3'>Date</th>
                           <th scope='col' className='px-6 py-3'>Arrival Date</th>
                           <th scope='col' className='px-6 py-3'>Route</th>
-                          <th scope='col' className='px-6 py-3'>Vehicle Type</th>
-                          <th scope='col' className='px-6 py-3'>Funding</th>
-                          <th scope='col' className='px-6 py-3'>Passengers</th>
                           <th scope='col' className='px-6 py-3'>Status</th>
                           <th scope='col' className='px-6 py-3'>Action</th>                                        
                         </tr>
@@ -83,12 +94,15 @@ const HODRecRese = () => {
                                         <td className='px-6 py-4 font-bold'>{ReseHOD.StartDate}</td>
                                         <td className='px-6 py-4 font-bold'>{ReseHOD.EndDate}</td>
                                         <td className='px-6 py-4 font-bold'>{ReseHOD.loc_route}</td>
-                                        <td className='px-6 py-4 font-bold'>{ReseHOD.veh_type}</td>
-                                        <td className='px-6 py-4 font-bold'>{ReseHOD.fundingsource}</td>
-                                        <td className='px-6 py-4 font-bold'>{ReseHOD.other_passengers}</td>
                                         <td className='px-6 py-4 font-bold'>
                                           <span className="py-2 px-4 rounded bg-yellow-500 text-white">{ReseHOD.Status}</span>
                                         </td> 
+                                        <td>
+                                          <div className="flex">
+                                            <button  onClick={() => ReseHOD(ReseHOD.RID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button>
+                                            <button  onClick={() => HodReject(ReseHOD.RID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
+                                          </div>
+                                        </td>
                                     </tr>
                                 )
                             })
