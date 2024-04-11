@@ -39,6 +39,7 @@ const SummaryDash = () => {
   const [DriverTasks, SetDriverTasks] = useState(0);
   const [HODRecLeaves, SetHODLeaves] = useState(0);
   const [HODRecRese, SetHODRecRese] = useState(0);
+  const [CountScientist, SetCountScientist] = useEffect(0);
 
   useEffect(() => {
     const fetchData = async () => {
