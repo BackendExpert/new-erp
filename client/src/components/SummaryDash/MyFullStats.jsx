@@ -124,12 +124,14 @@ const MyFullStats = () => {
                             <p className="mx-4 text-xl font-bold"><CountUp end={approveLeave} /></p>
                           </div>                          
                         </div>
+
                         <div onClick={() => HeadleButtonClick('Requested Reservations')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           <div className="flex">
                             My Request Reservations
                             <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
                           </div>
                         </div>
+
                         <div onClick={() => HeadleButtonClick('Approve Reservations')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
