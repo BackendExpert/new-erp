@@ -119,20 +119,20 @@ const MyFullStats = () => {
                       My Leaves 
                     </div>
                     <div className="lg:flex pl-2 my-4 my-2">
-                        <div onClick={() => HeadleButtonClick('Requested')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Requested Leaves')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           <div className="flex">
                             My Request Leaves 
                             <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
                           </div>
                         </div>
-                        <div onClick={() => HeadleButtonClick('Reject')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Reject Leaves')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
                             My Reject Leaves
                             <p className="mx-4 text-xl font-bold"><CountUp end={rejectLeave} /></p>
                           </div>
                         </div>
-                        <div onClick={() => HeadleButtonClick('Approve')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Approve Leaves')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
                             My Approve Leaves 
@@ -141,7 +141,7 @@ const MyFullStats = () => {
                         </div>
                                                                      
                     </div>
-                    <p>My {buttonValue} Leave</p> 
+                    <p>My {buttonValue}</p> 
                     <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
@@ -158,7 +158,7 @@ const MyFullStats = () => {
                                 <tbody>
                                     {
                                       viewLeaves.map((leaveUser, index) => {
-                                        if(buttonValue === "Requested"){
+                                        if(buttonValue === "Requested Leaves"){
                                           if(leaveUser.Status === "Requested"){
                                             return(
                                               <tr key={index}>
@@ -175,7 +175,7 @@ const MyFullStats = () => {
                                             )
                                           }
                                         }
-                                        if(buttonValue === "Reject"){
+                                        if(buttonValue === "Reject Leaves"){
                                           if(leaveUser.Status === "Reject"){
                                             return(
                                               <tr key={index}>
@@ -192,7 +192,7 @@ const MyFullStats = () => {
                                             )
                                           }
                                         }
-                                        if(buttonValue === "Approve"){
+                                        if(buttonValue === "Approve Leaves"){
                                           if(leaveUser.Status === "Approve"){
                                             return(
                                               <tr key={index}>
@@ -215,8 +215,8 @@ const MyFullStats = () => {
                             </table>
                         </div>
 
-                        <div className="text-xl mt-6 my-2 font-semibold">
-                      My Leaves 
+                      <div className="text-xl mt-6 my-2 font-semibold">
+                      My Reservations 
                     </div>
                     <div className="lg:flex pl-2 my-4 my-2">
                         <div onClick={() => HeadleButtonClick('Requested Reservations')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
