@@ -3420,6 +3420,7 @@ app.post('/CalculateCost/:id', (req, res) => {
             const milage = result[0].milage
             const unitPrice = result[0].uprice
             const userEmail = result[0].Email
+            const veh_reg_no = result[0].veh_reg_no
 
             const cost = milage * unitPrice
 
@@ -3431,6 +3432,8 @@ app.post('/CalculateCost/:id', (req, res) => {
                     return res.json({Error: "Error on Server"})
                 }
                 else{
+                    // update vehicle milage
+                    const sqlMilage = "SELECT * FROM "
                     var mailOptions = {
                         from: process.env.EMAIL_USER,
                         to: userEmail,
