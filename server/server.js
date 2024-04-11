@@ -2866,7 +2866,7 @@ app.get('/CountRequestRese/:id', (req, res) => {
 
 app.get('/CountApproveRese/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(RID) AS MyReqRese FROM reservations WHERE Status = ? && Email = ?";
+    const sql = "SELECT COUNT(RID) AS MyApproveRese FROM reservations WHERE Status = ? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Approve"
 
@@ -2877,7 +2877,7 @@ app.get('/CountApproveRese/:id', (req, res) => {
         return;
       }
   
-      res.json({ MyReqRese: results[0].MyReqRese }); // Send count in JSON format
+      res.json({ MyApproveRese: results[0].MyApproveRese }); // Send count in JSON format
     });
 })
 
