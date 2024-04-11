@@ -16,11 +16,18 @@ const HODRecRese = () => {
         SetButtonValue(clickValue)   
     }
 
-    const [HodRece, SetHodRese] = useState()
+    const [HodRece, SetHodRese] = useState([])
     useEffect(() => {
       axios.get('http://localhost:8081/HodRecRese/' + EmailUser)
       .then(res => SetHodRese(res.data))
       .catch(err => console.log(err))
+    }, [])
+
+    const [HeadRecoLeaves, SetHeadRecoLeaves] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/HODRecoLeaves/' + EmailUser)
+        .then(res => SetHeadRecoLeaves(res.data))
+        .catch(err => console.log(err))
     }, [])
 
   return (
@@ -64,13 +71,13 @@ const HODRecRese = () => {
                         (() => {
                           if(buttonValue === "Requested"){
                             return (
-                              HodRece.map((hodRese, index) => {
+                              HodRece.map((ReseHOD, index) => {
                                 return (
-                                  <tr key={index}>
-                                    <td className='px-6 py-4 font-bold'>{hodRese.RID}</td>
-                                  </tr>
+                                    <tr key={index}>
+                                        <td className='px-6 py-4 font-bold'>{ReseHOD.RID}</td>
+                                    </tr>
                                 )
-                              })
+                            })
                             )
                           }
                         })()
