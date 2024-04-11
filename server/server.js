@@ -2598,7 +2598,7 @@ app.get('/CountHodRA/:id', (req, res) => {
         else{
             const sql = "SELECT COUNT(eid) AS HodRA FROM employee WHERE dno =? && category =? ";
             // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-            const UserRole = "Scientist"
+            const UserRole = "RA"
             const dno = result[0].did
                     
             connection.query(sql, [dno, UserRole], (error, results) => {
