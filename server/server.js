@@ -3479,6 +3479,22 @@ app.get('/HodRecRese/:id', (req, res) => {
     })
 })
 
+// ReseRejectHOD
+app.get('/ReseRejectHOD/:id', (req, res) => {
+    const HodEmail = req.params.id
+
+    const sql = "SELECT * FROM reservations WHERE Status =? && HoDEmail = ?"
+    const status = "HOD Reject"
+    connection.query(sql, [status, HodEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // HodReceRecommended
 app.post('/HodReceRecommended/:id', (req, res) => {
     const ReseID = req.params.id
