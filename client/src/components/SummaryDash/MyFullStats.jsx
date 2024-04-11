@@ -242,7 +242,6 @@ const MyFullStats = () => {
                       <div className="text-xl mt-6 my-2 font-semibold">
                         My Reservations 
                       </div> 
-                      <div className="">{buttonValue}</div>
                       <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
