@@ -23,11 +23,11 @@ const HODRecRese = () => {
       .catch(err => console.log(err))
     }, [])
 
-    const [HeadRecoLeaves, SetHeadRecoLeaves] = useState([])
+    const [HodRejectRese, SetHodRejectRese] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8081/HODRecoLeaves/' + EmailUser)
-        .then(res => SetHeadRecoLeaves(res.data))
-        .catch(err => console.log(err))
+      axios.get('http://localhost:8081/ReseRejectHOD/' + EmailUser)
+      .then(res => SetHodRejectRese(res.data))
+      .catch(err => console.log(err))
     }, [])
 
     const ReseHODRec = (id) => {
@@ -123,7 +123,7 @@ const HODRecRese = () => {
                               }
                               else if(buttonValue === "Denied"){
                                 return (
-                                  
+
                                 )
                               }
                             })()
