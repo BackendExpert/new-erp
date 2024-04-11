@@ -3324,7 +3324,7 @@ app.get('/GetOnDuty/:id', (req, res) => {
 // EndDuty
 app.post('/EndDuty/:id', (req, res) => {
     const TripID = req.params.id
-
+    // console.log(TripID)
     const sql = "UPDATE trips SET is_aprove = ? WHERE ID = ?"
     const status = "End Duty"
     connection.query(sql, [status, TripID], (err, result) => {
