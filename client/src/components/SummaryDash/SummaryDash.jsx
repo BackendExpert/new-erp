@@ -235,7 +235,7 @@ const SummaryDash = () => {
     // HOD
     {id: 22, name:"Leave Requests" , value: <CountUp end={HODRecLeaves}/>, icons: <Icons name="log-out" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
     {id: 23, name:"Reservation Requests" , value: <CountUp end={HODRecRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
-    {id: 24, name:"" , value: <CountUp end={CountScientist}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
+    {id: 24, name:"Scientists" , value: <CountUp end={CountScientist}/>, icons: <Icons name="search" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
   
   ]
   
@@ -351,7 +351,7 @@ const SummaryDash = () => {
             }
             // for Driver
             if(RoleUser === "Driver"){
-              if(data.id === 5 || data.id === 21){
+              if(data.id === 5 || data.id === 21 ){
                 return (
                   <div className="">
                       <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
@@ -365,7 +365,7 @@ const SummaryDash = () => {
             }
             //  for HOD
             if(RoleUser === "HOD"){
-              if(data.id === 22 || data.id === 23){
+              if(data.id === 22 || data.id === 23 || data.id === 24){
                 return (
                   <div className="">
                       <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
