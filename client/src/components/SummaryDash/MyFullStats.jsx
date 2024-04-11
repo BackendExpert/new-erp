@@ -87,6 +87,7 @@ const MyFullStats = () => {
         const [rejectLeave, SetRejectLeave] = useState(0);
         const [approveLeave, SetapproveLeave] = useState(0);  
         const [myRese, SetMyRese] = useState(0);
+        const [ApproveMyRese, SetApproveMyRese] = useState(0);
 
         useEffect(() => {
           const fetchData = async () => {
@@ -118,6 +119,13 @@ const MyFullStats = () => {
             try {
               const CountMyRequestRese = await axios.get('http://localhost:8081/CountRequestRese/' + EmailUser);
               SetMyRese(CountMyRequestRese.data.MyReqRese);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+            //count for my Approve Reservations
+            try {
+              const CountMyRequestRese = await axios.get('http://localhost:8081/CountRequestRese/' + EmailUser);
+              SetApproveMyRese(CountMyRequestRese.data.MyReqRese);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
@@ -168,7 +176,7 @@ const MyFullStats = () => {
                           
                           <div className="flex">
                             My Approve Reservations 
-                            <p className="mx-4 text-xl font-bold"><CountUp end={approveLeave} /></p>
+                            <p className="mx-4 text-xl font-bold"><CountUp end={ApproveMyRese} /></p>
                           </div>                          
                         </div>                                                                        
                     </div>
