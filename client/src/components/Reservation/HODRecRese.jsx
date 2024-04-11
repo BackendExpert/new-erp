@@ -31,7 +31,7 @@ const HODRecRese = () => {
     }, [])
 
     const ReseHOD = (id) => {
-      axios.post('http://localhost:8081/ReseHodRece/' + id)
+      axios.post('http://localhost:8081/HodReceRecommended/' + id)
       .then(res => {
         if(res.data.Status === "Success"){
           alert("The Reservation Successful Recommended")
