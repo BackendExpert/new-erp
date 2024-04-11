@@ -293,8 +293,8 @@ const MyFullStats = () => {
                                             )
                                           }
                                         }
-                                        else if(buttonValue === "Requested Reservations"){
-                                          if(ReseV.Status === "Requested"){
+                                        else if(buttonValue === "Approve Reservations"){
+                                          if(ReseV.Status === "Approve"){
                                             return (
                                               <tr key={index}>
                                                 <td className="px-6 py-4 font-bold">{ReseV.RID}</td>
