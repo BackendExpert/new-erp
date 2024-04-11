@@ -78,6 +78,7 @@ const MyFullStats = () => {
         const [requestLeave, SetrequestLeave] = useState(0);
         const [rejectLeave, SetRejectLeave] = useState(0);
         const [approveLeave, SetapproveLeave] = useState(0);  
+        const [myRese, SetMyRese] = useState(0);
 
         useEffect(() => {
           const fetchData = async () => {
