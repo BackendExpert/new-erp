@@ -88,13 +88,6 @@ const MyFullStats = () => {
             } catch (error) {
               console.error('Error fetching data:', error);
             }
-            //count for my Reject Leave
-            try {
-              const CountMyRejectLeav = await axios.get('http://localhost:8081/CountMyRejLeave/' + EmailUser);
-              SetRejectLeave(CountMyRejectLeav.data.MyRejLeave);
-            } catch (error) {
-              console.error('Error fetching data:', error);
-            }
             //count for my Approve Leave
             try {
               const CountMyApproveLeav = await axios.get('http://localhost:8081/CountAppLeave/' + EmailUser);
@@ -123,13 +116,7 @@ const MyFullStats = () => {
                             <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
                           </div>
                         </div>
-                        <div onClick={() => HeadleButtonClick('Reject Leaves')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
-                          
-                          <div className="flex">
-                            My Reject Leaves
-                            <p className="mx-4 text-xl font-bold"><CountUp end={rejectLeave} /></p>
-                          </div>
-                        </div>
+
                         <div onClick={() => HeadleButtonClick('Approve Leaves')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
@@ -141,13 +128,6 @@ const MyFullStats = () => {
                           <div className="flex">
                             My Request Reservations
                             <p className="mx-4 text-xl font-bold"><CountUp end={requestLeave} /></p>
-                          </div>
-                        </div>
-                        <div onClick={() => HeadleButtonClick('Reject Reservations')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
-                          
-                          <div className="flex">
-                            My Reject Reservations
-                            <p className="mx-4 text-xl font-bold"><CountUp end={rejectLeave} /></p>
                           </div>
                         </div>
                         <div onClick={() => HeadleButtonClick('Approve Reservations')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
