@@ -2543,7 +2543,7 @@ app.get('/CountHodLeaves/:id', (req, res) => {
 // CountHodRese
 app.get('/CountHodRese/:id', (req, res) => {
     const HoDEmail = req.params.id
-    const sql = "SELECT COUNT(LID) AS HodRese FROM reservations WHERE Status =? && HoDEmail = ?";
+    const sql = "SELECT COUNT(RID) AS HodRese FROM reservations WHERE Status =? && HoDEmail = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const Status = "Requested"
 
