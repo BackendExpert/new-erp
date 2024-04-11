@@ -99,8 +99,8 @@ const MyFullStats = () => {
             }
             //count for my Approve Leave
             try {
-              const CountMyApproveLeav = await axios.get('http://localhost:8081/CountAppLeave/' + EmailUser);
-              SetapproveLeave(CountMyApproveLeav.data.MyAppLeave);
+              const CountMyRejectLeav = await axios.get('http://localhost:8081/CountMyRejLeave/' + EmailUser);
+              SetapproveLeave(CountMyRejectLeav.data.MyAppLeave);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
