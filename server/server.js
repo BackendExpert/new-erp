@@ -2558,6 +2558,10 @@ app.get('/CountHodRese/:id', (req, res) => {
     });
 })
 
+// CountHodScientist
+app.get('/CountHodScientist/:id', (req, res) => {
+    
+})
 
 // HODRecoLeaves
 
