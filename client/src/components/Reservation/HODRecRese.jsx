@@ -16,7 +16,7 @@ const HODRecRese = () => {
         SetButtonValue(clickValue)   
     }
 
-    const [HodRece, SetHodRese] = useState([])
+    const [HodRece, SetHodRese] = useState()
     useEffect(() => {
       axios.get('http://localhost:8081/HodRecRese/' + EmailUser)
       .then(res => SetHodRese(res.data))
