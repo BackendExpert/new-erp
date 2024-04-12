@@ -53,7 +53,7 @@ const RecWork = () => {
         axios.post('http://localhost:8081/WorkReject/'+ id)
         .then(res => {
             if(res.data.Status === "Success"){
-                alert("The Work Request Has been Recommend")
+                alert("The Work Request Has been Rejected")
                 window.location.reload()
             }
             else{
