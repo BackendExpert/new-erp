@@ -4008,8 +4008,9 @@ app.get('/CountLABSrns', (req, res) => {
         res.status(500).send({ message: 'Error fetching data' });
         return;
       }
-  
+
       res.json({ SRNLab: results[0].SRNLab }); // Send count in JSON format
+      
     });
 })
 
