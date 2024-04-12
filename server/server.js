@@ -4345,6 +4345,25 @@ app.get('/CountMySRN/:id', (req, res) => {
     });
 })
 
+// CountRequeseSRN
+
+app.get('/CountRequeseSRN/:id', (req, res) => {
+    const UserEmail = req.params.id;
+    const sql = "SELECT COUNT(RID) AS MyApproveRese FROM srn WHERE Status = ? && Email = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "Reject"
+
+    connection.query(sql, [status, UserEmail], (error, results) => {
+    if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+    }
+
+    res.json({ MyApproveRese: results[0].MyApproveRese }); // Send count in JSON format
+    });
+})
+
 
 
 // --------------------------------------- SRN End -----------------------------
