@@ -135,14 +135,14 @@ const MyFullStats = () => {
             // for SRNs
             try {
               const CountMyRequestSRN = await axios.get('http://localhost:8081/CountRequeseSRN/' + EmailUser);
-              SetRequestSRN(CountMyRequestSRN.data.MyReqRese);
+              SetRequestSRN(CountMyRequestSRN.data.MyReqSRN);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
 
             try {
               const CountMyRejectSRN = await axios.get('http://localhost:8081/CountRejectSRN/' + EmailUser);
-              SetRejectSRN(CountMyRejectSRN.data.MyReqRese);
+              SetRejectSRN(CountMyRejectSRN.data.MyRejectSRN);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
