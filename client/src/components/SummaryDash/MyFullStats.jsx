@@ -140,6 +140,13 @@ const MyFullStats = () => {
               console.error('Error fetching data:', error);
             }
 
+            try {
+              const CountMyRejectSRN = await axios.get('http://localhost:8081/CountRejectSRN/' + EmailUser);
+              SetRejectSRN(CountMyRejectSRN.data.MyReqRese);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+
             
 
           }
