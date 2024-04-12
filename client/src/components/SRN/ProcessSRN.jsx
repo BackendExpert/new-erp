@@ -67,7 +67,7 @@ const ProcessSRN = () => {
                             {
                                 ReceSrn.map((labSrn, index) => {
                                     if(buttonValue === "Recommend"){
-                                        if(labSrn.Status === "Recommend" || labSrn.Status === "LabApprove"){
+                                        if(labSrn.Status === "Recommend" || labSrn.Status === "LabApprove" || labSrn.Status === "SetSRNNo"){
                                             return(
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.SID}</td>
@@ -93,6 +93,11 @@ const ProcessSRN = () => {
                                                                 else if(labSrn.Status === "LabApprove"){
                                                                     return (
                                                                         <span className="py-2 px-4 rounded bg-green-500 text-white">{labSrn.Status}</span>
+                                                                    )
+                                                                }
+                                                                else if(labSrn.Status === "SetSRNNo"){
+                                                                    return (
+                                                                        <span className="py-2 px-4 rounded bg-purple-500 text-white">{labSrn.Status}</span>
                                                                     )
                                                                 }
                                                             })()
