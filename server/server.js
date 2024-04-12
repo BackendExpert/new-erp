@@ -4326,6 +4326,27 @@ app.post('/SetCurrentStatusSRN/:id', (req, res) => {
     })
 })
 
+// CountMySRN
+
+app.get('/CountMySRN/:id', (req, res) => {
+    const CurrentEmail = req.params.id
+    // console.log(CurrentEmail)
+    const sql = "SELECT COUNT(SID) AS myRese FROM srn WHERE Email = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    
+    connection.query(sql, [CurrentEmail], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ myRese: results[0].myRese }); // Send count in JSON format
+    });
+})
+
+
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
