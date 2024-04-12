@@ -4086,8 +4086,9 @@ app.post('/SRNNoDate/:id', (req, res) => {
         if(err) throw err
 
         if(result.length == 0){
-            const sql = "UPDATE srn SET ReqNo = ?, Cdate = ? WHERE SID = ?"
-            connection.query(sql, [req.body.SRNNum, req.body.CData, SRNID], (err, result) => {
+            const sql = "UPDATE srn SET ReqNo = ?, Cdate = ?, Status = ? WHERE SID = ?"
+            const status = "LabApprove"
+            connection.query(sql, [req.body.SRNNum, req.body.CData, status, SRNID], (err, result) => {
                 if(err){
                     return res.json({Error: "Error on Server"})
                 }
