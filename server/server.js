@@ -4032,7 +4032,18 @@ app.get('/ReseSRNs', (req, res) => {
 
 app.post('/SRNNoDate/:id', (req, res) => {
     const SRNID = req.params.id
-    console.log(SRNID)
+    // console.log(SRNID, req.body)
+    const checkSql = "SELECT * FROM srn ReqNo = ?"
+    connection.query(checkSql, [SRNID], (err, result) => {
+        if(err) throw err
+
+        if(result.length == 0){
+            
+        }
+        else{
+            return res.json({Error: "Entered SRN Request Numver Already exists"})
+        }
+    })
 })
 
 // --------------------------------------- SRN End -----------------------------
