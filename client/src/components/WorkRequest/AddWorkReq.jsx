@@ -89,6 +89,11 @@ const AddWorkReq = () => {
 
       const SRNHOD = SRNHodEMail.email
 
+    //   send data
+    const [workReq, SetWorkreq] = useState({
+        
+    })
+
       if(RoleUser !== null){
         return (
             <div className="bg-gray-200 py-4">
@@ -174,6 +179,9 @@ const AddWorkReq = () => {
                                     <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Responsible Officer's Email"
                                     onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
                                 </div>
+                            </div>
+                            <div className="">
+                                <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Work</button>
                             </div>
                         </form>
                     </div>
