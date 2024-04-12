@@ -71,6 +71,14 @@ const AddSRN = () => {
         .catch(err => console.log(err))
       }, [])
 
+    // get my division
+      const [MyDivision, SetMyDivision] = useState([])
+      useEffect(() => {
+        axios.get('http://localhost:8081/MyDivisionSRN/' + EmailUser)
+        .then(res => SetMyDivision(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
     if(RoleUser !== null){
         return (
             <div className="bg-gray-200 py-4">
@@ -110,9 +118,9 @@ const AddSRN = () => {
                                         onChange={e => SetAddRese({...AddRese, HoDEmail:e.target.value})}>
                                             <option>Select Option</option>
                                             {
-                                                ProjectData.map((MyDivision) => {
+                                                ProjectData.map((MyProject) => {
                                                     return (
-                                                        <option value={MyDivision.title}>{MyDivision.title}</option>
+                                                        <option value={MyProject.title}>{MyProject.title}</option>
                                                     )
                                                 })
                                             }
