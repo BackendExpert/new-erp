@@ -137,7 +137,7 @@ const ProcessSRN = () => {
                                         }
                                     }
                                     else if(buttonValue === "LabApprove"){
-                                        if(labSrn.Status === "LabApprove" || labSrn.Status === "Approve"){
+                                        if(labSrn.Status === "LabApprove" || labSrn.Status === "Approve" || labSrn.Status === "In Progress" || labSrn.Status === "OnHold" || labSrn.Status === "Completed" || labSrn.Status === "Cancelled"){
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.SID}</td>
@@ -159,12 +159,17 @@ const ProcessSRN = () => {
                                                     <td className='px-6 py-4 font-bold'>
                                                        {
                                                         (() => {
-                                                            if(labSrn.Status === "Approve"){
+                                                            if(labSrn.Status === "Approve" || labSrn.Status === "In Progress" || labSrn.Status === "OnHold" ){
                                                                 return(
                                                                     <Link to={'/SetStatus/' + labSrn.SID}>
                                                                         <button className="ml-2 border border-blue-500 rounded py-2 px-4 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Set Status</button> 
                                                                     </Link>
                                                                 )   
+                                                            }
+                                                            if(labSrn.Status === "Completed" || labSrn.Status === "Cancelled" ){
+                                                                return (
+                                                                    <p className="text-red-500">END</p>
+                                                                )
                                                             }
                                                             else{
                                                                 return (

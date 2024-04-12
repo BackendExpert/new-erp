@@ -4315,8 +4315,8 @@ app.post('/SetCurrentStatusSRN/:id', (req, res) => {
     const srnID = req.params.id
     console.log(srnID, req.body)
 
-    const sql = "UPDATE srn SET Status = ?"
-    connection.query(sql, [srnID], (err, result) => {
+    const sql = "UPDATE srn SET Status = ? WHERE SID = ?"
+    connection.query(sql, [req.body.Status, srnID], (err, result) => {
         if(err){
             return res.json({Error: "Error on server"})
         }
