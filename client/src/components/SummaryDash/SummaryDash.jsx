@@ -43,6 +43,7 @@ const SummaryDash = () => {
   const [CountRA, SetCountRA] = useState(0);
   const [CountHODSRN, SetCountHODSRN] = useState(0);
   const [ReceSRNsLB, SetReceSRNsLB] = useState(0);
+  const [hodWork, SethodWork] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
