@@ -16,6 +16,19 @@ const AssignSRNNo = () => {
         CData: ''
     })
 
+    const headleSubmit = (e) =>{
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/SRNNoDate', SRNnumber)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The SRN Number and Data added Successfull")
+                navigate('/ProcessSRN')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
 
     if(RoleUser === "Labmanager"){
         return (
@@ -29,7 +42,7 @@ const AssignSRNNo = () => {
                         </Link>
                     </div>
                     <div className="my-4">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="my-2">
                                     <label htmlFor="">SRN Number : </label>
