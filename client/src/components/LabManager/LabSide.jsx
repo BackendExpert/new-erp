@@ -7,7 +7,7 @@ const LabSide = () => {
     const [openSide, SetSideOpen] = useState();
 
     const sidemenu = [
-        {name: "Process SRN Reqs",  link: "#", icon: <Icons name="people" size="large"></Icons>},
+        {name: "Process SRN Reqs",  link: "/ProcessSRN", icon: <Icons name="people" size="large"></Icons>},
         {name: "Specifications",  link: "#", icon: <Icons name="business" size="large"></Icons>},
         {name: "TECs",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "Purchase Orders",  link: "#", icon: <Icons name="pricetag" size="large"></Icons>}
