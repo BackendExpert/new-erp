@@ -4034,11 +4034,19 @@ app.post('/SRNNoDate/:id', (req, res) => {
     const SRNID = req.params.id
     // console.log(SRNID, req.body)
     const checkSql = "SELECT * FROM srn ReqNo = ?"
-    connection.query(checkSql, [SRNID], (err, result) => {
+    connection.query(checkSql, [req.body.SRNNum], (err, result) => {
         if(err) throw err
 
         if(result.length == 0){
-            const sql = "UPDATE srn SET ReqNo = ?, "
+            const sql = "UPDATE srn SET ReqNo = ?, Cdate = ? WHERE SID = ?"
+            connection.query(sql, [req.body.SRNNum, req.body.CData, SRNID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            }) 
         }
         else{
             return res.json({Error: "Entered SRN Request Numver Already exists"})
