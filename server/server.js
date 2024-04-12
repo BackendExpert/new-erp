@@ -2930,6 +2930,8 @@ app.get('/EmpName/:id', (req, res) => {
     })
 })
 
+
+
 // AddReservation
 app.post('/AddReservation/:id', (req, res) => {
     const UserEmail = req.params.id
@@ -3781,6 +3783,15 @@ app.post('/HodRejectVehiRec/:id', (req, res) => {
     }) 
 })
 
+// --------------------------------------- SRN Start -----------------------------
+// GetProjectData
 
+app.get('/GetProjectData/:id', (req, res) => {
+    const UserEmail = req.params.id
+    const sql = "SELECT * FROM "
+})
+
+
+// --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
