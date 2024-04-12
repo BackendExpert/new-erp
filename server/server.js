@@ -3958,6 +3958,24 @@ app.get('/HodRecSRN/:id', (req, res) => {
     })
 })
 
+// HodRecoSRN
+
+app.post('/HodRecoSRN/:id', (req, res) => {
+    const SRNID = req.params.id
+
+    const sql = "UPDATE srn SET Status = ? WHERE SID = ?"
+    const status = "Recommend"
+
+    connection.query(sql, [status, SRNID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
