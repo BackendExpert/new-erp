@@ -4309,6 +4309,23 @@ app.get('/SRNDataStatus/:id', (req, res) => {
     })
 })
 
+// SetCurrentStatusSRN
+
+app.post('/SetCurrentStatusSRN/:id', (req, res) => {
+    const srnID = req.params.id
+    console.log(srnID, req.body)
+
+    const sql = "UPDATE srn SET Status = ?"
+    connection.query(sql, [srnID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            
+        }
+    })
+})
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
