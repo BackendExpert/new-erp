@@ -27,6 +27,15 @@ const RecWork = () => {
     const HeadleButtonClick = (clickValue) => {
         SetButtonValue(clickValue)   
     }
+
+    // workrequests 
+    const [WorkReq, SetWorkReq] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/WrokReqtoRec')
+        .then(res => SetWorkReq(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
