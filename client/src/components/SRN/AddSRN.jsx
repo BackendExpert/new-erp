@@ -157,7 +157,7 @@ const AddSRN = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Project : </label>
-                                    <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Employee Name"
+                                    <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Project Name"
                                     onChange = {e => SetDataSRN({...DataSRN, Project:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
