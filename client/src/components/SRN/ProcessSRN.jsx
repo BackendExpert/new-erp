@@ -15,7 +15,7 @@ const ProcessSRN = () => {
         SetButtonValue(clickValue)   
     }
 
-    if(RoleUser === "HOD"){
+    if(RoleUser === "Labmanager"){
         return (
             <div>ProcessSRN</div>
         )
