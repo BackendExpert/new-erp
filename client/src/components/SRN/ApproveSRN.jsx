@@ -129,7 +129,52 @@ const ApproveSRN = () => {
                                         }
                                     }
                                     else if(buttonValue === "Reject"){
-                                        if(SRNapp.Status === "LabApprove")
+                                        if(SRNapp.Status === "Reject"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.SID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.project}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.Rdate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.srnType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.PType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.PIype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.estimate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.vote}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.ReqNo}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{SRNapp.Status}</span>
+                                                    </td> 
+                                                </tr>
+                                            )
+                                        }
+                                    }
+                                    else if(buttonValue === "Approve"){
+                                        if(SRNapp.Status === "Approve"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.SID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.project}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.Rdate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.srnType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.PType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.PIype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.estimate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.vote}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.ReqNo}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-green-500 text-white">{SRNapp.Status}</span>
+                                                    </td> 
+                                                </tr>
+                                            )
+                                        }
                                     }
                                 })
                             }
