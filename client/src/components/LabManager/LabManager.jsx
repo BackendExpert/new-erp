@@ -4,6 +4,9 @@ import { useNavigate, useSearchParams } from "react-router-dom"
 import LabSide from "./LabSide"
 import Navlist from "../NavBar/navList"
 import LabData from "./LabData"
+import SummaryDash from "../SummaryDash/SummaryDash"
+import DashFooter from "../SummaryDash/dashFooter"
+
 
 const LabManager = () => {
   const navigate = useNavigate();
@@ -27,14 +30,18 @@ const LabManager = () => {
 
   if(RoleUser === "Labmanager"){
     return (
-      <div className="bg-gray-200">
-        <div className="flex">
-          <LabSide />
-          <div className="w-full mx-2">
-            <Navlist />
-            <LabData />
-          </div>
-        </div>
+      <div className='bg-gray-200'>
+          <div className="flex">
+              <LabSide />
+              <div className="w-full mx-2">
+                <div className="shadow-xl rounded border-l-4 border-gray-200 bg-white my-4 py-4 px-6 w-full mr-2">
+                    <h1 className="text-2xl font-semibold">Lab Manager Department Dashboard</h1> 
+                    <hr />
+                    <SummaryDash />               
+                </div>  
+                <DashFooter />        
+            </div>            
+           </div>           
       </div>
     )
   }
