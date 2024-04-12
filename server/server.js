@@ -4304,7 +4304,7 @@ app.get('/SRNDataStatus/:id', (req, res) => {
         }
         else{
             // console.log("Hi " + result[0].ReqNo)
-            return res.json(result[0].ReqNo)
+            return res.json(result[0])
 
         }
     })
