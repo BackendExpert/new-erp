@@ -42,6 +42,7 @@ const SummaryDash = () => {
   const [CountScientist, SetCountScientist] = useState(0);
   const [CountRA, SetCountRA] = useState(0);
   const [CountHODSRN, SetCountHODSRN] = useState(0);
+  const [ReceSRNsLB, SetReceSRNsLB] = useState(0)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -217,6 +218,14 @@ const SummaryDash = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
+      // Lab Manager
+      try {
+        const CountSRNLab = await axios.get('http://localhost:8081/CountLABSrns/' + EmailUser);
+        SetReceSRNsLB(CountSRNLab.data.LabSRNs);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+
 
     };    
     
