@@ -3831,7 +3831,13 @@ app.get('/MyDivisionSRN/:id', (req, res) => {
             })
         }
     })
+})
 
+// SRNHODEmail
+app.get('/SRNHODEmail/:id', (req, res) => {
+    const UserEmail = req.params.id
+
+    const sql = "SELECT * FROM "
 })
 
 // --------------------------------------- SRN End -----------------------------
