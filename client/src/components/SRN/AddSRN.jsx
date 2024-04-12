@@ -91,6 +91,22 @@ const AddSRN = () => {
 
       const SRNHOD = SRNHodEMail.email
 
+    //   send SRN data to backend
+    const [DataSRN, SetDataSRN] = useState({
+        Name:'',
+        Email:'',
+        Project:'',
+        Division:'',
+        RDate:'',
+        srnType:'',
+        PType:'',
+        PIype:'',
+        estimate:'',
+        vote:'',
+        HoDEmail:'',
+        Description:''
+    })
+
     if(RoleUser !== null){
         return (
             <div className="bg-gray-200 py-4">
