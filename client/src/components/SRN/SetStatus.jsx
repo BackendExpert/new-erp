@@ -12,6 +12,14 @@ const SetStatus = () => {
 
     const {id} = useParams()
 
+    // fetch srn data according to id
+    const [SrnData, SetSrnData] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/SRNDataStatus/' + id)
+        .then(res => SetSrnData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "Labmanager"){
         return (
             <div className="bg-gray-200 py-4">
@@ -22,6 +30,15 @@ const SetStatus = () => {
                         <Link to={'/ProcessSRN'}>
                             <button className="lg:my-0 my-2 border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl lg:mx-2">Back</button>
                         </Link>
+                    </div>
+                    <div className="my-4">
+                        <form>
+                            <div className="lg:grid grid-cols-3 gap-4">
+                                <div className="my-2">
+                                    <label htmlFor="">SRN Number</label>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
