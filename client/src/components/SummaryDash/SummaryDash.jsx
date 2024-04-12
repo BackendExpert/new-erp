@@ -221,7 +221,7 @@ const SummaryDash = () => {
       // Lab Manager
       try {
         const CountLabSRN = await axios.get('http://localhost:8081/CountLABSrns');
-        SetReceSRNsLB(CountLabSRN.data.SRNLab);
+        SetReceSRNsLB(CountLabSRN.data.ReceSRN);
       } catch (error) {
         consol
         e.error('Error fetching data:', error);
