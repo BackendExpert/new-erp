@@ -219,7 +219,7 @@ const SummaryDash = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
-      // Lab Manager
+
       try {
         const CountLabSRN = await axios.get('http://localhost:8081/CountLABSrns');
         SetReceSRNsLB(CountLabSRN.data.ReceSRN);
@@ -227,6 +227,14 @@ const SummaryDash = () => {
         consol
         e.error('Error fetching data:', error);
       }
+
+      try {
+        const CountWorkHod = await axios.get('http://localhost:8081/CounthodWorks/' + EmailUser);
+        SethodWork(CountWorkHod.data.HodWork);
+      } catch (error) {
+        consol
+        e.error('Error fetching data:', error);
+      }      
 
 
     };    
