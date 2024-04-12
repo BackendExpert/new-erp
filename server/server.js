@@ -4302,7 +4302,7 @@ app.get('/SRNDataStatus/:id', (req, res) => {
             return res.json({Error: "ERRROR on SERVER"})
         }
         else{
-            return res.json(result)
+            return res.json(result[0].ReqNo)
         }
     })
 })
