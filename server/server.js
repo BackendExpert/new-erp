@@ -4437,7 +4437,16 @@ app.post('/CreateWork/:id', (req, res) => {
                 update_at
             ]
 
-            console.log(value)
+            // console.log(value)
+
+            connection.query(sql, [value], (err, result) => {
+                if(err) {
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    
+                }
+            })
         }
     })
 })
