@@ -42,8 +42,7 @@ const ApproveSRN = () => {
             }
             else{
                 alert(res.data.Error)
-            }
-            
+            }            
         })
     }
 
