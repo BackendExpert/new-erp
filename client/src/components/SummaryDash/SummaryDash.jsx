@@ -264,7 +264,7 @@ const SummaryDash = () => {
     {id: 25, name:"Research Assistants" , value: <CountUp end={CountRA}/>, icons: <Icons name="school" size="large"/>, style:"hover:border-purple-500 hover:text-purple-600" },  
     {id: 26, name:"SRN Requests" , value: <CountUp end={CountHODSRN}/>, icons: <Icons name="book" size="large"/>, style:"hover:border-blue-500 hover:text-blue-600" },  
     // Lab Manager
-    {id: 27, name:"Recommend SRNs" , value: <CountUp end={ReceSRNsLB}/>, icons: <Icons name="book" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
+    {id: 27, name:"Recommend SRNs" , value: ReceSRNsLB,  icons: <Icons name="book" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
   ]
   
   // hod data

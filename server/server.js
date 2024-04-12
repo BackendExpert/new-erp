@@ -3998,10 +3998,10 @@ app.post('/HodRejectSRN/:id', (req, res) => {
 // CountLABSrns
 app.get('/CountLABSrns', (req, res) => {
    
-    const sql = "SELECT COUNT(SID) AS ReceSRN FROM srn WHERE Status = ?";
+    const sql = "SELECT COUNT(SID) AS ReceSRN FROM srn ";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Recommend"
-    connection.query(sql, [status], (error, results) => {
+    connection.query(sql, (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
