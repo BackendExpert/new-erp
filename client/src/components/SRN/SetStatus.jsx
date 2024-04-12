@@ -22,6 +22,27 @@ const SetStatus = () => {
 
     const srnRegNo = SrnData.ReqNo
 
+    // send data to backend
+
+    const [CurrentStatus, SetCurrentStatus] = useState({
+        Status: ''
+    })
+
+    const headleSubmit = (e) => {
+        e.preventDefault(); 
+
+        axios.post('http://localhost:8081/SetCurrentStatusSRN/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Status Set Successfull")
+                navigate('/ProcessSRN')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "Labmanager"){
         return (
             <div className="bg-gray-200 py-4">
@@ -35,7 +56,7 @@ const SetStatus = () => {
                     </div>
                     {/* <p className="">SRN {srnRegNo}</p> */}
                     <div className="my-4">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-3 gap-4">
                                 <div className="my-2">
                                     <label htmlFor="">SRN Number</label>
