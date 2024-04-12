@@ -418,6 +418,27 @@ const MyFullStats = () => {
                                             )
                                           }
                                         }
+                                        else if(buttonValue === "Reject SRN"){
+                                          if(srnView.Status === "Reject"){
+                                            return (
+                                              <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{srnView.SID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{srnView.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{srnView.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{srnView.Rdate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{srnView.srnType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{srnView.PType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{srnView.PIype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{srnView.estimate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{srnView.vote}</td>
+                                                    <td className='px-6 py-4 font-bold'>{srnView.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{srnView.Status}</span>
+                                                    </td> 
+                                              </tr>
+                                            )
+                                          }
+                                        }
                                       })
                                     }
                                 </tbody>
