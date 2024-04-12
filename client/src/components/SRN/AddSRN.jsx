@@ -63,6 +63,14 @@ const AddSRN = () => {
       const empUsername = empName.username
       const empRole = empName.role
 
+    //   get project data according to login user
+      const [ProjectData, SetProjectData] = useState([])
+      useEffect(() => {
+        axios.get('http://localhost:8081/GetProjectData/' + EmailUser)
+        .then(res => SetProjectData(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
     if(RoleUser !== null){
         return (
             <div className="bg-gray-200 py-4">
