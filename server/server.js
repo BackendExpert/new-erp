@@ -4621,6 +4621,22 @@ app.post('/WorkRece/:id', (req, res) => {
     })
 })
 
+// WorkReject
+app.post('/WorkReject/:id', (req, res) => {
+    const workID = req.params.id
+
+    const sql = "UPDATE workrequest SET Status = ? WHERE WID = ?"
+    const status = "Reject"
+    connection.query(sql, [status, workID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+})
+
 // ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
