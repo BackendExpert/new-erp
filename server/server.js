@@ -3922,7 +3922,7 @@ app.post('/CreateSRN/:id', (req, res) => {
 app.get('/CountSRNHOD/:id', (req, res) => {
     const Email = req.params.id;
     
-    const sql = "SELECT COUNT(ID) AS myTasks FROM srn WHERE is_aprove = ? && DEmail = ?";
+    const sql = "SELECT COUNT(ID) AS HODSRN FROM srn WHERE Status = ? && HoDEmail = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const is_aprove = "Driver Pending"
     
@@ -3933,7 +3933,7 @@ app.get('/CountSRNHOD/:id', (req, res) => {
         return;
       }
   
-      res.json({ myTasks: results[0].myTasks }); // Send count in JSON format
+      res.json({ HODSRN: results[0].HODSRN }); // Send count in JSON format
     });
 })
 
