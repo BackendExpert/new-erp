@@ -3924,7 +3924,7 @@ app.get('/CountSRNHOD/:id', (req, res) => {
     
     const sql = "SELECT COUNT(ID) AS HODSRN FROM srn WHERE Status = ? && HoDEmail = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const is_aprove = "Driver Pending"
+    const is_aprove = "Request"
     
     connection.query(sql, [is_aprove, Email], (error, results) => {
       if (error) {
