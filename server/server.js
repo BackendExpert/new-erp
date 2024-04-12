@@ -4467,7 +4467,21 @@ app.post('/CreateWork/:id', (req, res) => {
 
 // CounthodWorks
 app.get('/CounthodWorks/:id', (req, res) => {
+    const Email = req.params.id;
     
+    const sql = "SELECT COUNT(WID) AS HODSRN FROM workrequest WHERE Status = ? && HoDEmail = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const is_aprove = "Request"
+    
+    connection.query(sql, [is_aprove, Email], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ HODSRN: results[0].HODSRN }); // Send count in JSON format
+    });
 })
 
 // ----------------------------------------- Work Request End ---------------------
