@@ -57,7 +57,19 @@ const HodRecWork = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                hodWorkRec.map((hodWork, index) => {
+                                    if(buttonValue === "Requested"){
+                                        if(hodWork.Status === "Request"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{hodWork.WID}</td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
