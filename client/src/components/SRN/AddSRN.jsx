@@ -134,7 +134,7 @@ const AddSRN = () => {
                             (() => {
                             if(RoleUser === "HOD"){
                                 return (
-                                <Link>
+                                <Link to={'/HodRecSRN'}>
                                     <button className="ml-4 border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Recommended Reservation</button>
                                 </Link>
                                 )
