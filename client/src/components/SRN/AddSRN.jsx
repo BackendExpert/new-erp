@@ -81,6 +81,14 @@ const AddSRN = () => {
 
       const MyDiviSRN = MyDivision.title
 
+    // Get HOD email 
+      const [SRNHodEMail, SetSRNHodEMail] = useState([])
+      useEffect(() => {
+        axios.get('http://localhost:8081/SRNHODEmail/' + EmailUser)
+        .then(res => SetSRNHodEMail(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
     if(RoleUser !== null){
         return (
             <div className="bg-gray-200 py-4">
