@@ -3813,7 +3813,17 @@ app.get('/MyDivisionSRN/:id', (req, res) => {
             return res.json({Error: "ERROR on SERVER"})
         }
         else{
-            
+            const diviData = "SELECT * FROM division WHERE did = ?"
+            const did = result[0].dno
+
+            connection.query(diviData, [did], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on SERVER"})
+                }
+                else{
+                    return res.json(result)
+                }
+            })
         }
     })
 
