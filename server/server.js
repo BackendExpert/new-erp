@@ -4484,6 +4484,20 @@ app.get('/CounthodWorks/:id', (req, res) => {
     });
 })
 
+// HodReseWorkReq
+app.get('/HodReseWorkReq/:id', (req, res) => {
+    const HodEmail = req.params.id
+    const sql = "SELECT * FROM workrequest WHERE HoDEmail = ?"
+    connection.query(sql, [HodEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
