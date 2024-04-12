@@ -72,7 +72,24 @@ const RecWork = () => {
                             {
                                 WorkReq.map((work, index) => {
                                     if(buttonValue === "Requested"){
-                                        if(work.Status === "")
+                                        if(work.Status === "Hod Recommended"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{work.WID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.project}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.WType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.SEmail}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{work.Status}</span>
+                                                    </td> 
+                                                </tr>
+                                            )
+                                        }
                                     }
                                 })
                             }
