@@ -213,7 +213,7 @@ const MyFullStats = () => {
                           
                           <div className="flex">
                             My Reject SRN 
-                            <p className="mx-4 text-xl font-bold"><CountUp end={ApproveMyRese} /></p>
+                            <p className="mx-4 text-xl font-bold"><CountUp end={RejectSRN} /></p>
                           </div>                          
                         </div> 
                     </div>
