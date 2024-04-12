@@ -137,6 +137,18 @@ const AddWorkReq = () => {
                                     <input type="date" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
                                     onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
                                 </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Work Type : </label>
+                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
+                                        onChange={e => SetDataSRN({...DataSRN, Project:e.target.value})}>
+                                            <option>Select Option</option>
+                                            <option value="Equipment Maintenance">Equipment Maintenance</option>
+                                            <option value="Computer Repair">Computer Repair</option>
+                                            <option value="Wiring">Wiring</option>
+                                            <option value="Breakdown">Breakdown</option>
+                                            <option value="Renovation">Renovation</option>
+                                    </select>
+                                </div>
                             </div>
                         </form>
                     </div>
