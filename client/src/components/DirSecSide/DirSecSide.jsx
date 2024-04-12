@@ -10,7 +10,7 @@ const DirSecSide = () => {
     const sidemenu = [
         {name: "Approve Leave",  link: "/ApproveLeave", icon: <Icons name="log-out" size="large"></Icons>},
         {name: "Approve Reservation",  link: "/ApproveReservation", icon: <Icons name="car" size="large"></Icons>},
-        {name: "Approve SRN",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
+        {name: "Approve SRN",  link: "/ApproveSRN", icon: <Icons name="book" size="large"></Icons>},
         {name: "Approve Work Request",  link: "#", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Approve Gate Pass",  link: "#", icon: <Icons name="car" size="large"></Icons>},
         {name: "Approve Increment",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
