@@ -4015,10 +4015,9 @@ app.get('/CountLABSrns', (req, res) => {
 
 // ReseSRNs
 app.get('/ReseSRNs', (req, res) => {
-    const sql = "SELECT * FROM srn WHERE Status = ?"
-    const status = "Recommend"
+    const sql = "SELECT * FROM srn"
 
-    connection.query(sql, [status], (err, result) => {
+    connection.query(sql, (err, result) => {
         if(err){
             return res.json({Error: "Error on Server"})
         }
