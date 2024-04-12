@@ -42,8 +42,8 @@ const HodRecSRN = () => {
                               <th scope='col' className='px-6 py-3'>Email</th>
                               <th scope='col' className='px-6 py-3'>Date</th>                                    
                               <th scope='col' className='px-6 py-3'>SRN Type</th>
-                              <th scope='col' className='px-6 py-3'>P Type</th>
-                              <th scope='col' className='px-6 py-3'>I Type</th>
+                              <th scope='col' className='px-6 py-3'>Purchase Type</th>
+                              <th scope='col' className='px-6 py-3'>Item Type</th>
                               <th scope='col' className='px-6 py-3'>Estimate</th>
                               <th scope='col' className='px-6 py-3'>Vote</th>
                               <th scope='col' className='px-6 py-3'>Description</th>                              
