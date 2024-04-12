@@ -2103,6 +2103,9 @@ app.post('/AddProject', (req, res) =>{
                                         })
                                     }
                                 }
+                                else{
+                                    return res.json({Error: "Entered User not a RA"})
+                                }
                             })
                         }
                         else{
