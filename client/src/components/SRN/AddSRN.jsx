@@ -203,6 +203,11 @@ const AddSRN = () => {
                                             <option value="External">External</option>
                                     </select>
                                 </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Estimate : </label>
+                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                                    />      
+                                </div>
                             </div>
                         </form>
                     </div>
