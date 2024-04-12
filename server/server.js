@@ -4152,6 +4152,21 @@ app.post('/LabApproveSRN/:id', (req, res) => {
     })
 })
 
+// ApproveSRN
+// Approve by  Dec Sec
+
+app.get('/ApproveSRN', (req, res) =>{
+    const sql = "SELECT * FROM srn"
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
