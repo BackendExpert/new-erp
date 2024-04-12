@@ -9,9 +9,17 @@ const AddSRN = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
-  return (
-    <div>AddSRN</div>
-  )
+
+    if(RoleUser !== null){
+        return (
+            <div>AddSRN</div>
+        )
+    }
+    else{
+        localStorage.clear()
+        navigate('/')
+    }
+
 }
 
 export default AddSRN
