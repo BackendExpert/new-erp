@@ -70,7 +70,28 @@ const ApproveSRN = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                ApproveSRN.map((SRNapp, index) => {
+                                    if(buttonValue === "Recommend"){
+                                        if(SRNapp.Status === "LabApprove"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.SID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.Rdate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.srnType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.PType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.PIype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.estimate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.vote}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.description}</td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
