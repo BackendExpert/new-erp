@@ -69,6 +69,15 @@ const AddWorkReq = () => {
         .catch(err => console.log(err))
       }, [])
 
+    // get my division
+    const [MyDivision, SetMyDivision] = useState([])
+    useEffect(() => {
+      axios.get('http://localhost:8081/MyDivisionSRN/' + EmailUser)
+      .then(res => SetMyDivision(res.data))
+      .catch(err => console.log(err))
+    }, [])
+
+    const MyDiviSRN = MyDivision.title
 
       if(RoleUser !== null){
         return (
@@ -103,6 +112,30 @@ const AddWorkReq = () => {
                                     <label htmlFor="">Employee Email : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
                                     value={EmailUser} onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Project : </label>
+                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
+                                        onChange={e => SetDataSRN({...DataSRN, Project:e.target.value})}>
+                                            <option>Select Option</option>
+                                            {
+                                                ProjectData.map((MyProject) => {
+                                                    return (
+                                                        <option value={MyProject.title}>{MyProject.title}</option>
+                                                    )
+                                                })
+                                            }
+                                    </select>
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Divison : </label>
+                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                                    value={MyDiviSRN} onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Date : </label>
+                                    <input type="date" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                                    onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
                                 </div>
                             </div>
                         </form>
