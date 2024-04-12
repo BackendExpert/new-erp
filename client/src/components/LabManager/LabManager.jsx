@@ -6,6 +6,7 @@ import Navlist from "../NavBar/navList"
 import LabData from "./LabData"
 import SummaryDash from "../SummaryDash/SummaryDash"
 import DashFooter from "../SummaryDash/dashFooter"
+import OtherUserNav from "../NavBar/OtherUserNav"
 
 
 const LabManager = () => {
@@ -30,18 +31,19 @@ const LabManager = () => {
 
   if(RoleUser === "Labmanager"){
     return (
-      <div className='bg-gray-200'>
-          <div className="flex">
-              <LabSide />
-              <div className="w-full mx-2">
-                <div className="shadow-xl rounded border-l-4 border-gray-200 bg-white my-4 py-4 px-6 w-full mr-2">
-                    <h1 className="text-2xl font-semibold">Lab Manager Department Dashboard</h1> 
-                    <hr />
-                    <SummaryDash />               
-                </div>  
-                <DashFooter />        
-            </div>            
-           </div>           
+      <div className="bg-gray-200">
+        <div className="flex">
+            <LabSide />
+            <div className="w-full mx-2">
+              <OtherUserNav />
+              <div className="shadow-xl border-l-4 bg-white my-4 rounded py-4 px-6">
+                  <h1 className="text-2xl">Welcome to RA Dashboard</h1>
+                  <hr className="mt-2 border-blue-100 border-2" />
+                  <SummaryDash />
+              </div>
+                <DashFooter />
+            </div>
+        </div>
       </div>
     )
   }
