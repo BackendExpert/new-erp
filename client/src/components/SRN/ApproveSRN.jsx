@@ -92,6 +92,12 @@ const ApproveSRN = () => {
                                                     <td className='px-6 py-4 font-bold'>
                                                         <span className="py-2 px-4 rounded bg-yellow-500 text-white">{SRNapp.Status}</span>
                                                     </td> 
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <div className="flex">
+                                                            <button  onClick={() => headleApprove(SRNapp.SID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Approve</button> 
+                                                            <button  onClick={() => headleReject(SRNapp.SID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Reject</button>
+                                                        </div>
+                                                    </td> 
                                                 </tr>
                                             )
                                         }
