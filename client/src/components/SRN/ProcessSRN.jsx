@@ -35,8 +35,8 @@ const ProcessSRN = () => {
                         </Link>
                     </div>
                     <div className="flex pl-2 my-4">
-                        <button onClick={() => HeadleButtonClick('Requested')} className="ml-2 py-2 px-4 border border-yellow-500 text-yellow-500 rounded duration-500 hover:bg-yellow-500 hover:text-white hover:shadow-xl">Request SRN</button>
-                        <button onClick={() => HeadleButtonClick('Recommend')} className="ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Recommend</button>
+                        <button onClick={() => HeadleButtonClick('Recommend')} className="ml-2 py-2 px-4 border border-yellow-500 text-yellow-500 rounded duration-500 hover:bg-yellow-500 hover:text-white hover:shadow-xl">Request SRN</button>
+                        <button onClick={() => HeadleButtonClick('LabApprove')} className="ml-2 py-2 px-4 border border-green-500 text-green-500 rounded duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Recommend</button>
                     </div>
                     <div className="">{buttonValue}</div>
                     <div className="relative overflow-x-auto my-8">
@@ -58,7 +58,15 @@ const ProcessSRN = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                ReceSrn.map((labSrn, index) => {
+                                    if(buttonValue === "Recommend"){
+                                        if(labSrn.Status === "Recommend"){
+                                            
+                                        }
+                                    }
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
