@@ -4012,6 +4012,22 @@ app.get('/CountLABSrns', (req, res) => {
     });
 })
 
+
+// ReseSRNs
+app.get('/ReseSRNs', (req, res) => {
+    const sql = "SELECT * FROM srn WHERE Status = ?"
+    const status = "Recommend"
+
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
