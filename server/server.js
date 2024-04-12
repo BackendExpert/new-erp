@@ -3972,21 +3972,31 @@ app.post('/HodRecoSRN/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            var mailOptions = {
-                from: process.env.EMAIL_USER,
-                to: req.body.SRNHOD,
-                subject: 'Notification: The SRN Request',
-                text: 'The SRN Request is Waiting for recommended', 
-            };
-
-            transporter.sendMail(mailOptions, function(error, info){
-                if (error) {
-                console.log(error);
-                } else {
-                console.log('Email sent: ' + info.response);
-                return res.json({Status: "Success"})
+            const userEmail = "SELECT * FROM srn WHERE SID = ?"
+            connection.query(userEmail, [SRNID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
                 }
-            });
+                else{
+                    const MyEmail = result[0].Email
+
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: MyEmail,
+                        subject: 'Notification: The SRN Request',
+                        text: 'The SRN Request has been Recommended By Head of the Dep', 
+                    };
+        
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
+                }
+            })
         }
     })
 })
@@ -4004,7 +4014,31 @@ app.post('/HodRejectSRN/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            return res.json({Status: "Success"})
+            const userEmail = "SELECT * FROM srn WHERE SID = ?"
+            connection.query(userEmail, [SRNID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    const MyEmail = result[0].Email
+
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: MyEmail,
+                        subject: 'Notification: The SRN Request',
+                        text: 'The SRN Request has been Rejected By Head of the Dep', 
+                    };
+        
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
+                }
+            })
         }
     })
 })
