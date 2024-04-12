@@ -4182,7 +4182,7 @@ app.post('/SRNapprove/:id', (req, res) => {
         else{
             // get user
             const userEmail = "SELECT * FROM srn WHERE SID = ?"
-            connection.query(sql, [SrnID], (err, result) => {
+            connection.query(userEmail, [SrnID], (err, result) => {
                 if(err){
                     return res.json({Error: "Error on SERVER"})
                 }
@@ -4229,9 +4229,9 @@ app.post('/SRNReject/:id', (req, res) => {
         else{
             // get user
             const userEmail = "SELECT * FROM srn WHERE SID = ?"
-            connection.query(sql, [SrnID], (err, result) => {
+            connection.query(userEmail, [SrnID], (err, result) => {
                 if(err){
-                    return res.json({Error: "Error on SERVER"})
+                    return res.json({Error: "Error on SERVERssss"})
                 }
                 else{
                     if(result.length === 0){
