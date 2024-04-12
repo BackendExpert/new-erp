@@ -3940,10 +3940,9 @@ app.get('/CountSRNHOD/:id', (req, res) => {
 // HodRecSRN
 app.get('/HodRecSRN/:id', (req, res) => {
     const HoDEmail = req.params.id
-    const sql = "SELECT * FROM srn WHERE Status = ? && HoDEmail = ?"
-    const status = "Request"
+    const sql = "SELECT * FROM srn WHERE HoDEmail = ?"
     
-    connection.query(sql, [status, HoDEmail], (err, result) => {
+    connection.query(sql, [HoDEmail], (err, result) => {
         if(err){
             return res.json({Error: "Error on SERVER"})
         }
