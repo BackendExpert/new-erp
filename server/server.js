@@ -4365,6 +4365,25 @@ app.get('/CountRequeseSRN/:id', (req, res) => {
 })
 
 
+// CountRejectSRN
+
+app.get('/CountRejectSRN/:id', (req, res) => {
+    const UserEmail = req.params.id;
+    const sql = "SELECT COUNT(SID) AS MyReqRese FROM srn WHERE Status = ? && Email = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "Request"
+
+    connection.query(sql, [status, UserEmail], (error, results) => {
+    if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+    }
+
+    res.json({ MyReqRese: results[0].MyReqRese }); // Send count in JSON format
+    });
+})
+
 
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
