@@ -78,6 +78,7 @@ import AddSRN from "./components/SRN/AddSRN"
 import HodRecSRN from "./components/SRN/HodRecSRN"
 import ProcessSRN from "./components/SRN/ProcessSRN"
 import AssignSRNNo from "./components/SRN/AssignSRNNo"
+import ApproveSRN from "./components/SRN/ApproveSRN"
 
 
 export default function App() {
@@ -237,6 +238,7 @@ export default function App() {
         <Route path="/HodRecSRN" element={<PrivateRoute><HodRecSRN /></PrivateRoute>} />
         <Route path="/ProcessSRN" element={<PrivateRoute><ProcessSRN /></PrivateRoute>} />
         <Route path="/AssignSRNNo/:id" element={<PrivateRoute><AssignSRNNo /></PrivateRoute>} />
+        <Route path="/ApproveSRN" element={<PrivateRoute><ApproveSRN /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
