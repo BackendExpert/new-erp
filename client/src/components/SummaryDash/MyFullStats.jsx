@@ -89,6 +89,7 @@ const MyFullStats = () => {
         const [myRese, SetMyRese] = useState(0);
         const [ApproveMyRese, SetApproveMyRese] = useState(0);
         const [RequestSRN, SetRequestSRN] = useState(0)
+        const [RejectSRN, SetRejectSRN] = useState(0)
 
         useEffect(() => {
           const fetchData = async () => {
@@ -138,6 +139,8 @@ const MyFullStats = () => {
             } catch (error) {
               console.error('Error fetching data:', error);
             }
+
+            
 
           }
           fetchData();
