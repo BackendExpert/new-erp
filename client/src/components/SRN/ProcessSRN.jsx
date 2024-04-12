@@ -15,6 +15,14 @@ const ProcessSRN = () => {
         SetButtonValue(clickValue)   
     }
 
+    // get data in SRN Recommend
+    const [ReceSrn, SetReceSrn] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/ReseSRNs')
+        .then(res => SetReceSrn(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "Labmanager"){
         return (
             <div className="bg-gray-200 py-4">
