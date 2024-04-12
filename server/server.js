@@ -4103,25 +4103,28 @@ app.post('/SRNNoDate/:id', (req, res) => {
                                 return true
                             }
 
-                            
+                            myEmail = result[0].Email
+
+                            var mailOptions = {
+                                from: process.env.EMAIL_USER,
+                                to: myEmail,
+                                subject: 'Notification: The SRN Request',
+                                text: 'The SRN Request Number is : ' + req.body.SRNNum, 
+                            };
+                
+                            transporter.sendMail(mailOptions, function(error, info){
+                                if (error) {
+                                console.log(error);
+                                } else {
+                                console.log('Email sent: ' + info.response);
+                                return res.json({Status: "Success"})
+                                }
+                            });
+
                         }
                     })
 
-                    var mailOptions = {
-                        from: process.env.EMAIL_USER,
-                        to: myEmail,
-                        subject: 'Notification: The SRN Request',
-                        text: 'The SRN Request has been Approve By Lab Manager', 
-                    };
-        
-                    transporter.sendMail(mailOptions, function(error, info){
-                        if (error) {
-                        console.log(error);
-                        } else {
-                        console.log('Email sent: ' + info.response);
-                        return res.json({Status: "Success"})
-                        }
-                    });
+
                 }
             }) 
         }
