@@ -91,7 +91,7 @@ const ProcessSRN = () => {
                                                                 (() => {
                                                                     if(labSrn.Status !== "LabApprove"){
                                                                         return (
-                                                                            <Link>
+                                                                            <Link to={'/AssignSRNNo/' + labSrn.SID}>
                                                                                 <button className="ml-2 border border-blue-500 rounded py-2 px-4 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Assign SRN Number</button> 
                                                                             </Link>
                                                                         )
