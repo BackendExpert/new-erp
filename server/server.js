@@ -3918,6 +3918,25 @@ app.post('/CreateSRN/:id', (req, res) => {
     })
 })
 
+// CountSRNHOD
+app.get('/CountSRNHOD/:id', (req, res) => {
+    const Email = req.params.id;
+    
+    const sql = "SELECT COUNT(ID) AS myTasks FROM trips WHERE is_aprove = ? && DEmail = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const is_aprove = "Driver Pending"
+    
+    connection.query(sql, [is_aprove, Email], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ myTasks: results[0].myTasks }); // Send count in JSON format
+    });
+})
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
