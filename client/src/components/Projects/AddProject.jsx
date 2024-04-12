@@ -4,10 +4,11 @@ import { Link, useNavigate } from "react-router-dom"
 import axios from "axios";
 
 const AddProject = () => {
-    const navigate = useNavigate();
-
-    //get the login user
-    const RoleUser = secureLocalStorage.getItem("loginNew");
+  const navigate = useNavigate()
+  //check current login user
+  const RoleUser = secureLocalStorage.getItem("loginNew");
+  //get current login user's email
+  const EmailUser = secureLocalStorage.getItem("logiafter");
   // this page can access by following users
   // SuperAdmin, Admin
 
