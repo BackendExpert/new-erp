@@ -213,7 +213,7 @@ const SummaryDash = () => {
 
       try {
         const HODSRNCount = await axios.get('http://localhost:8081/CountSRNHOD/' + EmailUser);
-        SetCountHODSRN(HODSRNCount.data.HodRA);
+        SetCountHODSRN(HODSRNCount.data.HODSRN);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
