@@ -60,7 +60,13 @@ const HodRecSRN = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                ReqHoDSRN.map((hodSrn, index) => {
+                                    if(buttonValue === "Requested"){
+                                        if(hodSrn.)
+                                    }
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
