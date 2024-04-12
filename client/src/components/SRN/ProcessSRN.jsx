@@ -67,7 +67,7 @@ const ProcessSRN = () => {
                             {
                                 ReceSrn.map((labSrn, index) => {
                                     if(buttonValue === "Recommend"){
-                                        if(labSrn.Status === "Recommend"){
+                                        if(labSrn.Status === "Recommend" || labSrn.Status === "LabApprove"){
                                             return(
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.SID}</td>
@@ -83,7 +83,21 @@ const ProcessSRN = () => {
                                                     <td className='px-6 py-4 font-bold'>{labSrn.vote}</td>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.description}</td>
                                                     <td className='px-6 py-4 font-bold'>
-                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{labSrn.Status}</span>
+                                                        {
+                                                            (() => {
+                                                                if(labSrn.Status === "Recommend"){
+                                                                    return (
+                                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{labSrn.Status}</span>
+                                                                    )
+                                                                }
+                                                                else if(labSrn.Status === "LabApprove"){
+                                                                    return (
+                                                                        <span className="py-2 px-4 rounded bg-green-500 text-white">{labSrn.Status}</span>
+                                                                    )
+                                                                }
+                                                            })()
+                                                        }
+
                                                     </td> 
                                                     <td className='px-6 py-4 font-bold'>
                                                         <div className="flex">
