@@ -23,6 +23,10 @@ const ProcessSRN = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleApprove = (id) => {
+        
+    }
+
     if(RoleUser === "Labmanager"){
         return (
             <div className="bg-gray-200 py-4">
@@ -86,10 +90,16 @@ const ProcessSRN = () => {
                                                             {
                                                                 (() => {
                                                                     if(labSrn.Status !== "LabApprove"){
-
+                                                                        return (
+                                                                            <Link>
+                                                                                <button className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Assign SRN Number</button> 
+                                                                            </Link>
+                                                                        )
                                                                     }
                                                                     else{
-                                                                        
+                                                                        return (
+                                                                            <button  onClick={() => headleApprove(labSrn.SID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Approve</button> 
+                                                                        )
                                                                     }
                                                                 })()
                                                             }
