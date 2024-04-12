@@ -199,7 +199,7 @@ const AddWorkReq = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Work Description : </label>
-                                    <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Responsible Officer's Email"
+                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Responsible Officer's Email"
                                     onChange = {e => SetWorkreq({...workReq, Description:e.target.value})}/>      
                                 </div>
                             </div>
