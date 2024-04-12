@@ -69,7 +69,13 @@ const RecWork = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                WorkReq.map((work, index) => {
+                                    if(buttonValue === "Requested"){
+                                        if(work.Status === "")
+                                    }
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
