@@ -10,11 +10,24 @@ const RecWork = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+        //GoBack
+    const GoBack = () => {
+        if(RoleUser === "Director"){
+            navigate('/DirectorDash');
+        }
+        else if(RoleUser === "Secretary"){
+            navigate('/Secretary');
+        }
+        else if(RoleUser === "TO"){
+            navigate('/to');
+        }
+    }
+
     const [buttonValue, SetButtonValue] = useState()
     const HeadleButtonClick = (clickValue) => {
         SetButtonValue(clickValue)   
     }
-    
+
   return (
     <div>RecWork</div>
   )
