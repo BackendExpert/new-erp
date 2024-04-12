@@ -3823,10 +3823,10 @@ app.get('/MyDivisionSRN/:id', (req, res) => {
                 return true
             }
             const diviData = "SELECT title FROM division WHERE did = ?"
-            const did = result[0].dno
+            const diviId = result[0].dno
             // console.log(did)
 
-            connection.query(diviData, [did], (err, result) => {
+            connection.query(diviData, [diviId], (err, result) => {
                 if(err){
                     return res.json({Error: "Error on SERVER"})
                 }
