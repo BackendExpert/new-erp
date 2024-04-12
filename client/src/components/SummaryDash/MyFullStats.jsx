@@ -178,7 +178,25 @@ const MyFullStats = () => {
                             My Approve Reservations 
                             <p className="mx-4 text-xl font-bold"><CountUp end={ApproveMyRese} /></p>
                           </div>                          
-                        </div>                                                                        
+                        </div>  
+                        
+                        {/* For SRN */}
+                        
+                        <div onClick={() => HeadleButtonClick('Request SRN')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Request SRN
+                            <p className="mx-4 text-xl font-bold"><CountUp end={ApproveMyRese} /></p>
+                          </div>                          
+                        </div> 
+
+                        <div onClick={() => HeadleButtonClick('Reject SRN')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Reject SRN 
+                            <p className="mx-4 text-xl font-bold"><CountUp end={ApproveMyRese} /></p>
+                          </div>                          
+                        </div> 
                     </div>
                     
                     <div className="text-xl mt-6 my-2 font-semibold">
@@ -329,23 +347,24 @@ const MyFullStats = () => {
                         </div>
 
                         <div className="text-xl mt-6 my-2 font-semibold">
-                        My Reservations 
-                      </div> 
+                          My SRN Requests 
+                        </div> 
                       <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
                                     <tr className='text-blue-500'>
-                                      <th scope='col' className='px-6 py-3'>Reservation ID</th>
-                                      <th scope='col' className='px-6 py-3'>Purpose</th>
-                                      <th scope='col' className='px-6 py-3'>Division No</th>                                        
-                                      <th scope='col' className='px-6 py-3'>Starting Time</th>
-                                      <th scope='col' className='px-6 py-3'>Date</th>
-                                      <th scope='col' className='px-6 py-3'>Arrival Date</th>
-                                      <th scope='col' className='px-6 py-3'>Route</th>
-                                      <th scope='col' className='px-6 py-3'>Vehicle Type</th>
-                                      <th scope='col' className='px-6 py-3'>Funding</th>
-                                      <th scope='col' className='px-6 py-3'>Passengers</th>
+                                      <th scope='col' className='px-6 py-3'>SRN ID</th>
+                                      <th scope='col' className='px-6 py-3'>Name</th>
+                                      <th scope='col' className='px-6 py-3'>Email</th>
+                                      <th scope='col' className='px-6 py-3'>Date</th>                                    
+                                      <th scope='col' className='px-6 py-3'>SRN Type</th>
+                                      <th scope='col' className='px-6 py-3'>Purchase Type</th>
+                                      <th scope='col' className='px-6 py-3'>Item Type</th>
+                                      <th scope='col' className='px-6 py-3'>Estimate</th>
+                                      <th scope='col' className='px-6 py-3'>Vote</th>
+                                      <th scope='col' className='px-6 py-3'>Description</th>                              
                                       <th scope='col' className='px-6 py-3'>Status</th>
+                                      <th scope='col' className='px-6 py-3'>Action</th> 
                                     </tr>
                                 </thead>
                                 <tbody>
