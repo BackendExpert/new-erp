@@ -157,7 +157,7 @@ const AddSRN = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Project : </label>
-                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
                                         onChange={e => SetDataSRN({...DataSRN, Project:e.target.value})}>
                                             <option>Select Option</option>
                                             {
@@ -186,7 +186,7 @@ const AddSRN = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">SRN Type : </label>
-                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
                                         onChange={e => SetDataSRN({...DataSRN, srnType:e.target.value})}>
                                             <option>Select Option</option>
                                             <option value="Procument and Labstores">Procument and Labstores</option>
@@ -197,7 +197,7 @@ const AddSRN = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Purchase Type : </label>
-                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
                                         onChange={e => SetDataSRN({...DataSRN, PType:e.target.value})}>
                                             <option>Select Option</option>
                                             <option value="Local">Local</option>
@@ -207,7 +207,7 @@ const AddSRN = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Item Type : </label>
-                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
                                         onChange={e => SetDataSRN({...DataSRN, PIype:e.target.value})}>
                                             <option>Select Option</option>
                                             <option value="Equipment Maintenance">Equipment Maintenance</option>
@@ -225,7 +225,7 @@ const AddSRN = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Vote : </label>
-                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
                                         onChange={e => SetDataSRN({...DataSRN, vote:e.target.value})}>
                                             <option>Select Option</option>
                                             <option value="Generated Funds">Generated Funds</option>
