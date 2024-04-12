@@ -3863,6 +3863,13 @@ app.get('/SRNHODEmail/:id', (req, res) => {
         }
     })
 })
+// CreateSRN
+
+app.post('/CreateSRN/:id', (req, res) => {
+    const UserEmail = req.params.id
+
+    console.log(UserEmail, req.body)
+})
 
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
