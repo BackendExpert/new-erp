@@ -33,7 +33,7 @@ const SetStatus = () => {
                             <button className="lg:my-0 my-2 border border-blue-500 py-3 px-16 rounded text-blue-500 font-semibold duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl lg:mx-2">Back</button>
                         </Link>
                     </div>
-                    <p className="">SRN {srnRegNo}</p>
+                    {/* <p className="">SRN {srnRegNo}</p> */}
                     <div className="my-4">
                         <form>
                             <div className="lg:grid grid-cols-3 gap-4">
