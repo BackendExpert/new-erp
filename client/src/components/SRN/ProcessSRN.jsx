@@ -156,6 +156,24 @@ const ProcessSRN = () => {
                                                     <td className='px-6 py-4 font-bold'>
                                                         <span className="py-2 px-4 rounded bg-green-500 text-white">{labSrn.Status}</span>
                                                     </td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                       {
+                                                        (() => {
+                                                            if(labSrn.Status === "Approve"){
+                                                                return(
+                                                                    <Link>
+                                                                        <button className="ml-2 border border-blue-500 rounded py-2 px-4 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Assign SRN Number</button> 
+                                                                    </Link>
+                                                                )   
+                                                            }
+                                                            else{
+                                                                return (
+                                                                    <p className="text-red-500">Waiting for Approve</p>
+                                                                )
+                                                            }
+                                                        })()
+                                                       }
+                                                    </td>
                                                 </tr>
                                             )
                                         }
