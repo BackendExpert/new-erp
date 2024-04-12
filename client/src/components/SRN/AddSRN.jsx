@@ -106,8 +106,13 @@ const AddSRN = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Project : </label>
-                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={empUsername}/>      
+                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
+                                        onChange={e => SetAddRese({...AddRese, HoDEmail:e.target.value})}>
+                                            <option>Select Option</option>
+                                            {
+
+                                            }
+                                    </select>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Division : </label>
