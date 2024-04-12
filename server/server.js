@@ -4081,7 +4081,7 @@ app.get('/ReseSRNs', (req, res) => {
 app.post('/SRNNoDate/:id', (req, res) => {
     const SRNID = req.params.id
     // console.log(SRNID, req.body)
-    const checkSql = "SELECT * FROM srn ReqNo = ?"
+    const checkSql = "SELECT * FROM srn WHERE ReqNo = ?"
     connection.query(checkSql, [req.body.SRNNum], (err, result) => {
         if(err) throw err
 
