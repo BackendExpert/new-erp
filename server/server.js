@@ -4292,6 +4292,21 @@ app.post('/SRNReject/:id', (req, res) => {
     })
 })
 
+// SRNDataStatus
+app.get('/SRNDataStatus/:id', (req, res) => {
+    const srnID = req.params.id
+
+    const sql = "SELECT ReqNo FROM srn WHERE SID = ?"
+    connection.query(sql, [srnID], (err, result) => {
+        if(err){
+            return res.json({Error: "ERRROR on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
