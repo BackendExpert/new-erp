@@ -4384,6 +4384,20 @@ app.get('/CountRejectSRN/:id', (req, res) => {
     });
 })
 
+// UserViewSRN
+app.get('/UserViewSRN/:id', (req, res) => {
+    const UserEmail = req.params.id
+
+    const sql = "SELECT * FROM srn WHERE Email = ?"
+    connection.query(sql, [UserEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
 
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
