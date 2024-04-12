@@ -4503,7 +4503,8 @@ app.get('/HodReseWorkReq/:id', (req, res) => {
 app.get('/HodWorkApprove/:id', (req, res) => {
     const workID = req.params.id
 
-    
+    const sql = "UPDATE workrequest SET Status = ? WHERE WID =?"
+    const status = "Hod Rece"
 })
 
 // ----------------------------------------- Work Request End ---------------------
