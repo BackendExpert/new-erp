@@ -3836,8 +3836,32 @@ app.get('/MyDivisionSRN/:id', (req, res) => {
 // SRNHODEmail
 app.get('/SRNHODEmail/:id', (req, res) => {
     const UserEmail = req.params.id
+    const sql = "SELECT * FROM employee WHERE email = ?"
+    const MyEmail = UserEmail
 
-    const sql = "SELECT * FROM "
+    connection.query(sql, [MyEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            if(result.length === 0){
+                return true
+            }
+            const diviData = "SELECT title FROM division WHERE did = ?"
+            const did = result[0].dno
+            // console.log(did)
+
+            connection.query(diviData, [did], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on SERVER"})
+                }
+                else{
+                    return res.json(result[0])
+                    // console.log(result[0].title)
+                }
+            })
+        }
+    })
 })
 
 // --------------------------------------- SRN End -----------------------------
