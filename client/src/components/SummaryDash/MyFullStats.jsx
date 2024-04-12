@@ -88,6 +88,7 @@ const MyFullStats = () => {
         const [approveLeave, SetapproveLeave] = useState(0);  
         const [myRese, SetMyRese] = useState(0);
         const [ApproveMyRese, SetApproveMyRese] = useState(0);
+        const [RequestSRN, SetRequestSRN] = useState(0)
 
         useEffect(() => {
           const fetchData = async () => {
@@ -126,6 +127,14 @@ const MyFullStats = () => {
             try {
               const CountMyApproveRese = await axios.get('http://localhost:8081/CountApproveRese/' + EmailUser);
               SetApproveMyRese(CountMyApproveRese.data.MyApproveRese);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+
+            // for SRNs
+            try {
+              const CountMyRequestSRN = await axios.get('http://localhost:8081/CountRequeseSRN/' + EmailUser);
+              SetRequestSRN(CountMyRequestSRN.data.MyReqRese);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
