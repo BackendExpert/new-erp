@@ -25,6 +25,14 @@ const ApproveSRN = () => {
         SetButtonValue(clickValue)   
     }
 
+    // get srn Data to approve
+    const [ApproveSRN, SetApproveSRN] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/ApproveSRN')
+        .then(res => SetApproveSRN(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
