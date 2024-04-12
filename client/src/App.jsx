@@ -81,6 +81,7 @@ import AssignSRNNo from "./components/SRN/AssignSRNNo"
 import ApproveSRN from "./components/SRN/ApproveSRN"
 import SetStatus from "./components/SRN/SetStatus"
 import AddWorkReq from "./components/WorkRequest/AddWorkReq"
+import HodRecWork from "./components/WorkRequest/HodRecWork"
 
 
 export default function App() {
@@ -245,6 +246,7 @@ export default function App() {
 
         {/* Work Requests */}
         <Route path="/AddWorkReq" element={<PrivateRoute><AddWorkReq /></PrivateRoute>} />
+        <Route path="/HodRecWork" element={<PrivateRoute><HodRecWork /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
