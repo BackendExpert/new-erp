@@ -79,6 +79,8 @@ const AddSRN = () => {
         .catch(err => console.log(err))
       }, [])
 
+      const MyDiviSRN = MyDivision.title
+
     if(RoleUser !== null){
         return (
             <div className="bg-gray-200 py-4">
@@ -129,7 +131,7 @@ const AddSRN = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Division : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={empUsername}/>      
+                                    value={MyDiviSRN}/>      
                                 </div>
                             </div>
                         </form>

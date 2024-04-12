@@ -3813,6 +3813,9 @@ app.get('/MyDivisionSRN/:id', (req, res) => {
             return res.json({Error: "ERROR on SERVER"})
         }
         else{
+            if(result.length === 0){
+                return true
+            }
             const diviData = "SELECT title FROM division WHERE did = ?"
             const did = result[0].dno
 
