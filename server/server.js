@@ -3874,7 +3874,7 @@ app.post('/CreateSRN/:id', (req, res) => {
     const sql = "INSERT INTO srn(Name, Email, Project, Division, RDate, srnType, PType, PIype, estimate, vote, HoDEmail, Description) VALUES (?)"
     const value = [
         req.body.empUsername,
-        req.body.UserEmail,
+        UserEmail,
         req.body.DataSRN.Project,
         req.body.MyDiviSRN,
         req.body.DataSRN.RDate,
@@ -3887,7 +3887,16 @@ app.post('/CreateSRN/:id', (req, res) => {
         req.body.DataSRN.Description
     ]
 
-    console.log(value)
+    // console.log(value)
+
+    connection.query(sql, [value], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
 })
 
 // --------------------------------------- SRN End -----------------------------
