@@ -3847,7 +3847,7 @@ app.get('/SRNHODEmail/:id', (req, res) => {
             if(result.length === 0){
                 return true
             }
-            const diviData = "SELECT title FROM division WHERE did = ?"
+            const diviData = "SELECT email FROM division WHERE did = ?"
             const did = result[0].dno
             // console.log(did)
 
