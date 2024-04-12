@@ -183,7 +183,7 @@ const AddSRN = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Purchase Type : </label>
                                     <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
-                                        onChange={e => SetDataSRN({...DataSRN, HoDEmail:e.target.value})}>
+                                        onChange={e => SetDataSRN({...DataSRN, PType:e.target.value})}>
                                             <option>Select Option</option>
                                             <option value="Local">Local</option>
                                             <option value="Foreign">Foreign</option>
@@ -193,7 +193,7 @@ const AddSRN = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Item Type : </label>
                                     <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
-                                        onChange={e => SetAddRese({...AddRese, HoDEmail:e.target.value})}>
+                                        onChange={e => SetDataSRN({...DataSRN, PIype:e.target.value})}>
                                             <option>Select Option</option>
                                             <option value="Equipment Maintenance">Equipment Maintenance</option>
                                             <option value="Lab Equipment">Lab Equipment</option>
@@ -206,12 +206,12 @@ const AddSRN = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Estimate : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    />      
+                                    onChange = {e => SetDataSRN({...DataSRN, estimate:e.target.value})} />      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Vote : </label>
                                     <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
-                                        onChange={e => SetAddRese({...AddRese, HoDEmail:e.target.value})}>
+                                        onChange={e => SetDataSRN({...DataSRN, vote:e.target.value})}>
                                             <option>Select Option</option>
                                             <option value="Generated Funds">Generated Funds</option>
                                             <option value="Grant">Grant</option>
@@ -222,7 +222,7 @@ const AddSRN = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Specification : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    />      
+                                    onChange = {e => SetDataSRN({...DataSRN, Description:e.target.value})} />      
                                 </div>
                             </div>
                         </form>
