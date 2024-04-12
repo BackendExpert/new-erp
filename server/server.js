@@ -3998,19 +3998,17 @@ app.post('/HodRejectSRN/:id', (req, res) => {
 // CountLABSrns
 app.get('/CountLABSrns', (req, res) => {
    
-    const sql = "SELECT COUNT(SID) AS SRNLab FROM srn WHERE Status = ?";
+    const sql = "SELECT COUNT(RID) AS ReceSRN FROM reservations WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Recommend"
-    
     connection.query(sql, [status], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
         return;
       }
-
-      res.json({ SRNLab: results[0].SRNLab }); // Send count in JSON format
-      
+  
+      res.json({ ReceSRN: results[0].ReceSRN }); // Send count in JSON format
     });
 })
 
