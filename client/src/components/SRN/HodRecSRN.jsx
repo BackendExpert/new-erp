@@ -116,6 +116,25 @@ const HodRecSRN = () => {
                                             )
                                         }
                                     }
+                                    else if(buttonValue === "Denied"){
+                                        if(hodSrn.Status === "Reject"){
+                                            <tr key={index}>
+                                                <td className='px-6 py-4 font-bold'>{hodSrn.SID}</td>
+                                                <td className='px-6 py-4 font-bold'>{hodSrn.Name}</td>
+                                                <td className='px-6 py-4 font-bold'>{hodSrn.Email}</td>
+                                                <td className='px-6 py-4 font-bold'>{hodSrn.Rdate}</td>
+                                                <td className='px-6 py-4 font-bold'>{hodSrn.srnType}</td>
+                                                <td className='px-6 py-4 font-bold'>{hodSrn.PType}</td>
+                                                <td className='px-6 py-4 font-bold'>{hodSrn.PIype}</td>
+                                                <td className='px-6 py-4 font-bold'>{hodSrn.estimate}</td>
+                                                <td className='px-6 py-4 font-bold'>{hodSrn.vote}</td>
+                                                <td className='px-6 py-4 font-bold'>{hodSrn.description}</td>
+                                                <td className='px-6 py-4 font-bold'>
+                                                    <span className="py-2 px-4 rounded bg-red-500 text-white">{hodSrn.Status}</span>
+                                                </td> 
+                                            </tr>
+                                        }
+                                    }
                                 })
                             }
                         </tbody>
