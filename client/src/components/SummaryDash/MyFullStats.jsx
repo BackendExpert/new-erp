@@ -132,12 +132,12 @@ const MyFullStats = () => {
             }
 
             // for SRNs
-            // try {
-            //   const CountMyRequestSRN = await axios.get('http://localhost:8081/CountRequeseSRN/' + EmailUser);
-            //   SetRequestSRN(CountMyRequestSRN.data.MyReqRese);
-            // } catch (error) {
-            //   console.error('Error fetching data:', error);
-            // }
+            try {
+              const CountMyRequestSRN = await axios.get('http://localhost:8081/CountRequeseSRN/' + EmailUser);
+              SetRequestSRN(CountMyRequestSRN.data.MyReqRese);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
 
           }
           fetchData();
