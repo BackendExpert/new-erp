@@ -36,6 +36,32 @@ const RecWork = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleRece = (id) => {
+        axios.post('http://localhost:8081/WorkRece/'+ id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Work Request Has been Recommend")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
+    const headleDenied = (id) => {
+        axios.post('http://localhost:8081/WorkReject/'+ id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Work Request Has been Recommend")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
