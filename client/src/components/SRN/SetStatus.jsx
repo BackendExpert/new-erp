@@ -31,7 +31,7 @@ const SetStatus = () => {
     const headleSubmit = (e) => {
         e.preventDefault(); 
 
-        axios.post('http://localhost:8081/SetCurrentStatusSRN/' + id)
+        axios.post('http://localhost:8081/SetCurrentStatusSRN/' + id, CurrentStatus)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Status Set Successfull")
@@ -66,7 +66,7 @@ const SetStatus = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Set Status</label>
                                     <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
-                                        onChange={e => SetDataSRN({...DataSRN, PIype:e.target.value})}>
+                                        onChange={e => SetCurrentStatus({...CurrentStatus, Status:e.target.value})}>
                                             <option>Select Option</option>
                                             <option value="In Progress">In Progress</option>
                                             <option value="Completed">Completed</option>
@@ -74,6 +74,9 @@ const SetStatus = () => {
                                             <option value="Cancelled">Cancelled</option>
                                     </select>  
                                 </div>
+                            </div>
+                            <div className="">
+                                <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Set Status</button>
                             </div>
                         </form>
                     </div>
