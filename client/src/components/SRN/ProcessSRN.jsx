@@ -68,7 +68,8 @@ const ProcessSRN = () => {
                               <th scope='col' className='px-6 py-3'>Item Type</th>
                               <th scope='col' className='px-6 py-3'>Estimate</th>
                               <th scope='col' className='px-6 py-3'>Vote</th>
-                              <th scope='col' className='px-6 py-3'>Description</th>                              
+                              <th scope='col' className='px-6 py-3'>Description</th>      
+                              <th scope='col' className='px-6 py-3'>SRN Request Number</th>                          
                               <th scope='col' className='px-6 py-3'>Status</th>
                               <th scope='col' className='px-6 py-3'>Action</th>                                        
                             </tr>
@@ -92,6 +93,7 @@ const ProcessSRN = () => {
                                                     <td className='px-6 py-4 font-bold'>{labSrn.estimate}</td>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.vote}</td>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.ReqNo}</td>
                                                     <td className='px-6 py-4 font-bold'>
                                                         {
                                                             (() => {
@@ -150,6 +152,7 @@ const ProcessSRN = () => {
                                                     <td className='px-6 py-4 font-bold'>{labSrn.estimate}</td>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.vote}</td>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.ReqNo}</td>
                                                     <td className='px-6 py-4 font-bold'>
                                                         <span className="py-2 px-4 rounded bg-green-500 text-white">{labSrn.Status}</span>
                                                     </td>
