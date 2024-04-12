@@ -3922,7 +3922,7 @@ app.post('/CreateSRN/:id', (req, res) => {
 app.get('/CountSRNHOD/:id', (req, res) => {
     const Email = req.params.id;
     
-    const sql = "SELECT COUNT(ID) AS HODSRN FROM srn WHERE Status = ? && HoDEmail = ?";
+    const sql = "SELECT COUNT(SID) AS HODSRN FROM srn WHERE Status = ? && HoDEmail = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const is_aprove = "Request"
     
