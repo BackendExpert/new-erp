@@ -15,7 +15,13 @@ const HodRecSRN = () => {
         SetButtonValue(clickValue)   
     }
 
-    
+    // get Request SRN accrding to login HOD user
+    const [ReqHoDSRN, SetReqHoDSRN] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/HodRecSRN/' + EmailUser)
+        .then(res => SetReqHoDSRN(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
     if(RoleUser === "HOD"){
         return (
