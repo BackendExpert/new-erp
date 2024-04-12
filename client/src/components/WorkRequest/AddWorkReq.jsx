@@ -91,8 +91,22 @@ const AddWorkReq = () => {
 
     //   send data
     const [workReq, SetWorkreq] = useState({
-        
+        Name:'',
+        Email:'',
+        Project:'',
+        Division:'',
+        RDate:'',
+        WType:'',
+        HoDEmail:'',
+        SEmail:'',
+        Description:''
     })
+
+        const headleSubmit = (e) => {
+            e.preventDefault(); 
+
+            axios.post('http://localhost:8081/CreateWork/' + EmailUser, {workReq} )
+        }
 
       if(RoleUser !== null){
         return (
@@ -116,22 +130,22 @@ const AddWorkReq = () => {
                     </div>
 
                     <div className="my-4">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-3 gap-4">
                                 <div className="my-2">
                                     <label htmlFor="">Employee Name : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={empUsername} onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
+                                    value={empUsername} onChange = {e => SetWorkreq({...workReq, Name:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Employee Email : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={EmailUser} onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
+                                    value={EmailUser} onChange = {e => SetWorkreq({...workReq, Email:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Project : </label>
                                     <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
-                                        onChange={e => SetDataSRN({...DataSRN, Project:e.target.value})}>
+                                        onChange={e => SetWorkreq({...workReq, Project:e.target.value})}>
                                             <option>Select Option</option>
                                             {
                                                 ProjectData.map((MyProject) => {
@@ -145,17 +159,17 @@ const AddWorkReq = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Divison : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={MyDiviSRN} onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
+                                    value={MyDiviSRN} onChange = {e => SetWorkreq({...workReq, Division:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Date : </label>
                                     <input type="date" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
+                                    onChange = {e => SetWorkreq({...workReq, RDate:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Work Type : </label>
                                     <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
-                                        onChange={e => SetDataSRN({...DataSRN, Project:e.target.value})}>
+                                        onChange={e => SetWorkreq({...workReq, WType:e.target.value})}>
                                             <option>Select Option</option>
                                             <option value="Equipment Maintenance">Equipment Maintenance</option>
                                             <option value="Computer Repair">Computer Repair</option>
@@ -167,17 +181,17 @@ const AddWorkReq = () => {
                                 <div className="my-2">
                                     <label htmlFor="">HOD Email : </label>
                                     <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={SRNHOD} onChange = {e => SetDataSRN({...DataSRN, RDate:e.target.value})}/>      
+                                    value={SRNHOD} onChange = {e => SetWorkreq({...workReq, HoDEmail:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Responsible Officer's Email : </label>
                                     <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Responsible Officer's Email"
-                                    onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
+                                    onChange = {e => SetWorkreq({...workReq, SEmail:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Work Description : </label>
                                     <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Responsible Officer's Email"
-                                    onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
+                                    onChange = {e => SetWorkreq({...workReq, Description:e.target.value})}/>      
                                 </div>
                             </div>
                             <div className="">
