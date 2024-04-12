@@ -3788,7 +3788,18 @@ app.post('/HodRejectVehiRec/:id', (req, res) => {
 
 app.get('/GetProjectData/:id', (req, res) => {
     const UserEmail = req.params.id
-    const sql = "SELECT * FROM "
+    const sql = "SELECT * FROM project WHERE ra1 =? || ra2 =?"
+    const ra1 = UserEmail
+    const ra2 = UserEmail
+
+    connection.query(sql, [ra1, ra2], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 
