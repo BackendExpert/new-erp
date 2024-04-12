@@ -3871,7 +3871,7 @@ app.post('/CreateSRN/:id', (req, res) => {
     // console.log(UserEmail, req.body)
     // console.log(req.body.MyDiviSRN)
 
-    const sql = "INSERT INTO srn(Name, Email, Project, Division, RDate, srnType, PType, PIype, estimate, vote, HoDEmail, Description) VALUES (?)"
+    const sql = "INSERT INTO srn(Name, Email, project, division, Rdate, srnType, PType, PIype, estimate, vote, HoDEmail, description, Status) VALUES (?)"
     const value = [
         req.body.empUsername,
         UserEmail,
@@ -3884,19 +3884,20 @@ app.post('/CreateSRN/:id', (req, res) => {
         req.body.DataSRN.estimate,
         req.body.DataSRN.vote,
         req.body.SRNHOD,
-        req.body.DataSRN.Description
+        req.body.DataSRN.Description,
+        "Request"
     ]
 
-    // console.log(value)
+    console.log(value)
 
-    connection.query(sql, [value], (err, result) => {
-        if(err){
-            return res.json({Error: "ERROR on SERVER"})
-        }
-        else{
-            return res.json({Status: "Success"})
-        }
-    })
+    // connection.query(sql, [value], (err, result) => {
+    //     if(err){
+    //         return res.json({Error: "ERROR on SERVER"})
+    //     }
+    //     else{
+    //         return res.json({Status: "Success"})
+    //     }
+    // })
 })
 
 // --------------------------------------- SRN End -----------------------------
