@@ -42,6 +42,19 @@ const SetStatus = () => {
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
                                     value={srnRegNo}/>      
                                 </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Set Status</label>
+                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
+                                        onChange={e => SetDataSRN({...DataSRN, PIype:e.target.value})}>
+                                            <option>Select Option</option>
+                                            <option value="Equipment Maintenance">Equipment Maintenance</option>
+                                            <option value="Lab Equipment">Lab Equipment</option>
+                                            <option value="Chemical">Chemical</option>
+                                            <option value="Stationary">Stationary</option>
+                                            <option value="Gas">Gas</option>
+                                            <option value="General">General</option>
+                                    </select>  
+                                </div>
                             </div>
                         </form>
                     </div>
