@@ -13,11 +13,11 @@ const LabSide = () => {
         {name: "Purchase Orders",  link: "#", icon: <Icons name="pricetag" size="large"></Icons>}
     ]
   return (
-    <div className={`${openSide ? "w-72" : "w-20" } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-full pl-4 py-4 `}>
+    <div className={`${openSide ? "w-72" : "w-20" } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-auto pl-4 py-4 `}>
         <div className="py-2">
             <div className="flex">
             <div className="text-[#3B71CA] pt-1" onClick={() => SetSideOpen(!openSide)}><Icons size="large" name="menu"></Icons></div>
-                <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>Lab Manager</div>                    
+                <div className={`text-2xl pb-4 text-[#3B71CA] font-bold ${!openSide && 'scale-0'}`}>LabManager</div>                    
             </div>
             <div className={`pl-2 text-xl text-gray-400 duration-500 hover:text-[#3B71CA]`}>
                 <Link to={'/labManager'}>
