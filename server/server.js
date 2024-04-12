@@ -4331,7 +4331,7 @@ app.post('/SetCurrentStatusSRN/:id', (req, res) => {
 app.get('/CountMySRN/:id', (req, res) => {
     const CurrentEmail = req.params.id
     // console.log(CurrentEmail)
-    const sql = "SELECT COUNT(SID) AS myRese FROM srn WHERE Email = ?";
+    const sql = "SELECT COUNT(SID) AS mySRNview FROM srn WHERE Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
     connection.query(sql, [CurrentEmail], (error, results) => {
@@ -4341,7 +4341,7 @@ app.get('/CountMySRN/:id', (req, res) => {
         return;
       }
   
-      res.json({ myRese: results[0].myRese }); // Send count in JSON format
+      res.json({ mySRNview: results[0].mySRNview }); // Send count in JSON format
     });
 })
 
