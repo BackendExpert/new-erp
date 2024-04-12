@@ -153,17 +153,8 @@ const AddWorkReq = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Project : </label>
-                                    <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2" required
-                                        onChange={e => SetWorkreq({...workReq, Project:e.target.value})}>
-                                            <option>Select Option</option>
-                                            {
-                                                ProjectData.map((MyProject) => {
-                                                    return (
-                                                        <option value={MyProject.title}>{MyProject.title}</option>
-                                                    )
-                                                })
-                                            }
-                                    </select>
+                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Employee Name"
+                                    onChange = {e => SetWorkreq({...workReq, Email:e.target.value})}/> 
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Divison : </label>
