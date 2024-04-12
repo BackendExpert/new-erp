@@ -3995,6 +3995,11 @@ app.post('/HodRejectSRN/:id', (req, res) => {
     })
 })
 
+// CountLABSrns
+app.get('/CountLABSrns/:id', (req, res) => {
+    
+})
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
