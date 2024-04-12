@@ -3998,7 +3998,7 @@ app.post('/HodRejectSRN/:id', (req, res) => {
 // CountLABSrns
 app.get('/CountLABSrns', (req, res) => {
    
-    const sql = "SELECT COUNT(SID) AS LabSRNs FROM srn WHERE Status = ?";
+    const sql = "SELECT COUNT(SID) AS SRNLab FROM srn WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Recommend"
     
@@ -4009,7 +4009,7 @@ app.get('/CountLABSrns', (req, res) => {
         return;
       }
   
-      res.json({ LabSRNs: results[0].LabSRNs }); // Send count in JSON format
+      res.json({ SRNLab: results[0].SRNLab }); // Send count in JSON format
     });
 })
 
