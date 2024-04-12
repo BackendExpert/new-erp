@@ -3872,6 +3872,22 @@ app.post('/CreateSRN/:id', (req, res) => {
     // console.log(req.body.MyDiviSRN)
 
     const sql = "INSERT INTO srn(Name, Email, Project, Division, RDate, srnType, PType, PIype, estimate, vote, HoDEmail, Description) VALUES (?)"
+    const value = [
+        req.body.empUsername,
+        req.body.UserEmail,
+        req.body.DataSRN.Project,
+        req.body.MyDiviSRN,
+        req.body.DataSRN.RDate,
+        req.body.DataSRN.srnType,
+        req.body.DataSRN.PType,
+        req.body.DataSRN.PIype,
+        req.body.DataSRN.estimate,
+        req.body.DataSRN.vote,
+        req.body.SRNHOD,
+        req.body.DataSRN.Description
+    ]
+
+    console.log(value)
 })
 
 // --------------------------------------- SRN End -----------------------------
