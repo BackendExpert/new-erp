@@ -133,12 +133,12 @@ const AddSRN = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Employee Name : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={empUsername}/>      
+                                    value={empUsername} onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Employee Email : </label>
                                     <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={EmailUser}/>      
+                                    value={EmailUser} onChange = {e => SetDataSRN({...DataSRN, Email:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Project : </label>
