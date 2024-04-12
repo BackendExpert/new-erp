@@ -15,7 +15,7 @@ const DriverSide = () => {
         {name: "Leave",  link: "/AddLeave", icon: <Icons name="calendar" size="large"></Icons>},
         {name: "Reservations",  link: "/AddReservation", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Work Requests",  link: "#", icon: <Icons name="receipt" size="large"></Icons>},
-        {name: "SRN Requests",  link: "#", icon: <Icons name="book" size="large"></Icons>},
+        {name: "SRN Requests",  link: "/AddSRN", icon: <Icons name="book" size="large"></Icons>},
         {name: "Gatepass Requests",  link: "#", icon: <Icons name="enter" size="large"></Icons>},
         {name: "Increment Requests",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
         {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
