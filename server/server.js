@@ -4573,7 +4573,7 @@ app.post('/HodWorkReject/:id', (req, res) => {
                         from: process.env.EMAIL_USER,
                         to: myEmail,
                         subject: 'Notification: The Work Request',
-                        text: 'The Work Request has been Recommended By Head of the Dep', 
+                        text: 'The Work Request has been Rejected By Head of the Dep', 
                     };
         
                     transporter.sendMail(mailOptions, function(error, info){
