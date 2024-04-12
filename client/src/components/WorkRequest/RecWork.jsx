@@ -49,6 +49,8 @@ const RecWork = () => {
                               <th scope='col' className='px-6 py-3'>WorkRequest ID</th>
                               <th scope='col' className='px-6 py-3'>Name</th>
                               <th scope='col' className='px-6 py-3'>Email</th>
+                              <th scope='col' className='px-6 py-3'>Project</th>
+                              <th scope='col' className='px-6 py-3'>Division</th>
                               <th scope='col' className='px-6 py-3'>Date</th>                                    
                               <th scope='col' className='px-6 py-3'>Work Type</th>
                               <th scope='col' className='px-6 py-3'>Supervisor</th>
