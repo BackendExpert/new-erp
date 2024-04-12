@@ -76,6 +76,7 @@ import HODRecLeaves from "./components/Leaves/HODRecLeaves"
 import HODRecRese from "./components/Reservation/HODRecRese"
 import AddSRN from "./components/SRN/AddSRN"
 import HodRecSRN from "./components/SRN/HodRecSRN"
+import ProcessSRN from "./components/SRN/ProcessSRN"
 
 
 export default function App() {
@@ -233,6 +234,7 @@ export default function App() {
         {/* SRNs */}
         <Route path="/AddSRN" element={<PrivateRoute><AddSRN /></PrivateRoute>} />
         <Route path="/HodRecSRN" element={<PrivateRoute><HodRecSRN /></PrivateRoute>} />
+        <Route path="/ProcessSRN" element={<PrivateRoute><ProcessSRN /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
