@@ -94,7 +94,7 @@ const AddSRN = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Employee Email : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={empUsername}/>      
+                                    value={EmailUser}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Project : </label>
