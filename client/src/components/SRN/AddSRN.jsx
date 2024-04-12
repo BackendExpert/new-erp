@@ -74,7 +74,9 @@ const AddSRN = () => {
                     </div>
                     <div className="my-4">
                         <form>
-                            
+                            <div className="lg:grid grid-cols-3 gap-4">
+                                
+                            </div>
                         </form>
                     </div>
                 </div>
