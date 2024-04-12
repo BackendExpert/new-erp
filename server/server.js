@@ -2040,9 +2040,9 @@ app.post('/AddProject', (req, res) =>{
     connection.query(checkdivison, [req.body.divno], (err, result) => {
         if(err) throw err
 
-        if(result.length == 0){
-            return res.json({Error: "Please Enter Valied Division Number, The Added Division Number is not exist"})
-        }
+        // if(result.length == 0){
+        //     return res.json({Error: "Please Enter Valied Division Number, The Added Division Number is not exist"})
+        // }
         else{
             //check hod is exists on db
             const checkhod = "SELECT * FROM users WHERE email = ?"
