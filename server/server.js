@@ -4110,7 +4110,40 @@ app.post('/LabApproveSRN/:id', (req, res) => {
     const SRNnum = req.body.id
 
     const sql = "UPDATE srn SET Status =? WHER SID = ?"
-    const Status = ""
+    const Status = "LabApprove"
+
+    connection.query(sql, [Status, SRNnum], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            const getUserEmail = "SELECT * FROM SRN WHERE SID = ?"
+            connection.query(getUserEmail, [SRNnum], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    const myEmail = result[0].Email
+
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: myEmail,
+                        subject: 'Notification: The SRN Request',
+                        text: 'The SRN Request has been Approve By Lab Manager', 
+                    };
+        
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
+                }
+            })
+        }
+    })
 })
 
 // --------------------------------------- SRN End -----------------------------
