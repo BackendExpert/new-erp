@@ -41,6 +41,7 @@ const SummaryDash = () => {
   const [HODRecRese, SetHODRecRese] = useState(0);
   const [CountScientist, SetCountScientist] = useState(0);
   const [CountRA, SetCountRA] = useState(0);
+  const [CountHODSRN, SetCountHODSRN] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -206,6 +207,13 @@ const SummaryDash = () => {
       try {
         const CountHodRA = await axios.get('http://localhost:8081/CountHodRA/' + EmailUser);
         SetCountRA(CountHodRA.data.HodRA);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+
+      try {
+        const HODSRNCount = await axios.get('http://localhost:8081/CountSRNHOD/' + EmailUser);
+        SetCountHODSRN(HODSRNCount.data.HodRA);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
