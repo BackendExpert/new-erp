@@ -3868,7 +3868,10 @@ app.get('/SRNHODEmail/:id', (req, res) => {
 app.post('/CreateSRN/:id', (req, res) => {
     const UserEmail = req.params.id
 
-    console.log(UserEmail, req.body)
+    // console.log(UserEmail, req.body)
+    // console.log(req.body.MyDiviSRN)
+
+    const sql = "INSERT INTO "
 })
 
 // --------------------------------------- SRN End -----------------------------
