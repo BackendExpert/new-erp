@@ -37,6 +37,20 @@ const HodRecSRN = () => {
         })
     }
 
+    // headleDenied
+    const headleDenied = (id) => {
+        axios.post('http://localhost:8081/HodRejectSRN/' +id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The SRN has been Rejected Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
