@@ -4030,7 +4030,10 @@ app.get('/ReseSRNs', (req, res) => {
 // SRNNoDate
 // assign SRN Request Number, CData
 
-app.post('/SRNNoDate', )
+app.post('/SRNNoDate/:id', (req, res) => {
+    const SRNID = req.params.id
+    console.log(SRNID)
+})
 
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
