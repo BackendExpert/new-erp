@@ -128,6 +128,9 @@ const ApproveSRN = () => {
                                             )
                                         }
                                     }
+                                    else if(buttonValue === "Reject"){
+                                        if(SRNapp.Status === "LabApprove")
+                                    }
                                 })
                             }
                         </tbody>
