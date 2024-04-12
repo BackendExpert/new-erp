@@ -3871,7 +3871,7 @@ app.post('/CreateSRN/:id', (req, res) => {
     // console.log(UserEmail, req.body)
     // console.log(req.body.MyDiviSRN)
 
-    const sql = "INSERT INTO "
+    const sql = "INSERT INTO srn(Name, Email, Project, Division, RDate, srnType, PType, PIype, estimate, vote, HoDEmail, Description) VALUES (?)"
 })
 
 // --------------------------------------- SRN End -----------------------------
