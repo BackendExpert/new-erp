@@ -23,6 +23,20 @@ const HodRecSRN = () => {
         .catch(err => console.log(err))
     }, [])
 
+    // headleRece
+    const headleRece = (id) => {
+        axios.post('http://localhost:8081/HodRecoSRN/' +id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The SRN has been Recommended")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
