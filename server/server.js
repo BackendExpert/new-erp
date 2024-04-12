@@ -4544,6 +4544,12 @@ app.post('/HodWorkApprove/:id', (req, res) => {
     })
 })
 
+// HodWorkReject
+
+app.post('/HodWorkReject/:id', (req, res) => {
+    
+})
+
 // ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
