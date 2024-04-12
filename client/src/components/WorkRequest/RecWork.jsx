@@ -27,10 +27,17 @@ const RecWork = () => {
     const HeadleButtonClick = (clickValue) => {
         SetButtonValue(clickValue)   
     }
+    if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
+        return (
+            <div>RecWork</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
 
-  return (
-    <div>RecWork</div>
-  )
 }
 
 export default RecWork
