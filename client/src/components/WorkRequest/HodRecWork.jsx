@@ -38,6 +38,20 @@ const HodRecWork = () => {
         })
     }
 
+    // headleDenied
+    const headleDenied = (id) => {
+        axios.post('http://localhost:8081/HodWorkReject/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Work Request Has been Rejected")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
