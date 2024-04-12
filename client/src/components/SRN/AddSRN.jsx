@@ -225,6 +225,9 @@ const AddSRN = () => {
                                     onChange = {e => SetDataSRN({...DataSRN, Description:e.target.value})} />      
                                 </div>
                             </div>
+                            <div className="">
+                                <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request SRN</button>
+                            </div>
                         </form>
                     </div>
                 </div>
