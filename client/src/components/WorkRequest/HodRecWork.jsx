@@ -16,6 +16,14 @@ const HodRecWork = () => {
         SetButtonValue(clickValue)   
     }
 
+    // get work requests
+    const [hodWorkRec, SethodWorkRec] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/HodReseWorkReq/' + EmailUser)
+        .then(res => SethodWorkRec(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
