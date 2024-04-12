@@ -3937,6 +3937,22 @@ app.get('/CountSRNHOD/:id', (req, res) => {
     });
 })
 
+// HodRecSRN
+app.get('/HodRecSRN/:id', (req, res) => {
+    const HoDEmail = req.params.id
+    const sql = "SELECT * FROM srn WHERE Status = ? && HoDEmail = ?"
+    const status = "Request"
+    
+    connection.query(sql, [status, HoDEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
