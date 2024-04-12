@@ -157,17 +157,17 @@ const AddSRN = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Division : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={MyDiviSRN}/>      
+                                    value={MyDiviSRN} onChange = {e => SetDataSRN({...DataSRN, Division:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Date : </label>
                                     <input type="date" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    />      
+                                    onChange = {e => SetDataSRN({...DataSRN, RDate:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">HOD Email : </label>
                                     <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                    value={SRNHOD}/>      
+                                    value={SRNHOD} onChange = {e => SetDataSRN({...DataSRN, RDate:e.target.value})}/>      
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">SRN Type : </label>
