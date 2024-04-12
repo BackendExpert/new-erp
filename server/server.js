@@ -4103,6 +4103,16 @@ app.post('/SRNNoDate/:id', (req, res) => {
     })
 })
 
+// LabApproveSRN
+// Approve by LabManager
+
+app.post('/LabApproveSRN/:id', (req, res) => {
+    const SRNnum = req.body.id
+
+    const sql = "UPDATE srn SET Status =? WHER SID = ?"
+    const Status = ""
+})
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
