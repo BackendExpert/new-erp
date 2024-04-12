@@ -4214,6 +4214,53 @@ app.post('/SRNapprove/:id', (req, res) => {
     })
 })
 
+// SRNReject
+
+app.post('/SRNReject/:id', (req, res) => {
+    const SrnID = req.params.id
+    const sql = "UPDATE srn SET Status = ? WHERE SID = ?"
+
+    const status = "Reject"
+
+    connection.query(sql, [status, SrnID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on SERVER"})
+        }
+        else{
+            // get user
+            const userEmail = "SELECT * FROM srn WHERE SID = ?"
+            connection.query(sql, [SrnID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on SERVER"})
+                }
+                else{
+                    if(result.length === 0){
+                        return true
+                    }
+
+                    const myEmail = result[0].Email
+
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: myEmail,
+                        subject: 'Notification: The SRN Request',
+                        text: 'The SRN Request has been Reject', 
+                    };
+        
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
+                }
+            })
+        }
+    })
+})
+
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
