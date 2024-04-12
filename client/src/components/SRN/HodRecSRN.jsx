@@ -9,10 +9,18 @@ const HodRecSRN = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
-    
-  return (
-    <div>HodRecSRN</div>
-  )
+
+    if(RoleUser === "HOD"){
+        return (
+            <div>HodRecSRN</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
+
 }
 
 export default HodRecSRN
