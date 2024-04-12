@@ -4093,7 +4093,35 @@ app.post('/SRNNoDate/:id', (req, res) => {
                     return res.json({Error: "Error on Server"})
                 }
                 else{
-                    return res.json({Status: "Success"})
+                    const getEmail = "SELECT * FROM srn WHERE SID = ?"
+                    connection.query(getEmail, [SRNID], (err, result) => {
+                        if(err){
+                            return res.json({Error: "ERRROR on SERVER"})
+                        }
+                        else{
+                            if(result.length == 0){
+                                return true
+                            }
+
+                            
+                        }
+                    })
+
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: myEmail,
+                        subject: 'Notification: The SRN Request',
+                        text: 'The SRN Request has been Approve By Lab Manager', 
+                    };
+        
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
                 }
             }) 
         }
