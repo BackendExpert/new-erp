@@ -161,7 +161,7 @@ const ProcessSRN = () => {
                                                         (() => {
                                                             if(labSrn.Status === "Approve"){
                                                                 return(
-                                                                    <Link>
+                                                                    <Link to={'/SetStatus/' + labSrn.SID}>
                                                                         <button className="ml-2 border border-blue-500 rounded py-2 px-4 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Set Status</button> 
                                                                     </Link>
                                                                 )   
