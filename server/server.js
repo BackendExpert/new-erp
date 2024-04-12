@@ -4371,7 +4371,7 @@ app.get('/CountRejectSRN/:id', (req, res) => {
     const UserEmail = req.params.id;
     const sql = "SELECT COUNT(SID) AS MyReqRese FROM srn WHERE Status = ? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = "Request"
+    const status = "Reject"
 
     connection.query(sql, [status, UserEmail], (error, results) => {
     if (error) {
