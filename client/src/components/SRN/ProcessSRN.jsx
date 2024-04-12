@@ -62,7 +62,7 @@ const ProcessSRN = () => {
                                 ReceSrn.map((labSrn, index) => {
                                     if(buttonValue === "Recommend"){
                                         if(labSrn.Status === "Recommend"){
-                                            
+                                            <td className='px-6 py-4 font-bold'>{labSrn.SID}</td>
                                         }
                                     }
                                 })
