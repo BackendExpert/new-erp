@@ -46,7 +46,6 @@ const HodRecSRN = () => {
                             <tr className='text-blue-500'>
                               <th scope='col' className='px-6 py-3'>SRN ID</th>
                               <th scope='col' className='px-6 py-3'>Name</th>
-                              <th scope='col' className='px-6 py-3'>Designation</th>                            
                               <th scope='col' className='px-6 py-3'>Email</th>
                               <th scope='col' className='px-6 py-3'>Date</th>                                    
                               <th scope='col' className='px-6 py-3'>SRN Type</th>
@@ -66,7 +65,16 @@ const HodRecSRN = () => {
                                         if(hodSrn.Status === "Request"){
                                             return (
                                                 <tr key={index}>
-
+                                                    <td className='px-6 py-4 font-bold'>{hodSrn.SID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodSrn.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodSrn.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodSrn.Rdate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodSrn.srnType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodSrn.PType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodSrn.PIype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodSrn.estimate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodSrn.vote}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodSrn.description}</td>
                                                 </tr>
                                             )
                                         }
