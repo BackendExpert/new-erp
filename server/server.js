@@ -4400,5 +4400,17 @@ app.get('/UserViewSRN/:id', (req, res) => {
 })
 
 // --------------------------------------- SRN End -----------------------------
+
+
+// --------------------------------------- Work Request Start -----------------------
+
+// CreateWork
+
+app.post('/CreateWork/:id', (req, res) => {
+    const userEmail = req.params.id
+    console.log(userEmail, req.body)
+})
+
+// ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
