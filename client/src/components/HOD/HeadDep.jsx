@@ -40,10 +40,8 @@ const HeadDep = ({children}) => {
                     <SummaryDash />               
                 </div>  
                 <DashFooter />        
-            </div>
-            
-           </div> 
-          
+            </div>            
+           </div>           
       </div>
     )
   }
