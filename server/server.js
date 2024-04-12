@@ -4409,6 +4409,19 @@ app.get('/UserViewSRN/:id', (req, res) => {
 app.post('/CreateWork/:id', (req, res) => {
     const userEmail = req.params.id
     console.log(userEmail, req.body)
+
+    const sqlcheck = "SELECT * FROM users WHERE email = ?"
+    connection.query(sqlcheck, [req.body.workReq.SEmail], (err, result) => {
+        if(err) throw err
+
+        if(result.length === 0){
+            return res.json({Error: "Responsible Officer's Email Not Found in The System"})
+        }
+        else{
+            // inset data
+            const sql = "INSERT INTO "
+        }
+    })
 })
 
 // ----------------------------------------- Work Request End ---------------------
