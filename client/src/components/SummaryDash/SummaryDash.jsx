@@ -381,7 +381,7 @@ const SummaryDash = () => {
             }
             //  for HOD
             if(RoleUser === "HOD"){
-              if(data.id === 22 || data.id === 23 || data.id === 24 || data.id === 25){
+              if(data.id === 22 || data.id === 23 || data.id === 24 || data.id === 25 || data.id === 26){
                 return (
                   <div className="">
                       <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
