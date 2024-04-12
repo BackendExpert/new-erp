@@ -4498,6 +4498,14 @@ app.get('/HodReseWorkReq/:id', (req, res) => {
     })
 })
 
+// HodWorkApprove
+
+app.get('/HodWorkApprove/:id', (req, res) => {
+    const workID = req.params.id
+
+    
+})
+
 // ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
