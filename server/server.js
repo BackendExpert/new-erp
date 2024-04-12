@@ -3998,7 +3998,7 @@ app.post('/HodRejectSRN/:id', (req, res) => {
 // CountLABSrns
 app.get('/CountLABSrns', (req, res) => {
    
-    const sql = "SELECT COUNT(RID) AS ReceSRN FROM srn WHERE Status = ?";
+    const sql = "SELECT COUNT(SID) AS ReceSRN FROM srn WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Recommend"
     connection.query(sql, [status], (error, results) => {
