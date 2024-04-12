@@ -4500,7 +4500,7 @@ app.get('/HodReseWorkReq/:id', (req, res) => {
 
 // HodWorkApprove
 
-app.get('/HodWorkApprove/:id', (req, res) => {
+app.post('/HodWorkApprove/:id', (req, res) => {
     const workID = req.params.id
 
     const sql = "UPDATE workrequest SET Status = ? WHERE WID =?"
