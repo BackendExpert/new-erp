@@ -79,6 +79,8 @@ const ApproveSRN = () => {
                                                     <td className='px-6 py-4 font-bold'>{SRNapp.SID}</td>
                                                     <td className='px-6 py-4 font-bold'>{SRNapp.Name}</td>
                                                     <td className='px-6 py-4 font-bold'>{SRNapp.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.project}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.division}</td>
                                                     <td className='px-6 py-4 font-bold'>{SRNapp.Rdate}</td>
                                                     <td className='px-6 py-4 font-bold'>{SRNapp.srnType}</td>
                                                     <td className='px-6 py-4 font-bold'>{SRNapp.PType}</td>
@@ -86,6 +88,7 @@ const ApproveSRN = () => {
                                                     <td className='px-6 py-4 font-bold'>{SRNapp.estimate}</td>
                                                     <td className='px-6 py-4 font-bold'>{SRNapp.vote}</td>
                                                     <td className='px-6 py-4 font-bold'>{SRNapp.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>{SRNapp.ReqNo}</td>
                                                 </tr>
                                             )
                                         }
