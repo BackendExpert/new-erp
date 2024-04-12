@@ -327,6 +327,32 @@ const MyFullStats = () => {
                                 </tbody>
                             </table>
                         </div>
+
+                        <div className="text-xl mt-6 my-2 font-semibold">
+                        My Reservations 
+                      </div> 
+                      <div className="relative overflow-x-auto my-8">
+                            <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
+                                    <tr className='text-blue-500'>
+                                      <th scope='col' className='px-6 py-3'>Reservation ID</th>
+                                      <th scope='col' className='px-6 py-3'>Purpose</th>
+                                      <th scope='col' className='px-6 py-3'>Division No</th>                                        
+                                      <th scope='col' className='px-6 py-3'>Starting Time</th>
+                                      <th scope='col' className='px-6 py-3'>Date</th>
+                                      <th scope='col' className='px-6 py-3'>Arrival Date</th>
+                                      <th scope='col' className='px-6 py-3'>Route</th>
+                                      <th scope='col' className='px-6 py-3'>Vehicle Type</th>
+                                      <th scope='col' className='px-6 py-3'>Funding</th>
+                                      <th scope='col' className='px-6 py-3'>Passengers</th>
+                                      <th scope='col' className='px-6 py-3'>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
                 </div>
             </div>
         )
