@@ -52,6 +52,16 @@ const AddWorkReq = () => {
         } 
       }
 
+        // employee name
+      const [empName, SetEmpname] = useState('')
+      useEffect(() => {
+        axios.get('http://localhost:8081/EmpName/' + EmailUser)
+        .then(res => SetEmpname(res.data))
+        .catch(err => console.log(err))
+      }, [])
+      const empUsername = empName.username
+
+
       if(RoleUser !== null){
         return (
             <div className="bg-gray-200 py-4">
@@ -80,6 +90,11 @@ const AddWorkReq = () => {
                                     <label htmlFor="">Employee Name : </label>
                                     <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
                                     value={empUsername} onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Employee Email : </label>
+                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                                    value={EmailUser} onChange = {e => SetDataSRN({...DataSRN, Name:e.target.value})}/>      
                                 </div>
                             </div>
                         </form>
