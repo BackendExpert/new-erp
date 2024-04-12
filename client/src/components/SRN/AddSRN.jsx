@@ -108,7 +108,7 @@ const AddSRN = () => {
     })
 
     const headleSubmit = (e) => {
-        
+        e.preventDefault(); 
     }
 
     if(RoleUser !== null){
