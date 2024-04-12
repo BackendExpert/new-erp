@@ -80,6 +80,14 @@ const MyFullStats = () => {
           .then(res => SetViewRese(res.data))
           .catch(err => console.log(err))
         }, [])
+
+        // fetch srn data according to login user
+        const [ViewSRns, SetViewSRns] = useState([])
+        useEffect(() => {
+          axios.get('http://localhost:8081/UserViewSRN/' + EmailUser)
+          .then(res => SetViewSRns(res.data))
+          .catch(err => console.log(err))
+        }, [])
         
         //count Data
 
@@ -162,7 +170,7 @@ const MyFullStats = () => {
                     <hr className="mb-4" />
                     <button onClick={headleBack} className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
 
-                    <div className="lg:flex pl-2 my-4 my-2">
+                    <div className="lg:grid grid-cols-5 gap-3 my-4">
                         <div onClick={() => HeadleButtonClick('Requested Leaves')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           <div className="flex">
                             My Request Leaves 
