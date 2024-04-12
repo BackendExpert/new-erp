@@ -78,6 +78,24 @@ const ProcessSRN = () => {
                                                     <td className='px-6 py-4 font-bold'>{labSrn.estimate}</td>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.vote}</td>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{labSrn.Status}</span>
+                                                    </td> 
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <div className="flex">
+                                                            {
+                                                                (() => {
+                                                                    if(labSrn.Status !== "LabApprove"){
+
+                                                                    }
+                                                                    else{
+                                                                        
+                                                                    }
+                                                                })()
+                                                            }
+                                                        </div>
+                                                    </td> 
+
                                                 </tr>
                                             )
                                         }
