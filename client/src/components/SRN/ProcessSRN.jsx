@@ -121,7 +121,7 @@ const ProcessSRN = () => {
                                                                     }
                                                                     else{
                                                                         return (
-                                                                            <button  onClick={() => headleApprove(labSrn.SID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Approve</button> 
+                                                                            <button onClick={() => headleApprove(labSrn.SID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Approve</button> 
                                                                         )
                                                                     }
                                                                 })()
