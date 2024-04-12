@@ -4590,6 +4590,21 @@ app.post('/HodWorkReject/:id', (req, res) => {
     })
 })
 
+// WrokReqtoRec
+app.get('/WrokReqtoRec', (req, res) =>{
+    const sql = "SELECT * FROM workrequest WHERE Status = ?"
+    const status = "Hod Recommended"
+
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
