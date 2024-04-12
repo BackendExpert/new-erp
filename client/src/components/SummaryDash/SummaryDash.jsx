@@ -252,8 +252,9 @@ const SummaryDash = () => {
     {id: 23, name:"Reservation Requests" , value: <CountUp end={HODRecRese}/>, icons: <Icons name="car" size="large"/>, style:"hover:border-green-500 hover:text-green-600" },  
     {id: 24, name:"Scientists" , value: <CountUp end={CountScientist}/>, icons: <Icons name="search" size="large"/>, style:"hover:border-blue-500 hover:text-blue-600" },  
     {id: 25, name:"Research Assistants" , value: <CountUp end={CountRA}/>, icons: <Icons name="school" size="large"/>, style:"hover:border-purple-500 hover:text-purple-600" },  
+    {id: 25, name:"Research Assistants" , value: <CountUp end={CountRA}/>, icons: <Icons name="school" size="large"/>, style:"hover:border-blue-500 hover:text-blue-600" },  
   ]
-  
+  CountHODSRN
   // hod data
   const [GetHodData, SetHodData] = useState([])
   useEffect(() => {
