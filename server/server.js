@@ -4419,7 +4419,25 @@ app.post('/CreateWork/:id', (req, res) => {
         }
         else{
             // inset data
-            const sql = "INSERT INTO "
+            const sql = "INSERT INTO workrequest(Name, Email, project, division, RDate, WType, HoDEmail, SEmail, description, Status, create_at, update_at) VALUES (?)"
+            const create_at = new Date()
+            const update_at = new Date()
+            const value = [
+                req.body.empUsername,
+                userEmail,
+                req.body.workReq.Project,
+                req.body.MyDiviSRN,
+                req.body.workReq.RDate,
+                req.body.workReq.WType,
+                req.body.SRNHOD,
+                req.body.workReq.SEmail,
+                req.body.workReq.Description,
+                "Request",
+                create_at,
+                update_at
+            ]
+
+            console.log(value)
         }
     })
 })
