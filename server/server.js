@@ -4296,7 +4296,7 @@ app.post('/SRNReject/:id', (req, res) => {
 app.get('/SRNDataStatus/:id', (req, res) => {
     const srnID = req.params.id
 
-    console.log(srnID)
+    // console.log(srnID)
     const sql = "SELECT ReqNo FROM srn WHERE SID = ?"
     connection.query(sql, [srnID], (err, result) => {
         if(err){
