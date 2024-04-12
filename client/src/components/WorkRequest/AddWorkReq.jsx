@@ -159,6 +159,11 @@ const AddWorkReq = () => {
                                             <option value="Renovation">Renovation</option>
                                     </select>
                                 </div>
+                                <div className="my-2">
+                                    <label htmlFor="">HOD Email : </label>
+                                    <input type="email" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                                    value={SRNHOD} onChange = {e => SetDataSRN({...DataSRN, RDate:e.target.value})}/>      
+                                </div>
                             </div>
                         </form>
                     </div>
