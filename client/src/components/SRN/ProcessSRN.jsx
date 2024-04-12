@@ -24,7 +24,16 @@ const ProcessSRN = () => {
     }, [])
 
     const headleApprove = (id) => {
-
+        axios.post('http://localhost:8081/LabApproveSRN/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The SRN Has been Approve")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
 
     if(RoleUser === "Labmanager"){
