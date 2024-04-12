@@ -105,7 +105,16 @@ const AddWorkReq = () => {
         const headleSubmit = (e) => {
             e.preventDefault(); 
 
-            axios.post('http://localhost:8081/CreateWork/' + EmailUser, {workReq} )
+            axios.post('http://localhost:8081/CreateWork/' + EmailUser, {workReq,  SRNHOD, MyDiviSRN, empUsername})
+            .then(res => {
+                if(res.data.Status === "Success"){
+                    alert("The Work Request has been added to System Successful")
+                    headleBack()
+                }
+                else{
+                    alert(res.data.Error)
+                }
+            })
         }
 
       if(RoleUser !== null){
