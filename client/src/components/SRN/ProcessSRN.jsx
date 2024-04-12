@@ -134,6 +134,29 @@ const ProcessSRN = () => {
                                             )
                                         }
                                     }
+                                    else if(buttonValue === "LabApprove"){
+                                        if(labSrn.Status === "LabApprove"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.SID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.project}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.Rdate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.srnType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.PType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.PIype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.estimate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.vote}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-green-500 text-white">{labSrn.Status}</span>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
                                 })
                             }
                         </tbody>
