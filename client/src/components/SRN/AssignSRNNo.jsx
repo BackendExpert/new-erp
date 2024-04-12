@@ -1,6 +1,6 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const AssignSRNNo = () => {
@@ -10,6 +10,8 @@ const AssignSRNNo = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    const {id} = useParams()
+
     // send data to backend
     const [SRNnumber, SetSRNnumber] = useState({
         SRNNum: '',
@@ -18,7 +20,7 @@ const AssignSRNNo = () => {
 
     const headleSubmit = (e) =>{
         e.preventDefault(); 
-        axios.post('http://localhost:8081/SRNNoDate', SRNnumber)
+        axios.post('http://localhost:8081/SRNNoDate/' + id, SRNnumber)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("The SRN Number and Data added Successfull")
