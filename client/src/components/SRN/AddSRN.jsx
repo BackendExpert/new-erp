@@ -87,9 +87,24 @@ const AddSRN = () => {
                         <form>
                             <div className="lg:grid grid-cols-3 gap-4">
                                 <div className="my-2">
-                                <label htmlFor="">Employee Name : </label>
-                                  <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
-                                  value={empUsername}/>      
+                                    <label htmlFor="">Employee Name : </label>
+                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                                    value={empUsername}/>      
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Employee Email : </label>
+                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                                    value={empUsername}/>      
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Project : </label>
+                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                                    value={empUsername}/>      
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Division : </label>
+                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Employee Name"
+                                    value={empUsername}/>      
                                 </div>
                             </div>
                         </form>
