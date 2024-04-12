@@ -110,7 +110,11 @@ const AddSRN = () => {
                                         onChange={e => SetAddRese({...AddRese, HoDEmail:e.target.value})}>
                                             <option>Select Option</option>
                                             {
-
+                                                ProjectData.map((MyDivision) => {
+                                                    return (
+                                                        <option value={MyDivision.title}>{MyDivision.title}</option>
+                                                    )
+                                                })
                                             }
                                     </select>
                                 </div>
