@@ -3964,6 +3964,7 @@ app.post('/HodRecoSRN/:id', (req, res) => {
     const SRNID = req.params.id
 
     const sql = "UPDATE srn SET Status = ? WHERE SID = ?"
+
     const status = "Recommend"
 
     connection.query(sql, [status, SRNID], (err, result) => {
