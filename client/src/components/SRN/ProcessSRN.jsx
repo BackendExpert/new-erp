@@ -46,6 +46,8 @@ const ProcessSRN = () => {
                               <th scope='col' className='px-6 py-3'>SRN ID</th>
                               <th scope='col' className='px-6 py-3'>Name</th>
                               <th scope='col' className='px-6 py-3'>Email</th>
+                              <th scope='col' className='px-6 py-3'>Project</th>
+                              <th scope='col' className='px-6 py-3'>Division</th>
                               <th scope='col' className='px-6 py-3'>Date</th>                                    
                               <th scope='col' className='px-6 py-3'>SRN Type</th>
                               <th scope='col' className='px-6 py-3'>Purchase Type</th>
@@ -65,6 +67,17 @@ const ProcessSRN = () => {
                                             return(
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{labSrn.SID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.project}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.Rdate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.srnType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.PType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.PIype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.estimate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.vote}</td>
+                                                    <td className='px-6 py-4 font-bold'>{labSrn.description}</td>
                                                 </tr>
                                             )
                                         }
