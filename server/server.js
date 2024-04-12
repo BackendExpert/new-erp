@@ -4109,7 +4109,7 @@ app.post('/SRNNoDate/:id', (req, res) => {
 app.post('/LabApproveSRN/:id', (req, res) => {
     const SRNnum = req.body.id
 
-    const sql = "UPDATE srn SET Status =? WHER SID = ?"
+    const sql = "UPDATE srn SET Status =? WHERE SID = ?"
     const Status = "LabApprove"
 
     connection.query(sql, [Status, SRNnum], (err, result) => {
@@ -4117,29 +4117,33 @@ app.post('/LabApproveSRN/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            const getUserEmail = "SELECT * FROM SRN WHERE SID = ?"
+            const getUserEmail = "SELECT * FROM srn WHERE SID = ?"
             connection.query(getUserEmail, [SRNnum], (err, result) => {
                 if(err){
                     return res.json({Error: "Error on Server"})
                 }
                 else{
+                    if(result.length === 0){
+                        return true
+                    }
                     const myEmail = result[0].Email
+                    console.log(myEmail)
 
-                    var mailOptions = {
-                        from: process.env.EMAIL_USER,
-                        to: myEmail,
-                        subject: 'Notification: The SRN Request',
-                        text: 'The SRN Request has been Approve By Lab Manager', 
-                    };
+                    // var mailOptions = {
+                    //     from: process.env.EMAIL_USER,
+                    //     to: myEmail,
+                    //     subject: 'Notification: The SRN Request',
+                    //     text: 'The SRN Request has been Approve By Lab Manager', 
+                    // };
         
-                    transporter.sendMail(mailOptions, function(error, info){
-                        if (error) {
-                        console.log(error);
-                        } else {
-                        console.log('Email sent: ' + info.response);
-                        return res.json({Status: "Success"})
-                        }
-                    });
+                    // transporter.sendMail(mailOptions, function(error, info){
+                    //     if (error) {
+                    //     console.log(error);
+                    //     } else {
+                    //     console.log('Email sent: ' + info.response);
+                    //     return res.json({Status: "Success"})
+                    //     }
+                    // });
                 }
             })
         }
