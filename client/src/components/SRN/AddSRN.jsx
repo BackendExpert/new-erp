@@ -59,18 +59,23 @@ const AddSRN = () => {
                     <h1 className="text-xl font-semibold">New SRN</h1>        
                     <hr className="mb-4" />
                     <div className="flex">
-                    <button onClick={headleBack} className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
-                    {
-                        (() => {
-                        if(RoleUser === "HOD"){
-                            return (
-                            <Link>
-                                <button className="ml-4 border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Recommended Reservation</button>
-                            </Link>
-                            )
+                        <button onClick={headleBack} className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
+                        {
+                            (() => {
+                            if(RoleUser === "HOD"){
+                                return (
+                                <Link>
+                                    <button className="ml-4 border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Recommended Reservation</button>
+                                </Link>
+                                )
+                            }
+                            })()
                         }
-                        })()
-                    }
+                    </div>
+                    <div className="my-4">
+                        <form>
+                            
+                        </form>
                     </div>
                 </div>
             </div>
