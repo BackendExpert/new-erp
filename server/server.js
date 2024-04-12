@@ -3802,6 +3802,22 @@ app.get('/GetProjectData/:id', (req, res) => {
     })
 })
 
+// MyDivisionSRN
+app.get('/MyDivisionSRN/:id', (req, res) => {
+    const UserEmail = req.params.id
+    const sql = "SELECT * FROM employee WHERE email = ?"
+    const MyEmail = UserEmail
+
+    connection.query(sql, [MyEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            
+        }
+    })
+
+})
 
 // --------------------------------------- SRN End -----------------------------
 //check the server is working
