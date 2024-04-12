@@ -4369,7 +4369,7 @@ app.get('/CountRequeseSRN/:id', (req, res) => {
 
 app.get('/CountRejectSRN/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(SID) AS MyReqRese FROM srn WHERE Status = ? && Email = ?";
+    const sql = "SELECT COUNT(SID) AS MyRejectSRN FROM srn WHERE Status = ? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Reject"
 
@@ -4380,7 +4380,7 @@ app.get('/CountRejectSRN/:id', (req, res) => {
         return;
     }
 
-    res.json({ MyReqRese: results[0].MyReqRese }); // Send count in JSON format
+    res.json({ MyRejectSRN: results[0].MyRejectSRN }); // Send count in JSON format
     });
 })
 
