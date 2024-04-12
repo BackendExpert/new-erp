@@ -4547,7 +4547,47 @@ app.post('/HodWorkApprove/:id', (req, res) => {
 // HodWorkReject
 
 app.post('/HodWorkReject/:id', (req, res) => {
-    
+    const workID = req.params.id
+
+    const sql = "UPDATE workrequest SET Status = ? WHERE WID =?"
+    const status = "Hod Reject"
+
+    connection.query(sql, [status, workID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            const getUser = "SELECT * FROM workrequest WHERE WID = ?"
+            connection.query(getUser, [workID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    if(result.length === 0){
+                        return true
+                    }
+
+                    myEmail = result[0].Email
+
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: myEmail,
+                        subject: 'Notification: The Work Request',
+                        text: 'The Work Request has been Recommended By Head of the Dep', 
+                    };
+        
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
+                }
+            })
+        }
+    })
 })
 
 // ----------------------------------------- Work Request End ---------------------
