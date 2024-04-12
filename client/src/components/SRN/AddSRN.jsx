@@ -109,6 +109,17 @@ const AddSRN = () => {
 
     const headleSubmit = (e) => {
         e.preventDefault(); 
+
+        axios.post('http://localhost:8081/CreateSRN/' + EmailUser, {DataSRN, SRNHOD, MyDiviSRN, empUsername})
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The SRN Requset Added Successful")
+                headleBack()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
 
     if(RoleUser !== null){
