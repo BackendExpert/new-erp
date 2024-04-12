@@ -197,12 +197,10 @@ const AddSRN = () => {
                                     <select className="mt-2 w-full h-12 border border-blue-400 rounded pl-2"
                                         onChange={e => SetAddRese({...AddRese, HoDEmail:e.target.value})}>
                                             <option>Select Option</option>
-                                            <option value="Equipment Maintenance">Equipment Maintenance</option>
-                                            <option value="Lab Equipment">Lab Equipment</option>
-                                            <option value="Chemical">Chemical</option>
-                                            <option value="Stationary">Stationary</option>
-                                            <option value="Gas">Gas</option>
-                                            <option value="General">General</option>
+                                            <option value="Generated Funds">Generated Funds</option>
+                                            <option value="Grant">Grant</option>
+                                            <option value="Internal">Internal</option>
+                                            <option value="External">External</option>
                                     </select>
                                 </div>
                             </div>
