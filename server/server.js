@@ -4038,7 +4038,7 @@ app.post('/SRNNoDate/:id', (req, res) => {
         if(err) throw err
 
         if(result.length == 0){
-            
+            const sql = "UPDATE srn SET ReqNo = ?, "
         }
         else{
             return res.json({Error: "Entered SRN Request Numver Already exists"})
