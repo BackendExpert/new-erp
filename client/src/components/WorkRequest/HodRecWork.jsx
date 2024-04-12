@@ -64,6 +64,15 @@ const HodRecWork = () => {
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{hodWork.WID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodWork.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodWork.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodWork.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodWork.WType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodWork.SEmail}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodWork.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{hodWork.Status}</span>
+                                                    </td> 
                                                 </tr>
                                             )
                                         }
