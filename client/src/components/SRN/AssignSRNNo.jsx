@@ -38,7 +38,7 @@ const AssignSRNNo = () => {
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Completion Data</label>
-                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter SRN Number"
+                                    <input type="date" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter SRN Number"
                                     onChange = {e => SetSRNnumber({...SRNnumber, CData:e.target.value})}/>       
                                 </div>
                             </div>
