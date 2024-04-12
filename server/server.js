@@ -3890,14 +3890,28 @@ app.post('/CreateSRN/:id', (req, res) => {
 
     console.log(value)
 
-    // connection.query(sql, [value], (err, result) => {
-    //     if(err){
-    //         return res.json({Error: "ERROR on SERVER"})
-    //     }
-    //     else{
-    //         return res.json({Status: "Success"})
-    //     }
-    // })
+    connection.query(sql, [value], (err, result) => {
+        if(err){
+            return res.json({Error: "ERROR on SERVER"})
+        }
+        else{
+            var mailOptions = {
+                from: process.env.EMAIL_USER,
+                to: req.body.SRNHOD,
+                subject: 'Notification: The SRN Request',
+                text: 'The SRN Request is Waiting for recommended', 
+            };
+
+            transporter.sendMail(mailOptions, function(error, info){
+                if (error) {
+                console.log(error);
+                } else {
+                console.log('Email sent: ' + info.response);
+                return res.json({Status: "Success"})
+                }
+            });
+        }
+    })
 })
 
 // --------------------------------------- SRN End -----------------------------
