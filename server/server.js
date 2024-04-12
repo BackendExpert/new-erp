@@ -4321,7 +4321,7 @@ app.post('/SetCurrentStatusSRN/:id', (req, res) => {
             return res.json({Error: "Error on server"})
         }
         else{
-            
+            return res.json({Status: "Success"})
         }
     })
 })
