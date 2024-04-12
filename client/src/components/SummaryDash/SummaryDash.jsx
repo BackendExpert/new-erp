@@ -404,6 +404,7 @@ const SummaryDash = () => {
                 )
               }
             }
+            // for Labmanager
             if(RoleUser === "Labmanager"){
               if(data.id === 27){
                 return (
