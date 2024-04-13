@@ -4839,7 +4839,7 @@ app.get('/CountRejectWork/:id', (req, res) => {
 
 app.get('/CountApproveWork/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(WID) AS MyRejectWork FROM workrequest WHERE Status = ? || Status = ? || Status = ? || Completed = ? || Completed = ? && Email = ?";
+    const sql = "SELECT COUNT(WID) AS MyApproveWork FROM workrequest WHERE Status = ? || Status = ? || Status = ? || Completed = ? || Completed = ? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status1 = "Recommended"
     const status2 = "HodRecommended"
@@ -4854,7 +4854,7 @@ app.get('/CountApproveWork/:id', (req, res) => {
         return;
     }
 
-    res.json({ MyRejectWork: results[0].MyRejectWork }); // Send count in JSON format
+    res.json({ MyApproveWork: results[0].MyApproveWork }); // Send count in JSON format
     });
 })
 
