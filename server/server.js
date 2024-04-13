@@ -5015,6 +5015,10 @@ app.post('/HodApproveGatePass/:id', (req, res) =>{
                     return res.json({Error: "Error on Server"})
                 }
                 else{
+                    if(result.length == 0){
+                        return true
+                    }
+
                     const myEmail = result[0].Email
 
                     var mailOptions = {
@@ -5038,6 +5042,50 @@ app.post('/HodApproveGatePass/:id', (req, res) =>{
     })
 })
 
+
+// HodRejectGatePass
+app.post('/HodRejectGatePass/:id', (req, res) => {
+    const GatePassID = req.params.id
+
+    const sql = "UPDATE gatepass SET Status =? WHERE GID =?"
+    const status = "HODRecommended"
+    connection.query(sql, [status, GatePassID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            const userEmail = "SELECT * FROM gatepass WHERE GID = ?"
+            connection.query(userEmail, [GatePassID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    if(result.length == 0){
+                        return true
+                    }
+                    
+                    const myEmail = result[0].Email
+
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: myEmail,
+                        subject: 'Notification: The GatePass',
+                        text: 'The Gate Pass Has been Recommended by Head of the Dept.', 
+                    };
+        
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
+                }
+            })
+        }
+    })
+})
 
 // ------------------------------------------ GatePass End --------------------------------
 
