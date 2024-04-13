@@ -13,7 +13,7 @@ const navList = () => {
         {name: "Vehicle Reservations", link: "/AddReservation"},
         {name: "SRN Requests", link: "/AddSRN"},
         {name: "Work Requests", link: "/AddWorkReq"},
-        {name: "Gatepass Requests", link: ""},
+        {name: "Gatepass Requests", link: "/AddGatePass"},
         {name: "Submit Increment", link: ""},
         {name: "Logout", link: "", desc: "logout"}       
     ];
