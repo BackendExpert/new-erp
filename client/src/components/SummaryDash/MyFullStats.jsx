@@ -99,6 +99,7 @@ const MyFullStats = () => {
         const [RequestSRN, SetRequestSRN] = useState(0)
         const [RejectSRN, SetRejectSRN] = useState(0)
         const [RequestWork, SetRequestWork] = useState(0)
+        const [RejectWork, SetRejectWork] = useState(0)
 
         useEffect(() => {
           const fetchData = async () => {
@@ -159,6 +160,13 @@ const MyFullStats = () => {
             try {
               const CountMyRequestWork = await axios.get('http://localhost:8081/CountRequestWork/' + EmailUser);
               SetRequestWork(CountMyRequestWork.data.MyRequestWork);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+
+            try {
+              const CountMyRejectWork = await axios.get('http://localhost:8081/CountRejectWork/' + EmailUser);
+              SetRejectWork(CountMyRejectWork.data.MyRejectWork);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
