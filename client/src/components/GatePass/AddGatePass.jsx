@@ -53,6 +53,17 @@ const AddGatePass = () => {
       } 
     }
 
+        // employee name
+      const [empName, SetEmpname] = useState('')
+      useEffect(() => {
+        axios.get('http://localhost:8081/EmpName/' + EmailUser)
+        .then(res => SetEmpname(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
+      const empUsername = empName.username
+      const empRole = empName.role
+
     // send data to backend
     const [GatePass, SetGatePass] = useState({
         HoDEmail:'',
@@ -101,8 +112,12 @@ const AddGatePass = () => {
                 </div>
                 <div className="my-4">
                     <form>
-                        <div className="my-2">
-
+                        <div className="lg:grid grid-cols-3 gap-4">
+                            <div className="my-2">
+                                <label htmlFor="">Employee Name</label>
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                                value={empUsername} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
+                            </div>
                         </div>
                     </form>
                 </div>
