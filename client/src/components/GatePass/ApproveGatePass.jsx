@@ -48,7 +48,7 @@ const ApproveGatePass = () => {
     }
 
     const headleReject = (id) => {
-        axios.post('http://localhost:8081/ToApproveGate/' + id)
+        axios.post('http://localhost:8081/ToRejectGate/' + id)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("The Gate Pass has been Approve")
