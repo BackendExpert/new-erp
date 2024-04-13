@@ -4649,7 +4649,15 @@ app.post('/AssignReqNumberWork/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            
+            const sql = "UPDATE workrequest SET ReqNo = ? WHERE WID = ?"
+            connection.query(sql, [req.body.reqNo, workID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
         }
     })
 })
