@@ -4855,6 +4855,22 @@ app.get('/CountApproveWork/:id', (req, res) => {
     });
 })
 
+// UserViewWorReq
+
+app.get('/UserViewWorReq/:id', (req, res) => {
+    const userEmail = req.params.id
+
+    const sql = "SELECT * FROM workrequest WHERE Email = ?"
+    connection.query(sql, (userEmail), (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+             return res.json(result)
+        }
+    })
+})
+
 // ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
