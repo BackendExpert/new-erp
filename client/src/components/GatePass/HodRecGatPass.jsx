@@ -43,11 +43,16 @@ const HodRecGatPass = () => {
                               <th scope='col' className='px-6 py-3'>End Date</th>                                     
                               <th scope='col' className='px-6 py-3'>Purpose</th>
                               <th scope='col' className='px-6 py-3'>Start Location</th>
-                              <th scope='col' className='px-6 py-3'>End Location</th>     
+                              <th scope='col' className='px-6 py-3'>End Location</th> 
+                              <th scope='col' className='px-6 py-3'>Officer</th>
+                              <th scope='col' className='px-6 py-3'>OutSide Officer</th>        
                               <th scope='col' className='px-6 py-3'>Item</th>                                     
                               <th scope='col' className='px-6 py-3'>Item Type</th>
                               <th scope='col' className='px-6 py-3'>Quantity</th>
-                              <th scope='col' className='px-6 py-3'>End Location</th>                        
+                              <th scope='col' className='px-6 py-3'>Invo No</th> 
+                              <th scope='col' className='px-6 py-3'>Item Type</th>
+                              <th scope='col' className='px-6 py-3'>Quantity</th>
+                              <th scope='col' className='px-6 py-3'>Invo No</th>                            
                               <th scope='col' className='px-6 py-3'>Status</th>
                               <th scope='col' className='px-6 py-3'>Action</th>                                        
                             </tr>
