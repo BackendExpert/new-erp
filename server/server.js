@@ -4795,6 +4795,13 @@ app.post('/WrokComplete/:id', (req, res) => {
     })
 })
 
+
+// CountRequestWork
+
+app.get('/CountRequestWork/:id', (req, res) => {
+    
+})
+
 // ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
