@@ -160,7 +160,7 @@ const RecGatePass = () => {
                                         }
                                     }
                                     else if(buttonValue === "Recommend"){
-                                        if(getPass.Status === "Recommended"){
+                                        if(getPass.Status === "Recommended" || getPass.Status === "Approve"){
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{getPass.GID}</td>
@@ -179,6 +179,22 @@ const RecGatePass = () => {
                                                     <td className='px-6 py-4 font-bold'>{getPass.invno}</td>
                                                     <td className='px-6 py-4 font-bold'>
                                                         <span className="py-2 px-4 rounded bg-green-500 text-white">{getPass.Status}</span>
+                                                    </td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                       {
+                                                        (() => {
+                                                            if(getPass.Status === "Approve" && getPass.security === "Waiting"){
+                                                                return (
+                                                                    <button  onClick={() => headleRece(getPass.GID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Set Security Check</button> 
+                                                                )
+                                                            }
+                                                            else{
+                                                                return (
+                                                                    <span className="py-2 px-4 rounded bg-green-500 text-white">Security Check Successful</span>
+                                                                )
+                                                            }
+                                                        })()
+                                                       }
                                                     </td>
                                                 </tr>
                                             )
