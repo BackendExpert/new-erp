@@ -5003,8 +5003,8 @@ app.post('/HodApproveGatePass/:id', (req, res) =>{
     const GatePassID = req.params.id
 
     const sql = "UPDATE gatepass SET Status =? WHERE GID =?"
-    const status = "HOD"
-    connection.query(sql, [GatePassID, GatePassID], (err, result) => {
+    const status = "HODRecommended"
+    connection.query(sql, [status, GatePassID], (err, result) => {
         if(err){
             return res.json({Error: "Error on Server"})
         }
@@ -5016,6 +5016,8 @@ app.post('/HodApproveGatePass/:id', (req, res) =>{
                 }
                 else{
                     const myEmail = result[0].Email
+
+                    
                 }
             })
         }
