@@ -34,7 +34,7 @@ const ApproveGatePass = () => {
         .catch(err => console(err))
     }, [])
 
-    const Recommended = (id) => {
+    const headleApprove = (id) => {
         axios.post('http://localhost:8081/ToApproveGate/' + id)
         .then(res => {
             if(res.data.Status === "Success"){
