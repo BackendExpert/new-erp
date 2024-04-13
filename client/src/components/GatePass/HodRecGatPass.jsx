@@ -10,6 +10,11 @@ const HodRecGatPass = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    const [buttonValue, SetButtonValue] = useState()
+    const HeadleButtonClick = (clickValue) => {
+        SetButtonValue(clickValue)   
+    }
+
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
