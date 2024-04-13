@@ -23,6 +23,19 @@ const HodRecGatPass = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleRece = (id) => {
+        axios.post('http://localhost:8081/HodApproveGatePass/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Gate Pass has been recommended")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
@@ -88,8 +101,8 @@ const HodRecGatPass = () => {
                                                     </td>
                                                     <td className='px-6 py-4 font-bold'>
                                                         <div className="flex">
-                                                            <button  onClick={() => headleRece(hodWork.WID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button> 
-                                                            <button  onClick={() => headleDenied(hodWork.WID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
+                                                            <button  onClick={() => headleRece(hodGate.GID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button> 
+                                                            <button  onClick={() => headleDenied(hodGate.GID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
                                                         </div>
                                                     </td>
                                                 </tr>
