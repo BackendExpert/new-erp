@@ -327,7 +327,7 @@ const MyFullStats = () => {
                           
                           <div className="flex">
                             My Approve GatePass Request
-                            <p className="mx-4 text-xl font-bold"><CountUp end={RejectGate} /></p>
+                            <p className="mx-4 text-xl font-bold"><CountUp end={ApprveGate} /></p>
                           </div>                          
                         </div> 
                     </div>
