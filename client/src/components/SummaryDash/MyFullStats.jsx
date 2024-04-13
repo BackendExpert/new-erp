@@ -525,7 +525,19 @@ const MyFullStats = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    {
+                                      ViewWorkReq.map((workReq, index) => {
+                                        if(buttonValue === "Request Work"){
+                                          if(workReq.Status === "Request"){
+                                            return (
+                                              <tr key={index}>
+                                                
+                                              </tr>
+                                            )
+                                          }
+                                        }
+                                      })
+                                    }
                                 </tbody>
                             </table>
                         </div>                        
