@@ -4875,7 +4875,7 @@ app.get('/UserViewWorReq/:id', (req, res) => {
 app.get('/CountMyWork/:id', (req, res) => {
     const CurrentEmail = req.params.id
     // console.log(CurrentEmail)
-    const sql = "SELECT COUNT(SID) AS myWorkview FROM workrequest WHERE Email = ?";
+    const sql = "SELECT COUNT(WID) AS myWorkview FROM workrequest WHERE Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
     connection.query(sql, [CurrentEmail], (error, results) => {
