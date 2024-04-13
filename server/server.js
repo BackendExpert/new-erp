@@ -5353,5 +5353,24 @@ app.get('/CountRejectGatePass/:id', (req, res) => {
     });
 })
 
+// CountApproveGatePass
+
+app.get('/CountApproveGatePass/:id', (req, res) => {
+    const UserEmail = req.params.id;
+    const sql = "SELECT COUNT(GID) AS MyRejectGate FROM gatepass WHERE Status =? && Email = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "Approve"
+
+    connection.query(sql, [status, UserEmail], (error, results) => {
+    if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+    }
+
+    res.json({ MyRejectGate: results[0].MyRejectGate }); // Send count in JSON format
+    });
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
