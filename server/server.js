@@ -4640,27 +4640,27 @@ app.post('/WorkReject/:id', (req, res) => {
 // AssignReqNumberWork
 app.post('/AssignReqNumberWork/:id', (req, res) => {
     const WorkId = req.params.id
-    console.log(WorkId, req.body)
-    // const checkNo = "SELECT * FROM workrequest WHERE ReqNo = ?"
-    // connection.query(checkNo, [req.body.reqNo], (err, result) => {
-    //     if(err) throw err
+    // console.log(WorkId, req.body)
+    const checkNo = "SELECT * FROM workrequest WHERE ReqNo = ?"
+    connection.query(checkNo, [req.body.reqNo], (err, result) => {
+        if(err) throw err
 
-    //     if(result.length == 0){
-    //         const sql = "UPDATE workrequest SET ReqNo = ?, Status = ? WHERE WID = ?"
-    //         const status = "SetRegNo"
-    //         connection.query(sql, [req.body.reqNo, status, WorkId], (err, result) => {
-    //             if(err){
-    //                 return res.json({Error: "Error on Server"})
-    //             }
-    //             else{
-    //                 return res.json({Status: "Success"})
-    //             }
-    //         })
-    //     }
-    //     else{
-    //         return res.json({Error: "The Entered Request Number is Already exists"})
-    //     }
-    // })
+        if(result.length == 0){
+            const sql = "UPDATE workrequest SET ReqNo = ?, Status = ? WHERE WID = ?"
+            const status = "SetRegNo"
+            connection.query(sql, [req.body.reqNo, status, WorkId], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
+        }
+        else{
+            return res.json({Error: "The Entered Request Number is Already exists"})
+        }
+    })
 })
 
 // ----------------------------------------- Work Request End ---------------------
