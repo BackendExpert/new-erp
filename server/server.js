@@ -4694,7 +4694,21 @@ app.post('/ApproveWorkReq/:id', (req, res) =>{
                 else{
                    const mtEmail = result[0].Email
                    
-                   
+                   var mailOptions = {
+                    from: process.env.EMAIL_USER,
+                    to: myEmail,
+                    subject: 'Notification: The Work Request',
+                    text: 'The Work Request has been Approve', 
+                };
+    
+                transporter.sendMail(mailOptions, function(error, info){
+                    if (error) {
+                    console.log(error);
+                    } else {
+                    console.log('Email sent: ' + info.response);
+                    return res.json({Status: "Success"})
+                    }
+                });
                 }
             })
         }
