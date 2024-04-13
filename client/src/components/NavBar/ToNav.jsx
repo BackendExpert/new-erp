@@ -10,7 +10,7 @@ const ToNav = () => {
         {name: "Recommend Reservations", link: "/RecReservation"},
         {name: "Recommend WRs", link: "/RecWork"},
         {name: "Recommend SRN", link: "/AddSRN"},
-        {name: "Recommend Gatepass", link: ""},
+        {name: "Recommend Gatepass", link: "/RecGatePass"},
         {name: "Request Leave", link: "/AddLeave"},
         {name: "Reserve Vehicle", link: "/AddReservation"},
         {name: "Submit SRN", link: "/AddSRN"},
