@@ -200,7 +200,7 @@ const MyFullStats = () => {
 
             try {
               const CountRejectGate = await axios.get('http://localhost:8081/CountRejectGatePass/' + EmailUser);
-              SetRequstGate(CountRejectGate.data.MyRejectGate);
+              SetRejectGate(CountRejectGate.data.MyRejectGate);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
