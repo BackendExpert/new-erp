@@ -41,7 +41,24 @@ const RecGatePass = () => {
         axios.post('http://localhost:8081/GetPassRec/' + id)
         .then(res => {
             if(res.data.Status === "Success"){
-                alert("The Gate Pass has been ")
+                alert("The Gate Pass has been Recommended")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
+    const headleDenied = (id) => {
+        axios.post('http://localhost:8081/GetPassReject/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Gate Pass has been Recommended")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
             }
         })
     }
