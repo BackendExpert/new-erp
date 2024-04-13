@@ -141,7 +141,7 @@ const ApproveWork = () => {
                                         }
                                     }
                                     else if(buttonValue === "Approve"){
-                                        if(workApprove.Status === "Reject"){
+                                        if(workApprove.Status === "Approve"){
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{workApprove.WID}</td>
@@ -154,7 +154,7 @@ const ApproveWork = () => {
                                                     <td className='px-6 py-4 font-bold'>{workApprove.SEmail}</td>
                                                     <td className='px-6 py-4 font-bold'>{workApprove.description}</td>
                                                     <td className='px-6 py-4 font-bold'>
-                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{workApprove.Status}</span>
+                                                        <span className="py-2 px-4 rounded bg-green-500 text-white">{workApprove.Status}</span>
                                                     </td> 
                                                 </tr>
                                             )
