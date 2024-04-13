@@ -156,6 +156,12 @@ const MyFullStats = () => {
               console.error('Error fetching data:', error);
             }
 
+            try {
+              const CountMyRequestWork = await axios.get('http://localhost:8081/CountRequestWork/' + EmailUser);
+              SetRequestWork(CountMyRequestWork.data.MyRejectSRN);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
             
 
           }
