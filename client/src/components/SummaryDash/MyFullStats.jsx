@@ -98,6 +98,7 @@ const MyFullStats = () => {
         const [ApproveMyRese, SetApproveMyRese] = useState(0);
         const [RequestSRN, SetRequestSRN] = useState(0)
         const [RejectSRN, SetRejectSRN] = useState(0)
+        const [RequestWork, SetRequestWork] = useState(0)
 
         useEffect(() => {
           const fetchData = async () => {
@@ -227,7 +228,7 @@ const MyFullStats = () => {
 
                          {/* For WorkRequests */}
 
-                         <div onClick={() => HeadleButtonClick('Request Work')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                         <div onClick={() => HeadleButtonClick('Request Work')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
                             My Work Requests 
@@ -243,7 +244,7 @@ const MyFullStats = () => {
                           </div>                          
                         </div> 
 
-                        <div onClick={() => HeadleButtonClick('Approve Work')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Approve Work')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
                             My Reject SRN 
