@@ -78,7 +78,7 @@ const RecGatePass = () => {
                             {
                                 GatePasses.map((getPass, index) => {
                                     if(buttonValue === "Requested"){
-                                        if(getPass === "HODRecommended"){
+                                        if(getPass.Status === "HODRecommended"){
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{getPass.GID}</td>
