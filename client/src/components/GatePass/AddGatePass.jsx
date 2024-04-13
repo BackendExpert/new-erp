@@ -105,6 +105,21 @@ const AddGatePass = () => {
         OutOfficer:''  
     })
 
+    const headleSubmit = (e) =>{
+        e.preventDefault(); 
+
+        axios.post('http://localhost:8081/CreateGatePass/' + EmailUser, GatePass)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Gate Pass Added Successful")
+                headleBack();
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser != null){
         return (
             <div className="bg-gray-200 py-4">
@@ -131,7 +146,7 @@ const AddGatePass = () => {
                     }
                 </div>
                 <div className="my-4">
-                    <form>
+                    <form onSubmit={headleSubmit}>
                         <div className="lg:grid grid-cols-3 gap-4">
                             <div className="my-2">
                                 <label htmlFor="">Employee Name</label>
