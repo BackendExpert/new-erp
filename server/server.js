@@ -5123,7 +5123,7 @@ app.post('/GetPassReject/:id', (req, res) => {
     const GatePassID = req.params.id
     const slq = "UPDATE gatepass SET Status = ? WHERE GID = ?"
 
-    const status = "Recommended"
+    const status = "Reject"
 
     connection.query(sql, [status, GatePassID], (err, result) => {
         if(err){
