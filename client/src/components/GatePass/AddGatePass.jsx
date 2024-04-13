@@ -184,13 +184,13 @@ const AddGatePass = () => {
                                 onChange={e => SetGatePass({...GatePass, NLocation:e.target.value})}/>
                             </div>
                             <div className="my-2">
-                                <label htmlFor="">Responsible Officer</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Responsible Officer"
+                                <label htmlFor="">Responsible Officer (Enter Email)</label>
+                                <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Responsible Officer"
                                 onChange={e => SetGatePass({...GatePass, Officer:e.target.value})}/>
                             </div>
                             <div className="my-2">
-                                <label htmlFor="">Outside Responsible Officer</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Outside Responsible Officer"
+                                <label htmlFor="">Outside Responsible Officer (Enter Email)</label>
+                                <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Outside Responsible Officer"
                                 onChange={e => SetGatePass({...GatePass, OutOfficer:e.target.value})}/>
                             </div>
                         </div>
