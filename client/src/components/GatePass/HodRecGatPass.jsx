@@ -123,7 +123,7 @@ const HodRecGatPass = () => {
                                         }
                                     }
                                     else if(buttonValue === "Denied"){
-                                        if(hodGate.Status === "HodReject"){
+                                        if(hodGate.Status === "HODReject"){
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{hodGate.GID}</td>
