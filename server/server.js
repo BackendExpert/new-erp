@@ -5264,7 +5264,7 @@ app.post('/SecurityCheckGate/:id', (req, res) => {
 // CounthodSRNTO
 
 app.get('/CountToWork', (req, res) => {
-    const sql = "SELECT COUNT(SID) AS DeniedRese FROM srn WHERE Status = ?";
+    const sql = "SELECT COUNT(WID) AS WorkTO FROM srn WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "HodRecommended"
     connection.query(sql, [status], (error, results) => {
@@ -5274,7 +5274,7 @@ app.get('/CountToWork', (req, res) => {
         return;
       }
   
-      res.json({ DeniedRese: results[0].DeniedRese }); // Send count in JSON format
+      res.json({ WorkTO: results[0].WorkTO }); // Send count in JSON format
     });
 })
 
