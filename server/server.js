@@ -4899,7 +4899,7 @@ app.post('/CreateGatePass/:id', (req, res) => {
     // console.log(UserEmail, req.body)
 
     const checkInvNo = "SELECT * FROM equipment WHERE invno = ?"
-    connection.query(checkInvNo, [req.body.InvNo], (err, result) => {
+    connection.query(checkInvNo, [req.body.GatePass.InvNo], (err, result) => {
         if(err) throw err
 
         if(result.length == 0){
@@ -4907,13 +4907,45 @@ app.post('/CreateGatePass/:id', (req, res) => {
         }
         else{
             // add getpass
-            const sql = "INSERT INTO gatepass(Name, Email, HoDEmail, project, designation, Date, RDate, purpose, location, newplace, item, itemtype, quantity, invno, description, officer, newofficer, security, Status, create_at, update_at) VALUES (?)"
+            const sql = "INSERT INTO gatepass(Name, Email, HoDEmail, designation, Date, RDate, purpose, location, newplace, item, itemtype, quantity, invno, description, officer, newofficer, security, Status, create_at, update_at) VALUES (?)"
+            const security = "Waiting"
+            const status = "Request"
+            const create_at = new Date()
+            const update_at = new Date()
+            
             const value = [
                 req.body.empUsername,
                 UserEmail,
-                req.body.SRNHOD
-                
+                req.body.SRNHOD,
+                req.body.empRole,
+                req.body.GatePass.RDate,
+                req.body.GatePass.ReturnDate,
+                req.body.GatePass.Purpose,
+                req.body.GatePass.Location,
+                req.body.GatePass.NLocation,
+                req.body.GatePass.IName,
+                req.body.GatePass.IType,
+                req.body.GatePass.Quantity,
+                req.body.GatePass.InvNo,
+                req.body.GatePass.Description,
+                req.body.GatePass.Officer,
+                req.body.GatePass.OutOfficer,
+                security,
+                status,
+                create_at,
+                update_at              
             ]
+
+            // console.log(value)
+
+            connection.query(sql, [value], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    
+                }
+            })
         }
     })   
 })
