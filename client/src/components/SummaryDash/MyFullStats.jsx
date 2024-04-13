@@ -681,7 +681,56 @@ const MyFullStats = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                      ViewGatePass
+                                      ViewGatePass.map((gateMy, index) => {
+                                        if(buttonValue === "Request GatePass"){
+                                          if(gateMy.Status === "Request"){
+                                            return (
+                                              <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.GID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.Date}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.location}</td> 
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.newplace}</td>                                                
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.officer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.newofficer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.item}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.itemtype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.quantity}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.invno}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{gateMy.Status}</span>
+                                                    </td>
+                                              </tr>
+                                            )
+                                          }
+                                        }
+                                        else if(buttonValue === "Reject GatePass"){
+                                          if(gateMy.Status === "HODReject" || gateMy.Status === "Reject"){
+                                            return (
+                                              <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.GID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.Date}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.location}</td> 
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.newplace}</td>                                                
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.officer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.newofficer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.item}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.itemtype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.quantity}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.invno}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{gateMy.Status}</span>
+                                                    </td>
+                                              </tr>
+                                            )
+                                          }
+                                        }
+                                      })
                                     }
                                 </tbody>
                             </table>
