@@ -46,6 +46,7 @@ const SummaryDash = () => {
   const [hodWork, SethodWork] = useState(0);
   const [hodGatePass, SethodGatePass] = useState(0);
   const [toWork, SettoWork] = useState(0);
+  const [toGatePass, SettoGatePass] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -249,6 +250,14 @@ const SummaryDash = () => {
       try {
         const CountWorkRTo = await axios.get('http://localhost:8081/CountToWork');
         SettoSRN(CountWorkRTo.data.WorkTO);
+      } catch (error) {
+        consol
+        e.error('Error fetching data:', error);
+      }  
+
+      try {
+        const CountGatePassTo = await axios.get('http://localhost:8081/CountGateTo');
+        SettoGatePass(CountGatePassTo.data.GateTO);
       } catch (error) {
         consol
         e.error('Error fetching data:', error);
