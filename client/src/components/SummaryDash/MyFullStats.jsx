@@ -542,6 +542,24 @@ const MyFullStats = () => {
                                             )
                                           }
                                         }
+                                        else if(buttonValue === "Request Work"){
+                                          if(workReq.Status === "Request"){
+                                            return (
+                                              <tr key={index}>
+                                                <td className='px-6 py-4 font-bold'>{workReq.WID}</td>
+                                                <td className='px-6 py-4 font-bold'>{workReq.Name}</td>
+                                                <td className='px-6 py-4 font-bold'>{workReq.Email}</td>
+                                                <td className='px-6 py-4 font-bold'>{workReq.RDate}</td>
+                                                <td className='px-6 py-4 font-bold'>{workReq.WType}</td>
+                                                <td className='px-6 py-4 font-bold'>{workReq.SEmail}</td>
+                                                <td className='px-6 py-4 font-bold'>{workReq.description}</td>
+                                                <td className='px-6 py-4 font-bold'>
+                                                    <span className="py-2 px-4 rounded bg-yellow-500 text-white">{workReq.Status}</span>
+                                                </td> 
+                                              </tr>
+                                            )
+                                          }
+                                        }
                                       })
                                     }
                                 </tbody>
