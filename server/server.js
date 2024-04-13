@@ -5138,9 +5138,8 @@ app.post('/GetPassReject/:id', (req, res) => {
 // ApproveGatePassSet
 
 app.get('/ApproveGatePassSet', (req, res) => {
-    const sql = "SELECT * FROM gatepass WHERE Status = ?"
-    const status = "Recommended"
-    connection.query(sql, [status], (err, result) => {
+    const sql = "SELECT * FROM gatepass"
+    connection.query(sql, (err, result) => {
         if(err){
             return res.json({Error: "Error on Server"})
         }
