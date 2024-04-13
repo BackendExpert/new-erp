@@ -5239,6 +5239,24 @@ app.get('/ToRejectGate/:id', (req, res) => {
     })
 })
 
+// SecurityCheckGate
+
+app.post('/SecurityCheckGate/:id', (req, res) => {
+    const GatePassID = req.params.id
+    const sql = "UPDATE gatepass SET security = ? WHERE GID = ?"
+    const status_sec =  "Success"
+
+    connection.query(sql, [status_sec, GatePassID], (req, result) => {
+        if(err) {
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
+
+})
+
 // ------------------------------------------ GatePass End --------------------------------
 
 //check the server is working
