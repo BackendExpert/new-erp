@@ -4778,7 +4778,7 @@ app.post('/WrokComplete/:id', (req, res) => {
                     from: process.env.EMAIL_USER,
                     to: mtEmail,
                     subject: 'Notification: The Work Request',
-                    text: 'The Work Request has been Rejected', 
+                    text: 'The Work Request has been Completed', 
                 };
     
                 transporter.sendMail(mailOptions, function(error, info){
