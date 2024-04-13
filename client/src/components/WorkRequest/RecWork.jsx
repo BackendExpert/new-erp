@@ -191,9 +191,14 @@ const RecWork = () => {
                                                        <div className="flex">
                                                             {
                                                                 (() => {
-                                                                    if(work.Status === "Approve" || work.completed === 0){
+                                                                    if(work.Status === "Approve" && work.Completed === null){
                                                                         return (
                                                                             <button  onClick={() => headleCompleted(work.WID)} className="ml-2 border border-purple-500 rounded py-2 px-4 text-purple-500 duration-500 hover:bg-purple-500 hover:text-white hover:shadow-xl">Set Complete</button>
+                                                                        )
+                                                                    }
+                                                                    else if(work.Status === "Approve" && work.Completed === 1){
+                                                                        return (
+                                                                            <span className="py-2 px-4 rounded bg-green-500 text-white">Completed</span>
                                                                         )
                                                                     }
                                                                     else{
