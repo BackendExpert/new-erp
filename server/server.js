@@ -4663,6 +4663,19 @@ app.post('/AssignReqNumberWork/:id', (req, res) => {
     })
 })
 
+// ToApproveWorkReq
+app.get('/ToApproveWorkReq', (req, res) => {
+    const sql = "SELECT * FROM workrequest"
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error on SERVER"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
