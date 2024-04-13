@@ -4968,7 +4968,7 @@ app.post('/CreateGatePass/:id', (req, res) => {
 app.get('/CounthodGatePass/:id', (req, res) => {
     const Email = req.params.id;
     
-    const sql = "SELECT COUNT(WID) AS HodWork FROM workrequest WHERE Status = ? && HoDEmail = ?";
+    const sql = "SELECT COUNT(GID) AS HodGate FROM gatepass WHERE Status = ? && HoDEmail = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const is_aprove = "Request"
     
@@ -4979,7 +4979,7 @@ app.get('/CounthodGatePass/:id', (req, res) => {
         return;
       }
   
-      res.json({ HodWork: results[0].HodWork }); // Send count in JSON format
+      res.json({ HodGate: results[0].HodGate }); // Send count in JSON format
     });
 })
 
