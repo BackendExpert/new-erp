@@ -86,6 +86,7 @@ import RecWork from "./components/WorkRequest/RecWork"
 import AssignReqNo from "./components/WorkRequest/AssignReqNo"
 import ApproveWork from "./components/WorkRequest/ApproveWork"
 import AddGatePass from "./components/GatePass/AddGatePass"
+import HodRecGatPass from "./components/GatePass/HodRecGatPass"
 
 
 export default function App() {
@@ -257,6 +258,8 @@ export default function App() {
 
         {/* Gate Pass */}
         <Route path="/AddGatePass" element={<PrivateRoute><AddGatePass /></PrivateRoute>} />
+        <Route path="/HodRecGatPass" element={<PrivateRoute><HodRecGatPass /></PrivateRoute>} />
+
       </Routes>
     </BrowserRouter>
   )
