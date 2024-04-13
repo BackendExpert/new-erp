@@ -74,8 +74,15 @@ const HodRecGatPass = () => {
                                                     <td className='px-6 py-4 font-bold'>{hodGate.Email}</td>
                                                     <td className='px-6 py-4 font-bold'>{hodGate.Date}</td>
                                                     <td className='px-6 py-4 font-bold'>{hodGate.RDate}</td>
-                                                    <td className='px-6 py-4 font-bold'>{hodGate.LID}</td>
-                                                    <td className='px-6 py-4 font-bold'>{hodGate.LID}</td>                                                 
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.location}</td> 
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.newplace}</td>                                                
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.officer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.newofficer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.item}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.itemtype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.quantity}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.invno}</td>
                                                     
                                                 </tr>
                                             )
