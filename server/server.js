@@ -5264,7 +5264,18 @@ app.post('/SecurityCheckGate/:id', (req, res) => {
 // CounthodSRNTO
 
 app.get('/CounthodSRNTO', (req, res) => {
-    
+    const sql = "SELECT COUNT(SID) AS DeniedRese FROM srn WHERE Status = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "Denied"
+    connection.query(sql, [status], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ DeniedRese: results[0].DeniedRese }); // Send count in JSON format
+    });
 })
 
 //check the server is working
