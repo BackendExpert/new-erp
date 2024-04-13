@@ -4800,7 +4800,7 @@ app.post('/WrokComplete/:id', (req, res) => {
 
 app.get('/CountRequestWork/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(WID) AS MyRejectSRN FROM workrequest WHERE Status = ? && Email = ?";
+    const sql = "SELECT COUNT(WID) AS MyRequestWork FROM workrequest WHERE Status = ? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Request"
 
@@ -4811,7 +4811,7 @@ app.get('/CountRequestWork/:id', (req, res) => {
         return;
     }
 
-    res.json({ MyRejectSRN: results[0].MyRejectSRN }); // Send count in JSON format
+    res.json({ MyRequestWork: results[0].MyRequestWork }); // Send count in JSON format
     });
 })
 
