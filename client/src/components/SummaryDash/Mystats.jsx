@@ -18,6 +18,7 @@ const Mystats = () => {
         const [myRese, SetmyRese] = useState(0)
         const [mySRN, SetmySRN] = useState(0)
         const [myWork, SetmyWork] = useState(0)
+        const [myGatePass, SetmyGatePass] = useState(0)
 
         useEffect(() => {
             const fetchData = async () => {
@@ -45,6 +46,13 @@ const Mystats = () => {
                 try {
                     const WorkMy = await axios.get('http://localhost:8081/CountMyWork/' + EmailUser);
                     SetmyWork(WorkMy.data.myWorkview);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+
+                try {
+                    const GatPssMy = await axios.get('http://localhost:8081/CountMyGatePass/' + EmailUser);
+                    SetmyGatePass(GatPssMy.data.myGatePassview);
                 } catch (error) {
                     console.error('Error fetching data:', error);
                 }
