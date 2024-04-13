@@ -83,7 +83,9 @@ const HodRecGatPass = () => {
                                                     <td className='px-6 py-4 font-bold'>{hodGate.itemtype}</td>
                                                     <td className='px-6 py-4 font-bold'>{hodGate.quantity}</td>
                                                     <td className='px-6 py-4 font-bold'>{hodGate.invno}</td>
-                                                    
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{hodGate.Status}</span>
+                                                    </td> 
                                                 </tr>
                                             )
                                         }
