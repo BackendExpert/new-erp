@@ -5281,9 +5281,9 @@ app.get('/CountToWork', (req, res) => {
 // CountGateTo
 
 app.get('/CountGateTo', (req, res) => {
-    const sql = "SELECT COUNT(GID) AS WorkTO FROM gatepass WHERE Status = ?";
+    const sql = "SELECT COUNT(GID) AS GateTO FROM gatepass WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = "HodRecommended"
+    const status = "HODRecommended"
     connection.query(sql, [status], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
@@ -5291,7 +5291,7 @@ app.get('/CountGateTo', (req, res) => {
         return;
       }
   
-      res.json({ WorkTO: results[0].WorkTO }); // Send count in JSON format
+      res.json({ GateTO: results[0].GateTO }); // Send count in JSON format
     });
 })
 
