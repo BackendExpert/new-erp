@@ -5318,18 +5318,18 @@ app.get('/CountMyGatePass/:id', (req, res) => {
 
 app.get('/CountReqGatePass/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(WID) AS MyApproveWork FROM workrequest WHERE Status =? && Completed =? && Email = ?";
+    const sql = "SELECT COUNT(WID) AS MyReqGate FROM workrequest WHERE Status =? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Request"
 
-    connection.query(sql, [status, complete, UserEmail], (error, results) => {
+    connection.query(sql, [status, UserEmail], (error, results) => {
     if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
         return;
     }
 
-    res.json({ MyApproveWork: results[0].MyApproveWork }); // Send count in JSON format
+    res.json({ MyReqGate: results[0].MyReqGate }); // Send count in JSON format
     });
 })
 
