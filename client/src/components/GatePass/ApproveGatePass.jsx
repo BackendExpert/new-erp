@@ -24,6 +24,15 @@ const ApproveGatePass = () => {
             navigate('/Secretary');
         }
     }
+    
+    // fetch Data
+
+    const [ApproveGatePass, SetApproveGatePass] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/ApproveGatePassSet')
+        .then(res => SetApproveGatePass(res.data))
+        .catch(err => console(err))
+    }, [])
 
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
