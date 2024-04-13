@@ -109,7 +109,8 @@ const MyFullStats = () => {
         const [RequestWork, SetRequestWork] = useState(0)
         const [RejectWork, SetRejectWork] = useState(0)
         const [ApproveWork, SetApproveWork] = useState(0);
-        const [RequstGate, SetRequstGate] = useState(0)
+        const [RequstGate, SetRequstGate] = useState(0);
+        const [RejectGate, SetRejectGate] = useState(0);
 
         useEffect(() => {
           const fetchData = async () => {
@@ -189,10 +190,17 @@ const MyFullStats = () => {
               console.error('Error fetching data:', error);
             }
 
-
+            // Gatepass
             try {
               const CountReqGate = await axios.get('http://localhost:8081/CountReqGatePass/' + EmailUser);
               SetRequstGate(CountReqGate.data.MyReqGate);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+
+            try {
+              const CountRejectGate = await axios.get('http://localhost:8081/CountRejectGatePass/' + EmailUser);
+              SetRequstGate(CountRejectGate.data.MyRejectGate);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
@@ -299,7 +307,7 @@ const MyFullStats = () => {
                           </div>                          
                         </div> 
 
-                        <div onClick={() => HeadleButtonClick('Request GatePass')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Reject GatePass')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
                             My Reject GatePass Request
