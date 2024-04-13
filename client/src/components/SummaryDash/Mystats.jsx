@@ -57,7 +57,7 @@ const Mystats = () => {
         {name: "My Leaves", value: <CountUp end={myLeaves}/>, icon: <Icons name="log-out" size="large"></Icons>, style: "hover:border-red-500 hover:text-red-600"},
         {name: "My Reservations", value: <CountUp end={myRese}/>, icon: <Icons name="car" size="large"></Icons>, style: "hover:border-yellow-500 hover:text-yellow-600"},
         {name: "My SRN", value: <CountUp end={mySRN}/>, icon: <Icons name="document-text" size="large"></Icons>, style: "hover:border-green-500 hover:text-green-600"},
-        {name: "My Work Requests", value: "2", icon: <Icons name="documents" size="large"></Icons>, style: "hover:border-purple-500 hover:text-purple-600"},        
+        {name: "My Work Requests",  value: <CountUp end={myWork}/>, icon: <Icons name="documents" size="large"></Icons>, style: "hover:border-purple-500 hover:text-purple-600"},        
         {name: "My Gate Pass", value: "2", icon: <Icons name="map" size="large"></Icons>, style: "hover:border-yellow-500 hover:text-yellow-600"},  
         {name: "My Increment Requests", value: "2", icon: <Icons name="cash" size="large"></Icons>, style: "hover:border-green-500 hover:text-green-600"},  
     ]
