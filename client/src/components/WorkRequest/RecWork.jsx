@@ -126,14 +126,54 @@ const RecWork = () => {
                                                                     }
                                                                     else{
                                                                         return (
-                                                                            <button  onClick={() => headleRece(hodWork.WID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button> 
+                                                                            <button  onClick={() => headleRece(work.WID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button> 
                                                                         )
                                                                     }
                                                                 })()
                                                             }                                                            
-                                                            <button  onClick={() => headleDenied(hodWork.WID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
+                                                            <button  onClick={() => headleDenied(work.WID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
                                                         </div>
                                                     </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
+                                    else if(buttonValue === "Denied"){
+                                        if(work.Status === "HodReject" || work.Status === "Reject"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{work.WID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.project}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.WType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.SEmail}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{work.Status}</span>
+                                                    </td> 
+                                                </tr>
+                                            )
+                                        }
+                                    }
+                                    else if(buttonValue === "Recommend"){
+                                        if(work.Status === "Recommended"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{work.WID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.project}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.WType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.SEmail}</td>
+                                                    <td className='px-6 py-4 font-bold'>{work.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-green-500 text-white">{work.Status}</span>
+                                                    </td> 
                                                 </tr>
                                             )
                                         }
