@@ -159,7 +159,7 @@ const RecWork = () => {
                                         }
                                     }
                                     else if(buttonValue === "Recommend"){
-                                        if(work.Status === "Recommended"){
+                                        if(work.Status === "Recommended" || work.Status === "Approve"){
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{work.WID}</td>
