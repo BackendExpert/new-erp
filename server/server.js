@@ -4692,7 +4692,9 @@ app.post('/ApproveWorkReq/:id', (req, res) =>{
                     return res.json({Error: "Error on Server"})
                 }
                 else{
-                    
+                   const mtEmail = result[0].Email
+                   
+                   
                 }
             })
         }
