@@ -17,6 +17,7 @@ const Mystats = () => {
         const [myLeaves, SetmyLeaves] = useState(0)
         const [myRese, SetmyRese] = useState(0)
         const [mySRN, SetmySRN] = useState(0)
+        const [myWork, SetmyWork] = useState(0)
 
         useEffect(() => {
             const fetchData = async () => {
@@ -37,6 +38,13 @@ const Mystats = () => {
                 try {
                     const SRNMy = await axios.get('http://localhost:8081/CountMySRN/' + EmailUser);
                     SetmySRN(SRNMy.data.mySRNview);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+
+                try {
+                    const WorkMy = await axios.get('http://localhost:8081/CountMyWork/' + EmailUser);
+                    SetmyWork(WorkMy.data.myWorkview);
                 } catch (error) {
                     console.error('Error fetching data:', error);
                 }
