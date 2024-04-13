@@ -135,28 +135,33 @@ const AddGatePass = () => {
                         <div className="lg:grid grid-cols-3 gap-4">
                             <div className="my-2">
                                 <label htmlFor="">Employee Name</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
                                 value={empUsername} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="">Employee Designation</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Designation"
                                 value={empRole} onChange={e => SetGatePass({...GatePass, Designation:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="">Email</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Email"
                                 value={EmailUser} onChange={e => SetGatePass({...GatePass, Email:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="">Division</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Division"
                                 value={MyDiviSRN} onChange={e => SetGatePass({...GatePass, Division:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="">Hod Email</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="HOD Email"
                                 value={SRNHOD} onChange={e => SetGatePass({...GatePass, HoDEmail:e.target.value})}/>
+                            </div>
+                            <div className="my-2">
+                                <label htmlFor="">Date</label>
+                                <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Date"
+                                onChange={e => SetGatePass({...GatePass, RDate:e.target.value})}/>
                             </div>
                         </div>
                     </form>
