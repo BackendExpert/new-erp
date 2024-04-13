@@ -174,6 +174,19 @@ const RecWork = () => {
                                                     <td className='px-6 py-4 font-bold'>
                                                         <span className="py-2 px-4 rounded bg-green-500 text-white">{work.Status}</span>
                                                     </td> 
+                                                    <td className='px-6 py-4 font-bold'>
+                                                       <div className="flex">
+                                                            {
+                                                                (() => {
+                                                                    if(work.Status === "Approve"){
+                                                                        return (
+                                                                            <button  onClick={() => headleCompleted(work.WID)} className="ml-2 border border-purple-500 rounded py-2 px-4 text-purple-500 duration-500 hover:bg-purple-500 hover:text-white hover:shadow-xl">Set Complete</button>
+                                                                        )
+                                                                    }
+                                                                })()
+                                                            }
+                                                       </div>
+                                                    </td> 
                                                 </tr>
                                             )
                                         }
