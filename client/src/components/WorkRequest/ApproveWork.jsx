@@ -25,6 +25,14 @@ const ApproveWork = () => {
         }
     }
 
+    // fetch wr data
+    const [ApprveWR, SetApprveWR] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/ToApproveWorkReq')
+        .then(res => SetApprveWR(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
