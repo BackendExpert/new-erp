@@ -4761,7 +4761,7 @@ app.post('/WrokComplete/:id', (req, res) => {
     const workID = req.params.id
     const sql = "UPDATE workrequest SET Completed = ? WHERE WID = ?"
     const complete = 1
-    connection.query(sql, [status, workID], (err, result) => {
+    connection.query(sql, [complete, workID], (err, result) => {
         if(err){
             return res.json({Error: "Error on server"})
         }
