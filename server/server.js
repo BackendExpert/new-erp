@@ -5100,6 +5100,14 @@ app.get('/GetPassforRec', (req, res) => {
     })
 })
 
+// GetPassRec
+app.post('/GetPassRec/:id', (req, res) => {
+    const GatePassID = req.params.id
+    const slq = "UPDATE gatepass SET Status = ? WHERE GID = ?"
+
+    const status = ""
+})
+
 // ------------------------------------------ GatePass End --------------------------------
 
 //check the server is working
