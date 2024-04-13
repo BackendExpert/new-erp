@@ -5105,7 +5105,16 @@ app.post('/GetPassRec/:id', (req, res) => {
     const GatePassID = req.params.id
     const slq = "UPDATE gatepass SET Status = ? WHERE GID = ?"
 
-    const status = ""
+    const status = "Recommended"
+
+    connection.query(sql, [status, GatePassID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
 })
 
 // ------------------------------------------ GatePass End --------------------------------
