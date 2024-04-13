@@ -153,6 +153,11 @@ const AddGatePass = () => {
                                 <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
                                 value={MyDiviSRN} onChange={e => SetGatePass({...GatePass, Division:e.target.value})}/>
                             </div>
+                            <div className="my-2">
+                                <label htmlFor="">Hod Email</label>
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                                value={SRNHOD} onChange={e => SetGatePass({...GatePass, HoDEmail:e.target.value})}/>
+                            </div>
                         </div>
                     </form>
                 </div>
