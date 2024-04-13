@@ -185,7 +185,7 @@ const RecGatePass = () => {
                                                         (() => {
                                                             if(getPass.Status === "Approve" && getPass.security === "Waiting"){
                                                                 return (
-                                                                    <button  onClick={() => headleRece(getPass.GID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Set Security Check</button> 
+                                                                    <button  onClick={() => headleRece(getPass.GID)} className="ml-2 border border-purple-500 rounded py-2 px-4 text-purple-500 duration-500 hover:bg-purple-500 hover:text-white hover:shadow-xl">Set Security Check</button> 
                                                                 )
                                                             }
                                                             else{
