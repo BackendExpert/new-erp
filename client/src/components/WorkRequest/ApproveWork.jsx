@@ -66,7 +66,30 @@ const ApproveWork = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                ApprveWR.map((workApprove, index) => {
+                                    if(buttonValue === "Recommend"){
+                                        if(workApprove.Status === "Recommended"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{workApprove.WID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{workApprove.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{workApprove.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{workApprove.project}</td>
+                                                    <td className='px-6 py-4 font-bold'>{workApprove.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{workApprove.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{workApprove.WType}</td>
+                                                    <td className='px-6 py-4 font-bold'>{workApprove.SEmail}</td>
+                                                    <td className='px-6 py-4 font-bold'>{workApprove.description}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{workApprove.Status}</span>
+                                                    </td> 
+                                                </tr>
+                                            )
+                                        }
+                                    }
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
