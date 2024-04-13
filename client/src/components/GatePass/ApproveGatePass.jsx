@@ -34,6 +34,19 @@ const ApproveGatePass = () => {
         .catch(err => console(err))
     }, [])
 
+    const Recommended = (id) => {
+        axios.post('http://localhost:8081/ToApproveGate/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Gate Pass has been Approve")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
@@ -75,7 +88,7 @@ const ApproveGatePass = () => {
                             {
                                 ApproveGatePass.map((appGate, index) => {
                                     if(buttonValue === "Recommend"){
-                                        if(appGate.Status === "Recommend"){
+                                        if(appGate.Status === "Recommended"){
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{appGate.GID}</td>
@@ -97,8 +110,8 @@ const ApproveGatePass = () => {
                                                     </td>
                                                     <td className='px-6 py-4 font-bold'>
                                                         <div className="flex">
-                                                            <button  onClick={() => headleRece(appGate.GID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Approve</button> 
-                                                            <button  onClick={() => headleDenied(appGate.GID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Reject</button>
+                                                            <button  onClick={() => headleApprove(appGate.GID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Approve</button> 
+                                                            <button  onClick={() => headleReject(appGate.GID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Reject</button>
                                                         </div>
                                                     </td>
                                                 </tr>
