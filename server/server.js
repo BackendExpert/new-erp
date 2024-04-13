@@ -4819,9 +4819,10 @@ app.get('/CountRequestWork/:id', (req, res) => {
 
 app.get('/CountRejectWork/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(WID) AS MyRequestWork FROM workrequest WHERE Status = ? && Email = ?";
+    const sql = "SELECT COUNT(WID) AS MyRequestWork FROM workrequest WHERE Status = ? || Status = ? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status = "Request"
+    const status1 = "HodReject"
+    const status2 = "Reject"
 
     connection.query(sql, [status, UserEmail], (error, results) => {
     if (error) {
