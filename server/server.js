@@ -5087,6 +5087,19 @@ app.post('/HodRejectGatePass/:id', (req, res) => {
     })
 })
 
+// GetPassforRec
+app.get('/GetPassforRec', (req, res) => {
+    const sql = "SELECT * FROM gatepass"
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // ------------------------------------------ GatePass End --------------------------------
 
 //check the server is working
