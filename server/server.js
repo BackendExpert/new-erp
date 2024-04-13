@@ -4964,6 +4964,11 @@ app.post('/CreateGatePass/:id', (req, res) => {
     })   
 })
 
+// CounthodGatePass
+app.get('/CounthodGatePass/:id', (req, res) => {
+    
+})
+
 // ------------------------------------------ GatePass End --------------------------------
 
 //check the server is working
