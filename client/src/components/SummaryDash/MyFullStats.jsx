@@ -270,7 +270,7 @@ const MyFullStats = () => {
                           
                           <div className="flex">
                             My Approve/Completed Work Requests
-                            <p className="mx-4 text-xl font-bold"><CountUp end={RejectSRN} /></p>
+                            <p className="mx-4 text-xl font-bold"><CountUp end={ApproveWork} /></p>
                           </div>                          
                         </div> 
                     </div>
