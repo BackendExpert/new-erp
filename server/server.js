@@ -5298,7 +5298,20 @@ app.get('/CountGateTo', (req, res) => {
 // CountMyGatePass
 
 app.get('/CountMyGatePass/:id', (req, res) => {
+    const CurrentEmail = req.params.id
+    // console.log(CurrentEmail)
+    const sql = "SELECT COUNT(WID) AS myWorkview FROM workrequest WHERE Email = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
+    connection.query(sql, [CurrentEmail], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ myWorkview: results[0].myWorkview }); // Send count in JSON format
+    });
 })
 
 //check the server is working
