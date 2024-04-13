@@ -730,6 +730,29 @@ const MyFullStats = () => {
                                             )
                                           }
                                         }
+                                        else if(buttonValue === "Approve GatePass"){
+                                          if(gateMy.Status === "Approve"){
+                                            return (
+                                              <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.GID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.Date}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.location}</td> 
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.newplace}</td>                                                
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.officer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.newofficer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.item}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.itemtype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.quantity}</td>
+                                                    <td className='px-6 py-4 font-bold'>{gateMy.invno}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-green-500 text-white">{gateMy.Status}</span>
+                                                    </td>
+                                              </tr>
+                                            )
+                                          }
+                                        }
                                       })
                                     }
                                 </tbody>
