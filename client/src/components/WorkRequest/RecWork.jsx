@@ -183,6 +183,11 @@ const RecWork = () => {
                                                                             <button  onClick={() => headleCompleted(work.WID)} className="ml-2 border border-purple-500 rounded py-2 px-4 text-purple-500 duration-500 hover:bg-purple-500 hover:text-white hover:shadow-xl">Set Complete</button>
                                                                         )
                                                                     }
+                                                                    else{
+                                                                        return (
+                                                                            <div className="text-red-500">Witing for Approve</div>
+                                                                        )
+                                                                    }
                                                                 })()
                                                             }
                                                        </div>
