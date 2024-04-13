@@ -224,6 +224,32 @@ const MyFullStats = () => {
                             <p className="mx-4 text-xl font-bold"><CountUp end={RejectSRN} /></p>
                           </div>                          
                         </div> 
+
+                         {/* For WorkRequests */}
+
+                         <div onClick={() => HeadleButtonClick('Request Work')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Work Requests 
+                            <p className="mx-4 text-xl font-bold"><CountUp end={RejectSRN} /></p>
+                          </div>                          
+                        </div> 
+
+                        <div onClick={() => HeadleButtonClick('Reject Work')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Approve/Completed Work Requests
+                            <p className="mx-4 text-xl font-bold"><CountUp end={RejectSRN} /></p>
+                          </div>                          
+                        </div> 
+
+                        <div onClick={() => HeadleButtonClick('Approve Work')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Reject SRN 
+                            <p className="mx-4 text-xl font-bold"><CountUp end={RejectSRN} /></p>
+                          </div>                          
+                        </div> 
                     </div>
                     
                     <div className="text-xl mt-6 my-2 font-semibold">
