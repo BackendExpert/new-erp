@@ -4646,11 +4646,8 @@ app.post('/AssignReqNumberWork/:id', (req, res) => {
         if(err) throw err
 
         if(result.length == 0){
-            return res.json({Error: "Error on Server"})
-        }
-        else{
             const sql = "UPDATE workrequest SET ReqNo = ? WHERE WID = ?"
-            connection.query(sql, [req.body.reqNo, workID], (err, result) => {
+            connection.query(sql, [req.body.reqNo, WorkId], (err, result) => {
                 if(err){
                     return res.json({Error: "Error on Server"})
                 }
@@ -4658,6 +4655,9 @@ app.post('/AssignReqNumberWork/:id', (req, res) => {
                     return res.json({Status: "Success"})
                 }
             })
+        }
+        else{
+            return res.json({Error: "The Entered Request Number is Already exists"})
         }
     })
 })
