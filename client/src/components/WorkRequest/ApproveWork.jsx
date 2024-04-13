@@ -120,6 +120,9 @@ const ApproveWork = () => {
                                             )
                                         }
                                     }
+                                    else if(buttonValue === "Reject"){
+                                        if(workApprove.Status === "Request")
+                                    }
                                 })
                             }
                         </tbody>

@@ -4720,7 +4720,7 @@ app.post('/ApproveWorkReq/:id', (req, res) =>{
 app.post('/RejectWorkReq/:id', (req, res) => {
     const workID = req.params.id
     const sql = "UPDATE workrequest SET Status = ? WHERE WID = ?"
-    const status = "Approve"
+    const status = "Reject"
     connection.query(sql, [status, workID], (err, result) => {
         if(err){
             return res.json({Error: "Error on server"})
