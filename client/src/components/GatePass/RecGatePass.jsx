@@ -203,7 +203,7 @@ const RecGatePass = () => {
                                                             }
                                                             else{
                                                                 return (
-                                                                    <span className="py-2 px-4 rounded bg-green-500 text-white">Security Check Successful</span>
+                                                                    <span className="py-2 px-4 rounded bg-green-500 text-white">SecurityCheckSuccessful</span>
                                                                 )
                                                             }
                                                         })()
