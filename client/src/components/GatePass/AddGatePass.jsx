@@ -53,6 +53,27 @@ const AddGatePass = () => {
       } 
     }
 
+    // send data to backend
+    const [GatePass, SetGatePass] = useState({
+        HoDEmail:'',
+        Name:'',
+        Email:'',
+        Division:'',
+        Designation:'',
+        RDate:'',
+        ReturnDate:'',
+        Purpose:'',
+        Location:'',
+        IName:'',
+        IType:'',
+        Quantity:'',
+        InvNo:'',
+        Description:'',
+        Officer:'',
+        NLocation:'',
+        OutOfficer:''  
+    })
+
     if(RoleUser != null){
         return (
             <div className="bg-gray-200 py-4">
@@ -81,7 +102,7 @@ const AddGatePass = () => {
                 <div className="my-4">
                     <form>
                         <div className="my-2">
-                            
+
                         </div>
                     </form>
                 </div>
