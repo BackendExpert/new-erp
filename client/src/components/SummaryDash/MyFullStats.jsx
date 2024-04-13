@@ -109,6 +109,7 @@ const MyFullStats = () => {
         const [RequestWork, SetRequestWork] = useState(0)
         const [RejectWork, SetRejectWork] = useState(0)
         const [ApproveWork, SetApproveWork] = useState(0);
+        const [RequstGate, SetRequstGate] = useState(0)
 
         useEffect(() => {
           const fetchData = async () => {
@@ -278,6 +279,15 @@ const MyFullStats = () => {
                           
                           <div className="flex">
                             My Approve/Completed Work Requests
+                            <p className="mx-4 text-xl font-bold"><CountUp end={ApproveWork} /></p>
+                          </div>                          
+                        </div> 
+                        {/* For GatePass */}
+
+                        <div onClick={() => HeadleButtonClick('Request GatePass')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Request Gate Pass
                             <p className="mx-4 text-xl font-bold"><CountUp end={ApproveWork} /></p>
                           </div>                          
                         </div> 
