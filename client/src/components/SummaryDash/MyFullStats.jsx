@@ -680,7 +680,9 @@ const MyFullStats = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    {
+                                      ViewGatePass
+                                    }
                                 </tbody>
                             </table>
                         </div>                                             
