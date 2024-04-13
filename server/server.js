@@ -5263,7 +5263,7 @@ app.post('/SecurityCheckGate/:id', (req, res) => {
 
 // CounthodSRNTO
 
-app.get('/CounthodSRNTO', (req, res) => {
+app.get('/CountToWork', (req, res) => {
     const sql = "SELECT COUNT(SID) AS DeniedRese FROM srn WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Denied"
