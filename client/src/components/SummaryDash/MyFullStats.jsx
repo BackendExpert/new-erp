@@ -97,6 +97,14 @@ const MyFullStats = () => {
           .catch(err => console.log(err))
         }, [])
 
+        // fetch GatePass data
+        const [ViewGatePass, SetViewGatePass] = useState([])
+        useEffect(() => {
+          axios.get('http://localhost:8081/UserViewGatePass/' + EmailUser)
+          .then(res => SetViewGatePass(res.data))
+          .catch(err => console.log(err))
+        }, [])
+
         //count Data
 
         const [requestLeave, SetrequestLeave] = useState(0);
