@@ -63,7 +63,19 @@ const HodRecGatPass = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                HodRecGate.map((hodGate, index) => {
+                                    if(buttonValue === "Requested"){
+                                        if(hodGate.Status === "Request"){
+                                            return(
+                                                <tr key={index}>
+                                                    
+                                                </tr>
+                                            )
+                                        }
+                                    }
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
