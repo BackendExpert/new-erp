@@ -89,6 +89,14 @@ const MyFullStats = () => {
           .catch(err => console.log(err))
         }, [])
         
+        // fetch wr data
+        const [ViewWorkReq, SetViewWorkReq] = useState([])
+        useEffect(() => {
+          axios.get('http://localhost:8081/UserViewWorReq/' + EmailUser)
+          .then(res => SetViewWorkReq(res.data))
+          .catch(err => console.log(err))
+        }, [])
+
         //count Data
 
         const [requestLeave, SetrequestLeave] = useState(0);
