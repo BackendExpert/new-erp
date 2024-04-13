@@ -15,6 +15,14 @@ const HodRecGatPass = () => {
         SetButtonValue(clickValue)   
     }
 
+    // fetch data 
+    const [HodRecGate, SetHodRecGate] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/HodReqGatePass/' + EmailUser)
+        .then(res => SetHodRecGate(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
