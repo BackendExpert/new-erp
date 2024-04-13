@@ -28,6 +28,15 @@ const RecGatePass = () => {
         }
     }
 
+    // fetch data 
+
+    const [GatePasses, SetGatePasses] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/GetPassforRec')
+        .then(res => SetGatePasses(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
