@@ -189,6 +189,13 @@ const MyFullStats = () => {
               console.error('Error fetching data:', error);
             }
 
+
+            try {
+              const CountReqGate = await axios.get('http://localhost:8081/CountReqGatePass/' + EmailUser);
+              SetRequstGate(CountReqGate.data.MyReqGate);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
           }
           fetchData();
         }, []);
