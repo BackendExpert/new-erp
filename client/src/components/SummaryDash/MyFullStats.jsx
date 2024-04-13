@@ -572,7 +572,7 @@ const MyFullStats = () => {
                                                 <td className='px-6 py-4 font-bold'>{workReq.SEmail}</td>
                                                 <td className='px-6 py-4 font-bold'>{workReq.description}</td>
                                                 <td className='px-6 py-4 font-bold'>
-                                                    <span className="py-2 px-4 rounded bg-red-500 text-white">{workReq.Status}</span>
+                                                    <span className="py-2 px-4 rounded bg-green-500 text-white">{workReq.Status}</span>
                                                 </td> 
                                               </tr>
                                             )
