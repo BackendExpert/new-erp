@@ -84,6 +84,7 @@ import AddWorkReq from "./components/WorkRequest/AddWorkReq"
 import HodRecWork from "./components/WorkRequest/HodRecWork"
 import RecWork from "./components/WorkRequest/RecWork"
 import AssignReqNo from "./components/WorkRequest/AssignReqNo"
+import ApproveWork from "./components/WorkRequest/ApproveWork"
 
 
 export default function App() {
@@ -251,6 +252,7 @@ export default function App() {
         <Route path="/HodRecWork" element={<PrivateRoute><HodRecWork /></PrivateRoute>} />
         <Route path="/RecWork" element={<PrivateRoute><RecWork /></PrivateRoute>} />
         <Route path="/AssignReqNo/:id" element={<PrivateRoute><AssignReqNo /></PrivateRoute>} />
+        <Route path="/ApproveWork" element={<PrivateRoute><ApproveWork /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
