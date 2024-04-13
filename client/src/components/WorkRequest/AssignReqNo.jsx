@@ -1,6 +1,6 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const AssignReqNo = () => {
@@ -9,6 +9,27 @@ const AssignReqNo = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
+    const {id} = useParams()
+
+    // send data
+    const [AssignNumber, SetAssignNumber] = useState({
+        reqNo: ''
+    })
+
+    const headleSubmit = (e) => {
+        e.preventDefault(); 
+
+        axios.post('http://localhost:8081/AssignReqNumberWork/' + id, AssignNumber)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Work Request Number has been Set")
+                navigate('/RecWork')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
 
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
@@ -22,7 +43,7 @@ const AssignReqNo = () => {
                         </Link>                        
                     </div>
                     <div className="my-4">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="my-2">
                                     <label htmlFor="">Work Request Number : </label>
