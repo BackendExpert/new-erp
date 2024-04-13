@@ -5372,5 +5372,20 @@ app.get('/CountApproveGatePass/:id', (req, res) => {
     });
 })
 
+// UserViewGatePass
+app.get('/UserViewGatePass/:id', (req, res) => {
+    const UserEmail = req.params.id
+    const sql = "SELECT * FROM gatepass WHERE Email = ?"
+
+    connection.query(sql, [UserEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
