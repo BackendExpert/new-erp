@@ -4890,5 +4890,17 @@ app.get('/CountMyWork/:id', (req, res) => {
 })
 
 // ----------------------------------------- Work Request End ---------------------
+
+// ------------------------------------------ GetaPass Start ------------------------------
+
+// CreateGatePass
+app.post('/CreateGatePass/:id', (req, res) => {
+    const UserEmail = req.params.id
+
+    console.log(UserEmail, req.body)
+})
+
+// ------------------------------------------ GatePass End --------------------------------
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
