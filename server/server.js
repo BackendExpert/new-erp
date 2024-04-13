@@ -5314,5 +5314,11 @@ app.get('/CountMyGatePass/:id', (req, res) => {
     });
 })
 
+// CountReqGatePass
+
+app.get('/CountReqGatePass/:id', (req, res) => {
+    
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
