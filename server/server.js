@@ -5264,7 +5264,7 @@ app.post('/SecurityCheckGate/:id', (req, res) => {
 // CounthodSRNTO
 
 app.get('/CountToWork', (req, res) => {
-    const sql = "SELECT COUNT(WID) AS WorkTO FROM srn WHERE Status = ?";
+    const sql = "SELECT COUNT(WID) AS WorkTO FROM workrequest WHERE Status = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "HodRecommended"
     connection.query(sql, [status], (error, results) => {
@@ -5276,6 +5276,12 @@ app.get('/CountToWork', (req, res) => {
   
       res.json({ WorkTO: results[0].WorkTO }); // Send count in JSON format
     });
+})
+
+// CountGateTo
+
+app.get('/CountGateTo', (req, res) => {
+
 })
 
 //check the server is working
