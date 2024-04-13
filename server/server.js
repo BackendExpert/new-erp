@@ -4905,6 +4905,10 @@ app.post('/CreateGatePass/:id', (req, res) => {
         if(result.length == 0){
             return res.json({Error: "Equipment not Found in Entered Inventory Number"})
         }
+        else{
+            // add getpass
+            const sql = "INSERT INTO "
+        }
     })   
 })
 
