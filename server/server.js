@@ -5357,7 +5357,7 @@ app.get('/CountRejectGatePass/:id', (req, res) => {
 
 app.get('/CountApproveGatePass/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(GID) AS MyRejectGate FROM gatepass WHERE Status =? && Email = ?";
+    const sql = "SELECT COUNT(GID) AS MyApprveGate FROM gatepass WHERE Status =? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Approve"
 
@@ -5368,7 +5368,7 @@ app.get('/CountApproveGatePass/:id', (req, res) => {
         return;
     }
 
-    res.json({ MyRejectGate: results[0].MyRejectGate }); // Send count in JSON format
+    res.json({ MyApprveGate: results[0].MyApprveGate }); // Send count in JSON format
     });
 })
 
