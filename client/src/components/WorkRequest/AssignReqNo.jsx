@@ -25,7 +25,9 @@ const AssignReqNo = () => {
                         <form>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="my-2">
-                                    
+                                    <label htmlFor="">Work Request Number : </label>
+                                    <input type="text" name="" id="" className="w-full h-12 border border-blue-500 rounded pl-2 my-2" required placeholder="Enter Work Request Number"
+                                    onChange = {e => SetWorkreq({...workReq, RDate:e.target.value})}/>      
                                 </div>
                             </div>
                         </form>
