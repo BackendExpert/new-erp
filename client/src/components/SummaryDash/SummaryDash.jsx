@@ -45,7 +45,7 @@ const SummaryDash = () => {
   const [ReceSRNsLB, SetReceSRNsLB] = useState(0);
   const [hodWork, SethodWork] = useState(0);
   const [hodGatePass, SethodGatePass] = useState(0);
-  const [toSRN, SettoSRN] = useState(0);
+  const [toWork, SettoWork] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -247,8 +247,8 @@ const SummaryDash = () => {
       }   
 
       try {
-        const CountSRNTo = await axios.get('http://localhost:8081/CounthodSRNTO');
-        SettoSRN(CountSRNTo.data.SRNTO);
+        const CountWorkRTo = await axios.get('http://localhost:8081/CountToWork');
+        SettoSRN(CountWorkRTo.data.WorkTO);
       } catch (error) {
         consol
         e.error('Error fetching data:', error);
