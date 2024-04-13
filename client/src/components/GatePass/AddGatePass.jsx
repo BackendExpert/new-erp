@@ -163,6 +163,11 @@ const AddGatePass = () => {
                                 <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Date"
                                 onChange={e => SetGatePass({...GatePass, RDate:e.target.value})}/>
                             </div>
+                            <div className="my-2">
+                                <label htmlFor="">Return Date</label>
+                                <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Return Date"
+                                onChange={e => SetGatePass({...GatePass, ReturnDate:e.target.value})}/>
+                            </div>
                         </div>
                     </form>
                 </div>
