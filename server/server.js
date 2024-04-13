@@ -4696,7 +4696,7 @@ app.post('/ApproveWorkReq/:id', (req, res) =>{
                    
                    var mailOptions = {
                     from: process.env.EMAIL_USER,
-                    to: myEmail,
+                    to: mtEmail,
                     subject: 'Notification: The Work Request',
                     text: 'The Work Request has been Approve', 
                 };
@@ -4736,7 +4736,7 @@ app.post('/RejectWorkReq/:id', (req, res) => {
                    
                    var mailOptions = {
                     from: process.env.EMAIL_USER,
-                    to: myEmail,
+                    to: mtEmail,
                     subject: 'Notification: The Work Request',
                     text: 'The Work Request has been Rejected', 
                 };
