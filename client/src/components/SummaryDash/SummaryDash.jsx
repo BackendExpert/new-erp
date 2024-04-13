@@ -239,7 +239,7 @@ const SummaryDash = () => {
       
       try {
         const CountGatePassHod = await axios.get('http://localhost:8081/CounthodGatePass/' + EmailUser);
-        SethodGatePass(CountGatePassHod.data.HodWork);
+        SethodGatePass(CountGatePassHod.data.HodGate);
       } catch (error) {
         consol
         e.error('Error fetching data:', error);
