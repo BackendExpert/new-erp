@@ -342,7 +342,7 @@ const SummaryDash = () => {
         DataList.map((data, index) => {
             //for SuperAdmin
             if(RoleUser === "SuperAdmin"){
-              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18 && data.id !== 19 && data.id !== 20 && data.id !== 21 && data.id !== 22 && data.id !== 23 && data.id !== 24 && data.id !== 25 && data.id !== 26 && data.id !== 27  && data.id !== 28){
+              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18 && data.id !== 19 && data.id !== 20 && data.id !== 21 && data.id !== 22 && data.id !== 23 && data.id !== 24 && data.id !== 25 && data.id !== 26 && data.id !== 27  && data.id !== 28 && data.id !== 29){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 my-5 cursor-pointer rounded duration-500 ${data.style}`}>
                       <span className="text-3xl" >{data.icons}</span>
@@ -354,7 +354,7 @@ const SummaryDash = () => {
             }
             //for Admin
             if(RoleUser === "Admin"){
-              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18 && data.id !== 19 && data.id !== 20 && data.id !== 21 && data.id !== 22 && data.id !== 23 && data.id !== 24 && data.id !== 25 && data.id !== 26 && data.id !== 27 && data.id !== 28){
+              if(data.id !== 13 && data.id !== 14 && data.id !== 15 && data.id !== 16 && data.id !== 17 && data.id !== 18 && data.id !== 19 && data.id !== 20 && data.id !== 21 && data.id !== 22 && data.id !== 23 && data.id !== 24 && data.id !== 25 && data.id !== 26 && data.id !== 27 && data.id !== 28 && data.id !== 29){
                 return (           
                   <div class={`text-center text-gray-500 shadow-2xl py-12 cursor-pointer rounded duration-500 ${data.style}`}>
                     <span className="text-3xl" >{data.icons}</span>
