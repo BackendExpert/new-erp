@@ -5246,7 +5246,7 @@ app.post('/SecurityCheckGate/:id', (req, res) => {
     const sql = "UPDATE gatepass SET security = ? WHERE GID = ?"
     const status_sec =  "Success"
 
-    connection.query(sql, [status_sec, GatePassID], (req, result) => {
+    connection.query(sql, [status_sec, GatePassID], (err, result) => {
         if(err) {
             return res.json({Error: "Error on Server"})
         }
