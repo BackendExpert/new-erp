@@ -447,7 +447,7 @@ const MyFullStats = () => {
 
 
                         <div className="text-xl mt-6 my-2 font-semibold">
-                          My SRN Requests 
+                          My Work Requests
                         </div> 
                       <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
