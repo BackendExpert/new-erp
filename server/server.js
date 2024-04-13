@@ -4686,7 +4686,15 @@ app.post('/ApproveWorkReq/:id', (req, res) =>{
             return res.json({Error: "Error on server"})
         }
         else{
-            
+            const userEmail = "SELECT * FROM workrequest WHERE WID = ?"
+            connection.query(userEmail, [workID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    
+                }
+            })
         }
     })
 })
