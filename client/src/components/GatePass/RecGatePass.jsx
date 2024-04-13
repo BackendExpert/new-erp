@@ -134,6 +134,31 @@ const RecGatePass = () => {
                                             )
                                         }
                                     }
+                                    else if(buttonValue === "Denied"){
+                                        if(getPass.Status === "Reject" || getPass.Status === "HODReject"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.GID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.Date}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.location}</td> 
+                                                    <td className='px-6 py-4 font-bold'>{getPass.newplace}</td>                                                
+                                                    <td className='px-6 py-4 font-bold'>{getPass.officer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.newofficer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.item}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.itemtype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.quantity}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.invno}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{getPass.Status}</span>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
                                 })
                             }
                         </tbody>
