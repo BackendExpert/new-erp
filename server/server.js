@@ -5281,7 +5281,18 @@ app.get('/CountToWork', (req, res) => {
 // CountGateTo
 
 app.get('/CountGateTo', (req, res) => {
-
+    const sql = "SELECT COUNT(GID) AS WorkTO FROM gatepass WHERE Status = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "HodRecommended"
+    connection.query(sql, [status], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ WorkTO: results[0].WorkTO }); // Send count in JSON format
+    });
 })
 
 //check the server is working
