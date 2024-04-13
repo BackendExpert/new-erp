@@ -4898,7 +4898,14 @@ app.post('/CreateGatePass/:id', (req, res) => {
     const UserEmail = req.params.id
     // console.log(UserEmail, req.body)
 
-        
+    const checkInvNo = "SELECT * FROM equipment WHERE invno = ?"
+    connection.query(checkInvNo, [req.body.InvNo], (err, result) => {
+        if(err) throw err
+
+        if(result.length == 0){
+            return res.json({Error: "Equipment not Found in Entered Inventory Number"})
+        }
+    })   
 })
 
 // ------------------------------------------ GatePass End --------------------------------
