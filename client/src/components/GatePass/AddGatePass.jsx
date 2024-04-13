@@ -210,27 +210,27 @@ const AddGatePass = () => {
                             </div>
                             <div className="my-2">
                                 <label htmlFor="">Item Name</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Outside Responsible Officer"
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Item Name"
                                 onChange={e => SetGatePass({...GatePass, IName:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="">Item Type</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Outside Responsible Officer"
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Item Type"
                                 onChange={e => SetGatePass({...GatePass, IType:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="">Quantity</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Outside Responsible Officer"
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Quantity"
                                 onChange={e => SetGatePass({...GatePass, Quantity:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="">Inventory Number</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Outside Responsible Officer"
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Inventory Number"
                                 onChange={e => SetGatePass({...GatePass, InvNo:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="">Description</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Outside Responsible Officer"
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Enter Description"
                                 onChange={e => SetGatePass({...GatePass, Description:e.target.value})}/>
                             </div>
                         </div>
