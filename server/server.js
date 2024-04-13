@@ -5257,7 +5257,15 @@ app.post('/SecurityCheckGate/:id', (req, res) => {
 
 })
 
+
 // ------------------------------------------ GatePass End --------------------------------
+
+
+// CounthodSRNTO
+
+app.get('/CounthodSRNTO', (req, res) => {
+    
+})
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
