@@ -4839,15 +4839,12 @@ app.get('/CountRejectWork/:id', (req, res) => {
 
 app.get('/CountApproveWork/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(WID) AS MyApproveWork FROM workrequest WHERE Status = ? || Status = ? || Status = ? || Completed = ? || Completed = ? && Email = ?";
+    const sql = "SELECT COUNT(WID) AS MyApproveWork FROM workrequest WHERE Status =? && Completed =? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
-    const status1 = "Recommended"
-    const status2 = "HodRecommended"
-    const status3 = "Approve"
+    const status = "Approve"
     const complete = 1
-    const complete1 = null
 
-    connection.query(sql, [status1, status2, status3, complete, complete1, UserEmail], (error, results) => {
+    connection.query(sql, [status, complete, UserEmail], (error, results) => {
     if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
