@@ -4637,6 +4637,23 @@ app.post('/WorkReject/:id', (req, res) => {
     })
 })
 
+// AssignReqNumberWork
+app.post('/AssignReqNumberWork/:id', (req, res) => {
+    const WorkId = req.params.id
+
+    const checkNo = "SELECT * FROM workrequest WHERE ReqNo = ?"
+    connection.query(checkNo, [req.body.reqNo], (err, result) => {
+        if(err) throw err
+
+        if(result.length == 0){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            
+        }
+    })
+})
+
 // ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
