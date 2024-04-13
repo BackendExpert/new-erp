@@ -9,7 +9,7 @@ const AddGatePass = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
-    
+
     //go back according to login user
     const headleBack = () => {
       if(RoleUser === "SuperAdmin"){
@@ -53,10 +53,16 @@ const AddGatePass = () => {
       } 
     }
 
+    if(RoleUser != null){
+        return (
+            <div>AddGatePass</div>
+        )
+    }
+    else{
+        localStorage.clear()
+        navigate('/')
+    }
 
-  return (
-    <div>AddGatePass</div>
-  )
 }
 
 export default AddGatePass
