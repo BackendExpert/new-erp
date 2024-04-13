@@ -74,6 +74,16 @@ const AddGatePass = () => {
 
       const MyDiviSRN = MyDivision.title
 
+          // Get HOD email 
+      const [SRNHodEMail, SetSRNHodEMail] = useState([])
+      useEffect(() => {
+        axios.get('http://localhost:8081/SRNHODEmail/' + EmailUser)
+        .then(res => SetSRNHodEMail(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
+      const SRNHOD = SRNHodEMail.email
+
     // send data to backend
     const [GatePass, SetGatePass] = useState({
         HoDEmail:'',
