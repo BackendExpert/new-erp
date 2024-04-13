@@ -108,7 +108,7 @@ const AddGatePass = () => {
     const headleSubmit = (e) =>{
         e.preventDefault(); 
 
-        axios.post('http://localhost:8081/CreateGatePass/' + EmailUser, GatePass)
+        axios.post('http://localhost:8081/CreateGatePass/' + EmailUser, {GatePass, empUsername, empRole, MyDiviSRN, SRNHOD} )
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("The Gate Pass Added Successful")
