@@ -112,7 +112,7 @@ const HodRecWork = () => {
                                         }
                                     }
                                     else if(buttonValue === "Denied"){
-                                        if(hodWork.Status === "Hod Reject"){
+                                        if(hodWork.Status === "HodReject"){
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{hodWork.WID}</td>
@@ -130,7 +130,7 @@ const HodRecWork = () => {
                                         }
                                     }
                                     else if(buttonValue === "Recommend"){
-                                        if(hodWork.Status === "Hod Recommended"){
+                                        if(hodWork.Status === "HodRecommended"){
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{hodWork.WID}</td>
