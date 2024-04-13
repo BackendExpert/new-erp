@@ -5300,7 +5300,7 @@ app.get('/CountGateTo', (req, res) => {
 app.get('/CountMyGatePass/:id', (req, res) => {
     const CurrentEmail = req.params.id
     // console.log(CurrentEmail)
-    const sql = "SELECT COUNT(WID) AS myWorkview FROM workrequest WHERE Email = ?";
+    const sql = "SELECT COUNT(GID) AS myGatePassview FROM gatepass WHERE Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
     connection.query(sql, [CurrentEmail], (error, results) => {
@@ -5310,7 +5310,7 @@ app.get('/CountMyGatePass/:id', (req, res) => {
         return;
       }
   
-      res.json({ myWorkview: results[0].myWorkview }); // Send count in JSON format
+      res.json({ myGatePassview: results[0].myGatePassview }); // Send count in JSON format
     });
 })
 
