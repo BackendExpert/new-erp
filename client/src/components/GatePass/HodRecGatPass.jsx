@@ -69,6 +69,13 @@ const HodRecGatPass = () => {
                                         if(hodGate.Status === "Request"){
                                             return(
                                                 <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.GID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.Date}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.LID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.LID}</td>                                                 
                                                     
                                                 </tr>
                                             )
