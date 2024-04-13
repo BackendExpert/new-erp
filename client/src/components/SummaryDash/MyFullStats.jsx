@@ -315,7 +315,7 @@ const MyFullStats = () => {
                           </div>                          
                         </div> 
 
-                        <div onClick={() => HeadleButtonClick('Reject GatePass')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Approve GatePass')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
                             My Approve GatePass Request
