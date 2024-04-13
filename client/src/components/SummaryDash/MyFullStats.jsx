@@ -100,6 +100,7 @@ const MyFullStats = () => {
         const [RejectSRN, SetRejectSRN] = useState(0)
         const [RequestWork, SetRequestWork] = useState(0)
         const [RejectWork, SetRejectWork] = useState(0)
+        const [ApproveWork, SetApproveWork] = useState(0);
 
         useEffect(() => {
           const fetchData = async () => {
@@ -171,6 +172,13 @@ const MyFullStats = () => {
               console.error('Error fetching data:', error);
             }
             
+
+            try {
+              const CountMyApproveWork = await axios.get('http://localhost:8081/CountApproveWork/' + EmailUser);
+              SetApproveWork(CountMyApproveWork.data.MyApproveWork);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
 
           }
           fetchData();
