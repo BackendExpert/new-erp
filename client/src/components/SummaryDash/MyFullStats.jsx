@@ -253,15 +253,15 @@ const MyFullStats = () => {
                         <div onClick={() => HeadleButtonClick('Reject Work')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
-                            My Approve/Completed Work Requests
-                            <p className="mx-4 text-xl font-bold"><CountUp end={RejectSRN} /></p>
+                            My Reject Work Request
+                            <p className="mx-4 text-xl font-bold"><CountUp end={RejectWork} /></p>
                           </div>                          
                         </div> 
 
                         <div onClick={() => HeadleButtonClick('Approve Work')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
-                            My Reject SRN 
+                            My Approve/Completed Work Requests
                             <p className="mx-4 text-xl font-bold"><CountUp end={RejectSRN} /></p>
                           </div>                          
                         </div> 
