@@ -118,6 +118,11 @@ const AddGatePass = () => {
                                 <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
                                 value={empUsername} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
                             </div>
+                            <div className="my-2">
+                                <label htmlFor="">Employee Designation</label>
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                                value={empRole} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
+                            </div>
                         </div>
                     </form>
                 </div>
