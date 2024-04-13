@@ -73,7 +73,39 @@ const ApproveGatePass = () => {
                         </thead>
                         <tbody>
                             {
-                                
+                                ApproveGatePass.map((appGate, index) => {
+                                    if(buttonValue === "Recommend"){
+                                        if(appGate.Status === "Recommend"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.GID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.Date}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.location}</td> 
+                                                    <td className='px-6 py-4 font-bold'>{appGate.newplace}</td>                                                
+                                                    <td className='px-6 py-4 font-bold'>{appGate.officer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.newofficer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.item}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.itemtype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.quantity}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.invno}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{appGate.Status}</span>
+                                                    </td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <div className="flex">
+                                                            <button  onClick={() => headleRece(appGate.GID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Approve</button> 
+                                                            <button  onClick={() => headleDenied(appGate.GID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Reject</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
+                                })
                             }
                         </tbody>
                       </table>
