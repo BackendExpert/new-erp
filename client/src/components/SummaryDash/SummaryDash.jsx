@@ -235,7 +235,15 @@ const SummaryDash = () => {
       } catch (error) {
         consol
         e.error('Error fetching data:', error);
-      }      
+      }     
+      
+      try {
+        const CountGatePassHod = await axios.get('http://localhost:8081/CounthodGatePass/' + EmailUser);
+        SethodGatePass(CountGatePassHod.data.HodWork);
+      } catch (error) {
+        consol
+        e.error('Error fetching data:', error);
+      }   
 
 
     };    
