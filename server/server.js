@@ -4738,7 +4738,7 @@ app.post('/RejectWorkReq/:id', (req, res) => {
                     from: process.env.EMAIL_USER,
                     to: myEmail,
                     subject: 'Notification: The Work Request',
-                    text: 'The Work Request has been Approve', 
+                    text: 'The Work Request has been Rejected', 
                 };
     
                 transporter.sendMail(mailOptions, function(error, info){
