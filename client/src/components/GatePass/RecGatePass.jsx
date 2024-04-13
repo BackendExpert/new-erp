@@ -37,6 +37,15 @@ const RecGatePass = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleRece = (id) => {
+        axios.post('http://localhost:8081/GetPassRec/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Gate Pass has been ")
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
