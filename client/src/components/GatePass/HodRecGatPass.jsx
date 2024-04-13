@@ -39,10 +39,15 @@ const HodRecGatPass = () => {
                               <th scope='col' className='px-6 py-3'>GatePass ID</th>
                               <th scope='col' className='px-6 py-3'>Name</th>
                               <th scope='col' className='px-6 py-3'>Email</th>
-                              <th scope='col' className='px-6 py-3'>Date</th>                                    
-                              <th scope='col' className='px-6 py-3'>Work Type</th>
-                              <th scope='col' className='px-6 py-3'>Supervisor</th>
-                              <th scope='col' className='px-6 py-3'>Description</th>                          
+                              <th scope='col' className='px-6 py-3'>Start Date</th>
+                              <th scope='col' className='px-6 py-3'>End Date</th>                                     
+                              <th scope='col' className='px-6 py-3'>Purpose</th>
+                              <th scope='col' className='px-6 py-3'>Start Location</th>
+                              <th scope='col' className='px-6 py-3'>End Location</th>     
+                              <th scope='col' className='px-6 py-3'>Item</th>                                     
+                              <th scope='col' className='px-6 py-3'>Item Type</th>
+                              <th scope='col' className='px-6 py-3'>Quantity</th>
+                              <th scope='col' className='px-6 py-3'>End Location</th>                        
                               <th scope='col' className='px-6 py-3'>Status</th>
                               <th scope='col' className='px-6 py-3'>Action</th>                                        
                             </tr>
