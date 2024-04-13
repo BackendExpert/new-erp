@@ -15,7 +15,7 @@ const ToNav = () => {
         {name: "Reserve Vehicle", link: "/AddReservation"},
         {name: "Submit SRN", link: "/AddSRN"},
         {name: "Request Work", link: "/AddWorkReq"},
-        {name: "Request Gatepass", link: ""}
+        {name: "Request Gatepass", link: "/AddGatePass"}
     ] 
   return (
     <div className='flex justify-between rounded shadow-xl border-b-4 border-blue-300 bg-white my-4 py-4 px-4'>
