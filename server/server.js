@@ -5318,7 +5318,7 @@ app.get('/CountMyGatePass/:id', (req, res) => {
 
 app.get('/CountReqGatePass/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(WID) AS MyReqGate FROM workrequest WHERE Status =? && Email = ?";
+    const sql = "SELECT COUNT(GID) AS MyReqGate FROM gatepass WHERE Status =? && Email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Request"
 
