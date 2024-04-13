@@ -4998,6 +4998,12 @@ app.get('/HodReqGatePass/:id', (req, res) => {
     })
 })
 
+// HodApproveGatePass
+app.post('/HodApproveGatePass/:id', (req, res) =>{
+    const GatePassID = req.params.id
+    
+})
+
 
 // ------------------------------------------ GatePass End --------------------------------
 
