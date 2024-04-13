@@ -122,6 +122,31 @@ const HodRecGatPass = () => {
                                             )
                                         }
                                     }
+                                    else if(buttonValue === "Denied"){
+                                        if(hodGate.Status === "HodReject"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.GID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.Date}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.location}</td> 
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.newplace}</td>                                                
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.officer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.newofficer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.item}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.itemtype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.quantity}</td>
+                                                    <td className='px-6 py-4 font-bold'>{hodGate.invno}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{hodGate.Status}</span>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
                                 })
                             }
                         </tbody>
