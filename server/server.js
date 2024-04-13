@@ -5048,7 +5048,7 @@ app.post('/HodRejectGatePass/:id', (req, res) => {
     const GatePassID = req.params.id
 
     const sql = "UPDATE gatepass SET Status =? WHERE GID =?"
-    const status = "HODRecommended"
+    const status = "HODReject"
     connection.query(sql, [status, GatePassID], (err, result) => {
         if(err){
             return res.json({Error: "Error on Server"})
