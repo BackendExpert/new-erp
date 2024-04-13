@@ -11,7 +11,7 @@ const DirSecNav = () => {
         {name: "Recommend Leave", link: "/RecLeave"},
         {name: "Recommend Reservations", link: "/RecReservation"},
         {name: "Recommend Work Requests", link: "/RecWork"},
-        {name: "Recommend Gatepass", link: ""},
+        {name: "Recommend Gatepass", link: "/RecGatePass"},
         {name: "Recommend Increment", link: ""},        
         {name: "Profile", link: "/Profile"},
         {name: "Logout", link: "", desc: "logout"}       
