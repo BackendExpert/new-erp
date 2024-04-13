@@ -5063,14 +5063,14 @@ app.post('/HodRejectGatePass/:id', (req, res) => {
                     if(result.length == 0){
                         return true
                     }
-                    
+
                     const myEmail = result[0].Email
 
                     var mailOptions = {
                         from: process.env.EMAIL_USER,
                         to: myEmail,
                         subject: 'Notification: The GatePass',
-                        text: 'The Gate Pass Has been Recommended by Head of the Dept.', 
+                        text: 'The Gate Pass Has been Rejected by Head of the Dept.', 
                     };
         
                     transporter.sendMail(mailOptions, function(error, info){
