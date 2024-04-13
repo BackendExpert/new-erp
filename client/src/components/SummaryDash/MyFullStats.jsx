@@ -111,6 +111,7 @@ const MyFullStats = () => {
         const [ApproveWork, SetApproveWork] = useState(0);
         const [RequstGate, SetRequstGate] = useState(0);
         const [RejectGate, SetRejectGate] = useState(0);
+        const [ApprveGate, SetApprveGate] = useState(0);
 
         useEffect(() => {
           const fetchData = async () => {
@@ -201,6 +202,13 @@ const MyFullStats = () => {
             try {
               const CountRejectGate = await axios.get('http://localhost:8081/CountRejectGatePass/' + EmailUser);
               SetRejectGate(CountRejectGate.data.MyRejectGate);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+
+            try {
+              const CountApproveGate = await axios.get('http://localhost:8081/CountApproveGatePass/' + EmailUser);
+              SetApprveGate(CountApproveGate.data.MyApprveGate);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
