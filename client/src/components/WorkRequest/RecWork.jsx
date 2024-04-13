@@ -98,7 +98,7 @@ const RecWork = () => {
                             {
                                 WorkReq.map((work, index) => {
                                     if(buttonValue === "Requested"){
-                                        if(work.Status === "HodRecommended"){
+                                        if(work.Status === "HodRecommended" || work.Status === "SetRegNo"){
                                             return (
                                                 <tr key={index}>
                                                     <td className='px-6 py-4 font-bold'>{work.WID}</td>
