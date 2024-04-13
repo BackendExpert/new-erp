@@ -4799,7 +4799,20 @@ app.post('/WrokComplete/:id', (req, res) => {
 // CountRequestWork
 
 app.get('/CountRequestWork/:id', (req, res) => {
-    
+    const UserEmail = req.params.id;
+    const sql = "SELECT COUNT(WID) AS MyRejectSRN FROM workrequest WHERE Status = ? && Email = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "Request"
+
+    connection.query(sql, [status, UserEmail], (error, results) => {
+    if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+    }
+
+    res.json({ MyRejectSRN: results[0].MyRejectSRN }); // Send count in JSON format
+    });
 })
 
 // ----------------------------------------- Work Request End ---------------------
