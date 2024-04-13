@@ -131,6 +131,57 @@ const ApproveGatePass = () => {
                                             )
                                         }
                                     }
+                                    else if(buttonValue === "Reject"){
+                                        if(appGate.Status === "Reject"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.GID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.Date}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.location}</td> 
+                                                    <td className='px-6 py-4 font-bold'>{appGate.newplace}</td>                                                
+                                                    <td className='px-6 py-4 font-bold'>{appGate.officer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.newofficer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.item}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.itemtype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.quantity}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.invno}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{appGate.Status}</span>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
+
+                                    else if(buttonValue === "Approve"){
+                                        if(appGate.Status === "Approve"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.GID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.Date}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.location}</td> 
+                                                    <td className='px-6 py-4 font-bold'>{appGate.newplace}</td>                                                
+                                                    <td className='px-6 py-4 font-bold'>{appGate.officer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.newofficer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.item}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.itemtype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.quantity}</td>
+                                                    <td className='px-6 py-4 font-bold'>{appGate.invno}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-green-500 text-white">{appGate.Status}</span>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
                                 })
                             }
                         </tbody>
