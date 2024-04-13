@@ -285,6 +285,7 @@ const SummaryDash = () => {
     {id: 27, name:"Recommend SRNs" , value: ReceSRNsLB,  icons: <Icons name="book" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
     // HOD 
     {id: 28, name:"Work Requests" , value: <CountUp end={hodWork}/>,  icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
+    {id: 29, name:"GatePass Requests" , value: <CountUp end={hodGatePass}/>,  icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
   ]
   
   // hod data
