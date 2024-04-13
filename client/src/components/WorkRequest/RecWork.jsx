@@ -62,6 +62,19 @@ const RecWork = () => {
         })
     }
 
+    const headleCompleted = (id) => {
+        axios.post('http://localhost:8081/WrokComplete/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The WorkRequest has been Completed")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin" || RoleUser === "TO" || RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
