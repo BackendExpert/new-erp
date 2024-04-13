@@ -4824,7 +4824,7 @@ app.get('/CountRejectWork/:id', (req, res) => {
     const status1 = "HodReject"
     const status2 = "Reject"
 
-    connection.query(sql, [status, UserEmail], (error, results) => {
+    connection.query(sql, [status1, status2, UserEmail], (error, results) => {
     if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
