@@ -4755,6 +4755,46 @@ app.post('/RejectWorkReq/:id', (req, res) => {
     })
 })
 
+// WrokComplete
+
+app.post('/WrokComplete/:id', (req, res) => {
+    const workID = req.params.id
+    const sql = "UPDATE workrequest SET Completed = ? WHERE WID = ?"
+    const complete = 1
+    connection.query(sql, [status, workID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            const userEmail = "SELECT * FROM workrequest WHERE WID = ?"
+            connection.query(userEmail, [workID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                   const mtEmail = result[0].Email
+                   
+                   var mailOptions = {
+                    from: process.env.EMAIL_USER,
+                    to: mtEmail,
+                    subject: 'Notification: The Work Request',
+                    text: 'The Work Request has been Rejected', 
+                };
+    
+                transporter.sendMail(mailOptions, function(error, info){
+                    if (error) {
+                    console.log(error);
+                    } else {
+                    console.log('Email sent: ' + info.response);
+                    return res.json({Status: "Success"})
+                    }
+                });
+                }
+            })
+        }
+    })
+})
+
 // ----------------------------------------- Work Request End ---------------------
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
