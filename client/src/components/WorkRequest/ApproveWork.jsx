@@ -33,6 +33,19 @@ const ApproveWork = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleApprove = (id) =>{
+        axios.post('http://localhost:8081/ApproveWorkReq/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Work Request has been Approve")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
