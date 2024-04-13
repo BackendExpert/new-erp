@@ -75,7 +75,41 @@ const RecGatePass = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                GatePasses.map((getPass, index) => {
+                                    if(buttonValue === "Requested"){
+                                        if(getPass === "HODRecommended"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.GID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.Name}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.Email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.Date}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.RDate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.purpose}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.location}</td> 
+                                                    <td className='px-6 py-4 font-bold'>{getPass.newplace}</td>                                                
+                                                    <td className='px-6 py-4 font-bold'>{getPass.officer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.newofficer}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.item}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.itemtype}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.quantity}</td>
+                                                    <td className='px-6 py-4 font-bold'>{getPass.invno}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-yellow-500 text-white">{getPass.Status}</span>
+                                                    </td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <div className="flex">
+                                                            <button  onClick={() => headleRece(getPass.GID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button> 
+                                                            <button  onClick={() => headleDenied(getPass.GID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
