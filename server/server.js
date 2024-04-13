@@ -4896,8 +4896,9 @@ app.get('/CountMyWork/:id', (req, res) => {
 // CreateGatePass
 app.post('/CreateGatePass/:id', (req, res) => {
     const UserEmail = req.params.id
+    // console.log(UserEmail, req.body)
 
-    console.log(UserEmail, req.body)
+        
 })
 
 // ------------------------------------------ GatePass End --------------------------------
