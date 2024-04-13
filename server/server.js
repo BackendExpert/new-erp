@@ -4908,7 +4908,10 @@ app.post('/CreateGatePass/:id', (req, res) => {
         else{
             // add getpass
             const sql = "INSERT INTO gatepass(Name, Email, HoDEmail, project, designation, Date, RDate, purpose, location, newplace, item, itemtype, quantity, invno, description, officer, newofficer, security, Status, create_at, update_at) VALUES (?)"
-            const value [
+            const value = [
+                req.body.empUsername,
+                UserEmail,
+                req.body.SRNHOD
                 
             ]
         }
