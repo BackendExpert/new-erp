@@ -4504,7 +4504,7 @@ app.post('/HodWorkApprove/:id', (req, res) => {
     const workID = req.params.id
 
     const sql = "UPDATE workrequest SET Status = ? WHERE WID =?"
-    const status = "Hod Recommended"
+    const status = "HodRecommended"
 
     connection.query(sql, [status, workID], (err, result) => {
         if(err){
@@ -4550,7 +4550,7 @@ app.post('/HodWorkReject/:id', (req, res) => {
     const workID = req.params.id
 
     const sql = "UPDATE workrequest SET Status = ? WHERE WID =?"
-    const status = "Hod Reject"
+    const status = "HodReject"
 
     connection.query(sql, [status, workID], (err, result) => {
         if(err){
