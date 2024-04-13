@@ -64,6 +64,16 @@ const AddGatePass = () => {
       const empUsername = empName.username
       const empRole = empName.role
 
+          // get my division
+      const [MyDivision, SetMyDivision] = useState([])
+      useEffect(() => {
+        axios.get('http://localhost:8081/MyDivisionSRN/' + EmailUser)
+        .then(res => SetMyDivision(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
+      const MyDiviSRN = MyDivision.title
+
     // send data to backend
     const [GatePass, SetGatePass] = useState({
         HoDEmail:'',
