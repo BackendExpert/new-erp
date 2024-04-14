@@ -16,7 +16,19 @@ const UserStatusSetHod = () => {
         Conduct: ''
     })
 
-    
+    const headleSubmit = (e) => {
+        e.preventDefault(); 
+        axios.post('http://localhost:8081/SetUserStatusInc/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The User's Status Set")
+                navigate('/HodRecIncrement')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
 
     if(RoleUser === "HOD"){
         return (
@@ -30,7 +42,7 @@ const UserStatusSetHod = () => {
                         </Link>
                     </div>
                     <div className="my-4">
-                        <form>
+                        <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="my-2">
                                     <label htmlFor="">Employee Attendance</label>
