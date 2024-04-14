@@ -5422,6 +5422,7 @@ app.post('/CreateIncrement/:id', (req, res) => {
     connection.query(sql, [value], (err, result) => {
         if(err){
             return res.json({Error: "Error on Server"})
+            console.log(err)
         }
         else{
             
