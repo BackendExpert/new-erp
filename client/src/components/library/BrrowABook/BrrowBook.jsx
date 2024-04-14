@@ -91,7 +91,13 @@ const BrrowBook = () => {
                                             if(BookList.status === "Available"){
                                                 return(
                                                     <tr key={index}>
-                                                        
+                                                        <td className='px-6 py-4 font-bold'>{BookList.BookID}</td>
+                                                        <td className='px-6 py-4 font-bold'>{BookList.isbn}</td>
+                                                        <td className='px-6 py-4 font-bold'>{BookList.title}</td>
+                                                        <td className='px-6 py-4 font-bold'>{BookList.publisher}</td>
+                                                        <td className='px-6 py-4 font-bold'>{BookList.pyear}</td>
+                                                        <td className='px-6 py-4 font-bold'>{BookList.author1}, {BookList.author2}, {BookList.author3}, {BookList.author4}</td>
+                                                        <td className='px-6 py-4 font-bold'>{BookList.BookID}</td>
                                                     </tr>
                                                 )
                                             }
