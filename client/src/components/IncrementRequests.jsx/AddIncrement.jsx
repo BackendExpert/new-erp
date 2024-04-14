@@ -183,9 +183,17 @@ const AddIncrement = () => {
                             </div> 
                             <div className="my-2">
                                 <label htmlFor="">Present Salary</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Present Salary "
+                                <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Present Salary "
                                 onChange={e => SetIncrementData({...IncrementData, psalary:e.target.value})}/>
+                            </div>
+                            <div className="my-2">
+                                <label htmlFor=""> New Salary</label>
+                                <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Present Salary "
+                                onChange={e => SetIncrementData({...IncrementData, nsalary:e.target.value})}/>
                             </div> 
+                        </div>
+                        <div className="">
+                            <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Increment</button>
                         </div>
                     </form>
                 </div>
