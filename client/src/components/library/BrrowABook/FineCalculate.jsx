@@ -33,6 +33,8 @@ const FineCalculate = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const BKvalue = BookValue.value
+
     const [CalFineData, SetCalFineData] = useState({
         title:'',
         bname:'', 
@@ -84,9 +86,14 @@ const FineCalculate = () => {
                     </div>
                     <div className="lg:grid grid-cols-3 gap-4">
                         <div className="my-2">
+                            <label htmlFor="">Book Value</label>
+                            <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Fine Rate"
+                            value={BKvalue} onChange={e => SetCalFineData({...CalFineData, rate:e.target.value})}/>
+                        </div>
+                        <div className="my-2">
                             <label htmlFor="">Rate to Calculate Fine</label>
                             <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Fine Rate"
-                            value={erdate} onChange={e => SetCalFineData({...CalFineData, rate:e.target.value})}/>
+                            onChange={e => SetCalFineData({...CalFineData, rate:e.target.value})}/>
                         </div>
                     </div>
                </form>
