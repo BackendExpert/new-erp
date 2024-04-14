@@ -1,6 +1,6 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const UserStatusSetHod = () => {
@@ -10,6 +10,8 @@ const UserStatusSetHod = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    const {id} = useParams()
+
     const [UserStatus, SetUserStatus] = useState({
         Attendance: '',
         Decipline: '',
@@ -18,7 +20,7 @@ const UserStatusSetHod = () => {
 
     const headleSubmit = (e) => {
         e.preventDefault(); 
-        axios.post('http://localhost:8081/SetUserStatusInc/' + id)
+        axios.post('http://localhost:8081/SetUserStatusInc/' + id, UserStatus)
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("The User's Status Set")
