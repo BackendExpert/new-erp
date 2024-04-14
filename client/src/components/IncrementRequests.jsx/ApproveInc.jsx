@@ -61,7 +61,13 @@ const ApproveInc = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                IncApproveData.map((incApp, index) => {
+                                    if(buttonValue === "Recommend"){
+                                        if(incApp.status === "")
+                                    }
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>

@@ -5569,6 +5569,22 @@ app.post('/HodRejectInc/:id', (req, res) => {
 })
 
 
+// IncAppData
+
+app.get('/IncAppData', (req, res) => {
+    const sql = "SELECT * FROM increment WHERE status = ?"
+    const status = "HODRecommended"
+
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "Error in Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // ------------------------------ Increamet End -------------------------------
 
 //check the server is working
