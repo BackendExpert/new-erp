@@ -5417,7 +5417,8 @@ app.post('/CreateIncrement/:id', (req, res) => {
         update_at
     ]
 
-    console.log(value)
+    // console.log(value)
+
 })
 
 // ------------------------------ Increamet End -------------------------------
