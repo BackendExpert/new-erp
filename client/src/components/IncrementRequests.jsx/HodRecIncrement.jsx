@@ -122,12 +122,12 @@ const HodRecIncrement = () => {
                                                                 }
                                                                 else{
                                                                     return (
-                                                                        <button  onClick={() => headleRece(incHod.GID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button> 
+                                                                        <button  onClick={() => headleRece(incHod.IID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button> 
                                                                     )
                                                                 }
                                                             })()
                                                         }                                                        
-                                                        <button  onClick={() => headleDenied(incHod.GID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
+                                                        <button  onClick={() => headleDenied(incHod.IID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
                                                     </div>
                                                 </td>
 
