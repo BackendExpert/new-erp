@@ -19,6 +19,7 @@ const Mystats = () => {
         const [mySRN, SetmySRN] = useState(0)
         const [myWork, SetmyWork] = useState(0)
         const [myGatePass, SetmyGatePass] = useState(0)
+        const [myIncReq, SetmyIncReq] = useState(0)
 
         useEffect(() => {
             const fetchData = async () => {
@@ -56,7 +57,15 @@ const Mystats = () => {
                 } catch (error) {
                     console.error('Error fetching data:', error);
                 }
+
+                try {
+                    const IncMy = await axios.get('http://localhost:8081/CountMyInc/' + EmailUser);
+                    SetmyIncReq(IncMy.data.myIncview);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
             }
+
     
             fetchData();
         }, [])
