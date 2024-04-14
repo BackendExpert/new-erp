@@ -54,9 +54,12 @@ const BrrowBook = () => {
       } 
     }
 
-    const [BrrowListData, SetBrrowListData] = useState({
-        
-    })
+    const [BrrowListData, SetBrrowListData] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/BrrowBookList')
+        .then(res => SetBrrowListData(res.data))
+        .catch(err => console.log(err))
+    }, [])
 
     if(RoleUser != null){
         return (
