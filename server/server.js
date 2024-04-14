@@ -5851,5 +5851,13 @@ app.get('/BrrowBookUserList', (req, res) => {
     })
 })
 
+// ReturnBook
+
+app.post('/ReturnBook/:id', (req, res) => {
+    const BID = req.params.id
+
+    const slq = "UPDATE "
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
