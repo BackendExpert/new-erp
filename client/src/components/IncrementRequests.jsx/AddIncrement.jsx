@@ -77,6 +77,9 @@ const AddIncrement = () => {
                     })()
                     }
                 </div>
+                <div className="my-4">
+                    <form></form>
+                </div>
             </div>
         </div>
         )
