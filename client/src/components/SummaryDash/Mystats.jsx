@@ -76,7 +76,7 @@ const Mystats = () => {
         {name: "My SRN", value: <CountUp end={mySRN}/>, icon: <Icons name="document-text" size="large"></Icons>, style: "hover:border-green-500 hover:text-green-600"},
         {name: "My Work Requests",  value: <CountUp end={myWork}/>, icon: <Icons name="documents" size="large"></Icons>, style: "hover:border-purple-500 hover:text-purple-600"},        
         {name: "My Gate Pass", value: <CountUp end={myGatePass}/>, icon: <Icons name="map" size="large"></Icons>, style: "hover:border-yellow-500 hover:text-yellow-600"},  
-        {name: "My Increment Requests", value: "2", icon: <Icons name="cash" size="large"></Icons>, style: "hover:border-green-500 hover:text-green-600"},  
+        {name: "My Increment Requests",value: <CountUp end={myIncReq}/>, icon: <Icons name="cash" size="large"></Icons>, style: "hover:border-green-500 hover:text-green-600"},  
     ]
 
 
