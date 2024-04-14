@@ -120,7 +120,8 @@ const MyFullStats = () => {
         const [RequstGate, SetRequstGate] = useState(0);
         const [RejectGate, SetRejectGate] = useState(0);
         const [ApprveGate, SetApprveGate] = useState(0);
-        const [ReqInc, SetReqInc] = useState(0)
+        const [ReqInc, SetReqInc] = useState(0);
+        const [RejectInc, SetRejectInc] = useState(0);
 
         useEffect(() => {
           const fetchData = async () => {
@@ -227,6 +228,13 @@ const MyFullStats = () => {
             try {
               const CountReqinc = await axios.get('http://localhost:8081/CountReqInc/' + EmailUser);
               SetReqInc(CountReqinc.data.MyReqInc);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+
+            try {
+              const CountRejectinc = await axios.get('http://localhost:8081/CountRejectInc/' + EmailUser);
+              SetReqInc(CountRejectinc.data.MyRejectInc);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
