@@ -5677,7 +5677,20 @@ app.post('/IncReject/:id', (req, res) => {
 // CountMyInc
 
 app.get('/CountMyInc/:id', (req, res) => {
+    const CurrentEmail = req.params.id
+    // console.log(CurrentEmail)
+    const sql = "SELECT COUNT(IID) AS myIncview FROM increment WHERE email = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     
+    connection.query(sql, [CurrentEmail], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ myIncview: results[0].myIncview }); // Send count in JSON format
+    });
 })
 
 // ------------------------------ Increamet End -------------------------------
