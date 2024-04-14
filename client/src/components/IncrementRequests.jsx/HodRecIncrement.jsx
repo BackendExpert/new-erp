@@ -88,14 +88,17 @@ const HodRecIncrement = () => {
                                                                 if(incHod.attendance === null && incHod.decipline === null && incHod.conduct === null){
                                                                     return(
                                                                         <Link>
-                                                                            <button  onClick={() => headleRece(hodGate.GID)} className="ml-2 border border-blue-500 rounded py-2 px-4 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Set User Status</button> 
+                                                                            <button className="ml-2 border border-blue-500 rounded py-2 px-4 text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Set User Status</button> 
                                                                         </Link>
                                                                     )
                                                                 }
+                                                                else{
+                                                                    return (
+                                                                        <button  onClick={() => headleRece(hodGate.GID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button> 
+                                                                    )
+                                                                }
                                                             })()
-                                                        }
-
-                                                        <button  onClick={() => headleRece(hodGate.GID)} className="ml-2 border border-green-500 rounded py-2 px-4 text-green-500 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Recommended</button> 
+                                                        }                                                        
                                                         <button  onClick={() => headleDenied(hodGate.GID)} className="ml-2 border border-red-500 rounded py-2 px-4 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-xl">Denied</button>
                                                     </div>
                                                 </td>
