@@ -5477,6 +5477,23 @@ app.post('/SetUserStatusInc/:id', (req, res) => {
     })
 })
 
+// HodRecInc
+app.post('/HodRecInc/:id', (req, res) =>{
+    const IncID = req.params.id
+
+    const sql = "UPDATE increment SET status = ? WHERE IID = ? "
+    const status = "HODRecommended"
+
+    connection.query(sql, [status, IncID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            
+        }
+    })
+})
+
 // ------------------------------ Increamet End -------------------------------
 
 //check the server is working
