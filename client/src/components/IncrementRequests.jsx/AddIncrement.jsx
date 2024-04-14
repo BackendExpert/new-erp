@@ -134,7 +134,7 @@ const AddIncrement = () => {
                             </div>
                             <div className="my-2">
                                 <label htmlFor="">Employee Email</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Email "
                                 value={EmailUser} onChange={e => SetIncrementData({...IncrementData, email:e.target.value})}/>
                             </div>
                             <div className="my-2">
@@ -147,13 +147,13 @@ const AddIncrement = () => {
                                 </select>
                             </div>   
                             <div className="my-2">
-                                <label htmlFor="">Employee Email</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                                <label htmlFor="">Employee Division</label>
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Division "
                                 value={MyDiviSRN} onChange={e => SetIncrementData({...IncrementData, division:e.target.value})}/>
                             </div> 
                             <div className="my-2">
-                                <label htmlFor="">Employee Email</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                                <label htmlFor="">Employee Category</label>
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee JobCatagary "
                                 value={empRole} onChange={e => SetIncrementData({...IncrementData, category:e.target.value})}/>
                             </div>  
                         </div>
