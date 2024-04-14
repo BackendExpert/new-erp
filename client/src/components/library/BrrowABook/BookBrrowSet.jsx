@@ -12,6 +12,11 @@ const BookBrrowSet = () => {
 
     const {id} = useParams()
 
+    const [BookBrrowdata, SetBookBrrowdata] = useState({
+        Email: '',
+        RDate: ''
+    })
+
     if(RoleUser != null){
         return (
             <div className="bg-gray-200 py-4">
@@ -26,8 +31,16 @@ const BookBrrowSet = () => {
                     <div className="my-4">
                         <form>
                             <div className="lg:grid grid-cols-2 gap-4">
-                                <div className="my-2">
-
+                                <div className="">
+                                    <label htmlFor="">Email</label>
+                                    <input type="time" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                                    value={EmailUser} onChange={e => SetLeaveData({...LeaveData, StartTime:e.target.value})}/>
+                                </div>
+    
+                                <div className="">
+                                    <label htmlFor="">Return Date</label>
+                                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder=""
+                                    onChange={e => SetLeaveData({...LeaveData, Email:e.target.value})}/>
                                 </div>
                             </div>
                         </form>
