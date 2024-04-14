@@ -105,6 +105,14 @@ const MyFullStats = () => {
           .catch(err => console.log(err))
         }, [])
 
+        // fetch Increment
+        const [ViewIncrement, SetViewIncrement] = useState([])
+        useEffect(() => {
+          axios.get('http://localhost:8081/UserViewInc/' + EmailUser )
+          .then(res => SetViewIncrement(res.data))
+          .catch(err => console.log(err))
+        }, [])
+
         //count Data
 
         const [requestLeave, SetrequestLeave] = useState(0);
@@ -382,11 +390,11 @@ const MyFullStats = () => {
                           </div>                          
                         </div> 
 
-                        <div onClick={() => HeadleButtonClick('Approve Increment')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Approve Increment')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
                             My Approve Increment Requests
-                            <p className="mx-4 text-xl font-bold"><CountUp end={RejectInc} /></p>
+                            <p className="mx-4 text-xl font-bold"><CountUp end={ApproveInc} /></p>
                           </div>                          
                         </div> 
                     </div>
