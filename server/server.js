@@ -5568,6 +5568,11 @@ app.post('/HodRejectInc/:id', (req, res) => {
     })
 })
 
+// CountHodInc
+app.get('/CountHodInc/:id', (req, res) => {
+    
+})
+
 // ------------------------------ Increamet End -------------------------------
 
 //check the server is working
