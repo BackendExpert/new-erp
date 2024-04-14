@@ -5937,18 +5937,26 @@ app.post('/CalculateFineAdd/:id', (req, res) => {
     const sql = "INSERT INTO fine(title, bname, borrower, bid, value, amount, create_at, update_at) VALUES (?)"
     const create_at = new Date()
     const update_at = new Date()
-    const fineValue =  req.body.BKvalue * req.body.CalFineData.rate,
+    const fineValue =  req.body.BKvalue * req.body.CalFineData.rate/100
     const value = [
         req.body.fineBtitle,
         req.body.bname,
         req.body.borrower,
         req.body.bookid,
         req.body.BKvalue,
-       
+        fineValue,
         create_at,
         update_at,
-
     ]
+
+    connection.query(sql, [value], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            
+        }
+    })
 })
 
 //check the server is working
