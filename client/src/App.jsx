@@ -282,6 +282,10 @@ export default function App() {
         <Route path="/BookBrrowSet/:id" element={<PrivateRoute><BookBrrowSet /></PrivateRoute>}  />
         <Route path="/BrrowUserList" element={<PrivateRoute><BrrowUserList /></PrivateRoute>} />
 
+        {/* Fine Calculate */}
+
+        <Route path="/calculateFine" element={<PrivateRoute></PrivateRoute>}
+
       </Routes>
     </BrowserRouter>
   )
