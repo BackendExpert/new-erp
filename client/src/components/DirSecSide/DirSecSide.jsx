@@ -13,7 +13,7 @@ const DirSecSide = () => {
         {name: "Approve SRN",  link: "/ApproveSRN", icon: <Icons name="book" size="large"></Icons>},
         {name: "Approve Work Request",  link: "/ApproveWork", icon: <Icons name="document-text" size="large"></Icons>},
         {name: "Approve Gate Pass",  link: "/ApproveGatePass", icon: <Icons name="car" size="large"></Icons>},
-        {name: "Approve Increment",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
+        {name: "Approve Increment",  link: "/ApproveInc", icon: <Icons name="cash" size="large"></Icons>},
         {name: "Profile",  link: "#", icon: <Icons name="person" size="large"></Icons>}
     ]
 
