@@ -90,6 +90,7 @@ import HodRecGatPass from "./components/GatePass/HodRecGatPass"
 import RecGatePass from "./components/GatePass/RecGatePass"
 import ApproveGatePass from "./components/GatePass/ApproveGatePass"
 import AddIncrement from "./components/IncrementRequests.jsx/AddIncrement"
+import HodRecIncrement from "./components/IncrementRequests.jsx/HodRecIncrement"
 
 
 export default function App() {
@@ -264,7 +265,10 @@ export default function App() {
         <Route path="/HodRecGatPass" element={<PrivateRoute><HodRecGatPass /></PrivateRoute>} />
         <Route path="/RecGatePass" element={<PrivateRoute><RecGatePass /></PrivateRoute>} />
         <Route path="/ApproveGatePass" element={<PrivateRoute><ApproveGatePass /></PrivateRoute>} />
+
+        {/* Increment */}
         <Route path="/AddIncrement" element={<PrivateRoute><AddIncrement /></PrivateRoute>} />
+        <Route path="/HodRecIncrement" element={<PrivateRoute><HodRecIncrement /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
