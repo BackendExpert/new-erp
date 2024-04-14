@@ -64,7 +64,13 @@ const HodRecIncrement = () => {
                             {
                                 IncrementHodData.map((incHod, index) => {
                                     if(buttonValue === "Requested"){
-                                        if(incHod.status === "")
+                                        if(incHod.status === "Request"){
+                                           return (
+                                            <tr key={index}>
+                                                 <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
+                                            </tr>
+                                           )
+                                        }
                                     }
                                 })
                             }
