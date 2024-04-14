@@ -1,9 +1,9 @@
 import React from 'react'
 
-const calculateFine = () => {
+const CalculateFine = () => {
   return (
-    <div>calculateFine</div>
+    <div>CalculateFine</div>
   )
 }
 
-export default calculateFine
+export default CalculateFine
