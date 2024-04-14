@@ -12,14 +12,25 @@ const BookBrrowSet = () => {
 
     const {id} = useParams()
 
+        // employee name
+      const [empName, SetEmpname] = useState('')
+      useEffect(() => {
+        axios.get('http://localhost:8081/EmpName/' + EmailUser)
+        .then(res => SetEmpname(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
+      const empUsername = empName.username
+
     const [BookBrrowdata, SetBookBrrowdata] = useState({
         Email: '',
         RDate: ''
     })
 
+
     const headleSubmit = (e) => {
         e.preventDefault(); 
-        axios.post('http://localhost:8081/BrrowANewBook/' + id, {EmailUser, BookBrrowdata})
+        axios.post('http://localhost:8081/BrrowANewBook/' + id, {EmailUser, BookBrrowdata, empUsername})
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Book Brrowed Successful")
