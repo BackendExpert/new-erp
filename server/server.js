@@ -5693,6 +5693,12 @@ app.get('/CountMyInc/:id', (req, res) => {
     });
 })
 
+// CountReqInc
+
+app.get('/CountReqInc/:id', (req, res) => {
+    
+})
+
 // ------------------------------ Increamet End -------------------------------
 
 //check the server is working
