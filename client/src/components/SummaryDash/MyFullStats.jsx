@@ -757,7 +757,34 @@ const MyFullStats = () => {
                                     }
                                 </tbody>
                             </table>
-                        </div>                                             
+                        </div>
+                        <div className="text-xl mt-6 my-2 font-semibold">
+                          My Increment Requests
+                        </div> 
+                      <div className="relative overflow-x-auto my-8">
+                            <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
+                                    <tr className='text-blue-500'>
+                                      <th scope='col' className='px-6 py-3'>GatePass ID</th>
+                                      <th scope='col' className='px-6 py-3'>Start Date</th>
+                                      <th scope='col' className='px-6 py-3'>End Date</th>                                     
+                                      <th scope='col' className='px-6 py-3'>Purpose</th>
+                                      <th scope='col' className='px-6 py-3'>Start Location</th>
+                                      <th scope='col' className='px-6 py-3'>End Location</th> 
+                                      <th scope='col' className='px-6 py-3'>Officer</th>
+                                      <th scope='col' className='px-6 py-3'>OutSide Officer</th>        
+                                      <th scope='col' className='px-6 py-3'>Item</th>                                     
+                                      <th scope='col' className='px-6 py-3'>Item Type</th>
+                                      <th scope='col' className='px-6 py-3'>Quantity</th>
+                                      <th scope='col' className='px-6 py-3'>Invo No</th> 
+                                      <th scope='col' className='px-6 py-3'>Status</th> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>                                                  
                 </div>
             </div>
         )

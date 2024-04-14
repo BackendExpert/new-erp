@@ -89,10 +89,10 @@ import AddGatePass from "./components/GatePass/AddGatePass"
 import HodRecGatPass from "./components/GatePass/HodRecGatPass"
 import RecGatePass from "./components/GatePass/RecGatePass"
 import ApproveGatePass from "./components/GatePass/ApproveGatePass"
-import AddIncrement from "./components/IncrementRequests.jsx/AddIncrement"
-import HodRecIncrement from "./components/IncrementRequests.jsx/HodRecIncrement"
-import UserStatusSetHod from "./components/IncrementRequests.jsx/UserStatusSetHod"
-import ApproveInc from "./components/IncrementRequests.jsx/ApproveInc"
+import AddIncrement from "./components/IncrementRequests/AddIncrement"
+import HodRecIncrement from "./components/IncrementRequests/HodRecIncrement"
+import UserStatusSetHod from "./components/IncrementRequests/UserStatusSetHod"
+import ApproveInc from "./components/IncrementRequests/ApproveInc"
 
 
 export default function App() {
