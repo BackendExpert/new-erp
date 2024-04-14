@@ -5572,10 +5572,9 @@ app.post('/HodRejectInc/:id', (req, res) => {
 // IncAppData
 
 app.get('/IncAppData', (req, res) => {
-    const sql = "SELECT * FROM increment WHERE status = ?"
-    const status = "HODRecommended"
+    const sql = "SELECT * FROM increment"
 
-    connection.query(sql, [status], (err, result) => {
+    connection.query(sql, (err, result) => {
         if(err){
             return res.json({Error: "Error in Server"})
         }
