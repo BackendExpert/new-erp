@@ -10,10 +10,17 @@ const ListFine = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
-    
-  return (
-    <div>ListFine</div>
-  )
+    if(RoleUser === "Librarian"){
+        return (
+            <div>ListFine</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
+
 }
 
 export default ListFine
