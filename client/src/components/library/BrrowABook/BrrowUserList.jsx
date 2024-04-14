@@ -17,6 +17,19 @@ const BrrowUserList = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleReturn = (id) => {
+        axios.post('http://localhost:8081/ReturnBook/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Book has been Returned")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "Librarian"){
         return (
             <div className="bg-gray-200 py-4">
