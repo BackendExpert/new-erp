@@ -5885,5 +5885,11 @@ app.post('/ReturnBook/:id', (req, res) => {
     })
 })
 
+// FineCalData
+
+app.get('/FineCalData/:id', (req, res) => {
+    const BrrowlID = req.params.id
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
