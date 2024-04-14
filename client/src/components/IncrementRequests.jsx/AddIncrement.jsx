@@ -53,6 +53,17 @@ const AddIncrement = () => {
       } 
     }
 
+            // employee name
+      const [empName, SetEmpname] = useState('')
+      useEffect(() => {
+        axios.get('http://localhost:8081/EmpName/' + EmailUser)
+        .then(res => SetEmpname(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
+      const empUsername = empName.username
+      const empRole = empName.role
+
     // send data backed
     const [IncrementData, SetIncrementData] = useState({
         email:'',
