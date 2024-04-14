@@ -5889,7 +5889,7 @@ app.post('/ReturnBook/:id', (req, res) => {
 
 app.get('/FineCalData/:id', (req, res) => {
     const BrrowlID = req.params.id
-    const sql = "SELECT * FROM borrowal WHERE ID = ?"
+    const sql = "SELECT bdate, borrower, bookid, bname, btitle, erdate FROM borrowal WHERE ID = ?"
 
     connection.query(sql, [BrrowlID], (err, result) => {
         if(err){
