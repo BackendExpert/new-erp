@@ -75,9 +75,9 @@ const HodRecIncrement = () => {
                                                 <td className='px-6 py-4 font-bold'>{incHod.idate}</td>
                                                 <td className='px-6 py-4 font-bold'>{incHod.sstep}</td>
                                                 <td className='px-6 py-4 font-bold'>{incHod.nsalary}</td>
-                                                <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
-                                                <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
-                                                <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.attendance}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.decipline}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.conduct}</td>
                                             </tr>
                                            )
                                         }
