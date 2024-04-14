@@ -10,6 +10,13 @@ const ListFine = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    const [BookFineList, SetBookFineList] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/BookFineList')
+        .then(res => SetBookFineList(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "Librarian"){
         return (
             <div className="bg-gray-200 py-4">
