@@ -15,7 +15,7 @@ const LibSide = () => {
         {name: "Thesis List",  link: "/Thesis", icon: <Icons name="copy" size="large"></Icons>},
         {name: "Magazine Lists",  link: "/Magazine", icon: <Icons name="newspaper" size="large"></Icons>},
         {name: "Article Requests",  link: "/Articles", icon: <Icons name="document" size="large"></Icons>},
-        {name: "List of Fine",  link: "#", icon: <Icons name="cash" size="large"></Icons>}
+        {name: "List of Fine",  link: "/ListFine", icon: <Icons name="cash" size="large"></Icons>}
     ]
   return (
     <div className={`duration-500 relative border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-auto pl-4 py-4 ${openSide ? "w-72" : "w-20" }`}>
