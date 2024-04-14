@@ -5888,17 +5888,21 @@ app.post('/ReturnBook/:id', (req, res) => {
 // FineCalData
 
 app.get('/FineCalData/:id', (req, res) => {
-    const BrrowlID = req.params.id
-    const sql = "SELECT bdate, borrower, bookid, bname, btitle, erdate FROM borrowal WHERE ID = ?"
+    const BrrowID = req.params.id
+    console.log(BrrowID)
 
-    connection.query(sql, [BrrowlID], (err, result) => {
-        if(err){
-            return res.json({Error: "Error on server"})
-        }
-        else{
-            res.json(result[0]);
-        }
-    })
+
+    // const sql = "SELECT username, role FROM users WHERE email = ?"
+    
+    // connection.query(sql, [empEmail], (err, result) => {
+    //     if(err){
+    //         return res.json({Error: "Error on Server"})
+    //     }
+    //     else{
+    //         console.log(result)
+    //         res.json(result[0]);
+    //     }
+    // })
 })
 
 //check the server is working
