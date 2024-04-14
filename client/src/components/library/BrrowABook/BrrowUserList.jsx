@@ -36,7 +36,7 @@ const BrrowUserList = () => {
                               <th scope='col' className='px-6 py-3'>Brrow Date</th>
                               <th scope='col' className='px-6 py-3'>Borrower</th>
                               <th scope='col' className='px-6 py-3'>Book ID</th>
-                              <th scope='col' className='px-6 py-3'>End Date</th>                                     
+                              <th scope='col' className='px-6 py-3'>Borrower Name</th>                                     
                               <th scope='col' className='px-6 py-3'>Purpose</th>
                               <th scope='col' className='px-6 py-3'>Start Location</th>
                               <th scope='col' className='px-6 py-3'>End Location</th> 
