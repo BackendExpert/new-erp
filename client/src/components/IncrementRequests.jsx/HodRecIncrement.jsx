@@ -15,10 +15,18 @@ const HodRecIncrement = () => {
     const HeadleButtonClick = (clickValue) => {
         SetButtonValue(clickValue)   
     }
-    
-  return (
-    <div>HodRecIncrement</div>
-  )
+
+    if(RoleUser === "HOD"){
+        return (
+            <div>HodRecIncrement</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
+
 }
 
 export default HodRecIncrement
