@@ -5896,7 +5896,7 @@ app.get('/FineCalData/:id', (req, res) => {
             return res.json({Error: "Error on server"})
         }
         else{
-            return res.json(result[0])
+            res.json(result[0]);
         }
     })
 })
