@@ -1,6 +1,6 @@
 import secureLocalStorage from "react-secure-storage"
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios";
 
 const BookBrrowSet = () => {
@@ -9,6 +9,8 @@ const BookBrrowSet = () => {
     const RoleUser = secureLocalStorage.getItem("loginNew");
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
+
+    const {id} = useParams()
 
     if(RoleUser != null){
         return (
@@ -25,7 +27,7 @@ const BookBrrowSet = () => {
                         <form>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="my-2">
-                                    
+
                                 </div>
                             </div>
                         </form>
