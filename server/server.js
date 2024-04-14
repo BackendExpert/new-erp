@@ -5956,7 +5956,7 @@ app.post('/CalculateFineAdd/:id', (req, res) => {
         else{
             var mailOptions = {
                 from: process.env.EMAIL_USER,
-                to: borrower,
+                to: req.body.borrower,
                 subject: 'Notification: Book Brrowal Fine ',
                 text: 'The Book Brrowal Fine is : '+fineValue, 
             };
