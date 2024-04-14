@@ -78,7 +78,13 @@ const AddIncrement = () => {
                     }
                 </div>
                 <div className="my-4">
-                    <form></form>
+                    <form>
+                        <div className="lg:grid grid-cols-3 gap-4">
+                            <div className="my-2">
+                                
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
