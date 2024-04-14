@@ -5486,7 +5486,7 @@ app.post('/HodRecInc/:id', (req, res) =>{
 
     connection.query(sql, [status, IncID], (err, result) => {
         if(err){
-            return res.json({Error: "Error on Server"})
+            return res.json({Error: "Error on Serverss"})
         }
         else{
             const getUser = "SELECT * FROM increment WHERE IID = ?"
