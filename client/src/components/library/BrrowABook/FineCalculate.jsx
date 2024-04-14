@@ -10,7 +10,7 @@ const FineCalculate = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
-    const {id} = useParams
+    const {id} = useParams()
 
     const [FineData, SetFineData] = useState([])
     useEffect(() => {
