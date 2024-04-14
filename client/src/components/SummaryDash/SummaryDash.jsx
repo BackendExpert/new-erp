@@ -312,10 +312,11 @@ const SummaryDash = () => {
     // HOD 
     {id: 28, name:"Work Requests" , value: <CountUp end={hodWork}/>,  icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
     {id: 29, name:"GatePass Requests" , value: <CountUp end={hodGatePass}/>,  icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
-    // TO 
+    // TO  
     {id: 30, name:"Work Requests" , value: <CountUp end={toWork}/>,  icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
     {id: 31, name:"GatePass Requests" , value: <CountUp end={toGatePass}/>,  icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
-    
+    {id: 32, name:"Increment Requests" , value: <CountUp end={hodInc}/>,  icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
+   
   ]
   
   // hod data
