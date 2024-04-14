@@ -32,10 +32,10 @@ const BrrowUserList = () => {
                         <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                           <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
                             <tr className='text-blue-500'>
-                              <th scope='col' className='px-6 py-3'>GatePass ID</th>
-                              <th scope='col' className='px-6 py-3'>Name</th>
-                              <th scope='col' className='px-6 py-3'>Email</th>
-                              <th scope='col' className='px-6 py-3'>Start Date</th>
+                              <th scope='col' className='px-6 py-3'>Brrowal ID</th>
+                              <th scope='col' className='px-6 py-3'>Brrow Date</th>
+                              <th scope='col' className='px-6 py-3'>Borrower</th>
+                              <th scope='col' className='px-6 py-3'>Book ID</th>
                               <th scope='col' className='px-6 py-3'>End Date</th>                                     
                               <th scope='col' className='px-6 py-3'>Purpose</th>
                               <th scope='col' className='px-6 py-3'>Start Location</th>
