@@ -14,12 +14,12 @@ const FineCalculate = () => {
 
     const [FineData, SetFineData] = useState([])
     useEffect(() => {
-        axios.post('http://localhost:8081/FineCalData/' + id)
+        axios.get('http://localhost:8081/FineCalData/' + id)
         .then(res => SetFineData(res.data))
         .catch(err => console.log(err))
     }, [])
 
-    const fine = FineData[1]
+    const fine = FineData
 
 
   return (
