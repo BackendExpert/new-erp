@@ -52,6 +52,22 @@ const AddIncrement = () => {
         navigate('/DriverDash');
       } 
     }
+
+    // send data backed
+    const [IncrementData, SetIncrementData] = useState({
+        email:'',
+        designation:'',
+        division:'',
+        hod:'',
+        idate:'',
+        sscale:'',
+        sstep:'',
+        psalary:'',
+        nsalary:'',
+        ename:'',
+        category:''
+    })
+
     if(RoleUser != null){
         return (
             <div className="bg-gray-200 py-4">
@@ -81,7 +97,9 @@ const AddIncrement = () => {
                     <form>
                         <div className="lg:grid grid-cols-3 gap-4">
                             <div className="my-2">
-                                
+                                <label htmlFor="">Employee Name</label>
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                                value={empUsername} onChange={e => SetIncrementData({...IncrementData, ename:e.target.value})}/>
                             </div>
                         </div>
                     </form>
