@@ -46,6 +46,16 @@ const FineCalculate = () => {
 
     const headleSubmit = (e) => {
         e.preventDefault(); 
+        axios.post('http://localhost:8081/CalculateFineAdd/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Fine Calculated Succesful")
+                navigate('/librarian')
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
 
 
