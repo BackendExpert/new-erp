@@ -61,7 +61,13 @@ const HodRecIncrement = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                IncrementHodData.map((incHod, index) => {
+                                    if(buttonValue === "Requested"){
+                                        if(incHod.status === "")
+                                    }
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
