@@ -16,6 +16,14 @@ const HodRecIncrement = () => {
         SetButtonValue(clickValue)   
     }
 
+    // fetch data
+    const [IncrementHodData, SetIncrementHodData] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/HodIncrementRec/' + EmailUser)
+        .then(res => SetIncrementHodData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
