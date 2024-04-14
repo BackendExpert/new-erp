@@ -118,6 +118,29 @@ const ApproveInc = () => {
                                             )
                                         }
                                     }
+                                    else if(buttonValue === "Reject"){
+                                        if(incApp.status === "HODReject" || incApp.status === "Reject"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.IID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.ename}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.division}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.category}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.sscale}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.idate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.sstep}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.nsalary}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.attendance}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.decipline}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.conduct}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{incApp.status}</span>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
                                 })
                             }
                         </tbody>
