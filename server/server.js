@@ -5793,7 +5793,7 @@ app.post('/BrrowANewBook/:id', (req, res) => {
     const getBookData = "SELECT * FROM books WHERE BookID = ?"
     connection.query(getBookData, [BookID], (err, result) => {
         if(err){
-            return res.json({Error: "Error on Server"})
+            return res.json({Error: "Error on Serversss"})
         }
         else{
             const bookTitle = result[0].title
@@ -5818,10 +5818,19 @@ app.post('/BrrowANewBook/:id', (req, res) => {
 
             connection.query(sql, [value], (err, result) => {
                 if(err){
-                    return res.json({Error: "Error on Server"})
+                    return res.json({Error: "Error on Serverddd"})
                 }
                 else{
-                    return res.json({Status: "Success"})
+                    const updateBook = "UPDATE books SET Staus = ? WHERE BookID = ?"
+                    const status = "Brrowed"
+                    connection.query(updateBook, [status, BookID], (err, result) => {
+                        if(err){
+                            return res.json({Error: "ERROR on SERVER"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    })                    
                 }
             })
         }
