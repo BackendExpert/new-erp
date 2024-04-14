@@ -101,11 +101,14 @@ const AddIncrement = () => {
 
     const headleSubmit = (e) => {
         e.preventDefault(); 
-        axios.post('http://localhost:8081/CreateIncrement/' + EmailUser)
+        axios.post('http://localhost:8081/CreateIncrement/' + EmailUser, {IncrementData, empUsername, empRole, MyDiviSRN, SRNHOD})
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("The Increment has benn added")
                 headleBack();
+            }
+            else{
+                alert(res.data.Error)
             }
         })
     }
