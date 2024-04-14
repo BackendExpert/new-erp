@@ -24,6 +24,11 @@ const HodRecIncrement = () => {
         .catch(err => console.log(err))
     }, [])
 
+    // headleRece
+    const headleRece = (id) =>{
+        
+    }
+    
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
