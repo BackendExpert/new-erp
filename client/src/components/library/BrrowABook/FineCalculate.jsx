@@ -46,7 +46,7 @@ const FineCalculate = () => {
 
     const headleSubmit = (e) => {
         e.preventDefault(); 
-        axios.post('http://localhost:8081/CalculateFineAdd/' + id, {CalFineData, fineBtitle, bdate, borrower, bookid, bname, erdate})
+        axios.post('http://localhost:8081/CalculateFineAdd/' + id, {CalFineData, fineBtitle, bdate, borrower, bookid, bname, erdate, BKvalue})
         .then(res => {
             if(res.data.Status === "Success"){
                 alert("Fine Calculated Succesful")
