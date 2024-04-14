@@ -45,20 +45,38 @@ const UserStatusSetHod = () => {
                         <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="my-2">
-                                    <label htmlFor="">Employee Attendance</label>
-                                    <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Email "
-                                    onChange={e => SetUserStatus({...UserStatus, Attendance:e.target.value})}/>
+                                    <label htmlFor="">Designation</label>
+                                    <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2" required
+                                    onChange={e => SetUserStatus({...UserStatus, Attendance:e.target.value})}>
+                                        <option>Select Option</option>
+                                        <option value="Bad">Bad</option>
+                                        <option value="Normal">Normal</option>    
+                                        <option value="Good">Good</option>
+                                        <option value="Very Good">Very Good</option>                                       
+                                    </select>
                                 </div>
                                 <div className="my-2">
-                                    <label htmlFor="">Employee Decipline</label>
-                                    <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Email "
-                                    onChange={e => SetUserStatus({...UserStatus, Decipline:e.target.value})}/>
-                                </div>
+                                    <label htmlFor="">Designation</label>
+                                    <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2" required
+                                    onChange={e => SetUserStatus({...UserStatus, Decipline:e.target.value})}>
+                                        <option>Select Option</option>
+                                        <option value="Bad">Bad</option>
+                                        <option value="Normal">Normal</option>    
+                                        <option value="Good">Good</option>
+                                        <option value="Very Good">Very Good</option>     
+                                    </select>
+                                </div>   
                                 <div className="my-2">
-                                    <label htmlFor="">Employee Conduct</label>
-                                    <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Email "
-                                    onChange={e => SetUserStatus({...UserStatus, Conduct:e.target.value})}/>
-                                </div>
+                                    <label htmlFor="">Designation</label>
+                                    <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2" required
+                                    onChange={e => SetUserStatus({...UserStatus, Conduct:e.target.value})}>
+                                        <option>Select Option</option>
+                                        <option value="Bad">Bad</option>
+                                        <option value="Normal">Normal</option>    
+                                        <option value="Good">Good</option>
+                                        <option value="Very Good">Very Good</option>     
+                                    </select>
+                                </div>      
                             </div>
                             <div className="">
                                 <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Increment</button>
