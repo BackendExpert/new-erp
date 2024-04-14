@@ -5858,21 +5858,21 @@ app.post('/ReturnBook/:id', (req, res) => {
     const checkBook = "SELECT * FROM borrowal WHERE ID = ?"
     connection.query(checkBook, [BID], (err, result) => {
         if(err) {
-            return res.json({Error: "Error on server"})
+            return res.json({Error: "Error on server1"})
         }
         else{
             const bookID = result[0].bookid
-            const slq = "UPDATE books SET status = ? WHERE ID = ?"
+            const sql = "UPDATE books SET status = ? WHERE BookID = ?"
             const status = "Available"
-            connection.query(sql, [status, BID], (err, result) => {
+            connection.query(sql, [status, bookID], (err, result) => {
                 if(err) {
-                    return res.json({Error: "Error on Server"})
+                    return res.json({Error: "Error on Server2"})
                 }
                 else{
                     const deleteBrrow = "DELETE FROM borrowal WHERE ID = ?"
                     connection.query(deleteBrrow, [BID], (err, result) => {
                         if(err){
-                            return res.json({Error: "Error on Server"})
+                            return res.json({Error: "Error on Server3"})
                         }
                         else{
                             return res.json({Status: "Success"})
