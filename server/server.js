@@ -5495,6 +5495,9 @@ app.post('/HodRecInc/:id', (req, res) =>{
                     return res.json({Error: "Error on Server"})
                 }
                 else{
+                    if(result.length == 0){
+                        return true
+                    }
                     const myEmail = result[0].email
 
                     var mailOptions = {
@@ -5532,6 +5535,9 @@ app.post('/HodRejectInc/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
+            if(result.length == 0){
+                return true
+            }
             const getUser = "SELECT * FROM increment WHERE IID = ?"
             connection.query(getUser, [IncID], (err, result) => {
                 if(err){
