@@ -97,7 +97,9 @@ const BrrowBook = () => {
                                                         <td className='px-6 py-4 font-bold'>{BookList.publisher}</td>
                                                         <td className='px-6 py-4 font-bold'>{BookList.pyear}</td>
                                                         <td className='px-6 py-4 font-bold'>{BookList.author1}, {BookList.author2}, {BookList.author3}, {BookList.author4}</td>
-                                                        <td className='px-6 py-4 font-bold'>{BookList.BookID}</td>
+                                                        <td className='px-6 py-4 font-bold'>
+                                                            <span className="py-2 px-4 rounded bg-yellow-500 text-white">{BookList.status}</span>
+                                                        </td>  
                                                     </tr>
                                                 )
                                             }
