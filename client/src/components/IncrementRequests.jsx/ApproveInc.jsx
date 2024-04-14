@@ -70,6 +70,7 @@ const ApproveInc = () => {
                                                     <td className='px-6 py-4 font-bold'>{incApp.IID}</td>
                                                     <td className='px-6 py-4 font-bold'>{incApp.ename}</td>
                                                     <td className='px-6 py-4 font-bold'>{incApp.email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incApp.division}</td>
                                                     <td className='px-6 py-4 font-bold'>{incApp.category}</td>
                                                     <td className='px-6 py-4 font-bold'>{incApp.sscale}</td>
                                                     <td className='px-6 py-4 font-bold'>{incApp.idate}</td>
