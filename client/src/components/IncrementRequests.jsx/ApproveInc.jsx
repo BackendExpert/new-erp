@@ -23,6 +23,14 @@ const ApproveInc = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleApprove = (id) => {
+
+    }
+
+    const headleReject = (id) => {
+        
+    }
+
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
