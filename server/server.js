@@ -5991,5 +5991,21 @@ app.post('/CalculateFineAdd/:id', (req, res) => {
     })
 })
 
+
+// BookFineList
+
+app.get('/BookFineList', (req, res) => {
+    const sql = "SELECT * FROM fine"
+
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
