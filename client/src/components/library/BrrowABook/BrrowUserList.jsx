@@ -10,6 +10,13 @@ const BrrowUserList = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    const [BrrowDataList, SetBrrowDataList] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/BrrowBookList')
+        .then(res => SetBrrowDataList(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "Librarian"){
         return (
             <div className="bg-gray-200 py-4">
@@ -44,7 +51,7 @@ const BrrowUserList = () => {
                             </tr>
                         </thead>
                         <tbody>
-                        
+
                         </tbody>
                       </table>
                     </div>
