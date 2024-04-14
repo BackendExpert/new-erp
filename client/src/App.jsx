@@ -96,6 +96,7 @@ import ApproveInc from "./components/IncrementRequests/ApproveInc"
 import BrrowBook from "./components/library/BrrowABook/BrrowBook"
 import BookBrrowSet from "./components/library/BrrowABook/BookBrrowSet"
 import BrrowUserList from "./components/library/BrrowABook/BrrowUserList"
+import CalculateFine from "./components/library/BrrowABook/calculateFine"
 
 
 export default function App() {
@@ -284,7 +285,7 @@ export default function App() {
 
         {/* Fine Calculate */}
 
-        <Route path="/calculateFine" element={<PrivateRoute></PrivateRoute>}
+        <Route path="/CalculateFine" element={<PrivateRoute><CalculateFine /></PrivateRoute>} />
 
       </Routes>
     </BrowserRouter>
