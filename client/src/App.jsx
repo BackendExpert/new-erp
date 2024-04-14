@@ -97,6 +97,7 @@ import BrrowBook from "./components/library/BrrowABook/BrrowBook"
 import BookBrrowSet from "./components/library/BrrowABook/BookBrrowSet"
 import BrrowUserList from "./components/library/BrrowABook/BrrowUserList"
 import FineCalculate from "./components/library/BrrowABook/FineCalculate"
+import ListFine from "./components/library/BrrowABook/ListFine"
 
 export default function App() {
   return (
@@ -284,6 +285,7 @@ export default function App() {
 
         {/* Fine Calculate */}
         <Route path="/FineCalculate/:id" element={<PrivateRoute><FineCalculate /></PrivateRoute>} />
+        <Route path="/ListFine" element={<PrivateRoute><ListFine /></PrivateRoute>} />
 
 
       </Routes>
