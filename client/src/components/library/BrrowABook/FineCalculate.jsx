@@ -19,6 +19,9 @@ const FineCalculate = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const fine = FineData[1]
+
+
   return (
     <div className="bg-gray-200 py-4">
         <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
@@ -30,7 +33,7 @@ const FineCalculate = () => {
                 </Link>
             </div>
             <div className="my-4">
-
+                <p className="">{fine}</p>
             </div>
         </div>
     </div>
