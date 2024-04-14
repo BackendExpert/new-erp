@@ -5480,46 +5480,46 @@ app.post('/SetUserStatusInc/:id', (req, res) => {
 // HodRecInc
 app.post('/HodRecInc/:id', (req, res) =>{
     const IncID = req.params.id
+    console.log(IncID)
+    // const sql = "UPDATE increment SET status = ? WHERE IID = ? "
+    // const status = "HODRecommended"
 
-    const sql = "UPDATE increment SET status = ? WHERE IID = ? "
-    const status = "HODRecommended"
+    // connection.query(sql, [status, IncID], (err, result) => {
+    //     if(err){
+    //         return res.json({Error: "Error on Serverss"})
+    //     }
+    //     else{
+    //         const getUser = "SELECT * FROM increment WHERE IID = ?"
+    //         connection.query(getUser, [IncID], (err, result) => {
+    //             if(err){
+    //                 return res.json({Error: "Error on Server"})
+    //             }
+    //             else{
+    //                 if(result.length == 0){
+    //                     return true
+    //                 }
+    //                 const myEmail = result[0].email
 
-    connection.query(sql, [status, IncID], (err, result) => {
-        if(err){
-            return res.json({Error: "Error on Serverss"})
-        }
-        else{
-            const getUser = "SELECT * FROM increment WHERE IID = ?"
-            connection.query(getUser, [IncID], (err, result) => {
-                if(err){
-                    return res.json({Error: "Error on Server"})
-                }
-                else{
-                    if(result.length == 0){
-                        return true
-                    }
-                    const myEmail = result[0].email
-
-                    var mailOptions = {
-                        from: process.env.EMAIL_USER,
-                        to: myEmail,
-                        subject: 'Notification: The Increment Request',
-                        text: 'The Increment Request Has been Recommended by Head of the Department', 
-                    };
+    //                 var mailOptions = {
+    //                     from: process.env.EMAIL_USER,
+    //                     to: myEmail,
+    //                     subject: 'Notification: The Increment Request',
+    //                     text: 'The Increment Request Has been Recommended by Head of the Department', 
+    //                 };
         
-                    transporter.sendMail(mailOptions, function(error, info){
-                        if (error) {
-                        console.log(error);
-                        } else {
-                        console.log('Email sent: ' + info.response);
-                        return res.json({Status: "Success"})
-                        }
-                    });
+    //                 transporter.sendMail(mailOptions, function(error, info){
+    //                     if (error) {
+    //                     console.log(error);
+    //                     } else {
+    //                     console.log('Email sent: ' + info.response);
+    //                     return res.json({Status: "Success"})
+    //                     }
+    //                 });
 
-                }
-            })
-        }
-    })
+    //             }
+    //         })
+    //     }
+    // })
 })
 
 // HodRejectInc
