@@ -120,6 +120,7 @@ const MyFullStats = () => {
         const [RequstGate, SetRequstGate] = useState(0);
         const [RejectGate, SetRejectGate] = useState(0);
         const [ApprveGate, SetApprveGate] = useState(0);
+        const [ReqInc, SetReqInc] = useState(0)
 
         useEffect(() => {
           const fetchData = async () => {
@@ -220,6 +221,16 @@ const MyFullStats = () => {
             } catch (error) {
               console.error('Error fetching data:', error);
             }
+
+
+            // increment
+            try {
+              const CountReqinc = await axios.get('http://localhost:8081/CountReqInc/' + EmailUser);
+              SetReqInc(CountReqinc.data.MyReqInc);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+
           }
           fetchData();
         }, []);
@@ -332,6 +343,15 @@ const MyFullStats = () => {
                         </div> 
 
                         <div onClick={() => HeadleButtonClick('Approve GatePass')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Approve GatePass Request
+                            <p className="mx-4 text-xl font-bold"><CountUp end={ApprveGate} /></p>
+                          </div>                          
+                        </div> 
+
+                        {/* Increment Requests */}
+                        <div onClick={() => HeadleButtonClick('Request Increment')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
                             My Approve GatePass Request
