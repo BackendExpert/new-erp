@@ -5584,6 +5584,51 @@ app.get('/IncAppData', (req, res) => {
     })
 })
 
+// IncReject
+app.post('/IncReject/:id', (req, res) => {
+    const IncID = req.params.id
+
+    const sql = "UPDATE increment SET status = ? WHERE IID = ? "
+    const status = "Approve"
+
+    connection.query(sql, [status, IncID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            if(result.length == 0){
+                return true
+            }
+            const getUser = "SELECT * FROM increment WHERE IID = ?"
+            connection.query(getUser, [IncID], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    const myEmail = result[0].email
+
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: myEmail,
+                        subject: 'Notification: The Increment Request',
+                        text: 'The Increment Request Has been Reject by Head of the Department', 
+                    };
+        
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
+
+                }
+            })
+        }
+    })
+})
+
 // ------------------------------ Increamet End -------------------------------
 
 //check the server is working
