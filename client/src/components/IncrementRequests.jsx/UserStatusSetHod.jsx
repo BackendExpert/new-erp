@@ -10,6 +10,14 @@ const UserStatusSetHod = () => {
     //get current login user's email
     const EmailUser = secureLocalStorage.getItem("logiafter");
 
+    const [UserStatus, SetUserStatus] = useState({
+        Attendance: '',
+        Decipline: '',
+        Conduct: ''
+    })
+
+    
+
     if(RoleUser === "HOD"){
         return (
             <div className="bg-gray-200 py-4">
@@ -27,18 +35,21 @@ const UserStatusSetHod = () => {
                                 <div className="my-2">
                                     <label htmlFor="">Employee Attendance</label>
                                     <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Email "
-                                    value={EmailUser} onChange={e => SetIncrementData({...IncrementData, email:e.target.value})}/>
+                                    onChange={e => SetUserStatus({...UserStatus, Attendance:e.target.value})}/>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Employee Decipline</label>
                                     <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Email "
-                                    value={EmailUser} onChange={e => SetIncrementData({...IncrementData, email:e.target.value})}/>
+                                    onChange={e => SetUserStatus({...UserStatus, Decipline:e.target.value})}/>
                                 </div>
                                 <div className="my-2">
                                     <label htmlFor="">Employee Conduct</label>
                                     <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Email "
-                                    value={EmailUser} onChange={e => SetIncrementData({...IncrementData, email:e.target.value})}/>
+                                    onChange={e => SetUserStatus({...UserStatus, Conduct:e.target.value})}/>
                                 </div>
+                            </div>
+                            <div className="">
+                                <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Request Increment</button>
                             </div>
                         </form>
                     </div>
