@@ -5951,21 +5951,21 @@ app.post('/CalculateFineAdd/:id', (req, res) => {
 
     connection.query(sql, [value], (err, result) => {
         if(err){
-            return res.json({Error: "Error on Server"})
+            return res.json({Error: "Error on Server1"})
         }
         else{
             const UpdateBK = "UPDATE book SET status = ? WHERE BookID = ?"
             const status = "Available"
             connection.query(UpdateBK, [status,req.body.bookid], (err, result) => {
                 if(err){
-                    return res.json({Error: "Error on Server"})
+                    return res.json({Error: "Error on Server2"})
                 }
                 else{
                     // delete
                     const sqlDeleteBrrow = "DELETE FROM borrowal WHERE ID = ?"
                     connection.query(sqlDeleteBrrow, [BrrowID], (err, result) => {
                         if(err){
-                            return res.json({Error: "Error on Server"})
+                            return res.json({Error: "Error on Server3"})
                         }
                         else{
                             var mailOptions = {
