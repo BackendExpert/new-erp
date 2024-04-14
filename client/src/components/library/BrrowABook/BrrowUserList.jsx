@@ -12,7 +12,7 @@ const BrrowUserList = () => {
 
     const [BrrowDataList, SetBrrowDataList] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8081/BrrowBookList')
+        axios.get('http://localhost:8081/BrrowBookUserList')
         .then(res => SetBrrowDataList(res.data))
         .catch(err => console.log(err))
     }, [])
@@ -39,7 +39,6 @@ const BrrowUserList = () => {
                               <th scope='col' className='px-6 py-3'>Borrower Name</th>                                     
                               <th scope='col' className='px-6 py-3'>Book Title</th>
                               <th scope='col' className='px-6 py-3'>Return Date</th>
-                              <th scope='col' className='px-6 py-3'>Status</th>
                               <th scope='col' className='px-6 py-3'>Action</th>                                        
                             </tr>
                         </thead>

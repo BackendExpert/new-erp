@@ -5837,9 +5837,9 @@ app.post('/BrrowANewBook/:id', (req, res) => {
     })
 })
 
-// BrrowBookList
+// BrrowBookUserList
 
-app.get('/BrrowBookList', (req, res) => {
+app.get('/BrrowBookUserList', (req, res) => {
     const sql = "SELECT * FROM borrowal"
     connection.query(sql, (err, result) => {
         if(err){
