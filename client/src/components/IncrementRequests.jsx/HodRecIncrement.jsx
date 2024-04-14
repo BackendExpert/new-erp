@@ -29,7 +29,21 @@ const HodRecIncrement = () => {
         axios.post('http://localhost:8081/HodRecInc/' + id)
         .then(res => {
             if(res.data.Status === "Success"){
-                alert("The Increment Request has been recommended")
+                alert("The Increment Request has been Recommended")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
+    // headleDenied
+    const headleDenied = (id) => {
+        axios.post('http://localhost:8081/HodRejectInc/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Increment Request has been Rejected")
                 window.location.reload()
             }
             else{
