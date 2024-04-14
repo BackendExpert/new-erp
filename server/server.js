@@ -5821,7 +5821,7 @@ app.post('/BrrowANewBook/:id', (req, res) => {
                     return res.json({Error: "Error on Serverddd"})
                 }
                 else{
-                    const updateBook = "UPDATE books SET Staus = ? WHERE BookID = ?"
+                    const updateBook = "UPDATE books SET status = ? WHERE BookID = ?"
                     const status = "Brrowed"
                     connection.query(updateBook, [status, BookID], (err, result) => {
                         if(err){
