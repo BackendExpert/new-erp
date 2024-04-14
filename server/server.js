@@ -5902,5 +5902,31 @@ app.get('/FineCalData/:id', (req, res) => {
     })
 })
 
+// GetBookvalue
+
+app.get('/GetBookvalue/:id', (req, res) => {
+    const BrrowID = req.params.id
+
+    const sql = "SELECT * FROM borrowal WHERE ID = ?"
+    connection.query(sql, [BrrowID], (err, result) => {
+        if(err) {
+            return res.json({Error: "ERRROR on SERVER"})
+        }
+        else{
+            const BkID = result[0].bookid
+
+            const bookSearch = "SELECT value FROM books WHERE BookID = ?"
+            connection.query(bookSearch, [BkID], (err, result) => {
+                if(err){
+                    return res.json({Error: "ERROR on SERVER"})
+                }
+                else{
+                    res.json(result[0]);
+                }
+            })
+        }
+    })
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
