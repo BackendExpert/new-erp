@@ -102,8 +102,8 @@ const BrrowBook = () => {
                                                             <span className="py-2 px-4 rounded bg-green-500 text-white">{BookList.status}</span>
                                                         </td>  
                                                         <td className='px-6 py-4 font-bold'>
-                                                           <Link>
-                                                            
+                                                           <Link to={'/BookBrrowSet/' + BookList.BookID}>
+
                                                            </Link>
                                                         </td> 
                                                     </tr>
