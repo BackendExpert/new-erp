@@ -42,7 +42,15 @@ const ListFine = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                BookFineList.map((bookFine, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            
+                                        </tr>
+                                    )
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
