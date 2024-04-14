@@ -277,6 +277,7 @@ export default function App() {
 
         {/* Brrow a Book */}
         <Route path="/BrrowBook" element={<PrivateRoute><BrrowBook/></PrivateRoute>} />
+        <Route path="/BookBrrowSet/:id" element={<PrivateRoute><BookBorrow /></PrivateRoute>}  />
 
       </Routes>
     </BrowserRouter>
