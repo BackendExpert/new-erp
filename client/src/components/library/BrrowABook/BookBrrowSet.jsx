@@ -33,15 +33,18 @@ const BookBrrowSet = () => {
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="">
                                     <label htmlFor="">Email</label>
-                                    <input type="time" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
-                                    value={EmailUser} onChange={e => SetLeaveData({...LeaveData, StartTime:e.target.value})}/>
+                                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Start Time"
+                                    value={EmailUser} onChange={e => SetBookBrrowdata({...BookBrrowdata, Email:e.target.value})}/>
                                 </div>
     
                                 <div className="">
                                     <label htmlFor="">Return Date</label>
-                                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder=""
-                                    onChange={e => SetLeaveData({...LeaveData, Email:e.target.value})}/>
+                                    <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder=""
+                                    onChange={e => SetBookBrrowdata({...BookBrrowdata, RDate:e.target.value})}/>
                                 </div>
+                            </div>
+                            <div className="">
+                                <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Brrow Book</button>
                             </div>
                         </form>
                     </div>
