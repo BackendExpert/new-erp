@@ -5394,8 +5394,24 @@ app.get('/UserViewGatePass/:id', (req, res) => {
 app.post('/CreateIncrement/:id', (req, res) => {
     const UserEmail = req.params.id
     console.log(UserEmail, req.body)
-    const sql = "INSERT INTO increment (ename, email, designation, division, hod,) VALUES (?)"
+    const sql = "INSERT INTO increment (ename, email, designation, division, hod, idate, sscale, sstep, psalary, nsalary, category, status, create_at, update_at) VALUES (?)"
 
+    const status = "Request"
+    const 
+    const value = [
+        req.body.empUsername,
+        UserEmail,
+        req.body.IncrementData.designation,
+        req.body.MyDiviSRN,
+        req.body.SRNHOD,
+        req.body.IncrementData.idate,
+        req.body.IncrementData.sscale,
+        req.body.IncrementData.sstep,
+        req.body.IncrementData.psalary,
+        req.body.IncrementData.nsalary,
+
+
+    ]
 })
 
 // ------------------------------ Increamet End -------------------------------
