@@ -64,6 +64,26 @@ const AddIncrement = () => {
       const empUsername = empName.username
       const empRole = empName.role
 
+          // get my division
+    const [MyDivision, SetMyDivision] = useState([])
+    useEffect(() => {
+      axios.get('http://localhost:8081/MyDivisionSRN/' + EmailUser)
+      .then(res => SetMyDivision(res.data))
+      .catch(err => console.log(err))
+    }, [])    
+
+    const MyDiviSRN = MyDivision.title
+
+        // Get HOD email 
+      const [SRNHodEMail, SetSRNHodEMail] = useState([])
+      useEffect(() => {
+        axios.get('http://localhost:8081/SRNHODEmail/' + EmailUser)
+        .then(res => SetSRNHodEMail(res.data))
+        .catch(err => console.log(err))
+      }, [])
+
+      const SRNHOD = SRNHodEMail.email
+
     // send data backed
     const [IncrementData, SetIncrementData] = useState({
         email:'',
