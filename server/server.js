@@ -5928,5 +5928,12 @@ app.get('/GetBookvalue/:id', (req, res) => {
     })
 })
 
+// CalculateFineAdd
+
+app.post('/CalculateFineAdd/:id', (req, res) => {
+    const BrrowID = req.params.id
+    
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
