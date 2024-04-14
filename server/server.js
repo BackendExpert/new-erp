@@ -5387,5 +5387,17 @@ app.get('/UserViewGatePass/:id', (req, res) => {
     })
 })
 
+
+// ------------------------------ Increment Start -----------------------------
+
+// CreateIncrement
+app.post('/CreateIncrement/:id', (req, res) => {
+    const UserEmail = req.params.id
+
+    
+})
+
+// ------------------------------ Increamet End -------------------------------
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
