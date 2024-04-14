@@ -5784,5 +5784,21 @@ app.get('/BrrowBookList', (req, res) => {
     })
 })
 
+// BrrowANewBook
+
+app.post('/BrrowANewBook/:id', (req, res) => {
+    BookID = req.params.id
+
+    const getBookData = "SELECT * FROM books WHERE BookID = ?"
+    connection.query(getBookData, [BookID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            
+        }
+    })
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
