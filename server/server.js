@@ -5733,6 +5733,25 @@ app.get('/CountRejectInc/:id', (req, res) => {
     });
 })
 
+// CountApproveInc
+
+app.get('/CountApproveInc/:id', (req, res) => {
+    const UserEmail = req.params.id;
+    const sql = "SELECT COUNT(IID) AS MyRejectInc FROM increment WHERE status =?  && email = ?";
+    // const sql = "SELECT COUNT(eid) AS emp FROM employee";
+    const status = "Approve"
+
+    connection.query(sql, [status, UserEmail], (error, results) => {
+    if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+    }
+
+    res.json({ MyRejectInc: results[0].MyRejectInc }); // Send count in JSON format
+    });
+})
+
 // ------------------------------ Increamet End -------------------------------
 
 //check the server is working
