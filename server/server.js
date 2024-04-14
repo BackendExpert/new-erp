@@ -5954,21 +5954,30 @@ app.post('/CalculateFineAdd/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else{
-            var mailOptions = {
-                from: process.env.EMAIL_USER,
-                to: req.body.borrower,
-                subject: 'Notification: Book Brrowal Fine ',
-                text: 'The Book Brrowal Fine is : '+fineValue, 
-            };
-
-            transporter.sendMail(mailOptions, function(error, info){
-                if (error) {
-                console.log(error);
-                } else {
-                console.log('Email sent: ' + info.response);
-                return res.json({Status: "Success"})
+            const sql = "UPDATE book SET status = ? WHERE BookID = ?"
+            const status = "Available"
+            connection.query(sql, [status,req.body.bookid], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
                 }
-            });
+                else{
+                    var mailOptions = {
+                        from: process.env.EMAIL_USER,
+                        to: req.body.borrower,
+                        subject: 'Notification: Book Brrowal Fine ',
+                        text: 'The Book Brrowal Fine is : '+fineValue, 
+                    };
+        
+                    transporter.sendMail(mailOptions, function(error, info){
+                        if (error) {
+                        console.log(error);
+                        } else {
+                        console.log('Email sent: ' + info.response);
+                        return res.json({Status: "Success"})
+                        }
+                    });
+                }
+            })
         }
     })
 })
