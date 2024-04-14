@@ -52,10 +52,16 @@ const AddIncrement = () => {
         navigate('/DriverDash');
       } 
     }
+    if(RoleUser != null){
+        return (
+            <div>AddIncrement</div>
+        )
+    }
+    else{
+        localStorage.clear()
+        navigate('/')
+    }
 
-  return (
-    <div>AddIncrement</div>
-  )
 }
 
 export default AddIncrement
