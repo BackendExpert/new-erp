@@ -45,9 +45,9 @@ const HodRecIncrement = () => {
                               <th scope='col' className='px-6 py-3'>Increment Date</th>
                               <th scope='col' className='px-6 py-3'>Salary Step</th> 
                               <th scope='col' className='px-6 py-3'>New salary</th>
-                              <th scope='col' className='px-6 py-3'>attendance</th>        
-                              <th scope='col' className='px-6 py-3'>decipline</th>                                     
-                              <th scope='col' className='px-6 py-3'>Item Type</th>
+                              <th scope='col' className='px-6 py-3'>Attendance</th>        
+                              <th scope='col' className='px-6 py-3'>Decipline</th>                                     
+                              <th scope='col' className='px-6 py-3'>Conduct</th>
                               <th scope='col' className='px-6 py-3'>Quantity</th>
                               <th scope='col' className='px-6 py-3'>Invo No</th> 
                               <th scope='col' className='px-6 py-3'>Status</th>
