@@ -159,7 +159,12 @@ const AddIncrement = () => {
                             <div className="my-2">
                                 <label htmlFor="">Hod Email</label>
                                 <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Hod Email "
-                                value={empRole} onChange={e => SetIncrementData({...IncrementData, hod:e.target.value})}/>
+                                value={SRNHOD} onChange={e => SetIncrementData({...IncrementData, hod:e.target.value})}/>
+                            </div>  
+                            <div className="my-2">
+                                <label htmlFor="">Date of Increment</label>
+                                <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Increment Date "
+                                onChange={e => SetIncrementData({...IncrementData, idate:e.target.value})}/>
                             </div>  
                         </div>
                     </form>
