@@ -152,15 +152,6 @@ const AddIncrement = () => {
                                 value={EmailUser} onChange={e => SetIncrementData({...IncrementData, email:e.target.value})}/>
                             </div>
                             <div className="my-2">
-                                <label htmlFor="">Designation</label>
-                                <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2"
-                                onChange={e => SetIncrementData({...IncrementData, designation:e.target.value})}>
-                                    <option>Select Option</option>
-                                    <option value="Non Academic">Non Academic</option>
-                                    <option value="Academic">Academic</option>    
-                                </select>
-                            </div>   
-                            <div className="my-2">
                                 <label htmlFor="">Employee Division</label>
                                 <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Division "
                                 value={MyDiviSRN} onChange={e => SetIncrementData({...IncrementData, division:e.target.value})}/>
@@ -174,12 +165,21 @@ const AddIncrement = () => {
                                 <label htmlFor="">Hod Email</label>
                                 <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Hod Email "
                                 value={SRNHOD} onChange={e => SetIncrementData({...IncrementData, hod:e.target.value})}/>
-                            </div>  
+                            </div>   
                             <div className="my-2">
                                 <label htmlFor="">Date of Increment</label>
                                 <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Increment Date "
                                 onChange={e => SetIncrementData({...IncrementData, idate:e.target.value})}/>
-                            </div>  
+                            </div> 
+                            <div className="my-2">
+                                <label htmlFor="">Designation</label>
+                                <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2" required
+                                onChange={e => SetIncrementData({...IncrementData, designation:e.target.value})}>
+                                    <option>Select Option</option>
+                                    <option value="Non Academic">Non Academic</option>
+                                    <option value="Academic">Academic</option>    
+                                </select>
+                            </div>   
                             <div className="my-2">
                                 <label htmlFor="">Salary Scale</label>
                                 <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Salary Scale "
