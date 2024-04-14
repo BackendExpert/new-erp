@@ -45,7 +45,7 @@ const UserStatusSetHod = () => {
                         <form onSubmit={headleSubmit}>
                             <div className="lg:grid grid-cols-2 gap-4">
                                 <div className="my-2">
-                                    <label htmlFor="">Designation</label>
+                                    <label htmlFor="">Attendance</label>
                                     <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2" required
                                     onChange={e => SetUserStatus({...UserStatus, Attendance:e.target.value})}>
                                         <option>Select Option</option>
@@ -56,7 +56,7 @@ const UserStatusSetHod = () => {
                                     </select>
                                 </div>
                                 <div className="my-2">
-                                    <label htmlFor="">Designation</label>
+                                    <label htmlFor="">Decipline</label>
                                     <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2" required
                                     onChange={e => SetUserStatus({...UserStatus, Decipline:e.target.value})}>
                                         <option>Select Option</option>
@@ -67,7 +67,7 @@ const UserStatusSetHod = () => {
                                     </select>
                                 </div>   
                                 <div className="my-2">
-                                    <label htmlFor="">Designation</label>
+                                    <label htmlFor="">Conduct</label>
                                     <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2" required
                                     onChange={e => SetUserStatus({...UserStatus, Conduct:e.target.value})}>
                                         <option>Select Option</option>
