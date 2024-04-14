@@ -5466,7 +5466,7 @@ app.post('/SetUserStatusInc/:id', (req, res) => {
     const IncID = req.params.id
     // console.log(req.body)
 
-    const sql ="UPDATE increment SET attendance = ?, decipline =?, conduct = ? WHERE =?"
+    const sql ="UPDATE increment SET attendance = ?, decipline =?, conduct = ? WHERE IID =?"
     connection.query(sql, [req.body.Attendance, req.body.Decipline, req.body.Conduct, IncID], (err, result) => {
         if(err){
             return res.json({Error: "Error on Server"})
