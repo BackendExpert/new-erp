@@ -13,7 +13,7 @@ const AccSide = () => {
         {name: "Designation",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
         {name: "Vehicle",  link: "#", icon: <Icons name="car" size="large"></Icons>},
         {name: "Equipment",  link: "#", icon: <Icons name="build" size="large"></Icons>},
-        {name: "Increment",  link: "#", icon: <Icons name="cash" size="large"></Icons>},
+        {name: "Increment",  link: "/AddIncrement", icon: <Icons name="cash" size="large"></Icons>},
         {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>}
     ]
   return (
