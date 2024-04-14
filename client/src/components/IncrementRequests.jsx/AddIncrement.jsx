@@ -149,7 +149,7 @@ const AddIncrement = () => {
                             <div className="my-2">
                                 <label htmlFor="">Employee Email</label>
                                 <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
-                                value={empRole} onChange={e => SetIncrementData({...IncrementData, division:e.target.value})}/>
+                                value={MyDiviSRN} onChange={e => SetIncrementData({...IncrementData, division:e.target.value})}/>
                             </div> 
                             <div className="my-2">
                                 <label htmlFor="">Employee Email</label>
