@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react"
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import secureLocalStorage from 'react-secure-storage'
 import CountUp from 'react-countup'
 import Icons from '@reacticons/ionicons'
@@ -465,6 +465,9 @@ const SummaryDash = () => {
             }
         })
       }
+
+
+
         <br />  
         </div>
             <div className="">               
@@ -484,7 +487,13 @@ const SummaryDash = () => {
               </div>
 
         </div> 
-      
+        <div className="lg:grid grid-cols-4 gap-4">
+          <Link>
+            <div className="bg-blue-500 rounded py-6 px-8 text-white">
+                Brrow a Book
+            </div>
+          </Link>
+        </div>
     </div>
   )
 }
