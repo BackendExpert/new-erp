@@ -5737,7 +5737,7 @@ app.get('/CountRejectInc/:id', (req, res) => {
 
 app.get('/CountApproveInc/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(IID) AS MyRejectInc FROM increment WHERE status =?  && email = ?";
+    const sql = "SELECT COUNT(IID) AS MyApproveInc FROM increment WHERE status =?  && email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Approve"
 
@@ -5748,7 +5748,7 @@ app.get('/CountApproveInc/:id', (req, res) => {
         return;
     }
 
-    res.json({ MyRejectInc: results[0].MyRejectInc }); // Send count in JSON format
+    res.json({ MyApproveInc: results[0].MyApproveInc }); // Send count in JSON format
     });
 })
 
