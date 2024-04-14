@@ -5954,7 +5954,7 @@ app.post('/CalculateFineAdd/:id', (req, res) => {
             return res.json({Error: "Error on Server1"})
         }
         else{
-            const UpdateBK = "UPDATE book SET status = ? WHERE BookID = ?"
+            const UpdateBK = "UPDATE books SET status = ? WHERE BookID = ?"
             const status = "Available"
             connection.query(UpdateBK, [status,req.body.bookid], (err, result) => {
                 if(err){
