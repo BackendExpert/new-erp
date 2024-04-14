@@ -5716,7 +5716,7 @@ app.get('/CountReqInc/:id', (req, res) => {
 
 app.get('/CountRejectInc/:id', (req, res) => {
     const UserEmail = req.params.id;
-    const sql = "SELECT COUNT(IID) AS MyReqInc FROM increment WHERE status =? || status =? && email = ?";
+    const sql = "SELECT COUNT(IID) AS MyRejectInc FROM increment WHERE status =? || status =? && email = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const status = "Reject"
     const status1 = "HODReject"
@@ -5729,7 +5729,7 @@ app.get('/CountRejectInc/:id', (req, res) => {
         return;
     }
 
-    res.json({ MyReqInc: results[0].MyReqInc }); // Send count in JSON format
+    res.json({ MyRejectInc: results[0].MyRejectInc }); // Send count in JSON format
     });
 })
 
