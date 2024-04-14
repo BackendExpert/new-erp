@@ -54,10 +54,16 @@ const BrrowBook = () => {
       } 
     }
 
-    
-  return (
-    <div>BrrowBook</div>
-  )
+    if(RoleUser != null){
+        return (
+            <div>BrrowBook</div>
+        )
+    }
+    else{
+        localStorage.clear()
+        navigate('/')
+    }
+
 }
 
 export default BrrowBook
