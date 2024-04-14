@@ -239,6 +239,12 @@ const MyFullStats = () => {
             } catch (error) {
               console.error('Error fetching data:', error);
             }
+            try {
+              const CountApproveinc = await axios.get('http://localhost:8081/CountApproveInc/' + EmailUser);
+              SetApproveInc(CountApproveinc.data.MyApproveInc);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
 
           }
           fetchData();
