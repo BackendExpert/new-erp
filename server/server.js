@@ -5855,8 +5855,34 @@ app.get('/BrrowBookUserList', (req, res) => {
 
 app.post('/ReturnBook/:id', (req, res) => {
     const BID = req.params.id
+    const checkBook = "SELECT * FROM borrowal WHERE ID = ?"
+    connection.query(checkBook, [BID], (err, result) => {
+        if(err) {
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            const bookID = result[0].bookid
+            const slq = "UPDATE books SET status = ? WHERE ID = ?"
+            const status = "Available"
+            connection.query(sql, [status, BID], (err, result) => {
+                if(err) {
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    const deleteBrrow = "DELETE FROM borrowal WHERE ID = ?"
+                    connection.query(deleteBrrow, [BID], (err, result) => {
+                        if(err){
+                            return res.json({Error: "Error on Server"})
+                        }
+                        else{
+                            return res.json({Status: "Success"})
+                        }
+                    })
+                }
+            })
 
-    const slq = "UPDATE "
+        }
+    })
 })
 
 //check the server is working
