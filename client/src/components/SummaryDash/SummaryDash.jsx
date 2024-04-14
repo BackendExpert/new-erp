@@ -315,7 +315,7 @@ const SummaryDash = () => {
     // TO  
     {id: 30, name:"Work Requests" , value: <CountUp end={toWork}/>,  icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
     {id: 31, name:"GatePass Requests" , value: <CountUp end={toGatePass}/>,  icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
-    {id: 32, name:"Increment Requests" , value: <CountUp end={hodInc}/>,  icons: <Icons name="document" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
+    {id: 32, name:"Increment Requests" , value: <CountUp end={hodInc}/>,  icons: <Icons name="cash" size="large"/>, style:"hover:border-yellow-500 hover:text-yellow-600" },  
    
   ]
   
