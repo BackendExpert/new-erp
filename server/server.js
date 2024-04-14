@@ -5934,15 +5934,20 @@ app.post('/CalculateFineAdd/:id', (req, res) => {
     const BrrowID = req.params.id
     console.log(BrrowID, req.body)
 
-    // const sql = "INSERT INTO fine(title, bname, borrower, bid, value, amount, create_at, update_at) VALUES (?)"
-    // const value = [
-    //     req.body.fineBtitle,
-    //     req.body.bname,
-    //     req.body.borrower,
-    //     req.body.bookid,
-    //     req.body.fineBtitle,
+    const sql = "INSERT INTO fine(title, bname, borrower, bid, value, amount, create_at, update_at) VALUES (?)"
+    const create_at = new Date()
+    const update_at = new Date()
+    const value = [
+        req.body.fineBtitle,
+        req.body.bname,
+        req.body.borrower,
+        req.body.bookid,
+        req.body.BKvalue,
+        req.body.BKvalue,
+        create_at,
+        update_at,
 
-    // ]
+    ]
 })
 
 //check the server is working
