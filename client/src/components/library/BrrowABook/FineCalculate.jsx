@@ -60,8 +60,8 @@ const FineCalculate = () => {
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Book Brrow Date</label>
-                            <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
-                            value={borrower} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
+                            <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                            value={bdate} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
                         </div>
                         <div className="my-2">
                             <label htmlFor="">Book Title</label>
