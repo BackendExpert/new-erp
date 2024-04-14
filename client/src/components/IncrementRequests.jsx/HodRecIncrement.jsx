@@ -135,6 +135,50 @@ const HodRecIncrement = () => {
                                            )
                                         }
                                     }
+                                    else if(buttonValue === "Denied"){
+                                        if(incHod.status === "HODReject"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.ename}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.category}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.sscale}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.idate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.sstep}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.nsalary}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.attendance}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.decipline}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.conduct}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-red-500 text-white">{incHod.status}</span>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
+                                    else if(buttonValue === "Recommend"){
+                                        if(incHod.status === "HODRecommended"){
+                                            return (
+                                                <tr key={index}>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.ename}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.email}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.category}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.sscale}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.idate}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.sstep}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.nsalary}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.attendance}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.decipline}</td>
+                                                    <td className='px-6 py-4 font-bold'>{incHod.conduct}</td>
+                                                    <td className='px-6 py-4 font-bold'>
+                                                        <span className="py-2 px-4 rounded bg-green-500 text-white">{incHod.status}</span>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        }
+                                    }
                                 })
                             }
                         </tbody>
