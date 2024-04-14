@@ -5787,17 +5787,18 @@ app.get('/BrrowBookList', (req, res) => {
 // BrrowANewBook
 
 app.post('/BrrowANewBook/:id', (req, res) => {
-    BookID = req.params.id
+    const BookID = req.params.id
+    console.log(BookID, req.body)
 
-    const getBookData = "SELECT * FROM books WHERE BookID = ?"
-    connection.query(getBookData, [BookID], (err, result) => {
-        if(err){
-            return res.json({Error: "Error on Server"})
-        }
-        else{
-            const book
-        }
-    })
+    // const getBookData = "SELECT * FROM books WHERE BookID = ?"
+    // connection.query(getBookData, [BookID], (err, result) => {
+    //     if(err){
+    //         return res.json({Error: "Error on Server"})
+    //     }
+    //     else{
+    //         const book
+    //     }
+    // })
 })
 
 //check the server is working
