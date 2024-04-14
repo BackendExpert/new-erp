@@ -86,7 +86,17 @@ const BrrowBook = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    {
+                                        BrrowListData.map((BookList, index) => {
+                                            if(BookList.status === "Available"){
+                                                return(
+                                                    <tr key={index}>
+                                                        
+                                                    </tr>
+                                                )
+                                            }
+                                        })
+                                    }
                                 </tbody>
                             </table>
                         </div>
