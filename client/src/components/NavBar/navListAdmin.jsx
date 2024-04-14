@@ -14,7 +14,7 @@ const navList = () => {
         {name: "SRN Requests", link: "/AddSRN"},
         {name: "Work Requests", link: "/AddWorkReq"},
         {name: "Gatepass Requests", link: "/AddGatePass"},
-        {name: "Submit Increment", link: ""},
+        {name: "Submit Increment", link: "/AddIncrement"},
         {name: "Logout", link: "", desc: "logout"}       
     ];
 
