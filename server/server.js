@@ -5393,8 +5393,8 @@ app.get('/UserViewGatePass/:id', (req, res) => {
 // CreateIncrement
 app.post('/CreateIncrement/:id', (req, res) => {
     const UserEmail = req.params.id
-
-    const sql = "INSERT INTO increment () VALUES (?)"
+    console.log(UserEmail, req.body)
+    // const sql = "INSERT INTO increment (ename, email,) VALUES (?)"
 
 })
 
