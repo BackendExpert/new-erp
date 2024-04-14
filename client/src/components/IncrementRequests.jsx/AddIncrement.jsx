@@ -112,6 +112,11 @@ const AddIncrement = () => {
                                 <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
                                 value={empUsername} onChange={e => SetIncrementData({...IncrementData, ename:e.target.value})}/>
                             </div>
+                            <div className="my-2">
+                                <label htmlFor="">Employee Email</label>
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                                value={EmailUser} onChange={e => SetIncrementData({...IncrementData, ename:e.target.value})}/>
+                            </div>
                         </div>
                     </form>
                 </div>
