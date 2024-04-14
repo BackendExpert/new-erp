@@ -115,8 +115,23 @@ const AddIncrement = () => {
                             <div className="my-2">
                                 <label htmlFor="">Employee Email</label>
                                 <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
-                                value={EmailUser} onChange={e => SetIncrementData({...IncrementData, ename:e.target.value})}/>
+                                value={EmailUser} onChange={e => SetIncrementData({...IncrementData, email:e.target.value})}/>
                             </div>
+                            <div className="">
+                                <label htmlFor="">Leave Type</label>
+                                <select className="w-full h-12 border border-blue-400 rounded pl-2 my-2"
+                                onChange={e => SetLeaveData({...LeaveData, Type:e.target.value})}>
+                                    <option>Select Option</option>
+                                    <option value="Duty">Duty</option>
+                                    <option value="Casual">Casual</option>
+                                    <option value="Sick">Duty</option>
+                                    <option value="Casual Half Day">Casual Half Day</option>
+                                    <option value="Sick Half Day">Sick Half Day</option>
+                                    <option value="Short Leave">Short Leave</option>
+                                    <option value="Lieu">Lieu</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>     
                         </div>
                     </form>
                 </div>
