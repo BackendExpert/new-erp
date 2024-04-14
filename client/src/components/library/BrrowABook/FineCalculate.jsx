@@ -96,6 +96,9 @@ const FineCalculate = () => {
                             onChange={e => SetCalFineData({...CalFineData, rate:e.target.value})}/>
                         </div>
                     </div>
+                    <div className="">
+                      <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Calculate Fine</button>
+                    </div>
                </form>
             </div>
         </div>
