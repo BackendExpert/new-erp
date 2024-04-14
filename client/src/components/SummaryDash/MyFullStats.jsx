@@ -861,6 +861,48 @@ const MyFullStats = () => {
                                             )
                                           }
                                         }
+                                        else if(buttonValue === "Reject Increment"){
+                                          if(viewinc.status === "Reject" || viewinc.status === "HODReject"){
+                                            return (
+                                              <tr key={index}>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.IID}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.email}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.category}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.sscale}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.idate}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.sstep}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.nsalary}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.attendance}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.decipline}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.conduct}</td>
+                                                <td className='px-6 py-4 font-bold'>
+                                                    <span className="py-2 px-4 rounded bg-red-500 text-white">{viewinc.status}</span>
+                                                </td>
+                                              </tr>
+                                            )
+                                          }
+                                        }
+                                        else if(buttonValue === "Approve Increment"){
+                                          if(viewinc.status === "Approve"){
+                                            return (
+                                              <tr key={index}>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.IID}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.email}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.category}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.sscale}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.idate}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.sstep}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.nsalary}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.attendance}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.decipline}</td>
+                                                <td className='px-6 py-4 font-bold'>{viewinc.conduct}</td>
+                                                <td className='px-6 py-4 font-bold'>
+                                                    <span className="py-2 px-4 rounded bg-green-500 text-white">{viewinc.status}</span>
+                                                </td>
+                                              </tr>
+                                            )
+                                          }
+                                        }
                                       })
                                     }
                                 </tbody>
