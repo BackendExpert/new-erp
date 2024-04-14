@@ -15,6 +15,14 @@ const ApproveInc = () => {
         SetButtonValue(clickValue)   
     }
 
+    // fetch data
+    const [IncApproveData, SetIncApproveData] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/IncAppData')
+        .then(res => SetIncApproveData(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
     if(RoleUser === "Director" || RoleUser === "Secretary"){
         return (
             <div className="bg-gray-200 py-4">
