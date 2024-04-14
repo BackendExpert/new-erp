@@ -122,6 +122,7 @@ const MyFullStats = () => {
         const [ApprveGate, SetApprveGate] = useState(0);
         const [ReqInc, SetReqInc] = useState(0);
         const [RejectInc, SetRejectInc] = useState(0);
+        const [ApproveInc, SetApproveInc] = useState(0);
 
         useEffect(() => {
           const fetchData = async () => {
