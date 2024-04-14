@@ -227,7 +227,7 @@ const MyFullStats = () => {
             // increment
             try {
               const CountReqinc = await axios.get('http://localhost:8081/CountReqInc/' + EmailUser);
-              SetReqInc(CountReqinc.data.MyReqInc);
+              SetRejectInc(CountReqinc.data.MyReqInc);
             } catch (error) {
               console.error('Error fetching data:', error);
             }
@@ -371,7 +371,7 @@ const MyFullStats = () => {
                           
                           <div className="flex">
                             My Reject Increment Requests
-                            <p className="mx-4 text-xl font-bold"><CountUp end={ReqInc} /></p>
+                            <p className="mx-4 text-xl font-bold"><CountUp end={RejectInc} /></p>
                           </div>                          
                         </div> 
                     </div>
