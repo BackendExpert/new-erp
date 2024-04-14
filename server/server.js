@@ -5790,15 +5790,42 @@ app.post('/BrrowANewBook/:id', (req, res) => {
     const BookID = req.params.id
     console.log(BookID, req.body)
 
-    // const getBookData = "SELECT * FROM books WHERE BookID = ?"
-    // connection.query(getBookData, [BookID], (err, result) => {
-    //     if(err){
-    //         return res.json({Error: "Error on Server"})
-    //     }
-    //     else{
-    //         const book
-    //     }
-    // })
+    const getBookData = "SELECT * FROM books WHERE BookID = ?"
+    connection.query(getBookData, [BookID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            const bookTitle = result[0].title
+            const brrowDate = new Date()
+            const create_at = new Date()
+            const update_at = new Date()
+            
+
+            const sql = "INSERT INTO borrowal(bdate, borrower, bookid, bname, btitle, erdate, create_at, update_at) VALUES (?)"
+            const value = [
+                brrowDate,
+                req.body.EmailUser,
+                BookID,
+                req.body.empUsername,
+                bookTitle,
+                req.body.BookBrrowdata.RDate,
+                create_at,
+                update_at
+            ]
+
+            // console.log(value)
+
+            connection.query(sql, [values], (err, result) => {
+                if(err){
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
+        }
+    })
 })
 
 //check the server is working
