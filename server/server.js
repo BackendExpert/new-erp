@@ -5674,6 +5674,12 @@ app.post('/IncReject/:id', (req, res) => {
     })
 })
 
+// CountMyInc
+
+app.get('/CountMyInc/:id', (req, res) => {
+    
+})
+
 // ------------------------------ Increamet End -------------------------------
 
 //check the server is working
