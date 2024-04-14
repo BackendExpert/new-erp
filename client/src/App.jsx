@@ -94,6 +94,7 @@ import HodRecIncrement from "./components/IncrementRequests/HodRecIncrement"
 import UserStatusSetHod from "./components/IncrementRequests/UserStatusSetHod"
 import ApproveInc from "./components/IncrementRequests/ApproveInc"
 import BrrowBook from "./components/library/BrrowABook/BrrowBook"
+import BookBrrowSet from "./components/library/BrrowABook/BookBrrowSet"
 
 
 export default function App() {
@@ -277,7 +278,7 @@ export default function App() {
 
         {/* Brrow a Book */}
         <Route path="/BrrowBook" element={<PrivateRoute><BrrowBook/></PrivateRoute>} />
-        <Route path="/BookBrrowSet/:id" element={<PrivateRoute><BookBorrow /></PrivateRoute>}  />
+        <Route path="/BookBrrowSet/:id" element={<PrivateRoute><BookBrrowSet /></PrivateRoute>}  />
 
       </Routes>
     </BrowserRouter>
