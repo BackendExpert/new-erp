@@ -39,6 +39,7 @@ const ApproveInc = () => {
                               <th scope='col' className='px-6 py-3'>Increment ID</th>
                               <th scope='col' className='px-6 py-3'>Name</th>
                               <th scope='col' className='px-6 py-3'>Email</th>
+                              <th scope='col' className='px-6 py-3'>Division</th>                              
                               <th scope='col' className='px-6 py-3'>Role</th>                                     
                               <th scope='col' className='px-6 py-3'>Salary scale</th>
                               <th scope='col' className='px-6 py-3'>Increment Date</th>
