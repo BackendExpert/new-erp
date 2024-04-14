@@ -46,7 +46,35 @@ const FineCalculate = () => {
                 </Link>
             </div>
             <div className="my-4">
-               
+               <form>
+                    <div className="lg:grid grid-cols-3 gap-4">
+                        <div className="my-2">
+                            <label htmlFor="">Book Brrower</label>
+                            <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                            value={bname} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
+                        </div>
+                        <div className="my-2">
+                            <label htmlFor="">Book Brrower Email</label>
+                            <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                            value={borrower} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
+                        </div>
+                        <div className="my-2">
+                            <label htmlFor="">Book Brrow Date</label>
+                            <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                            value={borrower} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
+                        </div>
+                        <div className="my-2">
+                            <label htmlFor="">Book Title</label>
+                            <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                            value={fineBtitle} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
+                        </div>
+                        <div className="my-2">
+                            <label htmlFor="">Return Date</label>
+                            <input type="date" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                            value={fineBtitle} onChange={e => SetGatePass({...GatePass, Name:e.target.value})}/>
+                        </div>
+                    </div>
+               </form>
             </div>
         </div>
     </div>
