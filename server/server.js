@@ -5932,7 +5932,7 @@ app.get('/GetBookvalue/:id', (req, res) => {
 
 app.post('/CalculateFineAdd/:id', (req, res) => {
     const BrrowID = req.params.id
-    
+    console.log(BrrowID, req.body)
 })
 
 //check the server is working
