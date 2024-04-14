@@ -44,7 +44,20 @@ const BrrowUserList = () => {
                             </tr>
                         </thead>
                         <tbody>
-
+                            {
+                                BrrowDataList.map((BrrowBook, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td className='px-6 py-4 font-bold'>{BrrowBook.ID}</td>
+                                            <td className='px-6 py-4 font-bold'>{BrrowBook.bdate}</td>
+                                            <td className='px-6 py-4 font-bold'>{BrrowBook.borrower}</td>
+                                            <td className='px-6 py-4 font-bold'>{BrrowBook.bookid}</td>
+                                            <td className='px-6 py-4 font-bold'>{BrrowBook.bname}</td>
+                                            <td className='px-6 py-4 font-bold'>{BrrowBook.ID}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
                         </tbody>
                       </table>
                     </div>
