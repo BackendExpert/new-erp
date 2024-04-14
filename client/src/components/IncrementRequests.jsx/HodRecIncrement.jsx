@@ -26,7 +26,16 @@ const HodRecIncrement = () => {
 
     // headleRece
     const headleRece = (id) =>{
-        
+        axios.post('http://localhost:8081/HodRecInc/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Increment Request has been recommended")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
     }
     
     if(RoleUser === "HOD"){
