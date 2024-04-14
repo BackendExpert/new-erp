@@ -26,6 +26,14 @@ const FineCalculate = () => {
     const bname = FineData.bname
     const erdate = FineData.erdate
 
+    const [CalFineData, SetCalFineData] = useState({
+        title:'',
+        bname:'', 
+        borrower: '',
+        bid: '',
+        value: '',
+        amount: ''
+    })
 
   return (
     <div className="bg-gray-200 py-4">
