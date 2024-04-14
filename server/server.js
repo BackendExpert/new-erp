@@ -5752,6 +5752,22 @@ app.get('/CountApproveInc/:id', (req, res) => {
     });
 })
 
+// UserViewInc
+
+app.get('/UserViewInc/:id', (req, res) => {
+    const userEmail = req.params.id
+
+    const sql = "SELECT * FROM increment WHERE email = ?"
+    connection.query(sql, [userEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // ------------------------------ Increamet End -------------------------------
 
 //check the server is working
