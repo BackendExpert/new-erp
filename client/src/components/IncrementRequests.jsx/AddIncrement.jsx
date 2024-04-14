@@ -176,6 +176,16 @@ const AddIncrement = () => {
                                 <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Salary Step "
                                 onChange={e => SetIncrementData({...IncrementData, sstep:e.target.value})}/>
                             </div> 
+                            <div className="my-2">
+                                <label htmlFor="">Present Salary</label>
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Present Salary "
+                                onChange={e => SetIncrementData({...IncrementData, psalary:e.target.value})}/>
+                            </div> 
+                            <div className="my-2">
+                                <label htmlFor="">Present Salary</label>
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Present Salary "
+                                onChange={e => SetIncrementData({...IncrementData, psalary:e.target.value})}/>
+                            </div> 
                         </div>
                     </form>
                 </div>
