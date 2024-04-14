@@ -5572,7 +5572,7 @@ app.post('/HodRejectInc/:id', (req, res) => {
 app.get('/CountHodInc/:id', (req, res) => {
     const Email = req.params.id;
     
-    const sql = "SELECT COUNT(IID) AS HodGate FROM increment WHERE status = ? && hodemail = ?";
+    const sql = "SELECT COUNT(IID) AS IncHod FROM increment WHERE status = ? && hodemail = ?";
     // const sql = "SELECT COUNT(eid) AS emp FROM employee";
     const is_aprove = "Request"
     
@@ -5583,7 +5583,7 @@ app.get('/CountHodInc/:id', (req, res) => {
         return;
       }
   
-      res.json({ HodGate: results[0].HodGate }); // Send count in JSON format
+      res.json({ IncHod: results[0].IncHod }); // Send count in JSON format
     });
 })
 
