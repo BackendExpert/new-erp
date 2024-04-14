@@ -153,8 +153,13 @@ const AddIncrement = () => {
                             </div> 
                             <div className="my-2">
                                 <label htmlFor="">Employee Category</label>
-                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee JobCatagary "
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Job Catagory "
                                 value={empRole} onChange={e => SetIncrementData({...IncrementData, category:e.target.value})}/>
+                            </div>  
+                            <div className="my-2">
+                                <label htmlFor="">Hod Email</label>
+                                <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Hod Email "
+                                value={empRole} onChange={e => SetIncrementData({...IncrementData, hod:e.target.value})}/>
                             </div>  
                         </div>
                     </form>
