@@ -5837,5 +5837,19 @@ app.post('/BrrowANewBook/:id', (req, res) => {
     })
 })
 
+// BrrowBookList
+
+app.get('/BrrowBookList', (req, res) => {
+    const sql = "SELECT * FROM borrowal"
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
