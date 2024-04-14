@@ -182,13 +182,8 @@ const AddIncrement = () => {
                                 onChange={e => SetIncrementData({...IncrementData, psalary:e.target.value})}/>
                             </div> 
                             <div className="my-2">
-                                <label htmlFor="">Present Salary</label>
-                                <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Present Salary "
-                                onChange={e => SetIncrementData({...IncrementData, psalary:e.target.value})}/>
-                            </div>
-                            <div className="my-2">
                                 <label htmlFor=""> New Salary</label>
-                                <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Present Salary "
+                                <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="New Salary "
                                 onChange={e => SetIncrementData({...IncrementData, nsalary:e.target.value})}/>
                             </div> 
                         </div>
