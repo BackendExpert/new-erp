@@ -266,7 +266,7 @@ const SummaryDash = () => {
 
       try {
         const CountIncHod = await axios.get('http://localhost:8081/CountHodInc/' + EmailUser);
-        SettoGatePass(CountIncHod.data.IncHod);
+        SethodInc(CountIncHod.data.IncHod);
       } catch (error) {
         consol
         e.error('Error fetching data:', error);
