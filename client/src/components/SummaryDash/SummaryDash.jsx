@@ -47,6 +47,7 @@ const SummaryDash = () => {
   const [hodGatePass, SethodGatePass] = useState(0);
   const [toWork, SettoWork] = useState(0);
   const [toGatePass, SettoGatePass] = useState(0);
+  const [hodInc, SethodInc] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -263,6 +264,13 @@ const SummaryDash = () => {
         e.error('Error fetching data:', error);
       }  
 
+      try {
+        const CountIncHod = await axios.get('http://localhost:8081/CountHodInc/' + EmailUser);
+        SettoGatePass(CountIncHod.data.IncHod);
+      } catch (error) {
+        consol
+        e.error('Error fetching data:', error);
+      }  
 
     };    
     
