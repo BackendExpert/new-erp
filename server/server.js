@@ -5889,6 +5889,16 @@ app.post('/ReturnBook/:id', (req, res) => {
 
 app.get('/FineCalData/:id', (req, res) => {
     const BrrowlID = req.params.id
+    const sql = "SELECT * FROM borrowal WHERE ID = ?"
+
+    connection.query(sql, [BrrowlID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 //check the server is working
