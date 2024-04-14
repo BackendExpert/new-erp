@@ -33,7 +33,7 @@ const FineCalculate = () => {
                 </Link>
             </div>
             <div className="my-4">
-                <p className="">{fine}</p>
+                <p className="">Fine is {fine}</p>
             </div>
         </div>
     </div>
