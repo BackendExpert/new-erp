@@ -67,7 +67,17 @@ const HodRecIncrement = () => {
                                         if(incHod.status === "Request"){
                                            return (
                                             <tr key={index}>
-                                                 <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.ename}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.email}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.category}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.sscale}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.idate}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.sstep}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.nsalary}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
+                                                <td className='px-6 py-4 font-bold'>{incHod.IID}</td>
                                             </tr>
                                            )
                                         }
