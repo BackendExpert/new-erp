@@ -63,7 +63,15 @@ const BrrowBook = () => {
 
     if(RoleUser != null){
         return (
-            <div>BrrowBook</div>
+            <div className="bg-gray-200 py-4">
+                <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
+                    <h1 className="text-xl font-semibold">Leaves for Recommended</h1>        
+                    <hr className="mb-4" />
+                    <div className="flex">                
+
+                    </div>
+                </div>
+            </div>
         )
     }
     else{
