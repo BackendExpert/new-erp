@@ -58,66 +58,73 @@ const FineCalculate = () => {
         })
     }
 
+    if(RoleUser === "Librarian"){
+        return (
+            <div className="bg-gray-200 py-4">
+                <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
+                    <h1 className="text-xl font-semibold">Calculate Fine</h1>        
+                    <hr className="mb-4" />
+                    <div className="flex">                   
+                        <Link to={'/BrrowUserList'}>
+                            <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
+                        </Link>
+                    </div>
+                    <div className="my-4">
+                       <form onSubmit={headleSubmit}>
+                            <div className="lg:grid grid-cols-3 gap-4">
+                                <div className="my-2">
+                                    <label htmlFor="">Book Brrower</label>
+                                    <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
+                                    value={bname} onChange={e => SetCalFineData({...CalFineData, Name:e.target.value})}/>
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Book Brrower Email</label>
+                                    <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Book Brrower Email "
+                                    value={borrower} onChange={e => SetCalFineData({...CalFineData, Name:e.target.value})}/>
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Book Brrow Date</label>
+                                    <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Book Brrow Date "
+                                    value={bdate} onChange={e => SetCalFineData({...CalFineData, Name:e.target.value})}/>
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Book Title</label>
+                                    <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Book Title "
+                                    value={fineBtitle} onChange={e => SetCalFineData({...CalFineData, Name:e.target.value})}/>
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Return Date</label>
+                                    <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Return Date "
+                                    value={erdate} onChange={e => SetCalFineData({...CalFineData, Name:e.target.value})}/>
+                                </div>
+                            </div>
+                            <div className="lg:grid grid-cols-3 gap-4">
+                                <div className="my-2">
+                                    <label htmlFor="">Book Value</label>
+                                    <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Fine Rate"
+                                    value={BKvalue} onChange={e => SetCalFineData({...CalFineData, rate:e.target.value})}/>
+                                </div>
+                                <div className="my-2">
+                                    <label htmlFor="">Rate to Calculate Fine</label>
+                                    <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Fine Rate"
+                                    onChange={e => SetCalFineData({...CalFineData, rate:e.target.value})}/>
+                                </div>
+                            </div>
+                            <div className="">
+                              <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Calculate Fine</button>
+                            </div>
+                       </form>
+                    </div>
+                </div>
+            </div>
+          )
+    }
+    else{
+        useEffect(() => {
+            navigate('/UnAccess');
+        }, [])
+    }
 
-  return (
-    <div className="bg-gray-200 py-4">
-        <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
-            <h1 className="text-xl font-semibold">Calculate Fine</h1>        
-            <hr className="mb-4" />
-            <div className="flex">                   
-                <Link to={'/BrrowUserList'}>
-                    <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
-                </Link>
-            </div>
-            <div className="my-4">
-               <form onSubmit={headleSubmit}>
-                    <div className="lg:grid grid-cols-3 gap-4">
-                        <div className="my-2">
-                            <label htmlFor="">Book Brrower</label>
-                            <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Employee Name "
-                            value={bname} onChange={e => SetCalFineData({...CalFineData, Name:e.target.value})}/>
-                        </div>
-                        <div className="my-2">
-                            <label htmlFor="">Book Brrower Email</label>
-                            <input type="email" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Book Brrower Email "
-                            value={borrower} onChange={e => SetCalFineData({...CalFineData, Name:e.target.value})}/>
-                        </div>
-                        <div className="my-2">
-                            <label htmlFor="">Book Brrow Date</label>
-                            <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Book Brrow Date "
-                            value={bdate} onChange={e => SetCalFineData({...CalFineData, Name:e.target.value})}/>
-                        </div>
-                        <div className="my-2">
-                            <label htmlFor="">Book Title</label>
-                            <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Book Title "
-                            value={fineBtitle} onChange={e => SetCalFineData({...CalFineData, Name:e.target.value})}/>
-                        </div>
-                        <div className="my-2">
-                            <label htmlFor="">Return Date</label>
-                            <input type="text" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Return Date "
-                            value={erdate} onChange={e => SetCalFineData({...CalFineData, Name:e.target.value})}/>
-                        </div>
-                    </div>
-                    <div className="lg:grid grid-cols-3 gap-4">
-                        <div className="my-2">
-                            <label htmlFor="">Book Value</label>
-                            <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Fine Rate"
-                            value={BKvalue} onChange={e => SetCalFineData({...CalFineData, rate:e.target.value})}/>
-                        </div>
-                        <div className="my-2">
-                            <label htmlFor="">Rate to Calculate Fine</label>
-                            <input type="number" required className="w-full h-12 border border-blue-500 rounded pl-2 my-2" placeholder="Fine Rate"
-                            onChange={e => SetCalFineData({...CalFineData, rate:e.target.value})}/>
-                        </div>
-                    </div>
-                    <div className="">
-                      <button type="submit" className="rounded text-green-500 border border-green-500 py-4 px-16 my-2 duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Calculate Fine</button>
-                    </div>
-               </form>
-            </div>
-        </div>
-    </div>
-  )
 }
 
 export default FineCalculate
