@@ -10,7 +10,7 @@ const LibSide = () => {
 
     const sidemenu = [
         {name: "Book List",  link: "/booklist", icon: <Icons name="book" size="large"></Icons>},
-        {name: "Borrowals",  link: "#", icon: <Icons name="bag" size="large"></Icons>},
+        {name: "Borrowals",  link: "/BrrowUserList", icon: <Icons name="bag" size="large"></Icons>},
         {name: "Journal List",  link: "/Journals", icon: <Icons name="journal" size="large"></Icons>},
         {name: "Thesis List",  link: "/Thesis", icon: <Icons name="copy" size="large"></Icons>},
         {name: "Magazine Lists",  link: "/Magazine", icon: <Icons name="newspaper" size="large"></Icons>},
