@@ -5773,7 +5773,15 @@ app.get('/UserViewInc/:id', (req, res) => {
 // BrrowBookList
 
 app.get('/BrrowBookList', (req, res) => {
-    const sql = "SELECT * FROM "
+    const sql = "SELECT * FROM books"
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 //check the server is working
