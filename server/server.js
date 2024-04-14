@@ -5397,7 +5397,9 @@ app.post('/CreateIncrement/:id', (req, res) => {
     const sql = "INSERT INTO increment (ename, email, designation, division, hod, idate, sscale, sstep, psalary, nsalary, category, status, create_at, update_at) VALUES (?)"
 
     const status = "Request"
-    const 
+    const create_at = new Date()
+    const update_at = new Date()
+
     const value = [
         req.body.empUsername,
         UserEmail,
@@ -5409,9 +5411,13 @@ app.post('/CreateIncrement/:id', (req, res) => {
         req.body.IncrementData.sstep,
         req.body.IncrementData.psalary,
         req.body.IncrementData.nsalary,
-
-
+        req.body.empRole,
+        status,
+        create_at,
+        update_at
     ]
+
+    console.log(value)
 })
 
 // ------------------------------ Increamet End -------------------------------
