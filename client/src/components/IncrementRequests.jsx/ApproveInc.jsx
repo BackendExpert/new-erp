@@ -24,11 +24,29 @@ const ApproveInc = () => {
     }, [])
 
     const headleApprove = (id) => {
-
+        axios.post('http://localhost:8081/IncApprve/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Increment Request Has been Approve")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })        
     }
 
     const headleReject = (id) => {
-        
+        axios.post('http://localhost:8081/IncReject/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("The Increment Request Has been Reject")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })    
     }
 
     if(RoleUser === "Director" || RoleUser === "Secretary"){
