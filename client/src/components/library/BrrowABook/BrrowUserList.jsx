@@ -56,7 +56,7 @@ const BrrowUserList = () => {
                                             <td className='px-6 py-4 font-bold'>{BrrowBook.erdate}</td>
                                             <td className='px-6 py-4 font-bold'>
                                                 <div className="flex">
-                                                    <button onClick={() => headleReturn(BrrowBook.ID)} className="ml-2 py-2 px-4 rounded border border-green-500 text-green-500 cursor-pointer duration-500 hover:bg-green-500 hover:text-white hover:shadow-xl">Return</button>
+                                                    <button onClick={() => headleReturn(BrrowBook.ID)} className="ml-2 py-2 px-4 rounded border border-blue-500 text-blue-500 cursor-pointer duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Return</button>
                                                 </div>
                                             </td>
                                         </tr>
