@@ -19,7 +19,7 @@ const FineCalculate = () => {
         .catch(err => console.log(err))
     }, [])
 
-    const fine = FineData
+    const fine = FineData.btitile
 
 
   return (
