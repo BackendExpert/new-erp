@@ -19,6 +19,13 @@ const FineCalculate = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const fineBtitle = FineData.btitle
+    const bdate = FineData.bdate
+    const borrower = FineData.borrower
+    const bookid = FineData.bookid
+    const bname = FineData.bname
+    const erdate = FineData.erdate
+
 
   return (
     <div className="bg-gray-200 py-4">
@@ -31,7 +38,7 @@ const FineCalculate = () => {
                 </Link>
             </div>
             <div className="my-4">
-
+               
             </div>
         </div>
     </div>
