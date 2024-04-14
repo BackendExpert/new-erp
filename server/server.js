@@ -5446,6 +5446,21 @@ app.post('/CreateIncrement/:id', (req, res) => {
 
 })
 
+
+// HodIncrementRec
+app.get('/HodIncrementRec/:id', (req, res) => {
+    const HodEmail = req.params.id
+    const sql ="SELECT * FROM increment WHERE hodemail = ?"
+    connection.query(sql, [HodEmail], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // ------------------------------ Increamet End -------------------------------
 
 //check the server is working
