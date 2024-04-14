@@ -19,8 +19,6 @@ const FineCalculate = () => {
         .catch(err => console.log(err))
     }, [])
 
-    const fine = FineData.btitle
-
 
   return (
     <div className="bg-gray-200 py-4">
@@ -28,12 +26,12 @@ const FineCalculate = () => {
             <h1 className="text-xl font-semibold">Calculate Fine</h1>        
             <hr className="mb-4" />
             <div className="flex">                   
-                <Link to={'/BrrowBook'}>
+                <Link to={'/BrrowUserList'}>
                     <button className="border py-4 px-16 border-blue-500 rounded font-semibold text-blue-500 duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
                 </Link>
             </div>
             <div className="my-4">
-                <p className="">Fine is {fine}</p>
+
             </div>
         </div>
     </div>
