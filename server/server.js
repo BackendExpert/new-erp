@@ -5816,7 +5816,7 @@ app.post('/BrrowANewBook/:id', (req, res) => {
 
             // console.log(value)
 
-            connection.query(sql, [values], (err, result) => {
+            connection.query(sql, [value], (err, result) => {
                 if(err){
                     return res.json({Error: "Error on Server"})
                 }
