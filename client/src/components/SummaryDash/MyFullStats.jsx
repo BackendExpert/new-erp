@@ -351,10 +351,18 @@ const MyFullStats = () => {
                         </div> 
 
                         {/* Increment Requests */}
-                        <div onClick={() => HeadleButtonClick('Request Increment')} className="lg:ml-4 rounded py-4 px-8 bg-green-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                        <div onClick={() => HeadleButtonClick('Request Increment')} className="lg:ml-4 rounded py-4 px-8 bg-yellow-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
                           
                           <div className="flex">
                             My Increment Requests
+                            <p className="mx-4 text-xl font-bold"><CountUp end={ReqInc} /></p>
+                          </div>                          
+                        </div> 
+
+                        <div onClick={() => HeadleButtonClick('Reject Increment')} className="lg:ml-4 rounded py-4 px-8 bg-red-500 text-white font-semibold cursor-pointer duration-500 hover:shadow-xl">
+                          
+                          <div className="flex">
+                            My Reject Increment Requests
                             <p className="mx-4 text-xl font-bold"><CountUp end={ReqInc} /></p>
                           </div>                          
                         </div> 
