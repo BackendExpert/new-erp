@@ -488,7 +488,7 @@ const SummaryDash = () => {
 
         </div> 
         <div className="lg:grid grid-cols-4 gap-4">
-          <Link>
+          <Link to={'/BrrowBook'}>
             <div className="bg-blue-500 rounded py-6 px-8 text-white">
                 Brrow a Book
             </div>
