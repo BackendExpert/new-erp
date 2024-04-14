@@ -46,7 +46,13 @@ const ListFine = () => {
                                 BookFineList.map((bookFine, index) => {
                                     return (
                                         <tr key={index}>
-                                            
+                                            <td className='px-6 py-4 font-bold'>{bookFine.FID}</td>
+                                            <td className='px-6 py-4 font-bold'>{bookFine.title}</td>
+                                            <td className='px-6 py-4 font-bold'>{bookFine.bname}</td>
+                                            <td className='px-6 py-4 font-bold'>{bookFine.borrower}</td>
+                                            <td className='px-6 py-4 font-bold'>{bookFine.bid}</td>
+                                            <td className='px-6 py-4 font-bold'>{bookFine.value}</td>
+                                            <td className='px-6 py-4 font-bold'>{bookFine.amount}</td>
                                         </tr>
                                     )
                                 })
