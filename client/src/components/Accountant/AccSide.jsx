@@ -7,14 +7,15 @@ const AccSide = () => {
 
     const sidemenu = [
         {name: "Employess",  link: "/Employee", icon: <Icons name="people" size="large"></Icons>},
-        {name: "Divisions",  link: "#", icon: <Icons name="business" size="large"></Icons>},
-        {name: "Projects",  link: "#", icon: <Icons name="newspaper" size="large"></Icons>},
-        {name: "Program",  link: "#", icon: <Icons name="book" size="large"></Icons>},
-        {name: "Designation",  link: "#", icon: <Icons name="easel" size="large"></Icons>},
-        {name: "Vehicle",  link: "#", icon: <Icons name="car" size="large"></Icons>},
-        {name: "Equipment",  link: "#", icon: <Icons name="build" size="large"></Icons>},
+        {name: "Divisions",  link: "/Divisions", icon: <Icons name="business" size="large"></Icons>},
+        {name: "Projects",  link: "/Projects", icon: <Icons name="newspaper" size="large"></Icons>},
+        {name: "Program",  link: "/Programs", icon: <Icons name="book" size="large"></Icons>},
+        {name: "Designation",  link: "/Designations", icon: <Icons name="easel" size="large"></Icons>},
+        {name: "Vehicle",  link: "/Vehicles", icon: <Icons name="car" size="large"></Icons>},
+        {name: "Equipment",  link: "/Equipments", icon: <Icons name="build" size="large"></Icons>},
         {name: "Increment",  link: "/AddIncrement", icon: <Icons name="cash" size="large"></Icons>},
-        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>}
+        {name: "Profile",  link: "/Profile", icon: <Icons name="person" size="large"></Icons>},
+
     ]
   return (
     <div className={`${openSide ? "w-72" : "w-20" } duration-500 border-r-4 border-blue-300 shadow-xl my-4 mx-2 rounded bg-white h-auto pl-4 py-4 `}>
