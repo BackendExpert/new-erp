@@ -41,7 +41,7 @@ const Programs = () => {
     //this page can access by following users
     // SuperAdmin, Admin
 
-    if(RoleUser === "SuperAdmin" || RoleUser === "Admin"){
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "Accountant"){
         return (
             <div className="bg-gray-200 py-4">
                 <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
