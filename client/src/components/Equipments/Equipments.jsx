@@ -17,6 +17,9 @@ const Equipments = () => {
         else if(RoleUser === "Admin"){
             navigate('/admin');
         }
+        else if(RoleUser === "Accountant"){
+            navigate('/accountant');
+        }
     }
 
     //fetch data from backend
