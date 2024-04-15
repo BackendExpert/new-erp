@@ -41,7 +41,7 @@ const UpdateVehicle = () => {
     //check current login user
     const RoleUser = secureLocalStorage.getItem("loginNew");
 
-    if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "TO"){
+    if(RoleUser === "SuperAdmin" || RoleUser === "Admin" || RoleUser === "TO" || RoleUser === "Accountant"){
         return (
             <div className="bg-gray-200 py-4">
                 <div className="bg-white my-2 mx-8 py-6 shadow-xl rounded border-b-4 border-blue-400 px-4">
