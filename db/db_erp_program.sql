@@ -41,7 +41,6 @@ CREATE TABLE `program` (
 
 LOCK TABLES `program` WRITE;
 /*!40000 ALTER TABLE `program` DISABLE KEYS */;
-INSERT INTO `program` VALUES (20,'CS 3','scs','asd@asd','qwe','zxc','2024-03-12 01:04:15','2024-03-12 02:01:43'),(21,'CS 4',' CS 4','kamal@123.com','nimali','nimal','2024-03-12 01:57:18','2024-03-14 13:49:55'),(23,'CS','CS','amara@456.com','sci@123.com','sci2@123.com','2024-03-23 04:27:33','2024-03-23 04:27:33');
 /*!40000 ALTER TABLE `program` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:56
+-- Dump completed on 2024-04-15  5:48:43

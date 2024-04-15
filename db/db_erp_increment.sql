@@ -46,7 +46,7 @@ CREATE TABLE `increment` (
   `create_at` timestamp NOT NULL,
   `update_at` timestamp NOT NULL,
   PRIMARY KEY (`IID`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -55,6 +55,7 @@ CREATE TABLE `increment` (
 
 LOCK TABLES `increment` WRITE;
 /*!40000 ALTER TABLE `increment` DISABLE KEYS */;
+INSERT INTO `increment` VALUES (13,'learnkandy@gmail.com','Academic','Computer Science','hodcs@123.com',2.00,'2024-05-08',2.00,55000.00,'RA','Approve','RA','Very Good','Very Good','Very Good',NULL,NULL,NULL,NULL,NULL,'2024-04-14 01:38:35','2024-04-14 01:38:35'),(14,'learnkandy@gmail.com','Academic','Computer Science','hodcs@123.com',2.00,'2024-04-26',2.00,45000.00,'RA','HODReject','RA','Very Good','Very Good','Very Good',NULL,NULL,NULL,NULL,NULL,'2024-04-14 01:39:06','2024-04-14 01:39:06'),(15,'learnkandy@gmail.com','Academic','Computer Science','hodcs@123.com',2.00,'2024-04-16',2.00,65000.00,'RA','Request','RA',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2024-04-14 02:51:24','2024-04-14 02:51:24');
 /*!40000 ALTER TABLE `increment` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -67,4 +68,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:57
+-- Dump completed on 2024-04-15  5:48:42

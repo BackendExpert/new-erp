@@ -26,14 +26,14 @@ CREATE TABLE `fine` (
   `FID` int NOT NULL AUTO_INCREMENT,
   `title` varchar(254) DEFAULT NULL,
   `bname` varchar(50) DEFAULT NULL,
-  `borrower` int DEFAULT NULL,
+  `borrower` varchar(150) DEFAULT NULL,
   `bid` int DEFAULT NULL,
   `value` decimal(6,2) DEFAULT NULL,
   `amount` decimal(6,2) DEFAULT NULL,
   `create_at` timestamp NOT NULL,
   `update_at` timestamp NOT NULL,
   PRIMARY KEY (`FID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,7 @@ CREATE TABLE `fine` (
 
 LOCK TABLES `fine` WRITE;
 /*!40000 ALTER TABLE `fine` DISABLE KEYS */;
+INSERT INTO `fine` VALUES (6,'Program','Lib','lib@123.com',2,1500.00,60.00,'2024-04-14 23:41:05','2024-04-14 23:41:05'),(7,'Program','RA','learnkandy@gmail.com',2,1500.00,45.00,'2024-04-14 23:42:19','2024-04-14 23:42:19');
 /*!40000 ALTER TABLE `fine` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:57
+-- Dump completed on 2024-04-15  5:48:42

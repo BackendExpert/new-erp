@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `borrowal`;
 CREATE TABLE `borrowal` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `bdate` date DEFAULT NULL,
-  `borrower` int DEFAULT NULL,
+  `borrower` varchar(150) DEFAULT NULL,
   `bookid` int DEFAULT NULL,
   `bname` varchar(60) DEFAULT NULL,
   `btitle` varchar(100) DEFAULT NULL,
@@ -35,9 +35,8 @@ CREATE TABLE `borrowal` (
   PRIMARY KEY (`ID`),
   KEY `borrower` (`borrower`),
   KEY `bookid` (`bookid`),
-  CONSTRAINT `borrowal_ibfk_1` FOREIGN KEY (`borrower`) REFERENCES `employee` (`eid`),
   CONSTRAINT `borrowal_ibfk_2` FOREIGN KEY (`bookid`) REFERENCES `books` (`BookID`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:55
+-- Dump completed on 2024-04-15  5:48:41

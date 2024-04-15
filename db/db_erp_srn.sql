@@ -42,7 +42,7 @@ CREATE TABLE `srn` (
   `create_at` timestamp NOT NULL,
   `update_at` timestamp NOT NULL,
   PRIMARY KEY (`SID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -51,6 +51,7 @@ CREATE TABLE `srn` (
 
 LOCK TABLES `srn` WRITE;
 /*!40000 ALTER TABLE `srn` DISABLE KEYS */;
+INSERT INTO `srn` VALUES ('RA','learnkandy@gmail.com','Computer Science','Computer Science','2024-04-30','General Accounts','Local','Lab Equipment',2500.00,'Grant','hodcs@123.com','PC','SRN/2024/01','Cancelled',5,'2024-05-11','2024-04-12 02:02:02','2024-04-12 02:02:02'),('RA','learnkandy@gmail.com','Computer Science','Computer Science','2024-05-08','General Accounts','Foreign','Chemical',25000.00,'Internal','hodcs@123.com','New PC for Lab','SRN/2024/02','Approve',6,'2024-10-24','2024-04-12 03:00:22','2024-04-12 03:00:22'),('RA','learnkandy@gmail.com','Computer Science','Computer Science','2024-04-23','Procument and Labstores','Local','Equipment Maintenance',55000.00,'Generated Funds','hodcs@123.com','Laps for lab',NULL,'Reject',7,NULL,'2024-04-12 03:02:01','2024-04-12 03:02:01'),('RA','learnkandy@gmail.com','Computer Science','Computer Science','2024-05-07','Procument and Labstores','Foreign','Lab Equipment',52633.00,'Generated Funds','hodcs@123.com','Laps',NULL,'LabApprove',8,NULL,'2024-04-12 03:03:27','2024-04-12 03:03:27'),('RA','learnkandy@gmail.com','Computer Science','Computer Science','2024-05-02','General Accounts','Foreign','Lab Equipment',55000.00,'Grant','hodcs@123.com','PCs',NULL,'Recommend',9,NULL,'2024-04-12 04:46:59','2024-04-12 04:46:59'),('RA','learnkandy@gmail.com','Computer Science','Computer Science','2024-05-02','General Accounts','Foreign','Lab Equipment',45000.00,'Grant','hodcs@123.com','2 PCs','SRN/2024/03','Request',10,'2024-05-31','2024-04-12 12:15:43','2024-04-12 12:15:43');
 /*!40000 ALTER TABLE `srn` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -63,4 +64,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:57
+-- Dump completed on 2024-04-15  5:48:44

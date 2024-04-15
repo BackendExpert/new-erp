@@ -36,7 +36,7 @@ CREATE TABLE `vehicles` (
   `status` varchar(30) NOT NULL,
   `unit_charge` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`VID`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE `vehicles` (
 
 LOCK TABLES `vehicles` WRITE;
 /*!40000 ALTER TABLE `vehicles` DISABLE KEYS */;
-INSERT INTO `vehicles` VALUES (7,'123ABC','i8','BMW','Petrel','2022',9200000.00,200,'2024-03-11 13:09:10','2024-04-07 03:32:15','Off Duty',150.00),(8,'CAV4775','Car','Toyota','Petrel','2019',5632000.00,20000,'2024-04-07 02:44:38','2024-04-07 02:44:38','Off Duty',130.00);
+INSERT INTO `vehicles` VALUES (9,'CAB4545','Car','Toyato','Petrel','2020',9500000.00,5085,'2024-04-11 04:11:01','2024-04-11 04:11:01','Off Duty',80.00);
 /*!40000 ALTER TABLE `vehicles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:56
+-- Dump completed on 2024-04-15  5:48:41

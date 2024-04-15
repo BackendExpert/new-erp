@@ -32,7 +32,7 @@ CREATE TABLE `users` (
   `update_at` timestamp NOT NULL,
   `is_active` int NOT NULL,
   PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (34,'Jehan','jehan@123.com','SuperAdmin','$2a$10$qcdtOJcuPuuJlNjNNSOr2.np6TN5ZnVsRsK22Gvlb0YcRKogXuYjC','2024-04-02 12:52:50','2024-04-02 12:52:50',1),(35,'Director','dec@123.com','Director','$2a$10$SeC5xnWuR9ssZJql3SnHfuIu2OlwwxPdmxsnVxd.BXzozN/dIzLu2','2024-04-02 13:10:28','2024-04-02 13:10:28',1),(36,'Secretary','sec@123.com','Secretary','$2a$10$6P8OX4/meaAP./ZusvBKVenKPpb4cpTPAxGORUa610KtNllgnf676','2024-04-02 13:10:58','2024-04-02 13:10:58',1),(37,'admin','admin@123.com','Admin','$2a$10$CbnMqZHpUgmisq6BM8bN/.Hj.Mkz31c3DoJ9mSc4sVoCK19Cmg9DK','2024-04-02 13:11:15','2024-04-02 13:11:15',1),(38,'hod ','hod@123.com','HOD','$2a$10$eglk6pq5.21.PYn1ZPe1CexitOS1RXPQEdOjNKNT6aWwhTecptsfG','2024-04-04 01:17:15','2024-04-04 01:17:15',1),(39,'To','to@123.com','TO','$2a$10$ez2C6LPb5iv1f93BaHZGn.9WPQym7DFvUymUfJyUMYntYljUHNjSi','2024-04-04 12:12:49','2024-04-04 12:12:49',1),(40,'learn','learnkandy@gmail.com','RA','$2a$10$Cz.aYJQPmVdaLvg/y4ODyONWwQv/FobQ8fe/xTy0LTFOTXbizHgaq','2024-04-04 14:30:22','2024-04-06 04:44:17',1),(42,'driver','driver@123.com','Driver','$2a$10$.XDgSyc/pj.hN6.Z5xvuBuy/SQSxQRVf74W.c91NCAVTPs9xJNwT6','2024-04-07 03:12:32','2024-04-07 03:12:32',1),(43,'ra','ra@123.com','RA','$2a$10$mPu19BVv1XvK2G6QUFUKYOIZ9S6h4N5SxxlbsFWhsf93Ucz9aYc6i','2024-04-07 03:24:16','2024-04-07 03:24:16',1);
+INSERT INTO `users` VALUES (45,'jehan','jehan@123.com','SuperAdmin','$2a$10$ETGYjYkmdTmt/K4RovDcHuIHh0ZaVfcGbKJUjJC/VNkC27Sn0NWu6','2024-04-09 14:05:38','2024-04-09 14:05:38',1),(46,'hodcs','hodcs@123.com','HOD','$2a$10$zma9ctc.srd9QfZq8Ew8veXa5MuSaBQG1nh8Jg19/2qr212Mh3TCW','2024-04-09 14:12:54','2024-04-09 14:12:54',1),(47,'HodAdmin','hodadmin@123.com','HOD','$2a$10$Z1krVzY3SJSZFr7I9DkssuJ1Qo5IuQrXmIszLp47VGvMCY0K/6G2C','2024-04-09 14:13:35','2024-04-09 14:13:35',1),(48,'Sci','sci@123.com','Scientist','$2a$10$1w2LpQREN1IvFWuHzPK5ueFkdQ3xac92SAik1si/qHsxCCFWo0QOK','2024-04-09 14:20:52','2024-04-09 14:20:52',1),(49,'RA','ra@123.com','RA','$2a$10$jnC9iEjJLDRM2wof.5/Y1u1wQhOimMEjwIqNnls9c5MxHZ3N2y7u.','2024-04-09 14:21:41','2024-04-09 14:21:41',1),(50,'RA','learnkandy@gmail.com','RA','$2a$10$8CGFAZnah0z6Su3cFS4O0OJE/FpKN1v6lrIB.WdauqgF0xaAE27um','2024-04-09 14:27:51','2024-04-09 14:27:51',1),(51,'KamalTO','to@123.com','TO','$2a$10$EDxBdrADsDea6pEFxnWZouHHLVX/r26cpOSHDd6edm3Yw1EoC6xu6','2024-04-11 04:02:19','2024-04-11 04:02:19',1),(52,'AmaraDriver','driver@123.com','Driver','$2a$10$Si4pLnZZGSVyDexMH2CW6uklpwcsKHXTEPbT2/AYbXV0ceifnrsI6','2024-04-11 04:09:17','2024-04-11 04:09:17',1),(53,'Derector','dec@123.com','Director','$2a$10$LbSLbOb2tAXCbiAEfyZkS.rQzX6jW.2IvnEcF0A4OUnG.IUP21WDK','2024-04-11 04:22:16','2024-04-11 04:22:16',1),(54,'HodDec','hoddec@123.com','HOD','$2a$10$G5dfZEXV2YU3Mufz7tTJoO1HAPo7QN6n6KDy.e9NOdg9doU83NtDO','2024-04-12 02:51:03','2024-04-12 02:51:03',1),(55,'LabManager','labM@123.com','Labmanager','$2a$10$KBM2gWT/PD1Aj6p054HOSurFblOUKkLawy9WPSRMreZZyojlNfJr6','2024-04-12 03:17:06','2024-04-12 03:17:06',1),(56,'Lib','lib@123.com','Librarian','$2a$10$f.IdtGQm6dNrPaEMU8ybpOU7f80H3xWgMQBymtdH8149RKNTI2hZm','2024-04-14 15:47:18','2024-04-14 15:47:18',1),(57,'AccAmara','acc@123.com','Accountant','$2a$10$pYSNLEEEKL1ntth.pYhJHezXdgYduxqid3laBGEMjQk20GV4cD7Ni','2024-04-14 23:57:54','2024-04-14 23:57:54',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:55
+-- Dump completed on 2024-04-15  5:48:42

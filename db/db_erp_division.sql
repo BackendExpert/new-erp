@@ -30,7 +30,7 @@ CREATE TABLE `division` (
   `create_at` timestamp NOT NULL,
   `update_at` timestamp NOT NULL,
   PRIMARY KEY (`did`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `division` (
 
 LOCK TABLES `division` WRITE;
 /*!40000 ALTER TABLE `division` DISABLE KEYS */;
-INSERT INTO `division` VALUES ('CSSSS','CS 1','cs@123.com',20,'2024-03-14 11:53:51','2024-03-14 13:36:09'),('CSS','CS 22','css@123.com',21,'2024-03-14 13:19:16','2024-03-15 15:14:11'),('PD','Program Div','pd@123.com',25,'2024-03-18 01:04:05','2024-03-18 01:04:05'),('Admin','Admin','hod@123.com',27,'2024-04-07 02:49:12','2024-04-07 02:49:12');
+INSERT INTO `division` VALUES ('New Building','Computer Science','hodcs@123.com',28,'2024-04-09 14:06:37','2024-04-09 14:06:37'),('Admin','Admin','hodadmin@123.com',29,'2024-04-09 14:06:54','2024-04-09 14:06:54'),('Director Office','Director Office','hoddec@123.com',30,'2024-04-09 14:52:22','2024-04-09 14:52:22');
 /*!40000 ALTER TABLE `division` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:55
+-- Dump completed on 2024-04-15  5:48:41

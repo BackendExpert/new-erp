@@ -37,7 +37,7 @@ CREATE TABLE `leaves` (
   `create_at` timestamp NOT NULL,
   `update_at` timestamp NOT NULL,
   PRIMARY KEY (`LID`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `leaves` (
 
 LOCK TABLES `leaves` WRITE;
 /*!40000 ALTER TABLE `leaves` DISABLE KEYS */;
-INSERT INTO `leaves` VALUES (18,'Sick','TO','2024-04-16',1.00,'hod@123.com','To','10:37','2024-05-09','Requested','to@123.com','2024-04-04 13:04:05','2024-04-04 13:04:05'),(19,'Casual Half Day','SuperAdmin','2024-04-23',2.00,'hod@123.com','Jehan','10:38','2024-04-25','Requested','jehan@123.com','2024-04-04 13:04:40','2024-04-04 13:04:40'),(20,'Casual Half Day','RA','2024-04-16',2.00,'hod@123.com','learn','12:19','2024-04-18','Requested','learnkandy@gmail.com','2024-04-04 14:45:36','2024-04-04 14:45:36'),(21,'Sick Half Day','RA','2024-04-15',1.00,'hod@123.com','learn','11:20','2024-04-16','Requested','learnkandy@gmail.com','2024-04-04 14:46:51','2024-04-04 14:46:51');
+INSERT INTO `leaves` VALUES (22,'Sick','RA','2024-04-19',1.00,'hodcs@123.com','RA','12:07','2024-04-20','Reject','learnkandy@gmail.com','2024-04-09 14:32:29','2024-04-09 14:37:58'),(23,'Sick Half Day','RA','2024-04-12',1.00,'hodcs@123.com','RA','10:11','2024-04-13','Denied','learnkandy@gmail.com','2024-04-09 14:38:52','2024-04-09 14:42:43'),(24,'Casual Half Day','RA','2024-04-27',1.00,'hodcs@123.com','RA','14:00','2024-04-28','Approve','learnkandy@gmail.com','2024-04-11 08:30:33','2024-04-11 08:51:38');
 /*!40000 ALTER TABLE `leaves` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:57
+-- Dump completed on 2024-04-15  5:48:44

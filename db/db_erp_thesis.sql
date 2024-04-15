@@ -41,7 +41,6 @@ CREATE TABLE `thesis` (
 
 LOCK TABLES `thesis` WRITE;
 /*!40000 ALTER TABLE `thesis` DISABLE KEYS */;
-INSERT INTO `thesis` VALUES (1,'Thesis ','Thesis  Author',2024,'IT','MPhil','2024-03-19 00:52:23','2024-03-19 00:52:23'),(2,'Thesis 1','Thesis Author 1',2020,'DBMS','','2024-03-19 00:53:02','2024-03-19 00:53:02'),(4,'Thesis ','Author',2025,'Web development','PhD','2024-03-19 00:55:27','2024-03-19 00:55:27'),(5,'New ','Nw',2008,'New','PhD','2024-03-19 01:27:17','2024-03-19 01:27:17');
 /*!40000 ALTER TABLE `thesis` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:55
+-- Dump completed on 2024-04-15  5:48:43

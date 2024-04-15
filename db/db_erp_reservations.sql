@@ -48,7 +48,7 @@ CREATE TABLE `reservations` (
   `update_at` timestamp NOT NULL,
   `veh_reg_no` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`RID`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -57,7 +57,7 @@ CREATE TABLE `reservations` (
 
 LOCK TABLES `reservations` WRITE;
 /*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
-INSERT INTO `reservations` VALUES (19,'2024-04-18','12:52','Kandy','hod@123.com','Nimal','To','2024-04-23','Private Trip','Approve','to@123.com','TO','NIFS Funds','27','Meeting','Cab',NULL,'driver@123.com',NULL,NULL,NULL,'2024-04-07 15:20:28','2024-04-07 15:20:28','CAV4775'),(20,'2024-04-24','08:20','Kandy','hod@123.com','Nimal','To','2024-05-02','Official','Approve','to@123.com','TO','NIFS Funds','27','Meeting','Van',NULL,'driver@123.com',NULL,NULL,NULL,'2024-04-07 15:23:07','2024-04-07 15:23:07','CAV4775');
+INSERT INTO `reservations` VALUES (22,'2024-04-11','10:26','Colombo','hodcs@123.com','NImal','RA','2024-04-12','Official','Approve','learnkandy@gmail.com','RA','NIFS Funds','28','Meeting','Van',NULL,'driver@123.com',250,80,20000.00,'2024-04-11 01:54:56','2024-04-11 01:54:56','CAB4545'),(23,'2024-04-25','12:50','Kandy','hodcs@123.com','Nimali','RA','2024-04-26','Official','HOD Reject','learnkandy@gmail.com','RA','NIFS Funds','28','Meeting','Van',NULL,NULL,NULL,NULL,NULL,'2024-04-11 02:13:31','2024-04-11 02:13:31',NULL),(24,'2024-04-26','12:02','Kandy','hodadmin@123.com','NImal','AmaraDriver','2024-04-27','Official','Denied','driver@123.com','Driver','NIFS Funds','29','Meeting','Van',NULL,NULL,NULL,NULL,NULL,'2024-04-11 04:30:54','2024-04-11 04:30:54',NULL),(25,'2024-04-25','03:20','Colombo','hodcs@123.com','Nimali','RA','2024-04-27','Official','Approve','learnkandy@gmail.com','RA','NIFS Funds','28','Meeting','Van',NULL,'driver@123.com',465,80,37200.00,'2024-04-11 04:45:52','2024-04-11 04:45:52','CAB4545'),(26,'2024-04-26','15:37','Kandy','hodcs@123.com','Nimali','RA','2024-04-27','Official','Approve','learnkandy@gmail.com','RA','NIFS Funds','28','Meeting','Van',NULL,'driver@123.com',100,80,8000.00,'2024-04-11 05:03:23','2024-04-11 05:03:23','CAB4545'),(27,'2024-04-25','04:45','Kandy','hodadmin@123.com','Nimali','KamalTO','2024-05-03','Official','HOD Recommended','to@123.com','TO','NIFS Funds','29','Meeting','Van',NULL,NULL,NULL,NULL,NULL,'2024-04-11 05:10:11','2024-04-11 05:10:11',NULL),(28,'2024-04-20','06:06','Kandy','hodcs@123.com','Nimali','RA','2024-04-23','Official','Requested','learnkandy@gmail.com','RA','NIFS Funds','28','Meeting','Van',NULL,NULL,NULL,NULL,NULL,'2024-04-11 07:31:28','2024-04-11 07:31:28',NULL);
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -70,4 +70,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:56
+-- Dump completed on 2024-04-15  5:48:43

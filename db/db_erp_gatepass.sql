@@ -46,7 +46,7 @@ CREATE TABLE `gatepass` (
   `create_at` timestamp NOT NULL,
   `update_at` timestamp NOT NULL,
   PRIMARY KEY (`GID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -55,6 +55,7 @@ CREATE TABLE `gatepass` (
 
 LOCK TABLES `gatepass` WRITE;
 /*!40000 ALTER TABLE `gatepass` DISABLE KEYS */;
+INSERT INTO `gatepass` VALUES (4,'RA','learnkandy@gmail.com','hodcs@123.com','Approve',NULL,'RA','2024-04-27','2024-04-30','Rapire PC','NIFS','i7 Computer','Computer',1,'NIFS/2024/02/04','Rapire i7 Computer at the CS lab','to@123.com','Colombo','kamal@123.com','Success','2024-04-13 11:38:36','2024-04-13 11:38:36'),(5,'RA','learnkandy@gmail.com','hodcs@123.com','HODReject',NULL,'RA','2024-05-04','2024-05-07','PC Rapire','NIFS','Computer','Lap',1,'NIFS/2024/02/04','Raipre I9 Laptop','to@123.com','Colombo','nimal@123.com','Waiting','2024-04-13 12:19:59','2024-04-13 12:19:59');
 /*!40000 ALTER TABLE `gatepass` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -67,4 +68,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:57
+-- Dump completed on 2024-04-15  5:48:44

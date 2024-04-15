@@ -33,7 +33,7 @@ CREATE TABLE `equipment` (
   `update_at` timestamp NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `invno` (`invno`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `equipment` (
 
 LOCK TABLES `equipment` WRITE;
 /*!40000 ALTER TABLE `equipment` DISABLE KEYS */;
-INSERT INTO `equipment` VALUES ('Car',1500000.00,'2024-03-13','Kandy',4,'123','2024-03-16 00:24:45','2024-03-18 00:25:48'),('Can',1580000.00,'2024-02-28','Colombo',5,'124','2024-03-16 00:38:14','2024-03-18 00:25:41');
+INSERT INTO `equipment` VALUES ('Computer ',45000.00,'2024-04-04','Computer Science',8,'NIFS/2024/02/04','2024-04-13 11:15:25','2024-04-13 11:15:25');
 /*!40000 ALTER TABLE `equipment` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-08  6:18:56
+-- Dump completed on 2024-04-15  5:48:42
