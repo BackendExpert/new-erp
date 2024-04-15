@@ -4,6 +4,10 @@ import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import Navlist from "../NavBar/navList"
 import AccData from "./AccData"
+import OtherUserNav from "../NavBar/OtherUserNav"
+import SummaryDash from "../SummaryDash/SummaryDash"
+import DashFooter from "../SummaryDash/dashFooter"
+
 
 const Accountant = ({children}) => {
   const navigate = useNavigate();
@@ -31,13 +35,18 @@ const Accountant = ({children}) => {
     return (
       <div className="bg-gray-200">
         <div className="flex">
-          <AccSide />
-          <div className="w-full mx-2">
-            <Navlist />
-            <AccData />
-          </div>
+            <AccSide />
+            <div className="w-full mx-2">
+              <OtherUserNav />
+              <div className="shadow-xl border-l-4 bg-white my-4 rounded py-4 px-6">
+                  <h1 className="text-2xl">Welcome to Accountant Dashboard</h1>
+                  <hr className="mt-2 border-blue-100 border-2" />
+                  <SummaryDash />
+              </div>
+                <DashFooter />
+            </div>
         </div>
-      </div>
+    </div>
     )
   }
   else{
