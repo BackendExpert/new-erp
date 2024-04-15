@@ -20,6 +20,9 @@ const Vehicles = () => {
         else if(RoleUser === "TO"){
             navigate('/to');
         }
+        else if(RoleUser === "Accountant"){
+            navigate('/accountant');
+        }
     }
 
     const [vehicleData, SetvehicleData] = useState([]);
