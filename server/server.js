@@ -6069,6 +6069,19 @@ app.get('/DownloadCSVRese/:id', (req, res) => {
     })
 })
 
+// DownloadCSVSRNs
+
+app.get('/DownloadCSVSRNs/:id', (req, res) => {
+    const userEmail = req.params.id
+
+    const sql = "SELECT * FROM srn WHERE Email = ?"
+    const csvDataSRN = []
+
+    connection.query(sql, [userEmail], (err, result) => {
+        
+    })
+})
+
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
