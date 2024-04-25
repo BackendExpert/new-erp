@@ -6099,6 +6099,13 @@ app.get('/DownloadCSVSRNs/:id', (req, res) => {
     })
 })
 
+// DownloadCSVWorks
+
+app.get('/DownloadCSVWorks/:id', (req, res) => {
+    const sql = "SELECT * FROM workrequest WHERE Email = ?"
+    const csvDataWork = []
+})
+
 
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
