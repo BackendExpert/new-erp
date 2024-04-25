@@ -6015,6 +6015,13 @@ app.get('/DownloadCSVLeaves/:id', (req, res) => {
     const userEmail = req.params.id
     // console.log(userEmail)
 
+    const sql = "SELECT * FROM leaves WHERE Email = ?"
+    const csvData = []
+
+    connection.query(sql, [userEmail], (err, result) => {
+        
+    })
+
 })
 
 
