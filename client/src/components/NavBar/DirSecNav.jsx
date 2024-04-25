@@ -33,10 +33,26 @@ const DirSecNav = () => {
                 navLists.map((nav) => {
                     if(nav.desc === "profile"){
                         return (
-                            <div className="flex cursor-pointer right-8" onClick={() => SetNavOpen(!navopen)}>
-                                <span className="mt-[2px]"><Icons name="person"></Icons></span>
-                                <p className="mx-2">Profile</p>
+                            <div className="">
+                                <div className={`right-8 px-1 py-1 lg:w-64 w-auto rounded lg:border-0 border-b-4 border-blue-400 absolute bg-white transition-all mt-12 ${profileopen ? 'visible':'invisible'}`}>
+                                    <div className="border-2 border-blue-500 py-2 px-4 rounded">
+                                        <p className="py-1">{EmailUser}</p>
+                                        <p className="text-red-500 flex cursor-pointer" onClick={logout}>
+                                            <p className="pt-[2px]"><Icons name="power"></Icons></p>
+                                            <p className="px-2">Logout</p>
+                                        </p>
+                                        <Link to={'/Profile'}>
+                                            <p className="text-blue-500">My Profile</p>
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="flex cursor-pointer right-8" onClick={() => SetProfileOpen(!profileopen)}>
+                                    <span className="mt-[2px]"><Icons name="person"></Icons></span>
+                                    <p className="mx-2">Profile</p>
+                                </div>
                             </div>
+
+                            
                         )
                     }
                     else{
