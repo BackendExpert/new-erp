@@ -1,6 +1,8 @@
 import { useState } from "react"
 import Icons from "@reacticons/ionicons"
 import { Link, useNavigate } from "react-router-dom"
+import secureLocalStorage from "react-secure-storage"
+
 
 const navList = () => {
     const [navopen, SetNavOpen] = useState()
