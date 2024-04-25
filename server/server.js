@@ -6048,7 +6048,24 @@ app.get('/DownloadCSVRese/:id', (req, res) => {
     const csvDataRese = []
 
     connection.query(sql, [userEmail], (err, result) => {
-        
+        if (err) {
+            console.error('Error fetching data: ' + err.stack);
+            res.status(500).json({ error: 'Internal server error' });
+            return;
+        }
+
+        // Convert data to CSV format
+        result.forEach(result => {
+            csvDataRese.push(Object.values(result).join(','));
+        });
+    
+        // Set response headers for CSV download
+        res.setHeader('Content-Type', 'text/csv');
+        res.setHeader('Content-Disposition', 'attachment; filename="data.csv"');
+    
+        // Send CSV data to the client
+        res.send(csvDataRese.join('\n'));      
+        // console.log(csvData)
     })
 })
 
