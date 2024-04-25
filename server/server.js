@@ -6038,7 +6038,18 @@ app.get('/DownloadCSVLeaves/:id', (req, res) => {
         res.send(csvData.join('\n'));      
         // console.log(csvData)
     })
+})
 
+// DownloadCSVRese
+app.get('/DownloadCSVRese/:id', (req, res) => {
+    const userEmail = req.params.id
+
+    const sql = "SELECT * FROM reservations WHERE Email = ?"
+    const csvDataRese = []
+
+    connection.query(sql, [userEmail], (err, result) => {
+        
+    })
 })
 
 
