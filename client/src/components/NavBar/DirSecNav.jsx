@@ -1,10 +1,12 @@
 import { useState } from "react"
 import Icons from "@reacticons/ionicons"
 import { Link, useNavigate } from "react-router-dom"
+import secureLocalStorage from "react-secure-storage"
 
 const DirSecNav = () => {
     const [navopen, SetNavOpen] = useState()
     const [profileopen, SetProfileOpen] = useState()
+    const EmailUser = secureLocalStorage.getItem("logiafter");
 
     const navigate = useNavigate();
 
