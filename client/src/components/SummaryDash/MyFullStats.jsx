@@ -271,6 +271,10 @@ const MyFullStats = () => {
               link.setAttribute('download', 'data.csv');
               document.body.appendChild(link);
               link.click();
+
+              // Clean up resources
+              window.URL.revokeObjectURL(url);
+              document.body.removeChild(link);
           })
         }
 
