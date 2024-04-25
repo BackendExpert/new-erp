@@ -304,6 +304,29 @@ const MyFullStats = () => {
           });
         }
 
+        const headleDownloadSRNs = () => {
+          axios.get('http://localhost:8081/DownloadCSVSRNs/' + EmailUser , { responseType: 'blob' })
+          .then(res => {
+              // Create a Blob from the response data
+              const blob = new Blob([res.data], { type: 'text/csv' });
+              const url = window.URL.createObjectURL(blob);
+
+              // Create a link element and click it to trigger the download
+              const link = document.createElement('a');
+              link.href = url;
+              link.setAttribute('download', 'myreservations_'+ EmailUser + '.csv');
+              document.body.appendChild(link);
+              link.click();
+
+              // Clean up resources
+              window.URL.revokeObjectURL(url);
+              document.body.removeChild(link);
+          })
+          .catch(error => {
+            alert(error)
+          });
+        }
+
 
     if(id === EmailUser){
         return (
@@ -601,6 +624,9 @@ const MyFullStats = () => {
                         <div className="text-xl mt-6 my-2 font-semibold">
                           My SRN Requests 
                         </div> 
+                        <span onClick={headleDownloadSRNs} className="bg-blue-500 rounded py-2 px-9 text-white shadow-md cursor-pointer duration-500 hover:bg-blue-600 ">
+                          download last 30 days SRNs 
+                        </span>
                       <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
