@@ -6007,5 +6007,13 @@ app.get('/BookFineList', (req, res) => {
     })
 })
 
+// Download my Leaves
+
+app.get('/DownloadCSVLeaves/:id', (req, res) => {
+    const userEmail = req.params.id
+    console.log(userEmail)
+})
+
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
