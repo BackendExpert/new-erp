@@ -24,8 +24,8 @@ const OtherUserNav = () => {
             {/* <div className="text-xl absolute cursor-pointer lg:hidden right-8" onClick={() => SetNavOpen(!navopen)}>
                 <Icons name={navopen ? 'close' : 'menu'} ></Icons>
             </div> */}
-            <div className={`rounded lg:border-0 border-b-4 border-blue-400 lg:flex lg:items-center absolute lg:static bg-white transition-all lg:mt-0 mt-12 ${navopen ? 'lg:visible':'lg:visible invisible'}`}>
-                <span className="mt-1"><Icons name="person"></Icons></span>
+            <div className="flex cursor-pointer">
+                <span className="mt-[2px]"><Icons name="person"></Icons></span>
                 <p className="mx-2">Profile</p>
             </div>
         </div>
