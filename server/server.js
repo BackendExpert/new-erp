@@ -6091,7 +6091,7 @@ app.get('/DownloadCSVSRNs/:id', (req, res) => {
     
         // Set response headers for CSV download
         res.setHeader('Content-Type', 'text/csv');
-        res.setHeader('Content-Disposition', 'attachment; filename="myreservations.csv"');
+        res.setHeader('Content-Disposition', 'attachment; filename="mysrns.csv"');
     
         // Send CSV data to the client
         res.send(csvDataSRN.join('\n'));      
@@ -6102,8 +6102,30 @@ app.get('/DownloadCSVSRNs/:id', (req, res) => {
 // DownloadCSVWorks
 
 app.get('/DownloadCSVWorks/:id', (req, res) => {
+    const userEmail = req.params.id
     const sql = "SELECT * FROM workrequest WHERE Email = ?"
     const csvDataWork = []
+
+    connection.query(sql, [userEmail], (err, result) => {
+        if (err) {
+            console.error('Error fetching data: ' + err.stack);
+            res.status(500).json({ error: 'Internal server error' });
+            return;
+        }
+
+        // Convert data to CSV format
+        result.forEach(result => {
+            csvDataWork.push(Object.values(result).join(','));
+        });
+    
+        // Set response headers for CSV download
+        res.setHeader('Content-Type', 'text/csv');
+        res.setHeader('Content-Disposition', 'attachment; filename="myworks.csv"');
+    
+        // Send CSV data to the client
+        res.send(csvDataWork.join('\n'));      
+        // console.log(csvData)
+    })
 })
 
 
