@@ -328,7 +328,7 @@ const MyFullStats = () => {
         }
 
         const headleDownloadWork = () => {
-          axios.get('http://localhost:8081/DownloadCSVSRNs/' + EmailUser , { responseType: 'blob' })
+          axios.get('http://localhost:8081/DownloadCSVWorks/' + EmailUser , { responseType: 'blob' })
           .then(res => {
               // Create a Blob from the response data
               const blob = new Blob([res.data], { type: 'text/csv' });
