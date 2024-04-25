@@ -6019,7 +6019,12 @@ app.get('/DownloadCSVLeaves/:id', (req, res) => {
     const csvData = []
 
     connection.query(sql, [userEmail], (err, result) => {
-        
+        if (err) {
+            console.error('Error fetching data: ' + err.stack);
+            res.status(500).json({ error: 'Internal server error' });
+            return;
+        }
+      
     })
 
 })
