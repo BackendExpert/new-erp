@@ -402,7 +402,7 @@ const MyFullStats = () => {
                     <div className="text-xl mt-6 my-2 font-semibold">
                       My Leaves                       
                     </div>
-                    <span className="bg-blue-500 rounded py-2 px-9 text-white shadow-md cursor-pointer duration-500 hover:bg-blue-600 ">
+                    <span onClickclassName="bg-blue-500 rounded py-2 px-9 text-white shadow-md cursor-pointer duration-500 hover:bg-blue-600 ">
                       download last 30 days Leaves 
                     </span>
                         <div className="relative overflow-x-auto my-8">
