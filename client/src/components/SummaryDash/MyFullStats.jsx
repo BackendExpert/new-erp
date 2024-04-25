@@ -276,6 +276,9 @@ const MyFullStats = () => {
               window.URL.revokeObjectURL(url);
               document.body.removeChild(link);
           })
+          .catch(error => {
+            console.error('Error downloading CSV: ' + error.message);
+          });
         }
 
 
