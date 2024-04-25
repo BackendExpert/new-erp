@@ -6138,7 +6138,24 @@ app.get('/DownloadCSVGatePass/:id', (req, res) => {
     const csvDataGate = []
 
     connection.query(sql, [userEmail], (err, result) => {
-        
+        if (err) {
+            console.error('Error fetching data: ' + err.stack);
+            res.status(500).json({ error: 'Internal server error' });
+            return;
+        }
+
+        // Convert data to CSV format
+        result.forEach(result => {
+            csvDataGate.push(Object.values(result).join(','));
+        });
+    
+        // Set response headers for CSV download
+        res.setHeader('Content-Type', 'text/csv');
+        res.setHeader('Content-Disposition', 'attachment; filename="mygatePass.csv"');
+    
+        // Send CSV data to the client
+        res.send(csvDataGate.join('\n'));      
+        // console.log(csvData)
     })
 })
 
