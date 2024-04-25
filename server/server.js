@@ -6159,5 +6159,36 @@ app.get('/DownloadCSVGatePass/:id', (req, res) => {
     })
 })
 
+// DownloadCSVIncrement
+app.get('/DownloadCSVIncrement/:id', (req, res) => {
+    const userEmail = req.params.id
+    
+    const sql = "SELECT * FROM increment WHERE email = ?"
+    const csvDataIncrement = []
+
+    connection.query(sql, [userEmail], (err, result) => {
+        if (err) {
+            console.error('Error fetching data: ' + err.stack);
+            res.status(500).json({ error: 'Internal server error' });
+            return;
+        }
+
+        // Convert data to CSV format
+        result.forEach(result => {
+            csvDataIncrement.push(Object.values(result).join(','));
+        });
+    
+        // Set response headers for CSV download
+        res.setHeader('Content-Type', 'text/csv');
+        res.setHeader('Content-Disposition', 'attachment; filename="mygatePass.csv"');
+    
+        // Send CSV data to the client
+        res.send(csvDataIncrement.join('\n'));      
+        // console.log(csvData)
+    })
+    
+})
+
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
