@@ -6032,7 +6032,7 @@ app.get('/DownloadCSVLeaves/:id', (req, res) => {
     
         // Set response headers for CSV download
         res.setHeader('Content-Type', 'text/csv');
-        res.setHeader('Content-Disposition', 'attachment; filename="data.csv"');
+        res.setHeader('Content-Disposition', 'attachment; filename="myLeaves.csv"');
     
         // Send CSV data to the client
         res.send(csvData.join('\n'));      
@@ -6061,7 +6061,7 @@ app.get('/DownloadCSVRese/:id', (req, res) => {
     
         // Set response headers for CSV download
         res.setHeader('Content-Type', 'text/csv');
-        res.setHeader('Content-Disposition', 'attachment; filename="data.csv"');
+        res.setHeader('Content-Disposition', 'attachment; filename="myreservations.csv"');
     
         // Send CSV data to the client
         res.send(csvDataRese.join('\n'));      
