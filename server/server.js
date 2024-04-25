@@ -6129,5 +6129,18 @@ app.get('/DownloadCSVWorks/:id', (req, res) => {
 })
 
 
+// DownloadCSVGatePass
+
+app.get('/DownloadCSVGatePass/:id', (req, res) => {
+    const userEmail = req.params.id
+
+    const sql = "SELECT * FROM gatepass WHERE Email = ?"
+    const csvDataGate = []
+
+    connection.query(sql, [userEmail], (err, result) => {
+        
+    })
+})
+
 //check the server is working
 app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
