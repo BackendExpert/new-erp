@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom"
 
 const navList = () => {
     const [navopen, SetNavOpen] = useState()
+    const [profileopen, SetProfileOpen] = useState()
+    const EmailUser = secureLocalStorage.getItem("logiafter");
 
     const navigate = useNavigate();
 
@@ -30,11 +32,30 @@ const navList = () => {
         </div>
         <div className={`rounded lg:border-0 border-b-4 border-blue-400 lg:flex lg:items-center absolute lg:static bg-white transition-all lg:mt-0 mt-12 ${navopen ? 'lg:visible':'lg:visible invisible'}`}>
 
-            {
+        {
                 navLists.map((nav) => {
-                    if(nav.desc === "logout"){
+                    if(nav.desc === "profile"){
                         return (
-                            <div onClick={logout} className="cursor-pointer text-red-500 px-4 lg:py-0 py-4">{nav.name}</div>
+                            <div className="">
+                                <div className={`right-8 px-1 py-1 lg:w-64 w-auto rounded lg:border-0 border-b-4 border-blue-400 absolute bg-white transition-all mt-12 ${profileopen ? 'visible':'invisible'}`}>
+                                    <div className="border-2 border-blue-500 py-2 px-4 rounded">
+                                        <p className="py-1">{EmailUser}</p>
+                                        <p className="text-red-500 flex cursor-pointer" onClick={logout}>
+                                            <p className="pt-[2px]"><Icons name="power"></Icons></p>
+                                            <p className="px-2">Logout</p>
+                                        </p>
+                                        <Link to={'/Profile'}>
+                                            <p className="text-blue-500">My Profile</p>
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="flex cursor-pointer right-8" onClick={() => SetProfileOpen(!profileopen)}>
+                                    <span className="mt-[2px]"><Icons name="person"></Icons></span>
+                                    <p className="mx-2">Profile</p>
+                                </div>
+                            </div>
+
+                            
                         )
                     }
                     else{
