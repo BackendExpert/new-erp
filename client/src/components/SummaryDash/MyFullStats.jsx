@@ -281,6 +281,29 @@ const MyFullStats = () => {
           });
         }
 
+        const headleDownloadRese = () => {
+          axios.get('http://localhost:8081/DownloadCSVRese/' + EmailUser , { responseType: 'blob' })
+          .then(res => {
+              // Create a Blob from the response data
+              const blob = new Blob([res.data], { type: 'text/csv' });
+              const url = window.URL.createObjectURL(blob);
+
+              // Create a link element and click it to trigger the download
+              const link = document.createElement('a');
+              link.href = url;
+              link.setAttribute('download', 'data.csv');
+              document.body.appendChild(link);
+              link.click();
+
+              // Clean up resources
+              window.URL.revokeObjectURL(url);
+              document.body.removeChild(link);
+          })
+          .catch(error => {
+            alert(error)
+          });
+        }
+
 
     if(id === EmailUser){
         return (
