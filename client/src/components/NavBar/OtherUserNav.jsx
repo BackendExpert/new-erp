@@ -34,7 +34,7 @@ const OtherUserNav = () => {
             <div className={`right-8 px-1 py-1 lg:w-64 w-auto rounded lg:border-0 border-b-4 border-blue-400 absolute bg-white transition-all mt-12 ${navopen ? 'visible':'invisible'}`}>
                 <div className="border-2 border-blue-500 py-2 px-4 rounded">
                     <p className="py-1">{EmailUser}</p>
-                    <p className="text-red-500 flex" onClick={logout()}>
+                    <p className="text-red-500 flex cursor-pointer" onClick={logout}>
                         <p className="pt-[2px]"><Icons name="power"></Icons></p>
                         <p className="px-2">Logout</p>
                     </p>
