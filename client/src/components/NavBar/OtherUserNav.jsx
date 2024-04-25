@@ -24,7 +24,8 @@ const OtherUserNav = () => {
             {/* <div className="text-xl absolute cursor-pointer lg:hidden right-8" onClick={() => SetNavOpen(!navopen)}>
                 <Icons name={navopen ? 'close' : 'menu'} ></Icons>
             </div> */}
-            <div className="flex cursor-pointer">
+            
+            <div className="flex cursor-pointer absolute right-8" onClick={() => SetNavOpen(!navopen)}>
                 <span className="mt-[2px]"><Icons name="person"></Icons></span>
                 <p className="mx-2">Profile</p>
             </div>
