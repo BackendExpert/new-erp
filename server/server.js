@@ -6024,7 +6024,19 @@ app.get('/DownloadCSVLeaves/:id', (req, res) => {
             res.status(500).json({ error: 'Internal server error' });
             return;
         }
-      
+
+        // Convert data to CSV format
+        result.forEach(result => {
+            csvData.push(Object.values(result).join(','));
+        });
+    
+        // Set response headers for CSV download
+        res.setHeader('Content-Type', 'text/csv');
+        res.setHeader('Content-Disposition', 'attachment; filename="data.csv"');
+    
+        // Send CSV data to the client
+        res.send(csvData.join('\n'));      
+        console.log(csvData)
     })
 
 })
