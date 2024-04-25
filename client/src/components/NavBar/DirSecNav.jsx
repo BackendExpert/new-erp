@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 
 const DirSecNav = () => {
     const [navopen, SetNavOpen] = useState()
+    const [profileopen, SetProfileOpen] = useState()
 
     const navigate = useNavigate();
 
@@ -12,8 +13,7 @@ const DirSecNav = () => {
         {name: "Recommend Reservations", link: "/RecReservation"},
         {name: "Recommend Work Requests", link: "/RecWork"},
         {name: "Recommend Gatepass", link: "/RecGatePass"},
-        {name: "Profile", link: "/Profile"},
-        {name: "Logout", link: "", desc: "logout"}       
+        {name: "Profile", link: "#", desc:"profile"},
     ];
 
     const logout = () => {
@@ -31,9 +31,9 @@ const DirSecNav = () => {
 
             {
                 navLists.map((nav) => {
-                    if(nav.desc === "logout"){
+                    if(nav.desc === "profile"){
                         return (
-                            <div onClick={logout} className="cursor-pointer text-red-500 px-4 lg:py-0 py-4">{nav.name}</div>
+
                         )
                     }
                     else{
