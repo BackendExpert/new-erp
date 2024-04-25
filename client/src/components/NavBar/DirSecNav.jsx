@@ -33,7 +33,10 @@ const DirSecNav = () => {
                 navLists.map((nav) => {
                     if(nav.desc === "profile"){
                         return (
-
+                            <div className="flex cursor-pointer right-8" onClick={() => SetNavOpen(!navopen)}>
+                                <span className="mt-[2px]"><Icons name="person"></Icons></span>
+                                <p className="mx-2">Profile</p>
+                            </div>
                         )
                     }
                     else{
