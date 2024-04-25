@@ -291,7 +291,7 @@ const MyFullStats = () => {
               // Create a link element and click it to trigger the download
               const link = document.createElement('a');
               link.href = url;
-              link.setAttribute('download', 'myreservations.csv');
+              link.setAttribute('download', 'myreservations_'+ EmailUser + '.csv');
               document.body.appendChild(link);
               link.click();
 
