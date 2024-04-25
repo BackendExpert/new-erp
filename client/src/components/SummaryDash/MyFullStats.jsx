@@ -495,7 +495,7 @@ const MyFullStats = () => {
                       My Leaves                       
                     </div>
                     <span onClick={headleDownloadLeaves} className="bg-blue-500 rounded py-2 px-9 text-white shadow-md cursor-pointer duration-500 hover:bg-blue-600 ">
-                      download last 30 days Leaves 
+                      download My Leaves 
                     </span>
                         <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -574,7 +574,7 @@ const MyFullStats = () => {
                         My Reservations 
                       </div> 
                       <span onClick={headleDownloadRese} className="bg-blue-500 rounded py-2 px-9 text-white shadow-md cursor-pointer duration-500 hover:bg-blue-600 ">
-                        download last 30 days Reservations 
+                        download My Reservations 
                       </span>
                       <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -648,7 +648,7 @@ const MyFullStats = () => {
                           My SRN Requests 
                         </div> 
                         <span onClick={headleDownloadSRNs} className="bg-blue-500 rounded py-2 px-9 text-white shadow-md cursor-pointer duration-500 hover:bg-blue-600 ">
-                          download last 30 days SRNs 
+                          download My SRNs 
                         </span>
                       <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -724,7 +724,7 @@ const MyFullStats = () => {
                           My Work Requests
                         </div> 
                         <span onClick={headleDownloadWork} className="bg-blue-500 rounded py-2 px-9 text-white shadow-md cursor-pointer duration-500 hover:bg-blue-600 ">
-                          download last 30 days Work Requests 
+                          download My Work Requests 
                         </span>
                       <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -823,6 +823,9 @@ const MyFullStats = () => {
                         <div className="text-xl mt-6 my-2 font-semibold">
                           My Gate Pass Requests
                         </div> 
+                        <span onClick={headleDownloadGatepass} className="bg-blue-500 rounded py-2 px-9 text-white shadow-md cursor-pointer duration-500 hover:bg-blue-600 ">
+                          download My Gate Pass
+                        </span>
                       <div className="relative overflow-x-auto my-8">
                             <table className="text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-blue-100 rounded border-t-4 border-blue-200">
