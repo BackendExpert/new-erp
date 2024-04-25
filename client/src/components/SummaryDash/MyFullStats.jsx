@@ -259,7 +259,7 @@ const MyFullStats = () => {
         }, []);
 
         const headleDownloadLeaves = () =>{
-          axios.get('http://localhost:8081/DownloadCSVLeavs/' + EmailUser)
+          axios.get('http://localhost:8081/DownloadCSVLeavs/' + EmailUser , { responseType: 'blob' })
         }
 
 
