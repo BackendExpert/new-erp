@@ -259,7 +259,7 @@ const MyFullStats = () => {
         }, []);
 
         const headleDownloadLeaves = () =>{
-          axios.get('http://localhost:8081/DownloadCSVLeavs/' + EmailUser , { responseType: 'blob' })
+          axios.get('http://localhost:8081/DownloadCSVLeaves/' + EmailUser , { responseType: 'blob' })
           .then(res => {
               // Create a Blob from the response data
               const blob = new Blob([res.data], { type: 'text/csv' });
