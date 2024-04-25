@@ -14,8 +14,7 @@ const navList = () => {
         {name: "Work Requests", link: "/AddWorkReq"},
         {name: "Gatepass Requests", link: "/AddGatePass"},
         {name: "Increment Requests", link: "/AddIncrement"},
-        {name: "Profile", link: "/Profile"},
-        {name: "Logout", link: "", desc: "logout"}       
+        {name: "Profile", link: "#", desc:"profile"},    
     ];
 
     const logout = () => {
