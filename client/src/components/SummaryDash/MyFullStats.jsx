@@ -264,6 +264,13 @@ const MyFullStats = () => {
               // Create a Blob from the response data
               const blob = new Blob([res.data], { type: 'text/csv' });
               const url = window.URL.createObjectURL(blob);
+
+              // Create a link element and click it to trigger the download
+              const link = document.createElement('a');
+              link.href = url;
+              link.setAttribute('download', 'data.csv');
+              document.body.appendChild(link);
+              link.click();
           })
         }
 
